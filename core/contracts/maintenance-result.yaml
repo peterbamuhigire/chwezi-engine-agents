@@ -1,0 +1,22 @@
+schema_version: "1.0"
+name: maintenance-result
+required:
+  - engine_id
+  - before_head
+  - after_head
+  - branch
+  - working_tree
+  - pull_result
+  - ahead
+  - behind
+  - blocker
+fields:
+  engine_id: string
+  before_head: string|null
+  after_head: string|null
+  branch: string
+  working_tree: clean|dirty|missing
+  pull_result: not_requested|updated|already_current|skipped_dirty|blocked_diverged|failed
+  ahead: integer
+  behind: integer
+  blocker: string|null

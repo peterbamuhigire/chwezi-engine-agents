@@ -1,0 +1,18 @@
+schema_version: "1.0"
+name: handoff
+required:
+  - scope
+  - engines
+  - inputs
+  - sequence
+  - evidence
+  - blockers
+  - next_action
+fields:
+  scope: string
+  engines: list<{id: string, reason: string}>
+  inputs: list
+  sequence: list
+  evidence: list
+  blockers: list
+  next_action: string

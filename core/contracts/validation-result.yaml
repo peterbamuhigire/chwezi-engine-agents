@@ -1,0 +1,12 @@
+schema_version: "1.0"
+name: validation-result
+required:
+  - engine_id
+  - checks
+  - overall
+  - next_action
+fields:
+  engine_id: string
+  checks: list<{command: string, status: PASS|FAIL|NOT ASSESSED, exit_code: integer|null, evidence: string, duration_ms: integer|null}>
+  overall: PASS|FAIL|PARTIAL|NOT ASSESSED
+  next_action: string
