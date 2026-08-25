@@ -10,6 +10,21 @@ Portable Codex agents for the ten `peterbamuhigire` skills engines.
 
 It does not replace or duplicate the domain knowledge in the ten engines. Each engine remains independently usable and continues to own its routers, `SKILL.md` files, references, templates, and release checks.
 
+## The ten skills engines
+
+<ul>
+  <li><a href="https://github.com/peterbamuhigire/srs-skills" target="_blank" rel="noopener noreferrer">SRS Skills</a> — software requirements, product requirements, architecture, and technical specifications.</li>
+  <li><a href="https://github.com/peterbamuhigire/business-plan-skills" target="_blank" rel="noopener noreferrer">Business Plan Skills</a> — business plans, financial models, market strategy, and investor planning.</li>
+  <li><a href="https://github.com/peterbamuhigire/website-skills" target="_blank" rel="noopener noreferrer">Website Skills</a> — websites, landing pages, web UX, SEO, performance, and site delivery.</li>
+  <li><a href="https://github.com/peterbamuhigire/social-media-skills" target="_blank" rel="noopener noreferrer">Social Media Skills</a> — social strategy, content planning, campaigns, and platform workflows.</li>
+  <li><a href="https://github.com/peterbamuhigire/linux-skills" target="_blank" rel="noopener noreferrer">Linux Skills</a> — Linux administration, servers, hardening, networking, and operations.</li>
+  <li><a href="https://github.com/peterbamuhigire/proposal-skills" target="_blank" rel="noopener noreferrer">Proposal Skills</a> — proposals, tenders, bids, RFP/RFQ responses, and grant submissions.</li>
+  <li><a href="https://github.com/peterbamuhigire/skills-web-dev" target="_blank" rel="noopener noreferrer">Skills Web Dev</a> — general engineering, AI systems, SaaS, security, product, UX, and technical documentation.</li>
+  <li><a href="https://github.com/peterbamuhigire/chwezi-accounting-doctrine" target="_blank" rel="noopener noreferrer">Chwezi Accounting Doctrine</a> — finance, accounting, IFRS/IAS, tax, bookkeeping, controls, and reporting.</li>
+  <li><a href="https://github.com/peterbamuhigire/design-system-skills" target="_blank" rel="noopener noreferrer">Design System Skills</a> — typography, visual design, UI/UX, layout, accessibility, and document presentation.</li>
+  <li><a href="https://github.com/peterbamuhigire/digital-research-skills" target="_blank" rel="noopener noreferrer">Digital Research Skills</a> — research orchestration, source evaluation, evidence verification, and benchmarking.</li>
+</ul>
+
 This plugin adds three focused agents:
 
 - `engine-orchestrator` routes a request to the correct domain and cross-cutting engines.
