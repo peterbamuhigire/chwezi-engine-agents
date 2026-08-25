@@ -12,3 +12,7 @@ Before submitting a change:
 6. Inspect the complete diff and confirm no machine-specific secrets or paths were added.
 
 Agent prompts should define scope, evidence requirements, safety boundaries, degraded behavior, and a predictable handoff format.
+
+## Multi-host implementation work
+
+For changes related to universal host adapters, MCP tools, or engine integration, use the phase-level plan in [`docs/plans/aug-25`](docs/plans/aug-25/README.md). Work on `main` unless a branch is explicitly requested, preserve the ten engines as independent repositories, and update the relevant phase document when implementation decisions change.

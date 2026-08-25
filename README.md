@@ -31,6 +31,12 @@ This plugin adds three focused agents:
 
 The engines remain independently usable. Their own `AGENTS.md`, routers, and `SKILL.md` files remain the source of truth for domain behavior. This plugin supplies coordination and maintenance behavior around them.
 
+## Implementation plan
+
+The complete multi-host implementation plan is maintained in [`docs/plans/aug-25`](docs/plans/aug-25/README.md). It contains a master overview, an index, and one detailed implementation file for each of the 13 phases, including the ten-engine integration and public distribution phase.
+
+The phase documents specify exact files, interfaces, host adapters, MCP tools, capability fallbacks, security controls, tests, evidence requirements, release artifacts, and developer installation paths.
+
 ## Distribution and installation
 
 ### Public plugin directory
