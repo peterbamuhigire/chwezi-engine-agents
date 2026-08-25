@@ -25,8 +25,22 @@ reports one separate `NOT ASSESSED` gap for the pre-existing eleventh
 
 ## Publication boundary
 
-The engine repositories are locally modified and remain uncommitted so their
-owners can review and commit them under their own release policies. No push or
-tag was performed. Catalog integration status is therefore `pending`, and no
-released commit is recorded. Public distribution must wait for those engine
-owners to commit, push, and provide release references.
+The integration commits were created locally on each engine's `main` checkout
+with the prescribed message. No push or tag was performed, so the catalog keeps
+integration status `pending` and does not claim released references.
+
+| Engine | Local commit |
+| --- | --- |
+| srs-skills | `f99a3e3` |
+| business-plan-skills | `0146d37` |
+| website-skills | `40b9c7f` |
+| social-media-skills | `892ea2a` |
+| linux-skills | `26262e8` |
+| proposal-skills | `4e8b144` |
+| skills-web-dev | `13ed6ef` |
+| chwezi-accounting-doctrine | `e875802` |
+| design-system-skills | `62379cf` |
+| digital-research-engine | `b88edd0` |
+
+Public distribution still requires each owner to push and provide a released
+commit reference, followed by a catalog status update.
