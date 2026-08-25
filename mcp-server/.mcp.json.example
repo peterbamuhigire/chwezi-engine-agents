@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "skills-engine-agents": {
+      "command": "node",
+      "args": ["C:/path/to/skills-engine-agents/mcp-server/dist/index.js"],
+      "env": {
+        "SKILLS_ENGINE_CATALOG": "C:/path/to/skills-engine-agents/catalog/engines.yaml",
+        "SKILLS_ENGINE_CONFIRMATION_TOKEN": "host-generated-token"
+      }
+    }
+  }
+}

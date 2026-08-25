@@ -1,0 +1,23 @@
+{
+  "name": "skills-engine-agents-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Typed, approval-gated MCP tools for skills-engine repository operations.",
+  "engines": {"node": ">=20"},
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "yaml": "2.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.3.0",
+    "tsx": "4.20.3",
+    "typescript": "5.9.2",
+    "vitest": "3.2.4"
+  }
+}
