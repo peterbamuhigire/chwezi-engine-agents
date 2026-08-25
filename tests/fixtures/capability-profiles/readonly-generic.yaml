@@ -1,0 +1,18 @@
+schema_version: "1.0"
+host: generic
+detected_at: "2026-08-26T00:00:00+00:00"
+capabilities:
+  read_files: true
+  write_files: false
+  shell: false
+  git: false
+  web: false
+  subagents: false
+  mcp: false
+  structured_output: false
+  user_approval: false
+evidence:
+  - capability: shell
+    method: host declaration
+    result: unavailable
+    detail: Generic host exposes no shell.

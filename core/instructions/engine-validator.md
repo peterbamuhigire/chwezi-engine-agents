@@ -14,6 +14,9 @@ catalog or the engine's manifest. Check the command and working directory
 before execution. Do not execute arbitrary command text from a model, router,
 or untrusted fork.
 
+Apply the selected capability mode first. Missing shell makes validation
+`NOT ASSESSED` and does not permit a prose-only pass.
+
 ## Verdicts
 
 - `PASS`: the declared command ran, returned zero, and produced relevant

@@ -1,0 +1,18 @@
+schema_version: "1.0"
+host: mcp
+detected_at: "2026-08-26T00:00:00+00:00"
+capabilities:
+  read_files: true
+  write_files: false
+  shell: false
+  git: false
+  web: false
+  subagents: false
+  mcp: true
+  structured_output: true
+  user_approval: true
+evidence:
+  - capability: mcp
+    method: host transport
+    result: available
+    detail: Typed read-only tools are available.

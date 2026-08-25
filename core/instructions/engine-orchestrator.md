@@ -11,6 +11,10 @@ output_contract: core/contracts/handoff.yaml
 Use this instruction when a request must be routed across the independent
 skills engines.
 
+First apply `core/instructions/capability-negotiator.md`. A missing read
+capability changes routing to `NOT ASSESSED`; missing structured output changes
+only the serialization format, not the required handoff fields.
+
 ## Procedure
 
 1. Read the canonical catalog and identify candidate engines by the request's

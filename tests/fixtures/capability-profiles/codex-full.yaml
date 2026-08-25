@@ -1,0 +1,18 @@
+schema_version: "1.0"
+host: codex
+detected_at: "2026-08-26T00:00:00+00:00"
+capabilities:
+  read_files: true
+  write_files: true
+  shell: true
+  git: true
+  web: true
+  subagents: true
+  mcp: true
+  structured_output: true
+  user_approval: true
+evidence:
+  - capability: user_approval
+    method: host confirmation
+    result: available
+    detail: Host confirmation is required for mutations.

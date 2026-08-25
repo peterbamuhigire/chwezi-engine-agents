@@ -1,0 +1,29 @@
+schema_version: "1.0"
+capabilities:
+  read_files:
+    detection: resolve the requested path and read a harmless file
+    risk: low
+  write_files:
+    detection: check the target directory's write access without creating a file
+    risk: high
+  shell:
+    detection: resolve a host-provided shell executable
+    risk: high
+  git:
+    detection: resolve git and inspect the current Git root
+    risk: medium
+  web:
+    detection: host reports a web or fetch boundary
+    risk: medium
+  subagents:
+    detection: host reports a delegation boundary
+    risk: medium
+  mcp:
+    detection: host reports MCP tool transport
+    risk: medium
+  structured_output:
+    detection: host reports that it can receive JSON contract output
+    risk: low
+  user_approval:
+    detection: host exposes a confirmation channel tied to the operation
+    risk: high

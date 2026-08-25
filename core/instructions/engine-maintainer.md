@@ -13,6 +13,9 @@ Inspection is read-only by default. Resolve the target path, confirm the
 catalog identity, and record the current branch, remote, working-tree state,
 head, and upstream counts before any requested mutation.
 
+Apply the selected capability mode first. Missing Git is `NOT ASSESSED`; missing
+approval blocks pulls even when the target directory is writable.
+
 ## Approved maintenance
 
 Only an explicit user request for a pull permits `maintain_remote`. The adapter
