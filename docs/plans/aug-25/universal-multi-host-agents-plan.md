@@ -22,6 +22,24 @@
 - Every phase ends with a deterministic verification command and a commit checkpoint in the implementation phase. This planning document itself is committed as one documentation change.
 - Current platform assumptions must be rechecked against official documentation during implementation. Starting references are OpenAI plugin documentation at `https://developers.openai.com/`, Anthropic MCP documentation at `https://docs.anthropic.com/en/docs/mcp`, and DeepSeek API documentation at `https://api-docs.deepseek.com/`.
 
+## Phase-level implementation files
+
+Use [README.md](./README.md) as the phase index. Each phase has its own implementation file with exact paths, stable interfaces, task checklists, tests, evidence, failure handling, exit criteria, and commit checkpoint:
+
+1. [Phase 1 — Compatibility baseline](./phase-01-compatibility-baseline.md)
+2. [Phase 2 — Canonical core](./phase-02-canonical-core.md)
+3. [Phase 3 — Schemas and contracts](./phase-03-schemas-contracts.md)
+4. [Phase 4 — Capability negotiation](./phase-04-capability-negotiation.md)
+5. [Phase 5 — Codex adapter](./phase-05-codex-adapter.md)
+6. [Phase 6 — Claude Code adapter](./phase-06-claude-code-adapter.md)
+7. [Phase 7 — Other host adapters](./phase-07-other-host-adapters.md)
+8. [Phase 8 — MCP server](./phase-08-mcp-server.md)
+9. [Phase 9 — Installation and forks](./phase-09-installation-and-forks.md)
+10. [Phase 10 — Security controls](./phase-10-security-controls.md)
+11. [Phase 11 — Evaluation suite](./phase-11-evaluation-suite.md)
+12. [Phase 12 — Release operations](./phase-12-release-operations.md)
+13. [Phase 13 — Engine integration and publication](./phase-13-engine-integration-publication.md)
+
 ## Desired end state
 
 The repository should support these installation and execution paths:
