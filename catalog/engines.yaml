@@ -1,3 +1,4 @@
+schema_version: "1.0"
 version: 1
 engines:
   - id: srs-skills
@@ -46,7 +47,7 @@ engines:
     router: AGENTS.md
     validators: "python -X utf8 scripts/validate_engine.py --baseline tests/quality-baseline.json | python -X utf8 scripts/routing_smoke_test.py"
   - id: digital-research-skills
-    repository: digital-research-skills
-    path: digital-research-skills
+    repository: digital-research-engine
+    path: digital-research-engine
     router: AGENTS.md
     validators: "python -X utf8 scripts/skill_contract_validator.py --baseline tests/skill-engine/quality-baseline.json | python -X utf8 scripts/routing_smoke_test.py | python -X utf8 scripts/validate_engine.py"

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://skills-engine-agents.local/schemas/handoff.schema.json",
+  "title": "Agent handoff",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "scope", "engines", "inputs", "sequence", "evidence", "blockers", "next_action"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "1.0"},
+    "scope": {"type": "string", "minLength": 1},
+    "engines": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["id", "reason"], "properties": {"id": {"type": "string"}, "reason": {"type": "string", "minLength": 1}}}},
+    "inputs": {"type": "array"},
+    "sequence": {"type": "array"},
+    "evidence": {"type": "array"},
+    "blockers": {"type": "array"},
+    "next_action": {"type": "string", "minLength": 1}
+  }
+}

@@ -1,0 +1,16 @@
+schema_version: "1.0"
+engine_id: srs-skills
+checks:
+  - command: python scripts/validate.py
+    status: PASS
+    exit_code: 0
+    evidence: Validator completed with no findings.
+    duration_ms: 24
+  - command: optional-tool
+    status: NOT ASSESSED
+    exit_code: null
+    evidence: Optional tool is not installed.
+    duration_ms: null
+    reason: Dependency unavailable
+overall: PARTIAL
+next_action: Install the optional tool before release

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://skills-engine-agents.local/schemas/maintenance-result.schema.json",
+  "title": "Engine maintenance result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "engine_id", "before_head", "after_head", "branch", "working_tree", "pull_result", "ahead", "behind", "blocker"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "1.0"},
+    "engine_id": {"type": "string", "minLength": 1},
+    "before_head": {"type": ["string", "null"]},
+    "after_head": {"type": ["string", "null"]},
+    "branch": {"type": "string"},
+    "working_tree": {"type": "string", "enum": ["clean", "dirty", "missing"]},
+    "pull_result": {"type": "string", "enum": ["not_requested", "updated", "already_current", "skipped_dirty", "blocked_diverged", "failed"]},
+    "ahead": {"type": "integer", "minimum": 0},
+    "behind": {"type": "integer", "minimum": 0},
+    "blocker": {"type": ["string", "null"]}
+  }
+}

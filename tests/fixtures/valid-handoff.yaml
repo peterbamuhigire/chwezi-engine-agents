@@ -1,0 +1,10 @@
+schema_version: "1.0"
+scope: Route a requirements request
+engines:
+  - id: srs-skills
+    reason: Requirements work
+inputs: [request text, repository path]
+sequence: [read catalog, read router, select skills]
+evidence: [catalog entry, router path]
+blockers: []
+next_action: Read the selected router

@@ -2,6 +2,14 @@
 param([string]$CatalogPath = (Join-Path $PSScriptRoot '..\catalog\engines.yaml'))
 
 $ErrorActionPreference = 'Stop'
+$catalogResolved = (Resolve-Path -LiteralPath $CatalogPath).Path
+$contractValidator = Join-Path (Split-Path $PSScriptRoot -Parent) 'scripts\validate-contracts.py'
+if (-not (Test-Path -LiteralPath $contractValidator)) {
+    Write-Error "Contract validator not found: $contractValidator"
+    exit 3
+}
+& python -X utf8 $contractValidator --schema (Join-Path (Split-Path $PSScriptRoot -Parent) 'schemas\engine-catalog.schema.json') --instance $catalogResolved
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 $expected = @('srs-skills','business-plan-skills','website-skills','social-media-skills','linux-skills','proposal-skills','skills-web-dev','chwezi-accounting-doctrine','design-system-skills','digital-research-skills')
 $items = @()
 $current = $null

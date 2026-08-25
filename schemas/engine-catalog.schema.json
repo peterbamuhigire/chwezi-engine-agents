@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://skills-engine-agents.local/schemas/engine-catalog.schema.json",
+  "title": "Skills engine catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "engines"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "1.0"},
+    "version": {"type": "integer", "minimum": 1},
+    "engines": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "repository", "path", "router", "validators"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+          "repository": {"type": "string", "pattern": "^[A-Za-z0-9_.-]+$"},
+          "path": {"type": "string", "minLength": 1},
+          "router": {"type": "string", "minLength": 1},
+          "validators": {
+            "oneOf": [
+              {"type": "string", "minLength": 1},
+              {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+            ]
+          },
+          "aliases": {"type": "array", "items": {"type": "string"}},
+          "capabilities": {"type": "object", "additionalProperties": {"type": "boolean"}},
+          "fork_discovery": {"type": "object", "additionalProperties": false, "properties": {"enabled": {"type": "boolean"}, "router_fallback": {"type": "string"}}},
+          "validation_platforms": {"type": "array", "items": {"type": "string"}},
+          "source_of_truth": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

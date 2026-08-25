@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://skills-engine-agents.local/schemas/validation-result.schema.json",
+  "title": "Engine validation result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "engine_id", "checks", "overall", "next_action"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "1.0"},
+    "engine_id": {"type": "string", "minLength": 1},
+    "checks": {"type": "array", "items": {"$ref": "#/$defs/check"}},
+    "overall": {"type": "string", "enum": ["PASS", "FAIL", "PARTIAL", "NOT ASSESSED"]},
+    "next_action": {"type": "string", "minLength": 1}
+  },
+  "$defs": {
+    "check": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["command", "status", "exit_code", "evidence", "duration_ms"],
+      "properties": {
+        "command": {"type": "string", "minLength": 1},
+        "status": {"type": "string", "enum": ["PASS", "FAIL", "NOT ASSESSED"]},
+        "exit_code": {"type": ["integer", "null"]},
+        "evidence": {"type": "string", "minLength": 1},
+        "duration_ms": {"type": ["integer", "null"], "minimum": 0},
+        "reason": {"type": "string", "minLength": 1}
+      },
+      "allOf": [
+        {"if": {"properties": {"status": {"const": "PASS"}}}, "then": {"properties": {"exit_code": {"const": 0}, "evidence": {"minLength": 1}}}},
+        {"if": {"properties": {"status": {"const": "NOT ASSESSED"}}}, "then": {"required": ["reason"]}}
+      ]
+    }
+  }
+}

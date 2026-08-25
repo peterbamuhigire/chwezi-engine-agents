@@ -1,0 +1,10 @@
+schema_version: "1.0"
+engine_id: srs-skills
+checks:
+  - command: python scripts/validate.py
+    status: PASS
+    exit_code: 1
+    evidence: null
+    duration_ms: 24
+overall: PASS
+next_action: None

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://skills-engine-agents.local/schemas/capability-profile.schema.json",
+  "title": "Host capability profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "host", "detected_at", "capabilities", "evidence"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "1.0"},
+    "host": {"type": "string", "minLength": 1},
+    "detected_at": {"type": "string", "minLength": 1},
+    "capabilities": {"type": "object", "additionalProperties": false, "required": ["read_files", "write_files", "shell", "git", "web", "subagents", "mcp", "structured_output", "user_approval"], "properties": {"read_files": {"type": "boolean"}, "write_files": {"type": "boolean"}, "shell": {"type": "boolean"}, "git": {"type": "boolean"}, "web": {"type": "boolean"}, "subagents": {"type": "boolean"}, "mcp": {"type": "boolean"}, "structured_output": {"type": "boolean"}, "user_approval": {"type": "boolean"}}},
+    "evidence": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["capability", "method", "result", "detail"], "properties": {"capability": {"type": "string"}, "method": {"type": "string"}, "result": {"type": "string", "enum": ["available", "unavailable", "not_assessed"]}, "detail": {"type": "string"}}}}
+  }
+}
