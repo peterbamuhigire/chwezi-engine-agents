@@ -1,0 +1,15 @@
+schema_version: "1.0"
+id: mcp
+host: mcp
+version: 1.0.0
+core_version: 1.0.0
+status: adapter
+entrypoints:
+  discover_engine: mcp-server/src/engine-discovery.ts
+  inspect_engine: mcp-server/src/engine-maintenance.ts
+  validate_engine: mcp-server/src/engine-validation.ts
+  pull_engine_ff_only: mcp-server/src/engine-maintenance.ts
+install_targets:
+  - mcp-server
+required_capabilities: [read_files, mcp]
+fallback: generic

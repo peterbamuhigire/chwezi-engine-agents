@@ -1,0 +1,17 @@
+schema_version: "1.0"
+id: generic
+host: generic
+version: 1.0.0
+core_version: 1.0.0
+status: generic
+entrypoints:
+  engine-orchestrator: engine-orchestrator.prompt.md
+  engine-maintainer: engine-maintainer.prompt.md
+  engine-validator: engine-validator.prompt.md
+install_targets:
+  - README.md
+  - engine-orchestrator.prompt.md
+  - engine-maintainer.prompt.md
+  - engine-validator.prompt.md
+required_capabilities: [read_files]
+fallback: generic

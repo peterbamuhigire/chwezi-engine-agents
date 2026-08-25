@@ -36,7 +36,8 @@ $repoName = [IO.Path]::GetFileNameWithoutExtension(($remote.TrimEnd('/') -split 
 $folderName = Split-Path $gitRoot -Leaf
 $catalog = @(Read-EngineCatalog -FilePath (Resolve-Path -LiteralPath $CatalogPath).Path)
 $engine = $catalog | Where-Object { $_.repository -eq $repoName -or $_.path -eq $folderName } | Select-Object -First 1
-$routerPath = if ($engine) { Join-Path $gitRoot $engine.router } else { '' }
+$routerRelative = if ($engine) { $engine.router } elseif (Test-Path -LiteralPath (Join-Path $gitRoot 'AGENTS.md')) { 'AGENTS.md' } elseif (Test-Path -LiteralPath (Join-Path $gitRoot 'README.md')) { 'README.md' } else { $null }
+$routerPath = if ($routerRelative) { Join-Path $gitRoot $routerRelative } else { '' }
 $result = [ordered]@{
     matched = ($null -ne $engine)
     engineId = if ($engine) { $engine.id } else { $null }
@@ -45,8 +46,8 @@ $result = [ordered]@{
     repoRoot = $gitRoot
     remote = $remote
     branch = ((& git -C $gitRoot branch --show-current 2>$null) -join '').Trim()
-    router = if ($engine) { $engine.router } else { $null }
-    routerExists = if ($engine) { Test-Path -LiteralPath $routerPath } else { $false }
+    router = $routerRelative
+    routerExists = if ($routerRelative) { Test-Path -LiteralPath $routerPath } else { $false }
 }
 $result | ConvertTo-Json -Depth 4
 if (-not $engine) { exit 3 }
