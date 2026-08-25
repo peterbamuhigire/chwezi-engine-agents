@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://skills-engine-agents.local/schemas/approval-token.schema.json",
+  "title": "Approved mutation record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "requested_by", "approved", "target_repo", "target_branch", "operation", "confirmation_id", "before_head", "after_head", "result"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "1.0"},
+    "requested_by": {"type": "string", "minLength": 1},
+    "approved": {"type": "boolean"},
+    "target_repo": {"type": "string", "minLength": 1},
+    "target_branch": {"type": "string", "minLength": 1},
+    "operation": {"type": "string", "enum": ["install", "update", "uninstall", "pull", "edit", "submit", "publish"]},
+    "confirmation_id": {"type": "string", "minLength": 8},
+    "before_head": {"type": ["string", "null"]},
+    "after_head": {"type": ["string", "null"]},
+    "result": {"type": "string", "enum": ["updated", "already_current", "failed", "blocked", "cancelled"]},
+    "rollback": {"type": "string", "minLength": 1}
+  }
+}

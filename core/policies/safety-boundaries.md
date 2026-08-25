@@ -29,3 +29,10 @@ engine manifest.
 Every write records the requested operation, approval, target, before and after
 heads where applicable, result, and rollback action. Structured and Markdown
 handoffs use the same contract field names.
+
+## Approval record
+
+Approved mutations record `requested_by`, `approved`, `target_repo`,
+`target_branch`, `operation`, `confirmation_id`, `before_head`, `after_head`,
+`result`, and rollback action. A host token is scoped to the host operation; it
+is not a general-purpose shell credential.

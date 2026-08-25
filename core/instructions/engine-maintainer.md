@@ -32,3 +32,5 @@ must:
 Never run reset, clean, manual merge, force-push, recursive deletion, or a
 model-supplied command. Missing Git, missing evidence, or unavailable authority
 is `NOT ASSESSED` or blocked, never a pass.
+
+Record the approval contract and rollback action for every approved pull.

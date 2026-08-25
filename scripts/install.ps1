@@ -52,6 +52,7 @@ if (Test-Path -LiteralPath $destination) {
 }
 
 $stage = "$destination.staging-$([Guid]::NewGuid().ToString('N'))"
+if ($WhatIfPreference) { Write-Output "What if: install host adapter $HostId to $destination"; return }
 New-Item -ItemType Directory -Force -Path $stage | Out-Null
 try {
     $paths = @('.codex-plugin','agents','catalog','core','schemas','scripts','skills',"adapters\$HostId",'README.md','CONTRIBUTING.md','docs\distribution.md')
@@ -78,7 +79,6 @@ try {
     $manifest | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath (Join-Path $stage '.skills-engine-agents-install.json') -Encoding utf8
     if (-not (Test-Path -LiteralPath (Join-Path $stage "adapters\$HostId\adapter.yaml"))) { throw 'Staged adapter manifest is missing.' }
     if (-not (Test-Path -LiteralPath (Join-Path $stage 'core\instructions\engine-orchestrator.md'))) { throw 'Staged canonical core is missing.' }
-    if ($WhatIfPreference) { Write-Output "What if: install host adapter $HostId to $destination"; return }
     $backup = "$destination.backup-$([Guid]::NewGuid().ToString('N'))"
     if (Test-Path -LiteralPath $destination) { Move-Item -LiteralPath $destination -Destination $backup }
     try {
