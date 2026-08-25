@@ -1,0 +1,10 @@
+*.log
+*.tmp
+*.bak
+*.user
+__pycache__/
+.pytest_cache/
+.venv/
+dist/
+build/
+.codex-cache/

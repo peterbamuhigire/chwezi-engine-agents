@@ -1,0 +1,26 @@
+{
+  "name": "skills-engine-agents",
+  "version": "0.1.0",
+  "description": "Portable Codex agents for routing, maintaining, and validating skills engines.",
+  "author": {
+    "name": "Peter Bamuhigire",
+    "url": "https://github.com/peterbamuhigire"
+  },
+  "homepage": "https://github.com/peterbamuhigire/skills-engine-agents",
+  "repository": "https://github.com/peterbamuhigire/skills-engine-agents",
+  "keywords": ["codex", "agents", "skills", "orchestration", "maintenance", "validation"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Skills Engine Agents",
+    "shortDescription": "Route and maintain skills engines.",
+    "longDescription": "Portable Codex agents for coordinating, maintaining, and validating ten independent skills engines without machine-specific paths.",
+    "developerName": "Peter Bamuhigire",
+    "category": "Productivity",
+    "capabilities": ["Read", "Analyze", "Validate", "Write with confirmation"],
+    "defaultPrompt": [
+      "Route this task to the correct skills engine.",
+      "Check the current skills engine for drift and validation failures.",
+      "Validate this engine and report evidence, blockers, and next actions."
+    ]
+  }
+}
