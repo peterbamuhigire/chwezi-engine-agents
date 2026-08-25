@@ -1,0 +1,17 @@
+schema_version: "1.0"
+id: claude-code
+host: claude-code
+version: 1.0.0
+core_version: 1.0.0
+status: adapter
+entrypoints:
+  engine-orchestrator: agents/engine-orchestrator.md
+  engine-maintainer: agents/engine-maintainer.md
+  engine-validator: agents/engine-validator.md
+  skills-engine-agents: skills/skills-engine-agents/SKILL.md
+install_targets:
+  - CLAUDE.md
+  - agents
+  - skills/skills-engine-agents
+required_capabilities: [read_files]
+fallback: generic

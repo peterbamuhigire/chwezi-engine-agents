@@ -1,0 +1,16 @@
+schema_version: "1.0"
+id: gemini-cli
+host: gemini-cli
+version: 1.0.0
+core_version: 1.0.0
+status: adapter
+entrypoints:
+  project-instructions: project-instructions.md
+  engine-orchestrator: commands/engine-orchestrator.md
+  engine-maintainer: commands/engine-maintainer.md
+  engine-validator: commands/engine-validator.md
+install_targets:
+  - GEMINI.md
+  - commands
+required_capabilities: [read_files]
+fallback: generic

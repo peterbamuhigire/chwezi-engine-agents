@@ -1,0 +1,19 @@
+schema_version: "1.0"
+id: codex
+host: codex
+version: 1.0.0
+core_version: 1.0.0
+status: native
+entrypoints:
+  engine-orchestrator: agents/engine-orchestrator.md
+  engine-maintainer: agents/engine-maintainer.md
+  engine-validator: agents/engine-validator.md
+install_targets:
+  - .codex-plugin/plugin.json
+  - agents
+  - core
+  - schemas
+  - catalog
+  - scripts
+required_capabilities: [read_files]
+fallback: generic
