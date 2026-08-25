@@ -12,18 +12,16 @@ It does not replace or duplicate the domain knowledge in the ten engines. Each e
 
 ## The ten skills engines
 
-<ul>
-  <li><a href="https://github.com/peterbamuhigire/srs-skills" target="_blank" rel="noopener noreferrer">SRS Skills</a> — software requirements, product requirements, architecture, and technical specifications.</li>
-  <li><a href="https://github.com/peterbamuhigire/business-plan-skills" target="_blank" rel="noopener noreferrer">Business Plan Skills</a> — business plans, financial models, market strategy, and investor planning.</li>
-  <li><a href="https://github.com/peterbamuhigire/website-skills" target="_blank" rel="noopener noreferrer">Website Skills</a> — websites, landing pages, web UX, SEO, performance, and site delivery.</li>
-  <li><a href="https://github.com/peterbamuhigire/social-media-skills" target="_blank" rel="noopener noreferrer">Social Media Skills</a> — social strategy, content planning, campaigns, and platform workflows.</li>
-  <li><a href="https://github.com/peterbamuhigire/linux-skills" target="_blank" rel="noopener noreferrer">Linux Skills</a> — Linux administration, servers, hardening, networking, and operations.</li>
-  <li><a href="https://github.com/peterbamuhigire/proposal-skills" target="_blank" rel="noopener noreferrer">Proposal Skills</a> — proposals, tenders, bids, RFP/RFQ responses, and grant submissions.</li>
-  <li><a href="https://github.com/peterbamuhigire/skills-web-dev" target="_blank" rel="noopener noreferrer">Skills Web Dev</a> — general engineering, AI systems, SaaS, security, product, UX, and technical documentation.</li>
-  <li><a href="https://github.com/peterbamuhigire/chwezi-accounting-doctrine" target="_blank" rel="noopener noreferrer">Chwezi Accounting Doctrine</a> — finance, accounting, IFRS/IAS, tax, bookkeeping, controls, and reporting.</li>
-  <li><a href="https://github.com/peterbamuhigire/design-system-skills" target="_blank" rel="noopener noreferrer">Design System Skills</a> — typography, visual design, UI/UX, layout, accessibility, and document presentation.</li>
-  <li><a href="https://github.com/peterbamuhigire/digital-research-skills" target="_blank" rel="noopener noreferrer">Digital Research Skills</a> — research orchestration, source evaluation, evidence verification, and benchmarking.</li>
-</ul>
+- [SRS Skills](https://github.com/peterbamuhigire/srs-skills) — software requirements, product requirements, architecture, and technical specifications.
+- [Business Plan Skills](https://github.com/peterbamuhigire/business-plan-skills) — business plans, financial models, market strategy, and investor planning.
+- [Website Skills](https://github.com/peterbamuhigire/website-skills) — websites, landing pages, web UX, SEO, performance, and site delivery.
+- [Social Media Skills](https://github.com/peterbamuhigire/social-media-skills) — social strategy, content planning, campaigns, and platform workflows.
+- [Linux Skills](https://github.com/peterbamuhigire/linux-skills) — Linux administration, servers, hardening, networking, and operations.
+- [Proposal Skills](https://github.com/peterbamuhigire/proposal-skills) — proposals, tenders, bids, RFP/RFQ responses, and grant submissions.
+- [Skills Web Dev](https://github.com/peterbamuhigire/skills-web-dev) — general engineering, AI systems, SaaS, security, product, UX, and technical documentation.
+- [Chwezi Accounting Doctrine](https://github.com/peterbamuhigire/chwezi-accounting-doctrine) — finance, accounting, IFRS/IAS, tax, bookkeeping, controls, and reporting.
+- [Design System Skills](https://github.com/peterbamuhigire/design-system-skills) — typography, visual design, UI/UX, layout, accessibility, and document presentation.
+- [Digital Research Skills](https://github.com/peterbamuhigire/digital-research-skills) — research orchestration, source evaluation, evidence verification, and benchmarking.
 
 This plugin adds three focused agents:
 
