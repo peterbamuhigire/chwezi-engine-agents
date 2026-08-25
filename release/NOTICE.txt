@@ -1,0 +1,7 @@
+skills-engine-agents
+
+Copyright 2026 Peter Bamuhigire.
+
+This repository contains coordination instructions, scripts, schemas, and
+adapters. The ten independent skills engines remain separate repositories and
+their domain content is not redistributed by this package.

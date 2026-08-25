@@ -10,6 +10,8 @@ tool access.
 See the [compatibility contract](architecture/compatibility-contract.md) and
 [host matrix](architecture/host-model-capability-matrix.md).
 
+Adapter guides are available for [Codex](adapters/codex.md), [Claude Code](adapters/claude-code.md), [Gemini CLI](adapters/gemini-cli.md), [OpenCode](adapters/opencode.md), [generic CLI](adapters/generic.md), and [MCP](adapters/mcp.md). Operational policy is in [upgrade-policy.md](operations/upgrade-policy.md) and [incident-runbook.md](operations/incident-runbook.md).
+
 ## Public directory
 
 1. Validate the plugin and review the final diff.

@@ -1,0 +1,30 @@
+name: adapter-smoke-tests
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'adapters/**'
+      - 'scripts/**'
+      - 'tests/adapters/**'
+
+jobs:
+  smoke:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install PyYAML jsonschema
+      - name: Validate adapter manifests
+        shell: pwsh
+        run: |
+          Get-ChildItem adapters -Recurse -Filter adapter.yaml | ForEach-Object { python scripts/validate-contracts.py --schema schemas/adapter-manifest.schema.json --instance $_.FullName; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE } }
+      - name: Run adapter tests
+        shell: pwsh
+        run: |
+          ./tests/adapters/test_codex_adapter.ps1
+          ./tests/adapters/test_claude_code_adapter.ps1
+          ./tests/adapters/test_other_host_adapters.ps1
+          ./evals/runners/run-host-smoke-tests.ps1
