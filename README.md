@@ -2,6 +2,14 @@
 
 Portable Codex agents for the ten `peterbamuhigire` skills engines.
 
+> **GitHub description:** Portable Codex agents for routing, maintaining, and validating ten domain skills engines with safe discovery, quality checks, and fork-friendly installation.
+
+## What this repository is
+
+`skills-engine-agents` is a Codex plugin and coordination layer for a family of independent skills engines. It helps Codex identify the right engine, preserve the engines' local operating rules, run documented validation gates, and perform safe maintenance across local checkouts.
+
+It does not replace or duplicate the domain knowledge in the ten engines. Each engine remains independently usable and continues to own its routers, `SKILL.md` files, references, templates, and release checks.
+
 This plugin adds three focused agents:
 
 - `engine-orchestrator` routes a request to the correct domain and cross-cutting engines.
