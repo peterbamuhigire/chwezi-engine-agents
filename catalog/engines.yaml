@@ -5,59 +5,59 @@ engines:
     repository: srs-skills
     path: srs-skills
     router: AGENTS.md
-    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: pending, released_commit: null}
+    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "f99a3e3"}
     validators: "python -X utf8 scripts/validate_skill_engine.py --baseline tests/skill-quality-baseline.json | python -X utf8 scripts/routing_smoke_test.py"
   - id: business-plan-skills
     repository: business-plan-skills
     path: business-plan-skills
     router: AGENTS.md
-    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: pending, released_commit: null}
+    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "0146d37"}
     validators: "python -X utf8 scripts/validate_skill_engine.py --baseline docs/quality/skill-quality-baseline.json | python -X utf8 scripts/routing_smoke_test.py --threshold 1.0"
   - id: website-skills
     repository: website-skills
     path: website-skills
     router: AGENTS.md
-    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: pending, released_commit: null}
+    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "40b9c7f"}
     validators: "python scripts/validate-skill-registry.py | python scripts/website_fixture_benchmark.py"
   - id: social-media-skills
     repository: social-media-skills
     path: social-media-skills
     router: AGENTS.md
-    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: pending, released_commit: null}
+    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "892ea2a"}
     validators: "python -X utf8 scripts/validate_skill_engine.py --baseline quality-baseline.json | python -X utf8 scripts/routing_smoke_test.py | python -X utf8 scripts/check_source_freshness.py"
   - id: linux-skills
     repository: linux-skills
     path: linux-skills
     router: AGENTS.md
-    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: pending, released_commit: null}
+    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "26262e8"}
     validators: "python -X utf8 scripts/validate_skills.py --baseline quality-baseline.json | python -X utf8 scripts/routing_smoke_test.py | bash scripts/tests/check-distro-matrix.sh"
   - id: proposal-skills
     repository: proposal-skills
     path: proposal-skills
     router: AGENTS.md
-    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: pending, released_commit: null}
+    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "4e8b144"}
     validators: "git diff --check"
   - id: skills-web-dev
     repository: skills-web-dev
     path: skills-web-dev
     router: AGENTS.md
-    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: pending, released_commit: null}
+    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "6249575"}
     validators: "python scripts/validate_engine_control_plane.py --workspace-root . | python scripts/routing_smoke_test.py"
   - id: chwezi-accounting-doctrine
     repository: chwezi-accounting-doctrine
     path: chwezi-accounting-doctrine
     router: README.md
-    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: pending, released_commit: null}
+    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "e875802"}
     validators: ".\\tools\\validate-doctrine.ps1 -Strict"
   - id: design-system-skills
     repository: design-system-skills
     path: design-system-skills
     router: AGENTS.md
-    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: pending, released_commit: null}
+    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "62379cf"}
     validators: "python -X utf8 scripts/validate_engine.py --baseline tests/quality-baseline.json | python -X utf8 scripts/routing_smoke_test.py"
   - id: digital-research-skills
     repository: digital-research-engine
     path: digital-research-engine
     router: AGENTS.md
-    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: pending, released_commit: null}
+    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "b88edd0"}
     validators: "python -X utf8 scripts/skill_contract_validator.py --baseline tests/skill-engine/quality-baseline.json | python -X utf8 scripts/routing_smoke_test.py | python -X utf8 scripts/validate_engine.py"
