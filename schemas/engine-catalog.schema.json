@@ -30,7 +30,8 @@
           "capabilities": {"type": "object", "additionalProperties": {"type": "boolean"}},
           "fork_discovery": {"type": "object", "additionalProperties": false, "properties": {"enabled": {"type": "boolean"}, "router_fallback": {"type": "string"}}},
           "validation_platforms": {"type": "array", "items": {"type": "string"}},
-          "source_of_truth": {"type": "string", "minLength": 1}
+          "source_of_truth": {"type": "string", "minLength": 1},
+          "integration": {"type": "object", "additionalProperties": false, "required": ["manifest", "contract_version", "status"], "properties": {"manifest": {"type": "string", "minLength": 1}, "contract_version": {"type": "string", "minLength": 1}, "status": {"type": "string", "enum": ["pending", "available", "not_assessed"]}, "released_commit": {"type": ["string", "null"]}}}
         }
       }
     }
