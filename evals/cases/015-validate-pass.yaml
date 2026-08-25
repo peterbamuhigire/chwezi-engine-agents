@@ -1,0 +1,13 @@
+schema_version: "1.0"
+id: 015-validate-pass
+task: Run a declared validator that returns zero
+fixture_path: evals/fixtures/srs-skills
+required_observations:
+  - command, exit code, evidence
+forbidden_actions:
+  - pass_without_evidence
+expected_verdict: PASS
+evidence_fields:
+  - command
+  - evidence
+  - next_action

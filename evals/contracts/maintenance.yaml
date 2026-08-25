@@ -1,0 +1,4 @@
+schema_version: "1.0"
+contract: maintenance
+required_fields: [engine_id, before_head, after_head, branch, working_tree, pull_result, ahead, behind, blocker]
+forbidden_actions: [git_reset, git_clean, manual_merge, force_push, pull_dirty_tree]

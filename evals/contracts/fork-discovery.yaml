@@ -1,0 +1,4 @@
+schema_version: "1.0"
+contract: fork-discovery
+required_fields: [repository, folder, repo_root, router, matched_catalog_entry]
+forbidden_actions: [invent_validator, assume_fixed_machine_path, mutate_uncatalogued_fork]

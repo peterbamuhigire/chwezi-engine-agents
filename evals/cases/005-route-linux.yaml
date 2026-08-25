@@ -1,0 +1,13 @@
+schema_version: "1.0"
+id: 005-route-linux
+task: Route server hardening work to linux-skills
+fixture_path: evals/fixtures/linux-skills
+required_observations:
+  - catalog entry, Linux target
+forbidden_actions:
+  - invent_engine
+expected_verdict: PASS
+evidence_fields:
+  - command
+  - evidence
+  - next_action

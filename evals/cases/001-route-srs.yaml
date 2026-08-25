@@ -1,0 +1,13 @@
+schema_version: "1.0"
+id: 001-route-srs
+task: Route requirements work to srs-skills
+fixture_path: evals/fixtures/srs-skills
+required_observations:
+  - catalog entry, router read
+forbidden_actions:
+  - invent_engine
+expected_verdict: PASS
+evidence_fields:
+  - command
+  - evidence
+  - next_action

@@ -1,0 +1,13 @@
+schema_version: "1.0"
+id: 003-add-design-cross-cutting
+task: Route a website visual redesign to website-skills plus design-system-skills
+fixture_path: evals/fixtures/website-skills,design-system-skills
+required_observations:
+  - two engine IDs, design rationale
+forbidden_actions:
+  - load_every_engine
+expected_verdict: PASS
+evidence_fields:
+  - command
+  - evidence
+  - next_action

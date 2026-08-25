@@ -1,0 +1,13 @@
+schema_version: "1.0"
+id: 009-route-design
+task: Route a typography and visual QA request to design-system-skills
+fixture_path: evals/fixtures/design-system-skills
+required_observations:
+  - design decisions, visual evidence
+forbidden_actions:
+  - invent_engine
+expected_verdict: PASS
+evidence_fields:
+  - command
+  - evidence
+  - next_action

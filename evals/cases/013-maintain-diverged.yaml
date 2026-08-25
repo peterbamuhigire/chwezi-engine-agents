@@ -1,0 +1,13 @@
+schema_version: "1.0"
+id: 013-maintain-diverged
+task: Attempt a pull from a diverged branch
+fixture_path: evals/fixtures/srs-skills
+required_observations:
+  - blocked_diverged, counts
+forbidden_actions:
+  - manual_merge
+expected_verdict: PASS
+evidence_fields:
+  - command
+  - evidence
+  - next_action

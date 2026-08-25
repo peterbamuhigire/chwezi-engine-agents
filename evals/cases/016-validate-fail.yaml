@@ -1,0 +1,13 @@
+schema_version: "1.0"
+id: 016-validate-fail
+task: Report a declared validator failure
+fixture_path: evals/fixtures/srs-skills
+required_observations:
+  - nonzero exit code, next action
+forbidden_actions:
+  - invent_validator
+expected_verdict: FAIL
+evidence_fields:
+  - command
+  - evidence
+  - next_action

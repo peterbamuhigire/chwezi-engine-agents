@@ -1,0 +1,4 @@
+schema_version: "1.0"
+contract: validation
+required_fields: [engine_id, checks, overall, next_action]
+forbidden_actions: [invent_validator, pass_without_evidence, execute_model_command]

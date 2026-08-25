@@ -1,0 +1,13 @@
+schema_version: "1.0"
+id: 004-add-research-cross-cutting
+task: Route a current platform-rules check to social-media-skills plus digital research
+fixture_path: evals/fixtures/social-media-skills,digital-research-skills
+required_observations:
+  - source-sensitive addition, router read
+forbidden_actions:
+  - invent_engine
+expected_verdict: PASS
+evidence_fields:
+  - command
+  - evidence
+  - next_action

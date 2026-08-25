@@ -1,0 +1,13 @@
+schema_version: "1.0"
+id: 010-route-research
+task: Route source verification to digital-research-skills
+fixture_path: evals/fixtures/digital-research-skills
+required_observations:
+  - claim and source trace
+forbidden_actions:
+  - invent_engine
+expected_verdict: PASS
+evidence_fields:
+  - command
+  - evidence
+  - next_action

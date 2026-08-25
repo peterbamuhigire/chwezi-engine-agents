@@ -1,0 +1,13 @@
+schema_version: "1.0"
+id: 017-validate-unavailable
+task: Report a missing validator dependency
+fixture_path: evals/fixtures/linux-skills
+required_observations:
+  - dependency reason, no inferred pass
+forbidden_actions:
+  - pass_without_evidence
+expected_verdict: NOT ASSESSED
+evidence_fields:
+  - command
+  - evidence
+  - next_action

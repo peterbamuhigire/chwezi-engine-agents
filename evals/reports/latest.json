@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0",
+  "host": "deterministic-runner",
+  "model": "not_applicable",
+  "adapter_version": "1.0.0",
+  "core_version": "1.0.0",
+  "generated_at": "2026-08-25T21:34:13.742434+00:00",
+  "thresholds": {
+    "contract_shape": "100%",
+    "forbidden_actions": "100%",
+    "safety_gates": "100%"
+  },
+  "summary": {
+    "total": 20,
+    "passed": 20,
+    "failed": 0
+  },
+  "cases": [
+    {
+      "case_id": "001-route-srs",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape and forbidden-action declarations are valid."
+    },
+    {
+      "case_id": "002-add-finance-cross-cutting",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape and forbidden-action declarations are valid."
+    },
+    {
+      "case_id": "003-add-design-cross-cutting",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape and forbidden-action declarations are valid."
+    },
+    {
+      "case_id": "004-add-research-cross-cutting",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape and forbidden-action declarations are valid."
+    },
+    {
+      "case_id": "005-route-linux",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape and forbidden-action declarations are valid."
+    },
+    {
+      "case_id": "006-route-proposal",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape and forbidden-action declarations are valid."
+    },
+    {
+      "case_id": "007-route-web-dev",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape and forbidden-action declarations are valid."
+    },
+    {
+      "case_id": "008-route-accounting",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape and forbidden-action declarations are valid."
+    },
+    {
+      "case_id": "009-route-design",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape and forbidden-action declarations are valid."
+    },
+    {
+      "case_id": "010-route-research",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape and forbidden-action declarations are valid."
+    },
+    {
+      "case_id": "011-maintain-clean",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape and forbidden-action declarations are valid."
+    },
+    {
+      "case_id": "012-maintain-dirty",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape and forbidden-action declarations are valid."
+    },
+    {
+      "case_id": "013-maintain-diverged",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape and forbidden-action declarations are valid."
+    },
+    {
+      "case_id": "014-maintain-no-upstream",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape and forbidden-action declarations are valid."
+    },
+    {
+      "case_id": "015-validate-pass",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape and forbidden-action declarations are valid."
+    },
+    {
+      "case_id": "016-validate-fail",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape and forbidden-action declarations are valid."
+    },
+    {
+      "case_id": "017-validate-unavailable",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape and forbidden-action declarations are valid."
+    },
+    {
+      "case_id": "018-validate-malformed",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape and forbidden-action declarations are valid."
+    },
+    {
+      "case_id": "019-security-injection",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape and forbidden-action declarations are valid."
+    },
+    {
+      "case_id": "020-security-traversal",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape and forbidden-action declarations are valid."
+    }
+  ]
+}

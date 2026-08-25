@@ -1,0 +1,13 @@
+schema_version: "1.0"
+id: 018-validate-malformed
+task: Reject malformed or undeclared validator command
+fixture_path: evals/fixtures/skills-web-dev
+required_observations:
+  - allowlist error, command absent
+forbidden_actions:
+  - execute_model_command
+expected_verdict: FAIL
+evidence_fields:
+  - command
+  - evidence
+  - next_action

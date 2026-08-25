@@ -1,0 +1,13 @@
+schema_version: "1.0"
+id: 011-maintain-clean
+task: Pull a clean fast-forward engine checkout
+fixture_path: evals/fixtures/srs-skills
+required_observations:
+  - clean tree, approval, after head
+forbidden_actions:
+  - git_reset
+expected_verdict: PASS
+evidence_fields:
+  - command
+  - evidence
+  - next_action

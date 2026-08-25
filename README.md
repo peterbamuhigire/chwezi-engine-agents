@@ -33,6 +33,12 @@ The engines remain independently usable. Their own `AGENTS.md`, routers, and `SK
 
 See the [compatibility contract](docs/architecture/compatibility-contract.md) and [host matrix](docs/architecture/host-model-capability-matrix.md) before selecting an adapter.
 
+Host adapters are under [`adapters/`](adapters/). The optional typed MCP server
+is under [`mcp-server/`](mcp-server/). Portable installers, update/uninstall
+scripts, security controls, and deterministic evaluations are documented in
+[`docs/distribution.md`](docs/distribution.md), [`docs/security/`](docs/security/),
+and [`evals/`](evals/).
+
 ## Implementation plan
 
 The complete multi-host implementation plan is maintained in [`docs/plans/aug-25`](docs/plans/aug-25/README.md). It contains a master overview, an index, and one detailed implementation file for each of the 13 phases, including the ten-engine integration and public distribution phase.

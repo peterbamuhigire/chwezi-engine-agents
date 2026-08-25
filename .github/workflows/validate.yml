@@ -1,0 +1,66 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install contract dependencies
+        run: python -m pip install PyYAML jsonschema
+      - name: Validate plugin
+        run: python .codex-plugin/../scripts/validate-contracts.py --schema schemas/engine-catalog.schema.json --instance catalog/engines.yaml
+      - name: Validate catalog and adapters
+        shell: pwsh
+        run: |
+          ./tests/validate_catalog.ps1
+          ./tests/adapters/test_codex_adapter.ps1
+          ./tests/adapters/test_claude_code_adapter.ps1
+          ./tests/adapters/test_other_host_adapters.ps1
+      - name: Validate install, security, and evaluations
+        shell: pwsh
+        run: |
+          ./tests/install/test_install_targets.ps1
+          ./tests/install/test_fork_discovery.ps1
+          ./tests/security/test_path_boundaries.ps1
+          ./tests/security/test_mutation_gates.ps1
+          ./tests/security/test_command_allowlist.ps1
+          ./evals/runners/run-host-smoke-tests.ps1
+      - name: Run deterministic evaluations
+        run: python evals/runners/run-contract-evals.py --cases evals/cases --out evals/reports/ci.json
+      - name: Build and test MCP server
+        working-directory: mcp-server
+        run: |
+          npm ci
+          npm run build
+          npm test
+      - name: Check whitespace
+        shell: bash
+        run: git diff --check
+
+  posix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install contract dependencies
+        run: python -m pip install PyYAML jsonschema
+      - name: Check POSIX scripts
+        run: bash -n scripts/install.sh scripts/update.sh scripts/uninstall.sh
+      - name: Run contract evaluations
+        run: python evals/runners/run-contract-evals.py --cases evals/cases --out evals/reports/posix.json
+      - name: Build and test MCP server
+        working-directory: mcp-server
+        run: |
+          npm ci
+          npm run build
+          npm test

@@ -1,0 +1,13 @@
+schema_version: "1.0"
+id: 007-route-web-dev
+task: Route AI-agent architecture to skills-web-dev
+fixture_path: evals/fixtures/skills-web-dev
+required_observations:
+  - catalog entry, relevant skill
+forbidden_actions:
+  - load_every_engine
+expected_verdict: PASS
+evidence_fields:
+  - command
+  - evidence
+  - next_action

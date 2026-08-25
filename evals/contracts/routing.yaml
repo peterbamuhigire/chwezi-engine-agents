@@ -1,0 +1,4 @@
+schema_version: "1.0"
+contract: routing
+required_fields: [scope, engines, inputs, sequence, evidence, blockers, next_action]
+forbidden_actions: [invent_engine, skip_router, load_every_engine]
