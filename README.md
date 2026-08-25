@@ -1,12 +1,12 @@
 # Skills Engine Agents
 
-Portable Codex agents for the ten `peterbamuhigire` skills engines.
+Portable multi-host agents for the ten `peterbamuhigire` skills engines.
 
 > **GitHub description:** Portable Codex agents for routing, maintaining, and validating ten domain skills engines with safe discovery, quality checks, and fork-friendly installation.
 
 ## What this repository is
 
-`skills-engine-agents` is a Codex plugin and coordination layer for a family of independent skills engines. It helps Codex identify the right engine, preserve the engines' local operating rules, run documented validation gates, and perform safe maintenance across local checkouts.
+`skills-engine-agents` is a canonical coordination layer with Codex, Claude Code, Gemini CLI, OpenCode, generic CLI, and optional MCP adapters. It helps a host identify the right engine, preserve each engine's local operating rules, run documented validation gates, and perform safe maintenance across local checkouts.
 
 It does not replace or duplicate the domain knowledge in the ten engines. Each engine remains independently usable and continues to own its routers, `SKILL.md` files, references, templates, and release checks.
 
@@ -23,13 +23,15 @@ It does not replace or duplicate the domain knowledge in the ten engines. Each e
 - [Design System Skills](https://github.com/peterbamuhigire/design-system-skills) — typography, visual design, UI/UX, layout, accessibility, and document presentation.
 - [Digital Research Skills](https://github.com/peterbamuhigire/digital-research-skills) — research orchestration, source evaluation, evidence verification, and benchmarking.
 
-This plugin adds three focused agents:
+The core adds three focused workflows:
 
 - `engine-orchestrator` routes a request to the correct domain and cross-cutting engines.
 - `engine-maintainer` inspects engine remotes, branches, working trees, and fast-forward updates.
 - `engine-validator` runs documented engine checks and reports evidence or `NOT ASSESSED` results.
 
-The engines remain independently usable. Their own `AGENTS.md`, routers, and `SKILL.md` files remain the source of truth for domain behavior. This plugin supplies coordination and maintenance behavior around them.
+The engines remain independently usable. Their own `AGENTS.md`, routers, and `SKILL.md` files remain the source of truth for domain behavior. This package supplies coordination and maintenance behavior around them. Host adapters package the same core; they do not make provider/model quality or tool access identical.
+
+See the [compatibility contract](docs/architecture/compatibility-contract.md) and [host matrix](docs/architecture/host-model-capability-matrix.md) before selecting an adapter.
 
 ## Implementation plan
 

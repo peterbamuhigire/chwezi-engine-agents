@@ -1,0 +1,56 @@
+schema_version: "1.0"
+hosts:
+  - host: codex
+    installation: native
+    instruction_discovery: Codex plugin manifest and bundled agent files
+    agent_entrypoints: agents/engine-orchestrator.md, agents/engine-maintainer.md, agents/engine-validator.md
+    tool_transport: scripts
+    approval_transport: host_prompt
+    model_configuration: host_owned
+    tested_on: [windows]
+    known_limits: [plugin availability varies by Codex surface]
+  - host: claude-code
+    installation: adapter
+    instruction_discovery: project CLAUDE.md and .claude directories
+    agent_entrypoints: .claude/agents and .claude/skills
+    tool_transport: scripts
+    approval_transport: host_prompt
+    model_configuration: host_owned
+    tested_on: [project-local]
+    known_limits: [marketplace not assessed]
+  - host: gemini-cli
+    installation: adapter
+    instruction_discovery: GEMINI.md and extension commands
+    agent_entrypoints: commands/engine-orchestrator.md
+    tool_transport: scripts
+    approval_transport: host_prompt
+    model_configuration: host_owned
+    tested_on: [project-local]
+    known_limits: [cli version may change extension conventions]
+  - host: opencode
+    installation: adapter
+    instruction_discovery: AGENTS.md and project skills
+    agent_entrypoints: skills/skills-engine-agents/SKILL.md
+    tool_transport: scripts
+    approval_transport: manual
+    model_configuration: host_owned
+    tested_on: [project-local]
+    known_limits: [V2 discovery behavior must be rechecked]
+  - host: generic
+    installation: generic
+    instruction_discovery: human-loaded Markdown prompts
+    agent_entrypoints: prompt files
+    tool_transport: scripts
+    approval_transport: manual
+    model_configuration: provider_owned
+    tested_on: [powershell, posix]
+    known_limits: [no automatic discovery]
+  - host: mcp
+    installation: adapter
+    instruction_discovery: host MCP configuration
+    agent_entrypoints: typed MCP tools
+    tool_transport: mcp
+    approval_transport: confirmation_token
+    model_configuration: host_owned
+    tested_on: [stdio]
+    known_limits: [approval capability is host-dependent]
