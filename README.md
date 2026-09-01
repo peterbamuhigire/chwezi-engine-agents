@@ -1,16 +1,16 @@
 # Skills Engine Agents
 
-Portable multi-host agents for the ten `peterbamuhigire` skills engines.
+Portable multi-host agents for the eleven `peterbamuhigire` skills engines.
 
-> **GitHub description:** Portable Codex agents for routing, maintaining, and validating ten domain skills engines with safe discovery, quality checks, and fork-friendly installation.
+> **GitHub description:** Portable Codex agents for routing, maintaining, and validating eleven domain skills engines with safe discovery, quality checks, and fork-friendly installation.
 
 ## What this repository is
 
 `skills-engine-agents` is a canonical coordination layer with Codex, Claude Code, Gemini CLI, OpenCode, generic CLI, and optional MCP adapters. It helps a host identify the right engine, preserve each engine's local operating rules, run documented validation gates, and perform safe maintenance across local checkouts.
 
-It does not replace or duplicate the domain knowledge in the ten engines. Each engine remains independently usable and continues to own its routers, `SKILL.md` files, references, templates, and release checks.
+It does not replace or duplicate the domain knowledge in the eleven engines. Each engine remains independently usable and continues to own its routers, `SKILL.md` files, references, templates, and release checks.
 
-## The ten skills engines
+## The eleven skills engines
 
 - [SRS Skills](https://github.com/peterbamuhigire/srs-skills) — software requirements, product requirements, architecture, and technical specifications.
 - [Business Plan Skills](https://github.com/peterbamuhigire/business-plan-skills) — business plans, financial models, market strategy, and investor planning.
@@ -22,6 +22,7 @@ It does not replace or duplicate the domain knowledge in the ten engines. Each e
 - [Chwezi Accounting Doctrine](https://github.com/peterbamuhigire/chwezi-accounting-doctrine) — finance, accounting, IFRS/IAS, tax, bookkeeping, controls, and reporting.
 - [Design System Skills](https://github.com/peterbamuhigire/design-system-skills) — typography, visual design, UI/UX, layout, accessibility, and document presentation.
 - [Digital Research Skills](https://github.com/peterbamuhigire/digital-research-skills) — research orchestration, source evaluation, evidence verification, and benchmarking.
+- [Windows Administration Skills](https://github.com/peterbamuhigire/windows-admin-engine-skills) — Windows hosts, Active Directory, networking, security, storage, recovery, fleet, and hybrid administration.
 
 The core adds three focused workflows:
 
@@ -41,7 +42,7 @@ and [`evals/`](evals/).
 
 ## Implementation plan
 
-The complete multi-host implementation plan is maintained in [`docs/plans/aug-25`](docs/plans/aug-25/README.md). It contains a master overview, an index, and one detailed implementation file for each of the 13 phases, including the ten-engine integration and public distribution phase.
+The complete multi-host implementation plan is maintained in [`docs/plans/aug-25`](docs/plans/aug-25/README.md). It contains a master overview, an index, and one detailed implementation file for each of the 13 phases, including the eleven-engine integration and public distribution phase.
 
 The phase documents specify exact files, interfaces, host adapters, MCP tools, capability fallbacks, security controls, tests, evidence requirements, release artifacts, and developer installation paths.
 
@@ -73,7 +74,7 @@ Local installation is the fallback for development, private use, and environment
 
 Clone any engine fork, open Codex from that checkout, and invoke the installed agent. Discovery uses the current Git root, origin repository name, folder name, and local `AGENTS.md`; it does not assume `C:\wamp64\www` or another fixed machine path.
 
-If the checkout is not one of the ten catalogued engines, the agents may still inspect it, but they will not invent engine-specific validation commands.
+If the checkout is not one of the eleven catalogued engines, the agents may still inspect it, but they will not invent engine-specific validation commands.
 
 ## Safety boundaries
 
@@ -95,7 +96,7 @@ git diff --check
 ```text
 .codex-plugin/plugin.json       Plugin manifest
 agents/                         Portable agent definitions
-catalog/engines.yaml            Ten-engine registry
+catalog/engines.yaml            Eleven-engine registry
 scripts/discover-engine.ps1     Current-checkout discovery
 scripts/install.ps1             Local installation helper
 scripts/validate-catalog.ps1    Registry validation

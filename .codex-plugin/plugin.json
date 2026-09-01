@@ -13,7 +13,7 @@
   "interface": {
     "displayName": "Skills Engine Agents - Codex Adapter",
     "shortDescription": "Route and maintain skills engines.",
-    "longDescription": "Codex adapter for coordinating, maintaining, and validating ten independent skills engines through a host-neutral core without machine-specific paths.",
+    "longDescription": "Codex adapter for coordinating, maintaining, and validating eleven independent skills engines through a host-neutral core without machine-specific paths.",
     "developerName": "Peter Bamuhigire",
     "category": "Productivity",
     "capabilities": ["Read", "Analyze", "Validate", "Write with confirmation"],

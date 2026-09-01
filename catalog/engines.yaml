@@ -61,3 +61,9 @@ engines:
     router: AGENTS.md
     integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "b88edd0"}
     validators: "python -X utf8 scripts/skill_contract_validator.py --baseline tests/skill-engine/quality-baseline.json | python -X utf8 scripts/routing_smoke_test.py | python -X utf8 scripts/validate_engine.py"
+  - id: windows-admin-engine-skills
+    repository: windows-admin-engine-skills
+    path: windows-admin-engine-skills
+    router: AGENTS.md
+    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "053aec1"}
+    validators: "python -X utf8 scripts/validate_engine.py | python -X utf8 scripts/routing_smoke_test.py | python -X utf8 scripts/source_ingestion_guardrail.py"
