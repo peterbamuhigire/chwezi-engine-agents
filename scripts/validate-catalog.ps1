@@ -1,7 +1,10 @@
 [CmdletBinding()]
-param([string]$CatalogPath = (Join-Path $PSScriptRoot '..\catalog\engines.yaml'))
+param([string]$CatalogPath = '')
 
 $ErrorActionPreference = 'Stop'
+if ([string]::IsNullOrWhiteSpace($CatalogPath)) {
+    $CatalogPath = Join-Path $PSScriptRoot '..\catalog\engines.yaml'
+}
 $catalogResolved = (Resolve-Path -LiteralPath $CatalogPath).Path
 $contractValidator = Join-Path (Split-Path $PSScriptRoot -Parent) 'scripts\validate-contracts.py'
 if (-not (Test-Path -LiteralPath $contractValidator)) {

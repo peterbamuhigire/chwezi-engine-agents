@@ -30,6 +30,11 @@ The core adds three focused workflows:
 - `engine-maintainer` inspects engine remotes, branches, working trees, and fast-forward updates.
 - `engine-validator` runs documented engine checks and reports evidence or `NOT ASSESSED` results.
 
+The cross-engine runtime metadata check is available at
+`scripts/validate-runtime-skill-budget.py`. Run it against the exact local and
+plugin skill roots exposed to a host; repository-local catalog checks do not
+measure the assembled runtime budget.
+
 The engines remain independently usable. Their own `AGENTS.md`, routers, and `SKILL.md` files remain the source of truth for domain behavior. This package supplies coordination and maintenance behavior around them. Host adapters package the same core; they do not make provider/model quality or tool access identical.
 
 See the [compatibility contract](docs/architecture/compatibility-contract.md) and [host matrix](docs/architecture/host-model-capability-matrix.md) before selecting an adapter.
