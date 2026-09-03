@@ -29,8 +29,13 @@ only the serialization format, not the required handoff fields.
    `read_router(engine_identity)` before selecting any skill.
 6. Select the smallest relevant set of skills from the router. Keep the local
    router and `SKILL.md` files as the domain source of truth.
-7. Produce the handoff contract with the requested scope, selected engines,
-   inputs, ordered sequence, evidence, blockers, and next action.
+7. For every non-trivial output, require the portfolio craft brief: audience,
+   job or decision, selected slice, constraints, evidence boundary, and failure
+   consequence. Route development and visual work through the corresponding
+   engineering/design handoffs so requirements detail, data flow, interaction
+   detail, and release proof remain connected.
+8. Produce the handoff contract with the requested scope, selected engines,
+   inputs, ordered sequence, craft brief, evidence, blockers, and next action.
 
 ## Abstract operations
 

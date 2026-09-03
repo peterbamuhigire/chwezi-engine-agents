@@ -1,6 +1,6 @@
 # Skills Engine Agents
 
-Portable multi-host agents for the eleven `peterbamuhigire` skills engines.
+Portable multi-host agents for routing, validating, and maintaining the eleven `peterbamuhigire` skills engines, with a shared craft contract that keeps every engine and every product deliberate, inspectable, evidence-backed, and safe to hand over.
 
 > **GitHub description:** Portable Codex agents for routing, maintaining, and validating eleven domain skills engines with safe discovery, quality checks, and fork-friendly installation.
 
@@ -36,6 +36,10 @@ plugin skill roots exposed to a host; repository-local catalog checks do not
 measure the assembled runtime budget.
 
 The engines remain independently usable. Their own `AGENTS.md`, routers, and `SKILL.md` files remain the source of truth for domain behavior. This package supplies coordination and maintenance behavior around them. Host adapters package the same core; they do not make provider/model quality or tool access identical.
+
+## Portfolio craft operation
+
+The portfolio-wide craft contract is [`docs/operations/portfolio-craft-standard-2026-09-04.md`](docs/operations/portfolio-craft-standard-2026-09-04.md). It requires every engine and every kaizen operation to work in small named slices, inspect existing context, refine in place, exercise hard cases, and record structural, behavioural, render/reader, system/production, and handoff evidence. Run [`scripts/validate-portfolio-craft.ps1`](scripts/validate-portfolio-craft.ps1) to verify that all eleven engine routers carry the contract. Missing evidence remains `NOT ASSESSED`.
 
 See the [compatibility contract](docs/architecture/compatibility-contract.md) and [host matrix](docs/architecture/host-model-capability-matrix.md) before selecting an adapter.
 
