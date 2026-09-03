@@ -37,6 +37,16 @@ foreach ($engine in $engines) {
             $failures += "${engine}: missing marker '$marker'"
         }
     }
+
+    $readme = Join-Path $root 'README.md'
+    if (-not (Test-Path -LiteralPath $readme)) {
+        $failures += "${engine}: README.md not found"
+    } else {
+        $firstH2 = Get-Content -LiteralPath $readme | Where-Object { $_ -match '^## ' } | Select-Object -First 1
+        if ($firstH2 -ne '## Capability map') {
+            $failures += "${engine}: first README H2 must be '## Capability map' (found '$firstH2')"
+        }
+    }
 }
 
 if ($failures.Count -gt 0) {
