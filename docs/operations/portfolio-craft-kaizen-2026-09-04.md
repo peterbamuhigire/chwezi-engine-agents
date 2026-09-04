@@ -101,12 +101,12 @@ Completed checks:
 | Accounting strict gate and invariants | PASS | Strict doctrine gate and accounting invariants pass. |
 | Windows contract, routing, and source ingestion | PASS | 17 skills, zero findings; 17/17 routing fixtures; zero ingestion findings. |
 | Machine-error/editorial gate | PASS | ME1-ME7 and AS1-AS7 coverage across 12 control-plane targets. |
-| Social source freshness | FAIL / blocker | `UCC-MARKET-REPORTS` overdue since 2026-08-27; no current claim depending on it was admitted. |
+| Social source freshness | PASS (scoped) | `UCC-MARKET-REPORTS` verified against the official UCC index and dedicated Q2 2026 page on 2026-09-04; next review 2026-10-19. Statistic-level support remains claim-level and requires the exact report table, definition, and denominator. |
 
-The failed freshness check is intentionally not converted into a pass. The
-operation is therefore complete as a reversible craft-contract standardisation,
-but the social-media engine remains blocked for releases that depend on that
-source record until its owner refreshes or retires it.
+The freshness blocker is cleared for report availability after owner refresh and
+primary-source verification. The social-media engine must still prevent
+unsupported market statistics from entering a release: each statistic requires
+the report period, exact table, definition, denominator, and claim-level support.
 
 ## Residual gaps and next cycle
 
