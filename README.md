@@ -35,6 +35,11 @@ The cross-engine runtime metadata check is available at
 plugin skill roots exposed to a host; repository-local catalog checks do not
 measure the assembled runtime budget.
 
+The [skill lifecycle and invocation contract](docs/operations/skill-lifecycle-and-invocation.md)
+keeps experimental, deprecated, and reference-only content out of promoted runtime roots and
+prevents adapters from broadening explicit invocation. Validate exact exposed roots with
+`scripts/validate-skill-lifecycle.py`.
+
 The engines remain independently usable. Their own `AGENTS.md`, routers, and `SKILL.md` files remain the source of truth for domain behavior. This package supplies coordination and maintenance behavior around them. Host adapters package the same core; they do not make provider/model quality or tool access identical.
 
 ## Portfolio craft operation
