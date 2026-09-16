@@ -40,6 +40,13 @@ keeps experimental, deprecated, and reference-only content out of promoted runti
 prevents adapters from broadening explicit invocation. Validate exact exposed roots with
 `scripts/validate-skill-lifecycle.py`.
 
+The [domain prompt compilation contract](docs/operations/domain-prompt-compilation-contract-2026-09-16.md)
+is the shared Kaizen standard for turning domain requests into concise,
+prioritised, ready-to-run AI prompts. Each engine carries its own runtime copy
+under `docs/ai-prompting/`, so a standalone fork remains capable; every engine
+router carries a thin domain adapter and is checked by
+`scripts/validate-prompt-capability.ps1`.
+
 The engines remain independently usable. Their own `AGENTS.md`, routers, and `SKILL.md` files remain the source of truth for domain behavior. This package supplies coordination and maintenance behavior around them. Host adapters package the same core; they do not make provider/model quality or tool access identical.
 
 ## Portfolio craft operation
@@ -85,6 +92,14 @@ The default destination is `%USERPROFILE%\plugins\skills-engine-agents`. Use `-D
 Local installation is the fallback for development, private use, and environments that do not have access to a published directory.
 
 ## Use with a forked engine
+
+## Prompt-generation capability — September 2026
+
+The portfolio contract is distributed as an identical local copy to all eleven
+engines. Each engine can compile ready-to-paste domain prompts independently,
+including lifecycle, risk, evidence, acceptance, and recovery fields; run
+`scripts/validate-prompt-capability.ps1` to verify the standalone copies remain
+aligned.
 
 Clone any engine fork, open Codex from that checkout, and invoke the installed agent. Discovery uses the current Git root, origin repository name, folder name, and local `AGENTS.md`; it does not assume `C:\wamp64\www` or another fixed machine path.
 
