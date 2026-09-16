@@ -93,7 +93,9 @@ Local installation is the fallback for development, private use, and environment
 
 ## Use with a forked engine
 
-## Prompt-generation capability — September 2026
+## Prompt-generation capability — 2026-09-17
+
+This release adds evidence-first candidate testing, failure-slice review, and explicit `NOT_ASSESSED` handling for volatile prompt claims.
 
 The portfolio contract is distributed as an identical local copy to all eleven
 engines. Each engine can compile ready-to-paste domain prompts independently,
