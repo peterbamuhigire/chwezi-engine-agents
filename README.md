@@ -47,6 +47,18 @@ under `docs/ai-prompting/`, so a standalone fork remains capable; every engine
 router carries a thin domain adapter and is checked by
 `scripts/validate-prompt-capability.ps1`.
 
+Coordination Kaizen references for bounded adoption and integration handoff are
+available in the [H2 readiness card](docs/operations/agentic-h2-readiness-card.md),
+[three-horizon adoption card](docs/operations/three-horizon-ai-adoption-card.md),
+and [task runbook and integration evidence](docs/operations/task-runbook-and-integration-evidence.md).
+They separate observations, inferences, and `NOT_ASSESSED` evidence and keep
+fallbacks and authority boundaries explicit. Validate their structure with:
+
+```powershell
+python -X utf8 scripts\validate-kaizen-cards.py
+python -X utf8 -m unittest tests.test_kaizen_coordination_cards
+```
+
 The engines remain independently usable. Their own `AGENTS.md`, routers, and `SKILL.md` files remain the source of truth for domain behavior. This package supplies coordination and maintenance behavior around them. Host adapters package the same core; they do not make provider/model quality or tool access identical.
 
 ## Portfolio craft operation
