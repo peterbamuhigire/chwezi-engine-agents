@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "mcpServers": {},
+  "userConfig": {
+    "hooks_enabled": {
+      "type": "boolean",
+      "title": "Enable Chwezi hooks",
+      "description": "Run this engine's enforcement hooks (destructive-command gate). Disable to install skills/agents only, with no local automation.",
+      "default": true
+    }
+  }
+}
