@@ -37,9 +37,9 @@ engines:
     router: AGENTS.md
     integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "4e8b144"}
     validators: "git diff --check"
-  - id: skills-web-dev
-    repository: skills-web-dev
-    path: skills-web-dev
+  - id: chwezi-dev-engine
+    repository: chwezi-dev-engine
+    path: chwezi-dev-engine
     router: AGENTS.md
     integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "6249575"}
     validators: "python scripts/validate_engine_control_plane.py --workspace-root . | python scripts/routing_smoke_test.py"

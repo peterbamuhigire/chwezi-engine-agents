@@ -14,8 +14,8 @@
       "description": "Coordination core: routes requests to the correct engine, maintains and validates local engine checkouts (engine-orchestrator, engine-maintainer, engine-validator agents). Optional — no other Chwezi plugin depends on it.",
       "version": "1.0.0",
       "author": { "name": "Peter Bamuhigire" },
-      "homepage": "https://github.com/chwezi/chwezi-engine-agents",
-      "repository": "https://github.com/chwezi/chwezi-engine-agents",
+      "homepage": "https://github.com/peterbamuhigire/chwezi-engine-agents",
+      "repository": "https://github.com/peterbamuhigire/chwezi-engine-agents",
       "license": "MIT",
       "keywords": ["coordination", "routing", "multi-engine"],
       "category": "coordination",
@@ -25,10 +25,11 @@
     {
       "name": "srs",
       "source": "../srs-skills",
-      "description": "158 skills: software requirements specifications, PRDs, system design, governance and compliance artefacts",
+      "description": "159 skills: software requirements specifications, PRDs, system design, governance and compliance artefacts",
       "version": "1.0.0",
       "author": { "name": "Peter Bamuhigire" },
-      "repository": "https://github.com/chwezi/srs-skills",
+      "homepage": "https://github.com/peterbamuhigire/srs-skills",
+      "repository": "https://github.com/peterbamuhigire/srs-skills",
       "license": "MIT",
       "category": "requirements",
       "strict": false
@@ -36,10 +37,11 @@
     {
       "name": "business-plan",
       "source": "../business-plan-skills",
-      "description": "94 skills: business plans, bankable plans, investor materials, financial models, market/country context",
+      "description": "128 skills: business plans, bankable plans, investor materials, financial models, market/country context",
       "version": "1.0.0",
       "author": { "name": "Peter Bamuhigire" },
-      "repository": "https://github.com/chwezi/business-plan-skills",
+      "homepage": "https://github.com/peterbamuhigire/business-plan-skills",
+      "repository": "https://github.com/peterbamuhigire/business-plan-skills",
       "license": "MIT",
       "category": "business",
       "strict": false
@@ -47,10 +49,11 @@
     {
       "name": "website",
       "source": "../website-skills",
-      "description": "61 skills: website build, SEO, content, commerce, quality gates, launch operations",
+      "description": "62 skills: website build, SEO, content, commerce, quality gates, launch operations",
       "version": "1.0.0",
       "author": { "name": "Peter Bamuhigire" },
-      "repository": "https://github.com/chwezi/website-skills",
+      "homepage": "https://github.com/peterbamuhigire/website-skills",
+      "repository": "https://github.com/peterbamuhigire/website-skills",
       "license": "MIT",
       "category": "web",
       "strict": false
@@ -58,10 +61,11 @@
     {
       "name": "social",
       "source": "../social-media-skills",
-      "description": "164 skills: social media strategy, content planning, campaigns, platform playbooks",
+      "description": "178 skills: social media strategy, content planning, campaigns, platform playbooks",
       "version": "1.0.0",
       "author": { "name": "Peter Bamuhigire" },
-      "repository": "https://github.com/chwezi/social-media-skills",
+      "homepage": "https://github.com/peterbamuhigire/social-media-skills",
+      "repository": "https://github.com/peterbamuhigire/social-media-skills",
       "license": "MIT",
       "category": "marketing",
       "strict": false
@@ -69,10 +73,11 @@
     {
       "name": "linux",
       "source": "../linux-skills",
-      "description": "45 skills: Linux sysadmin, hardening, networking, storage, observability, disaster recovery",
+      "description": "48 skills: Linux sysadmin, hardening, networking, storage, observability, disaster recovery",
       "version": "1.0.0",
       "author": { "name": "Peter Bamuhigire" },
-      "repository": "https://github.com/chwezi/linux-skills",
+      "homepage": "https://github.com/peterbamuhigire/linux-skills",
+      "repository": "https://github.com/peterbamuhigire/linux-skills",
       "license": "MIT",
       "category": "infrastructure",
       "strict": false
@@ -80,21 +85,23 @@
     {
       "name": "proposal",
       "source": "../proposal-skills",
-      "description": "94 skills: consulting proposals, EOIs, procurement and tender responses for East & Central Africa",
+      "description": "113 skills: consulting proposals, EOIs, procurement and tender responses for East & Central Africa",
       "version": "1.0.0",
       "author": { "name": "Peter Bamuhigire" },
-      "repository": "https://github.com/chwezi/proposal-skills",
+      "homepage": "https://github.com/peterbamuhigire/proposal-skills",
+      "repository": "https://github.com/peterbamuhigire/proposal-skills",
       "license": "MIT",
       "category": "consulting",
       "strict": false
     },
     {
       "name": "engineering",
-      "source": "../skills-web-dev",
-      "description": "169 skills: architecture, APIs, databases, PHP, security, testing, SaaS, AI systems, game development, SDLC",
+      "source": "../chwezi-dev-engine",
+      "description": "183 skills: architecture, APIs, databases, PHP, security, testing, SaaS, AI systems, game development, SDLC",
       "version": "1.0.0",
       "author": { "name": "Peter Bamuhigire" },
-      "repository": "https://github.com/chwezi/skills-web-dev",
+      "homepage": "https://github.com/peterbamuhigire/chwezi-dev-engine",
+      "repository": "https://github.com/peterbamuhigire/chwezi-dev-engine",
       "license": "MIT",
       "category": "engineering",
       "strict": false
@@ -105,7 +112,8 @@
       "description": "108 skills: bookkeeping, IFRS/IAS, financial statements, tax/statutory, close/consolidation, controls",
       "version": "1.0.0",
       "author": { "name": "Peter Bamuhigire" },
-      "repository": "https://github.com/chwezi/chwezi-accounting-doctrine",
+      "homepage": "https://github.com/peterbamuhigire/chwezi-accounting-doctrine",
+      "repository": "https://github.com/peterbamuhigire/chwezi-accounting-doctrine",
       "license": "MIT",
       "category": "finance",
       "strict": false
@@ -113,10 +121,11 @@
     {
       "name": "design-system",
       "source": "../design-system-skills",
-      "description": "91 skills: typography, colour, layout, UX, design systems/tokens, anti-AI-slop doctrine",
+      "description": "97 skills: typography, colour, layout, UX, design systems/tokens, anti-AI-slop doctrine",
       "version": "1.0.0",
       "author": { "name": "Peter Bamuhigire" },
-      "repository": "https://github.com/chwezi/design-system-skills",
+      "homepage": "https://github.com/peterbamuhigire/design-system-skills",
+      "repository": "https://github.com/peterbamuhigire/design-system-skills",
       "license": "MIT",
       "category": "design",
       "strict": false
@@ -127,7 +136,8 @@
       "description": "59 skills: source evaluation/verification, evidence-claim graphs, OSINT, literature review, calibration",
       "version": "1.0.0",
       "author": { "name": "Peter Bamuhigire" },
-      "repository": "https://github.com/chwezi/digital-research-engine",
+      "homepage": "https://github.com/peterbamuhigire/digital-research-skills",
+      "repository": "https://github.com/peterbamuhigire/digital-research-skills",
       "license": "MIT",
       "category": "research",
       "strict": false
@@ -135,10 +145,11 @@
     {
       "name": "windows-admin",
       "source": "../windows-admin-engine-skills",
-      "description": "18 skills: Windows hosts, Active Directory, PowerShell, networking, security, storage, recovery, fleet",
+      "description": "20 skills: Windows hosts, Active Directory, PowerShell, networking, security, storage, recovery, fleet",
       "version": "1.0.0",
       "author": { "name": "Peter Bamuhigire" },
-      "repository": "https://github.com/chwezi/windows-admin-engine-skills",
+      "homepage": "https://github.com/peterbamuhigire/windows-admin-engine-skills",
+      "repository": "https://github.com/peterbamuhigire/windows-admin-engine-skills",
       "license": "MIT",
       "category": "infrastructure",
       "strict": false

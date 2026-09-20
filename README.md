@@ -32,11 +32,21 @@ The eleven domain engines this package coordinates, with their repositories (fro
 - [Social Media Skills](https://github.com/peterbamuhigire/social-media-skills) — social strategy, content planning, campaigns, platform workflows.
 - [Linux Skills](https://github.com/peterbamuhigire/linux-skills) — Linux administration, servers, hardening, networking, operations.
 - [Proposal Skills](https://github.com/peterbamuhigire/proposal-skills) — proposals, tenders, bids, RFP/RFQ responses, grant submissions.
-- [Skills Web Dev](https://github.com/peterbamuhigire/skills-web-dev) — general engineering, AI systems, SaaS, security, product, technical documentation (the engineering catalogue).
+- [Chwezi Dev Engine](https://github.com/peterbamuhigire/chwezi-dev-engine) — general engineering, AI systems, SaaS, security, product, technical documentation (the engineering catalogue; local folder renamed from `skills-web-dev` on 2026-09-20 to match the repo).
 - [Chwezi Accounting Doctrine](https://github.com/peterbamuhigire/chwezi-accounting-doctrine) — finance, accounting, IFRS/IAS, tax, bookkeeping, controls, reporting.
 - [Design System Skills](https://github.com/peterbamuhigire/design-system-skills) — typography, visual design, UI/UX, layout, accessibility, document presentation.
-- [Digital Research Skills](https://github.com/peterbamuhigire/digital-research-engine) — research orchestration, source evaluation, evidence verification, benchmarking.
+- [Digital Research Skills](https://github.com/peterbamuhigire/digital-research-skills) — research orchestration, source evaluation, evidence verification, benchmarking.
 - [Windows Administration Skills](https://github.com/peterbamuhigire/windows-admin-engine-skills) — Windows hosts, Active Directory, networking, security, storage, recovery, fleet, and hybrid administration.
+
+## Content integrity
+
+This repository contains no client names, client data, or project-specific work product — it
+is a coordination package (scripts, hooks, a suite manifest, the `rules-distill` skill), not a
+domain engine, and carries no engagement-specific content at all. Users installing this
+package should still exercise their own due diligence — you can ask Claude Code or Codex to
+run a security scan of this repository and its scripts before relying on it in a sensitive
+environment (for example: "scan this repository for hardcoded secrets, personal paths, or
+unexpected network calls").
 
 ## Capabilities
 

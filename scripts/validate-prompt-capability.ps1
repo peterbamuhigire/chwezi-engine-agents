@@ -17,7 +17,7 @@ $engines = @(
     @{ Id = 'social-media-skills'; Router = 'AGENTS.md' },
     @{ Id = 'linux-skills'; Router = 'AGENTS.md' },
     @{ Id = 'proposal-skills'; Router = 'AGENTS.md' },
-    @{ Id = 'skills-web-dev'; Router = 'AGENTS.md' },
+    @{ Id = 'chwezi-dev-engine'; Router = 'AGENTS.md' },
     @{ Id = 'chwezi-accounting-doctrine'; Router = 'README.md' },
     @{ Id = 'design-system-skills'; Router = 'AGENTS.md' },
     @{ Id = 'digital-research-engine'; Router = 'AGENTS.md' },

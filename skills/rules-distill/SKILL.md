@@ -91,6 +91,6 @@ independent skill assumes the same thing.
 
 ## Related
 
-- `skills-web-dev/rules/README.md` — the rules-vs-skills test this skill applies
+- `chwezi-dev-engine/rules/README.md` — the rules-vs-skills test this skill applies
 - The twelve `rules/common/*.md` files created across the estate on 2026-09-20
   are the current baseline this skill would check future skill growth against.

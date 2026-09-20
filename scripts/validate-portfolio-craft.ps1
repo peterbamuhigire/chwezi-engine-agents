@@ -8,7 +8,7 @@ $ErrorActionPreference = 'Stop'
 $standard = Join-Path $CoordinatorRoot 'docs\operations\portfolio-craft-standard-2026-09-04.md'
 $engines = @(
     'srs-skills', 'business-plan-skills', 'website-skills', 'social-media-skills',
-    'linux-skills', 'proposal-skills', 'skills-web-dev',
+    'linux-skills', 'proposal-skills', 'chwezi-dev-engine',
     'chwezi-accounting-doctrine', 'design-system-skills', 'digital-research-engine',
     'windows-admin-engine-skills'
 )
