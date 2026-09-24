@@ -42,7 +42,7 @@ engines:
     path: chwezi-dev-engine
     router: AGENTS.md
     integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "6249575"}
-    validators: "python scripts/validate_engine_control_plane.py --workspace-root . | python scripts/routing_smoke_test.py"
+    validators: "python scripts/validate_engine_control_plane.py --workspace-root .. | python scripts/routing_smoke_test.py"
   - id: chwezi-accounting-doctrine
     repository: chwezi-accounting-doctrine
     path: chwezi-accounting-doctrine
@@ -65,5 +65,5 @@ engines:
     repository: windows-admin-engine-skills
     path: windows-admin-engine-skills
     router: AGENTS.md
-    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: pending, released_commit: "053aec1"}
+    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "badc83e"}
     validators: "python -X utf8 scripts/validate_engine.py | python -X utf8 scripts/routing_smoke_test.py | python -X utf8 scripts/source_ingestion_guardrail.py"

@@ -1,10 +1,15 @@
 [CmdletBinding()]
 param(
     [string]$Path = (Get-Location).Path,
-    [string]$CatalogPath = (Join-Path $PSScriptRoot '..\catalog\engines.yaml')
+    [string]$CatalogPath = ''
 )
 
 $ErrorActionPreference = 'Stop'
+# Resolve the default after binding: Windows PowerShell 5.1 leaves $PSScriptRoot empty in param defaults.
+if ([string]::IsNullOrWhiteSpace($CatalogPath)) {
+    $scriptDir = if (-not [string]::IsNullOrWhiteSpace($PSScriptRoot)) { $PSScriptRoot } else { Split-Path -Parent $MyInvocation.MyCommand.Path }
+    $CatalogPath = Join-Path $scriptDir '..\catalog\engines.yaml'
+}
 
 function Read-EngineCatalog {
     param([Parameter(Mandatory)][string]$FilePath)

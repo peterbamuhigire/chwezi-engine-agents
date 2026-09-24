@@ -143,3 +143,38 @@ integration set to `pending` (manifest never committed); stale `skills-web-dev` 
 - Windows engine needs `.skills-engine/engine-manifest.yaml` before its catalog status returns
   to `available`. `scripts/discover-engine.ps1` fails on Windows PowerShell 5.1 without
   `-CatalogPath` (pre-existing).
+
+## Addendum — consolidation and closure of open items (authorised by Peter Bamuhigire, 2026-09-24)
+
+**Dev-engine consolidation.** Target range raised from 150-170 to 150-180 (hard cap 200 unchanged).
+18 overlapping skills merged into their owners as references with inactive `ALIAS.md` routes:
+`strategic-compact`, `parallel-execution-optimizer` -> `coding-agent-optimization`;
+`verification-loop` -> `world-class-engineering`; `inherit-legacy-style`, `documentation-lookup`
+-> `ai-assisted-development`; `regex-vs-llm-structured-text` -> `ai-llm-integration`;
+`code-tour`, `markdown-lint-cleanup`, `update-claude-documentation` -> `doc-architect`;
+`skill-safety-audit` -> `skill-engine-audit`; `opensource-pipeline` -> `github-ops`;
+`iterative-retrieval` -> `ai-rag-patterns`; `security-scan` -> `code-safety-scanner`;
+`hexagonal-architecture` -> `system-architecture-design`; `ai-agent-drill-evidence-and-cadence`,
+`ai-agent-approval-audit-completeness`, `ai-agent-memory-erasure-proof` ->
+`ai-agent-compliance-controls`; `ai-agent-sla-and-customer-commitments` ->
+`ai-agent-commercial-operations`. Kept separate after review (distinct jobs): `council` /
+`santa-method`, `saas-seeder` / `full-coverage-saas-seeding`, `skill-composition-standards`,
+`ai-observability-and-debugging` / `ai-agent-observability-evaluation`.
+Result: 185 -> 167 active skills; guardrail findings 0; routing 184 fixtures, p@1 178/184 (96%),
+p@3 184/184; pytest 129 passed, 3 skipped.
+
+**Closed open items.**
+- OWASP Top 10 for LLM Applications 2026 (published 2026-08-03) confirmed from the edition PDF;
+  SRS and dev references re-mapped with edition years on every citation.
+- Windows engine: `.skills-engine/engine-manifest.yaml` and `CLAUDE.md` added, two unlisted
+  skills catalogued, `validate_engine.py` now passes (was failing at HEAD); catalog status
+  `available`.
+- `scripts/discover-engine.ps1` works under Windows PowerShell 5.1 without `-CatalogPath`.
+- Catalogued dev-engine control-plane command corrected to `--workspace-root ..`.
+- digital-research-engine: 23 author-named references rewritten as task guides and renamed;
+  probability wording aligned to ICD 203; stale search operators removed; scraper guidance now
+  requires an honest User-Agent (RFC 9309).
+
+**Still open.** Client workspaces under `digital-research-engine/projects/` (gitignored, never
+pushed) contain files named like book extractions; they are the client's local material and were
+not touched. EUR-Lex primary text for Reg. (EU) 2026/1744 remains NOT_ASSESSED.
