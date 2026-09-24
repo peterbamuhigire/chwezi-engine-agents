@@ -34,3 +34,19 @@ model-supplied command. Missing Git, missing evidence, or unavailable authority
 is `NOT ASSESSED` or blocked, never a pass.
 
 Record the approval contract and rollback action for every approved pull.
+
+## Content-integrity inspection (read-only, every maintenance pass)
+
+Never store book extractions in any engine. Book knowledge enters only as
+paraphrased, task-oriented skill content (procedures, decision rules,
+checklists, rubrics, original examples) with a short `Sources` line. Run
+`python -X utf8 scripts/validate-no-book-extractions.py` and report each
+finding as a blocker for the owning engine. The check is path-based: it fails
+on `book-extractions/`, `extracted-books/`, `book-study/`, `book-studies/` or
+`book-summaries/` folders and on book-digest file names such as
+`*-book-extraction.md`; a generic `*-extraction.md` passes inside a skill's
+`references/`, `templates/` or `examples/` folder (for example a
+food-processing `juice-extraction.md`) and elsewhere needs a reasoned entry in
+`catalog/content-integrity-allowlist.txt`. Git-ignored local working data is
+out of scope. Do not delete flagged files yourself; removal is a separate,
+approved change in the owning engine.

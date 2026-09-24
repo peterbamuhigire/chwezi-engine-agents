@@ -37,6 +37,31 @@ only the serialization format, not the required handoff fields.
 8. Produce the handoff contract with the requested scope, selected engines,
    inputs, ordered sequence, craft brief, evidence, blockers, and next action.
 
+## Cross-engine handoff boundaries
+
+Each engine owns one question. Record the owner in `engines[].reason` and the
+order in `sequence`; a downstream engine consumes the upstream artefact and
+does not re-decide it.
+
+| Question | Owner | Artefact handed on |
+|---|---|---|
+| What does success mean? | `srs-skills` | Prescriptive, verifiable requirements with actors, states, measurable acceptance criteria, traceability, and open questions. No implementation choices. |
+| How is it built safely? | `chwezi-dev-engine` | Architecture, data flow, security and failure handling, tests traced to the acceptance criteria, release and rollback proof. |
+| How does it look, behave, and get evaluated? | `design-system-skills` | Visual and interaction rationale, all key states, accessibility and render review; unperformed render/device/assistive-technology checks stay `NOT ASSESSED`. |
+| What is currently true? | `digital-research-skills` | Claim-level sources with access dates for versions, platform rules, law, prices, and benchmarks. |
+| What happens to the money? | `chwezi-accounting-doctrine` | Recognition, posting, reconciliation, controls, and tax treatment; no invented rate or statutory value. |
+
+Sequence product work as requirements, then research for any volatile claim
+the requirements or build depend on, then engineering and design in
+coordinated slices, then finance wherever money moves. When a downstream
+engine finds a missing or untestable requirement, route it back to the owner
+as a blocker; do not invent an acceptance criterion, stakeholder intent, or
+source to close the gap.
+
+Output must read as the work of a senior practitioner in each domain: specific
+to the named user, decision, and context, never a generic template. Apply
+`docs/operations/portfolio-craft-standard-2026-09-04.md`.
+
 ## Abstract operations
 
 Adapters map these operations to their own tools:

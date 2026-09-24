@@ -15,7 +15,7 @@ This repository is the Chwezi suite marketplace: its [`.claude-plugin/marketplac
 /plugin install social@chwezi              # Social Media Skills
 /plugin install linux@chwezi                # Linux Skills
 /plugin install proposal@chwezi            # Proposal Skills
-/plugin install engineering@chwezi         # Skills Web Dev (engineering catalogue)
+/plugin install engineering@chwezi         # Chwezi Dev Engine (engineering catalogue)
 /plugin install accounting@chwezi          # Chwezi Accounting Doctrine
 /plugin install design-system@chwezi       # Design System Skills
 /plugin install research@chwezi            # Digital Research Skills
@@ -48,6 +48,15 @@ run a security scan of this repository and its scripts before relying on it in a
 environment (for example: "scan this repository for hardcoded secrets, personal paths, or
 unexpected network calls").
 
+No Chwezi repository stores book extractions, book summaries, chapter notes, or
+`book-extractions/`, `extracted-books/`, or `book-study/` folders. Book
+knowledge enters the engines only as paraphrased, task-oriented skill content
+with a short `Sources` line. `scripts/validate-no-book-extractions.py` enforces
+this across every catalogued engine and this package; it is path-based, so a
+domain topic inside a skill's `references/` (for example a food-processing
+`juice-extraction.md`) passes, and any other exception needs a reasoned line in
+[`catalog/content-integrity-allowlist.txt`](catalog/content-integrity-allowlist.txt).
+
 ## Capabilities
 
 | Component | What it does |
@@ -60,6 +69,34 @@ unexpected network calls").
 | `hooks/destructive-bash-gate.js` | PreToolUse hook on Bash/PowerShell: a DENY-then-ALLOW gate on destructive commands (`rm -rf`, `git reset --hard`, `git push --force`, `DROP TABLE`, etc.), vendored identically to all twelve Chwezi engines. |
 | `skills/rules-distill/SKILL.md` | Scans one engine's skills for principles that recur in two or more skills and are not yet in `rules/`, and proposes promotions for explicit approval — never edits `rules/` automatically. |
 | `catalog/engines.yaml` | The eleven-engine registry: repository, router file, manifest path, and validator commands per engine. |
+| `scripts/validate-no-book-extractions.py` | Portfolio copyright guard: fails when any catalogued engine (or this package) stores a book-extraction folder or book-digest file; exit `3` means a root was `NOT ASSESSED`. |
+| `docs/operations/portfolio-craft-standard-2026-09-04.md` | Cross-engine delivery contract: small-slice craft loop, product-family evidence floors, the senior-practitioner bar, and `NOT ASSESSED` semantics. |
+
+## Operations and validation
+
+Coordination cards (checked by `scripts/validate-kaizen-cards.py`):
+
+- [`agentic-h2-readiness-card.md`](docs/operations/agentic-h2-readiness-card.md) — H2 readiness and agentic-literacy card.
+- [`three-horizon-ai-adoption-card.md`](docs/operations/three-horizon-ai-adoption-card.md) — three-horizon adoption and frontier card.
+- [`task-runbook-and-integration-evidence.md`](docs/operations/task-runbook-and-integration-evidence.md) — task runbook and integration evidence card.
+
+Portfolio checks, run from this repository on a machine with the engines checked out side by side:
+
+```
+python -X utf8 scripts/validate-contracts.py --schema schemas/engine-catalog.schema.json --instance catalog/engines.yaml
+python -X utf8 scripts/validate-kaizen-cards.py
+python -X utf8 scripts/validate-no-book-extractions.py
+python -X utf8 scripts/validate-skill-lifecycle.py --root skills
+python -X utf8 scripts/validate-runtime-skill-budget.py --root skills
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/validate-catalog.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/validate-portfolio-craft.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/validate-prompt-capability.ps1
+python -X utf8 -m pytest tests
+```
+
+Cross-engine handoffs follow one owner per question — SRS for what success means, the dev engine for how to build safely, design for how it looks, behaves and is evaluated, research for current facts, finance for money — as set out in [`core/instructions/engine-orchestrator.md`](core/instructions/engine-orchestrator.md).
+
+Latest portfolio Kaizen record: [`kaizen-2026-09-24-four-engine-kaizen.md`](docs/operations/kaizen-2026-09-24-four-engine-kaizen.md) — book-extraction retirement across all engines, book ingestion into SRS/design/dev, per-engine fixes and validator evidence.
 
 ## References
 

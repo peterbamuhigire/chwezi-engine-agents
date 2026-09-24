@@ -65,7 +65,7 @@ that only adds prose has not improved the engines.
 | Research and analysis | Claim-level provenance, support state, uncertainty, contradiction handling, and independent verification; synthesis must add judgement rather than repeat sources. |
 | Accounting and finance | Source and reporting basis; immutable and reversible treatment; reconciliations, controls, approval, audit trail, and exception handling; no invented rate or statutory value. |
 | Infrastructure and administration | Exact target and ownership; staged change; preview/before state; per-target outcome; health verification; recovery and rollback; live or lab gaps marked `NOT ASSESSED`. |
-| Requirements and governance | Testable requirements with actors, states, constraints, acceptance oracles, traceability, decision records, and unresolved questions; no invented stakeholder intent. |
+| Requirements and governance | Testable requirements with actors, states, constraints, acceptance oracles, traceability, decision records, and unresolved questions; no invented stakeholder intent; no implementation choices; complete enough that engineering and design can build and test without a clarification round. |
 
 ## Release evidence
 
@@ -95,6 +95,40 @@ checklists to conceal weak substance.
 
 The craft standard works with, and does not replace, each engine's anti-slop,
 source, finance, accessibility, security, and domain gates.
+
+## Senior-practitioner bar
+
+Most output is drafted by AI agents. It is releasable only when a senior human
+practitioner in that domain would accept it without rewriting it. Before
+release, answer each question with evidence or `NOT ASSESSED`:
+
+1. **Specific.** Could this output have been produced for a different client,
+   product, or market by changing only the names? If yes, it is generic; rework
+   the slice around the named user, decision, and context.
+2. **Decided.** Does it make and justify choices (trade-offs, exclusions,
+   thresholds) rather than listing options or restating best practice?
+3. **Buildable or actionable.** Can the next owner act on it without a
+   clarification round? Requirements must let engineering and design build and
+   test without inventing intent; designs must specify states and evaluation;
+   code must carry its tests and rollback path.
+4. **Proven.** Is every claim of quality backed by the evidence types above,
+   with the unperformed ones named as `NOT ASSESSED`?
+5. **Reviewed.** Was the slice reviewed against the frame by someone or
+   something other than its author (independent agent pass, human reviewer, or
+   executable check)? Record which; a self-review alone is recorded as such.
+
+Missing answers are gaps, not passes. `NOT ASSESSED` and `NOT_ASSESSED` are the
+same verdict. Cross-engine ownership of these questions (requirements, build,
+design, research, finance) is routed by
+`core/instructions/engine-orchestrator.md`.
+
+## Content integrity
+
+No engine stores book extractions, book summaries, chapter notes, or
+`book-extractions/`, `extracted-books/`, or `book-study/` folders. Book
+knowledge enters only as paraphrased, task-oriented procedures, decision rules,
+checklists, rubrics, and original examples with a short `Sources` line.
+`scripts/validate-no-book-extractions.py` enforces this by path.
 
 ## Kaizen contract
 

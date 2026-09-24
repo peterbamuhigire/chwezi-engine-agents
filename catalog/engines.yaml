@@ -56,7 +56,7 @@ engines:
     integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "62379cf"}
     validators: "python -X utf8 scripts/validate_engine.py --baseline tests/quality-baseline.json | python -X utf8 scripts/routing_smoke_test.py"
   - id: digital-research-skills
-    repository: digital-research-engine
+    repository: digital-research-skills
     path: digital-research-engine
     router: AGENTS.md
     integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "b88edd0"}
@@ -65,5 +65,5 @@ engines:
     repository: windows-admin-engine-skills
     path: windows-admin-engine-skills
     router: AGENTS.md
-    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "053aec1"}
+    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: pending, released_commit: "053aec1"}
     validators: "python -X utf8 scripts/validate_engine.py | python -X utf8 scripts/routing_smoke_test.py | python -X utf8 scripts/source_ingestion_guardrail.py"

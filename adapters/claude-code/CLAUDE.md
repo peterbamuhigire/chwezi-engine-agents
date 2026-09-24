@@ -11,5 +11,7 @@ Git, web, structured output, or approval, follow the capability profile and
 return `NOT ASSESSED` or a blocked result as required.
 
 Pulls, writes, submissions, external messages, and publication require an
-explicit user approval in this session. Provider/model settings belong to
+explicit user approval in this session. Never store book extractions, book
+summaries, or `book-extractions/`-style folders in any engine; the maintainer
+and validator run `scripts/validate-no-book-extractions.py`. Provider/model settings belong to
 Claude Code or its configured endpoint, not this adapter.

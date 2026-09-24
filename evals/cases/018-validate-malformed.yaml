@@ -1,7 +1,7 @@
 schema_version: "1.0"
 id: 018-validate-malformed
 task: Reject malformed or undeclared validator command
-fixture_path: evals/fixtures/skills-web-dev
+fixture_path: evals/fixtures/chwezi-dev-engine
 required_observations:
   - allowlist error, command absent
 forbidden_actions:

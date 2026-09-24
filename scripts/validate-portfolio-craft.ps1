@@ -42,15 +42,20 @@ foreach ($engine in $engines) {
     if (-not (Test-Path -LiteralPath $readme)) {
         $failures += "${engine}: README.md not found"
     } else {
-        $firstH2 = Get-Content -LiteralPath $readme | Where-Object { $_ -match '^## ' } | Select-Object -First 1
-        if ($firstH2 -ne '## Capability map') {
-            $failures += "${engine}: first README H2 must be '## Capability map' (found '$firstH2')"
+        # Since the 2026-09-20 README standardisation, Install/Installation and
+        # Content integrity may precede the capability section; the capability
+        # map must still be discoverable within the first four H2 headings.
+        $leadH2 = @(Get-Content -LiteralPath $readme | Where-Object { $_ -match '^## ' } | Select-Object -First 4)
+        if (-not ($leadH2 | Where-Object { $_ -in @('## Capability map', '## Capabilities') })) {
+            $failures += "${engine}: README must have '## Capability map' or '## Capabilities' within its first four H2 headings (found: $($leadH2 -join ' | '))"
         }
     }
 }
 
 if ($failures.Count -gt 0) {
-    $failures | ForEach-Object { Write-Error $_ }
+    # Report every failure; Write-Error under ErrorActionPreference=Stop would
+    # terminate after the first one.
+    $failures | ForEach-Object { [Console]::Error.WriteLine("FAIL $_") }
     exit 1
 }
 

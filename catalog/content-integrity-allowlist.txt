@@ -1,0 +1,11 @@
+# Allowlist for scripts/validate-no-book-extractions.py
+#
+# Format: <engine-folder>/<relative/path>  # reason (one entry per line)
+#
+# Only generic "*-extraction.md" domain-topic files that live OUTSIDE a skill's
+# references/, templates/ or examples/ folder need an entry here. Files inside
+# those folders (for example food-processing "juice-extraction.md") pass
+# without listing. Banned folders (book-extractions/, extracted-books/,
+# book-study/, book-studies/, book-summaries/) and any file whose name contains
+# "book" and ends in -extraction.md, -summary.md or -notes.md can never be
+# allowlisted. Every entry needs a reason and is reviewed at each Kaizen pass.

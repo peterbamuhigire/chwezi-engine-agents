@@ -24,6 +24,23 @@ Safety boundaries (binding):
   treated as a pass.
 - Writes, submissions, external messages, and publication require explicit
   user approval in this session.
+- Never store book extractions in any engine or in this package: no
+  `book-extractions/`, `extracted-books/`, `book-study/` folders, no
+  `*-book-extraction.md`, book summaries, or chapter-by-chapter notes. Book
+  knowledge enters only as paraphrased, task-oriented skill content with a
+  short `Sources` line. Check with
+  `python -X utf8 scripts/validate-no-book-extractions.py` (path-based; domain
+  topics such as a skill's `references/juice-extraction.md` pass; other
+  exceptions need a reasoned line in `catalog/content-integrity-allowlist.txt`).
+
+Engine count: the catalog holds eleven public domain engines; with this
+package that makes twelve Chwezi repositories. Private personal engines stay
+out of the catalog, the marketplace, and every public document.
+
+Cross-engine handoffs: SRS defines what success means, the dev engine how to
+build it safely, design how it looks, behaves, and is evaluated, research what
+is currently true, and finance what happens to money. See
+`core/instructions/engine-orchestrator.md`.
 
 Note: `README.md` documents Codex-specific installation and a
 `~/.codex/...` validator path; those apply to the Codex host only and are

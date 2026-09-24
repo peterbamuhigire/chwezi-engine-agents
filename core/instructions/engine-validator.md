@@ -31,3 +31,18 @@ Apply the selected capability mode first. Missing shell makes validation
 Every check records the command, status, exit code, evidence, and duration. A
 missing command is not replaced silently with a generic command. Return the
 stable validation contract even when the result is `NOT ASSESSED`.
+
+## Portfolio checks
+
+Alongside each engine's catalog validators, run the coordination package's
+portfolio checks and record them as separate checks:
+
+- `python -X utf8 scripts/validate-no-book-extractions.py` - copyright
+  integrity. Exit `1` is `FAIL` (a stored book extraction is a release
+  blocker); exit `3` is `PARTIAL` because a root was `NOT ASSESSED`.
+- `scripts/validate-portfolio-craft.ps1` and
+  `scripts/validate-prompt-capability.ps1` - router contract propagation.
+
+A structural pass is not evidence that an engine's output is senior-grade;
+report behavioural, render, and production evidence separately or as
+`NOT ASSESSED`, as the portfolio craft standard requires.
