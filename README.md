@@ -105,6 +105,6 @@ Mustafa, A. et al. *Everything Claude Code (ECC)*. GitHub: affaan-m/ECC, 2026.
 Three pieces of this package's own tooling are explicitly adapted from ECC's audit findings, and each file's own header comment carries the specific citation:
 
 - `scripts/install-engine.js` implements the "Tier 1 — STANDALONE" installation model documented in the ECC audit's installation report.
-- `scripts/generate-plugin-manifest.js` follows the explicit-path-array manifest form and the constraints recorded in ECC's `.claude-plugin/PLUGIN_SCHEMA_NOTES.md` (mandatory `version`, `skills` as an array, no invented `agents` or `hooks` fields).
+- `scripts/generate-plugin-manifest.js` emits this repository's strict house profile: an explicit `skills` path array and the metadata fields we maintain. Treat those choices as local conventions, not vendor schema requirements. Claude Code's manifest reference permits a minimal manifest with only `name` required, supports `agents` and `hooks`, and describes strict validation as optional; check the current vendor documentation and run the host validator before changing the profile.
 - `hooks/destructive-bash-gate.js` is modelled on the DENY → FORCE → ALLOW pattern in ECC's gateguard skill.
 - `skills/rules-distill/SKILL.md` is adapted from the ECC audit (`kaizen-engines/ECC-audit-2026-09-20/00-MASTER-REPORT.md`, finding I-2), applying the same deterministic-collection-plus-LLM-judgment split.
