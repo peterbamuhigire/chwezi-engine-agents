@@ -139,3 +139,10 @@ DRE evidence: `python -m pytest tests/test_codex_model_policy.py -q -p no:cachep
 The original Wave 2 and SEEK PDF staging files are absent at their recorded Downloads paths. Links now resolve to retained brief page/traceability evidence or the canonical versioned arXiv v1 PDF; byte identity with the former local copies is recorded **NOT_ASSESSED**. `tools/validate_package.py` passes structural/link checks: 29 phases, 172 tasks, 55 JSON files, 58 Markdown files, 629 local links, zero errors. This validator does not certify semantic phase acceptance.
 
 `evidence/P00/result.json` and `evidence/P00/review.md` record the work and limits. P00 remains **IN_PROGRESS**: independent review, exact-diff policy-owner acceptance before any broad rollout, live-session identity and entitlement remain open. No rollout or runtime write occurred. Plan files are local under Downloads and are not in a Git checkout. P03/P05/P10 and Linux runtime acceptance remain open; the three-completed-phase push gate is unchanged.
+
+
+### P00 verification addendum ? native checks and review boundary
+
+The DRE full engine validator was then run on the helper/test change and passed: 59/59 skills compliant, routing 29/29 at top-three precision 1.000, no-book-extractions check OK, engine doctor OK, and 33 unit tests passed. The focused helper suite remains 7/7, and its Codex model-policy `--check` passes without applying changes.
+
+Chwezi Dev `engine_compliance.py --root . --active-root .` exited 0 with 168 skills scanned, 138 fully compliant, and 30 reported contract findings across affected skills (the categories overlap). No pre-change comparison was captured, so the age and cause of these findings remain **NOT_ASSESSED**; this is not recorded as a clean compliance result. The changed Dev file is a common rule, not a `SKILL.md`; its `quick_validate.py` did not have an applicable changed-skill target and is therefore **NOT_ASSESSED**. No automatic safe fixes were applied. These limits and the package validator's structural-only scope are in `Downloads/skills-kaizen/evidence/P00/result.json` and `review.md`.
