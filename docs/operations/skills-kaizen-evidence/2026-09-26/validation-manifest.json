@@ -1,0 +1,352 @@
+﻿{
+    "observed_at":  "2026-09-26",
+    "basis":  "Previously executed same-day audit evidence. No skill files changed between those checks and this baseline; these are not represented as rerun in this phase.",
+    "check_count":  37,
+    "checks":  [
+                   {
+                       "engine":  "srs-skills",
+                       "check":  "srs-validator",
+                       "command":  "python -X utf8 scripts/validate_skill_engine.py --baseline tests/skill-quality-baseline.json",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "skill-engine: C:\\wamp64\\www\\srs-skills\n- active skills: 159\n- templates: 1\n- failure counts: {}",
+                       "log_sha256":  "12d629ba0cb04fa879e91907b967c2045f2272a5441cdf3bdff86cc350bd6e2e"
+                   },
+                   {
+                       "engine":  "srs-skills",
+                       "check":  "srs-routing",
+                       "command":  "python -X utf8 scripts/routing_smoke_test.py",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "routing-smoke: 54/54 fixtures; top-3 precision=1.000; threshold=1.000",
+                       "log_sha256":  "b946bb4254020fe37d714363a3ca1971b5fc9770c9d13725b68caef0944289e6"
+                   },
+                   {
+                       "engine":  "business-plan-skills",
+                       "check":  "business-validator",
+                       "command":  "python -X utf8 scripts/validate_skill_engine.py --baseline docs/quality/skill-quality-baseline.json",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "skill-engine: C:\\wamp64\\www\\business-plan-skills\n- active skills: 137\n- templates: 3\n- fully compliant: 137\n- failure counts:",
+                       "log_sha256":  "4c9a3908c555f9f155de244a5733afab3b5f6e2f93b36dce7894c6a1a7b2ca21"
+                   },
+                   {
+                       "engine":  "business-plan-skills",
+                       "check":  "business-routing",
+                       "command":  "python -X utf8 scripts/routing_smoke_test.py --threshold 1.0",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "routing-smoke: 61/61 top-three matches (100.0%); threshold=100.0%\n- fixture classes: collision, failure-path, limited-capability, negative, positive",
+                       "log_sha256":  "299f59f1e1fe9fe3e97221abd7c0caf7598f9e39bbb3634a9df51ca963740431"
+                   },
+                   {
+                       "engine":  "website-skills",
+                       "check":  "website-registry",
+                       "command":  "python scripts/validate-skill-registry.py",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "registry valid: 62 skills",
+                       "log_sha256":  "0be0658ece94be2ff27784e3d76231f72349757297e522bb54aab1c162acb078"
+                   },
+                   {
+                       "engine":  "website-skills",
+                       "check":  "website-benchmark",
+                       "command":  "python scripts/website_fixture_benchmark.py",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "{\n  \"id\": \"website-kaizen-local-fixture\",\n  \"status\": \"PASS\",\n  \"evidence_type\": \"lab fixture only\",\n  \"pages\": [\n    {\n      \"page\": \"index.html\",\n      \"links\": {\n        \"status\": \"PASS\",\n        \"broken\": []\n      },\n      \"semantics\": {\n        \"status\": \"PASS\",\n        \"lang\": \"en\",\n        \"main_count\": 1,\n        \"h1_count\": 1,\n        \"nav_count\": 1,\n        \"heading_order\": \"PASS\"\n      },\n      \"accessibility_inputs\": {\n        \"status\": \"PASS\",\n        \"images_without_alt\": 0,\n        \"inputs_without_labels\": 0\n      },\n      \"metadata\": {\n        \"status\": \"PASS\"\n      }\n    },\n    {\n      \"page\": \"about.html\",\n      \"links\": {\n        \"status\": \"PASS\",\n        \"broken\": []\n      },\n      \"semantics\": {\n        \"status\": \"PASS\",\n        \"lang\": \"en\",\n        \"main_count\": 1,\n        \"h1_count\": 1,\n        \"nav_count\": 1,\n        \"heading_order\": \"PASS\"\n      },\n      \"accessibility_inputs\": {\n        \"status\": \"PASS\",\n        \"images_without_alt\": 0,\n        \"inputs_without_labels\": 0\n      },\n      \"metadata\": {\n        \"status\": \"PASS\"\n      }\n    }\n  ],\n  \"performance_budget_inputs\": {\n    \"status\": \"PASS\",\n    \"budget_file\": \"performance-budgets.json\",\n    \"total_weight_budget_kb\": 350,\n    \"fixture_asset_bytes\": 2026,\n    \"raw_ceiling_check\": \"PASS\"\n  },\n  \"field_core_web_vitals\": \"NOT ASSESSED\"\n}",
+                       "log_sha256":  "833f75f40a813ec74f33e95362d0a9956e4752c68739dda6b1e2c534ef55c3ba"
+                   },
+                   {
+                       "engine":  "social-media-skills",
+                       "check":  "social-validator",
+                       "command":  "python -X utf8 scripts/validate_skill_engine.py --baseline quality-baseline.json",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "skills=191 compliant=191 failures=0\n",
+                       "log_sha256":  "eeeb6eddce9f5288407e4307123efa4c75689832737e57d1d1a3097835e27b1e"
+                   },
+                   {
+                       "engine":  "social-media-skills",
+                       "check":  "social-routing",
+                       "command":  "python -X utf8 scripts/routing_smoke_test.py",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "routing fixtures=56 passed=56 top_3_precision=1.000 threshold=1.000",
+                       "log_sha256":  "7f6b71e9739dcee7031e335acaa5104b18709cea8b91ed28edb985dcbc7014a0"
+                   },
+                   {
+                       "engine":  "social-media-skills",
+                       "check":  "social-freshness",
+                       "command":  "python -X utf8 scripts/check_source_freshness.py",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "source freshness: PASS (63 records within review windows; as of 2026-09-26; claim support NOT ASSESSED)",
+                       "log_sha256":  "64b03628253b624910af3b0baccab188d11b20eea78137eb72121a27fb27ff10"
+                   },
+                   {
+                       "engine":  "linux-skills",
+                       "check":  "linux-validator",
+                       "command":  "python -X utf8 scripts/validate_skills.py --baseline quality-baseline.json",
+                       "exit_code":  1,
+                       "state":  "executed-fail-or-unavailable",
+                       "output":  "linux-skills validator: 48 active skills, 1 templates\nfully compliant: 45\nfailure counts: {\"anti-patterns\": 3, \"capability-contract\": 3, \"description\": 3, \"evidence-contract\": 3, \"input-contract\": 3, \"missing-section\": 36, \"output-contract\": 3, \"portable-markers\": 3}\n- 16-network-equipment/cisco-ios-patterns/SKILL.md: description: description must start with \u0027Use when\u0027 and be 80-350 characters\n- 16-network-equipment/cisco-ios-patterns/SKILL.md: missing-section: Use When\n- 16-network-equipment/cisco-ios-patterns/SKILL.md: missing-section: Do Not Use When\n- 16-network-equipment/cisco-ios-patterns/SKILL.md: missing-section: Required Inputs\n- 16-network-equipment/cisco-ios-patterns/SKILL.md: missing-section: Workflow\n- 16-network-equipment/cisco-ios-patterns/SKILL.md: missing-section: Quality Standards\n- 16-network-equipment/cisco-ios-patterns/SKILL.md: missing-section: Outputs\n- 16-network-equipment/cisco-ios-patterns/SKILL.md: missing-section: Evidence Produced\n- 16-network-equipment/cisco-ios-patterns/SKILL.md: missing-section: Capability Contract\n- 16-network-equipment/cisco-ios-patterns/SKILL.md: missing-section: Degraded Mode\n- 16-network-equipment/cisco-ios-patterns/SKILL.md: missing-section: Decision Rules\n- 16-network-equipment/cisco-ios-patterns/SKILL.md: missing-section: Worked Example\n- 16-network-equipment/cisco-ios-patterns/SKILL.md: missing-section: References\n- 16-network-equipment/cisco-ios-patterns/SKILL.md: portable-markers: dual compatibility markers are missing\n- 16-network-equipment/cisco-ios-patterns/SKILL.md: input-contract: missing contract table\n- 16-network-equipment/cisco-ios-patterns/SKILL.md: output-contract: missing contract table\n- 16-network-equipment/cisco-ios-patterns/SKILL.md: evidence-contract: missing contract table\n- 16-network-equipment/cisco-ios-patterns/SKILL.md: anti-patterns: at least five bullet items must each include \u0027Fix:\u0027\n- 16-network-equipment/cisco-ios-patterns/SKILL.md: capability-contract: minimum capability and permission boundary are missing\n- 16-network-equipment/netmiko-ssh-automation/SKILL.md: description: description must start with \u0027Use when\u0027 and be 80-350 characters\n- 16-network-equipment/netmiko-ssh-automation/SKILL.md: missing-section: Use When\n- 16-network-equipment/netmiko-ssh-automation/SKILL.md: missing-section: Do Not Use When\n- 16-network-equipment/netmiko-ssh-automation/SKILL.md: missing-section: Required Inputs\n- 16-network-equipment/netmiko-ssh-automation/SKILL.md: missing-section: Workflow\n- 16-network-equipment/netmiko-ssh-automation/SKILL.md: missing-section: Quality Standards\n- 16-network-equipment/netmiko-ssh-automation/SKILL.md: missing-section: Outputs\n- 16-network-equipment/netmiko-ssh-automation/SKILL.md: missing-section: Evidence Produced\n- 16-network-equipment/netmiko-ssh-automation/SKILL.md: missing-section: Capability Contract\n- 16-network-equipment/netmiko-ssh-automation/SKILL.md: missing-section: Degraded Mode\n- 16-network-equipment/netmiko-ssh-automation/SKILL.md: missing-section: Decision Rules\n- 16-network-equipment/netmiko-ssh-automation/SKILL.md: missing-section: Worked Example\n- 16-network-equipment/netmiko-ssh-automation/SKILL.md: missing-section: References\n- 16-network-equipment/netmiko-ssh-automation/SKILL.md: portable-markers: dual compatibility markers are missing\n- 16-network-equipment/netmiko-ssh-automation/SKILL.md: input-contract: missing contract table\n- 16-network-equipment/netmiko-ssh-automation/SKILL.md: output-contract: missing contract table\n- 16-network-equipment/netmiko-ssh-automation/SKILL.md: evidence-contract: missing contract table\n- 16-network-equipment/netmiko-ssh-automation/SKILL.md: anti-patterns: at least five bullet items must each include \u0027Fix:\u0027\n- 16-network-equipment/netmiko-ssh-automation/SKILL.md: capability-contract: minimum capability and permission boundary are missing\n- 16-network-equipment/network-config-validation/SKILL.md: description: description must start with \u0027Use when\u0027 and be 80-350 characters\n- 16-network-equipment/network-config-validation/SKILL.md: missing-section: Use When\n- 16-network-equipment/network-config-validation/SKILL.md: missing-section: Do Not Use When\n- 16-network-equipment/network-config-validation/SKILL.md: missing-section: Required Inputs\n- 16-network-equipment/network-config-validation/SKILL.md: missing-section: Workflow\n- 16-network-equipment/network-config-validation/SKILL.md: missing-section: Quality Standards\n- 16-network-equipment/network-config-validation/SKILL.md: missing-section: Outputs\n- 16-network-equipment/network-config-validation/SKILL.md: missing-section: Evidence Produced\n- 16-network-equipment/network-config-validation/SKILL.md: missing-section: Capability Contract\n- 16-network-equipment/network-config-validation/SKILL.md: missing-section: Degraded Mode\n- 16-network-equipment/network-config-validation/SKILL.md: missing-section: Decision Rules\n- 16-network-equipment/network-config-validation/SKILL.md: missing-section: Worked Example\n- 16-network-equipment/network-config-validation/SKILL.md: missing-section: References\n- 16-network-equipment/network-config-validation/SKILL.md: portable-markers: dual compatibility markers are missing\n- 16-network-equipment/network-config-validation/SKILL.md: input-contract: missing contract table\n- 16-network-equipment/network-config-validation/SKILL.md: output-contract: missing contract table\n- 16-network-equipment/network-config-validation/SKILL.md: evidence-contract: missing contract table\n- 16-network-equipment/network-config-validation/SKILL.md: anti-patterns: at least five bullet items must each include \u0027Fix:\u0027\n- 16-network-equipment/network-config-validation/SKILL.md: capability-contract: minimum capability and permission boundary are missing",
+                       "log_sha256":  "7120a38b8c1c9fbc04d0feb8561cfa5dbfe1f21299c95f3509e4010509ac3c4c"
+                   },
+                   {
+                       "engine":  "linux-skills",
+                       "check":  "linux-routing",
+                       "command":  "python -X utf8 scripts/routing_smoke_test.py",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "routing fixtures: 26/26 passed; top_k=3; precision=1.000\nfixture kinds: collision=5, failure-path=4, limited-capability=3, negative=4, positive=10",
+                       "log_sha256":  "15d9401b146566d80d566b3dd2d6d2ce332bce48b610c2ae51d4c23fd1a94f54"
+                   },
+                   {
+                       "engine":  "linux-skills",
+                       "check":  "linux-distro",
+                       "command":  "bash scripts/tests/check-distro-matrix.sh",
+                       "exit_code":  1,
+                       "state":  "executed-fail-or-unavailable",
+                       "output":  "W\u0000i\u0000n\u0000d\u0000o\u0000w\u0000s\u0000 \u0000S\u0000u\u0000b\u0000s\u0000y\u0000s\u0000t\u0000e\u0000m\u0000 \u0000f\u0000o\u0000r\u0000 \u0000L\u0000i\u0000n\u0000u\u0000x\u0000 \u0000h\u0000a\u0000s\u0000 \u0000n\u0000o\u0000 \u0000i\u0000n\u0000s\u0000t\u0000a\u0000l\u0000l\u0000e\u0000d\u0000 \u0000d\u0000i\u0000s\u0000t\u0000r\u0000i\u0000b\u0000u\u0000t\u0000i\u0000o\u0000n\u0000s\u0000.\u0000\n\u0000\n\u0000Y\u0000o\u0000u\u0000 \u0000c\u0000a\u0000n\u0000 \u0000r\u0000e\u0000s\u0000o\u0000l\u0000v\u0000e\u0000 \u0000t\u0000h\u0000i\u0000s\u0000 \u0000b\u0000y\u0000 \u0000i\u0000n\u0000s\u0000t\u0000a\u0000l\u0000l\u0000i\u0000n\u0000g\u0000 \u0000a\u0000 \u0000d\u0000i\u0000s\u0000t\u0000r\u0000i\u0000b\u0000u\u0000t\u0000i\u0000o\u0000n\u0000 \u0000w\u0000i\u0000t\u0000h\u0000 \u0000t\u0000h\u0000e\u0000 \u0000i\u0000n\u0000s\u0000t\u0000r\u0000u\u0000c\u0000t\u0000i\u0000o\u0000n\u0000s\u0000 \u0000b\u0000e\u0000l\u0000o\u0000w\u0000:\u0000\n\u0000\n\u0000\n\u0000\n\u0000U\u0000s\u0000e\u0000 \u0000\u0027\u0000w\u0000s\u0000l\u0000.\u0000e\u0000x\u0000e\u0000 \u0000-\u0000-\u0000l\u0000i\u0000s\u0000t\u0000 \u0000-\u0000-\u0000o\u0000n\u0000l\u0000i\u0000n\u0000e\u0000\u0027\u0000 \u0000t\u0000o\u0000 \u0000l\u0000i\u0000s\u0000t\u0000 \u0000a\u0000v\u0000a\u0000i\u0000l\u0000a\u0000b\u0000l\u0000e\u0000 \u0000d\u0000i\u0000s\u0000t\u0000r\u0000i\u0000b\u0000u\u0000t\u0000i\u0000o\u0000n\u0000s\u0000\n\u0000\n\u0000a\u0000n\u0000d\u0000 \u0000\u0027\u0000w\u0000s\u0000l\u0000.\u0000e\u0000x\u0000e\u0000 \u0000-\u0000-\u0000i\u0000n\u0000s\u0000t\u0000a\u0000l\u0000l\u0000 \u0000\u003c\u0000D\u0000i\u0000s\u0000t\u0000r\u0000o\u0000\u003e\u0000\u0027\u0000 \u0000t\u0000o\u0000 \u0000i\u0000n\u0000s\u0000t\u0000a\u0000l\u0000l\u0000.\u0000\n\u0000\n\u0000",
+                       "log_sha256":  "73562d094df095270841f922c797e920553c9ac69f633ef7e5720e7b061b4001"
+                   },
+                   {
+                       "engine":  "proposal-skills",
+                       "check":  "proposal-diff",
+                       "command":  "git diff --check",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "",
+                       "log_sha256":  "c1e97067c5f479a44a6f57297a0a8f87a59d181c3c529910f8bf059094bc3abb"
+                   },
+                   {
+                       "engine":  "chwezi-dev-engine",
+                       "check":  "dev-control-plane",
+                       "command":  "python scripts/validate_engine_control_plane.py --workspace-root ..",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "engine-control-plane-validator:\n- registry: C:\\wamp64\\www\\chwezi-dev-engine\\docs\\engine-control-plane.json\n- engines: 12\n- installed checkout scope: accounting, business-plan, chwezi-dev-engine, design, digital-research, linux, political, proposal, social-media, srs, website, windows-admin\n- findings: 0\nPASS: control-plane registry is valid",
+                       "log_sha256":  "bad8a735c60db49564612568b288e0e900b049c8113433bf85b8b6b310628505"
+                   },
+                   {
+                       "engine":  "chwezi-dev-engine",
+                       "check":  "dev-routing",
+                       "command":  "python scripts/routing_smoke_test.py",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "routing-smoke-test:\n- active skills indexed: 167\n- fixtures: 184\n- precision@1: 178/184 (96%)\n- precision@3: 184/184 (100%)\n- failures: 0",
+                       "log_sha256":  "885bb626bcb6f4fe2c64e629b42a0fcfda75a571cf50a1b3024eb660ad4813da"
+                   },
+                   {
+                       "engine":  "chwezi-accounting-doctrine",
+                       "check":  "accounting-doctrine",
+                       "command":  "powershell -NoProfile -ExecutionPolicy Bypass -File .\\tools\\validate-doctrine.ps1 -Strict",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "Doctrine validation summary\nstate: pass\nrepo_root: C:\\wamp64\\www\\chwezi-accounting-doctrine\nblocker_findings: 0\nhigh_findings: 0\nmedium_findings: 0\ncaveat_findings: 0\n\nChecks\n- mojibake: pass (0 finding(s), exit 0)\n- skill-contracts: pass (0 finding(s), exit 0)\n- frontmatter-yaml: pass (0 finding(s), exit 0)\n- advanced-ifrs-readiness: pass (0 finding(s), exit 0)\n- source-register: pass (0 finding(s), exit 0)\n- links: pass (0 finding(s), exit 0)\n- repository-discovery: pass (0 finding(s), exit 0)\n- router-map: pass (0 finding(s), exit 0)\n- accounting-invariants: pass (0 finding(s), exit 0)\n- router-map-negative-controls: pass (0 finding(s), exit 0)\n- source-register-negative-controls: pass (0 finding(s), exit 0)\n- validation-state-negative-controls: pass (0 finding(s), exit 0)",
+                       "log_sha256":  "7292d7fad255b3335574cb181c580572c9232a6f3987f254ed4b9bab3c964536"
+                   },
+                   {
+                       "engine":  "design-system-skills",
+                       "check":  "design-validator",
+                       "command":  "python -X utf8 scripts/validate_engine.py --baseline tests/quality-baseline.json",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "skills=101 fully_compliant=101",
+                       "log_sha256":  "19d9609464f3cc750183053b5eff5093cdb965fc6a6cb43e8229a2a132b8dfd7"
+                   },
+                   {
+                       "engine":  "design-system-skills",
+                       "check":  "design-routing",
+                       "command":  "python -X utf8 scripts/routing_smoke_test.py",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "routing fixtures=68 precision@1=85% precision@3=100%",
+                       "log_sha256":  "56996a35c1f60d2ddfd3e538e8e906e9c41f448895cd8d16b1d07d73818d67a6"
+                   },
+                   {
+                       "engine":  "digital-research-engine",
+                       "check":  "research-contract",
+                       "command":  "python -X utf8 scripts/skill_contract_validator.py --baseline tests/skill-engine/quality-baseline.json",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "skill-contract-validator: C:\\wamp64\\www\\digital-research-engine\n- active skills: 59\n- template skills: 1\n- fully compliant: 59\n- failure counts: {}",
+                       "log_sha256":  "240b300368a05574b8a9c2a2e96472ebf68ea93d21d8045eedee03fdf64638e2"
+                   },
+                   {
+                       "engine":  "digital-research-engine",
+                       "check":  "research-routing",
+                       "command":  "python -X utf8 scripts/routing_smoke_test.py",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "routing-smoke-test: 29/29 top-3 precision=1.000 threshold=1.000",
+                       "log_sha256":  "8350b9981370334233f7aa681627b9bc2eced226637b00c354201f091c8f838a"
+                   },
+                   {
+                       "engine":  "digital-research-engine",
+                       "check":  "research-validator",
+                       "command":  "python -X utf8 scripts/validate_engine.py",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "Running: C:\\Python313\\python.exe -X utf8 scripts/skill_contract_validator.py --baseline tests/skill-engine/quality-baseline.json\nskill-contract-validator: C:\\wamp64\\www\\digital-research-engine\n- active skills: 59\n- template skills: 1\n- fully compliant: 59\n- failure counts: {}\nRunning: C:\\Python313\\python.exe -X utf8 scripts/routing_smoke_test.py\nrouting-smoke-test: 29/29 top-3 precision=1.000 threshold=1.000\nRunning: C:\\Python313\\python.exe -X utf8 scripts/check_no_book_extractions.py\nno-book-extractions: OK\nRunning: C:\\Python313\\python.exe -m engine doctor\nEngine doctor OK.\nRunning: C:\\Python313\\python.exe -m unittest discover -s engine/tests",
+                       "log_sha256":  "4a2ce5392cb9f68ebac3a52b784a50d856ae89f63b9d153ad9f4d4c9b30850d3"
+                   },
+                   {
+                       "engine":  "windows-admin-engine-skills",
+                       "check":  "windows-validator",
+                       "command":  "python -X utf8 scripts/validate_engine.py",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "validated_skills=19 findings=0",
+                       "log_sha256":  "49b1f59ed1a8ae71c0b3edb6deb4bbfbf08d3dd4ac48e2a293c1b99bb9dd68cb"
+                   },
+                   {
+                       "engine":  "windows-admin-engine-skills",
+                       "check":  "windows-routing",
+                       "command":  "python -X utf8 scripts/routing_smoke_test.py",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "routing_fixtures=19 failures=0",
+                       "log_sha256":  "7cd1ba33c91882158e550eda024a64cdd91a22f9b193a9c7ea94154842dff557"
+                   },
+                   {
+                       "engine":  "windows-admin-engine-skills",
+                       "check":  "windows-source-guard",
+                       "command":  "python -X utf8 scripts/source_ingestion_guardrail.py",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "source_ingestion_findings=0",
+                       "log_sha256":  "e6f77a1ccff6ab77a9f88e19124d70a202f36e150782d6504c1de53dd8bc5b83"
+                   },
+                   {
+                       "engine":  "srs-skills",
+                       "check":  "source_ingestion_guardrail.py",
+                       "command":  "python -X utf8 scripts/source_ingestion_guardrail.py",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "source-ingestion-guardrail: C:\\wamp64\\www\\srs-skills\nfindings: 0",
+                       "log_sha256":  "8bbf7da38960b2ce63c71545bedae9b71cef6e5754c4ccc930d120075d42b1f4"
+                   },
+                   {
+                       "engine":  "business-plan-skills",
+                       "check":  "source_ingestion_guardrail.py",
+                       "command":  "python -X utf8 scripts/source_ingestion_guardrail.py",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "source-ingestion-guardrail: C:\\wamp64\\www\\business-plan-skills\nfindings: 0\ncontent-warnings: 0 (blocking: CONTENT_CHECK_BLOCKING is True)",
+                       "log_sha256":  "121338e84682721aee528e46b2d80c583ba14082c9ced366c72729cda68d6390"
+                   },
+                   {
+                       "engine":  "website-skills",
+                       "check":  "source_ingestion_guardrail.py",
+                       "command":  "python -X utf8 scripts/source_ingestion_guardrail.py",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "source-ingestion-guardrail: C:\\wamp64\\www\\website-skills\nfindings: 0",
+                       "log_sha256":  "055aa19481c43fafed7fa93b39e1bf0ca3e4bf78429d572a544f8589ba20288e"
+                   },
+                   {
+                       "engine":  "social-media-skills",
+                       "check":  "source_ingestion_guardrail.py",
+                       "command":  "python -X utf8 scripts/source_ingestion_guardrail.py",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "source-ingestion-guardrail: C:\\wamp64\\www\\social-media-skills\nfindings: 0",
+                       "log_sha256":  "f2e4ad4c70dfc0ff99293afd64132ab906c7d632e1c019d42d4d52155a6b19e6"
+                   },
+                   {
+                       "engine":  "linux-skills",
+                       "check":  "source_ingestion_guardrail.py",
+                       "command":  "python -X utf8 scripts/source_ingestion_guardrail.py",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "source-ingestion-guardrail: C:\\wamp64\\www\\linux-skills\nfindings: 0",
+                       "log_sha256":  "e4ce9db0ca9497151684f4cad09f7fa89afd8ab4bdf2e63654e4ef47d13b5b85"
+                   },
+                   {
+                       "engine":  "proposal-skills",
+                       "check":  "source_ingestion_guardrail.py",
+                       "command":  "python -X utf8 scripts/source_ingestion_guardrail.py",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "source-ingestion-guardrail: C:\\wamp64\\www\\proposal-skills\nfindings: 0",
+                       "log_sha256":  "4dac86b5f9893cf5fb63439da07d854689dd65e7655f0427bdb6f876013b3765"
+                   },
+                   {
+                       "engine":  "chwezi-dev-engine",
+                       "check":  "source_ingestion_guardrail.py",
+                       "command":  "python -X utf8 scripts/source_ingestion_guardrail.py",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "source-ingestion-guardrail: C:\\wamp64\\www\\chwezi-dev-engine\nfindings: 0",
+                       "log_sha256":  "7b29f5616a4cac69a79d298ca089350bc8c2110a0e57c31ab4beefd081992f0c"
+                   },
+                   {
+                       "engine":  "chwezi-accounting-doctrine",
+                       "check":  "source_ingestion_guardrail.py",
+                       "command":  "python -X utf8 scripts/source_ingestion_guardrail.py",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "source-ingestion-guardrail: C:\\wamp64\\www\\chwezi-accounting-doctrine\nfindings: 0",
+                       "log_sha256":  "111e5a4b12afc0c242dc8d206283fe2d06c19b1dcd214ad142b6c2b08940b840"
+                   },
+                   {
+                       "engine":  "digital-research-engine",
+                       "check":  "source_ingestion_guardrail.py",
+                       "command":  "python -X utf8 scripts/source_ingestion_guardrail.py",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "source-ingestion-guardrail: C:\\wamp64\\www\\digital-research-engine\nfindings: 0",
+                       "log_sha256":  "1d80c5fe06ac0cd32eb6068b2d11d0a73e4b82946d72329cbcb910a7196c046d"
+                   },
+                   {
+                       "engine":  "windows-admin-engine-skills",
+                       "check":  "source_ingestion_guardrail.py",
+                       "command":  "python -X utf8 scripts/source_ingestion_guardrail.py",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "source_ingestion_findings=0",
+                       "log_sha256":  "e6f77a1ccff6ab77a9f88e19124d70a202f36e150782d6504c1de53dd8bc5b83"
+                   },
+                   {
+                       "engine":  "design-system-skills",
+                       "check":  "source-ingestion guard",
+                       "command":  "Not available: scripts/source_ingestion_guardrail.py absent",
+                       "exit_code":  null,
+                       "state":  "NOT_ASSESSED",
+                       "output":  "No engine-local source-ingestion guard script found.",
+                       "log_sha256":  null
+                   },
+                   {
+                       "engine":  "chwezi-engine-agents",
+                       "check":  "coord-catalog-contracts",
+                       "command":  "python -X utf8 scripts/validate-contracts.py --schema schemas/engine-catalog.schema.json --instance catalog/engines.yaml",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "PASS: schema=schemas\\engine-catalog.schema.json instance=catalog\\engines.yaml",
+                       "log_sha256":  "febdeb571b125ba481efc8ba8b8f399ce7cf52e0f6ab0a1f3e4791b042677341"
+                   },
+                   {
+                       "engine":  "chwezi-engine-agents",
+                       "check":  "coord-catalog-ps",
+                       "command":  "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/validate-catalog.ps1",
+                       "exit_code":  0,
+                       "state":  "executed-pass",
+                       "output":  "PASS: schema=C:\\wamp64\\www\\chwezi-engine-agents\\schemas\\engine-catalog.schema.json instance=C:\\wamp64\\www\\chwezi-engine-agents\\catalog\\engines.yaml\nCatalog valid: 11 unique engines.",
+                       "log_sha256":  "197e6b6ec258cd7f36b43596cd3618861cb92241389d8c09275f3307cb92a0a1"
+                   }
+               ],
+    "limitations":  [
+                        "Digital Research source_ingestion_guardrail.py terminated with Windows exit -1073741510 before producing a complete result; NOT_ASSESSED.",
+                        "Design system has no local source_ingestion_guardrail.py; portfolio no-book check covers catalogued roots for path-based extraction names.",
+                        "Linux distro matrix was attempted but WSL reports no installed distributions.",
+                        "Checks establish structural and routing evidence only; semantic quality, taxonomy completeness, behavior, rendering, production outcomes and user outcomes are NOT_ASSESSED.",
+                        "Current official model release and active account/runtime availability review is assigned to root agent."
+                    ],
+    "not_run":  [
+                    "Full test suites for all repositories were not run; only bounded structural and declared checks were requested here.",
+                    "Portfolio craft validator, prompt capability validator, card validators and coordination pytest suite were not run.",
+                    "Full semantic audit, taxonomy/output completeness, current external evidence verification and output behavior/render QA were not performed."
+                ]
+}

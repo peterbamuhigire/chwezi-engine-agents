@@ -1,0 +1,695 @@
+{
+  "as_of": "2026-09-26",
+  "workspace_root": "C:\\wamp64\\www",
+  "generator": {
+    "file": "kaizen_portfolio_snapshot.py",
+    "sha256": "0ba56901772e9ab21a8dfa9e1e86932a46e295fcd11eb9eb669189bcef975389"
+  },
+  "scope": "eleven public domain engines; coordinator and private engine are recorded separately",
+  "classification_limit": "raw filesystem classification only; router reachability and semantic active counts require engine-specific reconciliation",
+  "engines": [
+    {
+      "engine": "business-plan-skills",
+      "path": "C:\\wamp64\\www\\business-plan-skills",
+      "remote": "https://github.com/peterbamuhigire/business-plan-skills.git",
+      "head": "25481091e430c9c0a978600f39d17f2b3c8143bb",
+      "branch": "main",
+      "working_tree_clean": false,
+      "dirty_files": [
+        {
+          "status": "M",
+          "path": ".codex/agents/explorer.toml",
+          "working_sha256": "5858aa0c0220f7aac9f96258cbdc0a00982b5c696871a70fdb8403bd86852d8c"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/researcher.toml",
+          "working_sha256": "d4e799c00f4e1eafc16886b48c0d504b96b64c133a59f1129c8614b6b3f0b35d"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/reviewer.toml",
+          "working_sha256": "5ab9492c3bc8cbd50ef5634ece3455284a6a0a1f8b21b8e329707a113793e83b"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/tester.toml",
+          "working_sha256": "1670ca4b1aedd409091880a1e60da5f91ae89960288155045f96e29a0557faf1"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/worker.toml",
+          "working_sha256": "fd052edb2a971ef153f4730597ae2e27b58bb631018e9811a46c0549e222b868"
+        },
+        {
+          "status": "M",
+          "path": ".codex/model-policy.json",
+          "working_sha256": "52103e0e1452a2a1dbc86ca218b982657928d1a2f2669ae5807ea3e673f5387b"
+        },
+        {
+          "status": "M",
+          "path": ".codex/model-policy.md",
+          "working_sha256": "6b0af614b2287f8bb3a0cc8d74114696994b09f425f31a01694a773c57b702b8"
+        },
+        {
+          "status": "M",
+          "path": "AGENTS.md",
+          "working_sha256": "450939c0aca7ac11e62c08651ca2d532e268a6c6555b6dc2b6b3395213c9596a"
+        },
+        {
+          "status": "M",
+          "path": "codex/agents/default.toml",
+          "working_sha256": null
+        }
+      ],
+      "tracked_diff_sha256": "b717a8ae6f73a2c3e33d44e7e8abe560c886779975c214d670fc889deaf245ba",
+      "raw_skill_files": 137,
+      "excluded_candidates": 0,
+      "candidate_files": 137,
+      "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+    },
+    {
+      "engine": "chwezi-accounting-doctrine",
+      "path": "C:\\wamp64\\www\\chwezi-accounting-doctrine",
+      "remote": "https://github.com/peterbamuhigire/chwezi-accounting-doctrine.git",
+      "head": "febe39175dfff0862412748864c092b2bfb71dd2",
+      "branch": "main",
+      "working_tree_clean": false,
+      "dirty_files": [
+        {
+          "status": "M",
+          "path": ".codex/agents/explorer.toml",
+          "working_sha256": "5858aa0c0220f7aac9f96258cbdc0a00982b5c696871a70fdb8403bd86852d8c"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/researcher.toml",
+          "working_sha256": "d4e799c00f4e1eafc16886b48c0d504b96b64c133a59f1129c8614b6b3f0b35d"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/reviewer.toml",
+          "working_sha256": "5ab9492c3bc8cbd50ef5634ece3455284a6a0a1f8b21b8e329707a113793e83b"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/tester.toml",
+          "working_sha256": "1670ca4b1aedd409091880a1e60da5f91ae89960288155045f96e29a0557faf1"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/worker.toml",
+          "working_sha256": "fd052edb2a971ef153f4730597ae2e27b58bb631018e9811a46c0549e222b868"
+        },
+        {
+          "status": "M",
+          "path": ".codex/model-policy.json",
+          "working_sha256": "52103e0e1452a2a1dbc86ca218b982657928d1a2f2669ae5807ea3e673f5387b"
+        },
+        {
+          "status": "M",
+          "path": ".codex/model-policy.md",
+          "working_sha256": "7d87bd0793544519642c7638cb430ddea4fef552cdef50207c10b68b6213ac09"
+        },
+        {
+          "status": "M",
+          "path": "AGENTS.md",
+          "working_sha256": "5178ca9485cccafd01c7f22eb70a3679fafb6789606a2d90676c629903bf7ac7"
+        },
+        {
+          "status": "M",
+          "path": "codex/agents/default.toml",
+          "working_sha256": null
+        }
+      ],
+      "tracked_diff_sha256": "1edc0535ce04e4fc14e909bbd6669536bdeba4600b0e453ebf5c46aa4a13e908",
+      "raw_skill_files": 108,
+      "excluded_candidates": 0,
+      "candidate_files": 108,
+      "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+    },
+    {
+      "engine": "chwezi-dev-engine",
+      "path": "C:\\wamp64\\www\\chwezi-dev-engine",
+      "remote": "https://github.com/peterbamuhigire/chwezi-dev-engine.git",
+      "head": "eb7972ecb4d07ccba358adedaaa4f6f209b510e2",
+      "branch": "main",
+      "working_tree_clean": false,
+      "dirty_files": [
+        {
+          "status": "M",
+          "path": ".codex/agents/explorer.toml",
+          "working_sha256": "5858aa0c0220f7aac9f96258cbdc0a00982b5c696871a70fdb8403bd86852d8c"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/researcher.toml",
+          "working_sha256": "d4e799c00f4e1eafc16886b48c0d504b96b64c133a59f1129c8614b6b3f0b35d"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/reviewer.toml",
+          "working_sha256": "5ab9492c3bc8cbd50ef5634ece3455284a6a0a1f8b21b8e329707a113793e83b"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/tester.toml",
+          "working_sha256": "1670ca4b1aedd409091880a1e60da5f91ae89960288155045f96e29a0557faf1"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/worker.toml",
+          "working_sha256": "fd052edb2a971ef153f4730597ae2e27b58bb631018e9811a46c0549e222b868"
+        },
+        {
+          "status": "M",
+          "path": ".codex/model-policy.json",
+          "working_sha256": "52103e0e1452a2a1dbc86ca218b982657928d1a2f2669ae5807ea3e673f5387b"
+        },
+        {
+          "status": "M",
+          "path": ".codex/model-policy.md",
+          "working_sha256": "7b708d1316ddace7b6c9fd333b9d3832cff33c2a8aca39b3a9d65ce8cb9d1c41"
+        },
+        {
+          "status": "M",
+          "path": "AGENTS.md",
+          "working_sha256": "80f0aa66743d2ab376884e574838b6086292d45aaaca465a3696504ee900d81d"
+        },
+        {
+          "status": "M",
+          "path": "codex/agents/default.toml",
+          "working_sha256": null
+        }
+      ],
+      "tracked_diff_sha256": "103a78bde61a8a2931c79f6ff67aac1a5e9eb32828c0d12357c902e4d13582bb",
+      "raw_skill_files": 168,
+      "excluded_candidates": 0,
+      "candidate_files": 168,
+      "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+    },
+    {
+      "engine": "design-system-skills",
+      "path": "C:\\wamp64\\www\\design-system-skills",
+      "remote": "https://github.com/peterbamuhigire/design-system-skills.git",
+      "head": "752709c1ca46e886a82a71bfc65e3554125f4c95",
+      "branch": "main",
+      "working_tree_clean": false,
+      "dirty_files": [
+        {
+          "status": "M",
+          "path": ".codex/agents/explorer.toml",
+          "working_sha256": "5858aa0c0220f7aac9f96258cbdc0a00982b5c696871a70fdb8403bd86852d8c"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/researcher.toml",
+          "working_sha256": "d4e799c00f4e1eafc16886b48c0d504b96b64c133a59f1129c8614b6b3f0b35d"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/reviewer.toml",
+          "working_sha256": "5ab9492c3bc8cbd50ef5634ece3455284a6a0a1f8b21b8e329707a113793e83b"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/tester.toml",
+          "working_sha256": "1670ca4b1aedd409091880a1e60da5f91ae89960288155045f96e29a0557faf1"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/worker.toml",
+          "working_sha256": "fd052edb2a971ef153f4730597ae2e27b58bb631018e9811a46c0549e222b868"
+        },
+        {
+          "status": "M",
+          "path": ".codex/model-policy.json",
+          "working_sha256": "52103e0e1452a2a1dbc86ca218b982657928d1a2f2669ae5807ea3e673f5387b"
+        },
+        {
+          "status": "M",
+          "path": ".codex/model-policy.md",
+          "working_sha256": "7b708d1316ddace7b6c9fd333b9d3832cff33c2a8aca39b3a9d65ce8cb9d1c41"
+        },
+        {
+          "status": "M",
+          "path": "AGENTS.md",
+          "working_sha256": "4bb2fe06312f24b0692d45f8a0571257f4e3bbc2300e66b46e818908d7254c17"
+        },
+        {
+          "status": "M",
+          "path": "codex/agents/default.toml",
+          "working_sha256": null
+        }
+      ],
+      "tracked_diff_sha256": "77bd0dacfeaa8c1c7a1dbb4e6085761697bd9c0cbd4aec804f2c231595e011d8",
+      "raw_skill_files": 102,
+      "excluded_candidates": 0,
+      "candidate_files": 102,
+      "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+    },
+    {
+      "engine": "digital-research-engine",
+      "path": "C:\\wamp64\\www\\digital-research-engine",
+      "remote": "https://github.com/peterbamuhigire/digital-research-skills.git",
+      "head": "84a5262b0e9223bbccbd1b3be2195f3cf7d31d05",
+      "branch": "main",
+      "working_tree_clean": false,
+      "dirty_files": [
+        {
+          "status": "M",
+          "path": ".codex/agents/explorer.toml",
+          "working_sha256": "5858aa0c0220f7aac9f96258cbdc0a00982b5c696871a70fdb8403bd86852d8c"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/researcher.toml",
+          "working_sha256": "d4e799c00f4e1eafc16886b48c0d504b96b64c133a59f1129c8614b6b3f0b35d"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/reviewer.toml",
+          "working_sha256": "5ab9492c3bc8cbd50ef5634ece3455284a6a0a1f8b21b8e329707a113793e83b"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/tester.toml",
+          "working_sha256": "1670ca4b1aedd409091880a1e60da5f91ae89960288155045f96e29a0557faf1"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/worker.toml",
+          "working_sha256": "fd052edb2a971ef153f4730597ae2e27b58bb631018e9811a46c0549e222b868"
+        },
+        {
+          "status": "M",
+          "path": ".codex/model-policy.json",
+          "working_sha256": "52103e0e1452a2a1dbc86ca218b982657928d1a2f2669ae5807ea3e673f5387b"
+        },
+        {
+          "status": "M",
+          "path": ".codex/model-policy.md",
+          "working_sha256": "7d87bd0793544519642c7638cb430ddea4fef552cdef50207c10b68b6213ac09"
+        },
+        {
+          "status": "M",
+          "path": "AGENTS.md",
+          "working_sha256": "365fb19499088b3941fe4dca9321e485e4acbb29b4d26f8e87244f8c7992a161"
+        },
+        {
+          "status": "M",
+          "path": "codex/agents/default.toml",
+          "working_sha256": null
+        }
+      ],
+      "tracked_diff_sha256": "92843ccd3e72f332f5cb6764a995d6cb4a63de8c87cf38d4c8095dcf7b9bf47b",
+      "raw_skill_files": 61,
+      "excluded_candidates": 1,
+      "candidate_files": 60,
+      "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+    },
+    {
+      "engine": "linux-skills",
+      "path": "C:\\wamp64\\www\\linux-skills",
+      "remote": "https://github.com/peterbamuhigire/linux-skills.git",
+      "head": "1f8d2eb3d5cddfd1bffa963b9b5930296ad5fc19",
+      "branch": "main",
+      "working_tree_clean": false,
+      "dirty_files": [
+        {
+          "status": "M",
+          "path": ".codex/agents/explorer.toml",
+          "working_sha256": "ff51af23d6c42080f41ef143ab8f7088775a5693c25daca05595700d9579e01b"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/researcher.toml",
+          "working_sha256": "e5399fb6a545b0d4cd641e23cbecdfd6fc6a77d353e0e141eed621367d292053"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/reviewer.toml",
+          "working_sha256": "57a54353ac5d509bad724461bfedbb5b6dc488786c652511c24e8399fea1b2eb"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/tester.toml",
+          "working_sha256": "2d5603bfff6d74675c3a4a2d7f5c92f9927274eefa8140a7140165c1100538c0"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/worker.toml",
+          "working_sha256": "4389a0b7262835aca2c39a89f1262e25fe6816560990b95ab41abe445249dd17"
+        },
+        {
+          "status": "M",
+          "path": ".codex/model-policy.json",
+          "working_sha256": "52103e0e1452a2a1dbc86ca218b982657928d1a2f2669ae5807ea3e673f5387b"
+        },
+        {
+          "status": "M",
+          "path": ".codex/model-policy.md",
+          "working_sha256": "c339691d60162b4d2c3dbc33d0921ee4e4247110845db9bb7e834dbae989cf52"
+        },
+        {
+          "status": "M",
+          "path": "AGENTS.md",
+          "working_sha256": "f717ab74cabdaffdb2dbf3685e8654a047bc2e7a5ea421f165bcd341e8af8968"
+        },
+        {
+          "status": "M",
+          "path": "codex/agents/default.toml",
+          "working_sha256": null
+        }
+      ],
+      "tracked_diff_sha256": "fe860d923384b6f72ccb87030719010389f520c23d27bf38d133022dae5bd63b",
+      "raw_skill_files": 48,
+      "excluded_candidates": 0,
+      "candidate_files": 48,
+      "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+    },
+    {
+      "engine": "proposal-skills",
+      "path": "C:\\wamp64\\www\\proposal-skills",
+      "remote": "https://github.com/peterbamuhigire/proposal-skills.git",
+      "head": "9e3112719ff3086b4eb3daa030fd1b4c2236356c",
+      "branch": "main",
+      "working_tree_clean": false,
+      "dirty_files": [
+        {
+          "status": "M",
+          "path": ".codex/agents/explorer.toml",
+          "working_sha256": "5858aa0c0220f7aac9f96258cbdc0a00982b5c696871a70fdb8403bd86852d8c"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/researcher.toml",
+          "working_sha256": "d4e799c00f4e1eafc16886b48c0d504b96b64c133a59f1129c8614b6b3f0b35d"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/reviewer.toml",
+          "working_sha256": "5ab9492c3bc8cbd50ef5634ece3455284a6a0a1f8b21b8e329707a113793e83b"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/tester.toml",
+          "working_sha256": "1670ca4b1aedd409091880a1e60da5f91ae89960288155045f96e29a0557faf1"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/worker.toml",
+          "working_sha256": "fd052edb2a971ef153f4730597ae2e27b58bb631018e9811a46c0549e222b868"
+        },
+        {
+          "status": "M",
+          "path": ".codex/model-policy.json",
+          "working_sha256": "52103e0e1452a2a1dbc86ca218b982657928d1a2f2669ae5807ea3e673f5387b"
+        },
+        {
+          "status": "M",
+          "path": ".codex/model-policy.md",
+          "working_sha256": "7b708d1316ddace7b6c9fd333b9d3832cff33c2a8aca39b3a9d65ce8cb9d1c41"
+        },
+        {
+          "status": "M",
+          "path": "AGENTS.md",
+          "working_sha256": "dd9f848f5b1077e31e96ec6ee6739781aea83115a384d474cdf3368acc6a4cdc"
+        },
+        {
+          "status": "M",
+          "path": "codex/agents/default.toml",
+          "working_sha256": null
+        }
+      ],
+      "tracked_diff_sha256": "124d5d289659253c97fbe957ff9b2673d66490d8617037a97cd5aba8038b681e",
+      "raw_skill_files": 115,
+      "excluded_candidates": 0,
+      "candidate_files": 115,
+      "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+    },
+    {
+      "engine": "social-media-skills",
+      "path": "C:\\wamp64\\www\\social-media-skills",
+      "remote": "https://github.com/peterbamuhigire/social-media-skills.git",
+      "head": "21afc01bd1871899032121d29f6bce0962b374e3",
+      "branch": "main",
+      "working_tree_clean": false,
+      "dirty_files": [
+        {
+          "status": "M",
+          "path": ".codex/agents/explorer.toml",
+          "working_sha256": "5858aa0c0220f7aac9f96258cbdc0a00982b5c696871a70fdb8403bd86852d8c"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/researcher.toml",
+          "working_sha256": "d4e799c00f4e1eafc16886b48c0d504b96b64c133a59f1129c8614b6b3f0b35d"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/reviewer.toml",
+          "working_sha256": "5ab9492c3bc8cbd50ef5634ece3455284a6a0a1f8b21b8e329707a113793e83b"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/tester.toml",
+          "working_sha256": "1670ca4b1aedd409091880a1e60da5f91ae89960288155045f96e29a0557faf1"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/worker.toml",
+          "working_sha256": "fd052edb2a971ef153f4730597ae2e27b58bb631018e9811a46c0549e222b868"
+        },
+        {
+          "status": "M",
+          "path": ".codex/model-policy.json",
+          "working_sha256": "52103e0e1452a2a1dbc86ca218b982657928d1a2f2669ae5807ea3e673f5387b"
+        },
+        {
+          "status": "M",
+          "path": ".codex/model-policy.md",
+          "working_sha256": "7b708d1316ddace7b6c9fd333b9d3832cff33c2a8aca39b3a9d65ce8cb9d1c41"
+        },
+        {
+          "status": "M",
+          "path": "AGENTS.md",
+          "working_sha256": "a65c7b980780876508c365458ecc86ff1e9228f39f8a6f8f63cf4f030b6216e0"
+        },
+        {
+          "status": "M",
+          "path": "codex/agents/default.toml",
+          "working_sha256": null
+        }
+      ],
+      "tracked_diff_sha256": "2ee934a4724319e1d46a128892fadedd3ab5f1b6ba7384017d202f1348ea8a55",
+      "raw_skill_files": 191,
+      "excluded_candidates": 0,
+      "candidate_files": 191,
+      "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+    },
+    {
+      "engine": "srs-skills",
+      "path": "C:\\wamp64\\www\\srs-skills",
+      "remote": "https://github.com/peterbamuhigire/srs-skills.git",
+      "head": "ed36ca1b2d01be85d86fe1f341e741bb39f6b061",
+      "branch": "main",
+      "working_tree_clean": false,
+      "dirty_files": [
+        {
+          "status": "M",
+          "path": ".codex/agents/explorer.toml",
+          "working_sha256": "5858aa0c0220f7aac9f96258cbdc0a00982b5c696871a70fdb8403bd86852d8c"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/researcher.toml",
+          "working_sha256": "d4e799c00f4e1eafc16886b48c0d504b96b64c133a59f1129c8614b6b3f0b35d"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/reviewer.toml",
+          "working_sha256": "5ab9492c3bc8cbd50ef5634ece3455284a6a0a1f8b21b8e329707a113793e83b"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/tester.toml",
+          "working_sha256": "1670ca4b1aedd409091880a1e60da5f91ae89960288155045f96e29a0557faf1"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/worker.toml",
+          "working_sha256": "fd052edb2a971ef153f4730597ae2e27b58bb631018e9811a46c0549e222b868"
+        },
+        {
+          "status": "M",
+          "path": ".codex/model-policy.json",
+          "working_sha256": "52103e0e1452a2a1dbc86ca218b982657928d1a2f2669ae5807ea3e673f5387b"
+        },
+        {
+          "status": "M",
+          "path": ".codex/model-policy.md",
+          "working_sha256": "7b708d1316ddace7b6c9fd333b9d3832cff33c2a8aca39b3a9d65ce8cb9d1c41"
+        },
+        {
+          "status": "M",
+          "path": "AGENTS.md",
+          "working_sha256": "685464f289bdefcbc396d275ed7562d6fe72430662907d617fdf266c031594e5"
+        },
+        {
+          "status": "M",
+          "path": "codex/agents/default.toml",
+          "working_sha256": null
+        }
+      ],
+      "tracked_diff_sha256": "3de5182df3bc1d5545bbbe0fd558b2f86a75dc7f00f83df6a893cd9ec8fd8cb6",
+      "raw_skill_files": 160,
+      "excluded_candidates": 1,
+      "candidate_files": 159,
+      "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+    },
+    {
+      "engine": "website-skills",
+      "path": "C:\\wamp64\\www\\website-skills",
+      "remote": "https://github.com/peterbamuhigire/website-skills.git",
+      "head": "0c0c6141b5e43763cf339823394a98f944dcd0c0",
+      "branch": "main",
+      "working_tree_clean": false,
+      "dirty_files": [
+        {
+          "status": "M",
+          "path": ".codex/agents/explorer.toml",
+          "working_sha256": "5858aa0c0220f7aac9f96258cbdc0a00982b5c696871a70fdb8403bd86852d8c"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/researcher.toml",
+          "working_sha256": "d4e799c00f4e1eafc16886b48c0d504b96b64c133a59f1129c8614b6b3f0b35d"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/reviewer.toml",
+          "working_sha256": "5ab9492c3bc8cbd50ef5634ece3455284a6a0a1f8b21b8e329707a113793e83b"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/tester.toml",
+          "working_sha256": "1670ca4b1aedd409091880a1e60da5f91ae89960288155045f96e29a0557faf1"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/worker.toml",
+          "working_sha256": "fd052edb2a971ef153f4730597ae2e27b58bb631018e9811a46c0549e222b868"
+        },
+        {
+          "status": "M",
+          "path": ".codex/model-policy.json",
+          "working_sha256": "52103e0e1452a2a1dbc86ca218b982657928d1a2f2669ae5807ea3e673f5387b"
+        },
+        {
+          "status": "M",
+          "path": ".codex/model-policy.md",
+          "working_sha256": "7b708d1316ddace7b6c9fd333b9d3832cff33c2a8aca39b3a9d65ce8cb9d1c41"
+        },
+        {
+          "status": "M",
+          "path": "AGENTS.md",
+          "working_sha256": "670e8185f28aae957aa9adb347d1ae9f221a7e92ebaca4d72ca89b1925ceceb2"
+        },
+        {
+          "status": "M",
+          "path": "codex/agents/default.toml",
+          "working_sha256": null
+        }
+      ],
+      "tracked_diff_sha256": "ea2f760f8490fcd0f7a298262d7a3402a062a1f9d5aadf8cff076741f86aae15",
+      "raw_skill_files": 63,
+      "excluded_candidates": 1,
+      "candidate_files": 62,
+      "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+    },
+    {
+      "engine": "windows-admin-engine-skills",
+      "path": "C:\\wamp64\\www\\windows-admin-engine-skills",
+      "remote": "https://github.com/peterbamuhigire/windows-admin-engine-skills.git",
+      "head": "badc83e90fb2223b7585301219ca238809dcae44",
+      "branch": "main",
+      "working_tree_clean": false,
+      "dirty_files": [
+        {
+          "status": "M",
+          "path": ".codex/agents/explorer.toml",
+          "working_sha256": "5858aa0c0220f7aac9f96258cbdc0a00982b5c696871a70fdb8403bd86852d8c"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/researcher.toml",
+          "working_sha256": "d4e799c00f4e1eafc16886b48c0d504b96b64c133a59f1129c8614b6b3f0b35d"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/reviewer.toml",
+          "working_sha256": "5ab9492c3bc8cbd50ef5634ece3455284a6a0a1f8b21b8e329707a113793e83b"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/tester.toml",
+          "working_sha256": "1670ca4b1aedd409091880a1e60da5f91ae89960288155045f96e29a0557faf1"
+        },
+        {
+          "status": "M",
+          "path": ".codex/agents/worker.toml",
+          "working_sha256": "fd052edb2a971ef153f4730597ae2e27b58bb631018e9811a46c0549e222b868"
+        },
+        {
+          "status": "M",
+          "path": ".codex/model-policy.json",
+          "working_sha256": "52103e0e1452a2a1dbc86ca218b982657928d1a2f2669ae5807ea3e673f5387b"
+        },
+        {
+          "status": "M",
+          "path": ".codex/model-policy.md",
+          "working_sha256": "7d87bd0793544519642c7638cb430ddea4fef552cdef50207c10b68b6213ac09"
+        },
+        {
+          "status": "M",
+          "path": "AGENTS.md",
+          "working_sha256": "2b192cfaa17ebbb73de94841d15e0b26911d8c76894d661db51c46a6d63b7bc7"
+        },
+        {
+          "status": "M",
+          "path": "codex/agents/default.toml",
+          "working_sha256": null
+        }
+      ],
+      "tracked_diff_sha256": "a73695f08bc63058778009fbd91ee1e7d72277d4449d768c75b4fa1b92e10cb9",
+      "raw_skill_files": 21,
+      "excluded_candidates": 1,
+      "candidate_files": 20,
+      "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+    }
+  ],
+  "coordination_repository": {
+    "engine": "chwezi-engine-agents",
+    "path": "C:\\wamp64\\www\\chwezi-engine-agents",
+    "remote": "https://github.com/peterbamuhigire/chwezi-engine-agents.git",
+    "head": "0b237404c3c865112f5212634de62c64c68ea7e3",
+    "branch": "main",
+    "working_tree_clean": false,
+    "dirty_files": [
+      {
+        "status": "??",
+        "path": "scripts/kaizen_portfolio_snapshot.py",
+        "working_sha256": "0ba56901772e9ab21a8dfa9e1e86932a46e295fcd11eb9eb669189bcef975389"
+      }
+    ],
+    "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw_skill_files": 3,
+    "excluded_candidates": 2,
+    "candidate_files": 1,
+    "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+  },
+  "private_repository_scope": "captured in the plan's local-only private inventory and excluded from this public evidence pack",
+  "raw_skill_file_total": 1174,
+  "coordination_raw_skill_file_total": 3
+}

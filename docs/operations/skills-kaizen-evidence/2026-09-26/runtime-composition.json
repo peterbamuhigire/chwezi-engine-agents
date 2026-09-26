@@ -1,0 +1,25 @@
+{
+  "as_of": "2026-09-26",
+  "observation": "Read-only CLI inventory; detailed per-user plugin names and versions are kept in the local-only plan evidence, not this public repository.",
+  "claude_code": {
+    "cli_available": true,
+    "installed_plugins": 14,
+    "enabled_plugins": 14,
+    "chwezi_domain_engine_plugins_enabled": 0,
+    "evidence_command": "claude plugin list --json"
+  },
+  "codex": {
+    "cli_available": true,
+    "installed_plugins": 30,
+    "enabled_plugins": 21,
+    "disabled_plugins": 9,
+    "chwezi_domain_engine_plugins_enabled": 0,
+    "evidence_command": "codex plugin list --json"
+  },
+  "limits": [
+    "The inventory reflects this user's host profile on the capture date, not an engine release capability.",
+    "No Chwezi domain engine plugin was installed and enabled in either host profile.",
+    "Plugin manifests were not exercised through either host runtime in this phase.",
+    "Installed plugin count is not a token-budget measurement."
+  ]
+}
