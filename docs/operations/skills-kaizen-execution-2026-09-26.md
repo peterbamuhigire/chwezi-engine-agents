@@ -317,3 +317,10 @@ Rechecked official model catalogue, changelog, Codex config reference and reason
 Downloads P00 result/currentness hashes and package validation are updated. Structural validation passes (29 phases, 172 tasks, 67 JSON, 59 Markdown, 642 local links, zero errors). No Linux OS/runtime tests were run on Windows. P00 remains IN_PROGRESS; independent review and Peter's exact-diff policy-owner acceptance remain open. No dependent phase was started or pushed.
 
 The conflict-register commit is c3ee8c4; follow-up b9dd1c2 removed Markdown trailing whitespace. P00 result.json now lists both commits and the currentness-record hash.
+
+
+## P00 plugin-manifest source reconciliation (2026-09-27)
+
+Reopened the official Anthropic [plugin overview](https://code.claude.com/docs/en/plugins) and [plugin manifest reference](https://code.claude.com/docs/en/plugins/manifest-reference). The current reference says name is the only required top-level manifest field, documents agents/hooks/lspServers component fields, and says unknown top-level keys warn/are stripped while claude plugin validate --strict promotes warnings to failures. Updated plan source S04 to the canonical manifest-reference URL and refreshed its access/review date and limits. Updated coordinator README to label its explicit skills array/metadata as local house-profile conventions and link the two official pages. No installed Claude host/profile mutation was performed; host validation remains required before a future profile change.
+
+Evidence: Downloads/skills-kaizen/evidence/P00/plugin-schema-currentness-2026-09-27.json; source-register SHA-256 and package validator result are in P00/result.json. Package structure passes: 29 phases, 172 tasks, 68 JSON, 59 Markdown, 642 local links, zero errors.
