@@ -5,7 +5,8 @@
     "file": "kaizen_portfolio_snapshot.py",
     "sha256": "0ba56901772e9ab21a8dfa9e1e86932a46e295fcd11eb9eb669189bcef975389"
   },
-  "scope": "eleven public domain engines; coordinator and private engine are recorded separately",
+  "scope": "eleven public domain engines; the coordinator is recorded separately",
+  "public_export_note": "Local-only metadata omitted; public-domain and coordinator measurements are unchanged.",
   "classification_limit": "raw filesystem classification only; router reachability and semantic active counts require engine-specific reconciliation",
   "engines": [
     {
@@ -689,7 +690,6 @@
     "candidate_files": 1,
     "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
   },
-  "private_repository_scope": "captured in the plan's local-only private inventory and excluded from this public evidence pack",
   "raw_skill_file_total": 1174,
   "coordination_raw_skill_file_total": 3
 }

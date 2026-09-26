@@ -30,8 +30,7 @@ engine plugins enabled, so these static differences are not evidence that a
 currently enabled Chwezi plugin is missing skills.
 
 The coordinator has three raw skill files and is outside the public domain
-denominator. The private political engine has seven raw files in the
-plan's local-only inventory and remains outside this public evidence pack.
+denominator.
 
 ## Classification limits
 

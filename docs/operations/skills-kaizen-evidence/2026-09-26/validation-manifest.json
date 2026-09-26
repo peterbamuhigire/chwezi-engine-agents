@@ -126,7 +126,7 @@
                        "command":  "python scripts/validate_engine_control_plane.py --workspace-root ..",
                        "exit_code":  0,
                        "state":  "executed-pass",
-                       "output":  "engine-control-plane-validator:\n- registry: C:\\wamp64\\www\\chwezi-dev-engine\\docs\\engine-control-plane.json\n- engines: 12\n- installed checkout scope: accounting, business-plan, chwezi-dev-engine, design, digital-research, linux, political, proposal, social-media, srs, website, windows-admin\n- findings: 0\nPASS: control-plane registry is valid",
+                       "output":  "PASS: control-plane registry validator completed with zero findings; detailed registry output omitted",
                        "log_sha256":  "bad8a735c60db49564612568b288e0e900b049c8113433bf85b8b6b310628505"
                    },
                    {

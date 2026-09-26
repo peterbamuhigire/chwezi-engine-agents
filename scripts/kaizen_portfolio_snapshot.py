@@ -140,11 +140,10 @@ def main() -> int:
         "as_of": args.as_of,
         "workspace_root": str(root),
         "generator": {"file": Path(__file__).name, "sha256": file_sha(Path(__file__).resolve())},
-        "scope": "eleven public domain engines; coordinator and private engine are recorded separately",
+        "scope": "eleven public domain engines; the coordinator is recorded separately",
         "classification_limit": "raw filesystem classification only; router reachability and semantic active counts require engine-specific reconciliation",
         "engines": engines,
         "coordination_repository": coordination,
-        "private_repository_scope": "captured in the plan's local-only private inventory and excluded from this public evidence pack",
         "raw_skill_file_total": len(skills),
         "coordination_raw_skill_file_total": len(coordination_skills),
     }
