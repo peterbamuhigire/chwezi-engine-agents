@@ -133,6 +133,9 @@ def main() -> int:
         skills.extend(rows)
     coordination, coordination_skills = collect_engine(args.coordination_root.resolve(), "chwezi-engine-agents")
     skills.sort(key=lambda row: (row["engine"].casefold(), row["path"].casefold()))
+    coordination_skills.sort(key=lambda row: row["path"].casefold())
+    for row in coordination_skills:
+        row["scope"] = "coordination"
     baseline = {
         "as_of": args.as_of,
         "workspace_root": str(root),
@@ -149,7 +152,10 @@ def main() -> int:
     with (out / "skill-inventory.jsonl").open("w", encoding="utf-8", newline="\n") as handle:
         for row in skills:
             handle.write(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n")
-    print(json.dumps({"engines": len(engines), "raw_skill_file_total": len(skills), "output_dir": str(out)}, sort_keys=True))
+    with (out / "coordination-skill-inventory.jsonl").open("w", encoding="utf-8", newline="\n") as handle:
+        for row in coordination_skills:
+            handle.write(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n")
+    print(json.dumps({"engines": len(engines), "raw_skill_file_total": len(skills), "coordination_skill_file_total": len(coordination_skills), "output_dir": str(out)}, sort_keys=True))
     return 0
 
 
