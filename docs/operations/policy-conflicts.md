@@ -1,7 +1,7 @@
 # Codex model-policy conflict register
 
-**Recorded:** 2026-09-27 (Africa/Kampala)  
-**Owner:** Portfolio/runtime policy owner (Peter)  
+**Recorded:** 2026-09-27 (Africa/Kampala)
+**Owner:** Portfolio/runtime policy owner (Peter)
 **Scope:** P00 precedence resolution for plan, engine policy, saved config and runtime catalogue. This register preserves superseded text; it does not revive it.
 
 ## Controlling decision
