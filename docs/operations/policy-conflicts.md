@@ -98,4 +98,4 @@ The latest local Codex cache recorded in skills-kaizen/evidence/model-currentnes
 - **Reviewer:** independent review of the actual cross-repository diff is still required before P00 closure; none is claimed here.
 - **Runtime maintainer:** verifies which settings a future session loads; no current session switch is claimed.
 
-P00 remains **IN_PROGRESS** until its written independent-review and policy-owner acceptance gates close. No P01 dependent implementation or phase-count push is implied by this register.
+Peter accepted and ratified the exact P00 diff on 2026-09-27, after the 11 helper commits. This authorizes continued implementation but does not backdate acceptance. The written pre-rollout sequence requirement is recorded as a timing variance for independent reviewer disposition. P00 remains **IN_PROGRESS** until review and any required deviation decision close. No P01 dependent implementation or phase-count push is implied by this register.
