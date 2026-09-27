@@ -1,0 +1,78 @@
+# System administration activity records and reports
+
+## Purpose and value gate
+
+**Observed problem:** the Linux hub already requires a system check before an operation is closed, and WindowsSkills.Engine writes per-operation evidence packs when a caller supplies an evidence root. Neither mechanism alone guarantees a concise, date-ranged activity history for later system administration reports. The baseline is therefore uneven task-level discoverability, not an absence of operating-system logs.
+
+**Smallest change:** use one small JSON Lines event contract, stored per user outside the engine checkout, with a date-ranged Markdown report. Linux emits a record at an explicit task handoff; WindowsSkills.Engine records metadata for each operation result it creates. Existing auditd, journald, Windows Event Log, update history, and evidence packs remain the detailed source records.
+
+**Measure:** for a recorded task, a report for the containing UTC date includes its event, status and change state, while a report outside that interval does not. The record contains no raw command output, secrets, account names, hostnames, or unconstrained target data.
+
+**Maintenance:** keep schema v1 stable, add fields only through an evidenced version change, and recheck after either adapter or consumer changes. Do not delete history automatically. Roll back by disabling/removing the adapter code; existing records remain readable as JSONL.
+
+## Record contract
+
+Canonical schema: [`schemas/system-admin-activity-v1.schema.json`](../schemas/system-admin-activity-v1.schema.json).
+
+Each line reports one engine-mediated task or WindowsSkills.Engine operation. It records UTC time, engine, broad activity type, operation name, target scope, outcome, whether a change occurred, a short redacted summary, an optional change reference, evidence identifiers, and limitations. It intentionally omits account/user identifiers, full target names, command arguments, raw output, secrets, and system snapshots. Evidence references must be short relative IDs or paths; do not use absolute paths.
+
+Default storage is per-user local state: Linux uses `$XDG_STATE_HOME/chwezi/linux-admin` (or `$HOME/.local/state/chwezi/linux-admin` when unset); Windows uses the current non-roaming user's LocalApplicationData under `Chwezi/WindowsAdmin`. Both adapters accept `CHWEZI_ACTIVITY_ROOT` to select the same explicit store, and their report commands can read multiple roots. Use a shared record root only with deliberate ownership, ACLs and retention controls if reporting across accounts is required. The default records only the current user's engine activity; it is not a machine-wide forensic audit log.
+
+Activity records are append-only by convention, not tamper-proof. A local administrator can alter them. They do not establish that unrecorded host activity did not occur. Reports must state this limitation and preserve partial, failed, blocked, and unassessed outcomes.
+
+## Platform evidence and report sources
+
+| Source | Supported use | Limit |
+|---|---|---|
+| Linux `auditd` and system journal | Investigate operating-system events and configured audit rules | Host configuration, retention, permissions, rule coverage and event loss must be checked; the task ledger does not replace these sources. |
+| Windows Event Log and Windows Update diagnostics/history | Corroborate host, security, and update events | Management policy and retention vary; the event source is not a complete record of every engine task. |
+| WindowsSkills.Engine evidence packs | Detailed structured output for an operation where a pack is requested | Packs can contain more sensitive host data than the activity ledger; retain them under the existing access/redaction controls. |
+| Activity JSONL | Build a concise, time-bounded index and report | Contains only operations routed through the adapters or explicitly recorded by the operator/agent. |
+
+## Automation boundary
+
+This specification does not install a startup task, service, systemd unit, root/SYSTEM agent, patch schedule, or security-remediation loop. Background scheduling is a separate decision after platform, ownership, maintenance, reboot, rollback, and host-lab checks. Existing package managers and endpoint-management planes remain authoritative update owners. The activity ledger is not permission to apply a fix.
+
+## Currentness evidence (2026-09-27)
+
+| Claim | Source and scope | Access / review | Status and uncertainty |
+|---|---|---|---|
+| Ubuntu's `unattended-upgrades` applies configured automatic security updates; Ubuntu documentation describes defaults and its log path. | [Ubuntu Security Updates](https://documentation.ubuntu.com/security/security-updates/), current Ubuntu guidance; page states last updated 2026-07-03. | Accessed 2026-09-27; review by 2026-10-27 or after Ubuntu release/configuration changes. | Verified for the documented Ubuntu scope; repository/PPA configuration and host effective settings still require inspection. |
+| RHEL offers DNF Automatic actions through systemd timer units, including notify-only, download, and install variants. | [RHEL 10 DNF Automatic](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/managing_software_with_the_dnf_tool/automating-software-updates-in-rhel) and [RHEL 9 security updates](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/managing_and_monitoring_security_updates/installing-security-updates_managing-and-monitoring-security-updates); distro-version-specific. | Accessed 2026-09-27; review by 2026-10-27 or after RHEL major-version changes. | Verified within stated releases. Timer choice can override configuration; subscription/repository and local policy affect eligibility. |
+| XDG state storage is intended for persistent user-specific state such as action history. | [XDG Base Directory Specification 0.8](https://specifications.freedesktop.org/basedir/latest/), published 2021-05-08. | Accessed 2026-09-27; stable concept, recheck on spec revision. | Verified; user-state storage is not a privileged multi-user audit store. |
+| Windows LocalApplicationData is the current non-roaming user's application-data directory. | [Environment.SpecialFolder](https://learn.microsoft.com/en-us/dotnet/api/system.environment.specialfolder), Microsoft .NET API documentation. | Accessed 2026-09-27; recheck if target runtime or storage contract changes. | Verified for current-user local storage; not shared across Windows accounts. |
+| Task Scheduler runs configured tasks under a security principal; elevated or SYSTEM tasks have a distinct privilege boundary. | [Task Scheduler tasks](https://learn.microsoft.com/en-us/windows/win32/taskschd/tasks), [Task security contexts](https://learn.microsoft.com/en-us/windows/win32/taskschd/security-contexts-for-running-tasks), and [`schtasks create`](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/schtasks-create). | Accessed 2026-09-27; API source last updated 2020 and command reference currently maintained; recheck target Windows edition. | Task principal and privilege behavior is documented. The high-risk design conclusion is an inference; no suggestion to register SYSTEM task is made. |
+| Windows maintenance can be scheduled opportunistically; update policies support staged rings and restart controls. | [Windows Automatic Maintenance](https://learn.microsoft.com/en-us/windows/win32/taskschd/task-maintenence), [Windows Update client policies](https://learn.microsoft.com/en-us/windows/deployment/update/waas-configure-wufb), and [audit-policy recommendations](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/audit-policy-recommendations). | Accessed 2026-09-27; review by 2026-10-27 or when Windows policy/runtime changes. | Primary Microsoft guidance. Exact behavior depends on edition, management owner, connected-power/idle conditions and update source. |
+| Linux systemd timer units can activate a corresponding service on calendar or elapsed-time triggers; persistence can cause a missed calendar run to be started when the timer is activated. | [Ubuntu systemd.timer manual, Resolute](https://manpages.ubuntu.com/manpages/resolute/man5/systemd.timer.5.html); version-scoped Ubuntu packaging of the systemd manual. | Accessed 2026-09-27; recheck on target distribution/systemd version before deployment. | Verified for the published manual; exact directives and unit-manager scope vary by distro/version. We did not inspect a target Linux host. |
+| Windows Task Scheduler combines trigger, action and principal; available triggers include calendar, startup, logon, idle and events. Frequent polling can affect battery-powered devices. | [Microsoft Tasks](https://learn.microsoft.com/en-us/windows/win32/taskschd/tasks), [Task Triggers](https://learn.microsoft.com/en-us/windows/win32/taskschd/task-triggers), and [About Task Scheduler](https://learn.microsoft.com/en-us/windows/win32/taskschd/about-the-task-scheduler). | Accessed 2026-09-27; review if target Windows edition or task API changes. | Verified from Microsoft developer documentation. Principal rights and power conditions must be chosen per host. |
+
+Model-release and OpenAI catalogue research was not repeated because Peter explicitly directed that models need not be reconfirmed every phase. No claim about model availability is used for this feature.
+
+## Options considered
+
+| Option | Value | Cost / limit | Decision |
+|---|---|---|---|
+| Rely only on OS audit logs | Strong for configured host security events | Does not identify every agent/engine task; coverage and retention are host-specific and logs can be large/sensitive | Keep as corroborating evidence, not the task ledger |
+| Keep only separate evidence packs | Preserves detailed command/task evidence | Hard to make a concise date-range report across tasks; some collectors write a pack only when a path is supplied | Reuse packs for detail and add a minimal activity index |
+| One JSON Lines activity ledger | Portable, appendable, readable by both engines, simple report generation | Per-user by default; not tamper-proof; concurrent append and malformed records need handling | Implement for task-level summary and reports |
+| Central database/service | Cross-device querying and retention controls | Adds a server, credentials, network, schema migrations and a new failure/security surface | Defer until a demonstrated multi-device reporting need exists |
+
+
+## Background operation options
+
+The engines are instruction catalogues plus optional local command modules; installing their files does not itself create a resident administrator process. A scheduled action needs a defined executable, security principal, trigger, state store, report destination, failure handling, update owner and removal path. This is an architectural inference from the engines' documented install surfaces and lack of a resident service.
+
+| Option | Linux | Windows | Decision |
+|---|---|---|---|
+| Scheduled read-only inventory and activity report | A systemd user timer is the smallest user-owned option where user services are available; a system timer/service is for centrally managed machine work and needs a defined service account/privilege boundary. A timer activates its paired unit rather than making the engine resident. Verify target distro, scheduler, log access and executable paths before deployment. | Task Scheduler has explicit triggers, actions and a security principal. A per-user task suits user-owned reporting; a service account/system principal requires a separate privilege justification. Prefer a weekly or maintenance-window trigger over frequent polling on a laptop; idle/AC conditions can defer reports. | Best first background pilot. It builds an ongoing baseline without self-authorizing repairs. Keep executable and output paths fixed and local. |
+| Automatic operating-system security packages | On Ubuntu, use the installed/configured `unattended-upgrades` policy; on supported RHEL versions, use `dnf-automatic` in notification, download or install mode. Inspect repositories, policy owner, logs, reboot behavior and workload before enabling changes. | Leave Windows Update policy, Intune, WSUS or Autopatch as the update owner. Use existing rings, quality checks and restart policy rather than a competing updater. | Prefer native update owners. Automatic patching may fit after per-host policy, canary and reboot handling are known; no settings were changed here. |
+| Custom always-on Chwezi agent with root/SYSTEM privileges and open-ended fixes | A service could invoke arbitrary scripts as root. | A task or service could run with highest/SYSTEM privileges. | Reject as the default. It combines broad privilege, update trust, semantic uncertainty and hard-to-reverse changes in one process. A finding should create a report/task, not mutate arbitrary controls. |
+| Automatic engine/plugin repository update and reload | Timer periodically pulls or replaces skill code and scripts. | Scheduled updater changes installed engine files or PATH integration. | Defer. No signed release, compatibility, rollback or host-specific update contract is established for this workflow. Automate update notification before installation. |
+
+### Recommended staged design
+
+1. **Report-only pilot:** schedule the Linux and Windows read-only inventory/report commands under the minimum principal that can collect approved fields. Emit one activity record per run, preserve failures, and retain output in the existing user-private state path. A missed run must appear as a gap, not a healthy report.
+2. **Native security updates:** inspect the current OS and management-plane owner. Where the owner supports it, use its security-only or approved update ring with explicit reboot/maintenance policy. Log native run outcomes into the activity ledger; do not make Chwezi a second update manager.
+3. **Narrow automated remediations:** consider only allow-listed changes with a demonstrated baseline, approved authority, before/after verification, safe rollback and a local failure threshold. Keep broad hardening, identity/network boundary changes, reboots and recovery human-gated until their specific disposable-host proofs exist.
+
+The smallest viable automation experiment is one report-only scheduled task on one Linux host and one Windows workstation, with owner, frequency, retention, failure notification, output review and removal procedure recorded. Acceptance should require a successful run, deliberate failure, bounded output and proof no host setting changed. Only after that pilot should native OS update automation be reviewed against the machine's actual distro, owner, maintenance window and reboot policy. Actual Linux scheduler and host tests remain for Linux; this exploration did not install or enable a background task on Peter's PC.

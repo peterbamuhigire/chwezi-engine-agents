@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/peterbamuhigire/chwezi-engine-agents/schemas/system-admin-activity-v1.schema.json",
+  "title": "Chwezi system administration activity record v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "event_id", "timestamp_utc", "engine", "activity_type", "operation", "target_scope", "status", "changed", "summary", "change_ref", "evidence_refs", "limitations"],
+  "properties": {
+    "schema_version": {"const": "chwezi.system-admin-activity.v1"},
+    "event_id": {"type": "string", "minLength": 1, "maxLength": 100},
+    "timestamp_utc": {"type": "string", "format": "date-time"},
+    "engine": {"enum": ["linux-skills", "windows-admin-engine-skills"]},
+    "activity_type": {"enum": ["inventory", "health_check", "security", "update", "configuration", "backup", "recovery", "incident", "report", "other"]},
+    "operation": {"type": "string", "minLength": 1, "maxLength": 120},
+    "target_scope": {"enum": ["local", "remote", "fleet", "unknown"]},
+    "status": {"enum": ["succeeded", "no_change", "partial", "failed", "blocked", "not_assessed", "pending_reboot"]},
+    "changed": {"type": "boolean"},
+    "summary": {"type": "string", "minLength": 1, "maxLength": 500},
+    "change_ref": {"type": ["string", "null"], "maxLength": 120},
+    "evidence_refs": {"type": "array", "maxItems": 30, "items": {"type": "string", "maxLength": 180, "pattern": "^(?!/)(?![A-Za-z]:)(?!.*\\.\\.).+$"}},
+    "limitations": {"type": "array", "maxItems": 30, "items": {"type": "string", "maxLength": 300}}
+  }
+}
