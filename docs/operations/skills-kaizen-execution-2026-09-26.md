@@ -328,3 +328,5 @@ Evidence: Downloads/skills-kaizen/evidence/P00/plugin-schema-currentness-2026-09
 ## P00 user acceptance and timing variance (2026-09-27)
 
 Peter Bamuhigire, Lead Consultant, explicitly accepted/ratified the exact P00 diff and authorized continued plan implementation. Approval was received after the 11 canonical helper commits; the P00 checklist required policy-owner acceptance before broad rollout. The chronology is recorded as a timing variance, not backdated. An independent reviewer is assessing whether this variance is acceptable and whether all technical evidence supports closing P00. P01 remains gated until review disposition. No personal contact details are copied into the evidence record.
+
+P00-T02 in the machine-readable phase manifest still asserted the saved config was Luna/high before the 2026-09-27 correction. Replaced that stale sentence with the observed medium state and dated correction; package validation remains PASS. Manifest SHA-256 is recorded in P00/result.json. The user acceptance was after the 11 helper commits; this timing variance remains explicitly unbackdated and is part of the independent review.
