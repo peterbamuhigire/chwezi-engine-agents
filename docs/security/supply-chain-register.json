@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "review_date": "2026-09-27",
+  "scope": "P19 local coordinator installer sources and runtime dependencies; not a complete engine-estate SBOM",
+  "entries": [
+    {
+      "component": "scripts/install-engine.js",
+      "version": "P19 local commit",
+      "source": "repository source; local checkout C:/wamp64/www/chwezi-engine-agents",
+      "dependencies": [],
+      "runtime": "Node.js 24.8.0 observed locally; supported-version policy NOT ASSESSED",
+      "network_behavior": "Static inspection found no network client, download, or subprocess invocation in the installer.",
+      "license_provenance": "Repository license and commit provenance retained; formal package signature/attestation NOT ASSESSED",
+      "status": "SCOPED_REVIEW; not a full SBOM"
+    },
+    {
+      "component": "scripts/install.ps1",
+      "version": "P19 local commit",
+      "source": "repository source; local checkout C:/wamp64/www/chwezi-engine-agents",
+      "dependencies": ["PowerShell built-in filesystem, JSON, and cryptography cmdlets"],
+      "runtime": "Windows PowerShell host used for isolated fixture verification; exact host version NOT RECORDED",
+      "network_behavior": "Installer performs local file operations and reads Git metadata; static inspection found no download or network client.",
+      "license_provenance": "Repository license and commit provenance retained; formal package signature/attestation NOT ASSESSED",
+      "status": "SCOPED_REVIEW; fixture preservation checks PASS"
+    },
+    {
+      "component": "scripts/install.sh and scripts/resolve-install-target.py",
+      "version": "P19 local commit",
+      "source": "repository source; local checkout C:/wamp64/www/chwezi-engine-agents",
+      "dependencies": ["POSIX shell utilities", "Python standard library", "Git metadata commands"],
+      "runtime": "Git Bash on Windows used for fixture verification; non-Windows shells NOT ASSESSED",
+      "network_behavior": "Installer performs local file operations and reads Git metadata; static inspection found no download or network client.",
+      "license_provenance": "Repository license and commit provenance retained; formal package signature/attestation NOT ASSESSED",
+      "status": "SCOPED_REVIEW; syntax, target-containment and fixture preservation checks PASS"
+    },
+    {
+      "component": "hooks/destructive-bash-gate.js",
+      "version": "unchanged existing source",
+      "source": "repository source",
+      "dependencies": [],
+      "runtime": "Host hook ABI version NOT ASSESSED",
+      "network_behavior": "No network client found by static inspection.",
+      "license_provenance": "Repository license and commit provenance retained; host runtime behavior NOT ASSESSED",
+      "status": "REVIEWED; known fail-open and retry-allow design means it is not an authorization control"
+    }
+  ],
+  "coverage_limits": [
+    "The scoped shared installer has no third-party runtime package dependencies; the coordinator MCP server has a separate package lock and was outside this installer review.",
+    "Host-installed runtimes and system utilities were observed only as available tooling; their trust chains and patch-management state were not assessed.",
+    "Other engines' vendored gates were not exhaustively hash-compared in this bounded review."
+  ]
+}

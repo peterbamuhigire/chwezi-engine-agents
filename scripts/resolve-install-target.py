@@ -21,6 +21,12 @@ def main() -> int:
     if not adapter.is_file():
         parser.error(f"requested host adapter is missing: {adapter}")
     destination = args.destination.expanduser().resolve()
+    if destination == Path(destination.anchor):
+        parser.error("destination cannot be a filesystem root")
+    if destination == source or destination in source.parents or source in destination.parents:
+        parser.error("destination and source checkout must not contain one another")
+    if destination == Path.home().resolve():
+        parser.error("destination cannot be the home directory itself")
     print(json.dumps({"host": args.host, "source": str(source), "destination": str(destination), "adapter": str(adapter), "manifest": str(destination / ".skills-engine-agents-install.json")}, indent=2))
     return 0
 

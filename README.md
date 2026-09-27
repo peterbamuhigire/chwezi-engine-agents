@@ -24,6 +24,8 @@ This repository is the Chwezi suite marketplace: its [`.claude-plugin/marketplac
 
 **Installing a domain engine standalone works with zero dependency on this coordinator.** Each engine also publishes its own repository and its own `/plugin marketplace add <that-engine-repo>` command, and none of the eleven engines requires `chwezi-suite` to be installed, present, or even known about. This repository is a convenience — one marketplace, one set of shared tooling — never a requirement. For local, non-plugin installation (project-scoped, CI, or hosts without the plugin system), use the shared installer directly: `node scripts/install-engine.js install --engine <path-to-engine>` (see the header comment in [`scripts/install-engine.js`](scripts/install-engine.js) for `--scope`, `--dry-run`, and `uninstall`/`doctor` modes).
 
+The installers record SHA-256 hashes for managed files, preserve unmanaged and hidden user files during updates, and refuse unowned destination collisions or locally modified managed files by default. `--force` deliberately overrides file-ownership checks and should be used only after reviewing the exact affected paths. Filesystem roots, the home directory itself, and targets that contain or sit inside the source checkout are refused.
+
 The eleven domain engines this package coordinates, with their repositories (from [`catalog/engines.yaml`](catalog/engines.yaml)):
 
 - [SRS Skills](https://github.com/peterbamuhigire/srs-skills) — software requirements, product requirements, architecture, and technical specifications.
@@ -64,7 +66,7 @@ domain topic inside a skill's `references/` (for example a food-processing
 | `agents/engine-orchestrator.md` | Routes a request to the correct domain engine(s), including cross-cutting activation (finance, design, research) alongside a domain engine. |
 | `agents/engine-maintainer.md` | Inspects engine remotes, branches, and working trees; runs `git pull --ff-only` only on explicit request; skips dirty or diverged checkouts; never resets, deletes, or force-pushes. |
 | `agents/engine-validator.md` | Runs each engine's documented validation commands (from `catalog/engines.yaml`) and reports evidence or `NOT ASSESSED` — never treats missing evidence as a pass. |
-| `scripts/install-engine.js` | Shared installer runtime: installs, updates, and uninstalls any one engine standalone, with a per-file content-hash install-state record so updates only ever touch files it wrote. |
+| `scripts/install-engine.js` | Shared installer runtime: installs, updates, and uninstalls any one engine standalone, with per-file hashes, root-contained paths, and default refusal to overwrite unowned or locally modified files. |
 | `scripts/generate-plugin-manifest.js` | Regenerates an engine's `.claude-plugin/plugin.json` from its actual `SKILL.md` tree, across the three skill-root shapes found in the estate. |
 | `hooks/destructive-bash-gate.js` | PreToolUse hook on Bash/PowerShell: a DENY-then-ALLOW gate on destructive commands (`rm -rf`, `git reset --hard`, `git push --force`, `DROP TABLE`, etc.), vendored identically to all twelve Chwezi engines. |
 | `skills/rules-distill/SKILL.md` | Scans one engine's skills for principles that recur in two or more skills and are not yet in `rules/`, and proposes promotions for explicit approval — never edits `rules/` automatically. |

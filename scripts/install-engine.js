@@ -120,9 +120,46 @@ function sha256(filePath) {
 
 const SKIP_DIR_NAMES = new Set(['_TEMPLATE', 'node_modules', '.git', '__pycache__']);
 
+function isWithinRoot(root, candidate) {
+  const relative = path.relative(path.resolve(root), path.resolve(candidate));
+  return relative === '' || (relative !== '..' && !relative.startsWith('..' + path.sep) && !path.isAbsolute(relative));
+}
+
+function resolveWithinRoot(root, relative, label) {
+  if (typeof relative !== 'string' || relative.length === 0 || path.isAbsolute(relative)) {
+    throw new Error(`${label} must be a non-empty relative path`);
+  }
+  const candidate = path.resolve(root, relative);
+  if (!isWithinRoot(root, candidate)) throw new Error(`${label} escapes its allowed root: ${relative}`);
+  return candidate;
+}
+
+function rejectSymlinkPath(root, candidate) {
+  const safeRoot = path.resolve(root);
+  const safeCandidate = path.resolve(candidate);
+  if (!isWithinRoot(safeRoot, safeCandidate)) throw new Error(`Path escapes allowed root: ${candidate}`);
+  const segments = path.relative(safeRoot, safeCandidate).split(path.sep).filter(Boolean);
+  let current = safeRoot;
+  for (let i = -1; i < segments.length; i++) {
+    if (i >= 0) current = path.join(current, segments[i]);
+    let stat;
+    try {
+      stat = fs.lstatSync(current); // lstat also detects dangling symlinks
+    } catch (e) {
+      if (e.code === 'ENOENT') continue;
+      throw e;
+    }
+    if (stat.isSymbolicLink()) throw new Error(`Refusing symlink in managed path: ${current}`);
+    if (i >= 0 && i < segments.length - 1 && !stat.isDirectory()) {
+      throw new Error(`Non-directory blocks managed path: ${current}`);
+    }
+  }
+}
+
 function walkFiles(dir, out) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     if (entry.name.startsWith('.') && entry.name !== '.claude-plugin') continue;
+    if (entry.isSymbolicLink()) throw new Error(`Refusing symbolic link in engine package: ${path.join(dir, entry.name)}`);
     if (entry.isDirectory() && SKIP_DIR_NAMES.has(entry.name)) continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) walkFiles(full, out);
@@ -147,6 +184,7 @@ function walkFiles(dir, out) {
 function walkFilesToSkillBoundary(dir, topDir, out) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     if (entry.name.startsWith('.') && entry.name !== '.claude-plugin') continue;
+    if (entry.isSymbolicLink()) throw new Error(`Refusing symbolic link in engine package: ${path.join(dir, entry.name)}`);
     if (entry.isDirectory() && SKIP_DIR_NAMES.has(entry.name)) continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
@@ -162,15 +200,33 @@ function walkFilesToSkillBoundary(dir, topDir, out) {
 function readState(targetRoot) {
   const statePath = path.join(targetRoot, '.chwezi', 'install-state.json');
   if (!fs.existsSync(statePath)) return { version: 1, engines: {} };
+  rejectSymlinkPath(targetRoot, statePath);
   try {
-    return JSON.parse(fs.readFileSync(statePath, 'utf8'));
+    const state = JSON.parse(fs.readFileSync(statePath, 'utf8'));
+    if (!state || state.version !== 1 || !state.engines || typeof state.engines !== 'object' || Array.isArray(state.engines)) {
+      throw new Error('expected version 1 state with an engines object');
+    }
+    for (const [name, record] of Object.entries(state.engines)) {
+      if (!name || !record || !record.files || typeof record.files !== 'object' || Array.isArray(record.files)) {
+        throw new Error(`invalid ownership record for ${name || '<empty engine>'}`);
+      }
+      for (const [rel, hash] of Object.entries(record.files)) {
+        const managedPath = resolveWithinRoot(targetRoot, rel, 'Recorded ownership path');
+        if (typeof hash !== 'string' || !/^[a-f0-9]{64}$/i.test(hash)) {
+          throw new Error(`invalid content hash for ${name}:${rel}`);
+        }
+        rejectSymlinkPath(targetRoot, managedPath);
+      }
+    }
+    return state;
   } catch (e) {
-    return { version: 1, engines: {} };
+    throw new Error(`Refusing unsafe or unreadable installer state at ${statePath}: ${e.message}`);
   }
 }
 
 function writeState(targetRoot, state) {
   const stateDir = path.join(targetRoot, '.chwezi');
+  rejectSymlinkPath(targetRoot, path.join(stateDir, 'install-state.json'));
   fs.mkdirSync(stateDir, { recursive: true });
   fs.writeFileSync(path.join(stateDir, 'install-state.json'), JSON.stringify(state, null, 2) + '\n');
 }
@@ -198,9 +254,10 @@ function cmdInstall(args) {
   const plan = [];
   const addTree = (srcDir) => {
     if (!fs.existsSync(srcDir)) return;
+    if (!isWithinRoot(engineRoot, srcDir)) throw new Error(`Source directory escapes engine root: ${srcDir}`);
     for (const f of walkFiles(srcDir, [])) {
       const rel = path.relative(engineRoot, f).split(path.sep).join('/');
-      plan.push({ src: f, dest: path.join(targetRoot, rel), rel });
+      plan.push({ src: f, dest: resolveWithinRoot(targetRoot, rel, 'Install destination'), rel });
     }
   };
 
@@ -240,11 +297,12 @@ function cmdInstall(args) {
       // Resolve the actual source directory against the manifest entry as
       // written (pre-prefix) — the "skills/" prefix above is a target-side
       // convention only; it does not necessarily exist on the source side.
-      const srcDir = path.join(engineRoot, entry.replace(/^\.\//, '').replace(/\/$/, ''));
+      const sourceRelative = entry.replace(/^\.\//, '').replace(/\/$/, '');
+      const srcDir = resolveWithinRoot(engineRoot, sourceRelative, 'Plugin manifest skill path');
       if (!fs.existsSync(srcDir)) continue;
       for (const f of walkFilesToSkillBoundary(srcDir, srcDir, [])) {
         const rel = relRoot + '/' + path.relative(srcDir, f).split(path.sep).join('/');
-        plan.push({ src: f, dest: path.join(targetRoot, rel), rel });
+        plan.push({ src: f, dest: resolveWithinRoot(targetRoot, rel, 'Install destination'), rel });
       }
     }
   } else {
@@ -288,6 +346,29 @@ function cmdInstall(args) {
     process.exit(1);
   }
 
+  const collisions = [];
+  const locallyModified = [];
+  for (const item of plan) {
+    rejectSymlinkPath(targetRoot, item.dest);
+    if (!fs.existsSync(item.dest)) continue;
+    const targetStat = fs.lstatSync(item.dest);
+    if (!targetStat.isFile()) throw new Error(`Refusing file/directory or special-file collision at ${item.dest}`);
+    const previousHash = existing && existing.files && existing.files[item.rel];
+    if (!previousHash) {
+      collisions.push(item.rel);
+    } else if (sha256(item.dest) !== previousHash) {
+      locallyModified.push(item.rel);
+    }
+  }
+  if (collisions.length && !args.force) {
+    console.error(`Refusing to overwrite ${collisions.length} unowned destination file(s), e.g. "${collisions[0]}". Review the collision or pass --force to replace it deliberately.`);
+    process.exit(1);
+  }
+  if (locallyModified.length && !args.force) {
+    console.error(`Refusing to overwrite ${locallyModified.length} locally modified installed file(s), e.g. "${locallyModified[0]}". Review or preserve the edit, or pass --force to replace it deliberately.`);
+    process.exit(1);
+  }
+
   if (args.dryRun) {
     const summary = {
       engine: name,
@@ -308,15 +389,27 @@ function cmdInstall(args) {
 
   const fileRecord = {};
   for (const item of plan) {
+    rejectSymlinkPath(targetRoot, item.dest);
     fs.mkdirSync(path.dirname(item.dest), { recursive: true });
     fs.copyFileSync(item.src, item.dest);
     fileRecord[item.rel] = sha256(item.dest);
   }
 
+  // Keep ownership of obsolete installed files so a later uninstall can
+  // remove unchanged files safely or refuse locally modified ones.
+  if (existing && existing.files) {
+    for (const [rel, hash] of Object.entries(existing.files)) {
+      if (Object.prototype.hasOwnProperty.call(fileRecord, rel)) continue;
+      const stalePath = resolveWithinRoot(targetRoot, rel, 'Recorded install path');
+      rejectSymlinkPath(targetRoot, stalePath);
+      if (fs.existsSync(stalePath)) fileRecord[rel] = hash;
+    }
+  }
+
   state.engines[name] = {
     source: engineRoot,
     installedAt: new Date().toISOString(),
-    fileCount: plan.length,
+    fileCount: Object.keys(fileRecord).length,
     files: fileRecord,
   };
   writeState(targetRoot, state);
@@ -341,7 +434,8 @@ function cmdUninstall(args) {
 
   const toRemove = [];
   for (const [rel, expectedHash] of Object.entries(record.files)) {
-    const full = path.join(targetRoot, rel);
+    const full = resolveWithinRoot(targetRoot, rel, 'Recorded uninstall path');
+    rejectSymlinkPath(targetRoot, full);
     if (!fs.existsSync(full)) continue;
     const actualHash = sha256(full);
     toRemove.push({ rel, full, modified: actualHash !== expectedHash });
@@ -428,7 +522,8 @@ function cmdDoctor(args) {
     let missing = 0;
     let modified = 0;
     for (const [rel, expectedHash] of Object.entries(record.files)) {
-      const full = path.join(targetRoot, rel);
+      const full = resolveWithinRoot(targetRoot, rel, 'Recorded doctor path');
+      rejectSymlinkPath(targetRoot, full);
       if (!fs.existsSync(full)) { missing++; continue; }
       if (sha256(full) !== expectedHash) modified++;
     }
