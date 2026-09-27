@@ -103,3 +103,8 @@ The first helper commits depended on dirty policy JSON/role-template updates and
 - **Runtime maintainer:** verifies which settings a future session loads; no current session switch is claimed.
 
 Peter accepted and ratified the exact P00 diff on 2026-09-27, after the 11 helper commits. This authorizes continued implementation but does not backdate acceptance. The written pre-rollout sequence requirement is recorded as a timing variance for independent reviewer disposition. P00 remains **IN_PROGRESS** until review and any required deviation decision close. No P01 dependent implementation or phase-count push is implied by this register.
+
+
+## P00 independent-review disposition (2026-09-27)
+
+The independent reviewer returned **ACCEPT WITH DOCUMENTED DEVIATION** after inspecting the committed helper and policy-source changes across all 11 canonical engine repositories and the P00 evidence. The clean-checkout GPT-5.6 mismatch is closed. The reviewer determined that Peter's explicit ratification of the exact diff and continuing authorization sufficiently dispose of the pre-rollout acceptance-order requirement. Record the timing as a deviation, not as pre-rollout compliance; do not backdate it. P00 is **ACCEPTED**, and P01 may proceed. Linux OS/runtime behavior, active-session model, account entitlement, comparative task-fit and installed Claude host behavior remain NOT_ASSESSED. The package structural validator passes 29 phases, 172 tasks, 68 JSON, 59 Markdown, 642 links, zero errors. No push occurs until three phases are accepted.
