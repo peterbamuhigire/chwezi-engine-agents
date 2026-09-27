@@ -11,13 +11,13 @@
     "timestamp_utc": {"type": "string", "format": "date-time"},
     "engine": {"enum": ["linux-skills", "windows-admin-engine-skills"]},
     "activity_type": {"enum": ["inventory", "health_check", "security", "update", "configuration", "backup", "recovery", "incident", "report", "other"]},
-    "operation": {"type": "string", "minLength": 1, "maxLength": 120},
+    "operation": {"type": "string", "minLength": 1, "maxLength": 120, "pattern": "^[^\\r\\n]+$"},
     "target_scope": {"enum": ["local", "remote", "fleet", "unknown"]},
     "status": {"enum": ["succeeded", "no_change", "partial", "failed", "blocked", "not_assessed", "pending_reboot"]},
     "changed": {"type": "boolean"},
-    "summary": {"type": "string", "minLength": 1, "maxLength": 500},
-    "change_ref": {"type": ["string", "null"], "maxLength": 120},
-    "evidence_refs": {"type": "array", "maxItems": 30, "items": {"type": "string", "maxLength": 180, "pattern": "^(?!/)(?![A-Za-z]:)(?!.*\\.\\.).+$"}},
-    "limitations": {"type": "array", "maxItems": 30, "items": {"type": "string", "maxLength": 300}}
+    "summary": {"type": "string", "minLength": 1, "maxLength": 500, "pattern": "^[^\\r\\n]+$"},
+    "change_ref": {"type": ["string", "null"], "maxLength": 120, "pattern": "^[^\\r\\n]*$"},
+    "evidence_refs": {"type": "array", "maxItems": 30, "items": {"type": "string", "maxLength": 180, "pattern": "^(?!/)(?!\\\\)(?![A-Za-z]:)(?!.*\\.\\.).+$"}},
+    "limitations": {"type": "array", "maxItems": 30, "items": {"type": "string", "maxLength": 300, "pattern": "^[^\\r\\n]*$"}}
   }
 }
