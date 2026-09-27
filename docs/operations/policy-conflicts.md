@@ -91,6 +91,10 @@ Observed before correction: root model gpt-6-luna, root reasoning effort medium,
 
 The latest local Codex cache recorded in skills-kaizen/evidence/model-currentness-2026-09-27.json lists GPT-6 Astra, Sol and Luna and also lists GPT-5.6 Sol, Terra and Luna. Cache listing does not override the explicit prohibition on GPT-5.6 and is not proof of account entitlement. Hidden catalogue IDs, account access and live-session model remain separately unassessed.
 
+## Clean-checkout enforcement closure
+
+The first helper commits depended on dirty policy JSON/role-template updates and therefore did not guarantee GPT-6 Luna/high enforcement from clean HEAD. That defect was corrected by committing the policy JSON, role templates, model-policy text and AGENTS model blocks in all 11 repositories, and by making the 10 non-DRE helper copies reject any persistent model other than GPT-6 Luna and any effort other than high. DRE already had strict pin validation. A direct HEAD audit and all 11 read-only helper checks now pass; Digital Research fixture tests reject GPT-5.6 policy input and Linux helper fixtures pass on Windows. Actual Linux runtime behavior remains NOT_ASSESSED until Linux testing.
+
 ## Decision rights and residuals
 
 - **Policy owner:** Peter supplies and accepts model-policy changes.
