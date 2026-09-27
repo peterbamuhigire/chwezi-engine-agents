@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "review_date": "2026-09-27",
-  "scope": "P19 local coordinator installer sources and runtime dependencies; not a complete engine-estate SBOM",
+  "review_date": "2026-09-28",
+  "scope": "P19 local coordinator installer and shared-hook sources, coordinator MCP npm dependency subset, and Website QA package evidence; not a complete engine-estate SBOM",
   "entries": [
     {
       "component": "scripts/install-engine.js",
@@ -48,10 +48,31 @@
       "network_behavior": "No network client found by static inspection.",
       "license_provenance": "Repository license and commit provenance retained; host runtime behavior NOT ASSESSED",
       "status": "SCOPED_REVIEW; repeat attempts and malformed payloads covered by fixture; explicit override, command-parser coverage, hook timeout behavior, and live host NOT_ASSESSED"
+    },
+    {
+      "component": "mcp-server/package.json and package-lock.json",
+      "version": "private MCP server 1.0.0; lockfile v3; npm 11.6.0 audit/SBOM tooling",
+      "source": "repository source; local checkout C:/wamp64/www/chwezi-engine-agents/mcp-server; package-lock-only outputs retained at docs/security/sbom/coordinator-mcp-server.cdx.json",
+      "dependencies": [
+        "@modelcontextprotocol/sdk 1.30.0",
+        "yaml 2.9.1",
+        "@types/node 24.3.0 (development)",
+        "tsx 4.23.15 (development)",
+        "typescript 5.9.2 (development)",
+        "vitest 4.1.11 (development)"
+      ],
+      "runtime": "Node.js 24.8.0 and npm 11.6.0 observed for clean install, build and tests; package declares Node >=20; broader supported runtime matrix NOT_ASSESSED",
+      "network_behavior": "npm audit and npm package metadata resolution used the configured registry.npmjs.org registry; runtime server network behavior was not part of this dependency-only review. Installation used --ignore-scripts.",
+      "license_provenance": "CycloneDX 1.5 lockfile SBOM records 193 components; package-lock integrity values retained; registry signatures/provenance attestations NOT_ASSESSED",
+      "audit": "Baseline audit: 1 critical and 4 moderate findings across 229 dependency entries. Fixed lock audit: 0 vulnerabilities across 195 dependency entries (196 package records including the root project).",
+      "sbom_sha256": "279cb3172f6dd1745b75dc35171037df9e14509182efff5d3fafdad573b67cc4",
+      "status": "SCOPED_REVIEW; npm dependency tree clean in exact lockfile. Does not certify MCP server tool safety or full estate distribution security.",
+      "package_sha256": "8616777003b45eec3225b5620700d4ce8bdddb82b4da38058e60e8eabdfc75a5",
+      "lock_sha256": "7b5093001a0c70d46de07a0aec01dfbcd452776370d96649760f4295471e5419"
     }
   ],
   "coverage_limits": [
-    "The scoped shared installer has no third-party runtime package dependencies; the coordinator MCP server has a separate package lock and was outside this installer review.",
+    "The coordinator MCP server npm lockfile now has a zero-finding audit and a lockfile-based CycloneDX SBOM. Other engine ecosystems, consumer lockfiles, all executable-source reviews, source attestations and complete estate SBOM coverage remain NOT ASSESSED.",
     "Host-installed runtimes and system utilities were observed only as available tooling; their trust chains and patch-management state were not assessed.",
     "Other engines' vendored gates were not exhaustively hash-compared in this bounded review."
   ]
