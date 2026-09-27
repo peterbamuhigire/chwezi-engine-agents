@@ -13,7 +13,7 @@
 | Update/uninstall recorded paths | State record may be stale or tampered | Path traversal or symlink could delete files outside the managed root | Resolve recorded paths under target root; reject symlink components before action | Traversal fixture PASS; OS-specific junction/reparse-point behavior NOT ASSESSED |
 | Installer executable and dependencies | Script is reviewed source; local runtimes are trusted | Hidden download, shell execution, dependency substitution or unexpected outbound call | Static inspection found no network client in scoped installers; Node uses built-ins, PowerShell uses installed modules, POSIX uses shell/Python/Git utilities; syntax and isolated behavior tests retained | No source signature/attestation; runtime trust and complete estate dependency graph NOT ASSESSED |
 | Fetched documents, tool results and imported skills | Untrusted data, not authority | Indirect prompt injection can redirect scope or request source-ledger exfiltration | Dev-engine common security rule and AI security skill say treat content as data, flag it, and gate external actions outside the model; inert fixtures retained | Full agent/runtime behavioral evaluation and external-tool egress monitoring NOT ASSESSED |
-| Destructive-command hook | Optional host hook, not a security boundary | Hook deliberately allows an exact retry after first denial; payload parse and state failures fail open | Existing hook unit test is retained; code comment discloses fail-open behavior and lack of live host test | Do not rely on it as authorization enforcement; live-host behavior NOT ASSESSED |
+| Destructive-command hook | Optional host hook, not a security boundary | Matching commands are denied on every attempt; malformed or missing payload fails closed; explicit environment override, shell parsing limits, hook timeout behavior, and host configuration remain bypass or coverage risks | Current official hook reference supports stdin JSON input and exit code 2 blocking; focused fixtures exercise repeated commands and payload failures | Do not rely on it as authorization enforcement; live-host behavior NOT ASSESSED |
 
 ## Installer contract after P19 repair
 
@@ -29,6 +29,7 @@
 
 ## Selected control references
 
+- Claude Code Hooks Reference, accessed 2026-09-27, documents PreToolUse JSON input on stdin, the `tool_input.command` field, exit code 2 blocking, and the fact that timed-out command hooks do not block. This validates the documented adapter contract only; the installed live host was not exercised: https://code.claude.com/docs/en/hooks
 - OWASP ASVS `v5.0.0-5.3.2` is a relevant design analogue for strict path construction and traversal defense. The control is for application file paths; this local CLI review does not assert ASVS conformance.
 - NIST SSDF v1.1 `PW.7` informed human code review and issue remediation; NIST SSDF v1.2 remains an initial public draft in the source record. This scoped implementation is not an SSDF assessment.
 

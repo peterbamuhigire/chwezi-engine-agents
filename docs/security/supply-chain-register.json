@@ -17,7 +17,9 @@
       "component": "scripts/install.ps1",
       "version": "P19 local commit",
       "source": "repository source; local checkout C:/wamp64/www/chwezi-engine-agents",
-      "dependencies": ["PowerShell built-in filesystem, JSON, and cryptography cmdlets"],
+      "dependencies": [
+        "PowerShell built-in filesystem, JSON, and cryptography cmdlets"
+      ],
       "runtime": "Windows PowerShell host used for isolated fixture verification; exact host version NOT RECORDED",
       "network_behavior": "Installer performs local file operations and reads Git metadata; static inspection found no download or network client.",
       "license_provenance": "Repository license and commit provenance retained; formal package signature/attestation NOT ASSESSED",
@@ -27,7 +29,11 @@
       "component": "scripts/install.sh and scripts/resolve-install-target.py",
       "version": "P19 local commit",
       "source": "repository source; local checkout C:/wamp64/www/chwezi-engine-agents",
-      "dependencies": ["POSIX shell utilities", "Python standard library", "Git metadata commands"],
+      "dependencies": [
+        "POSIX shell utilities",
+        "Python standard library",
+        "Git metadata commands"
+      ],
       "runtime": "Git Bash on Windows used for fixture verification; non-Windows shells NOT ASSESSED",
       "network_behavior": "Installer performs local file operations and reads Git metadata; static inspection found no download or network client.",
       "license_provenance": "Repository license and commit provenance retained; formal package signature/attestation NOT ASSESSED",
@@ -35,13 +41,13 @@
     },
     {
       "component": "hooks/destructive-bash-gate.js",
-      "version": "unchanged existing source",
-      "source": "repository source",
+      "version": "P19 hardening update, 2026-09-28",
+      "source": "repository source; local checkout C:/wamp64/www/chwezi-engine-agents; hook contract checked against https://code.claude.com/docs/en/hooks on 2026-09-28",
       "dependencies": [],
-      "runtime": "Host hook ABI version NOT ASSESSED",
+      "runtime": "Official PreToolUse input/exit-code contract documented; installed host version and live hook behavior NOT_ASSESSED",
       "network_behavior": "No network client found by static inspection.",
       "license_provenance": "Repository license and commit provenance retained; host runtime behavior NOT ASSESSED",
-      "status": "REVIEWED; known fail-open and retry-allow design means it is not an authorization control"
+      "status": "SCOPED_REVIEW; repeat attempts and malformed payloads covered by fixture; explicit override, command-parser coverage, hook timeout behavior, and live host NOT_ASSESSED"
     }
   ],
   "coverage_limits": [
