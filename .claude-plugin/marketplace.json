@@ -24,7 +24,11 @@
     },
     {
       "name": "srs",
-      "source": "../srs-skills",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/peterbamuhigire/srs-skills.git",
+        "ref": "main"
+      },
       "description": "159 skills: software requirements specifications, PRDs, system design, governance and compliance artefacts",
       "version": "1.0.0",
       "author": { "name": "Peter Bamuhigire" },
@@ -36,7 +40,11 @@
     },
     {
       "name": "business-plan",
-      "source": "../business-plan-skills",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/peterbamuhigire/business-plan-skills.git",
+        "ref": "main"
+      },
       "description": "128 skills: business plans, bankable plans, investor materials, financial models, market/country context",
       "version": "1.0.0",
       "author": { "name": "Peter Bamuhigire" },
@@ -48,7 +56,11 @@
     },
     {
       "name": "website",
-      "source": "../website-skills",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/peterbamuhigire/website-skills.git",
+        "ref": "main"
+      },
       "description": "62 skills: website build, SEO, content, commerce, quality gates, launch operations",
       "version": "1.0.0",
       "author": { "name": "Peter Bamuhigire" },
@@ -60,7 +72,11 @@
     },
     {
       "name": "social",
-      "source": "../social-media-skills",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/peterbamuhigire/social-media-skills.git",
+        "ref": "main"
+      },
       "description": "178 skills: social media strategy, content planning, campaigns, platform playbooks",
       "version": "1.0.0",
       "author": { "name": "Peter Bamuhigire" },
@@ -72,7 +88,11 @@
     },
     {
       "name": "linux",
-      "source": "../linux-skills",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/peterbamuhigire/linux-skills.git",
+        "ref": "main"
+      },
       "description": "48 skills: Linux sysadmin, hardening, networking, storage, observability, disaster recovery",
       "version": "1.0.0",
       "author": { "name": "Peter Bamuhigire" },
@@ -84,7 +104,11 @@
     },
     {
       "name": "proposal",
-      "source": "../proposal-skills",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/peterbamuhigire/proposal-skills.git",
+        "ref": "main"
+      },
       "description": "113 skills: consulting proposals, EOIs, procurement and tender responses for East & Central Africa",
       "version": "1.0.0",
       "author": { "name": "Peter Bamuhigire" },
@@ -96,7 +120,11 @@
     },
     {
       "name": "engineering",
-      "source": "../chwezi-dev-engine",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/peterbamuhigire/chwezi-dev-engine.git",
+        "ref": "main"
+      },
       "description": "183 skills: architecture, APIs, databases, PHP, security, testing, SaaS, AI systems, game development, SDLC",
       "version": "1.0.0",
       "author": { "name": "Peter Bamuhigire" },
@@ -108,7 +136,11 @@
     },
     {
       "name": "accounting",
-      "source": "../chwezi-accounting-doctrine",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/peterbamuhigire/chwezi-accounting-doctrine.git",
+        "ref": "main"
+      },
       "description": "108 skills: bookkeeping, IFRS/IAS, financial statements, tax/statutory, close/consolidation, controls",
       "version": "1.0.0",
       "author": { "name": "Peter Bamuhigire" },
@@ -120,7 +152,11 @@
     },
     {
       "name": "design-system",
-      "source": "../design-system-skills",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/peterbamuhigire/design-system-skills.git",
+        "ref": "main"
+      },
       "description": "97 skills: typography, colour, layout, UX, design systems/tokens, anti-AI-slop doctrine",
       "version": "1.0.0",
       "author": { "name": "Peter Bamuhigire" },
@@ -132,7 +168,11 @@
     },
     {
       "name": "research",
-      "source": "../digital-research-engine",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/peterbamuhigire/digital-research-skills.git",
+        "ref": "main"
+      },
       "description": "59 skills: source evaluation/verification, evidence-claim graphs, OSINT, literature review, calibration",
       "version": "1.0.0",
       "author": { "name": "Peter Bamuhigire" },
@@ -144,7 +184,11 @@
     },
     {
       "name": "windows-admin",
-      "source": "../windows-admin-engine-skills",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/peterbamuhigire/windows-admin-engine-skills.git",
+        "ref": "main"
+      },
       "description": "20 skills: Windows hosts, Active Directory, PowerShell, networking, security, storage, recovery, fleet",
       "version": "1.0.0",
       "author": { "name": "Peter Bamuhigire" },
