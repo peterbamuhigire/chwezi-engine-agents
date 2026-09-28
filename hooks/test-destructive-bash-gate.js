@@ -42,6 +42,8 @@ const cases = [
   { name: 'single-file rm without recursion is allowed', input: payload('rm old-notes.txt'), expect: 0 },
   { name: 'single-file Remove-Item is allowed', input: payload('Remove-Item C:\\temp\\cache.txt'), expect: 0 },
   { name: 'ordinary Get-ChildItem is allowed', input: payload('Get-ChildItem -Path C:\\temp'), expect: 0 },
+  { name: 'plugin configuration false disables enforcement', input: payload('git reset --hard origin/main'), env: { CLAUDE_PLUGIN_OPTION_HOOKS_ENABLED: 'false' }, expect: 0 },
+  { name: 'plugin configuration true keeps enforcement enabled', input: payload('git reset --hard origin/main'), env: { CLAUDE_PLUGIN_OPTION_HOOKS_ENABLED: 'true' }, expect: 2 },
   { name: 'invalid payload JSON fails closed', input: '{not-json', expect: 2 },
   { name: 'missing tool_input fails closed', input: JSON.stringify({ tool_name: 'Bash' }), expect: 2 },
   { name: 'missing command fails closed', input: JSON.stringify({ tool_name: 'Bash', tool_input: {} }), expect: 2 },

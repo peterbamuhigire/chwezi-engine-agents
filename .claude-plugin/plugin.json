@@ -10,8 +10,11 @@
     "hooks_enabled": {
       "type": "boolean",
       "title": "Enable Chwezi hooks",
-      "description": "Run this engine's enforcement hooks (destructive-command gate). Disable to install skills/agents only, with no local automation.",
+      "description": "Run this engine's enforcement hooks. Disable hook enforcement while keeping skills and agents available.",
       "default": true
     }
-  }
+  },
+  "skills": [
+    "./skills/rules-distill/"
+  ]
 }

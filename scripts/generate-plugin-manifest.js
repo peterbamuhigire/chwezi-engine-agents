@@ -87,6 +87,15 @@ function main() {
   const SKILLS_DIR = path.join(ROOT, args.root);
   const MANIFEST_PATH = path.join(ROOT, '.claude-plugin', 'plugin.json');
   const EXCLUDE_DIRS = new Set(args.exclude.split(',').map((s) => s.trim()).filter(Boolean));
+  let pluginName = path.basename(ROOT);
+  const marketplacePath = path.join(ROOT, '.claude-plugin', 'marketplace.json');
+  if (fs.existsSync(marketplacePath)) {
+    try {
+      const marketplace = JSON.parse(fs.readFileSync(marketplacePath, 'utf8'));
+      const rootPlugin = Array.isArray(marketplace.plugins) ? marketplace.plugins.find((p) => p.source === './' || p.source === '.') : null;
+      if (rootPlugin && rootPlugin.name) pluginName = rootPlugin.name;
+    } catch (e) { /* retain the directory fallback */ }
+  }
 
   if (!fs.existsSync(SKILLS_DIR)) {
     console.error(`No skill root at ${SKILLS_DIR}`);
@@ -116,18 +125,24 @@ function main() {
   }
   if (collision) process.exit(1);
 
-  let existingVersion = '1.0.0';
+  let existingManifest = {};
   if (fs.existsSync(MANIFEST_PATH)) {
     try {
-      const existing = JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf8'));
-      if (existing.version) existingVersion = existing.version;
+      const parsed = JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf8'));
+      if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) existingManifest = parsed;
     } catch (e) {
       /* ignore malformed existing file, regenerate */
     }
   }
 
+  if (!existingManifest.userConfig || typeof existingManifest.userConfig !== 'object' || Array.isArray(existingManifest.userConfig)) {
+    delete existingManifest.userConfig;
+  }
+
   const manifest = {
-    version: args.version || existingVersion,
+    ...existingManifest,
+    name: pluginName,
+    version: args.version || existingManifest.version || '1.0.0',
     skills: skillPaths,
     mcpServers: {},
   };
@@ -139,19 +154,24 @@ function main() {
   // PLUGIN_SCHEMA_NOTES.md.
   if (fs.existsSync(path.join(ROOT, 'hooks', 'hooks.json'))) {
     manifest.userConfig = {
+      ...(existingManifest.userConfig || {}),
       hooks_enabled: {
         type: 'boolean',
         title: 'Enable Chwezi hooks',
-        description: 'Run this engine\'s enforcement hooks (e.g. destructive-command gate, banned-font gate where applicable). Disable to install skills only, with no local automation.',
+        description: 'Run this engine\'s enforcement hooks. Disable hook enforcement while keeping skills and agents available.',
         default: true,
       },
     };
+  } else if (manifest.userConfig) {
+    const { hooks_enabled: _hooksEnabled, ...remainingConfig } = manifest.userConfig;
+    if (Object.keys(remainingConfig).length) manifest.userConfig = remainingConfig;
+    else delete manifest.userConfig;
   }
 
   const rendered = JSON.stringify(manifest, null, 2) + '\n';
 
   if (args.check) {
-    const current = fs.existsSync(MANIFEST_PATH) ? fs.readFileSync(MANIFEST_PATH, 'utf8') : null;
+    const current = fs.existsSync(MANIFEST_PATH) ? fs.readFileSync(MANIFEST_PATH, 'utf8').replace(/\r\n?/g, '\n') : null;
     if (current !== rendered) {
       console.error(`${path.basename(ROOT)}: plugin.json is stale (${skillPaths.length} skills on disk).`);
       process.exit(1);
