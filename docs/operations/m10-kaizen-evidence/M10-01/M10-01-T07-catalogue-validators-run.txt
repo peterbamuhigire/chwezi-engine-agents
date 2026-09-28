@@ -1,0 +1,27 @@
+srs-skills | python -X utf8 scripts/validate_skill_engine.py --baseline tests/skill-quality-baseline.json | exit=0 | 7s | - failure counts: {}
+srs-skills | python -X utf8 scripts/routing_smoke_test.py | exit=0 | 3s | routing-smoke: 54/54 fixtures; top-3 precision=1.000; threshold=1.000
+business-plan-skills | python -X utf8 scripts/validate_skill_engine.py --baseline docs/quality/skill-quality-baseline.json | exit=0 | 11s | - failure counts:
+business-plan-skills | python -X utf8 scripts/routing_smoke_test.py --threshold 1.0 | exit=0 | 5s | - fixture classes: collision, failure-path, limited-capability, negative, positive
+website-skills | python scripts/validate-skill-registry.py | exit=1 | 2s | ERROR: README.md category counts {} != {'agency-ops': 14, 'brand': 2, 'build': 6, 'commerce': 5, 'content-copy': 11, 'launch-ops': 4, 'meta': 3, 'orchestration'
+website-skills | python scripts/website_fixture_benchmark.py | exit=0 | 2s | }
+website-skills | python scripts/routing-smoke-test.py | exit=0 | 2s | routing-smoke: 36/36 top-3 hits (100.0%)
+social-media-skills | python -X utf8 scripts/validate_skill_engine.py --baseline quality-baseline.json | exit=0 | 5s | skills=191 compliant=191 failures=0
+social-media-skills | python -X utf8 scripts/routing_smoke_test.py | exit=0 | 4s | routing fixtures=56 passed=56 top_3_precision=1.000 threshold=1.000
+social-media-skills | python -X utf8 scripts/check_source_freshness.py | exit=0 | 2s | source freshness: PASS (63 records within review windows; as of 2026-09-29; claim support NOT ASSESSED)
+linux-skills | python -X utf8 scripts/validate_skills.py --baseline quality-baseline.json | exit=0 | 3s | failure counts: {}
+linux-skills | python -X utf8 scripts/routing_smoke_test.py | exit=0 | 2s | fixture kinds: collision=5, failure-path=5, limited-capability=3, negative=6, positive=11
+linux-skills | bash scripts/tests/check-distro-matrix.sh | exit=0 | 36s |   failed: 0
+proposal-skills | python -X utf8 scripts/validate_skills.py --baseline quality-baseline.json | exit=0 | 6s | - findings: 0
+proposal-skills | python -X utf8 scripts/routing_smoke_test.py | exit=0 | 3s | routing fixtures: 25; top-three precision: 100.0%; threshold: 100.0%
+chwezi-dev-engine | python scripts/validate_engine_control_plane.py --workspace-root .. | exit=0 | 1s | PASS: control-plane registry is valid
+chwezi-dev-engine | python scripts/routing_smoke_test.py | exit=0 | 3s | - failures: 0
+chwezi-dev-engine | python -X utf8 scripts/skill_catalog_guardrails.py | exit=0 | 15s | - findings: 0
+chwezi-accounting-doctrine | .\tools\validate-doctrine.ps1 -Strict | exit=0 | 43s | - validation-state-negative-controls: pass (0 finding(s), exit 0)
+design-system-skills | python -X utf8 scripts/validate_engine.py --baseline tests/quality-baseline.json | exit=0 | 6s | skills=101 fully_compliant=101
+design-system-skills | python -X utf8 scripts/routing_smoke_test.py | exit=0 | 3s | routing fixtures=68 precision@1=85% precision@3=100%
+digital-research-skills | python -X utf8 scripts/skill_contract_validator.py --baseline tests/skill-engine/quality-baseline.json | exit=0 | 2s | - failure counts: {}
+digital-research-skills | python -X utf8 scripts/routing_smoke_test.py | exit=0 | 2s | routing-smoke-test: 29/29 top-3 precision=1.000 threshold=1.000
+digital-research-skills | python -X utf8 scripts/validate_engine.py | exit=0 | 19s | OK
+windows-admin-engine-skills | python -X utf8 scripts/validate_engine.py | exit=0 | 1s | validated_skills=19 findings=0
+windows-admin-engine-skills | python -X utf8 scripts/routing_smoke_test.py | exit=0 | 1s | routing_fixtures=19 failures=0
+windows-admin-engine-skills | python -X utf8 scripts/source_ingestion_guardrail.py | exit=0 | 2s | source_ingestion_findings=0

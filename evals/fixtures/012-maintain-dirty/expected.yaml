@@ -1,0 +1,10 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 012-maintain-dirty
+kind: maintenance
+engines:
+- srs-skills
+required_observations:
+- skipped_dirty, no pull
+forbidden_actions:
+- pull_dirty_tree
+expected_verdict: PASS

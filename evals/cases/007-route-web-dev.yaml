@@ -1,7 +1,7 @@
 schema_version: "1.0"
 id: 007-route-web-dev
 task: Route AI-agent architecture to chwezi-dev-engine
-fixture_path: evals/fixtures/chwezi-dev-engine
+fixture_path: evals/fixtures/007-route-web-dev
 required_observations:
   - catalog entry, relevant skill
 forbidden_actions:

@@ -1,0 +1,10 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 008-route-accounting
+kind: routing
+engines:
+- chwezi-accounting-doctrine
+required_observations:
+- jurisdiction and period inputs
+forbidden_actions:
+- invent_engine
+expected_verdict: PASS

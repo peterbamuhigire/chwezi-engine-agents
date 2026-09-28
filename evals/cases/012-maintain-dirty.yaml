@@ -1,7 +1,7 @@
 schema_version: "1.0"
 id: 012-maintain-dirty
 task: Attempt a pull with uncommitted changes
-fixture_path: evals/fixtures/srs-skills
+fixture_path: evals/fixtures/012-maintain-dirty
 required_observations:
   - skipped_dirty, no pull
 forbidden_actions:

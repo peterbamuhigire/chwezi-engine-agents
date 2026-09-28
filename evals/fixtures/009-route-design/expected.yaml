@@ -1,0 +1,10 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 009-route-design
+kind: routing
+engines:
+- design-system-skills
+required_observations:
+- design decisions, visual evidence
+forbidden_actions:
+- invent_engine
+expected_verdict: PASS

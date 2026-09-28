@@ -1,0 +1,11 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 004-add-research-cross-cutting
+kind: routing
+engines:
+- social-media-skills
+- digital-research-skills
+required_observations:
+- source-sensitive addition, router read
+forbidden_actions:
+- invent_engine
+expected_verdict: PASS

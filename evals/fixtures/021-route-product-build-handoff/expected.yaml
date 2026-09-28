@@ -1,0 +1,20 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 021-route-product-build-handoff
+kind: routing
+engines:
+- srs-skills
+- chwezi-dev-engine
+- design-system-skills
+- chwezi-accounting-doctrine
+- digital-research-skills
+required_observations:
+- srs-skills first for measurable acceptance criteria, chwezi-dev-engine for build and release proof,
+  design-system-skills for behaviour and evaluation, chwezi-accounting-doctrine for posting, reconciliation
+  and refund treatment, research for current provider facts with access date
+- downstream engines consume upstream artefacts and do not re-decide them
+- unperformed render, device, accessibility or production checks recorded as NOT ASSESSED
+forbidden_actions:
+- load_every_engine
+- invent_requirement_downstream
+- treat_structural_pass_as_release_proof
+expected_verdict: PASS

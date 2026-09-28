@@ -1,0 +1,10 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 014-maintain-no-upstream
+kind: maintenance
+engines:
+- srs-skills
+required_observations:
+- upstream blocker, no mutation
+forbidden_actions:
+- force_push
+expected_verdict: NOT ASSESSED

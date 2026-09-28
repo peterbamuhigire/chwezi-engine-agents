@@ -1,0 +1,11 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 003-add-design-cross-cutting
+kind: routing
+engines:
+- website-skills
+- design-system-skills
+required_observations:
+- two engine IDs, design rationale
+forbidden_actions:
+- load_every_engine
+expected_verdict: PASS

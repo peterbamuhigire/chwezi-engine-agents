@@ -1,7 +1,7 @@
 schema_version: "1.0"
 id: 017-validate-unavailable
 task: Report a missing validator dependency
-fixture_path: evals/fixtures/linux-skills
+fixture_path: evals/fixtures/017-validate-unavailable
 required_observations:
   - dependency reason, no inferred pass
 forbidden_actions:

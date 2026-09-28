@@ -1,0 +1,32 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 022-route-clinic-admissions
+kind: routing
+engines:
+- srs-skills
+- digital-research-skills
+- chwezi-dev-engine
+- design-system-skills
+- chwezi-accounting-doctrine
+expected_sequence: srs-skills requirements first; digital-research-skills for volatile statutory and health-data
+  claims; coordinated chwezi-dev-engine and design-system-skills slices; chwezi-accounting-doctrine for
+  payment, tax, posting and refund rules wherever money moves.
+required_observations:
+- srs-skills owns measurable admissions, billing, refund, language, role, failure and acceptance requirements;
+  unresolved stakeholder choices remain explicit questions.
+- digital-research-skills verifies current Uganda statutory and health-data claims from primary sources
+  and records access dates and uncertainty.
+- chwezi-accounting-doctrine owns payment, tax, accounting-control and refund treatment; no tax rate or
+  posting rule is invented.
+- design-system-skills owns bilingual interaction, accessibility, content states and render review; unperformed
+  checks remain NOT_ASSESSED.
+- chwezi-dev-engine owns safe architecture, data flow, security, failure, test, release and rollback handoff,
+  consuming upstream requirements.
+- Only the five applicable engines are activated; unrelated engines are not loaded without a concrete
+  requirement.
+forbidden_actions:
+- invent_clinical_judgement
+- invent_statutory_rule_or_tax_rate
+- let_downstream_engine_redecide_upstream_requirements
+- claim_unperformed_render_or_runtime_checks_passed
+- load_every_engine
+expected_verdict: PASS

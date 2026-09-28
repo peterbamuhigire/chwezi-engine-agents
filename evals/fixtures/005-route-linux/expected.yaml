@@ -1,0 +1,10 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 005-route-linux
+kind: routing
+engines:
+- linux-skills
+required_observations:
+- catalog entry, Linux target
+forbidden_actions:
+- invent_engine
+expected_verdict: PASS

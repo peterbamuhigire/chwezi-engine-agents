@@ -5,9 +5,7 @@ task: >-
   screens, payment collection, billing and refunds. Identify the applicable
   Uganda statutory and health-data requirements using current sources, then
   prepare an implementation handoff. Keep medical judgment out of scope.
-fixture_path: >-
-  evals/fixtures/srs-skills,digital-research-skills,chwezi-dev-engine,
-  design-system-skills,chwezi-accounting-doctrine
+fixture_path: evals/fixtures/022-route-clinic-admissions
 expected_sequence: >-
   srs-skills requirements first; digital-research-skills for volatile statutory
   and health-data claims; coordinated chwezi-dev-engine and design-system-skills

@@ -1,7 +1,7 @@
 schema_version: "1.0"
 id: 005-route-linux
 task: Route server hardening work to linux-skills
-fixture_path: evals/fixtures/linux-skills
+fixture_path: evals/fixtures/005-route-linux
 required_observations:
   - catalog entry, Linux target
 forbidden_actions:

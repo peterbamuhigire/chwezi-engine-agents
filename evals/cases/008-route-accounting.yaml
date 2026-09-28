@@ -1,7 +1,7 @@
 schema_version: "1.0"
 id: 008-route-accounting
 task: Route an IFRS close policy to chwezi-accounting-doctrine
-fixture_path: evals/fixtures/chwezi-accounting-doctrine
+fixture_path: evals/fixtures/008-route-accounting
 required_observations:
   - jurisdiction and period inputs
 forbidden_actions:

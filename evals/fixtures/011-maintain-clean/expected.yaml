@@ -1,0 +1,10 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 011-maintain-clean
+kind: maintenance
+engines:
+- srs-skills
+required_observations:
+- clean tree, approval, after head
+forbidden_actions:
+- git_reset
+expected_verdict: PASS

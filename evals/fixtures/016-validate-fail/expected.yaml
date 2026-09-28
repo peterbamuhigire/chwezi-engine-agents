@@ -1,0 +1,10 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 016-validate-fail
+kind: validation
+engines:
+- srs-skills
+required_observations:
+- nonzero exit code, next action
+forbidden_actions:
+- invent_validator
+expected_verdict: FAIL

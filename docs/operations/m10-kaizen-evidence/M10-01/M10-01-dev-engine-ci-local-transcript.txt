@@ -1,0 +1,133 @@
+# M10-01 dev-engine local CI transcript (T04), 2026-09-29
+# Host: Windows 11, Python 3.13.7, Node v24.8.0. CI uses ubuntu-latest, Python 3.12, Node 24.
+# Working tree: chwezi-dev-engine at 7adc9fc plus the unstaged M10-01 T01-T06 changes.
+
+### STEP: Run skill catalog guardrails
+$ python -X utf8 scripts/skill_catalog_guardrails.py
+skill-catalog-guardrails:
+- repo: C:\wamp64\www\chwezi-dev-engine
+- active roots:
+  - skills
+  - 00-meta-initialization
+- retained reference roots:
+- active SKILL.md files: 167
+- max active SKILL.md files: 200
+- findings: 0 (errors: 0, warnings: 0)
+exit: 0
+
+### STEP: Test source-ingestion guardrails
+$ python -X utf8 -m unittest tests/test_skill_catalog_guardrails.py
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.367s
+
+OK
+exit: 0
+
+### STEP: Test repository validators and negative cases
+$ python -X utf8 -m pytest tests -q -p no:cacheprovider
+..............ss.......................................s................ [ 53%]
+...............................................................          [100%]
+132 passed, 3 skipped in 13.42s
+exit: 0
+
+### STEP: Run routing smoke test
+$ python -X utf8 scripts/routing_smoke_test.py
+routing-smoke-test:
+- active skills indexed: 167
+- fixtures: 184
+- precision@1: 178/184 (96%)
+- precision@3: 184/184 (100%)
+- failures: 0
+exit: 0
+
+### STEP: Validate engine control plane
+$ python -X utf8 scripts/validate_engine_control_plane.py
+engine-control-plane-validator:
+- registry: C:\wamp64\www\chwezi-dev-engine\docs\engine-control-plane.json
+- engines: 12
+- installed checkout scope: NOT ASSESSED (registry-only check)
+- findings: 0
+PASS: control-plane registry is valid
+exit: 0
+
+### STEP: Test plugin hooks
+$ bash -c node hooks/test-destructive-bash-gate.js && node hooks/test-plugin-hook-config.js
+PASS — rm -rf is blocked (expected exit 2, got 2)
+PASS — repeating the same destructive command remains blocked (expected exit 2, got 2)
+PASS — split rm recursive and force flags are blocked (expected exit 2, got 2)
+PASS — long rm flags are blocked in either order (expected exit 2, got 2)
+PASS — PowerShell recursive force flags are blocked in either order (expected exit 2, got 2)
+PASS — git reset --hard is blocked (expected exit 2, got 2)
+PASS — git push --force is blocked (expected exit 2, got 2)
+PASS — git push --force-with-lease is also blocked (expected exit 2, got 2)
+PASS — git push --force-with-lease ref form is blocked (expected exit 2, got 2)
+PASS — git push --force-with-lease expected-value form is blocked (expected exit 2, got 2)
+PASS — --no-force-with-lease is not mistaken for a force option (expected exit 0, got 0)
+PASS — git push --delete is blocked (expected exit 2, got 2)
+PASS — git push -d is blocked (expected exit 2, got 2)
+PASS — empty-source branch deletion refspec is blocked (expected exit 2, got 2)
+PASS — git push --prune is blocked (expected exit 2, got 2)
+PASS — git push --mirror is blocked (expected exit 2, got 2)
+PASS — ordinary source-to-destination refspec is allowed (expected exit 0, got 0)
+PASS — git -C before destructive push is blocked (expected exit 2, got 2)
+PASS — quoted git -C path before destructive push is blocked (expected exit 2, got 2)
+PASS — git -c before destructive push is blocked (expected exit 2, got 2)
+PASS — git -c mirror override blocks otherwise ordinary push (expected exit 2, got 2)
+PASS — quoted git -c mirror override with -C is blocked (expected exit 2, got 2)
+PASS — git -c mirror override accepts boolean on synonym (expected exit 2, got 2)
+PASS — git -c false mirror override does not block ordinary push (expected exit 0, got 0)
+PASS — last git -c mirror override controls matching remote (expected exit 0, got 0)
+PASS — git -c mirror override does not block non-push command (expected exit 0, got 0)
+PASS — effective repository mirror config blocks ordinary-looking push (expected exit 2, got 2)
+PASS — effective global mirror config blocks ordinary-looking push (expected exit 2, got 2)
+PASS — git -C repository mirror config blocks push (expected exit 2, got 2)
+PASS — literal cd before push checks the changed repository config (expected exit 2, got 2)
+PASS — pipeline directory change makes push configuration unknown and blocks (expected exit 2, got 2)
+PASS — explicit false command override disables repository mirror setting (expected exit 0, got 0)
+PASS — ordinary repository push remains allowed (expected exit 0, got 0)
+PASS — unrelated unresolved cd does not block a command without Git push (expected exit 0, got 0)
+PASS — later push in a compound command is still checked for mirror config (expected exit 2, got 2)
+PASS — inherited Git config environment mirror override blocks push (expected exit 2, got 2)
+PASS — inline Git config environment mirror assignment blocks push (expected exit 2, got 2)
+PASS — quoted inline Git config environment assignments block push (expected exit 2, got 2)
+PASS — env-prefixed Git config environment mirror assignment blocks push (expected exit 2, got 2)
+PASS — inline false Git config environment override keeps ordinary push allowed (expected exit 0, got 0)
+PASS — dynamic inline Git config assignment fails closed (expected exit 2, got 2)
+PASS — git --config-env mirror override blocks push (expected exit 2, got 2)
+PASS — missing cwd fails closed for push configuration check (expected exit 2, got 2)
+PASS — git --git-dir before destructive push is blocked (expected exit 2, got 2)
+PASS — git -C before destructive reset is blocked (expected exit 2, got 2)
+PASS — git -C before ordinary status is allowed (expected exit 0, got 0)
+PASS — git push force refspec is blocked (expected exit 2, got 2)
+PASS — robocopy /MIR is blocked (expected exit 2, got 2)
+PASS — rsync --delete is blocked (expected exit 2, got 2)
+PASS — DROP TABLE is blocked (expected exit 2, got 2)
+PASS — ordinary ls is allowed (expected exit 0, got 0)
+PASS — ordinary git status is allowed (expected exit 0, got 0)
+PASS — single-file rm without recursion is allowed (expected exit 0, got 0)
+PASS — single-file Remove-Item is allowed (expected exit 0, got 0)
+PASS — ordinary Get-ChildItem is allowed (expected exit 0, got 0)
+PASS — plugin configuration false disables enforcement (expected exit 0, got 0)
+PASS — plugin configuration true keeps enforcement enabled (expected exit 2, got 2)
+PASS — invalid payload JSON fails closed (expected exit 2, got 2)
+PASS — missing tool_input fails closed (expected exit 2, got 2)
+PASS — missing command fails closed (expected exit 2, got 2)
+PASS — explicit environment override remains observable (expected exit 0, got 0)
+
+61/61 passed
+PASS unset config keeps hooks enabled
+PASS true config keeps hooks enabled
+PASS false config disables hooks
+PASS false config matching is case-insensitive
+PASS common false values disable hooks
+PASS unknown values fail enabled
+PASS empty values preserve the default
+7/7 passed
+exit: 0
+
+### STEP: Validate evidence declarations
+$ python -X utf8 skills/sdlc-meta/skill-writing/scripts/contract_gate.py --all
+contract-gate: evidence: scanned 161 | 0 errors | 0 warnings | 6 exempt
+exit: 0
+

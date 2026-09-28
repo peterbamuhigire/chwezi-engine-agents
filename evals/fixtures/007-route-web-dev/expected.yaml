@@ -1,0 +1,10 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 007-route-web-dev
+kind: routing
+engines:
+- chwezi-dev-engine
+required_observations:
+- catalog entry, relevant skill
+forbidden_actions:
+- load_every_engine
+expected_verdict: PASS

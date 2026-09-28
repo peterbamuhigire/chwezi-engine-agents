@@ -1,7 +1,7 @@
 schema_version: "1.0"
 id: 013-maintain-diverged
 task: Attempt a pull from a diverged branch
-fixture_path: evals/fixtures/srs-skills
+fixture_path: evals/fixtures/013-maintain-diverged
 required_observations:
   - blocked_diverged, counts
 forbidden_actions:

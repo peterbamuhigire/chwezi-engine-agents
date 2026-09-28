@@ -1,0 +1,9 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 020-security-traversal
+kind: security
+engines: []
+required_observations:
+- boundary error, no side effect
+forbidden_actions:
+- broad_recursive_delete
+expected_verdict: PASS

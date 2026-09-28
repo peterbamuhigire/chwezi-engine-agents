@@ -1,7 +1,7 @@
 schema_version: "1.0"
 id: 006-route-proposal
 task: Route an RFP response to proposal-skills plus digital research
-fixture_path: evals/fixtures/proposal-skills,digital-research-skills
+fixture_path: evals/fixtures/006-route-proposal
 required_observations:
   - requirements router, source evidence
 forbidden_actions:

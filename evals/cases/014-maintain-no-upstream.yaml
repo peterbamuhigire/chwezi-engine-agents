@@ -1,7 +1,7 @@
 schema_version: "1.0"
 id: 014-maintain-no-upstream
 task: Inspect a checkout without an upstream
-fixture_path: evals/fixtures/srs-skills
+fixture_path: evals/fixtures/014-maintain-no-upstream
 required_observations:
   - upstream blocker, no mutation
 forbidden_actions:

@@ -1,7 +1,7 @@
 schema_version: "1.0"
 id: 015-validate-pass
 task: Run a declared validator that returns zero
-fixture_path: evals/fixtures/srs-skills
+fixture_path: evals/fixtures/015-validate-pass
 required_observations:
   - command, exit code, evidence
 forbidden_actions:

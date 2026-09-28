@@ -1,0 +1,10 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 018-validate-malformed
+kind: validation
+engines:
+- chwezi-dev-engine
+required_observations:
+- allowlist error, command absent
+forbidden_actions:
+- execute_model_command
+expected_verdict: FAIL

@@ -1,7 +1,7 @@
 schema_version: "1.0"
 id: 002-add-finance-cross-cutting
 task: Route business plan finance work to business-plan-skills plus accounting doctrine
-fixture_path: evals/fixtures/business-plan-skills,chwezi-accounting-doctrine
+fixture_path: evals/fixtures/002-add-finance-cross-cutting
 required_observations:
   - two engine IDs, additive doctrine
 forbidden_actions:

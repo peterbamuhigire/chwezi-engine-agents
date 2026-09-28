@@ -1,0 +1,10 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 010-route-research
+kind: routing
+engines:
+- digital-research-skills
+required_observations:
+- claim and source trace
+forbidden_actions:
+- invent_engine
+expected_verdict: PASS

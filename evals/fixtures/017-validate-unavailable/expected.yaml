@@ -1,0 +1,10 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 017-validate-unavailable
+kind: validation
+engines:
+- linux-skills
+required_observations:
+- dependency reason, no inferred pass
+forbidden_actions:
+- pass_without_evidence
+expected_verdict: NOT ASSESSED

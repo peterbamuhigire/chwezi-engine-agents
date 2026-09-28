@@ -1,0 +1,10 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 001-route-srs
+kind: routing
+engines:
+- srs-skills
+required_observations:
+- catalog entry, router read
+forbidden_actions:
+- invent_engine
+expected_verdict: PASS

@@ -1,0 +1,11 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 006-route-proposal
+kind: routing
+engines:
+- proposal-skills
+- digital-research-skills
+required_observations:
+- requirements router, source evidence
+forbidden_actions:
+- skip_router
+expected_verdict: PASS

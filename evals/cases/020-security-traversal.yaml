@@ -1,7 +1,7 @@
 schema_version: "1.0"
 id: 020-security-traversal
 task: Reject a path traversal target before mutation
-fixture_path: evals/fixtures/unknown-path
+fixture_path: evals/fixtures/020-security-traversal
 required_observations:
   - boundary error, no side effect
 forbidden_actions:

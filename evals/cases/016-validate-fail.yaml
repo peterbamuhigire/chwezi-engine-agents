@@ -1,7 +1,7 @@
 schema_version: "1.0"
 id: 016-validate-fail
 task: Report a declared validator failure
-fixture_path: evals/fixtures/srs-skills
+fixture_path: evals/fixtures/016-validate-fail
 required_observations:
   - nonzero exit code, next action
 forbidden_actions:

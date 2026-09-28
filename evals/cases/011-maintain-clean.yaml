@@ -1,7 +1,7 @@
 schema_version: "1.0"
 id: 011-maintain-clean
 task: Pull a clean fast-forward engine checkout
-fixture_path: evals/fixtures/srs-skills
+fixture_path: evals/fixtures/011-maintain-clean
 required_observations:
   - clean tree, approval, after head
 forbidden_actions:
