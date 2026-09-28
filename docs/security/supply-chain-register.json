@@ -50,7 +50,7 @@
       "runtime": "Claude Code PreToolUse cwd/command contract documented by official hooks reference; Git CLI configuration probing tested locally on synthetic repositories; installed host version and live hook behavior NOT_ASSESSED",
       "network_behavior": "No network client or push is invoked by the hook. Effective mirror configuration inspection runs only local `git config --get-regexp` with a bounded timeout; repository configuration includes and filesystem availability can affect the result.",
       "license_provenance": "Repository license and commit provenance retained; host runtime behavior NOT ASSESSED",
-      "status": "SCOPED_REVIEW; 55 synthetic/local cases pass in all 12 copies; effective config probe fails closed on missing context or timeout; live host and complete parser coverage NOT_ASSESSED"
+      "status": "SCOPED_REVIEW; 56 synthetic/local cases pass in all 12 copies; effective config probe fails closed on missing context or timeout; live host and complete parser coverage NOT_ASSESSED"
     },
     {
       "component": "mcp-server/package.json and package-lock.json",
