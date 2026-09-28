@@ -408,6 +408,17 @@ Per the value gate, RTK and LSP pilots are deferred until a representative workl
 
 Independent reviewer verdict: ACCEPT_WITH_DOCUMENTED_LIMITATIONS for this bounded no-adoption disposition; keep P06 IN_PROGRESS until a worthwhile pilot is selected or explicitly retired. Package validation is structural only: 29 phases, 172 tasks, 86 JSON files, 66 Markdown files, 651 local links, zero errors. No external push is due; P06 has not been accepted as a completed phase.
 
+### P06 addendum — Graphify evidence and LSP workload (29 Sep 2026; P06 remains IN_PROGRESS; host adoption not re-opened)
+
+Recorded by my-10-kaizen M10-00-T05 (disposition D4 in `docs/operations/third-party-tool-dispositions-2026-09-29.md`). This addendum adds facts found after 26 September; it does not change the P06 rejection of Graphify for this host, and P02-T03 (`ad8e050`) remains the source review and pin of record. Sources are those numbered in the my-10-kaizen Graphify report (§0 and §6), checked at Graphify 0.9.71, commit `d6eaa8aae8df155874ebb1044302c055c286342a`.
+
+- The licence changed from MIT to Apache-2.0 at 0.9.25 (22 Jul 2026).
+- The README privacy paragraph still contradicts the default-off query log at 0.9.71, so the package/logging reconciliation that P06 requires has not happened.
+- PHP instance-method calls produce no `calls` edge (upstream issues #1682, #2615, #3830), and `.inc` files are parsed as Pascal (#2961).
+- A global `graphify install` writes into `~/.claude/CLAUDE.md` and registers PreToolUse hooks.
+
+Named workload for the deferred LSP pilot: "PHP/MySQL ERP maintenance on one disposable repository copy". This satisfies the P06 condition that RTK and LSP pilots wait until a representative workload is named. It does not start the pilot, install any LSP or hook, or accept P06; P06 remains IN_PROGRESS.
+
 
 ## P09 bounded Windows process/PATH diagnostic pilot (2026-09-27; phase remains in progress)
 
