@@ -1,112 +1,41 @@
 # Chwezi Engine Agents
 
-`chwezi-engine-agents` is not a domain skill engine. It carries no independent domain-skill content worth installing on its own — no SRS skills, no accounting doctrine, no design system, nothing a consulting or engineering task would reach for directly. What it is instead is the coordination layer that sits across the eleven Chwezi domain engines: it routes a request to the right engine (or engines, for cross-cutting work), installs and updates local checkouts through a shared installer, generates each engine's plugin manifest from its actual skill tree, validates engine claims against documented checks, and vendors a shared destructive-command safety gate to every engine in the estate. Use this repository if you manage several Chwezi engines at once and want one place to route, install, validate, and maintain them, or if you want the shared installer/governance tooling without duplicating it into each engine. If you only need one domain's skills, skip this repository entirely and install that engine directly — see below.
+`chwezi-engine-agents` is the coordination and shared tooling layer for the Chwezi skills suite. It routes work to independently installable engines, keeps their registry and plugin manifests aligned with their skill trees, provides shared install and validation tools, and distributes a destructive-command safety hook. It does not replace domain engines or provide their specialist doctrine.
 
-## Install
+The package is for people maintaining one or more Chwezi engine checkouts and teams that need consistent routing, installation, and validation. Its outputs include engine handoffs, installed skill/plugin files, generated manifests, validator evidence, and documented `NOT ASSESSED` results when a check cannot run. The coordination contract assigns requirements, engineering, design, research, and finance questions to their respective engines.
 
-This repository is the Chwezi suite marketplace: its [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) lists the coordination core plus all eleven domain engines as independently installable plugins. Add the marketplace once, then install only what you need:
+## Installation
 
-```
+For Claude Code, add the suite marketplace and install the coordinator or only the domain plugins you need:
+
+```text
 /plugin marketplace add peterbamuhigire/chwezi-engine-agents
-/plugin install chwezi-suite@chwezi        # this coordination core (optional)
-/plugin install srs@chwezi                 # SRS Skills
-/plugin install business-plan@chwezi       # Business Plan Skills
-/plugin install website@chwezi             # Website Skills
-/plugin install social@chwezi              # Social Media Skills
-/plugin install linux@chwezi                # Linux Skills
-/plugin install proposal@chwezi            # Proposal Skills
-/plugin install engineering@chwezi         # Chwezi Dev Engine (engineering catalogue)
-/plugin install accounting@chwezi          # Chwezi Accounting Doctrine
-/plugin install design-system@chwezi       # Design System Skills
-/plugin install research@chwezi            # Digital Research Skills
-/plugin install windows-admin@chwezi       # Windows Administration Skills
+/plugin install chwezi-suite@chwezi
 ```
 
-**Installing a domain engine standalone works with zero dependency on this coordinator.** Each engine also publishes its own repository and its own `/plugin marketplace add <that-engine-repo>` command, and none of the eleven engines requires `chwezi-suite` to be installed, present, or even known about. This repository is a convenience — one marketplace, one set of shared tooling — never a requirement. For local, non-plugin installation (project-scoped, CI, or hosts without the plugin system), use the shared installer directly: `node scripts/install-engine.js install --engine <path-to-engine>` (see the header comment in [`scripts/install-engine.js`](scripts/install-engine.js) for `--scope`, `--dry-run`, and `uninstall`/`doctor` modes).
+For a local checkout or another supported host, install an engine with Node.js 18 or later:
 
-The installers record SHA-256 hashes for managed files, preserve unmanaged and hidden user files during updates, and refuse unowned destination collisions or locally modified managed files by default. `--force` deliberately overrides file-ownership checks and should be used only after reviewing the exact affected paths. Filesystem roots, the home directory itself, and targets that contain or sit inside the source checkout are refused.
+```sh
+node scripts/install-engine.js install --engine <path-to-engine>
+```
 
-The eleven domain engines this package coordinates, with their repositories (from [`catalog/engines.yaml`](catalog/engines.yaml)):
-
-- [SRS Skills](https://github.com/peterbamuhigire/srs-skills) — software requirements, product requirements, architecture, and technical specifications.
-- [Business Plan Skills](https://github.com/peterbamuhigire/business-plan-skills) — business plans, financial models, market strategy, investor planning.
-- [Website Skills](https://github.com/peterbamuhigire/website-skills) — websites, landing pages, web UX, SEO, performance, site delivery.
-- [Social Media Skills](https://github.com/peterbamuhigire/social-media-skills) — social strategy, content planning, campaigns, platform workflows.
-- [Linux Skills](https://github.com/peterbamuhigire/linux-skills) — Linux administration, servers, hardening, networking, operations.
-- [Proposal Skills](https://github.com/peterbamuhigire/proposal-skills) — proposals, tenders, bids, RFP/RFQ responses, grant submissions.
-- [Chwezi Dev Engine](https://github.com/peterbamuhigire/chwezi-dev-engine) — general engineering, AI systems, SaaS, security, product, technical documentation (the engineering catalogue; local folder renamed from `skills-web-dev` on 2026-09-20 to match the repo).
-- [Chwezi Accounting Doctrine](https://github.com/peterbamuhigire/chwezi-accounting-doctrine) — finance, accounting, IFRS/IAS, tax, bookkeeping, controls, reporting.
-- [Design System Skills](https://github.com/peterbamuhigire/design-system-skills) — typography, visual design, UI/UX, layout, accessibility, document presentation.
-- [Digital Research Skills](https://github.com/peterbamuhigire/digital-research-skills) — research orchestration, source evaluation, evidence verification, benchmarking.
-- [Windows Administration Skills](https://github.com/peterbamuhigire/windows-admin-engine-skills) — Windows hosts, Active Directory, networking, security, storage, recovery, fleet, and hybrid administration.
-
-## Content integrity
-
-This repository contains no client names, client data, or project-specific work product — it
-is a coordination package (scripts, hooks, a suite manifest, the `rules-distill` skill), not a
-domain engine, and carries no engagement-specific content at all. Users installing this
-package should still exercise their own due diligence — you can ask Claude Code or Codex to
-run a security scan of this repository and its scripts before relying on it in a sensitive
-environment (for example: "scan this repository for hardcoded secrets, personal paths, or
-unexpected network calls").
-
-No Chwezi repository stores book extractions, book summaries, chapter notes, or
-`book-extractions/`, `extracted-books/`, or `book-study/` folders. Book
-knowledge enters the engines only as paraphrased, task-oriented skill content
-with a short `Sources` line. `scripts/validate-no-book-extractions.py` enforces
-this across every catalogued engine and this package; it is path-based, so a
-domain topic inside a skill's `references/` (for example a food-processing
-`juice-extraction.md`) passes, and any other exception needs a reasoned line in
-[`catalog/content-integrity-allowlist.txt`](catalog/content-integrity-allowlist.txt).
+The shared installer also supports project/user scope, dry-run, doctor, update, and uninstall modes. Review its help and the target paths before choosing a scope. Domain engines can be installed on their own; the coordinator is optional.
 
 ## Capabilities
 
-| Component | What it does |
-|---|---|
-| `agents/engine-orchestrator.md` | Routes a request to the correct domain engine(s), including cross-cutting activation (finance, design, research) alongside a domain engine. |
-| `agents/engine-maintainer.md` | Inspects engine remotes, branches, and working trees; runs `git pull --ff-only` only on explicit request; skips dirty or diverged checkouts; never resets, deletes, or force-pushes. |
-| `agents/engine-validator.md` | Runs each engine's documented validation commands (from `catalog/engines.yaml`) and reports evidence or `NOT ASSESSED` — never treats missing evidence as a pass. |
-| `scripts/install-engine.js` | Shared installer runtime: installs, updates, and uninstalls any one engine standalone, with per-file hashes, root-contained paths, and default refusal to overwrite unowned or locally modified files. |
-| `scripts/generate-plugin-manifest.js` | Regenerates an engine's `.claude-plugin/plugin.json` from its actual `SKILL.md` tree, across the three skill-root shapes found in the estate. |
-| `hooks/destructive-bash-gate.js` | Bash PreToolUse defense-in-depth gate for destructive shell commands. It checks Git push ref-update flags and effective mirror configuration; it is not an authorization boundary or complete shell parser. Vendored identically to all twelve Chwezi engines. |
-| `skills/rules-distill/SKILL.md` | Scans one engine's skills for principles that recur in two or more skills and are not yet in `rules/`, and proposes promotions for explicit approval — never edits `rules/` automatically. |
-| `catalog/engines.yaml` | The eleven-engine registry: repository, router file, manifest path, and validator commands per engine. |
-| `scripts/validate-no-book-extractions.py` | Portfolio copyright guard: fails when any catalogued engine (or this package) stores a book-extraction folder or book-digest file; exit `3` means a root was `NOT ASSESSED`. |
-| `docs/operations/portfolio-craft-standard-2026-09-04.md` | Cross-engine delivery contract: small-slice craft loop, product-family evidence floors, the senior-practitioner bar, and `NOT ASSESSED` semantics. |
-
-## Operations and validation
-
-Coordination cards (checked by `scripts/validate-kaizen-cards.py`):
-
-- [`agentic-h2-readiness-card.md`](docs/operations/agentic-h2-readiness-card.md) — H2 readiness and agentic-literacy card.
-- [`three-horizon-ai-adoption-card.md`](docs/operations/three-horizon-ai-adoption-card.md) — three-horizon adoption and frontier card.
-- [`task-runbook-and-integration-evidence.md`](docs/operations/task-runbook-and-integration-evidence.md) — task runbook and integration evidence card.
-
-Portfolio checks, run from this repository on a machine with the engines checked out side by side:
-
-```
-python -X utf8 scripts/validate-contracts.py --schema schemas/engine-catalog.schema.json --instance catalog/engines.yaml
-python -X utf8 scripts/validate-kaizen-cards.py
-python -X utf8 scripts/validate-no-book-extractions.py
-python -X utf8 scripts/validate-skill-lifecycle.py --root skills
-python -X utf8 scripts/validate-runtime-skill-budget.py --root skills
-powershell -NoProfile -ExecutionPolicy Bypass -File scripts/validate-catalog.ps1
-powershell -NoProfile -ExecutionPolicy Bypass -File scripts/validate-portfolio-craft.ps1
-powershell -NoProfile -ExecutionPolicy Bypass -File scripts/validate-prompt-capability.ps1
-python -X utf8 -m pytest tests
-```
-
-Cross-engine handoffs follow one owner per question — SRS for what success means, the dev engine for how to build safely, design for how it looks, behaves and is evaluated, research for current facts, finance for money — as set out in [`core/instructions/engine-orchestrator.md`](core/instructions/engine-orchestrator.md).
-
-Latest portfolio Kaizen record: [`kaizen-2026-09-24-four-engine-kaizen.md`](docs/operations/kaizen-2026-09-24-four-engine-kaizen.md) — book-extraction retirement across all engines, book ingestion into SRS/design/dev, per-engine fixes and validator evidence.
+| Category | Included capability | Source |
+|---|---|---|
+| Routing and handoffs | Selects the smallest relevant engines and records ownership, sequence, evidence boundaries, blockers, and next action. | [`core/instructions/engine-orchestrator.md`](core/instructions/engine-orchestrator.md) |
+| Engine registry | Records engine IDs, repository/check-out paths, router files, manifests, and declared validator commands for the eleven registered domain engines. | [`catalog/engines.yaml`](catalog/engines.yaml) |
+| Install and packaging | Installs and removes an engine, generates plugin manifests from discovered skill trees, and protects unmanaged or modified destination files by default. | [`scripts/`](scripts/) |
+| Validation | Runs declared contract, lifecycle, catalog, runtime-budget, and portfolio checks; missing evidence remains `NOT ASSESSED`. | [`scripts/`](scripts/) |
+| Safety and shared rules | Distributes a Bash destructive-command gate and provides a skill for proposing recurring principles for shared rules. | [`hooks/`](hooks/), [`skills/rules-distill/`](skills/rules-distill/) |
+| Coordination standards | Defines evidence expectations and craft practices for cross-engine work. | [`docs/operations/`](docs/operations/) |
 
 ## References
 
-Mustafa, A. et al. *Everything Claude Code (ECC)*. GitHub: affaan-m/ECC, 2026.
-
-Three pieces of this package's own tooling are explicitly adapted from ECC's audit findings, and each file's own header comment carries the specific citation:
-
-- `scripts/install-engine.js` implements the "Tier 1 — STANDALONE" installation model documented in the ECC audit's installation report.
-- `scripts/generate-plugin-manifest.js` emits this repository's strict house profile: an explicit `skills` path array and the metadata fields we maintain. Treat those choices as local conventions, not vendor schema requirements. Anthropic's [plugin manifest reference](https://code.claude.com/docs/en/plugins/manifest-reference) says `name` is the only required top-level field, documents component fields such as `agents`, `hooks`, and `lspServers`, and specifies that `claude plugin validate --strict` promotes warnings to failures. The [plugin overview](https://code.claude.com/docs/en/plugins) describes the plugin directory and components. Recheck the installed host and run its validator before changing the house profile.
-- `hooks/destructive-bash-gate.js` is modelled on the DENY → FORCE → ALLOW pattern in ECC's gateguard skill.
-- `skills/rules-distill/SKILL.md` is adapted from the ECC audit (`kaizen-engines/ECC-audit-2026-09-20/00-MASTER-REPORT.md`, finding I-2), applying the same deterministic-collection-plus-LLM-judgment split.
+- [Chwezi Engine Agents source repository](https://github.com/peterbamuhigire/chwezi-engine-agents)
+- [Engine orchestration contract](core/instructions/engine-orchestrator.md)
+- [Engine registry](catalog/engines.yaml)
+- [Portfolio craft standard](docs/operations/portfolio-craft-standard-2026-09-04.md)
+- [Shared installer source](scripts/install-engine.js)
