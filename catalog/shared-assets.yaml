@@ -241,7 +241,7 @@ assets:
     mode: block
     canonical: design-system-skills/integration/trigger-block.md
     markers:
-      start: "<!-- design-system-skills:trigger v2 -->"
+      start: "<!-- design-system-skills:trigger v3 -->"
       end: "<!-- /design-system-skills:trigger -->"
     copies:
       - chwezi-dev-engine/AGENTS.md
@@ -365,7 +365,7 @@ assets:
       - "*/rules/common/core.md"
     variants:
       design-system-skills/rules/common/core.md:
-        sha256: c2c3fb7ad38e277c6687aee8bbf3d6538ff7337f75aed57e0c58b5ba1a807a20
+        sha256: a4a931704aad21c11832372fef6c38c2826cfe5c334b2ab072b44785d09df5af
         owner: design-system-skills
         reason: "Engine-specific always-on rules by design (absent in dev and agents); each must keep the invariant sentences."
       srs-skills/rules/common/core.md:

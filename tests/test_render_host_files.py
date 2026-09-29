@@ -23,7 +23,7 @@ sys.modules[SPEC.name] = MODULE
 SPEC.loader.exec_module(MODULE)
 
 BRIDGE = "# Claude Code repository memory\n\n@AGENTS.md\n"
-MARKER_START = "<!-- design-system-skills:trigger v2 -->"
+MARKER_START = "<!-- design-system-skills:trigger v3 -->"
 MARKER_END = "<!-- /design-system-skills:trigger -->"
 BLOCK = f"{MARKER_START}\n### Design\n\nConsult the design engine.\n{MARKER_END}\n"
 AGENTS = (

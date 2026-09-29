@@ -67,7 +67,7 @@ ENGINE_INVARIANTS = {
     "srs-skills": ("iso-29148",),
     "design-system-skills": ("banned-font-primary",),
 }
-TRIGGER_MARKER = "<!-- design-system-skills:trigger v2 -->"
+TRIGGER_MARKER = "<!-- design-system-skills:trigger v3 -->"
 INTERPRETERS = {"node", "bash", "sh", "pwsh", "powershell", "powershell.exe", "pwsh.exe", "python", "python3", "py", "cmd", "cmd.exe"}
 SKIP_PARTS = {".git", "node_modules"}
 
