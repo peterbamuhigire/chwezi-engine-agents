@@ -1,0 +1,88 @@
+{
+  "schema": "srs-figures-manifest/1",
+  "attribution": "Candidate-freezing pattern adapted from Archify (MIT, https://github.com/tt-a1i/archify, commit 0e4949f910a8e390bd3b4933883a4dcabad571be)",
+  "artifact_id": "PilotHLD",
+  "built_at_utc": "2026-09-29T00:28:46+00:00",
+  "doc_dir": "01-high-level-design",
+  "docx": "PilotHLD.docx",
+  "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "renderer_packages": {
+    "@mermaid-js/mermaid-cli": "12.0.0",
+    "mermaid": "12.0.0",
+    "puppeteer": "25.12.0"
+  },
+  "font": {
+    "family": "Public Sans",
+    "fallback": "sans-serif",
+    "file": "PublicSans-VF.ttf",
+    "file_sha256": "d75a7dc1a27eb9e336d5b33f55489d2ecb5621bf694d5c43b2415bce2ca830a8"
+  },
+  "figures": [
+    {
+      "figure_id": "FIG-001",
+      "figure_number": 1,
+      "ir_path": "01-high-level-design/diagrams/context.ir.json",
+      "ir_sha256": "d74d8cfcdec5516486ace70ae65a6ebdc33718e0c5434ae55840dc5309c69e87",
+      "validated_ir_sha256": "d74d8cfcdec5516486ace70ae65a6ebdc33718e0c5434ae55840dc5309c69e87",
+      "mermaid_sha256": "e65dc7f351373da1d7ef20d5e6ec2501679c2ee70fdc046ae63d2f67af43cfe5",
+      "png_path": "01-high-level-design/_figures/PilotHLD-1.png",
+      "png_sha256": "425443b8da2f55e896303dcf0e77dbc1f9f0f396de5856dd2dea8a6c098d143d",
+      "svg_path": "01-high-level-design/_figures/PilotHLD-1.svg",
+      "svg_sha256": "dcf3dce9b1864cb9675a03c421c61094cf7127b0a313234a6be3fd64f749f8a6",
+      "renderer": "@mermaid-js/mermaid-cli",
+      "renderer_version": "12.0.0",
+      "font_family": "Public Sans",
+      "font_substitution_check": "PASS",
+      "state": "local-review-export"
+    },
+    {
+      "figure_id": "FIG-002",
+      "figure_number": 2,
+      "ir_path": "01-high-level-design/diagrams/intake-retry-sequence.ir.json",
+      "ir_sha256": "c22d74a61860c2975c5d4f9671f79e38f297d71065800311d918e081eaae8aad",
+      "validated_ir_sha256": "c22d74a61860c2975c5d4f9671f79e38f297d71065800311d918e081eaae8aad",
+      "mermaid_sha256": "a7369ccefa1b7919edb7ff13be7dabd7f87842836f61b382ceb72bf9641e9f36",
+      "png_path": "01-high-level-design/_figures/PilotHLD-2.png",
+      "png_sha256": "81f6c0e729528c9f73e5aeff85a55c322ecc2bfcc48bbc18d074525ce0f3f8f2",
+      "svg_path": "01-high-level-design/_figures/PilotHLD-2.svg",
+      "svg_sha256": "0a9f8d48f9a420a59154aa8d2f143a3129a070dfb0e143dda9852fe4c14a8222",
+      "renderer": "@mermaid-js/mermaid-cli",
+      "renderer_version": "12.0.0",
+      "font_family": "Public Sans",
+      "font_substitution_check": "PASS",
+      "state": "local-review-export"
+    },
+    {
+      "figure_id": "FIG-003",
+      "figure_number": 3,
+      "ir_path": "01-high-level-design/diagrams/intake-lifecycle-state.ir.json",
+      "ir_sha256": "63dad908047cd506e8077fdbeda4634adb64cdadfa3778306000e3892f678726",
+      "validated_ir_sha256": "63dad908047cd506e8077fdbeda4634adb64cdadfa3778306000e3892f678726",
+      "mermaid_sha256": "1205d0801a7088c4acb36e743d1cb2bca220ff88c0643051a782e53cdf74ec03",
+      "png_path": "01-high-level-design/_figures/PilotHLD-3.png",
+      "png_sha256": "715cd16b91d24a1a00f0e93742719ceb5ee774dd3ae409021885821824eb407f",
+      "svg_path": "01-high-level-design/_figures/PilotHLD-3.svg",
+      "svg_sha256": "f3f27c40b574445433f26d993ff3cef33418366ac67db192ebfeb8ee530e1a4d",
+      "renderer": "@mermaid-js/mermaid-cli",
+      "renderer_version": "12.0.0",
+      "font_family": "Public Sans",
+      "font_substitution_check": "PASS",
+      "state": "local-review-export"
+    }
+  ],
+  "artifact_sha256": {
+    "01-high-level-design/_figures/PilotHLD-1.png": "425443b8da2f55e896303dcf0e77dbc1f9f0f396de5856dd2dea8a6c098d143d",
+    "01-high-level-design/_figures/PilotHLD-1.svg": "dcf3dce9b1864cb9675a03c421c61094cf7127b0a313234a6be3fd64f749f8a6",
+    "01-high-level-design/_figures/PilotHLD-2.png": "81f6c0e729528c9f73e5aeff85a55c322ecc2bfcc48bbc18d074525ce0f3f8f2",
+    "01-high-level-design/_figures/PilotHLD-2.svg": "0a9f8d48f9a420a59154aa8d2f143a3129a070dfb0e143dda9852fe4c14a8222",
+    "01-high-level-design/_figures/PilotHLD-3.png": "715cd16b91d24a1a00f0e93742719ceb5ee774dd3ae409021885821824eb407f",
+    "01-high-level-design/_figures/PilotHLD-3.svg": "f3f27c40b574445433f26d993ff3cef33418366ac67db192ebfeb8ee530e1a4d",
+    "01-high-level-design/_generated/FIG-001.mmd": "e65dc7f351373da1d7ef20d5e6ec2501679c2ee70fdc046ae63d2f67af43cfe5",
+    "01-high-level-design/_generated/FIG-002.mmd": "a7369ccefa1b7919edb7ff13be7dabd7f87842836f61b382ceb72bf9641e9f36",
+    "01-high-level-design/_generated/FIG-003.mmd": "1205d0801a7088c4acb36e743d1cb2bca220ff88c0643051a782e53cdf74ec03",
+    "01-high-level-design/diagrams/context.ir.json": "d74d8cfcdec5516486ace70ae65a6ebdc33718e0c5434ae55840dc5309c69e87",
+    "01-high-level-design/diagrams/intake-lifecycle-state.ir.json": "63dad908047cd506e8077fdbeda4634adb64cdadfa3778306000e3892f678726",
+    "01-high-level-design/diagrams/intake-retry-sequence.ir.json": "c22d74a61860c2975c5d4f9671f79e38f297d71065800311d918e081eaae8aad",
+    "PilotHLD.docx": "0e69c9f96519cae4aaa93066c5dc07ea3470a30380d6ef19063302fe4e8f4a68"
+  }
+}

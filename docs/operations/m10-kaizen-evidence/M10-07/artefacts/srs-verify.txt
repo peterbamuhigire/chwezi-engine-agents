@@ -1,0 +1,43 @@
+ENGINE CONTRACT: PASS
+- Canonical pathing and alias semantics are documented.
+- Deterministic gate docs exist for phases 01-09.
+- Standards clause registry is complete.
+- Hybrid operating model is documented.
+- Regulated evidence model is documented.
+
+NOTE: For per-project validation, use `python -m engine validate <projects/<Name>>`.
+EXIT 0
+skill-engine: C:\wamp64\www\srs-skills
+- active skills: 159
+- templates: 1
+- failure counts: {}
+EXIT 0
+routing-smoke: 54/54 fixtures; top-3 precision=1.000; threshold=1.000
+EXIT 0
+SKILLS OK: no legacy path references outside alias-blocks.
+EXIT 0
+Seeded C:\wamp64\www\srs-skills\projects\_demo-hybrid-regulated
+EXIT 0
+ENGINE CONTRACT: PASS
+EXIT 0
+ENGINE CONTRACT: FAIL
+- [HIGH] kernel.no_unresolved_fail_markers: synthetic finding (--break-something)
+EXIT 1
+source-ingestion-guardrail: C:\wamp64\www\srs-skills
+findings: 0
+EXIT 0
+VALIDATED: 03-design-documentation/01-high-level-design (3 figure(s))
+DIAGRAMS: PASS (3 figure(s) validated)
+EXIT 0
+wrote 03-design-documentation/01-high-level-design/_generated/FIG-001.mmd
+wrote 03-design-documentation/01-high-level-design/_generated/FIG-002.mmd
+wrote 03-design-documentation/01-high-level-design/_generated/FIG-003.mmd
+wrote 03-design-documentation/01-high-level-design/_generated/trace-table.md
+GENERATE: PASS
+EXIT 0
+OK: PilotHLD.figures.json
+VERIFY-MANIFEST: PASS
+EXIT 0
+Scanned 691 .docx file(s); 0 contain Mermaid source.
+EXIT 0
+bash -n EXIT 0

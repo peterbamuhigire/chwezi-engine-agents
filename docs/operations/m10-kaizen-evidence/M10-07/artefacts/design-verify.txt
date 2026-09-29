@@ -1,0 +1,50 @@
+PASS — CSS primary Inter — BLOCK (expected exit 2, got 2)
+PASS — CSS primary Geist — BLOCK (expected exit 2, got 2)
+PASS — CSS fallback-only Inter (not primary) — ALLOW (expected exit 0, got 0)
+PASS — Approved font Canela — ALLOW (expected exit 0, got 0)
+PASS — python-docx quoted literal Roboto — BLOCK (expected exit 2, got 2)
+PASS — MultiEdit new_string with Poppins — BLOCK (expected exit 2, got 2)
+PASS — Non-relevant extension (.md) — ALLOW without even checking (expected exit 0, got 0)
+PASS — Exempt glob covers target — ALLOW despite banned font (expected exit 0, got 0)
+PASS — CHWEZI_FONT_GATE=off — ALLOW despite banned font (expected exit 0, got 0)
+PASS — Malformed stdin — fail open, ALLOW (expected exit 0, got 0)
+PASS — Source Sans 3 as primary — BLOCK (conditional-primary-only ban) (expected exit 2, got 2)
+PASS — CSS primary Fraunces (HOUSE ban 2026-09-29) — BLOCK (expected exit 2, got 2)
+PASS — Quoted primary "Fraunces" — BLOCK (expected exit 2, got 2)
+PASS — Quoted primary "IBM Plex Sans" (HOUSE ban) — BLOCK (expected exit 2, got 2)
+PASS — Unquoted primary IBM Plex Mono — BLOCK (expected exit 2, got 2)
+PASS — python-docx "IBM Plex Serif" literal — BLOCK (expected exit 2, got 2)
+PASS — Unlisted Plex cut "IBM Plex Sans Tamil" caught by prefix — BLOCK (expected exit 2, got 2)
+PASS — Replacement faces Andada Pro + Public Sans + JetBrains Mono — ALLOW (expected exit 0, got 0)
+PASS — SVG attribute font-family="Arial" — BLOCK (expected exit 2, got 2)
+PASS — SVG attribute font-family='Inter, sans-serif' (single quotes) — BLOCK (expected exit 2, got 2)
+PASS — SVG <style> Mermaid default stack "trebuchet ms",verdana,arial — ALLOW with fallback warning (Trebuchet MS not banned; Arial only a fallback) (expected exit 0, got 0)
+PASS — SVG <style> quoted primary "Arial" — BLOCK (expected exit 2, got 2)
+PASS — SVG with Public Sans primary — ALLOW (expected exit 0, got 0)
+PASS — Mermaid .mmd init directive "fontFamily":"Inter" — BLOCK (expected exit 2, got 2)
+PASS — Mermaid .mmd single-quoted directive 'fontFamily': 'Roboto, sans-serif' — BLOCK (expected exit 2, got 2)
+PASS — Mermaid .mmd themeCSS quoted IBM Plex Sans (prefix ban) — BLOCK (expected exit 2, got 2)
+PASS — Mermaid .mmd with JetBrains Mono — ALLOW (expected exit 0, got 0)
+PASS — Mermaid .mmd with Public Sans primary, Arial fallback — ALLOW with warning (expected exit 0, got 0)
+PASS — JSON "fontFamily": "Roboto" — BLOCK (expected exit 2, got 2)
+PASS — JSON escaped-quote stack "fontFamily": "\"Geist\", sans-serif" — BLOCK (expected exit 2, got 2)
+PASS — JSON with Public Sans — ALLOW (expected exit 0, got 0)
+PASS — JSON data file mentioning "Arial" outside a fontFamily key — ALLOW (only the key form is inspected in .json) (expected exit 0, got 0)
+
+32/32 passed
+EXIT 0
+skills=101 fully_compliant=101
+WARN skill-bytes skills/00-cross-cutting-ops-qa-a11y/design-audit/SKILL.md: 24039 bytes > 20480 (499 lines; report-only)
+WARN skill-bytes skills/04-web-and-ui-design/webapp-gui-design/SKILL.md: 24215 bytes > 20480 (482 lines; report-only)
+WARN skill-bytes skills/06-sector-and-domain-ux/ecommerce-and-checkout-ux/SKILL.md: 21418 bytes > 20480 (295 lines; report-only)
+WARN skill-bytes skills/06-sector-and-domain-ux/healthcare-ui-design/SKILL.md: 22354 bytes > 20480 (419 lines; report-only)
+WARN skill-bytes skills/12-data-viz-and-dashboards/data-visualization/SKILL.md: 29217 bytes > 20480 (486 lines; report-only)
+WARN skill-bytes skills/13-presentations-and-documents/email-and-newsletter-design/SKILL.md: 23087 bytes > 20480 (305 lines; report-only)
+EXIT 0
+routing fixtures=68 precision@1=85% precision@3=100%
+EXIT 0
+route-existence-validator:
+- checked routing fixtures and repaired-route fixtures
+- findings: 0
+PASS: route targets exist and repaired references are present
+EXIT 0

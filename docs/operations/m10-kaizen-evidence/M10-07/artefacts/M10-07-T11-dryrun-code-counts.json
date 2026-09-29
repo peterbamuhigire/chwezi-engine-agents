@@ -1,0 +1,17 @@
+[
+  {
+    "code": "diagram/uncovered-requirement",
+    "severity": "MEDIUM",
+    "count": 169
+  },
+  {
+    "code": "diagram/unknown-trace-id",
+    "severity": "HIGH",
+    "count": 11
+  },
+  {
+    "code": "diagram/unmapped-sequence",
+    "severity": "MEDIUM",
+    "count": 1
+  }
+]
