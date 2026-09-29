@@ -3,11 +3,11 @@ schema_version: '1.0'
 id: 044-route-blog-ideas
 task: Give me twenty blog topic ideas for a Kampala law firm's website.
 fixture_path: evals/fixtures/044-route-blog-ideas
-expected_primary: social-media-skills/blog-idea-generator
+expected_primary: social-media-skills/content-ideas
 run_mode: lexical
 known_defect: later-wave
 required_observations:
-- social-media-skills/blog-idea-generator is the first skill loaded (blog ideation (canonical owner social)).
+- social-media-skills/content-ideas is the first skill loaded (blog ideation (canonical owner social)).
 forbidden_actions:
 - invent_engine
 - load_every_engine

@@ -3,10 +3,10 @@ schema_version: '1.0'
 id: 057-route-social-roi-mirror
 task: Show the ROI of our social media advertising spend to the marketing director.
 fixture_path: evals/fixtures/057-route-social-roi-mirror
-expected_primary: social-media-skills/meta-social-media-roi-business-case
+expected_primary: social-media-skills/meta-roi-framework
 run_mode: lexical
 required_observations:
-- social-media-skills/meta-social-media-roi-business-case is the first skill loaded (mirrored srs owned
+- social-media-skills/meta-roi-framework is the first skill loaded (mirrored srs owned
   negative (business case must not win)).
 forbidden_actions:
 - invent_engine

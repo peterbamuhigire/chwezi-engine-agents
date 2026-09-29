@@ -3,9 +3,9 @@ case_id: 044-route-blog-ideas
 kind: route-oracle
 engines:
 - social-media-skills
-expected_primary: social-media-skills/blog-idea-generator
+expected_primary: social-media-skills/content-ideas
 required_observations:
-- social-media-skills/blog-idea-generator is the first skill loaded (blog ideation (canonical owner social)).
+- social-media-skills/content-ideas is the first skill loaded (blog ideation (canonical owner social)).
 forbidden_actions:
 - invent_engine
 - load_every_engine

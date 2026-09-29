@@ -8,7 +8,7 @@ Give me twenty blog topic ideas for a Kampala law firm's website.
 
 ## Expected first skill
 
-`social-media-skills/blog-idea-generator`
+`social-media-skills/content-ideas`
 
 ## Engines in scope
 

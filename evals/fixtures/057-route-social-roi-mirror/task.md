@@ -8,7 +8,7 @@ Show the ROI of our social media advertising spend to the marketing director.
 
 ## Expected first skill
 
-`social-media-skills/meta-social-media-roi-business-case`
+`social-media-skills/meta-roi-framework`
 
 ## Engines in scope
 

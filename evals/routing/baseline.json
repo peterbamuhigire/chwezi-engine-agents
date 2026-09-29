@@ -122,14 +122,39 @@
       ],
       "fixtures": 29,
       "command": "python -X utf8 scripts/routing_smoke_test.py --min-rank1 84 --lint-fixtures"
+    },
+    "social-media-skills": {
+      "p_at_1": 94.9,
+      "p_at_3": 100.0,
+      "owned_negatives": {
+        "total": 121,
+        "pass": 121,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "coverage": {
+        "skills_with_positive_fixture": 112,
+        "active_skills": 112
+      },
+      "floor": 92,
+      "floor_history": [
+        {
+          "date": "2026-09-29",
+          "floor": 92,
+          "reason": "social consolidation S11: first portfolio baseline for social after Social Kaizen S01-S10 (191 -> 112 skills); measured 94.9 % (372/392) minus 2 is 92.9, rounded down to 92; equals the engine-local p1_floor ratcheted in S08 (RC-017); ledger RC-018",
+          "ledger_ref": "RC-018"
+        }
+      ],
+      "fixtures": 392,
+      "command": "python -X utf8 scripts/routing_smoke_test.py --min-rank1 92 --lint-fixtures"
     }
   },
   "portfolio": {
     "undeclared_pairs_ge_075": 0,
-    "cross_engine_pairs_ge_075": 21,
-    "cross_engine_pairs_ge_050": 200,
-    "within_engine_pairs_ge_075": 26,
-    "oracle_primary_at_1": 76.9,
+    "cross_engine_pairs_ge_075": 15,
+    "cross_engine_pairs_ge_050": 155,
+    "within_engine_pairs_ge_075": 16,
+    "oracle_primary_at_1": 79.5,
     "oracle_engine_at_1": 84.6,
     "oracles": {
       "total": 42,
@@ -148,6 +173,7 @@
         "reason": "M10-03 first baseline: oracle primary@1 76.3 % (29/38, known defects excluded), minus 2, rounded down"
       }
     ],
-    "command": "python -X utf8 evals/runners/run-contract-evals.py --cases evals/cases --route-oracles --min-oracle-primary 74 --out <scratch>/oracles.json"
+    "command": "python -X utf8 evals/runners/run-contract-evals.py --cases evals/cases --route-oracles --min-oracle-primary 74 --out <scratch>/oracles.json",
+    "pair_counts_note": "Re-measured 29 Sep 2026 in Social Kaizen S11 (union scan, 1,090 skills): social now has 0 cross-engine and 0 within-engine pairs at 0.75 or above (8 and 9 at the Social Kaizen baseline); the totals also reflect other engines' edits since M10-03. Oracle primary@1 76.9 -> 79.5 because oracles 044 and 057 were re-pointed from retired social aliases to their owners (057 now counts as a hit; 044 stays a later-wave known defect). Portfolio floor not raised in S11 (ledger RC-018)."
   }
 }

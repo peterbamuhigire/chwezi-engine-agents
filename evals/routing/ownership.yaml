@@ -104,6 +104,10 @@ pairs:
       publication, and the business-plan and proposal copies are candidates for aliases.
       Social Kaizen S03-T-X1 (29 Sep 2026): social-media-skills/blog-idea-generator is an inactive alias
       routed to social-media-skills/content-ideas, which now owns blog ideation (D-SK-07).
+      Social Kaizen S11 re-scan (29 Sep 2026): content-ideas scores below 0.50 against each copy, so its
+      three pairs report as stale declarations. That is expected and kept: the row names the owner, while
+      the business-plan, proposal and website copies still collide with each other at 0.76-0.83. Oracle 044
+      now expects content-ideas (rank 6, behind the three copies; stays a later-wave known defect).
     decided_by: orchestrator under Peter's delegated authority, 29 Sep 2026
     decided_on: 2026-09-29
     review_after: 2026-12-29
@@ -122,6 +126,8 @@ pairs:
       and social <-> website to 0.58, and the union IDF shift lifted business-plan <-> proposal from 0.74
       to 0.76 (neither copy edited). The business-plan copy (bankable plans and business documents) is the
       same mirrored pack, so it joins this row rather than a new one.
+      Social Kaizen S11 re-scan (29 Sep 2026): social <-> business-plan 0.70, social <-> proposal 0.64,
+      social <-> website 0.58 (reported stale below 0.60; kept because the pack is mirrored by design).
     decided_by: orchestrator under Peter's delegated authority, 29 Sep 2026
     decided_on: 2026-09-29
     review_after: 2026-12-29
