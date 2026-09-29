@@ -1,0 +1,52 @@
+### python scripts/validate_engine.py
+- Deterministic gate docs exist for phases 01-09.
+- Standards clause registry is complete.
+- Hybrid operating model is documented.
+- Regulated evidence model is documented.
+
+NOTE: For per-project validation, use `python -m engine validate <projects/<Name>>`.
+rc=0
+### python scripts/validate_skill_engine.py --baseline tests/skill-quality-baseline.json
+skill-engine: C:\wamp64\www\srs-skills
+- active skills: 159
+- templates: 1
+- failure counts: {}
+rc=0
+### python -X utf8 scripts/routing_smoke_test.py
+routing-smoke: 56/56 fixtures; top-3 precision=1.000; threshold=1.000
+rc=0
+### python -m engine validate-skills
+SKILLS OK: no legacy path references outside alias-blocks.
+rc=0
+### python scripts/validate_sdd_phase_boundaries.py --feature-dir engine/tests/fixtures/sdd_feature
+sdd-phase-boundary-validator: stage=all
+PASS: no boundary findings
+rc=0
+### python scripts/seed_demo_project.py
+Seeded C:\wamp64\www\srs-skills\projects\_demo-hybrid-regulated
+rc=0
+### python -m engine validate projects/_demo-hybrid-regulated
+ENGINE CONTRACT: PASS
+rc=0
+### python -m engine validate projects/_demo-hybrid-regulated --break-something
+ENGINE CONTRACT: FAIL
+- [HIGH] kernel.no_unresolved_fail_markers: synthetic finding (--break-something)
+- [HIGH] phase02.smart_nfr: synthetic finding (--break-something)
+- [HIGH] phase09.traceability: synthetic finding (--break-something)
+rc=1
+### python -X utf8 -m engine controls search "cardholder encryption" --domain finance --json
+      "clause": "3.5",
+      "score": 7.016,
+      "registry_path": "domains/finance/controls/control-register.yaml"
+    }
+  ]
+}
+rc=0
+### python -X utf8 -m engine controls search "purple elephant tariff" --json
+  "framework": null,
+  "abstained": true,
+  "best_score": 0.0,
+  "threshold": 5.5,
+  "results": []
+}
+rc=0
