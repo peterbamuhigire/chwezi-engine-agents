@@ -107,17 +107,21 @@ pairs:
     decided_by: orchestrator under Peter's delegated authority, 29 Sep 2026
     decided_on: 2026-09-29
     review_after: 2026-12-29
-    follow_up: later-wave (fix_alias; enrich the social description, which is templated)
+    follow_up: later-wave (fix_alias for the business-plan and proposal copies; the social description was rewritten out of the template in Social Kaizen S08, 29 Sep 2026)
 
-  - skills: [proposal-skills/east-african-english, social-media-skills/east-african-english, website-skills/east-african-english]
+  - skills: [business-plan-skills/east-african-english, proposal-skills/east-african-english, social-media-skills/east-african-english, website-skills/east-african-english]
     score_at_decision: 0.78
     disposition: mirrored_domain_pack
     owner: null
-    co_activate: [proposal-skills, social-media-skills, website-skills]
+    co_activate: [business-plan-skills, proposal-skills, social-media-skills, website-skills]
     reason: >-
       Language pack mirrored on purpose (proposal <-> social 0.78, social <-> website 0.76). Each copy
       applies East African English register to its own artefact: proposals and bids, social posts and ads,
       website copy. The host engine of the artefact applies its own copy.
+      Social Kaizen S08 (29 Sep 2026): the social description rewrite lowered social <-> proposal to 0.64
+      and social <-> website to 0.58, and the union IDF shift lifted business-plan <-> proposal from 0.74
+      to 0.76 (neither copy edited). The business-plan copy (bankable plans and business documents) is the
+      same mirrored pack, so it joins this row rather than a new one.
     decided_by: orchestrator under Peter's delegated authority, 29 Sep 2026
     decided_on: 2026-09-29
     review_after: 2026-12-29

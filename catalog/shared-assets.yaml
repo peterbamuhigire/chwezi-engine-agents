@@ -438,9 +438,9 @@ assets:
         owner: business-plan-skills
         reason: "Pointer stub for the canonical dev skill-writing standard (M10-04-T03): portable minimum, engine-local delta and degraded mode, shaped to pass this engine's Tier-1 validator. Re-register only when the portable minimum or the engine delta changes."
       social-media-skills/skills/meta-utility/skill-writing/SKILL.md:
-        sha256: 7ac067d8f8582fe6697700b7249b1ee7e4ab6bf4d45a21b6e78887593c241de2
+        sha256: 9e4e9b54106a95f8cbb748826bf9f193147c8836a75d2f49f8517d0a2103d62b
         owner: social-media-skills
-        reason: "Pointer stub for the canonical dev skill-writing standard (M10-04-T03): portable minimum, engine-local delta and degraded mode, shaped to pass this engine's Tier-1 validator. Re-register only when the portable minimum or the engine delta changes."
+        reason: "Pointer stub for the canonical dev skill-writing standard (M10-04-T03): portable minimum, engine-local delta and degraded mode, shaped to pass this engine's Tier-1 validator. Re-register only when the portable minimum or the engine delta changes. Social Kaizen S08 (2026-09-29) re-registered it after the engine-local routing delta changed (description, Use When and Do Not Use When rewritten to the S08 formula; body unchanged)."
       linux-skills/meta/skill-writing/SKILL.md:
         sha256: 9c891cdd869c1af161361be98a3daaf448542a4b8b2df751de3c2f97de93e65e
         owner: linux-skills
@@ -644,9 +644,9 @@ assets:
         owner: business-plan-skills
         reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
       social-media-skills/scripts/routing_smoke_test.py:
-        sha256: 596d9bfa95ce8a05f99bbc62732c3f739c3d90a64b236a9e29ada1d81fdcd2b6
+        sha256: ef8ae0ac8f394279f97c5c40260554e95c1f1dc0762a5443671dcb00e0a666a2
         owner: social-media-skills
-        reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker. Social Kaizen S01-T08 (2026-09-29) adds p@1 reporting, --min-rank1, --lint-fixtures and the alias_of fixture field."
+        reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker. Social Kaizen S01-T08 (2026-09-29) adds p@1 reporting, --min-rank1, --lint-fixtures and the alias_of fixture field; S08 (2026-09-29) adds owned negatives (negative_for) and the slug and routing-text-copy fixture lint."
       linux-skills/scripts/routing_smoke_test.py:
         sha256: 2ba658a35caf7e44c5ad7a94771c4c073f0d9df3bf335100f7b770430022de82
         owner: linux-skills
