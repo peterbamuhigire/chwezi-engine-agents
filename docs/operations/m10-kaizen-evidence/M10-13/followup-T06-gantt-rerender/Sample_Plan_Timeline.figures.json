@@ -1,0 +1,44 @@
+{
+  "schema": "srs-figures-manifest/1",
+  "attribution": "Candidate-freezing pattern adapted from Archify (MIT, https://github.com/tt-a1i/archify, commit 0e4949f910a8e390bd3b4933883a4dcabad571be)",
+  "artifact_id": "Sample_Plan_Timeline",
+  "built_at_utc": "2026-09-29T03:56:50+00:00",
+  "doc_dir": "implementation",
+  "docx": "Sample_Plan_Timeline.docx",
+  "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "renderer_packages": {
+    "@mermaid-js/mermaid-cli": "12.0.0",
+    "mermaid": "12.0.0",
+    "puppeteer": "25.12.0"
+  },
+  "font": {
+    "family": "Public Sans",
+    "fallback": "sans-serif",
+    "file": "PublicSans-VF.ttf",
+    "file_sha256": "d75a7dc1a27eb9e336d5b33f55489d2ecb5621bf694d5c43b2415bce2ca830a8"
+  },
+  "figures": [
+    {
+      "figure_id": "fig-1",
+      "figure_number": 1,
+      "ir_path": null,
+      "ir_sha256": null,
+      "validated_ir_sha256": null,
+      "mermaid_sha256": null,
+      "png_path": "implementation/_figures/Sample_Plan_Timeline-1.png",
+      "png_sha256": "5404c544ba27bb3c516a49c68ded33a1ba355531e01dccfd9fd25281f6b18089",
+      "svg_path": "implementation/_figures/Sample_Plan_Timeline-1.svg",
+      "svg_sha256": "e6adebd75871440e264fac8de77fdc75ffdf16bffd90367620b51c3ef19a4548",
+      "renderer": "@mermaid-js/mermaid-cli",
+      "renderer_version": "12.0.0",
+      "font_family": "Public Sans",
+      "font_substitution_check": "PASS",
+      "state": "local-review-export"
+    }
+  ],
+  "artifact_sha256": {
+    "Sample_Plan_Timeline.docx": "029de22b1c5b591987e61a42367d2af7bb071751176a3d87bbb36f2e7416016e",
+    "implementation/_figures/Sample_Plan_Timeline-1.png": "5404c544ba27bb3c516a49c68ded33a1ba355531e01dccfd9fd25281f6b18089",
+    "implementation/_figures/Sample_Plan_Timeline-1.svg": "e6adebd75871440e264fac8de77fdc75ffdf16bffd90367620b51c3ef19a4548"
+  }
+}

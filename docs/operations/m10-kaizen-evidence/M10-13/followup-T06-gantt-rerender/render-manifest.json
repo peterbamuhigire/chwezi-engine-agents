@@ -1,0 +1,52 @@
+{
+  "schema": "srs-render-manifest/1",
+  "attribution": "Render-receipt pattern adapted from tt-a1i/archify (MIT, https://github.com/tt-a1i/archify, commit 0e4949f910a8e390bd3b4933883a4dcabad571be)",
+  "documents": {
+    "Sample_Plan_Timeline": {
+      "generated": "2026-09-29T06:56:48+03:00",
+      "renderer": {
+        "packages": {
+          "@mermaid-js/mermaid-cli": "12.0.0",
+          "mermaid": "12.0.0",
+          "puppeteer": "25.12.0"
+        },
+        "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+        "hosted_renderer": false
+      },
+      "font": {
+        "family": "Public Sans",
+        "fallback": "sans-serif",
+        "file": "PublicSans-VF.ttf",
+        "file_sha256": "d75a7dc1a27eb9e336d5b33f55489d2ecb5621bf694d5c43b2415bce2ca830a8",
+        "loaded_via": "@font-face data URI from the local file; embedded in each SVG",
+        "headless_chrome_probe": {
+          "family": "Public Sans",
+          "facesLoaded": 1,
+          "resolved": true
+        },
+        "banned_list": "C:\\wamp64\\www\\design-system-skills\\doctrine\\references\\ai-slop-banned-fonts.json"
+      },
+      "figures": [
+        {
+          "figure": 1,
+          "source": "../01-implementation-timeline.md",
+          "block_index": 1,
+          "source_sha256": "fb37b6383a1fa5c9848ba927190472f439ef938594e44d1defaf5d2f0c7f1efc",
+          "png": "Sample_Plan_Timeline-1.png",
+          "svg": "Sample_Plan_Timeline-1.svg",
+          "png_sha256": "5404c544ba27bb3c516a49c68ded33a1ba355531e01dccfd9fd25281f6b18089",
+          "svg_sha256": "e6adebd75871440e264fac8de77fdc75ffdf16bffd90367620b51c3ef19a4548",
+          "png_px": [
+            2160,
+            840
+          ],
+          "printed_width_in": 6.25,
+          "ppi": 345,
+          "caption": "Implementation timeline with the PPDA Contracts Committee award as a blocking gate",
+          "alt": "Implementation Gantt for a fictional water-kiosk expansion: procurement evaluation, then the Contracts Committee award as a blocking milestone, then the standstill period and contract signature, after which kiosk construction, staff training and commissioning follow; critical-path tasks are highlighted.",
+          "alt_source": "block-comment"
+        }
+      ]
+    }
+  }
+}
