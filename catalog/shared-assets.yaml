@@ -644,9 +644,9 @@ assets:
         owner: business-plan-skills
         reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
       social-media-skills/scripts/routing_smoke_test.py:
-        sha256: 93f4f8f1cdae8f81acfc5801b6a046e549cd045c743a86e87f3be399cde0bdcb
+        sha256: 596d9bfa95ce8a05f99bbc62732c3f739c3d90a64b236a9e29ada1d81fdcd2b6
         owner: social-media-skills
-        reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
+        reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker. Social Kaizen S01-T08 (2026-09-29) adds p@1 reporting, --min-rank1, --lint-fixtures and the alias_of fixture field."
       linux-skills/scripts/routing_smoke_test.py:
         sha256: 2ba658a35caf7e44c5ad7a94771c4c073f0d9df3bf335100f7b770430022de82
         owner: linux-skills
