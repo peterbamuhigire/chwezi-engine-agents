@@ -34,7 +34,9 @@ only the serialization format, not the required handoff fields.
    router and `SKILL.md` files as the domain source of truth.
 7. For every non-trivial output, require the portfolio craft brief: audience,
    job or decision, selected slice, constraints, evidence boundary, and failure
-   consequence. Route development and visual work through the corresponding
+   consequence. Pre-fill the craft brief from `PROJECT.md` when present
+   (`docs/operations/project-context-contract.md`); the task-specific fields
+   are still asked for. Route development and visual work through the corresponding
    engineering/design handoffs so requirements detail, data flow, interaction
    detail, and release proof remain connected.
 8. Produce the handoff contract with the requested scope, selected engines,

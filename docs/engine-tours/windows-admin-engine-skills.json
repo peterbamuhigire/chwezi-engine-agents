@@ -1,0 +1,256 @@
+{
+  "display_name": "Windows Administration Skills",
+  "engine_id": "windows-admin-engine-skills",
+  "folder": "windows-admin-engine-skills",
+  "generated_from_commit": "243221f0fbca402b4dc833c22a7bdea48a59e043",
+  "generator": "scripts/generate_engine_tour.py",
+  "schema_version": "1.0",
+  "steps": [
+    {
+      "data": {},
+      "number": 1,
+      "paths": [
+        {
+          "engine": "windows-admin-engine-skills",
+          "path": "README.md"
+        }
+      ],
+      "text": "Start with README.md: it states what Windows Administration Skills is for and what it does not cover.",
+      "title": "Purpose"
+    },
+    {
+      "data": {
+        "catalogue_router": "AGENTS.md",
+        "router": "AGENTS.md"
+      },
+      "number": 2,
+      "paths": [
+        {
+          "engine": "windows-admin-engine-skills",
+          "path": "AGENTS.md"
+        },
+        {
+          "engine": "windows-admin-engine-skills",
+          "path": "CLAUDE.md"
+        }
+      ],
+      "text": "Read AGENTS.md before choosing any skill; it is the routing source of truth. CLAUDE.md is a bridge that imports it.",
+      "title": "Router"
+    },
+    {
+      "data": {
+        "approval_required_for": [
+          "external_message",
+          "host_mutation",
+          "publish",
+          "pull",
+          "remote_execution",
+          "update",
+          "write_files"
+        ],
+        "discovery_glob": "skills/**/SKILL.md",
+        "forbidden_operations": [
+          "arbitrary_shell",
+          "broad_delete",
+          "credential_in_arguments",
+          "force_push",
+          "git_clean",
+          "git_reset"
+        ]
+      },
+      "number": 3,
+      "paths": [
+        {
+          "engine": "windows-admin-engine-skills",
+          "path": ".skills-engine/engine-manifest.yaml"
+        }
+      ],
+      "text": "The engine manifest declares the router (AGENTS.md), the discovery glob (skills/**/SKILL.md), 7 approval-gated operations and 6 forbidden operations.",
+      "title": "Engine contract"
+    },
+    {
+      "data": {
+        "active_skills": 20,
+        "folders": {
+          "skills": 1,
+          "skills/backup-recovery-and-business-continuity": 1,
+          "skills/fleet-hybrid-and-management-planes": 1,
+          "skills/identity-active-directory-and-access": 2,
+          "skills/inventory-health-and-diagnostics": 2,
+          "skills/meta": 2,
+          "skills/networking-and-remote-management": 2,
+          "skills/observability-performance-and-troubleshooting": 1,
+          "skills/patching-software-and-endpoint-management": 1,
+          "skills/policy-security-and-compliance": 2,
+          "skills/storage-files-services-and-web": 2,
+          "skills/virtualization-containers-and-development": 3
+        }
+      },
+      "number": 4,
+      "paths": [
+        {
+          "engine": "windows-admin-engine-skills",
+          "path": "skills/virtualization-containers-and-development"
+        },
+        {
+          "engine": "windows-admin-engine-skills",
+          "path": "skills/identity-active-directory-and-access"
+        },
+        {
+          "engine": "windows-admin-engine-skills",
+          "path": "skills/inventory-health-and-diagnostics"
+        },
+        {
+          "engine": "windows-admin-engine-skills",
+          "path": "skills/meta"
+        }
+      ],
+      "text": "20 active SKILL.md files in 12 folders; the largest are skills/virtualization-containers-and-development (3), skills/identity-active-directory-and-access (2), skills/inventory-health-and-diagnostics (2), skills/meta (2).",
+      "title": "Skill layout"
+    },
+    {
+      "data": {
+        "hubs": [
+          {
+            "inbound_skills": 3,
+            "skill": "skills/observability-performance-and-troubleshooting/windows-troubleshooting"
+          },
+          {
+            "inbound_skills": 2,
+            "skill": "skills/fleet-hybrid-and-management-planes/windows-fleet-management"
+          },
+          {
+            "inbound_skills": 2,
+            "skill": "skills/virtualization-containers-and-development/windows-development-workstation"
+          },
+          {
+            "inbound_skills": 1,
+            "skill": "skills/backup-recovery-and-business-continuity/windows-backup-recovery"
+          },
+          {
+            "inbound_skills": 1,
+            "skill": "skills/identity-active-directory-and-access/windows-active-directory-health"
+          }
+        ],
+        "source": "scripts/skill_fanin.py"
+      },
+      "number": 5,
+      "paths": [
+        {
+          "engine": "windows-admin-engine-skills",
+          "path": "skills/observability-performance-and-troubleshooting/windows-troubleshooting/SKILL.md"
+        },
+        {
+          "engine": "windows-admin-engine-skills",
+          "path": "skills/fleet-hybrid-and-management-planes/windows-fleet-management/SKILL.md"
+        },
+        {
+          "engine": "windows-admin-engine-skills",
+          "path": "skills/virtualization-containers-and-development/windows-development-workstation/SKILL.md"
+        },
+        {
+          "engine": "windows-admin-engine-skills",
+          "path": "skills/backup-recovery-and-business-continuity/windows-backup-recovery/SKILL.md"
+        },
+        {
+          "engine": "windows-admin-engine-skills",
+          "path": "skills/identity-active-directory-and-access/windows-active-directory-health/SKILL.md"
+        }
+      ],
+      "text": "The skills other skills lean on most (inbound links, mentions and aliases): windows-troubleshooting (3), windows-fleet-management (2), windows-development-workstation (2), windows-backup-recovery (1), windows-active-directory-health (1).",
+      "title": "Hub skills"
+    },
+    {
+      "data": {
+        "commands": [
+          "python -X utf8 scripts/validate_engine.py",
+          "python -X utf8 scripts/routing_smoke_test.py",
+          "python -X utf8 scripts/source_ingestion_guardrail.py",
+          "python -X utf8 -m unittest discover -s tests/python -v",
+          "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/test-powershell.ps1"
+        ]
+      },
+      "number": 6,
+      "paths": [
+        {
+          "engine": "windows-admin-engine-skills",
+          "path": "scripts/validate_engine.py"
+        },
+        {
+          "engine": "windows-admin-engine-skills",
+          "path": "scripts/routing_smoke_test.py"
+        },
+        {
+          "engine": "windows-admin-engine-skills",
+          "path": "scripts/source_ingestion_guardrail.py"
+        },
+        {
+          "engine": "windows-admin-engine-skills",
+          "path": "scripts/test-powershell.ps1"
+        }
+      ],
+      "text": "Run these 5 checks before claiming the engine is healthy; an unavailable check is NOT_ASSESSED, never a pass.",
+      "title": "Gates"
+    },
+    {
+      "data": {
+        "fixture_cases": {
+          "tests/fixtures/routing.json": 19
+        }
+      },
+      "number": 7,
+      "paths": [
+        {
+          "engine": "windows-admin-engine-skills",
+          "path": "tests/fixtures/routing.json"
+        }
+      ],
+      "text": "Routing fixtures record which skill should win for a realistic request: 19 cases in 1 file.",
+      "title": "Routing evidence"
+    },
+    {
+      "data": {
+        "events": [
+          "PreToolUse"
+        ]
+      },
+      "number": 8,
+      "paths": [
+        {
+          "engine": "windows-admin-engine-skills",
+          "path": "hooks/hooks.json"
+        }
+      ],
+      "text": "hooks/hooks.json registers these events: PreToolUse.",
+      "title": "Hooks"
+    },
+    {
+      "data": {
+        "status": "NOT_ASSESSED"
+      },
+      "number": 9,
+      "paths": [
+        {
+          "engine": "windows-admin-engine-skills",
+          "path": "AGENTS.md"
+        }
+      ],
+      "text": "No skill-writing skill or CONTRIBUTING.md was found: NOT_ASSESSED.",
+      "title": "Adding a skill"
+    },
+    {
+      "data": {
+        "handoff_question": "not listed"
+      },
+      "number": 10,
+      "paths": [
+        {
+          "engine": "chwezi-engine-agents",
+          "path": "core/instructions/engine-orchestrator.md"
+        }
+      ],
+      "text": "Add chwezi-accounting-doctrine for finance, accounting, tax or statutory work; design-system-skills for any change to how an output looks; digital-research-skills for current, uncertain or source-sensitive claims. They activate alongside this engine, never instead of it.",
+      "title": "Cross-cutting engines"
+    }
+  ]
+}

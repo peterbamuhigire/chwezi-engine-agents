@@ -1,0 +1,2592 @@
+{
+ "counts": {
+  "by_type": {
+   "alias_of": 37,
+   "defers_to": 529,
+   "links_to": 1238,
+   "mentions": 9214,
+   "routes_to": 1159,
+   "similar_trigger": 21
+  },
+  "edges": 12198,
+  "nodes": 1183
+ },
+ "cross_engine_bridges": [
+  {
+   "edges": 389,
+   "pair": "social-media-skills -> business-plan-skills"
+  },
+  {
+   "edges": 385,
+   "pair": "social-media-skills -> proposal-skills"
+  },
+  {
+   "edges": 349,
+   "pair": "social-media-skills -> digital-research-engine"
+  },
+  {
+   "edges": 269,
+   "pair": "social-media-skills -> chwezi-dev-engine"
+  },
+  {
+   "edges": 165,
+   "pair": "social-media-skills -> website-skills"
+  },
+  {
+   "edges": 125,
+   "pair": "digital-research-engine -> chwezi-dev-engine"
+  },
+  {
+   "edges": 116,
+   "pair": "chwezi-dev-engine -> digital-research-engine"
+  },
+  {
+   "edges": 110,
+   "pair": "business-plan-skills -> proposal-skills"
+  },
+  {
+   "edges": 97,
+   "pair": "business-plan-skills -> social-media-skills"
+  },
+  {
+   "edges": 88,
+   "pair": "website-skills -> social-media-skills"
+  },
+  {
+   "edges": 86,
+   "pair": "proposal-skills -> business-plan-skills"
+  },
+  {
+   "edges": 84,
+   "pair": "proposal-skills -> social-media-skills"
+  },
+  {
+   "edges": 81,
+   "pair": "proposal-skills -> website-skills"
+  },
+  {
+   "edges": 81,
+   "pair": "website-skills -> business-plan-skills"
+  },
+  {
+   "edges": 74,
+   "pair": "business-plan-skills -> chwezi-accounting-doctrine"
+  },
+  {
+   "edges": 74,
+   "pair": "business-plan-skills -> website-skills"
+  },
+  {
+   "edges": 67,
+   "pair": "chwezi-dev-engine -> proposal-skills"
+  },
+  {
+   "edges": 66,
+   "pair": "website-skills -> proposal-skills"
+  },
+  {
+   "edges": 64,
+   "pair": "srs-skills -> chwezi-dev-engine"
+  },
+  {
+   "edges": 54,
+   "pair": "srs-skills -> proposal-skills"
+  },
+  {
+   "edges": 51,
+   "pair": "proposal-skills -> digital-research-engine"
+  },
+  {
+   "edges": 48,
+   "pair": "business-plan-skills -> digital-research-engine"
+  },
+  {
+   "edges": 47,
+   "pair": "chwezi-dev-engine -> website-skills"
+  },
+  {
+   "edges": 45,
+   "pair": "chwezi-dev-engine -> design-system-skills"
+  },
+  {
+   "edges": 42,
+   "pair": "business-plan-skills -> chwezi-dev-engine"
+  },
+  {
+   "edges": 42,
+   "pair": "srs-skills -> digital-research-engine"
+  },
+  {
+   "edges": 40,
+   "pair": "website-skills -> design-system-skills"
+  },
+  {
+   "edges": 39,
+   "pair": "chwezi-dev-engine -> srs-skills"
+  },
+  {
+   "edges": 37,
+   "pair": "srs-skills -> business-plan-skills"
+  },
+  {
+   "edges": 37,
+   "pair": "srs-skills -> social-media-skills"
+  },
+  {
+   "edges": 36,
+   "pair": "chwezi-dev-engine -> business-plan-skills"
+  },
+  {
+   "edges": 36,
+   "pair": "chwezi-dev-engine -> social-media-skills"
+  },
+  {
+   "edges": 29,
+   "pair": "digital-research-engine -> website-skills"
+  },
+  {
+   "edges": 29,
+   "pair": "website-skills -> chwezi-dev-engine"
+  },
+  {
+   "edges": 28,
+   "pair": "digital-research-engine -> proposal-skills"
+  },
+  {
+   "edges": 26,
+   "pair": "design-system-skills -> chwezi-dev-engine"
+  },
+  {
+   "edges": 26,
+   "pair": "proposal-skills -> chwezi-dev-engine"
+  },
+  {
+   "edges": 23,
+   "pair": "digital-research-engine -> business-plan-skills"
+  },
+  {
+   "edges": 20,
+   "pair": "digital-research-engine -> social-media-skills"
+  },
+  {
+   "edges": 19,
+   "pair": "design-system-skills -> proposal-skills"
+  },
+  {
+   "edges": 19,
+   "pair": "design-system-skills -> website-skills"
+  },
+  {
+   "edges": 18,
+   "pair": "linux-skills -> proposal-skills"
+  },
+  {
+   "edges": 13,
+   "pair": "digital-research-engine -> design-system-skills"
+  },
+  {
+   "edges": 11,
+   "pair": "chwezi-dev-engine -> linux-skills"
+  },
+  {
+   "edges": 10,
+   "pair": "linux-skills -> website-skills"
+  },
+  {
+   "edges": 10,
+   "pair": "website-skills -> digital-research-engine"
+  },
+  {
+   "edges": 9,
+   "pair": "design-system-skills -> business-plan-skills"
+  },
+  {
+   "edges": 9,
+   "pair": "design-system-skills -> social-media-skills"
+  },
+  {
+   "edges": 8,
+   "pair": "proposal-skills -> chwezi-accounting-doctrine"
+  },
+  {
+   "edges": 7,
+   "pair": "business-plan-skills -> linux-skills"
+  },
+  {
+   "edges": 7,
+   "pair": "chwezi-accounting-doctrine -> digital-research-engine"
+  },
+  {
+   "edges": 7,
+   "pair": "design-system-skills -> srs-skills"
+  },
+  {
+   "edges": 7,
+   "pair": "proposal-skills -> linux-skills"
+  },
+  {
+   "edges": 6,
+   "pair": "chwezi-accounting-doctrine -> chwezi-dev-engine"
+  },
+  {
+   "edges": 6,
+   "pair": "design-system-skills -> digital-research-engine"
+  },
+  {
+   "edges": 6,
+   "pair": "digital-research-engine -> linux-skills"
+  },
+  {
+   "edges": 6,
+   "pair": "social-media-skills -> linux-skills"
+  },
+  {
+   "edges": 6,
+   "pair": "srs-skills -> chwezi-accounting-doctrine"
+  },
+  {
+   "edges": 5,
+   "pair": "linux-skills -> business-plan-skills"
+  },
+  {
+   "edges": 5,
+   "pair": "linux-skills -> social-media-skills"
+  },
+  {
+   "edges": 5,
+   "pair": "website-skills -> linux-skills"
+  },
+  {
+   "edges": 4,
+   "pair": "linux-skills -> digital-research-engine"
+  },
+  {
+   "edges": 3,
+   "pair": "chwezi-dev-engine -> chwezi-accounting-doctrine"
+  },
+  {
+   "edges": 3,
+   "pair": "linux-skills -> chwezi-dev-engine"
+  },
+  {
+   "edges": 3,
+   "pair": "proposal-skills -> design-system-skills"
+  },
+  {
+   "edges": 3,
+   "pair": "srs-skills -> website-skills"
+  },
+  {
+   "edges": 2,
+   "pair": "business-plan-skills -> design-system-skills"
+  },
+  {
+   "edges": 2,
+   "pair": "social-media-skills -> design-system-skills"
+  },
+  {
+   "edges": 2,
+   "pair": "srs-skills -> design-system-skills"
+  },
+  {
+   "edges": 2,
+   "pair": "website-skills -> chwezi-accounting-doctrine"
+  },
+  {
+   "edges": 2,
+   "pair": "windows-admin-engine-skills -> digital-research-engine"
+  },
+  {
+   "edges": 1,
+   "pair": "business-plan-skills -> srs-skills"
+  },
+  {
+   "edges": 1,
+   "pair": "chwezi-accounting-doctrine -> proposal-skills"
+  },
+  {
+   "edges": 1,
+   "pair": "website-skills -> windows-admin-engine-skills"
+  },
+  {
+   "edges": 1,
+   "pair": "windows-admin-engine-skills -> proposal-skills"
+  }
+ ],
+ "mentioned_but_unrouted": [],
+ "missing_skill_paths": [
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-agent-bankability-and-investor-readiness/SKILL.md:146",
+   "line": "- `skills/10-financial-projections/saas-agent-unit-economics-and-cogs/SKILL.md` — unit economics",
+   "reference": "skills/10-financial-projections/saas-agent-unit-economics-and-cogs"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-agent-bankability-and-investor-readiness/SKILL.md:147",
+   "line": "- `skills/06-competitive-analysis/saas-agent-moat-and-wrapper-risk/SKILL.md` — moat-vs-wrapper",
+   "reference": "skills/06-competitive-analysis/saas-agent-moat-and-wrapper-risk"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-agent-bankability-and-investor-readiness/SKILL.md:148",
+   "line": "- `skills/12-risk-analysis/saas-agent-risk-and-stress-test/SKILL.md` — risk register",
+   "reference": "skills/12-risk-analysis/saas-agent-risk-and-stress-test"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-agent-bankability-and-investor-readiness/SKILL.md:149",
+   "line": "- `skills/09-management-team/saas-agent-talent-strategy/SKILL.md` — talent",
+   "reference": "skills/09-management-team/saas-agent-talent-strategy"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-agent-bankability-and-investor-readiness/SKILL.md:150",
+   "line": "- `skills/07-marketing-sales-strategy/saas-agent-pricing-strategy/SKILL.md` — pricing",
+   "reference": "skills/07-marketing-sales-strategy/saas-agent-pricing-strategy"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-agent-revenue-recognition-policy/SKILL.md:209",
+   "line": "- `skills/10-financial-projections/saas-agent-revenue-recognition/SKILL.md` — operational rev-rec",
+   "reference": "skills/10-financial-projections/saas-agent-revenue-recognition"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-agent-revenue-recognition-policy/SKILL.md:210",
+   "line": "- `skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves/SKILL.md` — liability side",
+   "reference": "skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-agent-revenue-recognition-policy/SKILL.md:211",
+   "line": "- `skills/10-financial-projections/saas-agent-sla-cogs-treatment/SKILL.md` — COGS / contra-revenue",
+   "reference": "skills/10-financial-projections/saas-agent-sla-cogs-treatment"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-agent-sla-financial-controls/SKILL.md:242",
+   "line": "- `skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves/SKILL.md` — reserves",
+   "reference": "skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-agent-sla-financial-controls/SKILL.md:243",
+   "line": "- `skills/10-financial-projections/saas-agent-sla-cogs-treatment/SKILL.md` — classification",
+   "reference": "skills/10-financial-projections/saas-agent-sla-cogs-treatment"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-agent-sla-financial-controls/SKILL.md:245",
+   "line": "- `skills/12-risk-analysis/saas-agent-sla-risk/SKILL.md` — risk register",
+   "reference": "skills/12-risk-analysis/saas-agent-sla-risk"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-agent-valuation-adjustments/SKILL.md:146",
+   "line": "- `skills/06-competitive-analysis/saas-agent-moat-and-wrapper-risk/SKILL.md` — moat score input",
+   "reference": "skills/06-competitive-analysis/saas-agent-moat-and-wrapper-risk"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-agent-valuation-adjustments/SKILL.md:147",
+   "line": "- `skills/10-financial-projections/saas-agent-unit-economics-and-cogs/SKILL.md` — UE input",
+   "reference": "skills/10-financial-projections/saas-agent-unit-economics-and-cogs"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-agent-valuation-adjustments/SKILL.md:148",
+   "line": "- `skills/12-risk-analysis/saas-agent-risk-and-stress-test/SKILL.md` — stress input",
+   "reference": "skills/12-risk-analysis/saas-agent-risk-and-stress-test"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-agent-valuation-adjustments/SKILL.md:149",
+   "line": "- `skills/11-funding-request/saas-agent-funding-stage-playbook/SKILL.md` — funding consumer",
+   "reference": "skills/11-funding-request/saas-agent-funding-stage-playbook"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-agent-valuation-overlay-for-sla/SKILL.md:178",
+   "line": "- `skills/11-funding-request/saas-agent-investor-narrative-on-sla/SKILL.md` — narrative",
+   "reference": "skills/11-funding-request/saas-agent-investor-narrative-on-sla"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-agent-valuation-overlay-for-sla/SKILL.md:179",
+   "line": "- `skills/meta-bankability-scoring/references/saas-agent-sla-bankability-checklist.md` — bankability",
+   "reference": "skills/meta-bankability-scoring/references"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-agent-valuation-overlay-for-sla/references/saas-agent-sla-valuation-adjustments.md:14",
+   "line": "**`skills/meta-valuation/references/saas-agent-sla-valuation-adjustments.md`**",
+   "reference": "skills/meta-valuation/references"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-agent-valuation-overlay-for-sla/references/saas-agent-sla-valuation-adjustments.md:59",
+   "line": "- **Canonical valuation overlay**: `skills/meta-valuation/references/saas-agent-sla-valuation-adjustments.md`",
+   "reference": "skills/meta-valuation/references"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-agent-valuation-overlay-for-sla/references/saas-agent-sla-valuation-adjustments.md:61",
+   "line": "- Bankability evidence: `skills/meta-bankability-scoring/references/saas-agent-sla-bankability-checklist.md`",
+   "reference": "skills/meta-bankability-scoring/references"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-agent-valuation-overlay-for-sla/references/saas-agent-sla-valuation-adjustments.md:62",
+   "line": "- Investor narrative: `skills/11-funding-request/saas-agent-investor-narrative-on-sla/SKILL.md`",
+   "reference": "skills/11-funding-request/saas-agent-investor-narrative-on-sla"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-agent-valuation-overlay-for-sla/references/saas-agent-sla-valuation-adjustments.md:63",
+   "line": "- Stress overlay: `skills/meta-financial-stress-test/references/saas-agent-sla-stress-test-scenarios.md`",
+   "reference": "skills/meta-financial-stress-test/references"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-agent-valuation-overlay-for-sla/references/saas-agent-sla-valuation-adjustments.md:64",
+   "line": "- Data-room evidence: `skills/meta-due-diligence/references/saas-agent-sla-data-room-contents.md`",
+   "reference": "skills/meta-due-diligence/references"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-ai-bankability-and-investor-readiness/SKILL.md:147",
+   "line": "- `skills/10-financial-projections/saas-ai-unit-economics-and-cogs/SKILL.md`",
+   "reference": "skills/10-financial-projections/saas-ai-unit-economics-and-cogs"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-ai-bankability-and-investor-readiness/SKILL.md:148",
+   "line": "- `skills/06-competitive-analysis/saas-ai-moat-and-defensibility/SKILL.md`",
+   "reference": "skills/06-competitive-analysis/saas-ai-moat-and-defensibility"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-ai-bankability-and-investor-readiness/SKILL.md:149",
+   "line": "- `skills/12-risk-analysis/saas-ai-risk-and-stress-test/SKILL.md`",
+   "reference": "skills/12-risk-analysis/saas-ai-risk-and-stress-test"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-ai-valuation-adjustments/SKILL.md:154",
+   "line": "- `skills/06-competitive-analysis/saas-ai-moat-and-defensibility/SKILL.md` — moat feeds adjustments",
+   "reference": "skills/06-competitive-analysis/saas-ai-moat-and-defensibility"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-ai-valuation-adjustments/SKILL.md:155",
+   "line": "- `skills/10-financial-projections/saas-ai-unit-economics-and-cogs/SKILL.md`",
+   "reference": "skills/10-financial-projections/saas-ai-unit-economics-and-cogs"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-bankability-scoring/references/saas-agent-bankability-checklist.md:12",
+   "line": "`skills/meta-agent-bankability-and-investor-readiness/references/saas-agent-bankability-checklist.md`",
+   "reference": "skills/meta-agent-bankability-and-investor-readiness/references"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-bankability-scoring/references/saas-agent-sla-bankability-checklist.md:138",
+   "line": "- `skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves/SKILL.md` — reserve methodology",
+   "reference": "skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-bankability-scoring/references/saas-agent-sla-bankability-checklist.md:139",
+   "line": "- `skills/meta-due-diligence/references/saas-agent-sla-data-room-contents.md` — data room",
+   "reference": "skills/meta-due-diligence/references"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-bankability-scoring/references/saas-agent-sla-bankability-checklist.md:140",
+   "line": "- `skills/11-funding-request/saas-agent-investor-narrative-on-sla/SKILL.md` — narrative",
+   "reference": "skills/11-funding-request/saas-agent-investor-narrative-on-sla"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-bankability-scoring/references/saas-bankability-scorecard.md:27",
+   "line": "See `skills/saas-bankability-and-investor-readiness/references/saas-bankability-checklist.md` for the full 100-point scorecard. Summary:",
+   "reference": "skills/saas-bankability-and-investor-readiness/references"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-financial-stress-test/references/saas-agent-sla-stress-test-scenarios.md:230",
+   "line": "- `skills/12-risk-analysis/saas-agent-sla-risk/SKILL.md` — risk register parent",
+   "reference": "skills/12-risk-analysis/saas-agent-sla-risk"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-financial-stress-test/references/saas-agent-sla-stress-test-scenarios.md:231",
+   "line": "- `skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves/SKILL.md` — reserves",
+   "reference": "skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-financial-stress-test/references/saas-agent-sla-stress-test-scenarios.md:232",
+   "line": "- `skills/10-financial-projections/saas-agent-sla-economics-in-projection/SKILL.md` — projection integration",
+   "reference": "skills/10-financial-projections/saas-agent-sla-economics-in-projection"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-valuation/references/saas-agent-sla-valuation-adjustments.md:128",
+   "line": "- `skills/meta-bankability-scoring/references/saas-agent-sla-bankability-checklist.md` — bankability evidence",
+   "reference": "skills/meta-bankability-scoring/references"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-valuation/references/saas-agent-sla-valuation-adjustments.md:129",
+   "line": "- `skills/11-funding-request/saas-agent-investor-narrative-on-sla/SKILL.md` — narrative",
+   "reference": "skills/11-funding-request/saas-agent-investor-narrative-on-sla"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-finance/meta-valuation/references/saas-agent-valuation-adjustments.md:12",
+   "line": "`skills/meta-agent-valuation-adjustments/references/saas-agent-valuation-adjustments.md`",
+   "reference": "skills/meta-agent-valuation-adjustments/references"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-reporting/meta-agent-board-and-investor-reporting/SKILL.md:144",
+   "line": "- `skills/meta-board-and-investor-reporting/references/saas-ai-board-pack-section.md` — AI block parent",
+   "reference": "skills/meta-board-and-investor-reporting/references"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-reporting/meta-agent-board-and-investor-reporting/references/saas-agent-sla-board-block.md:177",
+   "line": "- `skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves/SKILL.md` — reserves",
+   "reference": "skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-reporting/meta-agent-board-and-investor-reporting/references/saas-agent-sla-board-block.md:178",
+   "line": "- `skills/12-risk-analysis/saas-agent-sla-risk/references/saas-agent-sla-risk-register.md` — risk register",
+   "reference": "skills/12-risk-analysis/saas-agent-sla-risk/references"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-reporting/meta-agent-board-and-investor-reporting/references/saas-agent-sla-board-block.md:179",
+   "line": "- `skills/11-funding-request/saas-agent-investor-narrative-on-sla/SKILL.md` — narrative",
+   "reference": "skills/11-funding-request/saas-agent-investor-narrative-on-sla"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-reporting/meta-agent-board-and-investor-reporting/references/saas-agent-sla-board-block.md:180",
+   "line": "- `skills/meta-bankability-scoring/references/saas-agent-sla-bankability-checklist.md` — scorecard",
+   "reference": "skills/meta-bankability-scoring/references"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-reporting/meta-board-and-investor-reporting/SKILL.md:120",
+   "line": "When AI is material to revenue or product, every quarterly board pack must include an AI section per `references/saas-ai-board-pack-section.md`. Every monthly investor update must include the AI block",
+   "reference": "skills/11-funding-request/references"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-reporting/meta-board-and-investor-reporting/SKILL.md:132",
+   "line": "When the company ships an agent or multi-agent product, every quarterly board pack must include the **Agent Section** per `skills/meta-agent-board-and-investor-reporting/references/saas-agent-board-pa",
+   "reference": "skills/meta-agent-board-and-investor-reporting/references"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-reporting/meta-board-and-investor-reporting/SKILL.md:132",
+   "line": "When the company ships an agent or multi-agent product, every quarterly board pack must include the **Agent Section** per `skills/meta-agent-board-and-investor-reporting/references/saas-agent-board-pa",
+   "reference": "skills/meta-agent-board-and-investor-reporting/references"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-reporting/meta-board-and-investor-reporting/SKILL.md:158",
+   "line": "- `skills/meta-agent-board-and-investor-reporting/references/saas-agent-board-pack-section.md` — Agent section template",
+   "reference": "skills/meta-agent-board-and-investor-reporting/references"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-reporting/meta-board-and-investor-reporting/SKILL.md:159",
+   "line": "- `skills/meta-agent-board-and-investor-reporting/references/saas-agent-investor-update-block.md` — Agent investor-update block",
+   "reference": "skills/meta-agent-board-and-investor-reporting/references"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-strategy/meta-due-diligence/references/saas-agent-sla-data-room-contents.md:222",
+   "line": "- `skills/meta-due-diligence/references/saas-agent-data-room-contents.md` — agent data room parent",
+   "reference": "skills/meta-due-diligence/references"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-strategy/meta-due-diligence/references/saas-agent-sla-data-room-contents.md:223",
+   "line": "- `skills/meta-bankability-scoring/references/saas-agent-sla-bankability-checklist.md` — scorecard",
+   "reference": "skills/meta-bankability-scoring/references"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-strategy/meta-due-diligence/references/saas-agent-sla-data-room-contents.md:224",
+   "line": "- `skills/meta-valuation/references/saas-agent-sla-valuation-adjustments.md` — valuation overlay",
+   "reference": "skills/meta-valuation/references"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-strategy/meta-due-diligence/references/saas-agent-sla-data-room-contents.md:225",
+   "line": "- `skills/11-funding-request/saas-agent-investor-narrative-on-sla/SKILL.md` — narrative",
+   "reference": "skills/11-funding-request/saas-agent-investor-narrative-on-sla"
+  },
+  {
+   "at": "business-plan-skills/skills/meta-strategy/meta-due-diligence/references/saas-agent-sla-data-room-contents.md:227",
+   "line": "- `skills/meta-financial-stress-test/references/saas-agent-sla-stress-test-scenarios.md` — stress scenarios",
+   "reference": "skills/meta-financial-stress-test/references"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/01-executive-summary/references/saas-agent-sla-executive-summary-paragraph.md:105",
+   "line": "- `skills/01-executive-summary/references/saas-agent-executive-summary-block.md` — standard agent exec block",
+   "reference": "skills/01-executive-summary/references"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/01-executive-summary/references/saas-agent-sla-executive-summary-paragraph.md:106",
+   "line": "- `skills/01-executive-summary/references/saas-ai-executive-summary-block.md` — AI-on-SaaS exec block",
+   "reference": "skills/01-executive-summary/references"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/01-executive-summary/references/saas-agent-sla-executive-summary-paragraph.md:108",
+   "line": "- `skills/11-funding-request/saas-agent-investor-narrative-on-sla/SKILL.md` — investor narrative",
+   "reference": "skills/11-funding-request/saas-agent-investor-narrative-on-sla"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/01-executive-summary/references/saas-agent-sla-executive-summary-paragraph.md:110",
+   "line": "- `skills/meta-bankability-scoring/references/saas-agent-sla-bankability-checklist.md` — scorecard",
+   "reference": "skills/meta-bankability-scoring/references"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/01-executive-summary/references/saas-agent-sla-executive-summary-paragraph.md:111",
+   "line": "- `skills/10-financial-projections/saas-agent-revenue-recognition/SKILL.md` — rev-rec policy",
+   "reference": "skills/10-financial-projections/saas-agent-revenue-recognition"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/03-products-services/saas-agent-product-strategy-and-roadmap/SKILL.md:110",
+   "line": "- `skills/03-products-services/saas-ai-product-strategy-and-roadmap/SKILL.md` — parent",
+   "reference": "skills/03-products-services/saas-ai-product-strategy-and-roadmap"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/03-products-services/saas-agent-product-strategy-and-roadmap/SKILL.md:111",
+   "line": "- `skills/06-competitive-analysis/saas-agent-moat-and-wrapper-risk/SKILL.md` — moat input",
+   "reference": "skills/06-competitive-analysis/saas-agent-moat-and-wrapper-risk"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/03-products-services/saas-agent-product-strategy-and-roadmap/SKILL.md:112",
+   "line": "- `skills/10-financial-projections/saas-agent-unit-economics-and-cogs/SKILL.md` — cost gate",
+   "reference": "skills/10-financial-projections/saas-agent-unit-economics-and-cogs"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/03-products-services/saas-agent-product-strategy-and-roadmap/SKILL.md:113",
+   "line": "- `skills/12-risk-analysis/saas-agent-risk-and-stress-test/SKILL.md` — risk",
+   "reference": "skills/12-risk-analysis/saas-agent-risk-and-stress-test"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/03-products-services/saas-ai-product-strategy-and-roadmap/SKILL.md:110",
+   "line": "- `skills/14-ai-integration/references/saas-ai-feature-roadmap-in-business-plan.md` — feature roadmap with ARR milestones",
+   "reference": "skills/14-ai-integration/references"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/03-products-services/saas-ai-product-strategy-and-roadmap/SKILL.md:113",
+   "line": "- `skills/06-competitive-analysis/saas-ai-moat-and-defensibility/SKILL.md`",
+   "reference": "skills/06-competitive-analysis/saas-ai-moat-and-defensibility"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/03-products-services/saas-ai-product-strategy-and-roadmap/SKILL.md:114",
+   "line": "- `skills/10-financial-projections/saas-ai-cost-of-tenant-calculator/SKILL.md`",
+   "reference": "skills/10-financial-projections/saas-ai-cost-of-tenant-calculator"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/06-competitive-analysis/references/ai-moats-vs-false-moats.md:10",
+   "line": "Pointer reference for Section 06 competitive-analysis enhancement. The full discipline lives in `skills/06-competitive-analysis/saas-ai-moat-and-defensibility/references/saas-ai-moats-and-defensibilit",
+   "reference": "skills/06-competitive-analysis/saas-ai-moat-and-defensibility/references"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/06-competitive-analysis/references/saas-moats-and-defensibility.md:73",
+   "line": "(See `skills/14-ai-integration/references/saas-ai-feature-roadmap-in-business-plan.md` for the AI-moat test.)",
+   "reference": "skills/14-ai-integration/references"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/06-competitive-analysis/saas-agent-moat-and-wrapper-risk/SKILL.md:130",
+   "line": "- `skills/06-competitive-analysis/saas-ai-moat-and-defensibility/SKILL.md` — AI moat parent",
+   "reference": "skills/06-competitive-analysis/saas-ai-moat-and-defensibility"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/06-competitive-analysis/saas-ai-moat-and-defensibility/SKILL.md:108",
+   "line": "- `skills/14-ai-integration/references/saas-ai-feature-roadmap-in-business-plan.md` — feature roadmap discipline",
+   "reference": "skills/14-ai-integration/references"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/07-marketing-sales-strategy/references/ai-feature-pricing-and-positioning.md:10",
+   "line": "Pointer reference for Section 07 marketing/sales-strategy. Full pricing architecture in `skills/07-marketing-sales-strategy/saas-ai-pricing-strategy/references/saas-ai-pricing-architecture.md`. This f",
+   "reference": "skills/07-marketing-sales-strategy/saas-ai-pricing-strategy/references"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/07-marketing-sales-strategy/saas-agent-commercial-packaging-economics/SKILL.md:248",
+   "line": "- `skills/07-marketing-sales-strategy/saas-agent-pricing-strategy/SKILL.md` — pricing primitive parent",
+   "reference": "skills/07-marketing-sales-strategy/saas-agent-pricing-strategy"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/07-marketing-sales-strategy/saas-agent-commercial-packaging-economics/SKILL.md:250",
+   "line": "- `skills/10-financial-projections/saas-agent-revenue-recognition/SKILL.md` — rev-rec on packaging migration",
+   "reference": "skills/10-financial-projections/saas-agent-revenue-recognition"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/07-marketing-sales-strategy/saas-agent-commercial-packaging-economics/SKILL.md:251",
+   "line": "- `skills/10-financial-projections/saas-agent-unit-economics-and-cogs/SKILL.md` — cost floor",
+   "reference": "skills/10-financial-projections/saas-agent-unit-economics-and-cogs"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/07-marketing-sales-strategy/saas-agent-outcome-pricing-business-case/SKILL.md:216",
+   "line": "- `skills/07-marketing-sales-strategy/saas-agent-pricing-strategy/SKILL.md` — pricing primitives parent",
+   "reference": "skills/07-marketing-sales-strategy/saas-agent-pricing-strategy"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/07-marketing-sales-strategy/saas-agent-outcome-pricing-business-case/SKILL.md:217",
+   "line": "- `skills/10-financial-projections/saas-agent-revenue-recognition/SKILL.md` — variable-consideration treatment",
+   "reference": "skills/10-financial-projections/saas-agent-revenue-recognition"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/07-marketing-sales-strategy/saas-agent-outcome-pricing-business-case/SKILL.md:218",
+   "line": "- `skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves/SKILL.md` — refund reserve",
+   "reference": "skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/07-marketing-sales-strategy/saas-agent-pricing-strategy/SKILL.md:171",
+   "line": "- `skills/10-financial-projections/saas-agent-unit-economics-and-cogs/SKILL.md` — cost floor",
+   "reference": "skills/10-financial-projections/saas-agent-unit-economics-and-cogs"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/07-marketing-sales-strategy/saas-agent-pricing-strategy/SKILL.md:172",
+   "line": "- `skills/07-marketing-sales-strategy/saas-ai-pricing-strategy/SKILL.md` — AI pricing parent",
+   "reference": "skills/07-marketing-sales-strategy/saas-ai-pricing-strategy"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/07-marketing-sales-strategy/saas-ai-pricing-strategy/SKILL.md:125",
+   "line": "- `skills/10-financial-projections/saas-ai-cost-of-tenant-calculator/SKILL.md` — cost input",
+   "reference": "skills/10-financial-projections/saas-ai-cost-of-tenant-calculator"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/07-marketing-sales-strategy/saas-ai-pricing-strategy/SKILL.md:126",
+   "line": "- `skills/10-financial-projections/saas-ai-unit-economics-and-cogs/SKILL.md` — margin output",
+   "reference": "skills/10-financial-projections/saas-ai-unit-economics-and-cogs"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/09-management-team/saas-agent-talent-strategy/SKILL.md:154",
+   "line": "- `skills/09-management-team/saas-ai-talent-strategy/SKILL.md` — AI talent parent",
+   "reference": "skills/09-management-team/saas-ai-talent-strategy"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves/SKILL.md:253",
+   "line": "- `skills/10-financial-projections/saas-agent-revenue-recognition/SKILL.md` — recognition side",
+   "reference": "skills/10-financial-projections/saas-agent-revenue-recognition"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves/SKILL.md:254",
+   "line": "- `skills/10-financial-projections/saas-agent-sla-cogs-treatment/SKILL.md` — COGS / contra-revenue split",
+   "reference": "skills/10-financial-projections/saas-agent-sla-cogs-treatment"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves/SKILL.md:255",
+   "line": "- `skills/10-financial-projections/saas-agent-unit-economics-and-cogs/SKILL.md` — cost waterfall",
+   "reference": "skills/10-financial-projections/saas-agent-unit-economics-and-cogs"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-revenue-recognition/SKILL.md:223",
+   "line": "- `skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves/SKILL.md` — liability side",
+   "reference": "skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-revenue-recognition/SKILL.md:224",
+   "line": "- `skills/10-financial-projections/saas-agent-sla-cogs-treatment/SKILL.md` — COGS-vs-contra-revenue",
+   "reference": "skills/10-financial-projections/saas-agent-sla-cogs-treatment"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-revenue-recognition/SKILL.md:225",
+   "line": "- `skills/10-financial-projections/saas-agent-unit-economics-and-cogs/SKILL.md` — unit economics",
+   "reference": "skills/10-financial-projections/saas-agent-unit-economics-and-cogs"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-revenue-recognition/SKILL.md:226",
+   "line": "- `skills/07-marketing-sales-strategy/saas-agent-pricing-strategy/SKILL.md` — pricing primitives",
+   "reference": "skills/07-marketing-sales-strategy/saas-agent-pricing-strategy"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-revenue-recognition/references/saas-agent-revenue-recognition-policy-template.md:272",
+   "line": "- Deferred revenue and reserve mechanics: `skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves/SKILL.md`",
+   "reference": "skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-revenue-recognition/references/saas-agent-revenue-recognition-policy-template.md:273",
+   "line": "- SLA-COGS treatment: `skills/10-financial-projections/saas-agent-sla-cogs-treatment/SKILL.md`",
+   "reference": "skills/10-financial-projections/saas-agent-sla-cogs-treatment"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-revenue-recognition/references/saas-agent-revenue-recognition-policy-template.md:274",
+   "line": "- Pricing primitives: `skills/07-marketing-sales-strategy/saas-agent-pricing-strategy/SKILL.md`",
+   "reference": "skills/07-marketing-sales-strategy/saas-agent-pricing-strategy"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-sla-cogs-treatment/SKILL.md:203",
+   "line": "- `skills/10-financial-projections/saas-agent-revenue-recognition/SKILL.md` — contra-revenue side",
+   "reference": "skills/10-financial-projections/saas-agent-revenue-recognition"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-sla-cogs-treatment/SKILL.md:204",
+   "line": "- `skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves/SKILL.md` — reserve side",
+   "reference": "skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-sla-cogs-treatment/SKILL.md:205",
+   "line": "- `skills/10-financial-projections/saas-agent-unit-economics-and-cogs/SKILL.md` — COGS waterfall consumer",
+   "reference": "skills/10-financial-projections/saas-agent-unit-economics-and-cogs"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-sla-economics-in-projection/SKILL.md:217",
+   "line": "- `skills/10-financial-projections/saas-agent-revenue-recognition/SKILL.md` — rev-rec side",
+   "reference": "skills/10-financial-projections/saas-agent-revenue-recognition"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-sla-economics-in-projection/SKILL.md:218",
+   "line": "- `skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves/SKILL.md` — reserve side",
+   "reference": "skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-sla-economics-in-projection/SKILL.md:219",
+   "line": "- `skills/10-financial-projections/saas-agent-sla-cogs-treatment/SKILL.md` — COGS side",
+   "reference": "skills/10-financial-projections/saas-agent-sla-cogs-treatment"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-sla-economics-in-projection/SKILL.md:220",
+   "line": "- `skills/10-financial-projections/saas-agent-unit-economics-and-cogs/SKILL.md` — unit economics",
+   "reference": "skills/10-financial-projections/saas-agent-unit-economics-and-cogs"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-sla-economics-in-projection/SKILL.md:221",
+   "line": "- `skills/12-risk-analysis/saas-agent-sla-risk/SKILL.md` — risk register consumer",
+   "reference": "skills/12-risk-analysis/saas-agent-sla-risk"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-sla-economics-in-projection/references/africa-agent-sla-context.md:243",
+   "line": "- `skills/10-financial-projections/saas-agent-sla-economics-in-projection/SKILL.md` — projection parent",
+   "reference": "skills/10-financial-projections/saas-agent-sla-economics-in-projection"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-sla-economics-in-projection/references/africa-agent-sla-context.md:244",
+   "line": "- `skills/10-financial-projections/saas-agent-revenue-recognition/SKILL.md` — rev-rec",
+   "reference": "skills/10-financial-projections/saas-agent-revenue-recognition"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-sla-economics-in-projection/references/africa-agent-sla-context.md:245",
+   "line": "- `skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves/SKILL.md` — reserves",
+   "reference": "skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-sla-economics-in-projection/references/africa-agent-sla-context.md:246",
+   "line": "- `skills/10-financial-projections/saas-agent-sla-cogs-treatment/SKILL.md` — COGS",
+   "reference": "skills/10-financial-projections/saas-agent-sla-cogs-treatment"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-sla-economics-in-projection/references/africa-agent-sla-context.md:247",
+   "line": "- `skills/12-risk-analysis/saas-agent-sla-risk/SKILL.md` — risk register",
+   "reference": "skills/12-risk-analysis/saas-agent-sla-risk"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-sla-economics-in-projection/references/africa-agent-sla-context.md:249",
+   "line": "- `skills/11-funding-request/saas-agent-investor-narrative-on-sla/SKILL.md` — narrative",
+   "reference": "skills/11-funding-request/saas-agent-investor-narrative-on-sla"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-unit-economics-and-cogs/SKILL.md:178",
+   "line": "- `skills/10-financial-projections/saas-ai-unit-economics-and-cogs/SKILL.md` — parent AI unit economics",
+   "reference": "skills/10-financial-projections/saas-ai-unit-economics-and-cogs"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-unit-economics-and-cogs/SKILL.md:179",
+   "line": "- `skills/07-marketing-sales-strategy/saas-agent-pricing-strategy/SKILL.md` — pricing that protects agent margin",
+   "reference": "skills/07-marketing-sales-strategy/saas-agent-pricing-strategy"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-unit-economics-and-cogs/SKILL.md:180",
+   "line": "- `skills/12-risk-analysis/saas-agent-risk-and-stress-test/SKILL.md` — stress-test consumer",
+   "reference": "skills/12-risk-analysis/saas-agent-risk-and-stress-test"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-unit-economics-and-cogs/SKILL.md:187",
+   "line": "- `skills/10-financial-projections/saas-agent-sla-cogs-treatment/SKILL.md` — SLA-COGS classification",
+   "reference": "skills/10-financial-projections/saas-agent-sla-cogs-treatment"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-unit-economics-and-cogs/SKILL.md:188",
+   "line": "- `skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves/SKILL.md` — SLA-credit reserve, refund reserve, deferred revenue",
+   "reference": "skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-unit-economics-and-cogs/SKILL.md:189",
+   "line": "- `skills/10-financial-projections/saas-agent-revenue-recognition/SKILL.md` — ASC 606 / IFRS 15 per pricing primitive",
+   "reference": "skills/10-financial-projections/saas-agent-revenue-recognition"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-agent-unit-economics-and-cogs/SKILL.md:190",
+   "line": "- `skills/10-financial-projections/saas-agent-sla-economics-in-projection/SKILL.md` — SLA performance as projection driver",
+   "reference": "skills/10-financial-projections/saas-agent-sla-economics-in-projection"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-ai-cost-of-tenant-calculator/SKILL.md:155",
+   "line": "- `skills/10-financial-projections/saas-ai-unit-economics-and-cogs/SKILL.md` — sister skill",
+   "reference": "skills/10-financial-projections/saas-ai-unit-economics-and-cogs"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-ai-cost-of-tenant-calculator/SKILL.md:156",
+   "line": "- `skills/14-ai-integration/references/saas-ai-feature-roadmap-in-business-plan.md` — roadmap discipline",
+   "reference": "skills/14-ai-integration/references"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-ai-cost-of-tenant-calculator/references/saas-agent-cost-of-tenant-extension.md:47",
+   "line": "`skills/10-financial-projections/saas-agent-unit-economics-and-cogs/references/saas-agent-cost-per-task-calculator-spec.md`",
+   "reference": "skills/10-financial-projections/saas-agent-unit-economics-and-cogs/references"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/10-financial-projections/saas-ai-unit-economics-and-cogs/SKILL.md:128",
+   "line": "- `skills/14-ai-integration/references/saas-ai-feature-roadmap-in-business-plan.md` — AI roadmap discipline",
+   "reference": "skills/14-ai-integration/references"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/11-funding-request/saas-agent-funding-stage-playbook/SKILL.md:118",
+   "line": "- `skills/11-funding-request/saas-ai-funding-stage-playbook/SKILL.md` — AI parent",
+   "reference": "skills/11-funding-request/saas-ai-funding-stage-playbook"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/11-funding-request/saas-agent-investor-narrative-on-sla/SKILL.md:159",
+   "line": "- `skills/11-funding-request/saas-agent-funding-stage-playbook/SKILL.md` — funding stage parent",
+   "reference": "skills/11-funding-request/saas-agent-funding-stage-playbook"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/11-funding-request/saas-agent-investor-narrative-on-sla/SKILL.md:161",
+   "line": "- `skills/meta-bankability-scoring/references/saas-agent-sla-bankability-checklist.md` — bankability evidence",
+   "reference": "skills/meta-bankability-scoring/references"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/11-funding-request/saas-agent-investor-narrative-on-sla/SKILL.md:162",
+   "line": "- `skills/meta-due-diligence/references/saas-agent-sla-data-room-contents.md` — data-room SLA section",
+   "reference": "skills/meta-due-diligence/references"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/11-funding-request/saas-agent-investor-narrative-on-sla/SKILL.md:163",
+   "line": "- `skills/meta-agent-board-and-investor-reporting/references/saas-agent-sla-board-block.md` — board pack SLA",
+   "reference": "skills/meta-agent-board-and-investor-reporting/references"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/11-funding-request/saas-agent-investor-narrative-on-sla/SKILL.md:164",
+   "line": "- `skills/01-executive-summary/references/saas-agent-sla-executive-summary-paragraph.md` — exec summary",
+   "reference": "skills/01-executive-summary/references"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/11-funding-request/saas-agent-investor-narrative-on-sla/references/saas-agent-sla-investor-narrative.md:82",
+   "line": "The investor-narrative skill produces the narrative; the data room produces the evidence. The full contents index lives at `skills/meta-due-diligence/references/saas-agent-sla-data-room-contents.md`. ",
+   "reference": "skills/meta-due-diligence/references"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/11-funding-request/saas-ai-funding-stage-playbook/SKILL.md:118",
+   "line": "- `skills/11b-grant-proposal/saas-ai-for-good-grant-proposal/SKILL.md` — grant pathway",
+   "reference": "skills/11b-grant-proposal/saas-ai-for-good-grant-proposal"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/12-risk-analysis/references/saas-agent-risk-register-template.md:12",
+   "line": "`skills/12-risk-analysis/saas-agent-risk-and-stress-test/references/saas-agent-risk-register-template.md`",
+   "reference": "skills/12-risk-analysis/saas-agent-risk-and-stress-test/references"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/12-risk-analysis/saas-agent-risk-and-stress-test/SKILL.md:174",
+   "line": "- `skills/12-risk-analysis/saas-ai-risk-and-stress-test/SKILL.md` — AI risk parent",
+   "reference": "skills/12-risk-analysis/saas-ai-risk-and-stress-test"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/12-risk-analysis/saas-agent-risk-and-stress-test/SKILL.md:175",
+   "line": "- `skills/10-financial-projections/saas-agent-unit-economics-and-cogs/SKILL.md` — reserves consumer",
+   "reference": "skills/10-financial-projections/saas-agent-unit-economics-and-cogs"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/12-risk-analysis/saas-agent-risk-and-stress-test/SKILL.md:178",
+   "line": "- `skills/12-risk-analysis/saas-agent-sla-risk/SKILL.md` — SLA-specific risk register",
+   "reference": "skills/12-risk-analysis/saas-agent-sla-risk"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/12-risk-analysis/saas-agent-risk-and-stress-test/SKILL.md:179",
+   "line": "- `skills/12-risk-analysis/saas-agent-sla-risk/references/saas-agent-sla-risk-register.md` — populated SLA risk register",
+   "reference": "skills/12-risk-analysis/saas-agent-sla-risk/references"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/12-risk-analysis/saas-agent-risk-and-stress-test/SKILL.md:180",
+   "line": "- `skills/meta-financial-stress-test/references/saas-agent-sla-stress-test-scenarios.md` — 8 standardised SLA stress scenarios with financial impact",
+   "reference": "skills/meta-financial-stress-test/references"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/12-risk-analysis/saas-agent-risk-and-stress-test/SKILL.md:182",
+   "line": "- `skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves/SKILL.md` — SLA-credit and refund reserve methodology",
+   "reference": "skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/12-risk-analysis/saas-agent-sla-risk/SKILL.md:228",
+   "line": "- `skills/12-risk-analysis/saas-agent-risk-and-stress-test/SKILL.md` — agent risk parent",
+   "reference": "skills/12-risk-analysis/saas-agent-risk-and-stress-test"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/12-risk-analysis/saas-agent-sla-risk/SKILL.md:229",
+   "line": "- `skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves/SKILL.md` — reserves",
+   "reference": "skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/12-risk-analysis/saas-agent-sla-risk/SKILL.md:230",
+   "line": "- `skills/10-financial-projections/saas-agent-sla-economics-in-projection/SKILL.md` — projection",
+   "reference": "skills/10-financial-projections/saas-agent-sla-economics-in-projection"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/12-risk-analysis/saas-agent-sla-risk/references/saas-agent-sla-risk-register.md:252",
+   "line": "- `skills/12-risk-analysis/saas-agent-risk-and-stress-test/SKILL.md` — agent risk register parent",
+   "reference": "skills/12-risk-analysis/saas-agent-risk-and-stress-test"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/12-risk-analysis/saas-agent-sla-risk/references/saas-agent-sla-risk-register.md:253",
+   "line": "- `skills/meta-financial-stress-test/references/saas-agent-sla-stress-test-scenarios.md` — financial scenarios",
+   "reference": "skills/meta-financial-stress-test/references"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/12-risk-analysis/saas-agent-sla-risk/references/saas-agent-sla-risk-register.md:254",
+   "line": "- `skills/meta-agent-sla-financial-controls/references/saas-agent-sla-financial-controls-policy.md` — controls",
+   "reference": "skills/meta-agent-sla-financial-controls/references"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/12-risk-analysis/saas-agent-sla-risk/references/saas-agent-sla-risk-register.md:255",
+   "line": "- `skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves/SKILL.md` — reserves",
+   "reference": "skills/10-financial-projections/saas-agent-deferred-revenue-and-credit-reserves"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/13-implementation-timeline/saas-agent-implementation-timeline/SKILL.md:119",
+   "line": "- `skills/03-products-services/saas-agent-product-strategy-and-roadmap/SKILL.md` — roadmap input",
+   "reference": "skills/03-products-services/saas-agent-product-strategy-and-roadmap"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/13-implementation-timeline/saas-agent-implementation-timeline/SKILL.md:120",
+   "line": "- `skills/12-risk-analysis/saas-agent-risk-and-stress-test/SKILL.md` — risk input",
+   "reference": "skills/12-risk-analysis/saas-agent-risk-and-stress-test"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/13-implementation-timeline/saas-agent-implementation-timeline/SKILL.md:121",
+   "line": "- `skills/10-financial-projections/saas-agent-unit-economics-and-cogs/SKILL.md` — cost gate",
+   "reference": "skills/10-financial-projections/saas-agent-unit-economics-and-cogs"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/16-sustainability-strategy/saas-agent-sustainability-and-ethics/SKILL.md:125",
+   "line": "- `skills/16-sustainability-strategy/saas-ai-sustainability-and-ethics/SKILL.md` — AI parent",
+   "reference": "skills/16-sustainability-strategy/saas-ai-sustainability-and-ethics"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/16-sustainability-strategy/saas-agent-sustainability-and-ethics/SKILL.md:127",
+   "line": "- `skills/12-risk-analysis/saas-agent-risk-and-stress-test/SKILL.md` — risk",
+   "reference": "skills/12-risk-analysis/saas-agent-risk-and-stress-test"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/16-sustainability-strategy/saas-ai-sustainability-and-ethics/SKILL.md:126",
+   "line": "- `skills/12-risk-analysis/saas-ai-risk-and-stress-test/SKILL.md` — risk cross-reference",
+   "reference": "skills/12-risk-analysis/saas-ai-risk-and-stress-test"
+  },
+  {
+   "at": "business-plan-skills/skills/pipeline/16-sustainability-strategy/saas-ai-sustainability-and-ethics/SKILL.md:128",
+   "line": "- `skills/14-ai-integration/references/ai-sustainability-tools.md` — sustainability tools reference",
+   "reference": "skills/14-ai-integration/references"
+  },
+  {
+   "at": "business-plan-skills/skills/saas/saas-bankability-and-investor-readiness/SKILL.md:146",
+   "line": "When AI is material to the plan, the SaaS bankability score is necessary but not sufficient. Add the AI bankability scorecard from `skills/meta-ai-bankability-and-investor-readiness/SKILL.md` and `ski",
+   "reference": "skills/meta-bankability-scoring/references"
+  },
+  {
+   "at": "business-plan-skills/skills/saas/saas-bankability-and-investor-readiness/SKILL.md:159",
+   "line": "- `skills/meta-bankability-scoring/references/saas-ai-bankability-checklist.md` — AI scorecard",
+   "reference": "skills/meta-bankability-scoring/references"
+  },
+  {
+   "at": "business-plan-skills/skills/saas/saas-valuation-and-fundraising-strategy/SKILL.md:113",
+   "line": "When AI is material to the plan, apply the AI valuation overlay from `skills/meta-ai-valuation-adjustments/SKILL.md` and `skills/meta-valuation/references/saas-ai-valuation-adjustments.md`. The framew",
+   "reference": "skills/meta-valuation/references"
+  },
+  {
+   "at": "business-plan-skills/skills/saas/saas-valuation-and-fundraising-strategy/SKILL.md:134",
+   "line": "- `skills/meta-valuation/references/saas-ai-valuation-adjustments.md` — AI premium / discount full framework",
+   "reference": "skills/meta-valuation/references"
+  },
+  {
+   "at": "business-plan-skills/skills/saas/saas-valuation-and-fundraising-strategy/SKILL.md:136",
+   "line": "- `skills/11-funding-request/saas-ai-funding-stage-playbook/SKILL.md` — AI funding stage playbook",
+   "reference": "skills/11-funding-request/saas-ai-funding-stage-playbook"
+  },
+  {
+   "at": "chwezi-dev-engine/skills/frontend-ux/pos-sales-operations-engineering/SKILL.md:179",
+   "line": "- `skills/sdlc-meta/reliability-engineering`",
+   "reference": "skills/sdlc-meta/reliability-engineering"
+  },
+  {
+   "at": "chwezi-dev-engine/skills/saas/saas-business-metrics/references/saas-growth-metrics/references/guardrail-metrics.md:60",
+   "line": "- `skills/experiment-engineering/references/experiment-spec-template.md` — where guardrails sit in the spec.",
+   "reference": "skills/experiment-engineering/references"
+  },
+  {
+   "at": "chwezi-dev-engine/skills/sdlc-meta/skill-writing/references/prompting-patterns-for-skills.md:475",
+   "line": "- `skills/feature-planning/references/prompting-patterns.md` - Implementation plan patterns",
+   "reference": "skills/feature-planning/references"
+  },
+  {
+   "at": "website-skills/skills/content-copy/brand-voice/references/voice-profile-schema.md:6",
+   "line": "Adapted from ECC's `skills/brand-voice/references/voice-profile-schema.md`",
+   "reference": "skills/brand-voice/references"
+  }
+ ],
+ "most_deferred_to": [
+  {
+   "defers_to_inbound": 20,
+   "skill": "social-media-skills/skills/ai-marketing/ai-readiness-diagnostic"
+  },
+  {
+   "defers_to_inbound": 14,
+   "skill": "social-media-skills/skills/content-writing/caption-writer"
+  },
+  {
+   "defers_to_inbound": 10,
+   "skill": "business-plan-skills/skills/pipeline/10-financial-projections"
+  },
+  {
+   "defers_to_inbound": 10,
+   "skill": "chwezi-dev-engine/skills/product-business/content-writing"
+  },
+  {
+   "defers_to_inbound": 10,
+   "skill": "social-media-skills/skills/business-development/biz-dev-positioning"
+  },
+  {
+   "defers_to_inbound": 10,
+   "skill": "social-media-skills/skills/content-writing"
+  },
+  {
+   "defers_to_inbound": 9,
+   "skill": "business-plan-skills/skills/writing-content/content-writing"
+  },
+  {
+   "defers_to_inbound": 9,
+   "skill": "website-skills/skills/content-copy/content-writing"
+  },
+  {
+   "defers_to_inbound": 7,
+   "skill": "proposal-skills/skills/writing-content/blog-writer"
+  },
+  {
+   "defers_to_inbound": 7,
+   "skill": "social-media-skills/skills/content-writing/blog-writer"
+  }
+ ],
+ "renamed_engine_mentions": [
+  {
+   "at": "business-plan-skills/skills/language/writing-quality/references/english-collocations-and-lexical-precision-2026-09-02.md:3",
+   "current": "digital-research-engine",
+   "line": "[Owning skill](../SKILL.md) | Canonical study: `C:\\wamp64\\www\\digital-research-skills\\docs\\continuous-improvement\\english-collocations-and-lexical-precision-2026-09-02.md`",
+   "name": "digital-research-skills"
+  },
+  {
+   "at": "proposal-skills/skills/language/language-standards/references/english-collocations-and-lexical-precision-2026-09-02.md:3",
+   "current": "digital-research-engine",
+   "line": "[Owning skill](../SKILL.md) | Canonical study: `C:\\wamp64\\www\\digital-research-skills\\docs\\continuous-improvement\\english-collocations-and-lexical-precision-2026-09-02.md`",
+   "name": "digital-research-skills"
+  },
+  {
+   "at": "social-media-skills/skills/language/language-standards/references/english-collocations-and-lexical-precision-2026-09-02.md:3",
+   "current": "digital-research-engine",
+   "line": "[Owning skill](../SKILL.md) | Canonical study: `C:\\wamp64\\www\\digital-research-skills\\docs\\continuous-improvement\\english-collocations-and-lexical-precision-2026-09-02.md`",
+   "name": "digital-research-skills"
+  },
+  {
+   "at": "srs-skills/09-governance-compliance/31-kaizen-engine-and-product-improvement/references/book-driven-kaizen-wave-3-2026-09-02.md:5",
+   "current": "chwezi-dev-engine",
+   "line": "study recorded in the central ledger at `skills-web-dev/docs/continuous-improvement/`.",
+   "name": "skills-web-dev"
+  },
+  {
+   "at": "website-skills/skills/content-copy/language-standards/references/english-collocations-and-lexical-precision-2026-09-02.md:3",
+   "current": "digital-research-engine",
+   "line": "[Owning skill](../SKILL.md) | Canonical study: `C:\\wamp64\\www\\digital-research-skills\\docs\\continuous-improvement\\english-collocations-and-lexical-precision-2026-09-02.md`",
+   "name": "digital-research-skills"
+  }
+ ],
+ "retired_alias_mentions": [
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-agent-approval-audit-completeness -> skills/ai/ai-agent-compliance-controls",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/ai-agent-approval-audit-completeness/entrypoint.md:1",
+   "line": "> Consolidated from skills/ai/ai-agent-approval-audit-completeness/SKILL.md into ai-agent-compliance-controls on 2026-09-24. Load this through skills/ai/ai-agent-compliance-controls/SKILL.md, not as a",
+   "slug": "ai-agent-approval-audit-completeness"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-agent-approval-audit-completeness -> skills/ai/ai-agent-compliance-controls",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/ai-agent-soc2-controls/entrypoint.md:85",
+   "line": "- Companion: `ai-agent-iso27001-controls`, `ai-agent-hipaa-security-controls`, `ai-agent-audit-log-integrity`, `ai-agent-evidence-automation`, `ai-agent-control-testing-and-attestation`, `ai-agent-app",
+   "slug": "ai-agent-approval-audit-completeness"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-agent-approval-audit-completeness -> skills/ai/ai-agent-compliance-controls",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/routing.md:13",
+   "line": "| `ai-agent-approval-audit-completeness` | [references/ai-agent-approval-audit-completeness/entrypoint.md](ai-agent-approval-audit-completeness/entrypoint.md) | Gap-detection job proving every irrever",
+   "slug": "ai-agent-approval-audit-completeness"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-agent-drill-evidence-and-cadence -> skills/ai/ai-agent-compliance-controls",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/ai-agent-drill-evidence-and-cadence/entrypoint.md:1",
+   "line": "> Consolidated from skills/ai/ai-agent-drill-evidence-and-cadence/SKILL.md into ai-agent-compliance-controls on 2026-09-24. Load this through skills/ai/ai-agent-compliance-controls/SKILL.md, not as an",
+   "slug": "ai-agent-drill-evidence-and-cadence"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-agent-drill-evidence-and-cadence -> skills/ai/ai-agent-compliance-controls",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/ai-agent-soc2-controls/entrypoint.md:31",
+   "line": "- The drill cadence (`ai-incident-drill-and-game-day`, `ai-agent-drill-evidence-and-cadence`).",
+   "slug": "ai-agent-drill-evidence-and-cadence"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-agent-drill-evidence-and-cadence -> skills/ai/ai-agent-compliance-controls",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/ai-agent-soc2-controls/entrypoint.md:85",
+   "line": "- Companion: `ai-agent-iso27001-controls`, `ai-agent-hipaa-security-controls`, `ai-agent-audit-log-integrity`, `ai-agent-evidence-automation`, `ai-agent-control-testing-and-attestation`, `ai-agent-app",
+   "slug": "ai-agent-drill-evidence-and-cadence"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-agent-drill-evidence-and-cadence -> skills/ai/ai-agent-compliance-controls",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/routing.md:12",
+   "line": "| `ai-agent-drill-evidence-and-cadence` | [references/ai-agent-drill-evidence-and-cadence/entrypoint.md](ai-agent-drill-evidence-and-cadence/entrypoint.md) | Kill-switch, red-team, eval-drift, and res",
+   "slug": "ai-agent-drill-evidence-and-cadence"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-agent-memory-erasure-proof -> skills/ai/ai-agent-compliance-controls",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/ai-agent-hipaa-security-controls/entrypoint.md:90",
+   "line": "- Companion: `ai-agent-soc2-controls`, `ai-agent-iso27001-controls`, `ai-agent-audit-log-integrity`, `ai-agent-memory-erasure-proof`, `ai-agent-action-approval-and-hitl`, `ai-agent-tool-catalogue-and-",
+   "slug": "ai-agent-memory-erasure-proof"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-agent-memory-erasure-proof -> skills/ai/ai-agent-compliance-controls",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/ai-agent-iso27001-controls/entrypoint.md:199",
+   "line": "- **A.5.34** Privacy: `ai-agent-memory-erasure-proof` evidence packs.",
+   "slug": "ai-agent-memory-erasure-proof"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-agent-memory-erasure-proof -> skills/ai/ai-agent-compliance-controls",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/ai-agent-memory-erasure-proof/entrypoint.md:1",
+   "line": "> Consolidated from skills/ai/ai-agent-memory-erasure-proof/SKILL.md into ai-agent-compliance-controls on 2026-09-24. Load this through skills/ai/ai-agent-compliance-controls/SKILL.md, not as an activ",
+   "slug": "ai-agent-memory-erasure-proof"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-agent-memory-erasure-proof -> skills/ai/ai-agent-compliance-controls",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/ai-agent-soc2-controls/references/trust-criteria-mapping.md:101",
+   "line": "| **C1.2** Disposes of confidential information | Memory-erasure proof (`ai-agent-memory-erasure-proof`); tenant erasure cascade | Erasure evidence packs | Per event | DPO |",
+   "slug": "ai-agent-memory-erasure-proof"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-agent-memory-erasure-proof -> skills/ai/ai-agent-compliance-controls",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/routing.md:14",
+   "line": "| `ai-agent-memory-erasure-proof` | [references/ai-agent-memory-erasure-proof/entrypoint.md](ai-agent-memory-erasure-proof/entrypoint.md) | Verifiable agent-memory erasure: 9-step cascade, independent",
+   "slug": "ai-agent-memory-erasure-proof"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-commercial-operations/references/ai-agent-pricing-engine/entrypoint.md:27",
+   "line": "- Per-tenant plan tier (`ai-entitlements-and-feature-gating`).",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-commercial-operations/references/ai-agent-sla-and-commitments/entrypoint.md:25",
+   "line": "- Agent feature catalogue (which features ship to which tiers) — from `ai-entitlements-and-feature-gating`.",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-governance-and-limits/references/ai-agent-cost-and-step-budgets/entrypoint.md:20",
+   "line": "- The task is plan-tier entitlements — `ai-entitlements-and-feature-gating` (this skill enforces *runtime budgets*; that skill enforces *eligibility*).",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-governance-and-limits/references/ai-agent-cost-and-step-budgets/entrypoint.md:26",
+   "line": "- Plan / tier catalogue with agent budgets (`ai-entitlements-and-feature-gating`).",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-governance-and-limits/references/ai-agent-cost-and-step-budgets/entrypoint.md:81",
+   "line": "- Companion: `ai-agent-runtime-architecture`, `ai-cost-per-tenant-attribution`, `ai-model-gateway`, `ai-entitlements-and-feature-gating`, `ai-usage-metering-and-billing`, `saas-rate-limiting-and-quota",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-runtime-architecture/SKILL.md:64",
+   "line": "- The plan / tier catalogue with agent entitlements (`ai-entitlements-and-feature-gating`).",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-tooling-and-hitl/references/ai-agent-tool-catalogue-and-action-gating/entrypoint.md:26",
+   "line": "- Plan / tier catalogue from `ai-entitlements-and-feature-gating`.",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-tooling-and-hitl/references/ai-agent-tool-catalogue-and-action-gating/entrypoint.md:82",
+   "line": "- Companion: `ai-agents-tools`, `ai-agent-runtime-architecture`, `ai-agent-action-approval-and-hitl`, `ai-agent-reversibility-and-blast-radius`, `ai-agent-safety-and-red-team`, `ai-entitlements-and-fe",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-tooling-and-hitl/references/ai-agents-tools/entrypoint.md:61",
+   "line": "- `ai-entitlements-and-feature-gating` (agent entitlements).",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/ai/ai-app-architecture/references/ai-on-saas-architecture/entrypoint.md:241",
+   "line": "- `ai-entitlements-and-feature-gating` — plan-tier binding.",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/ai/ai-app-architecture/references/ai-on-saas-architecture/entrypoint.md:82",
+   "line": "- Companion: `ai-model-gateway`, `ai-tenant-isolation-patterns`, `ai-rag-multi-tenant`, `ai-eval-harness`, `ai-cost-per-tenant-attribution`, `ai-usage-metering-and-billing`, `ai-entitlements-and-featu",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/ai/ai-cost-and-metering/references/ai-cost-modeling/entrypoint.md:264",
+   "line": "- `ai-entitlements-and-feature-gating` — defines the caps the pipeline guardrails.",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/ai/ai-cost-and-metering/references/ai-cost-per-tenant-attribution/entrypoint.md:253",
+   "line": "- `ai-entitlements-and-feature-gating` — defines the caps.",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/ai/ai-cost-and-metering/references/ai-cost-per-tenant-attribution/entrypoint.md:79",
+   "line": "- Companion: `ai-model-gateway`, `ai-usage-metering-and-billing`, `ai-cost-modeling`, `ai-on-saas-architecture`, `ai-entitlements-and-feature-gating`, `observability-monitoring`, `saas-rate-limiting-a",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/ai/ai-cost-and-metering/references/ai-saas-billing/entrypoint.md:376",
+   "line": "- `ai-entitlements-and-feature-gating` — what gating keys the gateway checks per plan.",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/ai/ai-cost-and-metering/references/ai-usage-metering-and-billing/entrypoint.md:18",
+   "line": "- The task is the boolean gate of which features the plan unlocks — `ai-entitlements-and-feature-gating`.",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/ai/ai-cost-and-metering/references/ai-usage-metering-and-billing/entrypoint.md:256",
+   "line": "- `ai-entitlements-and-feature-gating` — what's gated vs metered.",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/ai/ai-cost-and-metering/references/ai-usage-metering-and-billing/entrypoint.md:78",
+   "line": "- Companion: `ai-cost-per-tenant-attribution`, `ai-entitlements-and-feature-gating`, `ai-model-gateway`, `saas-entitlements-and-plan-gating`, `saas-rate-limiting-and-quotas`, `subscription-billing`.",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/ai/ai-llm-integration/SKILL.md:478",
+   "line": "- `ai-entitlements-and-feature-gating` — gateway entitlement enforcement.",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/ai/ai-model-gateway/SKILL.md:134",
+   "line": "- Companion: `ai-on-saas-architecture`, `ai-cost-per-tenant-attribution`, `ai-usage-metering-and-billing`, `ai-entitlements-and-feature-gating`, `ai-prompt-injection-and-tenant-safety`, `ai-observabil",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/saas/saas-entitlements-and-plan-gating/SKILL.md:378",
+   "line": "When the SaaS includes AI features, the entitlement catalogue extends with AI-specific keys (model tier, context length, generations/day, tools allow-list, KB size, agent steps, BYOK, fine-tune). The ",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/saas/saas-entitlements-and-plan-gating/SKILL.md:381",
+   "line": "- `ai-entitlements-and-feature-gating` — AI-specific entitlement keys + gateway enforcement.",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/saas/saas-rate-limiting-and-quotas/SKILL.md:411",
+   "line": "Quotas are declared in `ai-entitlements-and-feature-gating` (catalogue) and enforced in the agent runtime (this skill's runtime layer). The two skills hold the contract:",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-entitlements-and-feature-gating -> skills/saas/saas-entitlements-and-plan-gating",
+   "at": "chwezi-dev-engine/skills/saas/saas-rate-limiting-and-quotas/SKILL.md:418",
+   "line": "- `ai-entitlements-and-feature-gating` — agent quota catalogue.",
+   "slug": "ai-entitlements-and-feature-gating"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ux-for-ai -> design-system/skills/ai-ux",
+   "at": "chwezi-dev-engine/skills/ai/ai-web-apps/SKILL.md:74",
+   "line": "- The task is a pure UX pattern question — use `ai-ux-patterns` or `ux-for-ai`.",
+   "slug": "ux-for-ai"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ux-for-ai -> design-system/skills/ai-ux",
+   "at": "chwezi-dev-engine/skills/product-business/product-led-growth/references/habit-forming-products/entrypoint.md:478",
+   "line": "- **`ux-for-ai`** — when the habit-forming product involves AI features (trust, autonomy, transparency)",
+   "slug": "ux-for-ai"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ux-for-ai -> design-system/skills/ai-ux",
+   "at": "design-system-skills/skills/04-web-and-ui-design/ai-agent-ux/references/ai-agentic-ui/entrypoint.md:170",
+   "line": "- `ux-for-ai` — deeper AI trust and transparency principles.",
+   "slug": "ux-for-ai"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ux-for-ai -> design-system/skills/ai-ux",
+   "at": "design-system-skills/skills/04-web-and-ui-design/ai-agent-ux/references/ai-ux-patterns/entrypoint.md:276",
+   "line": "- `ux-for-ai` — Deeper AI trust and transparency principles",
+   "slug": "ux-for-ai"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ux-for-ai -> design-system/skills/ai-ux",
+   "at": "digital-research-engine/skills/capability-matrix/SKILL.md:82",
+   "line": "| **AI Feature** | `ai-app-architecture`, `ai-feature-spec`, `ai-architecture-patterns` | `ai-llm-integration`, `ai-prompt-engineering` | `ai-evaluation`, `llm-security`, `ai-error-handling`, `ai-secu",
+   "slug": "ux-for-ai"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ux-for-ai -> design-system/skills/ai-ux",
+   "at": "digital-research-engine/skills/capability-matrix/references/companion-rules.md:24",
+   "line": "- `ux-for-ai`, `ai-ux-patterns`, `ai-slop-prevention` — when the surface displays AI-generated output.",
+   "slug": "ux-for-ai"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/android/android-data-persistence -> skills/android/android-development",
+   "at": "chwezi-dev-engine/skills/finance-accounting/electronic-fiscal-taxing/SKILL.md:162",
+   "line": "- `android-development`, `android-data-persistence`, and `android-tdd` for",
+   "slug": "android-data-persistence"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/android/android-data-persistence -> skills/android/android-development",
+   "at": "chwezi-dev-engine/skills/mobile-cross/mobile-platform-operations/references/mobile-saas-planning.md:449",
+   "line": "- `android-data-persistence` — Room, DataStore, offline-first patterns",
+   "slug": "android-data-persistence"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/android/android-data-persistence -> skills/android/android-development",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/sdlc-documentation/references/sdlc-design.md:165",
+   "line": "| Repository Pattern | Android data access abstraction | `android-data-persistence` |",
+   "slug": "android-data-persistence"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/android/android-data-persistence -> skills/android/android-development",
+   "at": "design-system-skills/skills/06-sector-and-domain-ux/healthcare-ui-design/references/android-implementation.md:298",
+   "line": "Follow `android-data-persistence` skill for Room setup and sync architecture.",
+   "slug": "android-data-persistence"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/android/android-data-persistence -> skills/android/android-development",
+   "at": "design-system-skills/skills/06-sector-and-domain-ux/healthcare-ui-design/references/android-implementation.md:482",
+   "line": "| Room + offline sync | `android-data-persistence` |",
+   "slug": "android-data-persistence"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/android/android-data-persistence -> skills/android/android-development",
+   "at": "digital-research-engine/skills/capability-matrix/SKILL.md:77",
+   "line": "| **Android** | `android-development` | `jetpack-compose-ui`, `android-data-persistence`, `android-room` | `android-tdd`, `google-play-store-review` | `android-pdf-export`, `android-biometric-login`, ",
+   "slug": "android-data-persistence"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/android/android-tdd -> skills/android/android-development",
+   "at": "chwezi-dev-engine/skills/architecture/validation-contract/references/evidence-categories.md:14",
+   "line": "**Indicative contributing skills:** `advanced-testing-strategy`, `api-testing-verification`, `android-tdd`, `ios-tdd`, `kmp-tdd`.",
+   "slug": "android-tdd"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/android/android-tdd -> skills/android/android-development",
+   "at": "chwezi-dev-engine/skills/execution-plan-scripts/SKILL.md:75",
+   "line": "This skill is itself a member of the **domain engine** — the same library of craft skills it instructs you to reference when authoring a script. It is the meta-skill for the *planning* and *documentat",
+   "slug": "android-tdd"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/android/android-tdd -> skills/android/android-development",
+   "at": "chwezi-dev-engine/skills/finance-accounting/electronic-fiscal-taxing/SKILL.md:162",
+   "line": "- `android-development`, `android-data-persistence`, and `android-tdd` for",
+   "slug": "android-tdd"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/android/android-tdd -> skills/android/android-development",
+   "at": "chwezi-dev-engine/skills/mobile-cross/mobile-platform-operations/references/mobile-saas-planning.md:448",
+   "line": "- `android-tdd` — Test-driven development workflow",
+   "slug": "android-tdd"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/android/android-tdd -> skills/android/android-development",
+   "at": "chwezi-dev-engine/skills/mobile-cross/mobile-platform-operations/references/mobile-saas-planning.md:87",
+   "line": "`android-tdd` and `ios-tdd` for platform UI tests",
+   "slug": "android-tdd"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/android/android-tdd -> skills/android/android-development",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/implementation-status-auditor/references/plan-implementation.md:265",
+   "line": "| Test standards | `sdlc-testing`, `android-tdd` | Test pyramid, TDD cycle, coverage targets |",
+   "slug": "android-tdd"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/android/android-tdd -> skills/android/android-development",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/implementation-status-auditor/references/plan-implementation.md:278",
+   "line": "**Skill loading rule:** Only load skills relevant to the current project's tech stack. A PHP web app doesn't need `android-tdd`.",
+   "slug": "android-tdd"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/android/android-tdd -> skills/android/android-development",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/sdlc-documentation/references/sdlc-testing.md:105",
+   "line": "- **Writing actual test code** (unit tests, integration tests) -- use `android-tdd` skill instead",
+   "slug": "android-tdd"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/android/android-tdd -> skills/android/android-development",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/sdlc-documentation/references/sdlc-testing.md:136",
+   "line": "All production code follows the **Red-Green-Refactor** cycle. Tests are written before implementation. Reference the `android-tdd` skill for the complete TDD workflow.",
+   "slug": "android-tdd"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/android/android-tdd -> skills/android/android-development",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/sdlc-documentation/references/sdlc-testing.md:298",
+   "line": "| `android-tdd` | Actual TDD implementation patterns (Red-Green-Refactor, layer-specific tests). This skill documents; `android-tdd` implements. |",
+   "slug": "android-tdd"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/android/android-tdd -> skills/android/android-development",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/sdlc-documentation/references/sdlc-testing/templates/software-test-plan.md:301",
+   "line": "Be specific about the 70/20/10 split. Document which frameworks handle which test level. Reference `android-tdd` for implementation patterns.",
+   "slug": "android-tdd"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/android/android-tdd -> skills/android/android-development",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/sdlc-documentation/references/sdlc-testing/templates/software-test-plan.md:97",
+   "line": "Reference: `android-tdd` skill for implementation details.",
+   "slug": "android-tdd"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/android/android-tdd -> skills/android/android-development",
+   "at": "digital-research-engine/skills/capability-matrix/SKILL.md:77",
+   "line": "| **Android** | `android-development` | `jetpack-compose-ui`, `android-data-persistence`, `android-room` | `android-tdd`, `google-play-store-review` | `android-pdf-export`, `android-biometric-login`, ",
+   "slug": "android-tdd"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/android/android-tdd -> skills/android/android-development",
+   "at": "digital-research-engine/skills/validation-contract/references/evidence-categories.md:14",
+   "line": "**Indicative contributing skills:** `advanced-testing-strategy`, `api-testing-verification`, `android-tdd`, `ios-tdd`, `kmp-tdd`.",
+   "slug": "android-tdd"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/architecture/microservices-ai-integration -> skills/ai/ai-app-architecture",
+   "at": "chwezi-dev-engine/skills/architecture/microservices-architecture/references/microservices-architecture-models.md:468",
+   "line": "- `microservices-ai-integration` — AI gateway layered on top of this architecture",
+   "slug": "microservices-ai-integration"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/architecture/microservices-ai-integration -> skills/ai/ai-app-architecture",
+   "at": "chwezi-dev-engine/skills/architecture/microservices-architecture/references/microservices-communication.md:494",
+   "line": "- `microservices-ai-integration` — async AI job queue pattern",
+   "slug": "microservices-ai-integration"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/architecture/microservices-ai-integration -> skills/ai/ai-app-architecture",
+   "at": "chwezi-dev-engine/skills/architecture/microservices-architecture/references/microservices-fundamentals.md:228",
+   "line": "- `microservices-ai-integration` — AI as a microservice, AI gateway, async AI pipelines",
+   "slug": "microservices-ai-integration"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/architecture/microservices-ai-integration -> skills/ai/ai-app-architecture",
+   "at": "chwezi-dev-engine/skills/architecture/microservices-architecture/references/microservices-resilience.md:329",
+   "line": "- `microservices-ai-integration` — AI service resilience and async job fallback",
+   "slug": "microservices-ai-integration"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/architecture/microservices-ai-integration -> skills/ai/ai-app-architecture",
+   "at": "digital-research-engine/skills/capability-matrix/SKILL.md:83",
+   "line": "| **LLM Integration** | `ai-llm-integration`, `ai-app-architecture` | `claude-api`, `deepseek-integration`, `openai-agents-sdk` | `llm-security`, `ai-evaluation`, `ai-error-handling` | `ai-prompt-engi",
+   "slug": "microservices-ai-integration"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/backend-databases/database-internals -> skills/backend-databases/database-design-engineering",
+   "at": "digital-research-engine/skills/capability-matrix/SKILL.md:80",
+   "line": "| **Database (relational)** | `database-design-engineering`, `mysql-data-modeling` | `mysql-best-practices`, `postgresql-fundamentals` | `database-reliability`, `mysql-query-performance`, `postgresql-",
+   "slug": "database-internals"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/backend-databases/mysql-operations -> skills/backend-databases/mysql-engineering",
+   "at": "chwezi-dev-engine/skills/backend-databases/database-design-engineering/SKILL.md:67",
+   "line": "3. Load engine-specific parent skills afterward: `mysql-engineering`, `mysql-operations`, `postgresql-engineering`, or `postgresql-operations`.",
+   "slug": "mysql-operations"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/backend-databases/mysql-operations -> skills/backend-databases/mysql-engineering",
+   "at": "chwezi-dev-engine/skills/backend-databases/mysql-engineering/SKILL.md:39",
+   "line": "3. Pair with `mysql-operations` for administration, performance, backup, restore, or incident work.",
+   "slug": "mysql-operations"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/backend-databases/postgresql-ai-platform -> skills/ai/ai-rag-patterns",
+   "at": "chwezi-dev-engine/skills/backend-databases/postgresql-engineering/SKILL.md:42",
+   "line": "4. Pair with `postgresql-ai-platform` only when pgvector or AI platform concerns are central.",
+   "slug": "postgresql-ai-platform"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/backend-databases/postgresql-operations -> skills/backend-databases/postgresql-engineering",
+   "at": "chwezi-dev-engine/skills/backend-databases/database-design-engineering/SKILL.md:67",
+   "line": "3. Load engine-specific parent skills afterward: `mysql-engineering`, `mysql-operations`, `postgresql-engineering`, or `postgresql-operations`.",
+   "slug": "postgresql-operations"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/backend-databases/postgresql-operations -> skills/backend-databases/postgresql-engineering",
+   "at": "chwezi-dev-engine/skills/backend-databases/postgresql-engineering/SKILL.md:41",
+   "line": "3. Pair with `postgresql-operations` for administration, performance incidents, tuning, backups, or production operations.",
+   "slug": "postgresql-operations"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/backend-databases/vector-databases -> skills/ai/ai-rag-patterns",
+   "at": "chwezi-dev-engine/skills/backend-databases/postgresql-engineering/references/postgresql-patterns.md:328",
+   "line": "- `vector-databases` for embedding generation, chunking, hybrid search, and vector store comparison.",
+   "slug": "vector-databases"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/backend-databases/vector-databases -> skills/ai/ai-rag-patterns",
+   "at": "chwezi-dev-engine/skills/backend-databases/postgresql-engineering/references/postgresql-patterns.md:33",
+   "line": "- The work is unrelated to PostgreSQL or would be better handled by `database-design-engineering`, `mysql-best-practices`, or `vector-databases`.",
+   "slug": "vector-databases"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/backend-databases/vector-databases -> skills/ai/ai-rag-patterns",
+   "at": "chwezi-dev-engine/skills/backend-databases/postgresql-engineering/references/postgresql-patterns.md:97",
+   "line": "| Existing MySQL SaaS, want to add semantic search | Keep MySQL; add Pinecone or Qdrant alongside (`vector-databases`). pgvector only if the team already wants to learn Postgres. |",
+   "slug": "vector-databases"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/backend-databases/vector-databases -> skills/ai/ai-rag-patterns",
+   "at": "chwezi-dev-engine/skills/backend-databases/postgresql-engineering/references/postgresql-patterns/references/pgvector.md:100",
+   "line": "Use pgvector when the team already runs PostgreSQL and the embedding count fits comfortably in memory (typically up to a few million vectors for HNSW). Move to Pinecone, Qdrant, or Weaviate when you n",
+   "slug": "vector-databases"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/backend-databases/vector-databases -> skills/ai/ai-rag-patterns",
+   "at": "chwezi-dev-engine/skills/devops-cloud/observability-monitoring/references/observability-platform.md:437",
+   "line": "Treat AI features as production services with their own SLIs. Emit through the same OTel pipeline; cross-reference `vector-databases` and `ai-rag-patterns` for measurement methodology.",
+   "slug": "vector-databases"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/backend-databases/vector-databases -> skills/ai/ai-rag-patterns",
+   "at": "chwezi-dev-engine/skills/devops-cloud/observability-monitoring/references/observability-platform.md:455",
+   "line": "- `vector-databases`, `ai-rag-patterns` — methodology for the AI-workload signals above",
+   "slug": "vector-databases"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/finance-accounting/chart-of-accounts-templates -> doctrine/skills/ledger-posting-engine-core",
+   "at": "chwezi-dev-engine/skills/finance-accounting/accounting-engine/SKILL.md:178",
+   "line": "- `chart-of-accounts-templates` for IFRS-aligned industry templates.",
+   "slug": "chart-of-accounts-templates"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/finance-accounting/inventory-costing -> doctrine/skills/inventory-costing-and-stock-accounting",
+   "at": "chwezi-dev-engine/skills/finance-accounting/accounting-engine/SKILL.md:179",
+   "line": "- `inventory-costing` for IAS 2 stock valuation and COGS flows.",
+   "slug": "inventory-costing"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/finance-accounting/inventory-management -> doctrine/skills/inventory-costing-and-stock-accounting",
+   "at": "chwezi-dev-engine/skills/saas/saas-accounting-system/SKILL.md:344",
+   "line": "| Inventory link | `inventory-management` | COGS posting on stock movements |",
+   "slug": "inventory-management"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/finance-accounting/inventory-management -> doctrine/skills/inventory-costing-and-stock-accounting",
+   "at": "chwezi-dev-engine/skills/saas/saas-erp-system-design/SKILL.md:189",
+   "line": "For ERP projects involving manufacturing, wholesale, distribution, import/export, fleet, field delivery, agriculture aggregation, or warehouse operations, pair this skill with `inventory-management` a",
+   "slug": "inventory-management"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/finance-accounting/inventory-management -> doctrine/skills/inventory-costing-and-stock-accounting",
+   "at": "digital-research-engine/skills/capability-matrix/SKILL.md:88",
+   "line": "| **ERP / Business System** | `saas-erp-system-design`, `multi-tenant-saas-architecture` | `modular-saas-architecture`, `inventory-management`, `saas-accounting-system` | `vibe-security-skill`, `obser",
+   "slug": "inventory-management"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/finance-accounting/payroll-postings-uganda -> doctrine/skills/payroll-and-statutory-postings-east-africa",
+   "at": "chwezi-dev-engine/skills/finance-accounting/accounting-engine/SKILL.md:180",
+   "line": "- `payroll-postings-uganda` for PAYE/NSSF/LST payroll journal shapes.",
+   "slug": "payroll-postings-uganda"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/frontend-ux/pos-restaurant-ui-standard -> doctrine/skills/finance-ui-pattern-library",
+   "at": "digital-research-engine/skills/capability-matrix/SKILL.md:108",
+   "line": "- **POS / Restaurant** → add `pos-sales-ui-design`, `pos-restaurant-ui-standard`.",
+   "slug": "pos-restaurant-ui-standard"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/frontend-ux/pos-restaurant-ui-standard -> doctrine/skills/finance-ui-pattern-library",
+   "at": "digital-research-engine/skills/capability-matrix/references/companion-rules.md:26",
+   "line": "- `pos-sales-ui-design`, `pos-restaurant-ui-standard` — for POS surfaces.",
+   "slug": "pos-restaurant-ui-standard"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/frontend-ux/pos-sales-ui-design -> doctrine/skills/finance-ui-pattern-library",
+   "at": "design-system-skills/skills/04-web-and-ui-design/ai-output-design/references/ai-slop-prevention/entrypoint.md:295",
+   "line": "- `pos-sales-ui-design` — verify POS screens avoid template looks",
+   "slug": "pos-sales-ui-design"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/frontend-ux/pos-sales-ui-design -> doctrine/skills/finance-ui-pattern-library",
+   "at": "design-system-skills/skills/04-web-and-ui-design/form-ux-design/references/skill-deep-dive.md:457",
+   "line": "- POS forms? Load `pos-sales-ui-design` + `form-ux-design`",
+   "slug": "pos-sales-ui-design"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/frontend-ux/pos-sales-ui-design -> doctrine/skills/finance-ui-pattern-library",
+   "at": "digital-research-engine/skills/capability-matrix/SKILL.md:108",
+   "line": "- **POS / Restaurant** → add `pos-sales-ui-design`, `pos-restaurant-ui-standard`.",
+   "slug": "pos-sales-ui-design"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/frontend-ux/pos-sales-ui-design -> doctrine/skills/finance-ui-pattern-library",
+   "at": "digital-research-engine/skills/capability-matrix/references/companion-rules.md:26",
+   "line": "- `pos-sales-ui-design`, `pos-restaurant-ui-standard` — for POS surfaces.",
+   "slug": "pos-sales-ui-design"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/frontend-ux/ux-principles-101 -> design-system/skills/ux-foundations",
+   "at": "chwezi-dev-engine/skills/gis/gis-platform-engineering/references/gis-maps-integration/references/a11y-maps.md:5",
+   "line": "Companion: `laws-of-ux`, `ux-principles-101`.",
+   "slug": "ux-principles-101"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/frontend-ux/ux-principles-101 -> design-system/skills/ux-foundations",
+   "at": "design-system-skills/skills/04-web-and-ui-design/premium-ui-ux-design/references/design-by-nature/entrypoint.md:30",
+   "line": "- The task is purely UX flow / wireframing (load `interaction-design-patterns`, `ux-principles-101`).",
+   "slug": "ux-principles-101"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/frontend-ux/ux-principles-101 -> design-system/skills/ux-foundations",
+   "at": "digital-research-engine/skills/capability-matrix/references/companion-rules.md:22",
+   "line": "- `ux-principles-101` — for general UX hygiene during scoping.",
+   "slug": "ux-principles-101"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/game-development/blender-game-asset-production -> skills/game-development/game-3d-asset-pipeline",
+   "at": "chwezi-dev-engine/skills/game-development/game-ai-behaviour-and-navigation/SKILL.md:27",
+   "line": "- The task is animation rigging; use `blender-game-asset-production` and animation systems.",
+   "slug": "blender-game-asset-production"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/game-development/blender-game-asset-production -> skills/game-development/game-3d-asset-pipeline",
+   "at": "chwezi-dev-engine/skills/game-development/game-development-orchestration/SKILL.md:124",
+   "line": "- `game-2d-art-animation-and-vfx-pipeline`, `game-3d-asset-pipeline`, `blender-game-asset-production`, `game-narrative-and-interactive-story-design`, `game-ai-behaviour-and-navigation`, `level-world-a",
+   "slug": "blender-game-asset-production"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ios/ios-data-persistence -> skills/ios/ios-platform-capabilities",
+   "at": "chwezi-dev-engine/skills/ios/ios-platform-capabilities/references/ios-networking-advanced/offline-queue.md:75",
+   "line": "**For persistent offline queue** (survives app restart): use `PendingOperation` model in SwiftData. See `ios-data-persistence` skill Section 6.1–6.3.",
+   "slug": "ios-data-persistence"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ios/ios-data-persistence -> skills/ios/ios-platform-capabilities",
+   "at": "chwezi-dev-engine/skills/ios/ios-security-and-rbac/references/ios-app-security.md:261",
+   "line": "- **`ios-data-persistence`** — repository pattern over SwiftData/SQLite; this skill specifies the protection class those stores must use.",
+   "slug": "ios-data-persistence"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ios/ios-data-persistence -> skills/ios/ios-platform-capabilities",
+   "at": "chwezi-dev-engine/skills/ios/ios-security-and-rbac/references/ios-app-security/data-protection-classes.md:194",
+   "line": "- `ios-data-persistence` skill — SwiftData and repository patterns where protection classes are wired in.",
+   "slug": "ios-data-persistence"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ios/ios-data-persistence -> skills/ios/ios-platform-capabilities",
+   "at": "chwezi-dev-engine/skills/ios/ios-security-and-rbac/references/ios-app-security/keychain-secure-enclave.md:293",
+   "line": "- `ios-data-persistence` skill — where repository code wires in the Keychain helpers.",
+   "slug": "ios-data-persistence"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ios/ios-data-persistence -> skills/ios/ios-platform-capabilities",
+   "at": "digital-research-engine/skills/capability-matrix/SKILL.md:76",
+   "line": "| **iOS** | `ios-development`, `ios-architecture-advanced` | `swiftui-design`, `ios-data-persistence`, `ios-networking-advanced` | `ios-tdd`, `ios-app-security`, `app-store-review` | `ios-pdf-export`,",
+   "slug": "ios-data-persistence"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ios/ios-quality-and-release -> skills/mobile-cross/mobile-platform-operations",
+   "at": "chwezi-dev-engine/skills/ios/ios-platform-capabilities/SKILL.md:61",
+   "line": "| Supported device/OS matrix | `ios-quality-and-release` | required | Establishes availability branches |",
+   "slug": "ios-quality-and-release"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ios/ios-quality-and-release -> skills/mobile-cross/mobile-platform-operations",
+   "at": "chwezi-dev-engine/skills/ios/ios-platform-capabilities/SKILL.md:99",
+   "line": "- `ios-security-and-rbac` for protected capabilities; `ios-quality-and-release` for entitlement and device verification.",
+   "slug": "ios-quality-and-release"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ios/ios-quality-and-release -> skills/mobile-cross/mobile-platform-operations",
+   "at": "chwezi-dev-engine/skills/mobile-cross/mobile-platform-operations/SKILL.md:25",
+   "line": "- The task is iOS-only App Store release; use `ios-quality-and-release`.",
+   "slug": "ios-quality-and-release"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/mobile-cross/mobile-reports -> skills/product-business/professional-word-output",
+   "at": "chwezi-dev-engine/skills/frontend-ux/tailwind-css/references/grid-systems/entrypoint.md:258",
+   "line": "| `mobile-reports` / `mobile-report-tables` | Table and report rhythm on 4-col phones. |",
+   "slug": "mobile-reports"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/mobile-cross/mobile-reports -> skills/product-business/professional-word-output",
+   "at": "chwezi-dev-engine/skills/ios/ios-development/references/skill-deep-dive.md:519",
+   "line": "| `mobile-reports` | Report screens, data visualisation, export |",
+   "slug": "mobile-reports"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/mobile-cross/mobile-reports -> skills/product-business/professional-word-output",
+   "at": "chwezi-dev-engine/skills/mobile-cross/mobile-platform-operations/SKILL.md:24",
+   "line": "- The task is only report UI; use `mobile-reports`.",
+   "slug": "mobile-reports"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/mobile-cross/mobile-reports -> skills/product-business/professional-word-output",
+   "at": "digital-research-engine/skills/capability-matrix/SKILL.md:112",
+   "line": "- **Reporting / dashboards** → add `data-visualization`, `mobile-reports`, `mobile-report-tables`, `report-print-pdf` as platform demands.",
+   "slug": "mobile-reports"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/mobile-cross/mobile-reports -> skills/product-business/professional-word-output",
+   "at": "digital-research-engine/skills/capability-matrix/references/companion-rules.md:28",
+   "line": "- `mobile-reports`, `mobile-report-tables` — for mobile reports and dashboards.",
+   "slug": "mobile-reports"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/product-business/experiment-engineering -> skills/ai/ai-feature-rollout-and-experimentation",
+   "at": "chwezi-dev-engine/skills/saas/saas-entitlements-and-plan-gating/references/entitlements-vs-feature-flags.md:80",
+   "line": "- `experiment-engineering` — experimentation patterns.",
+   "slug": "experiment-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-commercial-operations/references/ai-agent-sla-credit-automation/entrypoint.md:31",
+   "line": "- Audit-log spine (`saas-control-plane-engineering`).",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/ai-agent-audit-log-integrity/entrypoint.md:18",
+   "line": "- The task is the platform audit log spine — `saas-control-plane-engineering` (this skill extends it for agents).",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/ai-agent-audit-log-integrity/entrypoint.md:85",
+   "line": "- Companion: `ai-agent-runtime-architecture`, `ai-agent-tool-catalogue-and-action-gating`, `ai-agent-soc2-controls`, `ai-agent-iso27001-controls`, `ai-agent-hipaa-security-controls`, `ai-agent-evidenc",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/ai-agent-iso27001-controls/entrypoint.md:79",
+   "line": "- Companion: `ai-agent-soc2-controls`, `ai-agent-hipaa-security-controls`, `ai-agent-audit-log-integrity`, `ai-agent-evidence-automation`, `ai-agent-runtime-architecture`, `ai-agent-tool-catalogue-and",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/ai-agent-soc2-controls/entrypoint.md:85",
+   "line": "- Companion: `ai-agent-iso27001-controls`, `ai-agent-hipaa-security-controls`, `ai-agent-audit-log-integrity`, `ai-agent-evidence-automation`, `ai-agent-control-testing-and-attestation`, `ai-agent-app",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/ai/ai-app-architecture/references/ai-on-saas-architecture/entrypoint.md:243",
+   "line": "- `saas-control-plane-engineering` — broader control-plane context.",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/ai/ai-app-architecture/references/ai-on-saas-architecture/entrypoint.md:82",
+   "line": "- Companion: `ai-model-gateway`, `ai-tenant-isolation-patterns`, `ai-rag-multi-tenant`, `ai-eval-harness`, `ai-cost-per-tenant-attribution`, `ai-usage-metering-and-billing`, `ai-entitlements-and-featu",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/ai/ai-cost-and-metering/references/ai-usage-metering-and-billing/references/stripe-metered-billing-for-ai.md:10",
+   "line": "- **Customer** — the Stripe customer = the tenant's billing entity (often same as the platform's Stripe Customer mirror, `saas-control-plane-engineering`).",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/ai/ai-incident-response/references/ai-incident-evidence-capture/entrypoint.md:18",
+   "line": "- The task is the audit log spine — `saas-control-plane-engineering`.",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/ai/ai-incident-response/references/ai-incident-evidence-capture/entrypoint.md:79",
+   "line": "- Companion: `ai-observability-and-debugging`, `ai-on-saas-architecture`, `ai-eval-harness`, `ai-agents-tools`, `ai-incident-response-runbook`, `ai-incident-customer-comms`, `saas-control-plane-engine",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/ios/ios-monetization/references/cross-platform-entitlement-reconciliation.md:166",
+   "line": "- `saas-control-plane-engineering` — where the entitlement service lives.",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-admin-backoffice-tooling/SKILL.md:122",
+   "line": "- Companion: `saas-control-plane-engineering`, `multi-tenant-saas-architecture`, `dual-auth-rbac`, `vibe-security-skill`, `saas-sso-scim-enterprise-auth`.",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-admin-backoffice-tooling/SKILL.md:338",
+   "line": "- `saas-control-plane-engineering` — the services this console drives.",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-admin-backoffice-tooling/SKILL.md:60",
+   "line": "- The task is the control-plane services architecture — use `saas-control-plane-engineering`; this skill is the UI/UX layer on top.",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-admin-backoffice-tooling/SKILL.md:61",
+   "line": "- The task is the audit log schema itself — use `saas-control-plane-engineering` §6.",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-admin-backoffice-tooling/SKILL.md:66",
+   "line": "- Control-plane service inventory from `saas-control-plane-engineering`.",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-admin-backoffice-tooling/SKILL.md:67",
+   "line": "- Audit log spec from `saas-control-plane-engineering`.",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-admin-backoffice-tooling/SKILL.md:68",
+   "line": "- Tenant lifecycle states from `saas-control-plane-engineering`.",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-admin-backoffice-tooling/references/bulk-operations.md:153",
+   "line": "- `saas-control-plane-engineering` - the migration services bulk ops drive.",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-admin-backoffice-tooling/references/impersonation-design.md:152",
+   "line": "- `saas-control-plane-engineering` - the audit-log spine.",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-architecture-strategy/references/saas-maturity-matrix.md:69",
+   "line": "- `saas-control-plane-engineering` — most v2 capabilities live here.",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-business-metrics/references/revenue-lifecycle-data-contract.md:16",
+   "line": "- Billing mirror and tenant lifecycle states (`saas-control-plane-engineering` reference branch).",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-entitlements-and-plan-gating/SKILL.md:122",
+   "line": "- Companion: `subscription-billing`, `product-led-growth`, `saas-rate-limiting-and-quotas`, `saas-control-plane-engineering`.",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-entitlements-and-plan-gating/SKILL.md:373",
+   "line": "- `saas-control-plane-engineering` — the admin tool that issues overrides.",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-sales-organization/references/sales-assist-product-capabilities.md:111",
+   "line": "- `saas-control-plane-engineering` — back-office tools that AE / CSM use.",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-sso-scim-enterprise-auth/SKILL.md:126",
+   "line": "- Companion: `multi-tenant-saas-architecture`, `dual-auth-rbac`, `saas-control-plane-engineering`, `saas-entitlements-and-plan-gating`, `vibe-security-skill`.",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-sso-scim-enterprise-auth/SKILL.md:374",
+   "line": "- `saas-control-plane-engineering` — identity service this skill plugs into.",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-sso-scim-enterprise-auth/SKILL.md:68",
+   "line": "- Identity model from `saas-control-plane-engineering` (users + memberships).",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-tenant-data-portability-and-erasure/SKILL.md:122",
+   "line": "- Companion: `saas-control-plane-engineering`, `saas-admin-backoffice-tooling`, `multi-tenant-saas-architecture`, `uganda-dppa-compliance`, `vibe-security-skill`.",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-tenant-data-portability-and-erasure/SKILL.md:286",
+   "line": "- `saas-control-plane-engineering` — the tenant lifecycle this skill integrates with.",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-tenant-data-portability-and-erasure/SKILL.md:60",
+   "line": "- The task is tenant lifecycle state machine — use `saas-control-plane-engineering`.",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-control-plane-engineering -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-tenant-data-portability-and-erasure/SKILL.md:65",
+   "line": "- Tenant lifecycle states (`saas-control-plane-engineering`).",
+   "slug": "saas-control-plane-engineering"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-deployment-models -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/ai/ai-app-architecture/references/ai-on-saas-architecture/entrypoint.md:23",
+   "line": "- Tenancy and deployment model from `multi-tenant-saas-architecture` and `saas-deployment-models`.",
+   "slug": "saas-deployment-models"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-deployment-models -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/ai/ai-rag-patterns/references/ai-rag-multi-tenant/entrypoint.md:23",
+   "line": "- Tenant deployment model (`saas-deployment-models`).",
+   "slug": "saas-deployment-models"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-deployment-models -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/ai/ai-security/references/ai-tenant-isolation-patterns/entrypoint.md:76",
+   "line": "- Companion: `ai-on-saas-architecture`, `ai-model-gateway`, `ai-rag-multi-tenant`, `ai-prompt-injection-and-tenant-safety`, `multi-tenant-saas-architecture`, `saas-deployment-models`.",
+   "slug": "saas-deployment-models"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-deployment-models -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/multi-tenant-saas-architecture/references/saas-deployment-models-decision-tree.md:3",
+   "line": "For full coverage, see the dedicated skill `saas-deployment-models`. This file is the quick-reference table.",
+   "slug": "saas-deployment-models"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-deployment-models -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/multi-tenant-saas-architecture/references/saas-deployment-models-decision-tree.md:64",
+   "line": "- `saas-deployment-models` — full skill.",
+   "slug": "saas-deployment-models"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-deployment-models -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-rate-limiting-and-quotas/SKILL.md:122",
+   "line": "- Companion: `saas-entitlements-and-plan-gating`, `saas-deployment-models`, `multi-tenant-saas-architecture`, `observability-monitoring`, `microservices-resilience`.",
+   "slug": "saas-deployment-models"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-deployment-models -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-rate-limiting-and-quotas/SKILL.md:335",
+   "line": "- `saas-deployment-models` — drives where enforcement lives.",
+   "slug": "saas-deployment-models"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-deployment-models -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-rate-limiting-and-quotas/SKILL.md:67",
+   "line": "- Deployment model (pool vs mixed vs silo) from `saas-deployment-models` — affects where enforcement lives.",
+   "slug": "saas-deployment-models"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-deployment-models -> skills/saas/saas-architecture-strategy",
+   "at": "chwezi-dev-engine/skills/saas/saas-sso-scim-enterprise-auth/SKILL.md:70",
+   "line": "- Custom-domain strategy from `saas-deployment-models` / `multi-tenant-saas-architecture`.",
+   "slug": "saas-deployment-models"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-subscription-mastery -> skills/saas/subscription-billing",
+   "at": "chwezi-dev-engine/skills/ai/ai-web-apps/SKILL.md:150",
+   "line": "| Pricing / plan catalog | `saas-subscription-mastery` / `subscription-billing` | optional | determines `min_plan_tier` in the feature catalog |",
+   "slug": "saas-subscription-mastery"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/saas/saas-subscription-mastery -> skills/saas/subscription-billing",
+   "at": "chwezi-dev-engine/skills/saas/subscription-billing/SKILL.md:108",
+   "line": "- Companion skills: `stripe-payments` (primitives), `saas-subscription-mastery` (broader lifecycle/retention playbook), `saas-accounting-system` (revenue recognition), `saas-growth-metrics` (MRR cohor",
+   "slug": "saas-subscription-mastery"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/sdlc-meta/code-tour -> skills/sdlc-meta/doc-architect",
+   "at": "srs-skills/04-development-artifacts/03-dev-environment-setup/references/system-orientation-guide.md:87",
+   "line": "(`chwezi-dev-engine/skills/sdlc-meta/doc-architect/references/code-tour.md`) applies the same",
+   "slug": "code-tour"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/sdlc-meta/continuous-improvement-system -> skills/sdlc-meta/world-class-engineering",
+   "at": "chwezi-dev-engine/skills/product-business/customer-service-excellence/SKILL.md:124",
+   "line": "- Use `continuous-improvement-system` to feed prevention entries into operating cadence reviews.",
+   "slug": "continuous-improvement-system"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/sdlc-meta/engineering-management-system -> skills/sdlc-meta/world-class-engineering",
+   "at": "chwezi-dev-engine/skills/architecture/validation-contract/SKILL.md:125",
+   "line": "- `system-architecture-design`, `engineering-management-system`, `git-collaboration-workflow`.",
+   "slug": "engineering-management-system"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/sdlc-meta/engineering-management-system -> skills/sdlc-meta/world-class-engineering",
+   "at": "chwezi-dev-engine/skills/saas/saas-sales-organization/references/hiring-rubrics.md:144",
+   "line": "- `engineering-management-system` — coaching systems that reinforce the hire.",
+   "slug": "engineering-management-system"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/sdlc-meta/engineering-management-system -> skills/sdlc-meta/world-class-engineering",
+   "at": "chwezi-dev-engine/skills/saas/saas-sales-organization/references/onboarding-ramp.md:123",
+   "line": "- `engineering-management-system` — coaching cadence and 1:1 structure.",
+   "slug": "engineering-management-system"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/sdlc-meta/engineering-management-system -> skills/sdlc-meta/world-class-engineering",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/sdlc-documentation/references/sdlc-maintenance.md:81",
+   "line": "2. Load `reliability-engineering`, `engineering-management-system`, and `sdlc-post-deployment`.",
+   "slug": "engineering-management-system"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/sdlc-meta/engineering-management-system -> skills/sdlc-meta/world-class-engineering",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/sdlc-documentation/references/sdlc-planning.md:82",
+   "line": "3. Pair it with `engineering-management-system`, `advanced-testing-strategy`, and `deployment-release-engineering` when the plan must be executable.",
+   "slug": "engineering-management-system"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/sdlc-meta/engineering-management-system -> skills/sdlc-meta/world-class-engineering",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/skill-composition-standards/references/baseline-contract-register.md:134",
+   "line": "## `engineering-management-system`",
+   "slug": "engineering-management-system"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/sdlc-meta/engineering-management-system -> skills/sdlc-meta/world-class-engineering",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/world-class-engineering/SKILL.md:325",
+   "line": "- Load `engineering-management-system` for delivery operating rhythm, delegation, communication, and team scaling.",
+   "slug": "engineering-management-system"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/sdlc-meta/engineering-management-system -> skills/sdlc-meta/world-class-engineering",
+   "at": "digital-research-engine/skills/skill-composition-standards/references/baseline-contract-register.md:134",
+   "line": "## `engineering-management-system`",
+   "slug": "engineering-management-system"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/sdlc-meta/engineering-management-system -> skills/sdlc-meta/world-class-engineering",
+   "at": "digital-research-engine/skills/validation-contract/SKILL.md:160",
+   "line": "- `system-architecture-design`, `engineering-management-system`, `git-collaboration-workflow`.",
+   "slug": "engineering-management-system"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/sdlc-meta/inherit-legacy-style -> skills/sdlc-meta/ai-assisted-development",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/ai-assisted-development/SKILL.md:159",
+   "line": "`inherit-legacy-style` skill).",
+   "slug": "inherit-legacy-style"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/sdlc-meta/plan-implementation -> skills/sdlc-meta/implementation-status-auditor",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/implementation-status-auditor/references/plan-implementation.md:35",
+   "line": "- The task is unrelated to `plan-implementation` or would be better handled by a more specific companion skill.",
+   "slug": "plan-implementation"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/sdlc-meta/verification-loop -> skills/sdlc-meta/world-class-engineering",
+   "at": "chwezi-engine-agents/README.md:55",
+   "line": "| VERIFY | Engineering; design | `chwezi-dev-engine:skills/sdlc-meta/world-class-engineering/references/verification-loop.md`, `design-system-skills:skills/00-cross-cutting-ops-qa-a11y/visual-product-",
+   "slug": "verification-loop"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/android/android-development/references/android-biometric-login.md:436",
+   "line": "- `dual-auth-rbac`: BiometricHelper works alongside JWT auth — biometric gates app access, JWT gates API access",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/architecture/api-design-first/SKILL.md:136",
+   "line": "| Auth model              | `vibe-security-skill`, `mobile-rbac`, `ios-rbac`, `dual-auth-rbac` | inline in spec (`components.securitySchemes`) + role/scope matrix in `auth-and-security.md` |",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/devops-cloud/cicd-pipelines/references/cicd-devsecops/references/compliance-mapping.md:34",
+   "line": "| A.9 | Access control | RBAC (see `dual-auth-rbac`); MFA on admin; least-privilege sudoers |",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/devops-cloud/cicd-pipelines/references/cicd-devsecops/references/compliance-mapping.md:62",
+   "line": "| R7 | Restrict access by need-to-know | RBAC (see `dual-auth-rbac`); row-level security for multi-tenant isolation |",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/execution-plan-scripts/SKILL.md:137",
+   "line": "> Read these skills in full before any code: `mysql-best-practices`, `php-security`, `multi-tenant-saas-architecture`, `dual-auth-rbac`, `sdlc-testing`, `healthcare-ui-design`, `api-error-handling`.",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/ios/ios-development/references/ios-project-setup.md:77",
+   "line": "| `dual-auth-rbac` | Authentication and role-based access |",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/ios/ios-development/references/skill-deep-dive.md:521",
+   "line": "| `dual-auth-rbac` | JWT authentication and RBAC |",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/ios/ios-platform-capabilities/references/ios-biometric-login/skill-deep-dive.md:463",
+   "line": "- `dual-auth-rbac`: BiometricHelper works alongside JWT auth — biometric gates app access, JWT gates API access",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/mobile-cross/mobile-platform-operations/references/mobile-saas-planning.md:453",
+   "line": "- `dual-auth-rbac` — Authentication and permission system",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/saas/saas-accounting-system/SKILL.md:343",
+   "line": "| Auth | `dual-auth-rbac` | Permission: who can post/void/view reports |",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/saas/saas-accounting-system/references/financial-statements.md:257",
+   "line": "Control via RBAC permissions from `dual-auth-rbac` skill.",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/saas/saas-admin-backoffice-tooling/SKILL.md:122",
+   "line": "- Companion: `saas-control-plane-engineering`, `multi-tenant-saas-architecture`, `dual-auth-rbac`, `vibe-security-skill`, `saas-sso-scim-enterprise-auth`.",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/saas/saas-admin-backoffice-tooling/SKILL.md:342",
+   "line": "- `dual-auth-rbac` — internal auth + MFA underpinning.",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/saas/saas-admin-backoffice-tooling/SKILL.md:398",
+   "line": "- `dual-auth-rbac` — auth model for the override actions.",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/saas/saas-admin-backoffice-tooling/SKILL.md:62",
+   "line": "- The task is general RBAC — use `dual-auth-rbac` and `multi-tenant-saas-architecture`.",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/saas/saas-admin-backoffice-tooling/references/impersonation-design.md:153",
+   "line": "- `dual-auth-rbac` - MFA and co-sign primitives.",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/saas/saas-admin-backoffice-tooling/references/internal-roles-and-permissions.md:149",
+   "line": "- `dual-auth-rbac` - the underlying RBAC and MFA primitives.",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/saas/saas-sso-scim-enterprise-auth/SKILL.md:126",
+   "line": "- Companion: `multi-tenant-saas-architecture`, `dual-auth-rbac`, `saas-control-plane-engineering`, `saas-entitlements-and-plan-gating`, `vibe-security-skill`.",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/saas/saas-sso-scim-enterprise-auth/SKILL.md:372",
+   "line": "- `dual-auth-rbac` — base auth implementation this skill extends.",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/saas/saas-sso-scim-enterprise-auth/SKILL.md:61",
+   "line": "- The task is the customer-facing tenant-admin auth screen — use `dual-auth-rbac`.",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/saas/saas-sso-scim-enterprise-auth/SKILL.md:62",
+   "line": "- The task is internal staff auth — use `dual-auth-rbac` + MFA + the back-office privileged-access workflow in `saas-admin-backoffice-tooling`.",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/implementation-status-auditor/SKILL.md:132",
+   "line": "**Cross-reference with:** the `api-design-first` skill (pagination and error-handling standards) and the `dual-auth-rbac` skill.",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/implementation-status-auditor/SKILL.md:258",
+   "line": "| API gaps | `api-design-first` | `api-design-first`, `dual-auth-rbac` |",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/implementation-status-auditor/references/plan-implementation.md:272",
+   "line": "| Auth | `dual-auth-rbac` | Session + JWT, RBAC enforcement |",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/sdlc-documentation/references/sdlc-design.md:162",
+   "line": "| REST API + Dual Auth | Session (web) + JWT (mobile) | `dual-auth-rbac` |",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/sdlc-documentation/references/sdlc-design.md:187",
+   "line": "| `dual-auth-rbac` | SDD and ICD reference dual auth flows and RBAC model. |",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/sdlc-documentation/references/sdlc-design/templates/api-documentation.md:27",
+   "line": "- **`dual-auth-rbac` skill** -- Authentication and authorization flows",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/sdlc-documentation/references/sdlc-design/templates/api-documentation.md:99",
+   "line": "**Refresh:** `POST /api/auth/refresh.php` with `{\"refresh_token\": \"...\"}` returns new access_token + new refresh_token (rotation). See: `dual-auth-rbac` skill for breach detection and token revocation",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/sdlc-documentation/references/sdlc-design/templates/interface-control-document.md:130",
+   "line": "See: `dual-auth-rbac` skill for full token rotation and breach detection.",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/sdlc-documentation/references/sdlc-design/templates/system-design-document.md:363",
+   "line": "| Security | Reference `dual-auth-rbac` and `vibe-security-skill`. Cover all four areas. |",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/sdlc-documentation/references/sdlc-testing.md:271",
+   "line": "| Auth bypass | Token manipulation, session hijacking attempts | `dual-auth-rbac` |",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/security/network-security/SKILL.md:383",
+   "line": "- `dual-auth-rbac` — session + JWT authentication patterns",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/security/network-security/references/zero-trust.md:292",
+   "line": "- `dual-auth-rbac` skill — application-layer authorisation that sits on top of zero-trust",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/security/web-app-security-audit/SKILL.md:63",
+   "line": "**Cross-references:** `php-security` (PHP patterns), `vibe-security-skill` (OWASP), `dual-auth-rbac` (auth), `api-error-handling` (API errors)",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/security/web-app-security-audit/references/access-control-flaws.md:305",
+   "line": "- `dual-auth-rbac` skill — dual auth plus RBAC reference implementation",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/security/web-app-security-audit/references/auth-session-flaws.md:429",
+   "line": "- Related skills: `php-security`, `dual-auth-rbac`, `vibe-security-skill`, `llm-security`",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "chwezi-dev-engine/skills/security/web-app-security-audit/references/business-logic-flaws.md:339",
+   "line": "- `dual-auth-rbac` skill — authorization patterns that back up logic checks",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "design-system-skills/skills/06-sector-and-domain-ux/healthcare-ui-design/references/compliance-accessibility.md:321",
+   "line": "**Web:** Use `dual-auth-rbac` skill for server-side checks + UI filtering:",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "design-system-skills/skills/06-sector-and-domain-ux/healthcare-ui-design/references/compliance-accessibility.md:498",
+   "line": "**Cross-references:** `dual-auth-rbac` for auth patterns | `mobile-rbac` for Android permissions | `vibe-security-skill` for general web security | `design-tokens.md` for clinical color values",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "digital-research-engine/skills/capability-matrix/SKILL.md:110",
+   "line": "- **Auth surface** → add `dual-auth-rbac`, `mobile-rbac`, `ios-rbac` as platform demands.",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "digital-research-engine/skills/capability-matrix/SKILL.md:75",
+   "line": "| **Multi-tenant SaaS** | `multi-tenant-saas-architecture`, `database-design-engineering`, `saas-erp-system-design` | `php-modern-standards`, `dual-auth-rbac`, `modular-saas-architecture` | `vibe-secu",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "digital-research-engine/skills/capability-matrix/references/domain-rationale.md:11",
+   "line": "Specialised version of Web/SaaS. Foundation upgrades to `multi-tenant-saas-architecture` (tenant isolation, three-panel separation) and adds `saas-erp-system-design` because configurable workflows are",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/ai-agent-memory-erasure-proof/entrypoint.md:119",
+   "line": "- Companions: `ai-agent-memory` (the cascade implementer), `saas-tenant-data-portability-and-erasure` (tenant-level), `ai-agent-audit-log-integrity` (redaction not deletion), `ai-agent-evidence-automa",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/ai-agent-memory-erasure-proof/entrypoint.md:298",
+   "line": "- **`uganda-dppa-compliance`** — KE / UG specifics for `legal_basis ∈ {KE_DPA, UG_DPPA}`.",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "chwezi-dev-engine/skills/ai/ai-security/SKILL.md:312",
+   "line": "- `uganda-dppa-compliance` — DPPA 2019 full compliance skill",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "chwezi-dev-engine/skills/architecture/validation-contract/references/evidence-categories.md:40",
+   "line": "**Indicative contributing skills:** `database-design-engineering`, `postgresql-administration`, `mysql-administration`, `dpia-generator`, `uganda-dppa-compliance`.",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "chwezi-dev-engine/skills/devops-cloud/cicd-pipelines/references/cicd-devsecops/references/compliance-mapping.md:194",
+   "line": "- **Uganda DPPA 2019** requires that personal data of Ugandans be processed in-country except under specific legal bases. See `uganda-dppa-compliance` skill.",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "chwezi-dev-engine/skills/devops-cloud/kubernetes-platform/references/kubernetes-saas-delivery/references/offboarding-data-deletion.md:216",
+   "line": "least 5 years. See `uganda-dppa-compliance` skill for the annex",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "chwezi-dev-engine/skills/devops-cloud/kubernetes-platform/references/kubernetes-saas-delivery/references/offboarding-data-deletion.md:6",
+   "line": "`uganda-dppa-compliance` or your regional equivalent for legal",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "chwezi-dev-engine/skills/gis/gis-enterprise-domain/references/real-estate-saas-integration.md:241",
+   "line": "- **DPIA / DPPA** — pair with `uganda-dppa-compliance` for Uganda deployments; location data is personal data when tied to a user.",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "chwezi-dev-engine/skills/ios/ios-security-and-rbac/references/ios-app-security/privacy-manifest.md:177",
+   "line": "- `uganda-dppa-compliance` skill — local data protection obligations that layer on top of Apple's requirements.",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "chwezi-dev-engine/skills/languages/python-ml-predictive/references/explainability.md:171",
+   "line": "Cross-reference: `uganda-dppa-compliance`, `dpia-generator`.",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "chwezi-dev-engine/skills/saas/saas-tenant-data-portability-and-erasure/SKILL.md:122",
+   "line": "- Companion: `saas-control-plane-engineering`, `saas-admin-backoffice-tooling`, `multi-tenant-saas-architecture`, `uganda-dppa-compliance`, `vibe-security-skill`.",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "chwezi-dev-engine/skills/saas/saas-tenant-data-portability-and-erasure/SKILL.md:276",
+   "line": "- **Uganda Data Protection and Privacy Act:** See `uganda-dppa-compliance`. NITA-U registration; 30-day response.",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "chwezi-dev-engine/skills/saas/saas-tenant-data-portability-and-erasure/SKILL.md:289",
+   "line": "- `uganda-dppa-compliance` — Ugandan specifics.",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "chwezi-dev-engine/skills/saas/saas-tenant-data-portability-and-erasure/SKILL.md:331",
+   "line": "Cross-links: `ai-agent-compliance-controls/references/ai-agent-memory-erasure-proof`, `ai-agent-audit-log-integrity`, `ai-agent-soc2-controls` (C1.2, P5), `ai-agent-hipaa-security-controls`, `uganda-d",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "chwezi-dev-engine/skills/saas/saas-tenant-data-portability-and-erasure/SKILL.md:61",
+   "line": "- The task is region-specific compliance content — use `uganda-dppa-compliance` for Ugandan specifics.",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "chwezi-dev-engine/skills/saas/saas-tenant-data-portability-and-erasure/references/erasure-cascade.md:173",
+   "line": "- `uganda-dppa-compliance` - regional retention specifics.",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "chwezi-dev-engine/skills/saas/saas-tenant-data-portability-and-erasure/references/export-format-spec.md:175",
+   "line": "- `uganda-dppa-compliance` - regional portability obligations.",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "chwezi-dev-engine/skills/saas/saas-tenant-data-portability-and-erasure/references/requester-verification.md:153",
+   "line": "- `uganda-dppa-compliance` - Information Officer obligations and regional response timelines.",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "chwezi-dev-engine/skills/security/dpia-generator/SKILL.md:36",
+   "line": "- The `uganda-dppa-compliance` skill has flagged `[DPIA-REQUIRED: <reason>]` for a processing operation",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "digital-research-engine/skills/capability-matrix/SKILL.md:111",
+   "line": "- **East-African / Uganda compliance** → add `uganda-dppa-compliance`, `dpia-generator`, `language-standards`, `east-african-english`.",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "digital-research-engine/skills/capability-matrix/references/companion-rules.md:66",
+   "line": "- `dpia-generator`, `uganda-dppa-compliance` — when handling personal data under Uganda DPPA 2019.",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "digital-research-engine/skills/validation-contract/references/evidence-categories.md:40",
+   "line": "**Indicative contributing skills:** `database-design-engineering`, `postgresql-administration`, `mysql-administration`, `dpia-generator`, `uganda-dppa-compliance`.",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "srs-skills/01-strategic-vision/01-prd-generation/references/opportunity-and-product-risk-evidence.md:178",
+   "line": "`NOT_ASSESSED`; route to `uganda-dppa-compliance`.",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "srs-skills/02-requirements-engineering/fundamentals/during/05-conceptual-data-modeling/references/data-quality-nfr-catalogue.md:99",
+   "line": "`uganda-dppa-compliance` and to `domains/uganda/references/regulations.md`.",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "srs-skills/03-design-documentation/01-high-level-design/references/solution-design-views-and-controls.md:80",
+   "line": "For Uganda, route to `uganda-dppa-compliance` and `dpia-generator`; for other jurisdictions cite the",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "srs-skills/AGENTS.md:300",
+   "line": "- **`uganda-dppa-compliance`** — Generates the DPPA 2019 compliance annex: PII inventory, classification (financial info = special personal data), consent FRs, data subject rights FRs, breach notifica",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "srs-skills/AGENTS.md:301",
+   "line": "- **`dpia-generator`** — Generates a Regulation 12-compliant DPIA document for any processing operation flagged `[DPIA-REQUIRED]`. Invoke when `uganda-dppa-compliance` raises a DPIA flag.",
+   "slug": "uganda-dppa-compliance"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "website-skills/skills/seo-search/seo/references/analytics-event-map.md:290",
+   "line": "- **Uganda / East Africa:** DPPA 2019 compliance — see `uganda-dppa-compliance` skill if applicable",
+   "slug": "uganda-dppa-compliance"
+  }
+ ]
+}

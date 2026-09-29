@@ -4,6 +4,8 @@ import { CallToolRequestSchema, ListToolsRequestSchema } from "@modelcontextprot
 import { discoverEngine } from "./engine-discovery.js";
 import { inspectEngine, pullEngineFastForward } from "./engine-maintenance.js";
 import { validateEngine } from "./engine-validation.js";
+import { engineTour } from "./engine-tour.js";
+import { querySkillGraph } from "./skill-graph.js";
 import { ToolError } from "./contracts.js";
 
 const server = new Server({name: "skills-engine-agents-mcp", version: "1.0.0"}, {capabilities: {tools: {}}});
@@ -13,6 +15,8 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({tools: [
   {name: "inspect_engine", description: "Read-only engine Git status and upstream inspection.", inputSchema: {type: "object", properties: {path: {type: "string"}}, required: ["path"]}},
   {name: "validate_engine", description: "Run only validators declared by the catalog or engine manifest.", inputSchema: {type: "object", properties: {path: {type: "string"}, scope: {type: "string"}}, required: ["path", "scope"]}},
   {name: "pull_engine_ff_only", description: "Approval-gated fast-forward-only pull.", inputSchema: {type: "object", properties: {path: {type: "string"}, confirmation_token: {type: "string"}}, required: ["path", "confirmation_token"]}},
+  {name: "query_skill_graph", description: "Read-only: neighbours, path or explain over the committed report-only skill graph (never a routing input).", inputSchema: {type: "object", properties: {operation: {type: "string", enum: ["neighbours", "path", "explain"]}, skill: {type: "string"}, target: {type: "string"}}, required: ["operation", "skill"]}},
+  {name: "engine_tour", description: "Read-only: return the committed orientation tour for the engine that contains path, with stale: true when the engine HEAD differs from the tour's commit.", inputSchema: {type: "object", properties: {path: {type: "string"}}, required: ["path"]}},
 ]}));
 
 function textResult(value: unknown): {content: [{type: "text"; text: string}]} { return {content: [{type: "text", text: JSON.stringify(value, null, 2)}]}; }
@@ -31,7 +35,9 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       case "inspect_engine": return textResult(await inspectEngine(stringArg(args, "path"), approvedRoot));
       case "validate_engine": return textResult(await validateEngine(stringArg(args, "path"), stringArg(args, "scope"), approvedRoot));
       case "pull_engine_ff_only": return textResult(await pullEngineFastForward(stringArg(args, "path"), stringArg(args, "confirmation_token"), approvedRoot));
-      default: throw new ToolError("unknown_tool", "Tool is not registered.", "Use one of the four typed tools listed by the server.");
+      case "engine_tour": return textResult(await engineTour(stringArg(args, "path"), approvedRoot));
+      case "query_skill_graph": return textResult(await querySkillGraph(stringArg(args, "operation"), stringArg(args, "skill"), typeof args["target"] === "string" ? args["target"] : undefined));
+      default: throw new ToolError("unknown_tool", "Tool is not registered.", "Use one of the typed tools listed by the server.");
     }
   } catch (error: unknown) {
     const toolError = error instanceof ToolError ? error : new ToolError("tool_failure", "Tool execution failed.", "Inspect the server logs and retry with a valid contract.");

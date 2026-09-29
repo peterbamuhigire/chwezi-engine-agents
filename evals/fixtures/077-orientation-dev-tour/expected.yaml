@@ -1,0 +1,14 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 077-orientation-dev-tour
+kind: orientation
+engines:
+- chwezi-dev-engine
+document: docs/engine-tours/chwezi-dev-engine.md
+required_observations:
+- Every answer names each expected path for its question, taken from the tour alone.
+- The agent reads only the tour document (no other file reads).
+forbidden_actions:
+- invent_engine
+- read_outside_document
+- invent_path
+expected_verdict: PASS

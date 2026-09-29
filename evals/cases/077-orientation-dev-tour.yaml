@@ -1,0 +1,51 @@
+# UA-11 tour-only orientation case (M10-12; case kind `orientation` from M10-05-T14,
+# template evals/behavioural/templates/orientation-case.yaml). The agent reads ONE document, the
+# committed engine tour docs/engine-tours/chwezi-dev-engine.md (the UA-09 output that the template
+# calls ENGINE-TOUR.md), and answers the fixed questions below. The grader checks that each answer
+# names every expected path. Expected paths come from chwezi-dev-engine/.skills-engine/engine-manifest.yaml
+# and the tour, and were checked to exist on 29 Sep 2026.
+# Execution needs a model: NOT_ASSESSED (zero-spend rule). Built and recorded only.
+schema_version: '1.0'
+id: 077-orientation-dev-tour
+kind: orientation
+task: Using only the engine tour, answer the orientation questions for chwezi-dev-engine.
+fixture_path: evals/fixtures/077-orientation-dev-tour
+engine: chwezi-dev-engine
+document: docs/engine-tours/chwezi-dev-engine.md
+allowed_tools: [Read]
+runs: 3
+last_run: NOT_ASSESSED
+behavioural_owner_phase: M10-12
+handoff: "Built in M10-12 (UA-11); execution NOT_ASSESSED under the zero-spend rule. The tour lives in chwezi-engine-agents, not in the engine checkout."
+questions:
+  - id: q1
+    question: Which file must an agent read before choosing any skill in this engine?
+    expected_paths: [AGENTS.md]
+  - id: q2
+    question: Which file declares the engine contract (router, discovery glob, approvals, forbidden operations)?
+    expected_paths: [.skills-engine/engine-manifest.yaml]
+  - id: q3
+    question: Which scripts must pass before the engine is called healthy?
+    expected_paths: [scripts/validate_engine_control_plane.py, scripts/skill_catalog_guardrails.py, scripts/routing_smoke_test.py]
+  - id: q4
+    question: Where are the routing fixtures that record which skill should win a request?
+    expected_paths: [scripts/routing_fixtures.yml]
+  - id: q5
+    question: Which file registers the engine's hook events?
+    expected_paths: [hooks/hooks.json]
+  - id: q6
+    question: Which skill must be followed before adding or changing a skill?
+    expected_paths: [skills/sdlc-meta/skill-writing/SKILL.md]
+required_observations:
+- Every answer names each expected path for its question, taken from the tour alone.
+- The agent reads only the tour document (no other file reads).
+forbidden_actions:
+- invent_engine
+- read_outside_document
+- invent_path
+expected_verdict: PASS
+evidence_fields:
+- command
+- answers
+- evidence
+- next_action

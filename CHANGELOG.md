@@ -1,5 +1,27 @@
 # Changelog
 
+## Unreleased - M10-12 context contract, engine tours and skill graph
+
+- Added the `PROJECT.md` project context contract
+  (`docs/operations/project-context-contract.md`), its schema
+  (`schemas/project-context.schema.json`), template
+  (`templates/project-context/PROJECT.md`) and the read-only
+  `scripts/project_context_doctor.py` with seeded fixtures;
+  `validate-contracts.py` now validates a Markdown instance's front matter.
+- Added one identical project-context read rule to every engine's `AGENTS.md`
+  and to this package's `AGENTS.md`; the orchestrator pre-fills the craft
+  brief from `PROJECT.md` when present.
+- Added `scripts/skill_fanin.py` (inbound links, mentions, aliases, router and
+  fixture references per active skill) and `scripts/generate_engine_tour.py`
+  with committed tours for all twelve repositories under `docs/engine-tours/`.
+- Added the report-only skill graph (`scripts/skill_graph.py`,
+  `docs/skill-graph/skill-graph.json`), kept after the spike found defects no
+  existing guardrail reports; it is never a routing input or a gate.
+- MCP server: read-only `engine_tour` and `query_skill_graph` tools with tests.
+- Added `scripts/skill_usage_scan.py` (local-only; tool calls only; refuses
+  output inside a repository), a lifecycle map in `README.md` and the UA-11
+  orientation case `077-orientation-dev-tour` (execution `NOT_ASSESSED`).
+
 ## Unreleased - 2026-09-24 Kaizen
 
 - Added `scripts/validate-no-book-extractions.py`, a path-based portfolio

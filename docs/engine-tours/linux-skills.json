@@ -1,0 +1,253 @@
+{
+  "display_name": "Linux Skills",
+  "engine_id": "linux-skills",
+  "folder": "linux-skills",
+  "generated_from_commit": "30ac859f45c1a55b7f68669ab0b5f5998c5a09f0",
+  "generator": "scripts/generate_engine_tour.py",
+  "schema_version": "1.0",
+  "steps": [
+    {
+      "data": {},
+      "number": 1,
+      "paths": [
+        {
+          "engine": "linux-skills",
+          "path": "README.md"
+        }
+      ],
+      "text": "Start with README.md: it states what Linux Skills is for and what it does not cover.",
+      "title": "Purpose"
+    },
+    {
+      "data": {
+        "catalogue_router": "AGENTS.md",
+        "router": "AGENTS.md"
+      },
+      "number": 2,
+      "paths": [
+        {
+          "engine": "linux-skills",
+          "path": "AGENTS.md"
+        },
+        {
+          "engine": "linux-skills",
+          "path": "CLAUDE.md"
+        }
+      ],
+      "text": "Read AGENTS.md before choosing any skill; it is the routing source of truth. CLAUDE.md is a bridge that imports it.",
+      "title": "Router"
+    },
+    {
+      "data": {
+        "approval_required_for": [
+          "external_message",
+          "publish",
+          "pull",
+          "update",
+          "write_files"
+        ],
+        "discovery_glob": "**/SKILL.md",
+        "forbidden_operations": [
+          "arbitrary_shell",
+          "broad_delete",
+          "force_push",
+          "git_clean",
+          "git_reset"
+        ]
+      },
+      "number": 3,
+      "paths": [
+        {
+          "engine": "linux-skills",
+          "path": ".skills-engine/engine-manifest.yaml"
+        }
+      ],
+      "text": "The engine manifest declares the router (AGENTS.md), the discovery glob (**/SKILL.md), 5 approval-gated operations and 5 forbidden operations.",
+      "title": "Engine contract"
+    },
+    {
+      "data": {
+        "active_skills": 48,
+        "folders": {
+          ".": 1,
+          "01-provisioning-and-bootstrap": 4,
+          "02-users-access-and-secrets": 2,
+          "03-networking-and-dns": 2,
+          "04-web-and-mail-services": 3,
+          "05-services-and-virtualization": 2,
+          "06-storage-and-filesystems": 1,
+          "07-security-and-hardening": 5,
+          "08-observability-and-logging": 3,
+          "09-troubleshooting-and-recovery": 2,
+          "10-automation-and-scripting": 2,
+          "11-databases-and-caching": 3,
+          "12-containers-and-orchestration": 3,
+          "13-backup-and-archiving": 3,
+          "14-performance-and-kernel": 3,
+          "15-compliance-and-auditing": 3,
+          "16-network-equipment": 3,
+          "meta": 3
+        }
+      },
+      "number": 4,
+      "paths": [
+        {
+          "engine": "linux-skills",
+          "path": "07-security-and-hardening"
+        },
+        {
+          "engine": "linux-skills",
+          "path": "01-provisioning-and-bootstrap"
+        },
+        {
+          "engine": "linux-skills",
+          "path": "04-web-and-mail-services"
+        },
+        {
+          "engine": "linux-skills",
+          "path": "08-observability-and-logging"
+        }
+      ],
+      "text": "48 active SKILL.md files in 18 folders; the largest are 07-security-and-hardening (5), 01-provisioning-and-bootstrap (4), 04-web-and-mail-services (3), 08-observability-and-logging (3).",
+      "title": "Skill layout"
+    },
+    {
+      "data": {
+        "hubs": [
+          {
+            "inbound_skills": 21,
+            "skill": "07-security-and-hardening/linux-server-hardening"
+          },
+          {
+            "inbound_skills": 21,
+            "skill": "meta/skill-writing"
+          },
+          {
+            "inbound_skills": 17,
+            "skill": "10-automation-and-scripting/linux-bash-scripting"
+          },
+          {
+            "inbound_skills": 14,
+            "skill": "07-security-and-hardening/linux-firewall-ssl"
+          },
+          {
+            "inbound_skills": 11,
+            "skill": "09-troubleshooting-and-recovery/linux-troubleshooting"
+          }
+        ],
+        "source": "scripts/skill_fanin.py"
+      },
+      "number": 5,
+      "paths": [
+        {
+          "engine": "linux-skills",
+          "path": "07-security-and-hardening/linux-server-hardening/SKILL.md"
+        },
+        {
+          "engine": "linux-skills",
+          "path": "meta/skill-writing/SKILL.md"
+        },
+        {
+          "engine": "linux-skills",
+          "path": "10-automation-and-scripting/linux-bash-scripting/SKILL.md"
+        },
+        {
+          "engine": "linux-skills",
+          "path": "07-security-and-hardening/linux-firewall-ssl/SKILL.md"
+        },
+        {
+          "engine": "linux-skills",
+          "path": "09-troubleshooting-and-recovery/linux-troubleshooting/SKILL.md"
+        }
+      ],
+      "text": "The skills other skills lean on most (inbound links, mentions and aliases): linux-server-hardening (21), skill-writing (21), linux-bash-scripting (17), linux-firewall-ssl (14), linux-troubleshooting (11).",
+      "title": "Hub skills"
+    },
+    {
+      "data": {
+        "commands": [
+          "python -X utf8 scripts/validate_skills.py --baseline quality-baseline.json",
+          "python -X utf8 scripts/routing_smoke_test.py",
+          "bash scripts/tests/check-distro-matrix.sh"
+        ]
+      },
+      "number": 6,
+      "paths": [
+        {
+          "engine": "linux-skills",
+          "path": "scripts/validate_skills.py"
+        },
+        {
+          "engine": "linux-skills",
+          "path": "scripts/routing_smoke_test.py"
+        },
+        {
+          "engine": "linux-skills",
+          "path": "scripts/tests/check-distro-matrix.sh"
+        }
+      ],
+      "text": "Run these 3 checks before claiming the engine is healthy; an unavailable check is NOT_ASSESSED, never a pass.",
+      "title": "Gates"
+    },
+    {
+      "data": {
+        "fixture_cases": {
+          "tests/fixtures/routing.json": 30
+        }
+      },
+      "number": 7,
+      "paths": [
+        {
+          "engine": "linux-skills",
+          "path": "tests/fixtures/routing.json"
+        }
+      ],
+      "text": "Routing fixtures record which skill should win for a realistic request: 30 cases in 1 file.",
+      "title": "Routing evidence"
+    },
+    {
+      "data": {
+        "events": [
+          "PreToolUse"
+        ]
+      },
+      "number": 8,
+      "paths": [
+        {
+          "engine": "linux-skills",
+          "path": "hooks/hooks.json"
+        }
+      ],
+      "text": "hooks/hooks.json registers these events: PreToolUse.",
+      "title": "Hooks"
+    },
+    {
+      "data": {
+        "status": "PASS"
+      },
+      "number": 9,
+      "paths": [
+        {
+          "engine": "linux-skills",
+          "path": "meta/skill-writing/SKILL.md"
+        }
+      ],
+      "text": "Follow meta/skill-writing/SKILL.md before adding or changing a skill.",
+      "title": "Adding a skill"
+    },
+    {
+      "data": {
+        "handoff_question": "not listed"
+      },
+      "number": 10,
+      "paths": [
+        {
+          "engine": "chwezi-engine-agents",
+          "path": "core/instructions/engine-orchestrator.md"
+        }
+      ],
+      "text": "Add chwezi-accounting-doctrine for finance, accounting, tax or statutory work; design-system-skills for any change to how an output looks; digital-research-skills for current, uncertain or source-sensitive claims. They activate alongside this engine, never instead of it.",
+      "title": "Cross-cutting engines"
+    }
+  ]
+}

@@ -18,6 +18,8 @@ How to use this package:
    `engine-maintainer`, `engine-validator` — by reading their definitions
    directly. Canonical instructions live in `core/instructions/`.
 
+Project context: if the working project root holds a `PROJECT.md` with `project_schema: 1`, read it before planning. It points to this engine's own context sources and never replaces them.
+
 Safety boundaries (binding):
 
 - Read-only by default. `git pull --ff-only` only after an explicit user

@@ -1,0 +1,259 @@
+{
+  "display_name": "Website Skills",
+  "engine_id": "website-skills",
+  "folder": "website-skills",
+  "generated_from_commit": "88d2af4a89191848b94c317aebf6d45c33cfd684",
+  "generator": "scripts/generate_engine_tour.py",
+  "schema_version": "1.0",
+  "steps": [
+    {
+      "data": {},
+      "number": 1,
+      "paths": [
+        {
+          "engine": "website-skills",
+          "path": "README.md"
+        }
+      ],
+      "text": "Start with README.md: it states what Website Skills is for and what it does not cover.",
+      "title": "Purpose"
+    },
+    {
+      "data": {
+        "catalogue_router": "AGENTS.md",
+        "router": "AGENTS.md"
+      },
+      "number": 2,
+      "paths": [
+        {
+          "engine": "website-skills",
+          "path": "AGENTS.md"
+        },
+        {
+          "engine": "website-skills",
+          "path": "CLAUDE.md"
+        }
+      ],
+      "text": "Read AGENTS.md before choosing any skill; it is the routing source of truth. CLAUDE.md is a bridge that imports it.",
+      "title": "Router"
+    },
+    {
+      "data": {
+        "approval_required_for": [
+          "external_message",
+          "publish",
+          "pull",
+          "update",
+          "write_files"
+        ],
+        "discovery_glob": "skills/**/SKILL.md",
+        "forbidden_operations": [
+          "arbitrary_shell",
+          "broad_delete",
+          "force_push",
+          "git_clean",
+          "git_reset"
+        ]
+      },
+      "number": 3,
+      "paths": [
+        {
+          "engine": "website-skills",
+          "path": ".skills-engine/engine-manifest.yaml"
+        }
+      ],
+      "text": "The engine manifest declares the router (AGENTS.md), the discovery glob (skills/**/SKILL.md), 5 approval-gated operations and 5 forbidden operations.",
+      "title": "Engine contract"
+    },
+    {
+      "data": {
+        "active_skills": 56,
+        "folders": {
+          "skills/agency-ops": 14,
+          "skills/brand": 2,
+          "skills/commerce": 5,
+          "skills/content-copy": 11,
+          "skills/launch-ops": 4,
+          "skills/meta": 3,
+          "skills/orchestration": 6,
+          "skills/quality-gates": 6,
+          "skills/seo-search": 3,
+          "skills/ux-conversion": 2
+        }
+      },
+      "number": 4,
+      "paths": [
+        {
+          "engine": "website-skills",
+          "path": "skills/agency-ops"
+        },
+        {
+          "engine": "website-skills",
+          "path": "skills/content-copy"
+        },
+        {
+          "engine": "website-skills",
+          "path": "skills/orchestration"
+        },
+        {
+          "engine": "website-skills",
+          "path": "skills/quality-gates"
+        }
+      ],
+      "text": "56 active SKILL.md files in 10 folders; the largest are skills/agency-ops (14), skills/content-copy (11), skills/orchestration (6), skills/quality-gates (6).",
+      "title": "Skill layout"
+    },
+    {
+      "data": {
+        "hubs": [
+          {
+            "inbound_skills": 119,
+            "skill": "skills/content-copy/east-african-english"
+          },
+          {
+            "inbound_skills": 53,
+            "skill": "skills/content-copy/premium-commercial-writing"
+          },
+          {
+            "inbound_skills": 51,
+            "skill": "skills/content-copy/content-writing"
+          },
+          {
+            "inbound_skills": 43,
+            "skill": "skills/content-copy/blog-writer"
+          },
+          {
+            "inbound_skills": 38,
+            "skill": "skills/seo-search/seo"
+          }
+        ],
+        "source": "scripts/skill_fanin.py"
+      },
+      "number": 5,
+      "paths": [
+        {
+          "engine": "website-skills",
+          "path": "skills/content-copy/east-african-english/SKILL.md"
+        },
+        {
+          "engine": "website-skills",
+          "path": "skills/content-copy/premium-commercial-writing/SKILL.md"
+        },
+        {
+          "engine": "website-skills",
+          "path": "skills/content-copy/content-writing/SKILL.md"
+        },
+        {
+          "engine": "website-skills",
+          "path": "skills/content-copy/blog-writer/SKILL.md"
+        },
+        {
+          "engine": "website-skills",
+          "path": "skills/seo-search/seo/SKILL.md"
+        }
+      ],
+      "text": "The skills other skills lean on most (inbound links, mentions and aliases): east-african-english (119), premium-commercial-writing (53), content-writing (51), blog-writer (43), seo (38).",
+      "title": "Hub skills"
+    },
+    {
+      "data": {
+        "commands": [
+          "python scripts/validate-skill-registry.py",
+          "python scripts/validate-skill-contracts.py --baseline quality/skill-contract-baseline.json",
+          "python scripts/routing-smoke-test.py",
+          "python scripts/validate-search-doctrine.py",
+          "python scripts/source_ingestion_guardrail.py --root .",
+          "python -m pytest -q",
+          "python scripts/website_fixture_benchmark.py"
+        ]
+      },
+      "number": 6,
+      "paths": [
+        {
+          "engine": "website-skills",
+          "path": "scripts/validate-skill-registry.py"
+        },
+        {
+          "engine": "website-skills",
+          "path": "scripts/validate-skill-contracts.py"
+        },
+        {
+          "engine": "website-skills",
+          "path": "scripts/routing-smoke-test.py"
+        },
+        {
+          "engine": "website-skills",
+          "path": "scripts/validate-search-doctrine.py"
+        },
+        {
+          "engine": "website-skills",
+          "path": "scripts/source_ingestion_guardrail.py"
+        }
+      ],
+      "text": "Run these 7 checks before claiming the engine is healthy; an unavailable check is NOT_ASSESSED, never a pass.",
+      "title": "Gates"
+    },
+    {
+      "data": {
+        "fixture_cases": {
+          "tests/routing/fixtures.json": 37
+        }
+      },
+      "number": 7,
+      "paths": [
+        {
+          "engine": "website-skills",
+          "path": "tests/routing/fixtures.json"
+        }
+      ],
+      "text": "Routing fixtures record which skill should win for a realistic request: 37 cases in 1 file.",
+      "title": "Routing evidence"
+    },
+    {
+      "data": {
+        "events": [
+          "PostToolUse",
+          "PreToolUse",
+          "Stop"
+        ]
+      },
+      "number": 8,
+      "paths": [
+        {
+          "engine": "website-skills",
+          "path": "hooks/hooks.json"
+        }
+      ],
+      "text": "hooks/hooks.json registers these events: PostToolUse, PreToolUse, Stop.",
+      "title": "Hooks"
+    },
+    {
+      "data": {
+        "status": "PASS"
+      },
+      "number": 9,
+      "paths": [
+        {
+          "engine": "website-skills",
+          "path": "skills/meta/skill-writing/SKILL.md"
+        }
+      ],
+      "text": "Follow skills/meta/skill-writing/SKILL.md before adding or changing a skill.",
+      "title": "Adding a skill"
+    },
+    {
+      "data": {
+        "handoff_question": "not listed"
+      },
+      "number": 10,
+      "paths": [
+        {
+          "engine": "chwezi-engine-agents",
+          "path": "core/instructions/engine-orchestrator.md"
+        }
+      ],
+      "text": "Add chwezi-accounting-doctrine for finance, accounting, tax or statutory work; design-system-skills for any change to how an output looks; digital-research-skills for current, uncertain or source-sensitive claims. They activate alongside this engine, never instead of it.",
+      "title": "Cross-cutting engines"
+    }
+  ]
+}

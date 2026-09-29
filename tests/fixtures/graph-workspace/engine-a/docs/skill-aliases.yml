@@ -1,0 +1,3 @@
+version: 1
+inactive_skill_aliases:
+  skills/core/old-invoice-skill: skills/core/invoice-layout

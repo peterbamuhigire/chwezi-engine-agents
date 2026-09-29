@@ -1,0 +1,10 @@
+schema_version: "1.0"
+engine_id: demo-engine
+display_name: Demo Engine
+router:
+  path: AGENTS.md
+skills:
+  discovery_glob: skills/**/SKILL.md
+validation:
+  - id: release-gate
+    command: python -X utf8 scripts/check.py

@@ -1,0 +1,2 @@
+{"timestamp": "2026-09-01T09:00:00Z", "type": "session_meta", "payload": {"cwd": "C:\\ws\\demo-engine"}}
+{"timestamp": "2026-09-01T09:00:01Z", "type": "response_item", "payload": {"type": "custom_tool_call", "name": "exec", "input": "Get-Content skills/core/gamma-skill/SKILL.md"}}

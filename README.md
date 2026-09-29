@@ -31,12 +31,42 @@ The shared installer also supports project/user scope, dry-run, doctor, update, 
 | Validation | Runs declared contract, lifecycle, catalog, runtime-budget, and portfolio checks; missing evidence remains `NOT ASSESSED`. | [`scripts/`](scripts/) |
 | Safety and shared rules | Distributes a Bash destructive-command gate and provides a skill for proposing recurring principles for shared rules. | [`hooks/`](hooks/), [`skills/rules-distill/`](skills/rules-distill/) |
 | Coordination standards | Defines evidence expectations and craft practices for cross-engine work. | [`docs/operations/`](docs/operations/) |
+| Project context | `PROJECT.md` contract (durable truth and pointers to each engine's own context) with a read-only doctor. | [`docs/operations/project-context-contract.md`](docs/operations/project-context-contract.md), [`scripts/project_context_doctor.py`](scripts/project_context_doctor.py) |
+| Orientation and structure | Deterministic engine tours, skill fan-in report and a report-only skill graph; the MCP server serves tours read-only (`engine_tour`). | [`docs/engine-tours/`](docs/engine-tours/), [`scripts/generate_engine_tour.py`](scripts/generate_engine_tour.py), [`scripts/skill_fanin.py`](scripts/skill_fanin.py), [`scripts/skill_graph.py`](scripts/skill_graph.py) |
+| Usage evidence | Local-only count of `SKILL.md` reads from session tool calls; output stays outside every repository. | [`scripts/skill_usage_scan.py`](scripts/skill_usage_scan.py) |
 
 Coordination cards (checked by `scripts/validate-kaizen-cards.py`):
 
 - [`agentic-h2-readiness-card.md`](docs/operations/agentic-h2-readiness-card.md): H2 readiness and agentic-literacy card.
 - [`three-horizon-ai-adoption-card.md`](docs/operations/three-horizon-ai-adoption-card.md): three-horizon adoption and frontier card.
 - [`task-runbook-and-integration-evidence.md`](docs/operations/task-runbook-and-integration-evidence.md): task runbook and integration evidence card.
+
+## Lifecycle map
+
+One screen from idea to release. Each stage names its owning engine and an entry route
+(`engine-id:path`); the owner answers its question once and hands the artefact on, as the
+[orchestrator's handoff table](core/instructions/engine-orchestrator.md) sets out.
+
+| Stage | Owner | Entry route |
+|---|---|---|
+| DEFINE | Requirements (`srs-skills`) | `srs-skills:01-strategic-vision/`, `srs-skills:02-requirements-engineering/fundamentals/before/02-elicitation-toolkit/` |
+| PLAN | Engineering and design documentation | `chwezi-dev-engine:skills/execution-plan-scripts/`, `srs-skills:03-design-documentation/` |
+| BUILD | Engineering; websites | `chwezi-dev-engine:skills/sdlc-meta/world-class-engineering/`, `website-skills:skills/orchestration/website-builder/` |
+| VERIFY | Engineering; design | `chwezi-dev-engine:skills/sdlc-meta/world-class-engineering/references/verification-loop.md`, `design-system-skills:skills/00-cross-cutting-ops-qa-a11y/visual-product-slop-audit/` |
+| REVIEW | Engineering | `chwezi-dev-engine:skills/sdlc-meta/git-collaboration-workflow/` |
+| SHIP | Engineering; websites; servers | `chwezi-dev-engine:skills/devops-cloud/deployment-release-engineering/`, `website-skills:skills/launch-ops/deploy/`, `linux-skills:linux-sysadmin/` |
+
+Cross-cutting overlays join any stage, alongside the owner and never instead of it: finance
+(`chwezi-accounting-doctrine:skills/`) wherever money moves, design
+(`design-system-skills:skills/`) wherever an output's appearance changes, and research
+(`digital-research-skills:skills/`) for current or uncertain claims.[^commercial]
+
+[^commercial]: Commercial work comes before DEFINE: proposals (`proposal-skills:skills/`),
+    business plans (`business-plan-skills:skills/pipeline/00-plan-assembly/`) and marketing
+    (`social-media-skills:skills/pipeline/06-digital-marketing-strategy/`).
+
+The one-screen lifecycle idea is adapted from addyosmani/agent-skills (MIT,
+https://github.com/addyosmani/agent-skills, commit `2686b62`).
 
 ## References
 

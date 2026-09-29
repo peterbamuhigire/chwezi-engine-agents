@@ -1,0 +1,257 @@
+{
+  "display_name": "Business Plan Skills",
+  "engine_id": "business-plan-skills",
+  "folder": "business-plan-skills",
+  "generated_from_commit": "29d6aa3eba331f5b3e875eda05ccad4ace999363",
+  "generator": "scripts/generate_engine_tour.py",
+  "schema_version": "1.0",
+  "steps": [
+    {
+      "data": {},
+      "number": 1,
+      "paths": [
+        {
+          "engine": "business-plan-skills",
+          "path": "README.md"
+        }
+      ],
+      "text": "Start with README.md: it states what Business Plan Skills is for and what it does not cover.",
+      "title": "Purpose"
+    },
+    {
+      "data": {
+        "catalogue_router": "AGENTS.md",
+        "router": "AGENTS.md"
+      },
+      "number": 2,
+      "paths": [
+        {
+          "engine": "business-plan-skills",
+          "path": "AGENTS.md"
+        },
+        {
+          "engine": "business-plan-skills",
+          "path": "CLAUDE.md"
+        }
+      ],
+      "text": "Read AGENTS.md before choosing any skill; it is the routing source of truth. CLAUDE.md is a bridge that imports it.",
+      "title": "Router"
+    },
+    {
+      "data": {
+        "approval_required_for": [
+          "external_message",
+          "publish",
+          "pull",
+          "update",
+          "write_files"
+        ],
+        "discovery_glob": "skills/**/SKILL.md",
+        "forbidden_operations": [
+          "arbitrary_shell",
+          "broad_delete",
+          "force_push",
+          "git_clean",
+          "git_reset"
+        ]
+      },
+      "number": 3,
+      "paths": [
+        {
+          "engine": "business-plan-skills",
+          "path": ".skills-engine/engine-manifest.yaml"
+        }
+      ],
+      "text": "The engine manifest declares the router (AGENTS.md), the discovery glob (skills/**/SKILL.md), 5 approval-gated operations and 5 forbidden operations.",
+      "title": "Engine contract"
+    },
+    {
+      "data": {
+        "active_skills": 134,
+        "folders": {
+          "skills": 2,
+          "skills/advisory-deliverables": 7,
+          "skills/ict": 4,
+          "skills/industry-guides": 1,
+          "skills/language": 3,
+          "skills/marketing-sales": 4,
+          "skills/meta-finance": 12,
+          "skills/meta-pitch": 3,
+          "skills/meta-pricing-gtm": 3,
+          "skills/meta-reporting": 2,
+          "skills/meta-strategy": 22,
+          "skills/meta-utility": 6,
+          "skills/pipeline": 19,
+          "skills/pipeline/03-products-services": 2,
+          "skills/pipeline/04-market-analysis": 1,
+          "skills/pipeline/06-competitive-analysis": 2,
+          "skills/pipeline/07-marketing-sales-strategy": 4,
+          "skills/pipeline/09-management-team": 3,
+          "skills/pipeline/10-financial-projections": 7,
+          "skills/pipeline/11-funding-request": 3,
+          "skills/pipeline/11b-grant-proposal": 1,
+          "skills/pipeline/12-risk-analysis": 3,
+          "skills/pipeline/13-implementation-timeline": 1,
+          "skills/pipeline/14-ai-integration": 1,
+          "skills/pipeline/16-sustainability-strategy": 2,
+          "skills/saas": 11,
+          "skills/writing-content": 5
+        }
+      },
+      "number": 4,
+      "paths": [
+        {
+          "engine": "business-plan-skills",
+          "path": "skills/meta-strategy"
+        },
+        {
+          "engine": "business-plan-skills",
+          "path": "skills/pipeline"
+        },
+        {
+          "engine": "business-plan-skills",
+          "path": "skills/meta-finance"
+        },
+        {
+          "engine": "business-plan-skills",
+          "path": "skills/saas"
+        }
+      ],
+      "text": "134 active SKILL.md files in 27 folders; the largest are skills/meta-strategy (22), skills/pipeline (19), skills/meta-finance (12), skills/saas (11).",
+      "title": "Skill layout"
+    },
+    {
+      "data": {
+        "hubs": [
+          {
+            "inbound_skills": 245,
+            "skill": "skills/meta-utility/anti-ai-slop"
+          },
+          {
+            "inbound_skills": 119,
+            "skill": "skills/language/east-african-english"
+          },
+          {
+            "inbound_skills": 87,
+            "skill": "skills/meta-utility/ai-slop-audit"
+          },
+          {
+            "inbound_skills": 53,
+            "skill": "skills/writing-content/premium-commercial-writing"
+          },
+          {
+            "inbound_skills": 51,
+            "skill": "skills/writing-content/content-writing"
+          }
+        ],
+        "source": "scripts/skill_fanin.py"
+      },
+      "number": 5,
+      "paths": [
+        {
+          "engine": "business-plan-skills",
+          "path": "skills/meta-utility/anti-ai-slop/SKILL.md"
+        },
+        {
+          "engine": "business-plan-skills",
+          "path": "skills/language/east-african-english/SKILL.md"
+        },
+        {
+          "engine": "business-plan-skills",
+          "path": "skills/meta-utility/ai-slop-audit/SKILL.md"
+        },
+        {
+          "engine": "business-plan-skills",
+          "path": "skills/writing-content/premium-commercial-writing/SKILL.md"
+        },
+        {
+          "engine": "business-plan-skills",
+          "path": "skills/writing-content/content-writing/SKILL.md"
+        }
+      ],
+      "text": "The skills other skills lean on most (inbound links, mentions and aliases): anti-ai-slop (245), east-african-english (119), ai-slop-audit (87), premium-commercial-writing (53), content-writing (51).",
+      "title": "Hub skills"
+    },
+    {
+      "data": {
+        "commands": [
+          "python -X utf8 scripts/validate_skill_engine.py --baseline docs/quality/skill-quality-baseline.json",
+          "python -X utf8 scripts/routing_smoke_test.py --threshold 1.0"
+        ]
+      },
+      "number": 6,
+      "paths": [
+        {
+          "engine": "business-plan-skills",
+          "path": "scripts/validate_skill_engine.py"
+        },
+        {
+          "engine": "business-plan-skills",
+          "path": "scripts/routing_smoke_test.py"
+        }
+      ],
+      "text": "Run these 2 checks before claiming the engine is healthy; an unavailable check is NOT_ASSESSED, never a pass.",
+      "title": "Gates"
+    },
+    {
+      "data": {
+        "fixture_cases": {
+          "tests/routing-fixtures.json": 61
+        }
+      },
+      "number": 7,
+      "paths": [
+        {
+          "engine": "business-plan-skills",
+          "path": "tests/routing-fixtures.json"
+        }
+      ],
+      "text": "Routing fixtures record which skill should win for a realistic request: 61 cases in 1 file.",
+      "title": "Routing evidence"
+    },
+    {
+      "data": {
+        "events": [
+          "PreToolUse"
+        ]
+      },
+      "number": 8,
+      "paths": [
+        {
+          "engine": "business-plan-skills",
+          "path": "hooks/hooks.json"
+        }
+      ],
+      "text": "hooks/hooks.json registers these events: PreToolUse.",
+      "title": "Hooks"
+    },
+    {
+      "data": {
+        "status": "PASS"
+      },
+      "number": 9,
+      "paths": [
+        {
+          "engine": "business-plan-skills",
+          "path": "skills/meta-utility/skill-writing/SKILL.md"
+        }
+      ],
+      "text": "Follow skills/meta-utility/skill-writing/SKILL.md before adding or changing a skill.",
+      "title": "Adding a skill"
+    },
+    {
+      "data": {
+        "handoff_question": "not listed"
+      },
+      "number": 10,
+      "paths": [
+        {
+          "engine": "chwezi-engine-agents",
+          "path": "core/instructions/engine-orchestrator.md"
+        }
+      ],
+      "text": "Add chwezi-accounting-doctrine for finance, accounting, tax or statutory work; design-system-skills for any change to how an output looks; digital-research-skills for current, uncertain or source-sensitive claims. They activate alongside this engine, never instead of it.",
+      "title": "Cross-cutting engines"
+    }
+  ]
+}

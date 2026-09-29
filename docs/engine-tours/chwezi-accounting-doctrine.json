@@ -1,0 +1,230 @@
+{
+  "display_name": "Chwezi Accounting Doctrine",
+  "engine_id": "chwezi-accounting-doctrine",
+  "folder": "chwezi-accounting-doctrine",
+  "generated_from_commit": "d2d013c5eaa3ce365212515545ce1db2395186fe",
+  "generator": "scripts/generate_engine_tour.py",
+  "schema_version": "1.0",
+  "steps": [
+    {
+      "data": {},
+      "number": 1,
+      "paths": [
+        {
+          "engine": "chwezi-accounting-doctrine",
+          "path": "README.md"
+        }
+      ],
+      "text": "Start with README.md: it states what Chwezi Accounting Doctrine is for and what it does not cover.",
+      "title": "Purpose"
+    },
+    {
+      "data": {
+        "catalogue_router": "README.md",
+        "router": "AGENTS.md"
+      },
+      "number": 2,
+      "paths": [
+        {
+          "engine": "chwezi-accounting-doctrine",
+          "path": "AGENTS.md"
+        },
+        {
+          "engine": "chwezi-accounting-doctrine",
+          "path": "README.md"
+        },
+        {
+          "engine": "chwezi-accounting-doctrine",
+          "path": "CLAUDE.md"
+        }
+      ],
+      "text": "Read AGENTS.md before choosing any skill; it is the routing source of truth. CLAUDE.md is a bridge that imports it.",
+      "title": "Router"
+    },
+    {
+      "data": {
+        "approval_required_for": [
+          "external_message",
+          "publish",
+          "pull",
+          "update",
+          "write_files"
+        ],
+        "discovery_glob": "skills/**/SKILL.md",
+        "forbidden_operations": [
+          "arbitrary_shell",
+          "broad_delete",
+          "force_push",
+          "git_clean",
+          "git_reset"
+        ]
+      },
+      "number": 3,
+      "paths": [
+        {
+          "engine": "chwezi-accounting-doctrine",
+          "path": ".skills-engine/engine-manifest.yaml"
+        }
+      ],
+      "text": "The engine manifest declares the router (AGENTS.md), the discovery glob (skills/**/SKILL.md), 5 approval-gated operations and 5 forbidden operations.",
+      "title": "Engine contract"
+    },
+    {
+      "data": {
+        "active_skills": 108,
+        "folders": {
+          "skills/01-foundations": 5,
+          "skills/02-ifrs-core-standards": 10,
+          "skills/03-ifrs-specialised-standards": 19,
+          "skills/04-subledgers-and-operations": 7,
+          "skills/05-receivables-payables-and-treasury": 5,
+          "skills/06-close-consolidation-and-reporting": 8,
+          "skills/07-financial-statements-and-disclosures": 6,
+          "skills/08-tax-and-statutory": 6,
+          "skills/09-budgeting-fpa-and-costing": 5,
+          "skills/10-controls-governance-and-fraud": 8,
+          "skills/11-sector-and-fund-accounting": 8,
+          "skills/12-public-sector-and-ipsas": 3,
+          "skills/13-project-and-contract-accounting": 3,
+          "skills/14-systems-integration-and-data": 4,
+          "skills/15-security-privacy-and-continuity": 3,
+          "skills/16-ux-and-presentation": 4,
+          "skills/17-ai-automation-and-emerging": 4
+        }
+      },
+      "number": 4,
+      "paths": [
+        {
+          "engine": "chwezi-accounting-doctrine",
+          "path": "skills/03-ifrs-specialised-standards"
+        },
+        {
+          "engine": "chwezi-accounting-doctrine",
+          "path": "skills/02-ifrs-core-standards"
+        },
+        {
+          "engine": "chwezi-accounting-doctrine",
+          "path": "skills/06-close-consolidation-and-reporting"
+        },
+        {
+          "engine": "chwezi-accounting-doctrine",
+          "path": "skills/10-controls-governance-and-fraud"
+        }
+      ],
+      "text": "108 active SKILL.md files in 17 folders; the largest are skills/03-ifrs-specialised-standards (19), skills/02-ifrs-core-standards (10), skills/06-close-consolidation-and-reporting (8), skills/10-controls-governance-and-fraud (8).",
+      "title": "Skill layout"
+    },
+    {
+      "data": {
+        "hubs": [
+          {
+            "inbound_skills": 22,
+            "skill": "skills/01-foundations/ledger-posting-engine-core"
+          },
+          {
+            "inbound_skills": 22,
+            "skill": "skills/08-tax-and-statutory/tax-statutory-source-register-and-country-packs"
+          },
+          {
+            "inbound_skills": 20,
+            "skill": "skills/06-close-consolidation-and-reporting/finance-module-audit"
+          },
+          {
+            "inbound_skills": 6,
+            "skill": "skills/04-subledgers-and-operations/bank-and-mobile-money-reconciliation"
+          },
+          {
+            "inbound_skills": 5,
+            "skill": "skills/10-controls-governance-and-fraud/internal-controls-library"
+          }
+        ],
+        "source": "scripts/skill_fanin.py"
+      },
+      "number": 5,
+      "paths": [
+        {
+          "engine": "chwezi-accounting-doctrine",
+          "path": "skills/01-foundations/ledger-posting-engine-core/SKILL.md"
+        },
+        {
+          "engine": "chwezi-accounting-doctrine",
+          "path": "skills/08-tax-and-statutory/tax-statutory-source-register-and-country-packs/SKILL.md"
+        },
+        {
+          "engine": "chwezi-accounting-doctrine",
+          "path": "skills/06-close-consolidation-and-reporting/finance-module-audit/SKILL.md"
+        },
+        {
+          "engine": "chwezi-accounting-doctrine",
+          "path": "skills/04-subledgers-and-operations/bank-and-mobile-money-reconciliation/SKILL.md"
+        },
+        {
+          "engine": "chwezi-accounting-doctrine",
+          "path": "skills/10-controls-governance-and-fraud/internal-controls-library/SKILL.md"
+        }
+      ],
+      "text": "The skills other skills lean on most (inbound links, mentions and aliases): ledger-posting-engine-core (22), tax-statutory-source-register-and-country-packs (22), finance-module-audit (20), bank-and-mobile-money-reconciliation (6), internal-controls-library (5).",
+      "title": "Hub skills"
+    },
+    {
+      "data": {
+        "commands": [
+          ".\\tools\\validate-doctrine.ps1 -Strict"
+        ]
+      },
+      "number": 6,
+      "paths": [
+        {
+          "engine": "chwezi-accounting-doctrine",
+          "path": "tools/validate-doctrine.ps1"
+        }
+      ],
+      "text": "Run this check before claiming the engine is healthy; an unavailable check is NOT_ASSESSED, never a pass.",
+      "title": "Gates"
+    },
+    {
+      "data": {
+        "events": [
+          "PreToolUse"
+        ]
+      },
+      "number": 7,
+      "paths": [
+        {
+          "engine": "chwezi-accounting-doctrine",
+          "path": "hooks/hooks.json"
+        }
+      ],
+      "text": "hooks/hooks.json registers these events: PreToolUse.",
+      "title": "Hooks"
+    },
+    {
+      "data": {
+        "status": "NOT_ASSESSED"
+      },
+      "number": 8,
+      "paths": [
+        {
+          "engine": "chwezi-accounting-doctrine",
+          "path": "AGENTS.md"
+        }
+      ],
+      "text": "No skill-writing skill or CONTRIBUTING.md was found: NOT_ASSESSED.",
+      "title": "Adding a skill"
+    },
+    {
+      "data": {
+        "handoff_question": "What happens to the money?"
+      },
+      "number": 9,
+      "paths": [
+        {
+          "engine": "chwezi-engine-agents",
+          "path": "core/instructions/engine-orchestrator.md"
+        }
+      ],
+      "text": "In a cross-engine handoff this engine answers: \"What happens to the money?\" Add design-system-skills for any change to how an output looks; digital-research-skills for current, uncertain or source-sensitive claims. They activate alongside this engine, never instead of it.",
+      "title": "Cross-cutting engines"
+    }
+  ]
+}

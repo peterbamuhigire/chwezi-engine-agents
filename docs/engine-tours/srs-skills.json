@@ -1,0 +1,247 @@
+{
+  "display_name": "SRS Skills",
+  "engine_id": "srs-skills",
+  "folder": "srs-skills",
+  "generated_from_commit": "0da72de02ccf50b13ab17d32665afd71631a284e",
+  "generator": "scripts/generate_engine_tour.py",
+  "schema_version": "1.0",
+  "steps": [
+    {
+      "data": {},
+      "number": 1,
+      "paths": [
+        {
+          "engine": "srs-skills",
+          "path": "README.md"
+        }
+      ],
+      "text": "Start with README.md: it states what SRS Skills is for and what it does not cover.",
+      "title": "Purpose"
+    },
+    {
+      "data": {
+        "catalogue_router": "AGENTS.md",
+        "router": "AGENTS.md"
+      },
+      "number": 2,
+      "paths": [
+        {
+          "engine": "srs-skills",
+          "path": "AGENTS.md"
+        },
+        {
+          "engine": "srs-skills",
+          "path": "CLAUDE.md"
+        }
+      ],
+      "text": "Read AGENTS.md before choosing any skill; it is the routing source of truth. CLAUDE.md is a bridge that imports it.",
+      "title": "Router"
+    },
+    {
+      "data": {
+        "approval_required_for": [
+          "external_message",
+          "publish",
+          "pull",
+          "update",
+          "write_files"
+        ],
+        "discovery_glob": "**/SKILL.md",
+        "forbidden_operations": [
+          "arbitrary_shell",
+          "broad_delete",
+          "force_push",
+          "git_clean",
+          "git_reset"
+        ]
+      },
+      "number": 3,
+      "paths": [
+        {
+          "engine": "srs-skills",
+          "path": ".skills-engine/engine-manifest.yaml"
+        }
+      ],
+      "text": "The engine manifest declares the router (AGENTS.md), the discovery glob (**/SKILL.md), 5 approval-gated operations and 5 forbidden operations.",
+      "title": "Engine contract"
+    },
+    {
+      "data": {
+        "active_skills": 159,
+        "folders": {
+          "01-strategic-vision": 13,
+          "02-requirements-engineering": 9,
+          "02-requirements-engineering/agile": 4,
+          "02-requirements-engineering/fundamentals/after": 5,
+          "02-requirements-engineering/fundamentals/before": 4,
+          "02-requirements-engineering/fundamentals/during": 9,
+          "02-requirements-engineering/hybrid": 1,
+          "02-requirements-engineering/waterfall": 9,
+          "03-design-documentation": 18,
+          "04-development-artifacts": 6,
+          "05-testing-documentation": 10,
+          "06-deployment-operations": 23,
+          "07-agile-artifacts": 5,
+          "08-end-user-documentation": 9,
+          "09-governance-compliance": 34
+        }
+      },
+      "number": 4,
+      "paths": [
+        {
+          "engine": "srs-skills",
+          "path": "09-governance-compliance"
+        },
+        {
+          "engine": "srs-skills",
+          "path": "06-deployment-operations"
+        },
+        {
+          "engine": "srs-skills",
+          "path": "03-design-documentation"
+        },
+        {
+          "engine": "srs-skills",
+          "path": "01-strategic-vision"
+        }
+      ],
+      "text": "159 active SKILL.md files in 15 folders; the largest are 09-governance-compliance (34), 06-deployment-operations (23), 03-design-documentation (18), 01-strategic-vision (13).",
+      "title": "Skill layout"
+    },
+    {
+      "data": {
+        "hubs": [
+          {
+            "inbound_skills": 46,
+            "skill": "09-governance-compliance/28-anti-ai-slop"
+          },
+          {
+            "inbound_skills": 45,
+            "skill": "09-governance-compliance/29-ai-slop-audit"
+          },
+          {
+            "inbound_skills": 17,
+            "skill": "03-design-documentation/01-high-level-design"
+          },
+          {
+            "inbound_skills": 11,
+            "skill": "01-strategic-vision/01-prd-generation"
+          },
+          {
+            "inbound_skills": 10,
+            "skill": "05-testing-documentation/05-ai-red-team-test-plan"
+          }
+        ],
+        "source": "scripts/skill_fanin.py"
+      },
+      "number": 5,
+      "paths": [
+        {
+          "engine": "srs-skills",
+          "path": "09-governance-compliance/28-anti-ai-slop/SKILL.md"
+        },
+        {
+          "engine": "srs-skills",
+          "path": "09-governance-compliance/29-ai-slop-audit/SKILL.md"
+        },
+        {
+          "engine": "srs-skills",
+          "path": "03-design-documentation/01-high-level-design/SKILL.md"
+        },
+        {
+          "engine": "srs-skills",
+          "path": "01-strategic-vision/01-prd-generation/SKILL.md"
+        },
+        {
+          "engine": "srs-skills",
+          "path": "05-testing-documentation/05-ai-red-team-test-plan/SKILL.md"
+        }
+      ],
+      "text": "The skills other skills lean on most (inbound links, mentions and aliases): 28-anti-ai-slop (46), 29-ai-slop-audit (45), 01-high-level-design (17), 01-prd-generation (11), 05-ai-red-team-test-plan (10).",
+      "title": "Hub skills"
+    },
+    {
+      "data": {
+        "commands": [
+          "python -X utf8 scripts/validate_skill_engine.py --baseline tests/skill-quality-baseline.json",
+          "python -X utf8 scripts/routing_smoke_test.py"
+        ]
+      },
+      "number": 6,
+      "paths": [
+        {
+          "engine": "srs-skills",
+          "path": "scripts/validate_skill_engine.py"
+        },
+        {
+          "engine": "srs-skills",
+          "path": "scripts/routing_smoke_test.py"
+        }
+      ],
+      "text": "Run these 2 checks before claiming the engine is healthy; an unavailable check is NOT_ASSESSED, never a pass.",
+      "title": "Gates"
+    },
+    {
+      "data": {
+        "fixture_cases": {
+          "tests/routing-fixtures.json": 71
+        }
+      },
+      "number": 7,
+      "paths": [
+        {
+          "engine": "srs-skills",
+          "path": "tests/routing-fixtures.json"
+        }
+      ],
+      "text": "Routing fixtures record which skill should win for a realistic request: 71 cases in 1 file.",
+      "title": "Routing evidence"
+    },
+    {
+      "data": {
+        "events": [
+          "PreToolUse",
+          "SessionStart",
+          "Stop"
+        ]
+      },
+      "number": 8,
+      "paths": [
+        {
+          "engine": "srs-skills",
+          "path": "hooks/hooks.json"
+        }
+      ],
+      "text": "hooks/hooks.json registers these events: PreToolUse, SessionStart, Stop.",
+      "title": "Hooks"
+    },
+    {
+      "data": {
+        "status": "PASS"
+      },
+      "number": 9,
+      "paths": [
+        {
+          "engine": "srs-skills",
+          "path": "CONTRIBUTING.md"
+        }
+      ],
+      "text": "Follow CONTRIBUTING.md before adding or changing a skill.",
+      "title": "Adding a skill"
+    },
+    {
+      "data": {
+        "handoff_question": "What does success mean?"
+      },
+      "number": 10,
+      "paths": [
+        {
+          "engine": "chwezi-engine-agents",
+          "path": "core/instructions/engine-orchestrator.md"
+        }
+      ],
+      "text": "In a cross-engine handoff this engine answers: \"What does success mean?\" Add chwezi-accounting-doctrine for finance, accounting, tax or statutory work; design-system-skills for any change to how an output looks; digital-research-skills for current, uncertain or source-sensitive claims. They activate alongside this engine, never instead of it.",
+      "title": "Cross-cutting engines"
+    }
+  ]
+}

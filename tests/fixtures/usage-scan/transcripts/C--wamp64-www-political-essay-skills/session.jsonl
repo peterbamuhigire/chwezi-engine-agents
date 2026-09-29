@@ -1,0 +1,1 @@
+{"type": "assistant", "timestamp": "2026-09-01T10:00:00Z", "cwd": "C:\\ws", "message": {"role": "assistant", "content": [{"type": "tool_use", "id": "p", "name": "Read", "input": {"file_path": "C:\\ws\\demo-engine\\skills\\core\\delta-orphan\\SKILL.md"}}]}}

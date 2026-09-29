@@ -1,0 +1,248 @@
+{
+  "display_name": "Design System Skills",
+  "engine_id": "design-system-skills",
+  "folder": "design-system-skills",
+  "generated_from_commit": "23154086d5f1942627a8f26c8ce12282f3ec7cfc",
+  "generator": "scripts/generate_engine_tour.py",
+  "schema_version": "1.0",
+  "steps": [
+    {
+      "data": {},
+      "number": 1,
+      "paths": [
+        {
+          "engine": "design-system-skills",
+          "path": "README.md"
+        }
+      ],
+      "text": "Start with README.md: it states what Design System Skills is for and what it does not cover.",
+      "title": "Purpose"
+    },
+    {
+      "data": {
+        "catalogue_router": "AGENTS.md",
+        "router": "AGENTS.md"
+      },
+      "number": 2,
+      "paths": [
+        {
+          "engine": "design-system-skills",
+          "path": "AGENTS.md"
+        },
+        {
+          "engine": "design-system-skills",
+          "path": "CLAUDE.md"
+        }
+      ],
+      "text": "Read AGENTS.md before choosing any skill; it is the routing source of truth. CLAUDE.md is a bridge that imports it.",
+      "title": "Router"
+    },
+    {
+      "data": {
+        "approval_required_for": [
+          "external_message",
+          "publish",
+          "pull",
+          "update",
+          "write_files"
+        ],
+        "discovery_glob": "skills/**/SKILL.md",
+        "forbidden_operations": [
+          "arbitrary_shell",
+          "broad_delete",
+          "force_push",
+          "git_clean",
+          "git_reset"
+        ]
+      },
+      "number": 3,
+      "paths": [
+        {
+          "engine": "design-system-skills",
+          "path": ".skills-engine/engine-manifest.yaml"
+        }
+      ],
+      "text": "The engine manifest declares the router (AGENTS.md), the discovery glob (skills/**/SKILL.md), 5 approval-gated operations and 5 forbidden operations.",
+      "title": "Engine contract"
+    },
+    {
+      "data": {
+        "active_skills": 101,
+        "folders": {
+          "skills/00-cross-cutting-ops-qa-a11y": 16,
+          "skills/01-typography-and-fonts": 7,
+          "skills/02-color-brand-and-visual-identity": 7,
+          "skills/03-layout-grid-and-composition": 4,
+          "skills/04-web-and-ui-design": 10,
+          "skills/05-ux-process-research-and-psychology": 7,
+          "skills/06-sector-and-domain-ux": 7,
+          "skills/07-mobile-ios-android-cross-platform": 5,
+          "skills/08-motion-and-interaction": 3,
+          "skills/09-design-systems-tokens-and-theming": 5,
+          "skills/10-content-design-and-ux-writing": 3,
+          "skills/11-imagery-illustration-and-art-direction": 6,
+          "skills/12-data-viz-and-dashboards": 4,
+          "skills/13-presentations-and-documents": 7,
+          "skills/14-conversion-and-web-page-patterns": 5,
+          "skills/15-game-visual-experience": 5
+        }
+      },
+      "number": 4,
+      "paths": [
+        {
+          "engine": "design-system-skills",
+          "path": "skills/00-cross-cutting-ops-qa-a11y"
+        },
+        {
+          "engine": "design-system-skills",
+          "path": "skills/04-web-and-ui-design"
+        },
+        {
+          "engine": "design-system-skills",
+          "path": "skills/01-typography-and-fonts"
+        },
+        {
+          "engine": "design-system-skills",
+          "path": "skills/02-color-brand-and-visual-identity"
+        }
+      ],
+      "text": "101 active SKILL.md files in 16 folders; the largest are skills/00-cross-cutting-ops-qa-a11y (16), skills/04-web-and-ui-design (10), skills/01-typography-and-fonts (7), skills/02-color-brand-and-visual-identity (7).",
+      "title": "Skill layout"
+    },
+    {
+      "data": {
+        "hubs": [
+          {
+            "inbound_skills": 24,
+            "skill": "skills/04-web-and-ui-design/form-ux-design"
+          },
+          {
+            "inbound_skills": 23,
+            "skill": "skills/01-typography-and-fonts/font-selection-and-pairing"
+          },
+          {
+            "inbound_skills": 20,
+            "skill": "skills/02-color-brand-and-visual-identity/color-system-and-palette"
+          },
+          {
+            "inbound_skills": 20,
+            "skill": "skills/04-web-and-ui-design/practical-ui-design"
+          },
+          {
+            "inbound_skills": 19,
+            "skill": "skills/06-sector-and-domain-ux/sector-strategies"
+          }
+        ],
+        "source": "scripts/skill_fanin.py"
+      },
+      "number": 5,
+      "paths": [
+        {
+          "engine": "design-system-skills",
+          "path": "skills/04-web-and-ui-design/form-ux-design/SKILL.md"
+        },
+        {
+          "engine": "design-system-skills",
+          "path": "skills/01-typography-and-fonts/font-selection-and-pairing/SKILL.md"
+        },
+        {
+          "engine": "design-system-skills",
+          "path": "skills/02-color-brand-and-visual-identity/color-system-and-palette/SKILL.md"
+        },
+        {
+          "engine": "design-system-skills",
+          "path": "skills/04-web-and-ui-design/practical-ui-design/SKILL.md"
+        },
+        {
+          "engine": "design-system-skills",
+          "path": "skills/06-sector-and-domain-ux/sector-strategies/SKILL.md"
+        }
+      ],
+      "text": "The skills other skills lean on most (inbound links, mentions and aliases): form-ux-design (24), font-selection-and-pairing (23), color-system-and-palette (20), practical-ui-design (20), sector-strategies (19).",
+      "title": "Hub skills"
+    },
+    {
+      "data": {
+        "commands": [
+          "python -X utf8 scripts/validate_engine.py --baseline tests/quality-baseline.json",
+          "python -X utf8 scripts/routing_smoke_test.py"
+        ]
+      },
+      "number": 6,
+      "paths": [
+        {
+          "engine": "design-system-skills",
+          "path": "scripts/validate_engine.py"
+        },
+        {
+          "engine": "design-system-skills",
+          "path": "scripts/routing_smoke_test.py"
+        }
+      ],
+      "text": "Run these 2 checks before claiming the engine is healthy; an unavailable check is NOT_ASSESSED, never a pass.",
+      "title": "Gates"
+    },
+    {
+      "data": {
+        "fixture_cases": {
+          "tests/routing-fixtures.yml": 68
+        }
+      },
+      "number": 7,
+      "paths": [
+        {
+          "engine": "design-system-skills",
+          "path": "tests/routing-fixtures.yml"
+        }
+      ],
+      "text": "Routing fixtures record which skill should win for a realistic request: 68 cases in 1 file.",
+      "title": "Routing evidence"
+    },
+    {
+      "data": {
+        "events": [
+          "PostToolUse",
+          "PreToolUse",
+          "Stop"
+        ]
+      },
+      "number": 8,
+      "paths": [
+        {
+          "engine": "design-system-skills",
+          "path": "hooks/hooks.json"
+        }
+      ],
+      "text": "hooks/hooks.json registers these events: PostToolUse, PreToolUse, Stop.",
+      "title": "Hooks"
+    },
+    {
+      "data": {
+        "status": "PASS"
+      },
+      "number": 9,
+      "paths": [
+        {
+          "engine": "design-system-skills",
+          "path": "CONTRIBUTING.md"
+        }
+      ],
+      "text": "Follow CONTRIBUTING.md before adding or changing a skill.",
+      "title": "Adding a skill"
+    },
+    {
+      "data": {
+        "handoff_question": "How does it look, behave, and get evaluated?"
+      },
+      "number": 10,
+      "paths": [
+        {
+          "engine": "chwezi-engine-agents",
+          "path": "core/instructions/engine-orchestrator.md"
+        }
+      ],
+      "text": "In a cross-engine handoff this engine answers: \"How does it look, behave, and get evaluated?\" Add chwezi-accounting-doctrine for finance, accounting, tax or statutory work; digital-research-skills for current, uncertain or source-sensitive claims. They activate alongside this engine, never instead of it.",
+      "title": "Cross-cutting engines"
+    }
+  ]
+}

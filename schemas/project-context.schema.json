@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://skills-engine-agents.local/schemas/project-context.schema.json",
+  "title": "Project context (PROJECT.md front matter)",
+  "description": "Durable project truth and pointers to each engine's own context sources. Contract: docs/operations/project-context-contract.md. Pointers, never copies; no typeface, colour or per-surface mode.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "project_schema",
+    "project_id",
+    "display_name",
+    "client",
+    "owner",
+    "platform",
+    "users_and_jobs",
+    "purpose_and_success",
+    "positioning",
+    "operating_context",
+    "constraints",
+    "voice_commitments",
+    "evidence_on_hand",
+    "accessibility_baseline",
+    "jurisdiction",
+    "last_reviewed",
+    "review_due"
+  ],
+  "properties": {
+    "project_schema": {"const": 1},
+    "project_id": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "maxLength": 64},
+    "display_name": {"$ref": "#/$defs/short"},
+    "client": {"$ref": "#/$defs/short"},
+    "owner": {"$ref": "#/$defs/short"},
+    "platform": {"$ref": "#/$defs/short"},
+    "users_and_jobs": {"$ref": "#/$defs/shortList"},
+    "purpose_and_success": {"$ref": "#/$defs/short"},
+    "positioning": {"$ref": "#/$defs/short"},
+    "operating_context": {"$ref": "#/$defs/short"},
+    "constraints": {"$ref": "#/$defs/shortList"},
+    "voice_commitments": {"$ref": "#/$defs/shortList"},
+    "evidence_on_hand": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["present", "absent"],
+      "properties": {
+        "present": {"$ref": "#/$defs/shortList"},
+        "absent": {"type": "array", "items": {"$ref": "#/$defs/short"}}
+      }
+    },
+    "accessibility_baseline": {"$ref": "#/$defs/short"},
+    "jurisdiction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["country", "statutes"],
+      "properties": {
+        "country": {"$ref": "#/$defs/short"},
+        "statutes": {"type": "array", "items": {"$ref": "#/$defs/short"}, "description": "Statutes named, not summarised."}
+      }
+    },
+    "srs_context": {"$ref": "#/$defs/pointer"},
+    "research_context": {"$ref": "#/$defs/pointer"},
+    "code_repository": {"$ref": "#/$defs/pointer"},
+    "project_brief": {"$ref": "#/$defs/pointer"},
+    "website_repository": {"$ref": "#/$defs/pointer"},
+    "brand_brief": {"$ref": "#/$defs/pointer"},
+    "design_tokens": {"$ref": "#/$defs/pointer"},
+    "design_brief": {"$ref": "#/$defs/pointer"},
+    "last_reviewed": {"type": "string", "format": "date", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+    "review_due": {"type": "string", "format": "date", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"}
+  },
+  "$defs": {
+    "short": {"type": "string", "minLength": 1, "maxLength": 400},
+    "shortList": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/short"}},
+    "pointer": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300,
+      "description": "Workspace-relative path with forward slashes; the target stays authoritative for its detail.",
+      "pattern": "^[^\\\\:]+$"
+    }
+  }
+}

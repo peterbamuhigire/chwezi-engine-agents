@@ -47,6 +47,13 @@ jobs:
         run: |
           python -X utf8 -m pytest tests/test_validate_runtime_skill_budget.py tests/test_run_contract_evals.py tests/test_validate_routing_baseline.py tests/test_validation_result_schema.py tests/test_marketplace_relevance.py -q -p no:cacheprovider
           python -X utf8 scripts/validate-routing-baseline.py
+      - name: Test project context, fan-in, tours, skill graph and usage scan (M10-12)
+        run: |
+          python -X utf8 -m pytest tests/test_project_context_doctor.py tests/test_skill_fanin.py tests/test_generate_engine_tour.py tests/test_skill_graph.py tests/test_skill_usage_scan.py -q -p no:cacheprovider
+          python -X utf8 scripts/validate-contracts.py --schema schemas/project-context.schema.json --instance templates/project-context/PROJECT.md
+          python -X utf8 scripts/project_context_doctor.py --project tests/fixtures/project-context/valid/PROJECT.md --workspace-root tests/fixtures/project-context/workspace --json
+          python -X utf8 scripts/generate_engine_tour.py --workspace-root tests/fixtures/engine-workspace --engine demo-engine --out-dir "$env:RUNNER_TEMP/tours"
+          python -X utf8 scripts/generate_engine_tour.py --workspace-root tests/fixtures/engine-workspace --engine demo-engine --out-dir "$env:RUNNER_TEMP/tours" --check
       - name: Build and test MCP server
         working-directory: mcp-server
         run: |

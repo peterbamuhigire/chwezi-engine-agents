@@ -16,6 +16,13 @@ def load_yaml_or_json(path: Path) -> Any:
         import yaml
     except ImportError as exc:  # pragma: no cover - environment dependent
         raise RuntimeError("PyYAML is unavailable") from exc
+    if path.suffix.lower() == ".md":
+        # Markdown instances (for example PROJECT.md) are validated on their YAML front matter.
+        text = path.read_text(encoding="utf-8-sig").replace("\r\n", "\n")
+        match = re.match(r"^---\n(.*?)\n---(?:\n|$)", text, re.DOTALL)
+        if not match:
+            raise ValueError("Markdown instance has no YAML front matter")
+        return yaml.safe_load(match.group(1))
     with path.open("r", encoding="utf-8") as handle:
         return yaml.safe_load(handle)
 

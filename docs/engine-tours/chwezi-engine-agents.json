@@ -1,0 +1,181 @@
+{
+  "display_name": "Chwezi Engine Agents",
+  "engine_id": "chwezi-engine-agents",
+  "folder": "chwezi-engine-agents",
+  "generated_from_commit": "48af46b63d350f7a12cfb7c960a6de0f0cc5188a",
+  "generator": "scripts/generate_engine_tour.py",
+  "schema_version": "1.0",
+  "steps": [
+    {
+      "data": {},
+      "number": 1,
+      "paths": [
+        {
+          "engine": "chwezi-engine-agents",
+          "path": "README.md"
+        }
+      ],
+      "text": "Start with README.md: it states what Chwezi Engine Agents is for and what it does not cover.",
+      "title": "Purpose"
+    },
+    {
+      "data": {
+        "catalogue_router": "AGENTS.md",
+        "router": "AGENTS.md"
+      },
+      "number": 2,
+      "paths": [
+        {
+          "engine": "chwezi-engine-agents",
+          "path": "AGENTS.md"
+        },
+        {
+          "engine": "chwezi-engine-agents",
+          "path": "CLAUDE.md"
+        }
+      ],
+      "text": "Read AGENTS.md before choosing any skill; it is the routing source of truth. CLAUDE.md is a bridge that imports it.",
+      "title": "Router"
+    },
+    {
+      "data": {
+        "catalogued_engines": 11
+      },
+      "number": 3,
+      "paths": [
+        {
+          "engine": "chwezi-engine-agents",
+          "path": "catalog/engines.yaml"
+        },
+        {
+          "engine": "chwezi-engine-agents",
+          "path": "AGENTS.md"
+        }
+      ],
+      "text": "This package has no engine manifest; its contract is the catalogue of engines it routes to and its own router.",
+      "title": "Engine contract"
+    },
+    {
+      "data": {
+        "active_skills": 1,
+        "folders": {
+          "skills": 1
+        }
+      },
+      "number": 4,
+      "paths": [
+        {
+          "engine": "chwezi-engine-agents",
+          "path": "skills"
+        }
+      ],
+      "text": "1 active SKILL.md file in 1 folder; the largest are skills (1).",
+      "title": "Skill layout"
+    },
+    {
+      "data": {
+        "hubs": [
+          {
+            "inbound_skills": 0,
+            "skill": "skills/rules-distill"
+          }
+        ],
+        "source": "scripts/skill_fanin.py"
+      },
+      "number": 5,
+      "paths": [
+        {
+          "engine": "chwezi-engine-agents",
+          "path": "skills/rules-distill/SKILL.md"
+        }
+      ],
+      "text": "The skills other skills lean on most (inbound links, mentions and aliases): rules-distill (0).",
+      "title": "Hub skills"
+    },
+    {
+      "data": {
+        "commands": [
+          "pwsh scripts/validate-catalog.ps1",
+          "pwsh scripts/validate-portfolio-craft.ps1",
+          "pwsh scripts/validate-prompt-capability.ps1",
+          "python -X utf8 scripts/validate-contracts.py",
+          "python -X utf8 scripts/validate-kaizen-cards.py",
+          "python -X utf8 scripts/validate-no-book-extractions.py",
+          "python -X utf8 scripts/validate-routing-baseline.py",
+          "python -X utf8 scripts/validate-rule-markers.py",
+          "python -X utf8 scripts/validate-runtime-skill-budget.py",
+          "python -X utf8 scripts/validate-skill-lifecycle.py"
+        ]
+      },
+      "number": 6,
+      "paths": [
+        {
+          "engine": "chwezi-engine-agents",
+          "path": "scripts/validate-catalog.ps1"
+        },
+        {
+          "engine": "chwezi-engine-agents",
+          "path": "scripts/validate-portfolio-craft.ps1"
+        },
+        {
+          "engine": "chwezi-engine-agents",
+          "path": "scripts/validate-prompt-capability.ps1"
+        },
+        {
+          "engine": "chwezi-engine-agents",
+          "path": "scripts/validate-contracts.py"
+        },
+        {
+          "engine": "chwezi-engine-agents",
+          "path": "scripts/validate-kaizen-cards.py"
+        }
+      ],
+      "text": "Run these 10 checks before claiming the engine is healthy; an unavailable check is NOT_ASSESSED, never a pass.",
+      "title": "Gates"
+    },
+    {
+      "data": {
+        "events": [
+          "PreToolUse"
+        ]
+      },
+      "number": 7,
+      "paths": [
+        {
+          "engine": "chwezi-engine-agents",
+          "path": "hooks/hooks.json"
+        }
+      ],
+      "text": "hooks/hooks.json registers these events: PreToolUse.",
+      "title": "Hooks"
+    },
+    {
+      "data": {
+        "status": "PASS"
+      },
+      "number": 8,
+      "paths": [
+        {
+          "engine": "chwezi-engine-agents",
+          "path": "CONTRIBUTING.md"
+        }
+      ],
+      "text": "Follow CONTRIBUTING.md before adding or changing a skill.",
+      "title": "Adding a skill"
+    },
+    {
+      "data": {
+        "handoff_question": "not listed"
+      },
+      "number": 9,
+      "paths": [
+        {
+          "engine": "chwezi-engine-agents",
+          "path": "core/instructions/engine-orchestrator.md"
+        }
+      ],
+      "text": "Add chwezi-accounting-doctrine for finance, accounting, tax or statutory work; design-system-skills for any change to how an output looks; digital-research-skills for current, uncertain or source-sensitive claims. They activate alongside this engine, never instead of it.",
+      "title": "Cross-cutting engines"
+    }
+  ]
+}
