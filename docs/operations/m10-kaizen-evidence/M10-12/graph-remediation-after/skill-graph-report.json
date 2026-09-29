@@ -1,0 +1,500 @@
+{
+ "counts": {
+  "by_type": {
+   "alias_of": 37,
+   "defers_to": 531,
+   "links_to": 1238,
+   "mentions": 9282,
+   "routes_to": 1159,
+   "similar_trigger": 21
+  },
+  "edges": 12268,
+  "nodes": 1183
+ },
+ "cross_engine_bridges": [
+  {
+   "edges": 389,
+   "pair": "social-media-skills -> business-plan-skills"
+  },
+  {
+   "edges": 385,
+   "pair": "social-media-skills -> proposal-skills"
+  },
+  {
+   "edges": 349,
+   "pair": "social-media-skills -> digital-research-engine"
+  },
+  {
+   "edges": 269,
+   "pair": "social-media-skills -> chwezi-dev-engine"
+  },
+  {
+   "edges": 165,
+   "pair": "social-media-skills -> website-skills"
+  },
+  {
+   "edges": 127,
+   "pair": "digital-research-engine -> chwezi-dev-engine"
+  },
+  {
+   "edges": 119,
+   "pair": "chwezi-dev-engine -> digital-research-engine"
+  },
+  {
+   "edges": 110,
+   "pair": "business-plan-skills -> proposal-skills"
+  },
+  {
+   "edges": 101,
+   "pair": "business-plan-skills -> social-media-skills"
+  },
+  {
+   "edges": 88,
+   "pair": "website-skills -> social-media-skills"
+  },
+  {
+   "edges": 86,
+   "pair": "proposal-skills -> business-plan-skills"
+  },
+  {
+   "edges": 84,
+   "pair": "proposal-skills -> social-media-skills"
+  },
+  {
+   "edges": 81,
+   "pair": "proposal-skills -> website-skills"
+  },
+  {
+   "edges": 81,
+   "pair": "website-skills -> business-plan-skills"
+  },
+  {
+   "edges": 74,
+   "pair": "business-plan-skills -> chwezi-accounting-doctrine"
+  },
+  {
+   "edges": 74,
+   "pair": "business-plan-skills -> website-skills"
+  },
+  {
+   "edges": 67,
+   "pair": "chwezi-dev-engine -> proposal-skills"
+  },
+  {
+   "edges": 67,
+   "pair": "srs-skills -> chwezi-dev-engine"
+  },
+  {
+   "edges": 66,
+   "pair": "website-skills -> proposal-skills"
+  },
+  {
+   "edges": 54,
+   "pair": "srs-skills -> proposal-skills"
+  },
+  {
+   "edges": 51,
+   "pair": "proposal-skills -> digital-research-engine"
+  },
+  {
+   "edges": 48,
+   "pair": "business-plan-skills -> digital-research-engine"
+  },
+  {
+   "edges": 48,
+   "pair": "chwezi-dev-engine -> design-system-skills"
+  },
+  {
+   "edges": 47,
+   "pair": "chwezi-dev-engine -> website-skills"
+  },
+  {
+   "edges": 42,
+   "pair": "business-plan-skills -> chwezi-dev-engine"
+  },
+  {
+   "edges": 42,
+   "pair": "srs-skills -> digital-research-engine"
+  },
+  {
+   "edges": 41,
+   "pair": "website-skills -> design-system-skills"
+  },
+  {
+   "edges": 39,
+   "pair": "chwezi-dev-engine -> srs-skills"
+  },
+  {
+   "edges": 37,
+   "pair": "srs-skills -> business-plan-skills"
+  },
+  {
+   "edges": 37,
+   "pair": "srs-skills -> social-media-skills"
+  },
+  {
+   "edges": 36,
+   "pair": "chwezi-dev-engine -> business-plan-skills"
+  },
+  {
+   "edges": 36,
+   "pair": "chwezi-dev-engine -> social-media-skills"
+  },
+  {
+   "edges": 29,
+   "pair": "digital-research-engine -> website-skills"
+  },
+  {
+   "edges": 29,
+   "pair": "website-skills -> chwezi-dev-engine"
+  },
+  {
+   "edges": 28,
+   "pair": "digital-research-engine -> proposal-skills"
+  },
+  {
+   "edges": 26,
+   "pair": "design-system-skills -> chwezi-dev-engine"
+  },
+  {
+   "edges": 26,
+   "pair": "proposal-skills -> chwezi-dev-engine"
+  },
+  {
+   "edges": 23,
+   "pair": "digital-research-engine -> business-plan-skills"
+  },
+  {
+   "edges": 20,
+   "pair": "digital-research-engine -> social-media-skills"
+  },
+  {
+   "edges": 19,
+   "pair": "design-system-skills -> proposal-skills"
+  },
+  {
+   "edges": 19,
+   "pair": "design-system-skills -> website-skills"
+  },
+  {
+   "edges": 18,
+   "pair": "linux-skills -> proposal-skills"
+  },
+  {
+   "edges": 14,
+   "pair": "digital-research-engine -> design-system-skills"
+  },
+  {
+   "edges": 11,
+   "pair": "chwezi-dev-engine -> linux-skills"
+  },
+  {
+   "edges": 11,
+   "pair": "website-skills -> digital-research-engine"
+  },
+  {
+   "edges": 10,
+   "pair": "linux-skills -> website-skills"
+  },
+  {
+   "edges": 9,
+   "pair": "design-system-skills -> business-plan-skills"
+  },
+  {
+   "edges": 9,
+   "pair": "design-system-skills -> social-media-skills"
+  },
+  {
+   "edges": 8,
+   "pair": "chwezi-dev-engine -> chwezi-accounting-doctrine"
+  },
+  {
+   "edges": 8,
+   "pair": "proposal-skills -> chwezi-accounting-doctrine"
+  },
+  {
+   "edges": 7,
+   "pair": "business-plan-skills -> linux-skills"
+  },
+  {
+   "edges": 7,
+   "pair": "chwezi-accounting-doctrine -> digital-research-engine"
+  },
+  {
+   "edges": 7,
+   "pair": "design-system-skills -> srs-skills"
+  },
+  {
+   "edges": 7,
+   "pair": "proposal-skills -> linux-skills"
+  },
+  {
+   "edges": 6,
+   "pair": "chwezi-accounting-doctrine -> chwezi-dev-engine"
+  },
+  {
+   "edges": 6,
+   "pair": "design-system-skills -> digital-research-engine"
+  },
+  {
+   "edges": 6,
+   "pair": "digital-research-engine -> linux-skills"
+  },
+  {
+   "edges": 6,
+   "pair": "social-media-skills -> linux-skills"
+  },
+  {
+   "edges": 6,
+   "pair": "srs-skills -> chwezi-accounting-doctrine"
+  },
+  {
+   "edges": 5,
+   "pair": "linux-skills -> business-plan-skills"
+  },
+  {
+   "edges": 5,
+   "pair": "linux-skills -> social-media-skills"
+  },
+  {
+   "edges": 5,
+   "pair": "website-skills -> linux-skills"
+  },
+  {
+   "edges": 4,
+   "pair": "linux-skills -> digital-research-engine"
+  },
+  {
+   "edges": 3,
+   "pair": "linux-skills -> chwezi-dev-engine"
+  },
+  {
+   "edges": 3,
+   "pair": "proposal-skills -> design-system-skills"
+  },
+  {
+   "edges": 3,
+   "pair": "srs-skills -> website-skills"
+  },
+  {
+   "edges": 2,
+   "pair": "business-plan-skills -> design-system-skills"
+  },
+  {
+   "edges": 2,
+   "pair": "digital-research-engine -> chwezi-accounting-doctrine"
+  },
+  {
+   "edges": 2,
+   "pair": "social-media-skills -> design-system-skills"
+  },
+  {
+   "edges": 2,
+   "pair": "srs-skills -> design-system-skills"
+  },
+  {
+   "edges": 2,
+   "pair": "website-skills -> chwezi-accounting-doctrine"
+  },
+  {
+   "edges": 2,
+   "pair": "windows-admin-engine-skills -> digital-research-engine"
+  },
+  {
+   "edges": 1,
+   "pair": "business-plan-skills -> srs-skills"
+  },
+  {
+   "edges": 1,
+   "pair": "chwezi-accounting-doctrine -> proposal-skills"
+  },
+  {
+   "edges": 1,
+   "pair": "website-skills -> windows-admin-engine-skills"
+  },
+  {
+   "edges": 1,
+   "pair": "windows-admin-engine-skills -> proposal-skills"
+  }
+ ],
+ "mentioned_but_unrouted": [],
+ "missing_skill_paths": [
+  {
+   "at": "website-skills/skills/content-copy/brand-voice/references/voice-profile-schema.md:6",
+   "line": "Adapted from ECC's `skills/brand-voice/references/voice-profile-schema.md`",
+   "reference": "skills/brand-voice/references"
+  }
+ ],
+ "most_deferred_to": [
+  {
+   "defers_to_inbound": 20,
+   "skill": "social-media-skills/skills/ai-marketing/ai-readiness-diagnostic"
+  },
+  {
+   "defers_to_inbound": 14,
+   "skill": "social-media-skills/skills/content-writing/caption-writer"
+  },
+  {
+   "defers_to_inbound": 10,
+   "skill": "business-plan-skills/skills/pipeline/10-financial-projections"
+  },
+  {
+   "defers_to_inbound": 10,
+   "skill": "chwezi-dev-engine/skills/product-business/content-writing"
+  },
+  {
+   "defers_to_inbound": 10,
+   "skill": "social-media-skills/skills/business-development/biz-dev-positioning"
+  },
+  {
+   "defers_to_inbound": 10,
+   "skill": "social-media-skills/skills/content-writing"
+  },
+  {
+   "defers_to_inbound": 9,
+   "skill": "business-plan-skills/skills/writing-content/content-writing"
+  },
+  {
+   "defers_to_inbound": 9,
+   "skill": "website-skills/skills/content-copy/content-writing"
+  },
+  {
+   "defers_to_inbound": 7,
+   "skill": "proposal-skills/skills/writing-content/blog-writer"
+  },
+  {
+   "defers_to_inbound": 7,
+   "skill": "social-media-skills/skills/content-writing/blog-writer"
+  }
+ ],
+ "renamed_engine_mentions": [
+  {
+   "at": "website-skills/skills/content-copy/language-standards/references/english-collocations-and-lexical-precision-2026-09-02.md:3",
+   "current": "digital-research-engine",
+   "line": "[Owning skill](../SKILL.md) | Canonical study: `C:\\wamp64\\www\\digital-research-skills\\docs\\continuous-improvement\\english-collocations-and-lexical-precision-2026-09-02.md`",
+   "name": "digital-research-skills"
+  }
+ ],
+ "retired_alias_mentions": [
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-agent-approval-audit-completeness -> skills/ai/ai-agent-compliance-controls",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/ai-agent-approval-audit-completeness/entrypoint.md:1",
+   "line": "> Consolidated from skills/ai/ai-agent-approval-audit-completeness/SKILL.md into ai-agent-compliance-controls on 2026-09-24. Load this through skills/ai/ai-agent-compliance-controls/SKILL.md, not as a",
+   "slug": "ai-agent-approval-audit-completeness"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-agent-approval-audit-completeness -> skills/ai/ai-agent-compliance-controls",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/routing.md:13",
+   "line": "| `ai-agent-approval-audit-completeness` | [references/ai-agent-approval-audit-completeness/entrypoint.md](ai-agent-approval-audit-completeness/entrypoint.md) | Gap-detection job proving every irrever",
+   "slug": "ai-agent-approval-audit-completeness"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-agent-drill-evidence-and-cadence -> skills/ai/ai-agent-compliance-controls",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/ai-agent-drill-evidence-and-cadence/entrypoint.md:1",
+   "line": "> Consolidated from skills/ai/ai-agent-drill-evidence-and-cadence/SKILL.md into ai-agent-compliance-controls on 2026-09-24. Load this through skills/ai/ai-agent-compliance-controls/SKILL.md, not as an",
+   "slug": "ai-agent-drill-evidence-and-cadence"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-agent-drill-evidence-and-cadence -> skills/ai/ai-agent-compliance-controls",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/routing.md:12",
+   "line": "| `ai-agent-drill-evidence-and-cadence` | [references/ai-agent-drill-evidence-and-cadence/entrypoint.md](ai-agent-drill-evidence-and-cadence/entrypoint.md) | Kill-switch, red-team, eval-drift, and res",
+   "slug": "ai-agent-drill-evidence-and-cadence"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-agent-memory-erasure-proof -> skills/ai/ai-agent-compliance-controls",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/ai-agent-memory-erasure-proof/entrypoint.md:1",
+   "line": "> Consolidated from skills/ai/ai-agent-memory-erasure-proof/SKILL.md into ai-agent-compliance-controls on 2026-09-24. Load this through skills/ai/ai-agent-compliance-controls/SKILL.md, not as an activ",
+   "slug": "ai-agent-memory-erasure-proof"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ai-agent-memory-erasure-proof -> skills/ai/ai-agent-compliance-controls",
+   "at": "chwezi-dev-engine/skills/ai/ai-agent-compliance-controls/references/routing.md:14",
+   "line": "| `ai-agent-memory-erasure-proof` | [references/ai-agent-memory-erasure-proof/entrypoint.md](ai-agent-memory-erasure-proof/entrypoint.md) | Verifiable agent-memory erasure: 9-step cascade, independent",
+   "slug": "ai-agent-memory-erasure-proof"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ux-for-ai -> design-system/skills/ai-ux",
+   "at": "design-system-skills/skills/04-web-and-ui-design/ai-agent-ux/references/ai-agentic-ui/entrypoint.md:170",
+   "line": "- `ux-for-ai` — deeper AI trust and transparency principles.",
+   "slug": "ux-for-ai"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/ai/ux-for-ai -> design-system/skills/ai-ux",
+   "at": "design-system-skills/skills/04-web-and-ui-design/ai-agent-ux/references/ai-ux-patterns/entrypoint.md:276",
+   "line": "- `ux-for-ai` — Deeper AI trust and transparency principles",
+   "slug": "ux-for-ai"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/android/android-data-persistence -> skills/android/android-development",
+   "at": "design-system-skills/skills/06-sector-and-domain-ux/healthcare-ui-design/references/android-implementation.md:298",
+   "line": "Follow `android-data-persistence` skill for Room setup and sync architecture.",
+   "slug": "android-data-persistence"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/android/android-data-persistence -> skills/android/android-development",
+   "at": "design-system-skills/skills/06-sector-and-domain-ux/healthcare-ui-design/references/android-implementation.md:482",
+   "line": "| Room + offline sync | `android-data-persistence` |",
+   "slug": "android-data-persistence"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/frontend-ux/pos-sales-ui-design -> doctrine/skills/finance-ui-pattern-library",
+   "at": "design-system-skills/skills/04-web-and-ui-design/ai-output-design/references/ai-slop-prevention/entrypoint.md:295",
+   "line": "- `pos-sales-ui-design` — verify POS screens avoid template looks",
+   "slug": "pos-sales-ui-design"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/frontend-ux/pos-sales-ui-design -> doctrine/skills/finance-ui-pattern-library",
+   "at": "design-system-skills/skills/04-web-and-ui-design/form-ux-design/references/skill-deep-dive.md:457",
+   "line": "- POS forms? Load `pos-sales-ui-design` + `form-ux-design`",
+   "slug": "pos-sales-ui-design"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/frontend-ux/ux-principles-101 -> design-system/skills/ux-foundations",
+   "at": "design-system-skills/skills/04-web-and-ui-design/premium-ui-ux-design/references/design-by-nature/entrypoint.md:30",
+   "line": "- The task is purely UX flow / wireframing (load `interaction-design-patterns`, `ux-principles-101`).",
+   "slug": "ux-principles-101"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/sdlc-meta/code-tour -> skills/sdlc-meta/doc-architect",
+   "at": "srs-skills/04-development-artifacts/03-dev-environment-setup/references/system-orientation-guide.md:87",
+   "line": "(`chwezi-dev-engine/skills/sdlc-meta/doc-architect/references/code-tour.md`) applies the same",
+   "slug": "code-tour"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/sdlc-meta/inherit-legacy-style -> skills/sdlc-meta/ai-assisted-development",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/ai-assisted-development/SKILL.md:159",
+   "line": "`inherit-legacy-style` skill).",
+   "slug": "inherit-legacy-style"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/sdlc-meta/plan-implementation -> skills/sdlc-meta/implementation-status-auditor",
+   "at": "chwezi-dev-engine/skills/sdlc-meta/implementation-status-auditor/references/plan-implementation.md:35",
+   "line": "- The task is unrelated to `plan-implementation` or would be better handled by a more specific companion skill.",
+   "slug": "plan-implementation"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/sdlc-meta/verification-loop -> skills/sdlc-meta/world-class-engineering",
+   "at": "chwezi-engine-agents/README.md:55",
+   "line": "| VERIFY | Engineering; design | `chwezi-dev-engine:skills/sdlc-meta/world-class-engineering/references/verification-loop.md`, `design-system-skills:skills/00-cross-cutting-ops-qa-a11y/visual-product-",
+   "slug": "verification-loop"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "design-system-skills/skills/06-sector-and-domain-ux/healthcare-ui-design/references/compliance-accessibility.md:321",
+   "line": "**Web:** Use `dual-auth-rbac` skill for server-side checks + UI filtering:",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/dual-auth-rbac -> skills/security/vibe-security-skill",
+   "at": "design-system-skills/skills/06-sector-and-domain-ux/healthcare-ui-design/references/compliance-accessibility.md:498",
+   "line": "**Cross-references:** `dual-auth-rbac` for auth patterns | `mobile-rbac` for Android permissions | `vibe-security-skill` for general web security | `design-tokens.md` for clinical color values",
+   "slug": "dual-auth-rbac"
+  },
+  {
+   "alias": "chwezi-dev-engine:skills/security/uganda-dppa-compliance -> skills/security/dpia-generator",
+   "at": "website-skills/skills/seo-search/seo/references/analytics-event-map.md:290",
+   "line": "- **Uganda / East Africa:** DPPA 2019 compliance — see `uganda-dppa-compliance` skill if applicable",
+   "slug": "uganda-dppa-compliance"
+  }
+ ]
+}
