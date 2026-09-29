@@ -93,15 +93,17 @@ pairs:
       - business-plan-skills/blog-idea-generator
       - proposal-skills/blog-idea-generator
       - website-skills/blog-idea-generator
-      - social-media-skills/blog-idea-generator
+      - social-media-skills/content-ideas
     score_at_decision: 0.81
     disposition: canonical_owner
-    owner: social-media-skills/blog-idea-generator
+    owner: social-media-skills/content-ideas
     co_activate: []
     reason: >-
       One blog-ideation skill copied into four engines (pairwise 0.76-0.81). Content ideation belongs to
       the digital-marketing and content engine per the global routing table; website keeps blog build and
       publication, and the business-plan and proposal copies are candidates for aliases.
+      Social Kaizen S03-T-X1 (29 Sep 2026): social-media-skills/blog-idea-generator is an inactive alias
+      routed to social-media-skills/content-ideas, which now owns blog ideation (D-SK-07).
     decided_by: orchestrator under Peter's delegated authority, 29 Sep 2026
     decided_on: 2026-09-29
     review_after: 2026-12-29
