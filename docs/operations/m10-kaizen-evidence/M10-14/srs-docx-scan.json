@@ -1,0 +1,29 @@
+{
+  "scanned": 691,
+  "dirty": [],
+  "manifest_checked": 18,
+  "missing": [
+    {
+      "path": "projects\\GarageFlow\\08-end-user-documentation\\GarageFlow_UserDocs_v1.0.docx",
+      "headers": [],
+      "media": 0,
+      "placeholders": [
+        "Garage Manager App home screen \u2014 screenshot pending first build"
+      ],
+      "manifest": null,
+      "expected_figures": 0,
+      "missing_figures": []
+    },
+    {
+      "path": "projects\\GarageFlow\\export\\GarageFlow_UserDocs_v1.0.docx",
+      "headers": [],
+      "media": 0,
+      "placeholders": [
+        "Garage Manager App home screen \u2014 screenshot pending first build"
+      ],
+      "manifest": null,
+      "expected_figures": 0,
+      "missing_figures": []
+    }
+  ]
+}

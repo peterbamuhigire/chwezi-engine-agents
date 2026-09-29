@@ -1,0 +1,6 @@
+routing-smoke-test: 29/29 top-3 precision=1.000 threshold=1.000 (lexical proxy; not live routing)
+- precision@1: 25/29 (86.2%)
+- precision@3: 100.0%
+- owned negatives: 9 (pass 7, fail 0, not assessed 2)
+- rank-1 floor: 84.0%
+- fixture lint findings: 0

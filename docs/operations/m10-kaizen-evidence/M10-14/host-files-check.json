@@ -1,0 +1,305 @@
+{
+  "findings": [],
+  "not_assessed": [],
+  "checked": [
+    {
+      "engine": "srs-skills",
+      "claude_md_bytes": 44
+    },
+    {
+      "engine": "business-plan-skills",
+      "claude_md_bytes": 222
+    },
+    {
+      "engine": "website-skills",
+      "claude_md_bytes": 760
+    },
+    {
+      "engine": "social-media-skills",
+      "claude_md_bytes": 44
+    },
+    {
+      "engine": "linux-skills",
+      "claude_md_bytes": 362
+    },
+    {
+      "engine": "proposal-skills",
+      "claude_md_bytes": 44
+    },
+    {
+      "engine": "chwezi-dev-engine",
+      "claude_md_bytes": 44
+    },
+    {
+      "engine": "chwezi-accounting-doctrine",
+      "claude_md_bytes": 44
+    },
+    {
+      "engine": "design-system-skills",
+      "claude_md_bytes": 212
+    },
+    {
+      "engine": "digital-research-engine",
+      "claude_md_bytes": 889
+    },
+    {
+      "engine": "windows-admin-engine-skills",
+      "claude_md_bytes": 250
+    },
+    {
+      "engine": "chwezi-engine-agents",
+      "claude_md_bytes": 324
+    },
+    {
+      "register": [
+        {
+          "id": "hooks-destructive-bash-gate",
+          "mode": "byte",
+          "copies": 11,
+          "status": "ok"
+        },
+        {
+          "id": "hooks-test-destructive-bash-gate",
+          "mode": "byte",
+          "copies": 11,
+          "status": "ok"
+        },
+        {
+          "id": "hooks-plugin-hook-config",
+          "mode": "byte",
+          "copies": 11,
+          "status": "ok"
+        },
+        {
+          "id": "skills-engine-agents-integration",
+          "mode": "byte",
+          "copies": 10,
+          "status": "ok"
+        },
+        {
+          "id": "engine-install-sh",
+          "mode": "byte",
+          "copies": 11,
+          "status": "ok"
+        },
+        {
+          "id": "engine-install-ps1",
+          "mode": "byte",
+          "copies": 11,
+          "status": "ok"
+        },
+        {
+          "id": "install-engine-js",
+          "mode": "registered-variant",
+          "copies": 12,
+          "status": "ok"
+        },
+        {
+          "id": "design-trigger-block",
+          "mode": "block",
+          "copies": 12,
+          "status": "ok"
+        },
+        {
+          "id": "ai-slop-banned-fonts-json",
+          "mode": "byte",
+          "copies": 1,
+          "status": "ok"
+        },
+        {
+          "id": "domain-prompt-compilation-contract",
+          "mode": "external",
+          "copies": 11,
+          "status": "enforced by powershell -File scripts/validate-prompt-capability.ps1 -WorkspaceRoot <workspace>"
+        },
+        {
+          "id": "source-ingestion-guardrail",
+          "mode": "registered-variant",
+          "copies": 10,
+          "status": "ok"
+        },
+        {
+          "id": "rules-common-core",
+          "mode": "registered-variant",
+          "copies": 10,
+          "status": "ok"
+        },
+        {
+          "id": "skill-writing-skill",
+          "mode": "registered-variant",
+          "copies": 6,
+          "status": "ok"
+        },
+        {
+          "id": "skill-writing-quick-validate",
+          "mode": "byte",
+          "copies": 6,
+          "status": "ok"
+        },
+        {
+          "id": "skill-writing-init-skill",
+          "mode": "byte",
+          "copies": 6,
+          "status": "ok"
+        },
+        {
+          "id": "skill-writing-package-skill",
+          "mode": "byte",
+          "copies": 6,
+          "status": "ok"
+        },
+        {
+          "id": "skill-writing-upgrade-dual-compat",
+          "mode": "byte",
+          "copies": 1,
+          "status": "ok"
+        },
+        {
+          "id": "skill-writing-license",
+          "mode": "byte",
+          "copies": 6,
+          "status": "ok"
+        },
+        {
+          "id": "skill-writing-authoring-practices",
+          "mode": "byte",
+          "copies": 1,
+          "status": "ok"
+        },
+        {
+          "id": "generate-plugin-manifest",
+          "mode": "registered-variant",
+          "copies": 12,
+          "status": "ok"
+        },
+        {
+          "id": "routing-smoke-test",
+          "mode": "registered-variant",
+          "copies": 10,
+          "status": "ok"
+        },
+        {
+          "id": "website-vendored-chwezi-slop-hooks-lib-font-matcher-js",
+          "mode": "byte",
+          "copies": 1,
+          "status": "ok"
+        },
+        {
+          "id": "website-vendored-chwezi-slop-cli-mjs",
+          "mode": "byte",
+          "copies": 1,
+          "status": "ok"
+        },
+        {
+          "id": "website-vendored-chwezi-slop-lib-browser-rules-mjs",
+          "mode": "byte",
+          "copies": 1,
+          "status": "ok"
+        },
+        {
+          "id": "website-vendored-chwezi-slop-lib-browser-mjs",
+          "mode": "byte",
+          "copies": 1,
+          "status": "ok"
+        },
+        {
+          "id": "website-vendored-chwezi-slop-lib-checks-mjs",
+          "mode": "byte",
+          "copies": 1,
+          "status": "ok"
+        },
+        {
+          "id": "website-vendored-chwezi-slop-lib-colour-mjs",
+          "mode": "byte",
+          "copies": 1,
+          "status": "ok"
+        },
+        {
+          "id": "website-vendored-chwezi-slop-lib-detector-mjs",
+          "mode": "byte",
+          "copies": 1,
+          "status": "ok"
+        },
+        {
+          "id": "website-vendored-chwezi-slop-lib-doctrine-consistency-mjs",
+          "mode": "byte",
+          "copies": 1,
+          "status": "ok"
+        },
+        {
+          "id": "website-vendored-chwezi-slop-lib-document-mjs",
+          "mode": "byte",
+          "copies": 1,
+          "status": "ok"
+        },
+        {
+          "id": "website-vendored-chwezi-slop-lib-drift-mjs",
+          "mode": "byte",
+          "copies": 1,
+          "status": "ok"
+        },
+        {
+          "id": "website-vendored-chwezi-slop-lib-parse-css-mjs",
+          "mode": "byte",
+          "copies": 1,
+          "status": "ok"
+        },
+        {
+          "id": "website-vendored-chwezi-slop-lib-parse-html-mjs",
+          "mode": "byte",
+          "copies": 1,
+          "status": "ok"
+        },
+        {
+          "id": "website-vendored-chwezi-slop-lib-registry-mjs",
+          "mode": "byte",
+          "copies": 1,
+          "status": "ok"
+        },
+        {
+          "id": "website-vendored-chwezi-slop-lib-schema-mjs",
+          "mode": "byte",
+          "copies": 1,
+          "status": "ok"
+        },
+        {
+          "id": "website-vendored-chwezi-slop-lib-tailwind-mjs",
+          "mode": "byte",
+          "copies": 1,
+          "status": "ok"
+        },
+        {
+          "id": "website-vendored-chwezi-slop-lib-util-mjs",
+          "mode": "byte",
+          "copies": 1,
+          "status": "ok"
+        },
+        {
+          "id": "website-vendored-chwezi-slop-lib-waivers-mjs",
+          "mode": "byte",
+          "copies": 1,
+          "status": "ok"
+        },
+        {
+          "id": "website-vendored-chwezi-slop-rules-registry-json",
+          "mode": "byte",
+          "copies": 1,
+          "status": "ok"
+        },
+        {
+          "id": "website-vendored-chwezi-slop-rules-registry-schema-json",
+          "mode": "byte",
+          "copies": 1,
+          "status": "ok"
+        },
+        {
+          "id": "design-trigger-block",
+          "mode": "exclusion",
+          "engine": "design-system-skills",
+          "reason": "Owner of the block; design carries the design doctrine directly in AGENTS.md and README.md, so it does not carry a trigger to itself.",
+          "status": "excluded"
+        }
+      ]
+    }
+  ]
+}

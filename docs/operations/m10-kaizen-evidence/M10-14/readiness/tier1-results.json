@@ -1,0 +1,368 @@
+{
+  "measured_at": "2026-09-29T04:13:35+00:00",
+  "host": "win32",
+  "engines": {
+    "srs-skills": {
+      "catalog_id": "srs-skills",
+      "head": "fa85fba",
+      "declared": 2,
+      "passed": 2,
+      "t1": 1.0,
+      "validators": [
+        {
+          "command": "python -X utf8 scripts/validate_skill_engine.py --baseline tests/skill-quality-baseline.json",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "WARN skill-bytes 02-requirements-engineering/fundamentals/during/07-requirements-validation/SKILL.md: 23037 bytes > 20480 (report-only)",
+            "WARN skill-bytes 03-design-documentation/05-ux-specification/SKILL.md: 33701 bytes > 20480 (report-only)",
+            "WARN skill-bytes 03-design-documentation/06-infrastructure-design/SKILL.md: 21978 bytes > 20480 (report-only)",
+            "WARN skill-bytes 09-governance-compliance/28-anti-ai-slop/SKILL.md: 21985 bytes > 20480 (report-only)"
+          ]
+        },
+        {
+          "command": "python -X utf8 scripts/routing_smoke_test.py",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "owned negatives: 16 (pass=13, fail=0, not_assessed=3 cross-engine)",
+            "- NOT_ASSESSED neg-business-case-vs-social-roi: cross-engine owner social-media-skills/meta-social-media-roi-business-case; evaluated in union mode",
+            "- NOT_ASSESSED neg-business-case-vs-proposal-roi: cross-engine owner proposal-skills/saas-business-case-and-roi-modeling; evaluated in union mode",
+            "- NOT_ASSESSED neg-business-case-vs-business-plan: cross-engine owner business-plan-skills/11-funding-request; evaluated in union mode"
+          ]
+        }
+      ]
+    },
+    "business-plan-skills": {
+      "catalog_id": "business-plan-skills",
+      "head": "8949387",
+      "declared": 2,
+      "passed": 2,
+      "t1": 1.0,
+      "validators": [
+        {
+          "command": "python -X utf8 scripts/validate_skill_engine.py --baseline docs/quality/skill-quality-baseline.json",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "- active skills: 137",
+            "- templates: 3",
+            "- fully compliant: 137",
+            "- failure counts:"
+          ]
+        },
+        {
+          "command": "python -X utf8 scripts/routing_smoke_test.py --threshold 1.0",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "routing-smoke: 61/61 top-three matches (100.0%); threshold=100.0%",
+            "- fixture classes: collision, failure-path, limited-capability, negative, positive"
+          ]
+        }
+      ]
+    },
+    "website-skills": {
+      "catalog_id": "website-skills",
+      "head": "ec72bca",
+      "declared": 3,
+      "passed": 3,
+      "t1": 1.0,
+      "validators": [
+        {
+          "command": "python scripts/validate-skill-registry.py",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "design routes: PASS (8 routed design skills exist)",
+            "registry valid: 62 skills"
+          ]
+        },
+        {
+          "command": "python scripts/website_fixture_benchmark.py",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "  },",
+            "  \"field_core_web_vitals\": \"NOT ASSESSED\"",
+            "}",
+            "dependency_minimalism: PASS"
+          ]
+        },
+        {
+          "command": "python scripts/routing-smoke-test.py",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "routing-smoke: 37/37 top-3 hits (100.0%); lexical proxy, not live routing",
+            "- precision@1: 35/37 (94.6%)",
+            "- precision@3: 37/37 (100.0%)",
+            "- owned negatives: 21 (pass 21, fail 0, not assessed 0)"
+          ]
+        }
+      ]
+    },
+    "social-media-skills": {
+      "catalog_id": "social-media-skills",
+      "head": "09eebe7",
+      "declared": 3,
+      "passed": 3,
+      "t1": 1.0,
+      "validators": [
+        {
+          "command": "python -X utf8 scripts/validate_skill_engine.py --baseline quality-baseline.json",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "skills=191 compliant=191 failures=0"
+          ]
+        },
+        {
+          "command": "python -X utf8 scripts/routing_smoke_test.py",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "routing fixtures=56 passed=56 top_3_precision=1.000 threshold=1.000"
+          ]
+        },
+        {
+          "command": "python -X utf8 scripts/check_source_freshness.py",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "source freshness: PASS (63 records within review windows; as of 2026-09-29; claim support NOT ASSESSED)"
+          ]
+        }
+      ]
+    },
+    "linux-skills": {
+      "catalog_id": "linux-skills",
+      "head": "87c6421",
+      "declared": 3,
+      "passed": 2,
+      "t1": 0.6667,
+      "validators": [
+        {
+          "command": "python -X utf8 scripts/validate_skills.py --baseline quality-baseline.json",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "linux-skills validator: 48 active skills, 1 templates",
+            "fully compliant: 48",
+            "failure counts: {}"
+          ]
+        },
+        {
+          "command": "python -X utf8 scripts/routing_smoke_test.py",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "routing fixtures: 30/30 passed; top_k=3; precision=1.000",
+            "fixture kinds: collision=5, failure-path=5, limited-capability=3, negative=6, positive=11"
+          ]
+        },
+        {
+          "command": "bash scripts/tests/check-distro-matrix.sh",
+          "status": "NOT_ASSESSED",
+          "reason": "Linux-native suite; audit host is Windows",
+          "exit": null
+        }
+      ]
+    },
+    "proposal-skills": {
+      "catalog_id": "proposal-skills",
+      "head": "5de27f8",
+      "declared": 2,
+      "passed": 2,
+      "t1": 1.0,
+      "validators": [
+        {
+          "command": "python -X utf8 scripts/validate_skills.py --baseline quality-baseline.json",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "proposal-skill-validator: C:\\wamp64\\www\\proposal-skills",
+            "- active skills: 115",
+            "- findings: 0"
+          ]
+        },
+        {
+          "command": "python -X utf8 scripts/routing_smoke_test.py",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "PASS tender-orals: skills/strategy-positioning/tender-orals-and-proposal-presentation | top3=skills/strategy-positioning/tender-orals-and-proposal-presentation, skills/strategy-positioning/sales-discovery-and-objection-handling, skills/meta/bid-red-team-dual-review",
+            "PASS orals-vs-storytelling: skills/strategy-positioning/proposal-storytelling-and-evaluator-journey | top3=skills/strategy-positioning/proposal-storytelling-and-evaluator-journey, skills/strategy-positioning/tender-orals-and-proposal-presentation, skills/domain-delivery/project-management",
+            "PASS orals-no-invitation: skills/strategy-positioning/tender-orals-and-proposal-presentation | top3=skills/strategy-positioning/tender-orals-and-proposal-presentation, skills/strategy-positioning/proposal-storytelling-and-evaluator-journey, skills/ai-on-saas-proposals/ai-on-saas-poc-and-pilot-scoping",
+            "routing fixtures: 26; top-three precision: 100.0%; threshold: 100.0%"
+          ]
+        }
+      ]
+    },
+    "chwezi-dev-engine": {
+      "catalog_id": "chwezi-dev-engine",
+      "head": "67ae982",
+      "declared": 3,
+      "passed": 3,
+      "t1": 1.0,
+      "validators": [
+        {
+          "command": "python scripts/validate_engine_control_plane.py --workspace-root ..",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "- engines: 12",
+            "- installed checkout scope: accounting, business-plan, chwezi-dev-engine, design, digital-research, linux, political, proposal, social-media, srs, website, windows-admin",
+            "- findings: 0",
+            "PASS: control-plane registry is valid"
+          ]
+        },
+        {
+          "command": "python scripts/routing_smoke_test.py",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "- precision@1: 173/191 (90.6%)",
+            "- precision@3: 191/191 (100.0%)",
+            "- negatives: 78 (owned 78; pass 74, fail 0, not assessed 4)",
+            "- failures: 0"
+          ]
+        },
+        {
+          "command": "python -X utf8 scripts/skill_catalog_guardrails.py",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "[WARNING] skill-bytes: skills\\saas\\stripe-payments\\SKILL.md SKILL.md is 22814 bytes; report-only threshold is 20480 (437 lines)",
+            "[WARNING] skill-bytes: skills\\saas\\subscription-billing\\SKILL.md SKILL.md is 28876 bytes; report-only threshold is 20480 (449 lines)",
+            "[WARNING] skill-bytes: skills\\sdlc-meta\\world-class-engineering\\SKILL.md SKILL.md is 21742 bytes; report-only threshold is 20480 (368 lines)",
+            "[WARNING] skill-bytes: skills\\security\\web-app-security-audit\\SKILL.md SKILL.md is 21389 bytes; report-only threshold is 20480 (494 lines)"
+          ]
+        }
+      ]
+    },
+    "chwezi-accounting-doctrine": {
+      "catalog_id": "chwezi-accounting-doctrine",
+      "head": "82279fa",
+      "declared": 1,
+      "passed": 1,
+      "t1": 1.0,
+      "validators": [
+        {
+          "command": ".\\tools\\validate-doctrine.ps1 -Strict",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "- accounting-invariants: pass (0 finding(s), exit 0)",
+            "- router-map-negative-controls: pass (0 finding(s), exit 0)",
+            "- source-register-negative-controls: pass (0 finding(s), exit 0)",
+            "- validation-state-negative-controls: pass (0 finding(s), exit 0)"
+          ]
+        }
+      ]
+    },
+    "design-system-skills": {
+      "catalog_id": "design-system-skills",
+      "head": "25ce1e6",
+      "declared": 2,
+      "passed": 2,
+      "t1": 1.0,
+      "validators": [
+        {
+          "command": "python -X utf8 scripts/validate_engine.py --baseline tests/quality-baseline.json",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "WARN skill-bytes skills/06-sector-and-domain-ux/ecommerce-and-checkout-ux/SKILL.md: 21418 bytes > 20480 (295 lines; report-only)",
+            "WARN skill-bytes skills/06-sector-and-domain-ux/healthcare-ui-design/SKILL.md: 22354 bytes > 20480 (419 lines; report-only)",
+            "WARN skill-bytes skills/12-data-viz-and-dashboards/data-visualization/SKILL.md: 29392 bytes > 20480 (487 lines; report-only)",
+            "WARN skill-bytes skills/13-presentations-and-documents/email-and-newsletter-design/SKILL.md: 23087 bytes > 20480 (305 lines; report-only)"
+          ]
+        },
+        {
+          "command": "python -X utf8 scripts/routing_smoke_test.py",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "routing fixtures=68 precision@1=94% precision@3=100% owned_negatives=21/21 not_assessed=1 (lexical proxy; not live routing)"
+          ]
+        }
+      ]
+    },
+    "digital-research-engine": {
+      "catalog_id": "digital-research-skills",
+      "head": "2b9c87d",
+      "declared": 3,
+      "passed": 3,
+      "t1": 1.0,
+      "validators": [
+        {
+          "command": "python -X utf8 scripts/skill_contract_validator.py --baseline tests/skill-engine/quality-baseline.json",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "- active skills: 59",
+            "- template skills: 1",
+            "- fully compliant: 59",
+            "- failure counts: {}"
+          ]
+        },
+        {
+          "command": "python -X utf8 scripts/routing_smoke_test.py",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "routing-smoke-test: 29/29 top-3 precision=1.000 threshold=1.000 (lexical proxy; not live routing)",
+            "- precision@1: 25/29 (86.2%)",
+            "- precision@3: 100.0%",
+            "- owned negatives: 9 (pass 7, fail 0, not assessed 2)"
+          ]
+        },
+        {
+          "command": "python -X utf8 scripts/validate_engine.py",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "----------------------------------------------------------------------",
+            "Ran 37 tests in 3.769s",
+            "",
+            "OK"
+          ]
+        }
+      ]
+    },
+    "windows-admin-engine-skills": {
+      "catalog_id": "windows-admin-engine-skills",
+      "head": "55c53cc",
+      "declared": 3,
+      "passed": 3,
+      "t1": 1.0,
+      "validators": [
+        {
+          "command": "python -X utf8 scripts/validate_engine.py",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "validated_skills=19 findings=0"
+          ]
+        },
+        {
+          "command": "python -X utf8 scripts/routing_smoke_test.py",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "routing_fixtures=19 failures=0"
+          ]
+        },
+        {
+          "command": "python -X utf8 scripts/source_ingestion_guardrail.py",
+          "status": "PASS",
+          "exit": 0,
+          "tail": [
+            "source_ingestion_findings=0"
+          ]
+        }
+      ]
+    }
+  }
+}

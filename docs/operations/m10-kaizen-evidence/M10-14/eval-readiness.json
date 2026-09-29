@@ -1,0 +1,280 @@
+{
+  "engines": {
+    "business-plan-skills": {
+      "cross_engine_pairs_ge_0_75": 7,
+      "not_assessed": [
+        "T2_p1 (harness reports p@3 only, or no routing harness)",
+        "T2_neg (no owned negatives)",
+        "T3 (zero-spend rule; 0 grading.json files)"
+      ],
+      "points": {
+        "T1": 30.0,
+        "T2": 10.0,
+        "T3": 0.0
+      },
+      "readiness": 40.0,
+      "slots": {
+        "T1": 1.0,
+        "T2_clean": 1.0,
+        "T2_cov": 0.0,
+        "T2_neg": 0.0,
+        "T2_p1": 0.0,
+        "T3": 0.0
+      },
+      "undeclared": 0
+    },
+    "chwezi-accounting-doctrine": {
+      "cross_engine_pairs_ge_0_75": 1,
+      "not_assessed": [
+        "T2_p1 (harness reports p@3 only, or no routing harness)",
+        "T2_neg (no owned negatives)",
+        "T2_cov (no routing fixtures)",
+        "T3 (zero-spend rule; 0 grading.json files)"
+      ],
+      "points": {
+        "T1": 30.0,
+        "T2": 10.0,
+        "T3": 0.0
+      },
+      "readiness": 40.0,
+      "slots": {
+        "T1": 1.0,
+        "T2_clean": 1.0,
+        "T2_cov": 0.0,
+        "T2_neg": 0.0,
+        "T2_p1": 0.0,
+        "T3": 0.0
+      },
+      "undeclared": 0
+    },
+    "chwezi-dev-engine": {
+      "cross_engine_pairs_ge_0_75": 9,
+      "not_assessed": [
+        "T3 (zero-spend rule; 0 grading.json files)"
+      ],
+      "points": {
+        "T1": 30.0,
+        "T2": 29.72,
+        "T3": 0.0
+      },
+      "readiness": 59.7,
+      "slots": {
+        "T1": 1.0,
+        "T2_clean": 1.0,
+        "T2_cov": 0.0659,
+        "T2_neg": 1.0,
+        "T2_p1": 0.9058,
+        "T3": 0.0
+      },
+      "undeclared": 0
+    },
+    "chwezi-engine-agents": {
+      "cross_engine_pairs_ge_0_75": 0,
+      "not_assessed": [
+        "T2_neg (no owned negatives)",
+        "T2_cov (no routing fixtures)",
+        "T2_clean (engine not in the union collision scan)",
+        "T3 (zero-spend rule; 0 grading.json files)"
+      ],
+      "points": {
+        "T1": 30.0,
+        "T2": 7.14,
+        "T3": 0.0
+      },
+      "readiness": 37.1,
+      "slots": {
+        "T1": 1.0,
+        "T2_clean": 0.0,
+        "T2_cov": 0.0,
+        "T2_neg": 0.0,
+        "T2_p1": 0.7143,
+        "T3": 0.0
+      },
+      "undeclared": 0
+    },
+    "design-system-skills": {
+      "cross_engine_pairs_ge_0_75": 3,
+      "not_assessed": [
+        "T3 (zero-spend rule; 0 grading.json files)"
+      ],
+      "points": {
+        "T1": 30.0,
+        "T2": 29.41,
+        "T3": 0.0
+      },
+      "readiness": 59.4,
+      "slots": {
+        "T1": 1.0,
+        "T2_clean": 1.0,
+        "T2_cov": 0.0,
+        "T2_neg": 1.0,
+        "T2_p1": 0.9412,
+        "T3": 0.0
+      },
+      "undeclared": 0
+    },
+    "digital-research-engine": {
+      "cross_engine_pairs_ge_0_75": 4,
+      "not_assessed": [
+        "T3 (zero-spend rule; 0 grading.json files)"
+      ],
+      "points": {
+        "T1": 30.0,
+        "T2": 27.51,
+        "T3": 0.0
+      },
+      "readiness": 57.5,
+      "slots": {
+        "T1": 1.0,
+        "T2_clean": 1.0,
+        "T2_cov": 0.0,
+        "T2_neg": 0.8889,
+        "T2_p1": 0.8621,
+        "T3": 0.0
+      },
+      "undeclared": 0
+    },
+    "linux-skills": {
+      "cross_engine_pairs_ge_0_75": 0,
+      "not_assessed": [
+        "T1 bash scripts/tests/check-distro-matrix.sh",
+        "T2_p1 (harness reports p@3 only, or no routing harness)",
+        "T2_neg (no owned negatives)",
+        "T3 (zero-spend rule; 0 grading.json files)"
+      ],
+      "points": {
+        "T1": 20.0,
+        "T2": 10.0,
+        "T3": 0.0
+      },
+      "readiness": 30.0,
+      "slots": {
+        "T1": 0.6667,
+        "T2_clean": 1.0,
+        "T2_cov": 0.0,
+        "T2_neg": 0.0,
+        "T2_p1": 0.0,
+        "T3": 0.0
+      },
+      "undeclared": 0
+    },
+    "proposal-skills": {
+      "cross_engine_pairs_ge_0_75": 7,
+      "not_assessed": [
+        "T2_neg (no owned negatives)",
+        "T3 (zero-spend rule; 0 grading.json files)"
+      ],
+      "points": {
+        "T1": 30.0,
+        "T2": 17.31,
+        "T3": 0.0
+      },
+      "readiness": 47.3,
+      "slots": {
+        "T1": 1.0,
+        "T2_clean": 1.0,
+        "T2_cov": 0.0,
+        "T2_neg": 0.0,
+        "T2_p1": 0.7308,
+        "T3": 0.0
+      },
+      "undeclared": 0
+    },
+    "social-media-skills": {
+      "cross_engine_pairs_ge_0_75": 7,
+      "not_assessed": [
+        "T2_p1 (harness reports p@3 only, or no routing harness)",
+        "T2_neg (no owned negatives)",
+        "T3 (zero-spend rule; 0 grading.json files)"
+      ],
+      "points": {
+        "T1": 30.0,
+        "T2": 10.0,
+        "T3": 0.0
+      },
+      "readiness": 40.0,
+      "slots": {
+        "T1": 1.0,
+        "T2_clean": 1.0,
+        "T2_cov": 0.0,
+        "T2_neg": 0.0,
+        "T2_p1": 0.0,
+        "T3": 0.0
+      },
+      "undeclared": 0
+    },
+    "srs-skills": {
+      "cross_engine_pairs_ge_0_75": 1,
+      "not_assessed": [
+        "T3 (zero-spend rule; 0 grading.json files)"
+      ],
+      "points": {
+        "T1": 30.0,
+        "T2": 28.54,
+        "T3": 0.0
+      },
+      "readiness": 58.5,
+      "slots": {
+        "T1": 1.0,
+        "T2_clean": 1.0,
+        "T2_cov": 0.0,
+        "T2_neg": 1.0,
+        "T2_p1": 0.8545,
+        "T3": 0.0
+      },
+      "undeclared": 0
+    },
+    "website-skills": {
+      "cross_engine_pairs_ge_0_75": 3,
+      "not_assessed": [
+        "T3 (zero-spend rule; 0 grading.json files)"
+      ],
+      "points": {
+        "T1": 30.0,
+        "T2": 29.62,
+        "T3": 0.0
+      },
+      "readiness": 59.6,
+      "slots": {
+        "T1": 1.0,
+        "T2_clean": 1.0,
+        "T2_cov": 0.0161,
+        "T2_neg": 1.0,
+        "T2_p1": 0.9459,
+        "T3": 0.0
+      },
+      "undeclared": 0
+    },
+    "windows-admin-engine-skills": {
+      "cross_engine_pairs_ge_0_75": 0,
+      "not_assessed": [
+        "T2_p1 (harness reports p@3 only, or no routing harness)",
+        "T2_neg (no owned negatives)",
+        "T3 (zero-spend rule; 0 grading.json files)"
+      ],
+      "points": {
+        "T1": 30.0,
+        "T2": 10.0,
+        "T3": 0.0
+      },
+      "readiness": 40.0,
+      "slots": {
+        "T1": 1.0,
+        "T2_clean": 1.0,
+        "T2_cov": 0.0,
+        "T2_neg": 0.0,
+        "T2_p1": 0.0,
+        "T3": 0.0
+      },
+      "undeclared": 0
+    }
+  },
+  "formula": "30*T1 + 40*mean(T2_p1, T2_neg, T2_cov, T2_clean) + 30*T3; NOT_ASSESSED = 0",
+  "inputs_sha256": {
+    "collision-scan.json": "c06f66a8cebcb5e66c3d34381dd3c6e3fe18c5104e10e9c49ee90983ce363da7",
+    "coverage.json": "7328d5987f87da4b3781f0c1a6fd5e79ac4643a5ac581545aa59d22d67dffc3d",
+    "t2-inputs.json": "7db7e1fbf2e1d8c438b427382a25295f169f17c15cdf508991181010892a1c53",
+    "tier1-results.json": "f8e8025fe8db500791e0310601d0ff7a9f9acfc8c73d07324d1468210c791d55"
+  },
+  "label": "Tier 2 lexical proxy; not live routing (agent-skills issue #620). Transcribed from the stored harness outputs in this folder, 29 Sep 2026. null = NOT_ASSESSED (scores 0)."
+}

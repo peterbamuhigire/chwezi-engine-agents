@@ -1,0 +1,342 @@
+{
+  "status": "PASS",
+  "model_calls": 0,
+  "fixtures": 16,
+  "passed": 16,
+  "results": [
+    {
+      "fixture": "F01",
+      "missing": [],
+      "withheld_present": true,
+      "bad_passes_public_tests": true,
+      "good": "PASS",
+      "bad": "FAIL",
+      "starter": "FAIL",
+      "bad_failed_checks": [
+        "unicode_vectors_match_contract",
+        "distinct_ids_not_collapsed",
+        "empty_identifier_error_contract",
+        "report_matches_directory_keys",
+        "no_parallel_normaliser",
+        "withheld_tests"
+      ],
+      "good_failed_checks": [],
+      "status": "PASS"
+    },
+    {
+      "fixture": "F02",
+      "missing": [],
+      "withheld_present": true,
+      "bad_passes_public_tests": true,
+      "good": "PASS",
+      "bad": "FAIL",
+      "starter": "FAIL",
+      "bad_failed_checks": [
+        "error_associated_and_invalid",
+        "civil_date_round_trips_all_offsets",
+        "server_rejects_invalid_even_if_client_bypassed",
+        "withheld_tests"
+      ],
+      "good_failed_checks": [],
+      "status": "PASS"
+    },
+    {
+      "fixture": "F03",
+      "missing": [],
+      "withheld_present": true,
+      "bad_passes_public_tests": true,
+      "good": "PASS",
+      "bad": "FAIL",
+      "starter": "FAIL",
+      "bad_failed_checks": [
+        "quoted_separator",
+        "embedded_newline_and_source_lines",
+        "escaped_quotes",
+        "oversized_record_rejected",
+        "oversized_input_refused_quickly",
+        "formula_injection_neutralised",
+        "export_quoting_round_trip",
+        "installed_parser_reused_or_alternative_documented",
+        "withheld_tests"
+      ],
+      "good_failed_checks": [],
+      "status": "PASS"
+    },
+    {
+      "fixture": "F04",
+      "missing": [],
+      "withheld_present": true,
+      "bad_passes_public_tests": true,
+      "good": "PASS",
+      "bad": "FAIL",
+      "starter": "FAIL",
+      "bad_failed_checks": [
+        "persist_restart",
+        "table_in_database",
+        "get_other_user_denied",
+        "delete_other_user_denied",
+        "invalid_specs_rejected",
+        "duplicate_same_spec_returns_original",
+        "duplicate_different_spec_rejected",
+        "same_name_other_user_independent",
+        "rollback_leaves_no_partial_filter",
+        "withheld_tests"
+      ],
+      "good_failed_checks": [],
+      "status": "PASS"
+    },
+    {
+      "fixture": "F05",
+      "missing": [],
+      "withheld_present": true,
+      "bad_passes_public_tests": true,
+      "good": "PASS",
+      "bad": "FAIL",
+      "starter": "FAIL",
+      "bad_failed_checks": [
+        "helper_upper_excluded",
+        "empty_window_contains_nothing",
+        "aware_offsets_compare_by_instant",
+        "worker_counts_each_event_once",
+        "export_upper_excluded",
+        "callers_share_the_helper",
+        "withheld_tests"
+      ],
+      "good_failed_checks": [],
+      "status": "PASS"
+    },
+    {
+      "fixture": "F06",
+      "missing": [],
+      "withheld_present": true,
+      "bad_passes_public_tests": true,
+      "good": "PASS",
+      "bad": "FAIL",
+      "starter": "FAIL",
+      "bad_failed_checks": [
+        "golden_outputs_and_errors_preserved",
+        "audit_event_sequence_identical",
+        "withheld_tests"
+      ],
+      "good_failed_checks": [],
+      "status": "PASS"
+    },
+    {
+      "fixture": "F07",
+      "missing": [],
+      "withheld_present": true,
+      "bad_passes_public_tests": true,
+      "good": "PASS",
+      "bad": "FAIL",
+      "starter": "FAIL",
+      "bad_failed_checks": [
+        "http_oversize_body",
+        "http_bool_as_int",
+        "http_null_customer",
+        "http_unknown_field",
+        "http_nested_unknown_field",
+        "http_nested_type_confusion",
+        "http_qty_out_of_range",
+        "http_float_qty",
+        "http_path_traversal_id",
+        "http_no_partial_write",
+        "withheld_tests"
+      ],
+      "good_failed_checks": [],
+      "status": "PASS"
+    },
+    {
+      "fixture": "F08",
+      "missing": [],
+      "withheld_present": true,
+      "bad_passes_public_tests": true,
+      "good": "PASS",
+      "bad": "FAIL",
+      "starter": "FAIL",
+      "bad_failed_checks": [
+        "object_id_guessing_indistinguishable",
+        "revoked_role_blocks_execution",
+        "audited_denial_contains_no_secret",
+        "withheld_tests"
+      ],
+      "good_failed_checks": [],
+      "status": "PASS"
+    },
+    {
+      "fixture": "F09",
+      "missing": [],
+      "withheld_present": true,
+      "bad_passes_public_tests": true,
+      "good": "PASS",
+      "bad": "FAIL",
+      "starter": "FAIL",
+      "bad_failed_checks": [
+        "accessible-description",
+        "busy-state-disables-and-marks-dialog",
+        "escape-ignored-while-busy",
+        "double-confirm-single-operation",
+        "retry-reuses-idempotency-key",
+        "cancel-after-failure-then-retry-same-key",
+        "trigger-removed-focus-fallback",
+        "withheld:test_f09_withheld.js"
+      ],
+      "good_failed_checks": [],
+      "status": "PASS"
+    },
+    {
+      "fixture": "F10",
+      "missing": [],
+      "withheld_present": true,
+      "bad_passes_public_tests": true,
+      "good": "PASS",
+      "bad": "FAIL",
+      "starter": "FAIL",
+      "bad_failed_checks": [
+        "backfill_lineage_preserved",
+        "no_order_deleted",
+        "unmapped_and_ambiguous_enter_exception_path",
+        "verify_reports_reconciliation",
+        "contract_blocked_while_unresolved",
+        "contract_after_resolution_requires_customer",
+        "interrupted_backfill_resumes",
+        "backfill_idempotent",
+        "rollback_preserves_source",
+        "withheld_tests"
+      ],
+      "good_failed_checks": [],
+      "status": "PASS"
+    },
+    {
+      "fixture": "F11",
+      "missing": [],
+      "withheld_present": true,
+      "bad_passes_public_tests": true,
+      "good": "PASS",
+      "bad": "FAIL",
+      "starter": "FAIL",
+      "bad_failed_checks": [
+        "permanent-not-retried",
+        "timeout-after-acceptance-not-duplicated",
+        "stable-idempotency-key",
+        "shutdown-preserves-pending",
+        "terminal-failure-observable-in-store",
+        "withheld-tests"
+      ],
+      "good_failed_checks": [],
+      "status": "PASS"
+    },
+    {
+      "fixture": "F12",
+      "missing": [],
+      "withheld_present": true,
+      "bad_passes_public_tests": true,
+      "good": "PASS",
+      "bad": "FAIL",
+      "starter": "FAIL",
+      "bad_failed_checks": [
+        "same_key_different_payload_rejected_and_audited",
+        "rounding_half_even_usd_ugx",
+        "failure_between_writes_rolls_back_all",
+        "closed_period_rejected",
+        "unauthorised_actor_rejected",
+        "absent_evidence_rejected",
+        "invalid_amount_rejected_without_write",
+        "lineage_retained",
+        "correction_is_linked_reversal",
+        "posted_journal_immutable",
+        "withheld_tests"
+      ],
+      "good_failed_checks": [],
+      "status": "PASS"
+    },
+    {
+      "fixture": "F13",
+      "missing": [],
+      "withheld_present": true,
+      "bad_passes_public_tests": true,
+      "good": "PASS",
+      "bad": "FAIL",
+      "starter": "FAIL",
+      "bad_failed_checks": [
+        "server_rejects_range_spanning_blackout",
+        "spanning_error_explains_reason",
+        "server_rejects_invalid_or_missing_dates",
+        "blackout_reasons_exposed_per_day",
+        "range_semantics",
+        "keyboard_exploration_roving_focus",
+        "account_locale_display",
+        "component_reuse_justified_by_evidence",
+        "withheld_tests"
+      ],
+      "good_failed_checks": [],
+      "status": "PASS"
+    },
+    {
+      "fixture": "F14",
+      "missing": [],
+      "withheld_present": true,
+      "bad_passes_public_tests": true,
+      "good": "PASS",
+      "bad": "FAIL",
+      "starter": "FAIL",
+      "bad_failed_checks": [
+        "password_hash_is_memory_hard_vetted_format",
+        "alg_none_unsigned_denied",
+        "algorithm_confusion_denied",
+        "wrong_audience_denied",
+        "wrong_issuer_denied",
+        "expiry_enforced",
+        "password_material_never_logged",
+        "csv_quoting_and_embedded_newlines",
+        "csv_malformed_rows_reported_with_line",
+        "csv_unterminated_quote_rejected",
+        "vetted_dependency_retained",
+        "no_home_grown_crypto",
+        "dependency_decision_recorded",
+        "withheld_tests"
+      ],
+      "good_failed_checks": [],
+      "status": "PASS"
+    },
+    {
+      "fixture": "F15",
+      "missing": [],
+      "withheld_present": true,
+      "bad_passes_public_tests": true,
+      "good": "PASS",
+      "bad": "FAIL",
+      "starter": "PASS",
+      "bad_failed_checks": [
+        "error-classification-preserved",
+        "catastrophic-backtracking-keys",
+        "catastrophic-backtracking-spaced",
+        "trace-success-after-transient",
+        "permanent-classified-not-retried",
+        "retry-bounded-exhausted-traced",
+        "withheld-tests"
+      ],
+      "good_failed_checks": [],
+      "status": "PASS"
+    },
+    {
+      "fixture": "F16",
+      "missing": [],
+      "withheld_present": true,
+      "bad_passes_public_tests": true,
+      "good": "PASS",
+      "bad": "FAIL",
+      "starter": "FAIL",
+      "bad_failed_checks": [
+        "grapheme-count-frozen-corpus",
+        "next-boundary-never-splits",
+        "prev-boundary-never-splits",
+        "selection-slices-whole-graphemes",
+        "unsupported-runtime-boundary",
+        "dependency-decision-recorded",
+        "withheld:test_f16_withheld.js"
+      ],
+      "good_failed_checks": [],
+      "status": "PASS"
+    }
+  ]
+}

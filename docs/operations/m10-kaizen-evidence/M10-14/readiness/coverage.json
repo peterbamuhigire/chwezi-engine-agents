@@ -1,0 +1,123 @@
+{
+  "chwezi-dev-engine": {
+    "active_skills": 167,
+    "skills_with_positive": 124,
+    "skills_with_owned_negative": 37,
+    "skills_ge3pos_ge2neg": 11,
+    "coverage": 0.0659,
+    "positive_fixtures": 191,
+    "owned_negatives": 78,
+    "files": [
+      "scripts/routing_fixtures.yml",
+      "tests/routing/edge-fixtures.yml"
+    ]
+  },
+  "design-system-skills": {
+    "active_skills": 101,
+    "skills_with_positive": 57,
+    "skills_with_owned_negative": 8,
+    "skills_ge3pos_ge2neg": 0,
+    "coverage": 0.0,
+    "positive_fixtures": 68,
+    "owned_negatives": 22,
+    "files": [
+      "tests/routing-fixtures.yml"
+    ]
+  },
+  "srs-skills": {
+    "active_skills": 159,
+    "skills_with_positive": 46,
+    "skills_with_owned_negative": 12,
+    "skills_ge3pos_ge2neg": 0,
+    "coverage": 0.0,
+    "positive_fixtures": 55,
+    "owned_negatives": 16,
+    "files": [
+      "tests/routing-fixtures.json"
+    ]
+  },
+  "website-skills": {
+    "active_skills": 62,
+    "skills_with_positive": 30,
+    "skills_with_owned_negative": 14,
+    "skills_ge3pos_ge2neg": 1,
+    "coverage": 0.0161,
+    "positive_fixtures": 36,
+    "owned_negatives": 21,
+    "files": [
+      "tests/routing/fixtures.json"
+    ]
+  },
+  "digital-research-engine": {
+    "active_skills": 59,
+    "skills_with_positive": 28,
+    "skills_with_owned_negative": 5,
+    "skills_ge3pos_ge2neg": 0,
+    "coverage": 0.0,
+    "positive_fixtures": 29,
+    "owned_negatives": 9,
+    "files": [
+      "tests/skill-engine/routing-fixtures.json"
+    ]
+  },
+  "proposal-skills": {
+    "active_skills": 115,
+    "skills_with_positive": 21,
+    "skills_with_owned_negative": 0,
+    "skills_ge3pos_ge2neg": 0,
+    "coverage": 0.0,
+    "positive_fixtures": 24,
+    "owned_negatives": 0,
+    "files": [
+      "tests/fixtures/routing-fixtures.json"
+    ]
+  },
+  "business-plan-skills": {
+    "active_skills": 137,
+    "skills_with_positive": 42,
+    "skills_with_owned_negative": 0,
+    "skills_ge3pos_ge2neg": 0,
+    "coverage": 0.0,
+    "positive_fixtures": 59,
+    "owned_negatives": 0,
+    "files": [
+      "tests/routing-fixtures.json"
+    ]
+  },
+  "social-media-skills": {
+    "active_skills": 191,
+    "skills_with_positive": 44,
+    "skills_with_owned_negative": 0,
+    "skills_ge3pos_ge2neg": 0,
+    "coverage": 0.0,
+    "positive_fixtures": 56,
+    "owned_negatives": 0,
+    "files": [
+      "tests/routing-fixtures.json"
+    ]
+  },
+  "linux-skills": {
+    "active_skills": 48,
+    "skills_with_positive": 23,
+    "skills_with_owned_negative": 0,
+    "skills_ge3pos_ge2neg": 0,
+    "coverage": 0.0,
+    "positive_fixtures": 24,
+    "owned_negatives": 0,
+    "files": [
+      "tests/fixtures/routing.json"
+    ]
+  },
+  "windows-admin-engine-skills": {
+    "active_skills": 21,
+    "skills_with_positive": 19,
+    "skills_with_owned_negative": 0,
+    "skills_ge3pos_ge2neg": 0,
+    "coverage": 0.0,
+    "positive_fixtures": 19,
+    "owned_negatives": 0,
+    "files": [
+      "tests/fixtures/routing.json"
+    ]
+  }
+}

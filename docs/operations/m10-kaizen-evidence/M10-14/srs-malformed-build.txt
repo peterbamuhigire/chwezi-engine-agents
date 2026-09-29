@@ -1,0 +1,7 @@
+No manifest found — using alphabetical sort of *.md files
+
+Stitching files:
+  + 01-broken.md
+
+ERROR: 01-broken.md block 1 (figure 1): Parse error on line 2: | ...t LR  A[Start --> B{{unclosed  B -->|y | ----------------------^ | Expecting 'SQE', 'DOUBLECIRCLEEND', 'PE', '-)', 'STADIUMEND', 'SUBROUTINEEND', 'PIPE', 'CYLINDEREND', 'DIAMOND_STOP', 'TAGEND', 'TRAPEND', 'INVTRAPEND', 'UNICODE_TEXT', 'TEXT', 'TAGSTART', got 'DIAMOND_START'
+ERROR: diagram rendering failed; no .docx was written

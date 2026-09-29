@@ -1,0 +1,7 @@
+routing-smoke: 55/55 fixtures; top-3 precision=1.000; threshold=1.000; precision@1=47/55 (85.5%)
+owned negatives: 16 (pass=13, fail=0, not_assessed=3 cross-engine)
+- NOT_ASSESSED neg-business-case-vs-social-roi: cross-engine owner social-media-skills/meta-social-media-roi-business-case; evaluated in union mode
+- NOT_ASSESSED neg-business-case-vs-proposal-roi: cross-engine owner proposal-skills/saas-business-case-and-roi-modeling; evaluated in union mode
+- NOT_ASSESSED neg-business-case-vs-business-plan: cross-engine owner business-plan-skills/11-funding-request; evaluated in union mode
+precision@1 floor 83.0% met
+fixture lint: 0 finding(s) over 71 prompts

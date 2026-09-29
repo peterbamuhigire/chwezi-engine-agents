@@ -1,0 +1,6 @@
+routing-smoke: 37/37 top-3 hits (100.0%); lexical proxy, not live routing
+- precision@1: 35/37 (94.6%)
+- precision@3: 37/37 (100.0%)
+- owned negatives: 21 (pass 21, fail 0, not assessed 0)
+- rank-1 floor: 92.0%
+- fixture lint findings: 0

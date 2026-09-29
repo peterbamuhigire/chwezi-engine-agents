@@ -1,0 +1,49 @@
+banned-primary-font                    AS1 block    immediate Banned AI-slop font as primary type
+conditional-source-sans-primary        AS1 block    immediate Source Sans as display or heading face
+flat-type-hierarchy                    AS1 warning  deep      Flat type hierarchy
+body-leading-tight                     AS7 warning  deep      Body line-height below 1.5
+body-leading-loose                     AS7 warning  deep      Body line-height above 1.9
+heading-wide-tracking                  AS1 warning  deep      Wide-tracked headings
+body-wide-tracking                     AS1 advisory deep      Wide-tracked body text
+extreme-negative-tracking              AS7 advisory deep      Extreme negative tracking
+justified-body-text                    AS7 warning  deep      Justified text
+tiny-text                              AS7 warning  deep      Text below 12px
+all-caps-body                          AS7 advisory deep      All-caps running text
+line-length                            AS7 advisory deep      Measure outside 45-80ch
+skipped-heading                        AS7 warning  deep      Skipped heading level
+italic-serif-display                   AS1 advisory deep      Italic serif display reflex
+gradient-text                          AS4 block    immediate Gradient text
+purple-blue-gradient                   AS4 block    immediate Purple gradient
+neon-glow                              AS4 block    immediate Neon glow
+glassmorphism                          AS4 block    immediate Glassmorphism surface
+ai-beige-ground                        AS1 warning  deep      AI-beige page ground
+radial-halo                            AS4 advisory deep      Radial chromatic halo
+pure-black-body-text                   AS1 warning  deep      Pure black body text
+gray-on-color                          AS7 warning  deep      Grey text on a chromatic ground
+stripes-or-grid-background             AS4 advisory deep      Stripe or grid background
+decorative-side-stripe                 AS2 warning  deep      Decorative side stripe
+nested-cards                           AS3 warning  deep      Nested cards
+hero-eyebrow-chip                      AS2 warning  deep      Hero eyebrow chip
+kicker-above-heading                   AS2 warning  deep      Kicker above heading
+numbered-section-labels                AS2 warning  deep      Numbered section labels
+identical-three-column-feature-grid    AS3 warning  deep      Identical three-column feature grid
+thin-border-wide-shadow                AS3 advisory deep      Thin border with a wide soft shadow
+bounce-easing                          AS4 block    immediate Bounce or elastic easing
+pulsing-dot                            AS4 warning  deep      Decorative pulsing dot
+blinking-cursor                        AS4 warning  deep      Blinking cursor in a hero
+marquee                                AS4 warning  deep      Marquee or infinite ticker
+missing-reduced-motion                 AS4 warning  deep      Motion with no reduced-motion path
+broken-local-image                     AS7 block    immediate Broken local image
+placeholder-image-host                 AS5 warning  deep      Placeholder image host
+focus-indicator-removed                AS7 warning  deep      Focus indicator removed
+design-system-font                     AS1 block    immediate Font outside the design system
+design-system-color                    AS1 advisory deep      Colour outside the design system
+design-system-radius                   AS3 advisory deep      Radius outside the design system
+design-system-font-size                AS1 advisory deep      Font size outside the design system
+horizontal-overflow                    AS7 warning  browser   Horizontal page overflow
+clipped-positioned-child               AS7 warning  browser   Positioned child clipped by overflow
+text-occlusion                         AS7 warning  browser   Text covered by another element
+content-hidden-at-rest                 AS7 warning  browser   Content hidden at rest (failed reveal)
+script-error                           AS7 warning  browser   Script error on load
+low-contrast-computed                  AS7 block    browser   Low computed text contrast
+first-viewport-column-overflow         AS7 warning  browser   First-viewport text overflowing the viewport

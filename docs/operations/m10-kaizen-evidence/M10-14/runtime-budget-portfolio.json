@@ -1,0 +1,73 @@
+{
+  "as_of": "2026-09-29",
+  "method": "as M10-02 runtime-budget-portfolio.json: parse_frontmatter over every skill directory listed in each repository .claude-plugin/plugin.json; metadata = name + description characters",
+  "per_engine": {
+    "business-plan-skills": {
+      "skills": 134,
+      "description_chars": 26955,
+      "metadata_chars": 30555
+    },
+    "chwezi-accounting-doctrine": {
+      "skills": 108,
+      "description_chars": 23744,
+      "metadata_chars": 27302
+    },
+    "chwezi-dev-engine": {
+      "skills": 165,
+      "description_chars": 37258,
+      "metadata_chars": 41138
+    },
+    "chwezi-engine-agents": {
+      "skills": 1,
+      "description_chars": 242,
+      "metadata_chars": 255
+    },
+    "design-system-skills": {
+      "skills": 101,
+      "description_chars": 27488,
+      "metadata_chars": 30227
+    },
+    "digital-research-engine": {
+      "skills": 59,
+      "description_chars": 15084,
+      "metadata_chars": 16334
+    },
+    "linux-skills": {
+      "skills": 45,
+      "description_chars": 10807,
+      "metadata_chars": 11720
+    },
+    "proposal-skills": {
+      "skills": 115,
+      "description_chars": 25077,
+      "metadata_chars": 28169
+    },
+    "social-media-skills": {
+      "skills": 191,
+      "description_chars": 41310,
+      "metadata_chars": 45985
+    },
+    "srs-skills": {
+      "skills": 159,
+      "description_chars": 37181,
+      "metadata_chars": 41380
+    },
+    "website-skills": {
+      "skills": 62,
+      "description_chars": 13825,
+      "metadata_chars": 14930
+    },
+    "windows-admin-engine-skills": {
+      "skills": 20,
+      "description_chars": 3901,
+      "metadata_chars": 4395
+    }
+  },
+  "total": {
+    "skills": 1160,
+    "description_chars": 262872,
+    "metadata_chars": 292390
+  },
+  "duplicate_name_count": 27,
+  "budget_metadata_chars": 60000
+}

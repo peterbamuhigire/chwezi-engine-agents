@@ -1,0 +1,9 @@
+routing-smoke-test (lexical proxy; not live routing):
+- active skills indexed: 167
+- fixtures: 191
+- precision@1: 173/191 (90.6%)
+- precision@3: 191/191 (100.0%)
+- negatives: 78 (owned 78; pass 74, fail 0, not assessed 4)
+- fixture lint findings: 0
+- rank-1 floor: 88.0%
+- failures: 0

@@ -1,0 +1,103 @@
+{
+  "label": "Tier 2 lexical proxy; not live routing (agent-skills issue #620). Transcribed from the stored harness outputs in this folder, 29 Sep 2026. null = NOT_ASSESSED (scores 0).",
+  "p_at_1": {
+    "chwezi-dev-engine": {
+      "hits": 173,
+      "total": 191,
+      "source": "dev-smoke.txt"
+    },
+    "design-system-skills": {
+      "hits": 64,
+      "total": 68,
+      "source": "design-smoke.txt (94 %, 64/68 per evals/routing/baseline.json 94.1)"
+    },
+    "srs-skills": {
+      "hits": 47,
+      "total": 55,
+      "source": "srs-smoke.txt"
+    },
+    "website-skills": {
+      "hits": 35,
+      "total": 37,
+      "source": "website-smoke.txt"
+    },
+    "digital-research-engine": {
+      "hits": 25,
+      "total": 29,
+      "source": "research-smoke.txt"
+    },
+    "proposal-skills": {
+      "hits": 19,
+      "total": 26,
+      "source": "proposal-smoke.txt (derived: expected skill equals first of printed top3)"
+    },
+    "business-plan-skills": null,
+    "social-media-skills": null,
+    "linux-skills": null,
+    "windows-admin-engine-skills": null,
+    "chwezi-accounting-doctrine": null,
+    "chwezi-engine-agents": {
+      "hits": 30,
+      "total": 42,
+      "source": "route oracles primary@1 INCLUDING the 3 executed known-defect oracles (30/42; reviewer finding F3). Stand-in for a routing harness: the package has no engine-local routing fixtures."
+    }
+  },
+  "owned_negatives": {
+    "chwezi-dev-engine": {
+      "pass_local": 74,
+      "mirror_pass": 4,
+      "mirror_fail": 0,
+      "total": 78,
+      "mirrors": "060-063 rank 1"
+    },
+    "design-system-skills": {
+      "pass_local": 21,
+      "mirror_pass": 1,
+      "mirror_fail": 0,
+      "total": 22,
+      "mirrors": "054 rank 1"
+    },
+    "srs-skills": {
+      "pass_local": 13,
+      "mirror_pass": 3,
+      "mirror_fail": 0,
+      "total": 16,
+      "mirrors": "057-059 rank 1"
+    },
+    "website-skills": {
+      "pass_local": 21,
+      "mirror_pass": 0,
+      "mirror_fail": 0,
+      "total": 21,
+      "mirrors": "none"
+    },
+    "digital-research-engine": {
+      "pass_local": 7,
+      "mirror_pass": 1,
+      "mirror_fail": 1,
+      "total": 9,
+      "mirrors": "056 rank 1; 055 rank 4 (fail)"
+    },
+    "proposal-skills": null,
+    "business-plan-skills": null,
+    "social-media-skills": null,
+    "linux-skills": null,
+    "windows-admin-engine-skills": null,
+    "chwezi-accounting-doctrine": null,
+    "chwezi-engine-agents": null
+  },
+  "coverage_source": "coverage.json (skills with >= 3 positives and >= 2 owned negatives / active skills); engines absent there = NOT_ASSESSED",
+  "collision_source": "collision-scan.json (undeclared_pairs_ge_error = 0 for the union; every engine is clean)",
+  "t3": {
+    "grading_json_files": 0,
+    "planned_runs": 299,
+    "executed_runs": 0,
+    "source": "M10-05/M10-05-tier3-run-report-2026-09-29.md; find -name grading.json = 0"
+  },
+  "agents_tier1": {
+    "declared": 8,
+    "passed": 8,
+    "source": "../agents-verification.txt (render_host_files --check, marketplace check, contract evals, no-book-extractions, kaizen cards, validate-catalog.ps1, pytest 162 passed, routing baseline) STAND-IN list chosen by the M10-14 executor: catalog/engines.yaml declares no validators for the coordination package (reviewer finding F2)."
+  },
+  "collision_scope_note": "The union scan covers the eleven public engines only. An engine absent from skills_per_engine is NOT_ASSESSED for T2_clean (scores 0), never treated as clean (reviewer finding F1)."
+}

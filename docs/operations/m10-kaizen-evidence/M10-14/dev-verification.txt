@@ -1,0 +1,66 @@
+### skill_catalog_guardrails
+skill-catalog-guardrails:
+- repo: C:\wamp64\www\chwezi-dev-engine
+- active roots:
+  - skills
+  - 00-meta-initialization
+- retained reference roots:
+- active SKILL.md files: 167
+- max active SKILL.md files: 200
+- findings: 14 (errors: 0, warnings: 14)
+[WARNING] skill-bytes: skills\android\android-development\SKILL.md SKILL.md is 24838 bytes; report-only threshold is 20480 (455 lines)
+[WARNING] skill-bytes: skills\architecture\api-design-first\SKILL.md SKILL.md is 21981 bytes; report-only threshold is 20480 (276 lines)
+[WARNING] skill-bytes: skills\devops-cloud\cicd-pipelines\SKILL.md SKILL.md is 23953 bytes; report-only threshold is 20480 (373 lines)
+[WARNING] skill-bytes: skills\devops-cloud\cloud-architecture\SKILL.md SKILL.md is 23474 bytes; report-only threshold is 20480 (393 lines)
+[WARNING] skill-bytes: skills\devops-cloud\kubernetes-platform\SKILL.md SKILL.md is 22715 bytes; report-only threshold is 20480 (468 lines)
+[WARNING] skill-bytes: skills\mobile-cross\pwa-offline-first\SKILL.md SKILL.md is 22073 bytes; report-only threshold is 20480 (460 lines)
+[WARNING] skill-bytes: skills\product-business\product-led-growth\SKILL.md SKILL.md is 21905 bytes; report-only threshold is 20480 (439 lines)
+[WARNING] skill-bytes: skills\saas\multi-tenant-saas-architecture\SKILL.md SKILL.md is 21587 bytes; report-only threshold is 20480 (460 lines)
+[WARNING] skill-bytes: skills\saas\saas-admin-backoffice-tooling\SKILL.md SKILL.md is 25032 bytes; report-only threshold is 20480 (419 lines)
+[WARNING] skill-bytes: skills\saas\saas-rate-limiting-and-quotas\SKILL.md SKILL.md is 22353 bytes; report-only threshold is 20480 (469 lines)
+[WARNING] skill-bytes: skills\saas\stripe-payments\SKILL.md SKILL.md is 22814 bytes; report-only threshold is 20480 (437 lines)
+[WARNING] skill-bytes: skills\saas\subscription-billing\SKILL.md SKILL.md is 28876 bytes; report-only threshold is 20480 (449 lines)
+[WARNING] skill-bytes: skills\sdlc-meta\world-class-engineering\SKILL.md SKILL.md is 21742 bytes; report-only threshold is 20480 (368 lines)
+[WARNING] skill-bytes: skills\security\web-app-security-audit\SKILL.md SKILL.md is 21389 bytes; report-only threshold is 20480 (494 lines)
+exit=0
+### contract_gate --all
+contract-gate: evidence: scanned 161 | 0 errors | 0 warnings | 6 exempt
+exit=0
+### engine_compliance
+engine-compliance: C:\wamp64\www\chwezi-dev-engine
+- skills: 165
+- fully compliant: 136
+- safe fixes applied: 0
+- failure counts:
+  - capability_contract: 14
+  - decision_rules: 13
+  - degraded_mode: 23
+  - five_anti_patterns: 2
+  - input_contract: 23
+  - no_empty_contract_sections: 1
+  - output_contract: 1
+  - portable_sections: 1
+  - trigger: 1
+exit=0
+### routing smoke
+routing-smoke-test (lexical proxy; not live routing):
+- active skills indexed: 167
+- fixtures: 191
+- precision@1: 173/191 (90.6%)
+- precision@3: 191/191 (100.0%)
+- negatives: 78 (owned 78; pass 74, fail 0, not assessed 4)
+- fixture lint findings: 0
+- rank-1 floor: 88.0%
+- failures: 0
+exit=0
+### pytest
+..............ss..........................................s............. [ 34%]
+........................................................................ [ 68%]
+..................................................................       [100%]
+207 passed, 3 skipped in 22.42s
+exit=0
+### active SKILL.md
+165
+### quick_validate skill-engine-audit
+Skill is valid.
+exit=0

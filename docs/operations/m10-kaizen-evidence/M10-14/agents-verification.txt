@@ -1,0 +1,28 @@
+### render_host_files --check
+exit 0
+### marketplace
+ok     digital-research-engine: research: 59 skills
+ok     windows-admin-engine-skills: windows-admin: 20 skills
+marketplace check: 23 ok, 0 drift, 0 not assessed
+exit 0
+### contract evals
+{"failed": 0, "passed": 77, "total": 77}
+exit 0
+### no book extractions
+PASS: book-extraction check roots=12 findings=0
+exit 0
+### kaizen cards
+PASS docs\operations\task-runbook-and-integration-evidence.md
+Coordination Kaizen card structure valid.
+exit 0
+### validate-catalog
+PASS: schema=C:\wamp64\www\chwezi-engine-agents\schemas\engine-catalog.schema.json instance=C:\wamp64\www\chwezi-engine-agents\catalog\engines.yaml
+Catalog valid: 11 unique engines.
+exit 0
+### pytest
+..................                                                       [100%]
+162 passed in 41.35s
+exit 0
+### routing baseline
+PASS: routing baseline ratchet (5 engines + portfolio; lexical proxy, not live routing)
+exit 0
