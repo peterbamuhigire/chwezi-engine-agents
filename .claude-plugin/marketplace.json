@@ -68,7 +68,7 @@
       "author": { "name": "Peter Bamuhigire" },
       "homepage": "https://github.com/peterbamuhigire/website-skills",
       "repository": "https://github.com/peterbamuhigire/website-skills",
-      "license": "MIT",
+      "license": "SEE LICENSE IN LICENSE",
       "category": "web",
       "strict": false,
       "relevance": {"topic": "website builds", "signals": {"filesRead": ["**/lighthouserc*.json", "**/lighthouserc*.js"], "cli": ["lighthouse", "lhci"]}}
@@ -187,7 +187,7 @@
       "author": { "name": "Peter Bamuhigire" },
       "homepage": "https://github.com/peterbamuhigire/digital-research-skills",
       "repository": "https://github.com/peterbamuhigire/digital-research-skills",
-      "license": "MIT",
+      "license": "GPL-3.0-only",
       "category": "research",
       "strict": false,
       "relevance": {"topic": "research", "signals": {"filesRead": ["**/*literature-review*", "**/*research-plan*", "**/*source-register*"]}}
@@ -204,7 +204,7 @@
       "author": { "name": "Peter Bamuhigire" },
       "homepage": "https://github.com/peterbamuhigire/windows-admin-engine-skills",
       "repository": "https://github.com/peterbamuhigire/windows-admin-engine-skills",
-      "license": "MIT",
+      "license": "GPL-3.0-only",
       "category": "infrastructure",
       "strict": false,
       "relevance": {"topic": "Windows administration", "signals": {"cli": ["pwsh", "powershell", "gpupdate", "dism", "sfc"]}}
