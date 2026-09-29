@@ -1,0 +1,143 @@
+{
+  "scanned": 691,
+  "dirty": [
+    {
+      "path": "projects\\AcademiaPro\\03-design-documentation\\AcademiaPro_ERD.docx",
+      "headers": [
+        "erDiagram"
+      ],
+      "media": 0
+    },
+    {
+      "path": "projects\\GarageFlow\\03-design-documentation\\GarageFlow_Design_v1.0.docx",
+      "headers": [
+        "flowchart",
+        "sequenceDiagram",
+        "sequenceDiagram",
+        "sequenceDiagram"
+      ],
+      "media": 0
+    },
+    {
+      "path": "projects\\GarageFlow\\06-deployment-operations\\GarageFlow_Operations_v1.0.docx",
+      "headers": [
+        "flowchart"
+      ],
+      "media": 0
+    },
+    {
+      "path": "projects\\GarageFlow\\export\\GarageFlow_Design_v1.0.docx",
+      "headers": [
+        "flowchart",
+        "sequenceDiagram",
+        "sequenceDiagram",
+        "sequenceDiagram"
+      ],
+      "media": 0
+    },
+    {
+      "path": "projects\\GarageFlow\\export\\GarageFlow_Operations_v1.0.docx",
+      "headers": [
+        "flowchart"
+      ],
+      "media": 0
+    },
+    {
+      "path": "projects\\KampusPad\\03-design-documentation\\KampusPad_Design_v1.1.docx",
+      "headers": [
+        "graph",
+        "sequenceDiagram",
+        "sequenceDiagram",
+        "sequenceDiagram"
+      ],
+      "media": 0
+    },
+    {
+      "path": "projects\\KampusPad\\export\\KampusPad_Design_v1.1.docx",
+      "headers": [
+        "graph",
+        "sequenceDiagram",
+        "sequenceDiagram",
+        "sequenceDiagram"
+      ],
+      "media": 0
+    },
+    {
+      "path": "projects\\KraalCode\\06-deployment-operations\\04-infrastructure-docs\\KraalCode_Infrastructure.docx",
+      "headers": [
+        "flowchart"
+      ],
+      "media": 0
+    },
+    {
+      "path": "projects\\KraalCode\\06-deployment-operations\\KraalCode_Infrastructure.docx",
+      "headers": [
+        "flowchart"
+      ],
+      "media": 0
+    },
+    {
+      "path": "projects\\KraalCode\\export\\KraalCode_Infrastructure.docx",
+      "headers": [
+        "flowchart"
+      ],
+      "media": 0
+    },
+    {
+      "path": "projects\\Kulima\\03-design-documentation\\Kulima_DatabaseDesign.docx",
+      "headers": [
+        "erDiagram"
+      ],
+      "media": 0
+    },
+    {
+      "path": "projects\\Kulima\\03-design-documentation\\Kulima_HLD.docx",
+      "headers": [
+        "flowchart"
+      ],
+      "media": 0
+    },
+    {
+      "path": "projects\\Kulima\\export\\Kulima_DatabaseDesign.docx",
+      "headers": [
+        "erDiagram"
+      ],
+      "media": 0
+    },
+    {
+      "path": "projects\\Kulima\\export\\Kulima_HLD.docx",
+      "headers": [
+        "flowchart"
+      ],
+      "media": 0
+    },
+    {
+      "path": "projects\\Kulima\\export\\Kulima_OperationsReadiness.docx",
+      "headers": [
+        "flowchart"
+      ],
+      "media": 0
+    },
+    {
+      "path": "projects\\Medic8\\03-design-documentation\\Medic8_ERD.docx",
+      "headers": [
+        "erDiagram"
+      ],
+      "media": 0
+    },
+    {
+      "path": "projects\\Ogma-Library\\export\\Ogma-Library_DeploymentOps_v2.1_2026-08-13.docx",
+      "headers": [
+        "flowchart"
+      ],
+      "media": 0
+    },
+    {
+      "path": "projects\\Ogma-Library\\Ogma-Library_DeploymentOps_v2.1_2026-08-13.docx",
+      "headers": [
+        "flowchart"
+      ],
+      "media": 0
+    }
+  ]
+}

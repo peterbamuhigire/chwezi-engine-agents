@@ -1,0 +1,341 @@
+{
+  "KraalCode_Infrastructure": {
+    "project": "KraalCode",
+    "target": "C:\\wamp64\\www\\srs-skills\\projects\\KraalCode\\06-deployment-operations\\KraalCode_Infrastructure.docx",
+    "kind": "build-doc",
+    "builder": "scripts/build-doc.sh",
+    "doc_dir": "C:\\wamp64\\www\\srs-skills\\projects\\KraalCode\\06-deployment-operations\\04-infrastructure-docs",
+    "date": "2026-09-29",
+    "sha256_before": "a3647b306e5c845fe63d151f4ff61a0db9ac46b5c5d1a58b8678e1e76a4ea006",
+    "media_before": 0,
+    "quarantine": "C:\\wamp64\\www\\srs-skills\\projects\\KraalCode\\06-deployment-operations\\.trash-20260929T025236\\KraalCode_Infrastructure.docx.quarantined",
+    "sha256_after": "12564658c736832a91c72d3f1d06851a853c620e893bd4d5b5d9f62eb5ff6112",
+    "media_after": 1,
+    "figures": 1,
+    "figure_ppi": [
+      371
+    ],
+    "alt_sources": [
+      "nearest-heading"
+    ],
+    "text_diff": {
+      "old_paras": 16,
+      "new_paras": 15,
+      "ratio": 0.9677,
+      "changed_hunks": 1
+    },
+    "exports": [
+      {
+        "path": "C:\\wamp64\\www\\srs-skills\\projects\\KraalCode\\06-deployment-operations\\04-infrastructure-docs\\KraalCode_Infrastructure.docx",
+        "sha256_before": "66ddbe95c154ac4975fec315215bd13d30100eef27c0a770f862edc919ef617a",
+        "quarantine": "C:\\wamp64\\www\\srs-skills\\projects\\KraalCode\\06-deployment-operations\\04-infrastructure-docs\\.trash-20260929T025236\\KraalCode_Infrastructure.docx.quarantined",
+        "sha256_after": "12564658c736832a91c72d3f1d06851a853c620e893bd4d5b5d9f62eb5ff6112"
+      },
+      {
+        "path": "C:\\wamp64\\www\\srs-skills\\projects\\KraalCode\\export\\KraalCode_Infrastructure.docx",
+        "sha256_before": "66ddbe95c154ac4975fec315215bd13d30100eef27c0a770f862edc919ef617a",
+        "quarantine": "C:\\wamp64\\www\\srs-skills\\projects\\KraalCode\\export\\.trash-20260929T025236\\KraalCode_Infrastructure.docx.quarantined",
+        "sha256_after": "12564658c736832a91c72d3f1d06851a853c620e893bd4d5b5d9f62eb5ff6112"
+      }
+    ]
+  },
+  "Medic8_ERD": {
+    "project": "Medic8",
+    "target": "C:\\wamp64\\www\\srs-skills\\projects\\Medic8\\03-design-documentation\\Medic8_ERD.docx",
+    "kind": "build-doc",
+    "builder": "scripts/build-doc.sh",
+    "doc_dir": "C:\\wamp64\\www\\srs-skills\\projects\\Medic8\\03-design-documentation\\04-database-design",
+    "date": "2026-09-29",
+    "sha256_before": "09a597d984791411639a58c5ee97e6b2eed52e83c76b33e558ecf3a34d23206d",
+    "media_before": 0,
+    "quarantine": "C:\\wamp64\\www\\srs-skills\\projects\\Medic8\\03-design-documentation\\.trash-20260929T025325\\Medic8_ERD.docx.quarantined",
+    "sha256_after": "b2c95fbf541f52e87c615b79dd439f768def00e97e5abaac55bb4c6a1e366d51",
+    "media_after": 1,
+    "figures": 1,
+    "figure_ppi": [
+      794
+    ],
+    "alt_sources": [
+      "nearest-heading"
+    ],
+    "text_diff": {
+      "old_paras": 2974,
+      "new_paras": 2973,
+      "ratio": 0.9998,
+      "changed_hunks": 1
+    },
+    "exports": []
+  },
+  "AcademiaPro_ERD": {
+    "project": "AcademiaPro",
+    "target": "C:\\wamp64\\www\\srs-skills\\projects\\AcademiaPro\\03-design-documentation\\AcademiaPro_ERD.docx",
+    "kind": "build-doc",
+    "builder": "scripts/build-doc.sh",
+    "doc_dir": "C:\\wamp64\\www\\srs-skills\\projects\\AcademiaPro\\03-design-documentation\\04-database-design",
+    "date": "2026-09-29",
+    "sha256_before": "46ffed144d4384eaf46e7753808f3fbeae59956b1984b29df027c5063e10f575",
+    "media_before": 0,
+    "quarantine": "C:\\wamp64\\www\\srs-skills\\projects\\AcademiaPro\\03-design-documentation\\.trash-20260929T025325\\AcademiaPro_ERD.docx.quarantined",
+    "sha256_after": "0f1f4e95fc41f77f2dce95ea94d82b30fee928c0e0ee749a92ee8e92c7940e07",
+    "media_after": 2,
+    "figures": 2,
+    "figure_ppi": [
+      678,
+      527
+    ],
+    "alt_sources": [
+      "nearest-heading",
+      "nearest-heading"
+    ],
+    "text_diff": {
+      "old_paras": 2007,
+      "new_paras": 2388,
+      "ratio": 0.9124,
+      "changed_hunks": 4
+    },
+    "exports": []
+  },
+  "Kulima_DatabaseDesign": {
+    "project": "Kulima",
+    "target": "C:\\wamp64\\www\\srs-skills\\projects\\Kulima\\03-design-documentation\\Kulima_DatabaseDesign.docx",
+    "kind": "build-doc",
+    "builder": "scripts/build-doc.sh",
+    "doc_dir": "C:\\wamp64\\www\\srs-skills\\projects\\Kulima\\03-design-documentation\\04-database-design",
+    "date": "2026-09-29",
+    "sha256_before": "9ef82df52721e39f6e0cbe11e21f077bd317c125414adef2bdc73a9ec8bac1d0",
+    "media_before": 0,
+    "quarantine": "C:\\wamp64\\www\\srs-skills\\projects\\Kulima\\03-design-documentation\\.trash-20260929T025325\\Kulima_DatabaseDesign.docx.quarantined",
+    "sha256_after": "31d2f1377b2c484b971dd23f985da8b8b67e99bedaa0796fc0ba34e59f9a50f3",
+    "media_after": 1,
+    "figures": 1,
+    "figure_ppi": [
+      603
+    ],
+    "alt_sources": [
+      "nearest-heading"
+    ],
+    "text_diff": {
+      "old_paras": 149,
+      "new_paras": 148,
+      "ratio": 0.9966,
+      "changed_hunks": 1
+    },
+    "exports": [
+      {
+        "path": "C:\\wamp64\\www\\srs-skills\\projects\\Kulima\\export\\Kulima_DatabaseDesign.docx",
+        "sha256_before": "9ef82df52721e39f6e0cbe11e21f077bd317c125414adef2bdc73a9ec8bac1d0",
+        "quarantine": "C:\\wamp64\\www\\srs-skills\\projects\\Kulima\\export\\.trash-20260929T025325\\Kulima_DatabaseDesign.docx.quarantined",
+        "sha256_after": "31d2f1377b2c484b971dd23f985da8b8b67e99bedaa0796fc0ba34e59f9a50f3"
+      }
+    ]
+  },
+  "Kulima_HLD": {
+    "project": "Kulima",
+    "target": "C:\\wamp64\\www\\srs-skills\\projects\\Kulima\\03-design-documentation\\Kulima_HLD.docx",
+    "kind": "build-doc",
+    "builder": "scripts/build-doc.sh",
+    "doc_dir": "C:\\wamp64\\www\\srs-skills\\projects\\Kulima\\03-design-documentation\\01-hld",
+    "date": "2026-09-29",
+    "sha256_before": "c95e7f44c82011d1102e63e7ee6e66079d6bd3b67430271ea4a754ff2909c37e",
+    "media_before": 0,
+    "quarantine": "C:\\wamp64\\www\\srs-skills\\projects\\Kulima\\03-design-documentation\\.trash-20260929T025325\\Kulima_HLD.docx.quarantined",
+    "sha256_after": "da5d7c620a4d3f0cb0d4c7818014a4aa7c53f52929c1171ff407b1258d9640e2",
+    "media_after": 1,
+    "figures": 1,
+    "figure_ppi": [
+      568
+    ],
+    "alt_sources": [
+      "nearest-heading"
+    ],
+    "text_diff": {
+      "old_paras": 227,
+      "new_paras": 226,
+      "ratio": 0.9978,
+      "changed_hunks": 1
+    },
+    "exports": [
+      {
+        "path": "C:\\wamp64\\www\\srs-skills\\projects\\Kulima\\export\\Kulima_HLD.docx",
+        "sha256_before": "c95e7f44c82011d1102e63e7ee6e66079d6bd3b67430271ea4a754ff2909c37e",
+        "quarantine": "C:\\wamp64\\www\\srs-skills\\projects\\Kulima\\export\\.trash-20260929T025325\\Kulima_HLD.docx.quarantined",
+        "sha256_after": "da5d7c620a4d3f0cb0d4c7818014a4aa7c53f52929c1171ff407b1258d9640e2"
+      }
+    ]
+  },
+  "Kulima_OperationsReadiness": {
+    "project": "Kulima",
+    "target": "C:\\wamp64\\www\\srs-skills\\projects\\Kulima\\export\\Kulima_OperationsReadiness.docx",
+    "kind": "build-doc-export-only",
+    "builder": "scripts/build-doc.sh",
+    "doc_dir": "C:\\wamp64\\www\\srs-skills\\projects\\Kulima\\06-deployment-operations",
+    "date": "2026-09-29",
+    "sha256_before": "c172130438c8946b39db9e12f37ff7138c03827f10bae77525e76987e49304f8",
+    "media_before": 0,
+    "quarantine": "C:\\wamp64\\www\\srs-skills\\projects\\Kulima\\export\\.trash-20260929T025325\\Kulima_OperationsReadiness.docx.quarantined",
+    "sha256_after": "93eefe4dc38f226e3de1173402a4d0030b34af1f11982ff3a35a9ee901782f01",
+    "media_after": 1,
+    "figures": 1,
+    "figure_ppi": [
+      578
+    ],
+    "alt_sources": [
+      "nearest-heading"
+    ],
+    "text_diff": {
+      "old_paras": 237,
+      "new_paras": 236,
+      "ratio": 0.9979,
+      "changed_hunks": 1
+    },
+    "exports": []
+  },
+  "KampusPad_Design_v1.1": {
+    "project": "KampusPad",
+    "target": "C:\\wamp64\\www\\srs-skills\\projects\\KampusPad\\03-design-documentation\\KampusPad_Design_v1.1.docx",
+    "kind": "custom",
+    "builder": "KampusPad/build-docx.ps1 (Build-Docx options) + render step",
+    "doc_dir": "C:\\wamp64\\www\\srs-skills\\projects\\KampusPad\\03-design-documentation",
+    "date": "2026-09-29",
+    "sha256_before": "1508be71689ddaf7fd65cd1ba0f459d064a15f13d9161008387c85720304c665",
+    "media_before": 0,
+    "quarantine": "C:\\wamp64\\www\\srs-skills\\projects\\KampusPad\\03-design-documentation\\.trash-20260929T025615\\KampusPad_Design_v1.1.docx.quarantined",
+    "sha256_after": "400a8bbbd61cb7c27ef2bfc0fb91e28b82a7c57af52b31e8322102e8ec4d6105",
+    "media_after": 4,
+    "figures": 4,
+    "figure_ppi": [
+      404,
+      657,
+      615,
+      725
+    ],
+    "alt_sources": [
+      "nearest-heading",
+      "nearest-heading",
+      "nearest-heading",
+      "nearest-heading"
+    ],
+    "text_diff": {
+      "old_paras": 2281,
+      "new_paras": 2130,
+      "ratio": 0.9653,
+      "changed_hunks": 5
+    },
+    "exports": [
+      {
+        "path": "C:\\wamp64\\www\\srs-skills\\projects\\KampusPad\\export\\KampusPad_Design_v1.1.docx",
+        "sha256_before": "1508be71689ddaf7fd65cd1ba0f459d064a15f13d9161008387c85720304c665",
+        "quarantine": "C:\\wamp64\\www\\srs-skills\\projects\\KampusPad\\export\\.trash-20260929T025615\\KampusPad_Design_v1.1.docx.quarantined",
+        "sha256_after": "400a8bbbd61cb7c27ef2bfc0fb91e28b82a7c57af52b31e8322102e8ec4d6105"
+      }
+    ]
+  },
+  "GarageFlow_Design_v1.0": {
+    "project": "GarageFlow",
+    "target": "C:\\wamp64\\www\\srs-skills\\projects\\GarageFlow\\03-design-documentation\\GarageFlow_Design_v1.0.docx",
+    "kind": "custom",
+    "builder": "no project builder found; reproduced as sorted *.md, Pandoc markdown (smart quotes match the delivered file), reference.docx, no TOC (matches the delivered heading order)",
+    "doc_dir": "C:\\wamp64\\www\\srs-skills\\projects\\GarageFlow\\03-design-documentation",
+    "date": "2026-09-29",
+    "sha256_before": "11c65ab08ac2de85498dcd976f5a31c5b3bd99a0a8ee451c6d3da3c7697a4579",
+    "media_before": 0,
+    "quarantine": "C:\\wamp64\\www\\srs-skills\\projects\\GarageFlow\\03-design-documentation\\.trash-20260929T025743\\GarageFlow_Design_v1.0.docx.quarantined",
+    "sha256_after": "33655572fd30550d085f28174a207e858c120e390ff5d401133c00f972483357",
+    "media_after": 4,
+    "figures": 4,
+    "figure_ppi": [
+      658,
+      524,
+      338,
+      507
+    ],
+    "alt_sources": [
+      "nearest-heading",
+      "nearest-heading",
+      "nearest-heading",
+      "nearest-heading"
+    ],
+    "text_diff": {
+      "old_paras": 2398,
+      "new_paras": 2394,
+      "ratio": 0.9992,
+      "changed_hunks": 4
+    },
+    "exports": [
+      {
+        "path": "C:\\wamp64\\www\\srs-skills\\projects\\GarageFlow\\export\\GarageFlow_Design_v1.0.docx",
+        "sha256_before": "11c65ab08ac2de85498dcd976f5a31c5b3bd99a0a8ee451c6d3da3c7697a4579",
+        "quarantine": "C:\\wamp64\\www\\srs-skills\\projects\\GarageFlow\\export\\.trash-20260929T025743\\GarageFlow_Design_v1.0.docx.quarantined",
+        "sha256_after": "33655572fd30550d085f28174a207e858c120e390ff5d401133c00f972483357"
+      }
+    ]
+  },
+  "Ogma-Library_DeploymentOps_v2.1_2026-08-13": {
+    "project": "Ogma-Library",
+    "target": "C:\\wamp64\\www\\srs-skills\\projects\\Ogma-Library\\Ogma-Library_DeploymentOps_v2.1_2026-08-13.docx",
+    "kind": "custom",
+    "builder": "Ogma-Library/scripts/build_docx.py options + render step",
+    "doc_dir": "C:\\wamp64\\www\\srs-skills\\projects\\Ogma-Library\\06-deployment-operations",
+    "date": "2026-09-29",
+    "sha256_before": "3cbee8f98573c2240bec24a5ff084881d197180fa5067ce69dffd22daa60f162",
+    "media_before": 0,
+    "quarantine": "C:\\wamp64\\www\\srs-skills\\projects\\Ogma-Library\\.trash-20260929T025743\\Ogma-Library_DeploymentOps_v2.1_2026-08-13.docx.quarantined",
+    "sha256_after": "17327a2ddf9b91db07d9860baefe1a0d9aaa906393c7eecb755049123f4d122c",
+    "media_after": 1,
+    "figures": 1,
+    "figure_ppi": [
+      346
+    ],
+    "alt_sources": [
+      "nearest-heading"
+    ],
+    "text_diff": {
+      "old_paras": 330,
+      "new_paras": 329,
+      "ratio": 0.9985,
+      "changed_hunks": 1
+    },
+    "exports": [
+      {
+        "path": "C:\\wamp64\\www\\srs-skills\\projects\\Ogma-Library\\export\\Ogma-Library_DeploymentOps_v2.1_2026-08-13.docx",
+        "sha256_before": "3cbee8f98573c2240bec24a5ff084881d197180fa5067ce69dffd22daa60f162",
+        "quarantine": "C:\\wamp64\\www\\srs-skills\\projects\\Ogma-Library\\export\\.trash-20260929T025743\\Ogma-Library_DeploymentOps_v2.1_2026-08-13.docx.quarantined",
+        "sha256_after": "17327a2ddf9b91db07d9860baefe1a0d9aaa906393c7eecb755049123f4d122c"
+      }
+    ]
+  },
+  "GarageFlow_Operations_v1.0": {
+    "project": "GarageFlow",
+    "target": "C:\\wamp64\\www\\srs-skills\\projects\\GarageFlow\\06-deployment-operations\\GarageFlow_Operations_v1.0.docx",
+    "kind": "custom",
+    "builder": "no project builder found; reproduced as sorted *.md, Pandoc markdown (smart quotes match the delivered file), reference.docx, no TOC (matches the delivered heading order)",
+    "doc_dir": "C:\\wamp64\\www\\srs-skills\\projects\\GarageFlow\\06-deployment-operations",
+    "date": "2026-09-29",
+    "sha256_before": "54dbe4637c2a8cbd68860ec3244d44a49f12bc835f8c13d0c050577993bb0192",
+    "media_before": 0,
+    "quarantine": "C:\\wamp64\\www\\srs-skills\\projects\\GarageFlow\\06-deployment-operations\\.trash-20260929T025820\\GarageFlow_Operations_v1.0.docx.quarantined",
+    "sha256_after": "72429e746f6cabcaa5aaf4b229c6156641779134923bb31895e0d8a1dc380b19",
+    "media_after": 1,
+    "figures": 1,
+    "figure_ppi": [
+      303
+    ],
+    "alt_sources": [
+      "nearest-heading"
+    ],
+    "text_diff": {
+      "old_paras": 650,
+      "new_paras": 649,
+      "ratio": 0.9992,
+      "changed_hunks": 1
+    },
+    "exports": [
+      {
+        "path": "C:\\wamp64\\www\\srs-skills\\projects\\GarageFlow\\export\\GarageFlow_Operations_v1.0.docx",
+        "sha256_before": "54dbe4637c2a8cbd68860ec3244d44a49f12bc835f8c13d0c050577993bb0192",
+        "quarantine": "C:\\wamp64\\www\\srs-skills\\projects\\GarageFlow\\export\\.trash-20260929T025820\\GarageFlow_Operations_v1.0.docx.quarantined",
+        "sha256_after": "72429e746f6cabcaa5aaf4b229c6156641779134923bb31895e0d8a1dc380b19"
+      }
+    ]
+  }
+}
