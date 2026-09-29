@@ -1,0 +1,32 @@
+{
+  "files": {
+    "doctrine/references/ai-slop-banned-fonts.json": "9039a9ddf7cf8fb5055b9d21856492eff753477cd712d02da9ea12141ebc14d0",
+    "hooks/lib/font-matcher.js": "3ea9c71396a10c4a2d2aaee1be025cbde0aa647bad51cfa767811056b4484535",
+    "tools/slop-detector/cli.mjs": "95984a07f26c32c7b316a26bccc9e86429ee188a460a0f0fa6d42c118ddc92a1",
+    "tools/slop-detector/lib/browser-rules.mjs": "11de9ff94aa5fdf7d3a5b87b3145ef71823736f17f9b0758c65db2135fc9e15c",
+    "tools/slop-detector/lib/browser.mjs": "de5d3d16161829f27cd42cbcf4babc6092f687cd9f1b8f870656c9cd3de21e6f",
+    "tools/slop-detector/lib/checks.mjs": "10e8370666f30eccad6cf5e1b05ec0fae9b9fbc1bea6df327b2a4a91ff3e859b",
+    "tools/slop-detector/lib/colour.mjs": "c5e474d0ae3e9f4710eed57f100984ade65a28d4dda08720791f32c78c1b7c22",
+    "tools/slop-detector/lib/detector.mjs": "7c03faa6b1b0184e980a4b3f677ff7b68ad847ff05fc48aa8e2fe38d0422a6e5",
+    "tools/slop-detector/lib/doctrine-consistency.mjs": "13bfb5f1820bcf4b586c21416c4ed6fc21c3c86d85f4c33d744d76fc137ace31",
+    "tools/slop-detector/lib/document.mjs": "5dce53542b1e94709ee2ea30f960f4b26851dc60eed0ef173bef58a9b2ac85c4",
+    "tools/slop-detector/lib/drift.mjs": "4402819a17c1ecfc0a72c4348e31b9d0028c7a2d132ea8d7a1fa2252693b2bc0",
+    "tools/slop-detector/lib/parse-css.mjs": "d4a4ee35eff384c305c745d79dcf8aec9c8943e2ee9cd2e198782450b6364b40",
+    "tools/slop-detector/lib/parse-html.mjs": "17fe09db9655b6ab64a2430616bfbe33380d9b879bf2d8a00a799257d2d892b8",
+    "tools/slop-detector/lib/registry.mjs": "1f817a7748f99082985c9c000580f55eb85a248af6e5732d9d3e4ee9ffecf12f",
+    "tools/slop-detector/lib/schema.mjs": "61ccb54f80026b4e06e9f9af5f69b85b8f3f1f2ff5d9fd2a2827378df9670161",
+    "tools/slop-detector/lib/tailwind.mjs": "36cfa3e054022cd5cc7f177120f2c2be5d6935b520a79a768c0edeb60f5dfdd9",
+    "tools/slop-detector/lib/util.mjs": "0e932f751f8e68f3437106cc4ffc368896031bd1c0b589b3c2ace9febd273074",
+    "tools/slop-detector/lib/waivers.mjs": "d4091f46aca16844f7ac66cd3c193754f5210363f4bcc7da4fd9000614591df6",
+    "tools/slop-detector/rules/registry.json": "750eaf523fda9be3de2dd783d793498a035ec7a66c16323cfd89310dafd66cd0",
+    "tools/slop-detector/rules/registry.schema.json": "53e1946ee8ce7545afd670439eab180a9bb559d1336a32c95f12c7157fda18a2"
+  },
+  "hash_mode": "sha256 after CRLF normalisation",
+  "registry_sha256": "750eaf523fda9be3de2dd783d793498a035ec7a66c16323cfd89310dafd66cd0",
+  "schema_version": 1,
+  "source_commit": "3fe84a6dc22d954483e1afce06c3e9b53fc2f5ca",
+  "source_path": "tools/slop-detector",
+  "source_repo": "https://github.com/peterbamuhigire/design-system-skills",
+  "tool": "chwezi-slop",
+  "update_command": "python -X utf8 scripts/check-vendored-detector.py --sync-from ../design-system-skills"
+}

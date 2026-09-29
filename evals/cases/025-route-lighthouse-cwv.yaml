@@ -7,7 +7,6 @@ expected_primary: website-skills/deploy
 must_co_activate:
 - design-system-skills
 run_mode: lexical
-known_defect: M10-11
 required_observations:
 - website-skills/deploy is the first skill loaded (Lighthouse / Core Web Vitals (website vs design)).
 - 'Co-activated engines: design-system-skills; each owns its own slice and does not redecide the primary''s

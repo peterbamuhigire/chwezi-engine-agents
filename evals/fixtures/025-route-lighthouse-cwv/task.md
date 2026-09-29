@@ -19,4 +19,4 @@ Run a Lighthouse audit on the company website and fix the Core Web Vitals failur
 
 Executed lexically over the union by `run-contract-evals.py --route-oracles` (lexical proxy; not live routing, see agent-skills issue #620). Behavioural execution is `NOT_ASSESSED` until M10-05.
 
-Known defect pinned to M10-11; counted separately from primary@1.
+Formerly a known defect pinned to M10-11; unpinned after M10-11-T09 (deploy description names the Lighthouse or Core Web Vitals audit of a built site). Now gated in primary@1.

@@ -1,0 +1,52 @@
+{
+  "broken_links": [
+    {
+      "href": "contact.html",
+      "page": "index.html"
+    }
+  ],
+  "edges": 9,
+  "entries": [],
+  "evidence_type": "static build graph (lab); not crawl or analytics data",
+  "home": "index.html",
+  "hubs": {
+    "note": "information only",
+    "pages": [
+      {
+        "in_degree": 3,
+        "page": "about/index.html"
+      },
+      {
+        "in_degree": 3,
+        "page": "index.html"
+      },
+      {
+        "in_degree": 3,
+        "page": "services.html"
+      }
+    ],
+    "threshold": 3
+  },
+  "in_degree": {
+    "about/index.html": 3,
+    "index.html": 3,
+    "orphan.html": 0,
+    "services.html": 3
+  },
+  "missing_anchors": [
+    {
+      "href": "services.html#faq",
+      "page": "services.html"
+    }
+  ],
+  "orphans": [
+    "orphan.html"
+  ],
+  "pages": 4,
+  "schema_version": 1,
+  "status": "FAIL",
+  "tool": "content_link_graph",
+  "unreachable_from_home": [
+    "orphan.html"
+  ]
+}

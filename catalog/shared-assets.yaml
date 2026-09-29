@@ -49,6 +49,8 @@ coordination:
   plugin_exclusions:
     - path: "adapters/*/skills/skills-engine-agents"
       reason: "host adapter entry skills (Claude Code, OpenCode) installed by the adapter installers, not by the chwezi-suite plugin"
+    - path: "tests/fixtures/*-workspace/*"
+      reason: "synthetic fixture engines for the fan-in, tour and skill-graph tests (M10-12); never shipped as a plugin skill"
 
 assets:
   - id: hooks-destructive-bash-gate
@@ -261,11 +263,12 @@ assets:
     mode: byte
     canonical: design-system-skills/doctrine/references/ai-slop-banned-fonts.json
     copies:
+      - website-skills/scripts/vendor/chwezi-slop/doctrine/references/ai-slop-banned-fonts.json
     discover:
       - "*/doctrine/references/ai-slop-banned-fonts.json"
       - "*/references/ai-slop-banned-fonts.json"
       - "*/data/ai-slop-banned-fonts.json"
-    reason: "One canonical banned-font JSON plus checked mirrors (roadmap section 5 row 9). No consumer vendors it yet; add the mirror path here when one does (for example website after M10-11)."
+    reason: "One canonical banned-font JSON plus checked mirrors (roadmap section 5 row 9). First mirror: the website's vendored chwezi-slop detector (M10-11-T01)."
     owner: chwezi-engine-agents
     review_date: "2026-12-29"
   - id: domain-prompt-compilation-contract
@@ -658,6 +661,105 @@ assets:
         reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
     reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
     review_date: "2026-12-29"
+  # Vendored chwezi-slop detector (M10-11-T01): website client CI checks out only website-skills,
+  # so the design detector travels as a hash-checked copy (website-skills/scripts/vendor/chwezi-slop/VENDOR.json).
+  # Re-vendor with: python -X utf8 website-skills/scripts/check-vendored-detector.py --sync-from ../design-system-skills
+  # The vendored banned-font JSON is registered under ai-slop-banned-fonts-json above.
+  - id: website-vendored-chwezi-slop-hooks-lib-font-matcher-js
+    mode: byte
+    canonical: design-system-skills/hooks/lib/font-matcher.js
+    copies:
+      - website-skills/scripts/vendor/chwezi-slop/hooks/lib/font-matcher.js
+  - id: website-vendored-chwezi-slop-cli-mjs
+    mode: byte
+    canonical: design-system-skills/tools/slop-detector/cli.mjs
+    copies:
+      - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/cli.mjs
+  - id: website-vendored-chwezi-slop-lib-browser-rules-mjs
+    mode: byte
+    canonical: design-system-skills/tools/slop-detector/lib/browser-rules.mjs
+    copies:
+      - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/browser-rules.mjs
+  - id: website-vendored-chwezi-slop-lib-browser-mjs
+    mode: byte
+    canonical: design-system-skills/tools/slop-detector/lib/browser.mjs
+    copies:
+      - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/browser.mjs
+  - id: website-vendored-chwezi-slop-lib-checks-mjs
+    mode: byte
+    canonical: design-system-skills/tools/slop-detector/lib/checks.mjs
+    copies:
+      - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/checks.mjs
+  - id: website-vendored-chwezi-slop-lib-colour-mjs
+    mode: byte
+    canonical: design-system-skills/tools/slop-detector/lib/colour.mjs
+    copies:
+      - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/colour.mjs
+  - id: website-vendored-chwezi-slop-lib-detector-mjs
+    mode: byte
+    canonical: design-system-skills/tools/slop-detector/lib/detector.mjs
+    copies:
+      - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/detector.mjs
+  - id: website-vendored-chwezi-slop-lib-doctrine-consistency-mjs
+    mode: byte
+    canonical: design-system-skills/tools/slop-detector/lib/doctrine-consistency.mjs
+    copies:
+      - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/doctrine-consistency.mjs
+  - id: website-vendored-chwezi-slop-lib-document-mjs
+    mode: byte
+    canonical: design-system-skills/tools/slop-detector/lib/document.mjs
+    copies:
+      - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/document.mjs
+  - id: website-vendored-chwezi-slop-lib-drift-mjs
+    mode: byte
+    canonical: design-system-skills/tools/slop-detector/lib/drift.mjs
+    copies:
+      - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/drift.mjs
+  - id: website-vendored-chwezi-slop-lib-parse-css-mjs
+    mode: byte
+    canonical: design-system-skills/tools/slop-detector/lib/parse-css.mjs
+    copies:
+      - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/parse-css.mjs
+  - id: website-vendored-chwezi-slop-lib-parse-html-mjs
+    mode: byte
+    canonical: design-system-skills/tools/slop-detector/lib/parse-html.mjs
+    copies:
+      - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/parse-html.mjs
+  - id: website-vendored-chwezi-slop-lib-registry-mjs
+    mode: byte
+    canonical: design-system-skills/tools/slop-detector/lib/registry.mjs
+    copies:
+      - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/registry.mjs
+  - id: website-vendored-chwezi-slop-lib-schema-mjs
+    mode: byte
+    canonical: design-system-skills/tools/slop-detector/lib/schema.mjs
+    copies:
+      - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/schema.mjs
+  - id: website-vendored-chwezi-slop-lib-tailwind-mjs
+    mode: byte
+    canonical: design-system-skills/tools/slop-detector/lib/tailwind.mjs
+    copies:
+      - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/tailwind.mjs
+  - id: website-vendored-chwezi-slop-lib-util-mjs
+    mode: byte
+    canonical: design-system-skills/tools/slop-detector/lib/util.mjs
+    copies:
+      - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/util.mjs
+  - id: website-vendored-chwezi-slop-lib-waivers-mjs
+    mode: byte
+    canonical: design-system-skills/tools/slop-detector/lib/waivers.mjs
+    copies:
+      - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/waivers.mjs
+  - id: website-vendored-chwezi-slop-rules-registry-json
+    mode: byte
+    canonical: design-system-skills/tools/slop-detector/rules/registry.json
+    copies:
+      - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/rules/registry.json
+  - id: website-vendored-chwezi-slop-rules-registry-schema-json
+    mode: byte
+    canonical: design-system-skills/tools/slop-detector/rules/registry.schema.json
+    copies:
+      - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/rules/registry.schema.json
 
 exclusions:
   - asset: design-trigger-block

@@ -76,7 +76,7 @@
       "command": "python -X utf8 scripts/routing_smoke_test.py --min-rank1 83 --lint-fixtures"
     },
     "website-skills": {
-      "p_at_1": 94.4,
+      "p_at_1": 94.6,
       "p_at_3": 100.0,
       "owned_negatives": {
         "total": 21,
@@ -96,7 +96,7 @@
           "reason": "M10-03 first baseline: measured 94.4 % after T08 and the T05 rewrites, minus 2, rounded down"
         }
       ],
-      "fixtures": 36,
+      "fixtures": 37,
       "command": "python -X utf8 scripts/routing-smoke-test.py --min-rank1 92 --lint-fixtures"
     },
     "digital-research-skills": {
@@ -129,14 +129,14 @@
     "cross_engine_pairs_ge_075": 21,
     "cross_engine_pairs_ge_050": 200,
     "within_engine_pairs_ge_075": 26,
-    "oracle_primary_at_1": 76.3,
-    "oracle_engine_at_1": 84.2,
+    "oracle_primary_at_1": 76.9,
+    "oracle_engine_at_1": 84.6,
     "oracles": {
       "total": 42,
-      "gated": 38,
-      "known_defects": 4
+      "gated": 39,
+      "known_defects": 3
     },
-    "must_co_activate_at_5": 66.7,
+    "must_co_activate_at_5": 75.0,
     "acceptance_lexical_primary_at_1": 16.7,
     "acceptance_behavioural": "NOT_ASSESSED (zero-spend rule; M10-05)",
     "target": 97,
