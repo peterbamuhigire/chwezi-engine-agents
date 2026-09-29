@@ -1,0 +1,18 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 052-route-colour-contrast
+task: Check that these foreground and background colour pairs meet WCAG contrast.
+fixture_path: evals/fixtures/052-route-colour-contrast
+expected_primary: design-system-skills/accessible-color-and-contrast
+run_mode: lexical
+required_observations:
+- design-system-skills/accessible-color-and-contrast is the first skill loaded (design accessibility (control)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

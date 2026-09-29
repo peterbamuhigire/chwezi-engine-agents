@@ -1,0 +1,19 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 044-route-blog-ideas
+task: Give me twenty blog topic ideas for a Kampala law firm's website.
+fixture_path: evals/fixtures/044-route-blog-ideas
+expected_primary: social-media-skills/blog-idea-generator
+run_mode: lexical
+known_defect: later-wave
+required_observations:
+- social-media-skills/blog-idea-generator is the first skill loaded (blog ideation (canonical owner social)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

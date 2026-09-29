@@ -1,0 +1,19 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 035-route-hospitality-pms
+task: Architect the property management system and restaurant POS software for a hotel group.
+fixture_path: evals/fixtures/035-route-hospitality-pms
+expected_primary: chwezi-dev-engine/hospitality-hotel-restaurant-systems
+run_mode: lexical
+required_observations:
+- chwezi-dev-engine/hospitality-hotel-restaurant-systems is the first skill loaded (hospitality pack (mirrored,
+  dev slice)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

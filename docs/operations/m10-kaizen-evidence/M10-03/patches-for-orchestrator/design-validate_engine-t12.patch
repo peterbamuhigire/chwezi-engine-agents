@@ -1,0 +1,189 @@
+diff --git a/scripts/validate_engine.py b/scripts/validate_engine.py
+index 434af27..9554819 100644
+--- a/scripts/validate_engine.py
++++ b/scripts/validate_engine.py
+@@ -36,6 +36,55 @@ FONT_CATEGORIES = (
+ )
+ 
+ 
++# M10-03-T12 Tier-1 refinements (adapted from addyosmani/agent-skills, MIT,
++# https://github.com/addyosmani/agent-skills, commit 2686b62; paraphrased, not copied).
++#
++# Validator-owned exemption allowlist: {"skills/<group>/<skill>/SKILL.md": {"<code>": "<reason>"}}.
++# Exemptions live here, never in skill frontmatter; a frontmatter or metadata key that tries to
++# exempt a skill is itself a finding (frontmatter_exemption).
++EXEMPTIONS: dict[str, dict[str, str]] = {}
++FENCE_RE = re.compile(r"(?ms)^[ ]{0,3}(`{3,}|~{3,})[^\n]*\n.*?^[ ]{0,3}\1[`~]*[ \t]*$")
++NEGATED_TRIGGER_RE = re.compile(r"(?i)\b(?:do not|don't|never)\s+use\s+when\b[^.;]*[.;]?")
++
++
++def strip_fences(text: str) -> str:
++    """Remove CommonMark fenced code blocks so headings inside examples are not counted."""
++    return FENCE_RE.sub("", text)
++
++
++def positive_trigger(description: str) -> bool:
++    """True when the description opens with "Use when" and a trigger survives negation stripping."""
++    stripped = NEGATED_TRIGGER_RE.sub("", description).strip()
++    return description.startswith("Use when") and "use when" in stripped.lower()
++
++
++def host_strict_findings(text: str) -> list[str]:
++    """Flag frontmatter a stricter host YAML reader may reject even though PyYAML accepts it."""
++    match = re.match(r"^---\s*\n(.*?)\n---\s*\n", text, re.S)
++    if not match:
++        return []
++    problems: list[str] = []
++    for number, line in enumerate(match.group(1).splitlines(), start=2):
++        if "\t" in line:
++            problems.append(f"line {number}: tab character")
++        key_value = re.match(r"^([A-Za-z0-9_-]+):[ ]+(.*)$", line)
++        if not key_value:
++            continue
++        value = key_value.group(2).rstrip()
++        if value[:1] in {"'", '"'} and (len(value) < 2 or value[-1] != value[0]):
++            problems.append(f"line {number}: unclosed quote")
++        elif value[:1] not in {"'", '"', "|", ">", "[", "{"} and ": " in value:
++            problems.append(f"line {number}: unquoted ': ' in a plain value")
++    return problems
++
++
++def exemption_keys(data: dict) -> list[str]:
++    """Frontmatter or metadata keys that try to exempt a skill from validation."""
++    metadata = data.get("metadata") if isinstance(data.get("metadata"), dict) else {}
++    keys = [str(key) for key in list(data) + list(metadata)]
++    return sorted({key for key in keys if re.search(r"(?i)exempt|lint[-_]?ignore|skip[-_]?check", key)})
++
++
+ def frontmatter(text: str) -> tuple[dict, str | None]:
+     match = re.match(r"^---\s*\n(.*?)\n---\s*\n", text, re.S)
+     if not match:
+@@ -127,24 +176,29 @@ def scan(root: Path, max_skill_bytes: int = DEFAULT_MAX_SKILL_BYTES) -> dict:
+             failed.append("identity")
+         if set(data) - ALLOWED_FRONTMATTER:
+             failed.append("frontmatter_keys")
+-        if not isinstance(description, str) or not description.startswith("Use when") or len(description) > 350:
++        if not isinstance(description, str) or not positive_trigger(description) or len(description) > 350:
+             failed.append("trigger")
++        if host_strict_findings(text):
++            failed.append("frontmatter_host_strict")
++        if exemption_keys(data):
++            failed.append("frontmatter_exemption")
+         if metadata.get("portable") is not True or not {"claude-code", "codex"}.issubset(
+             set(metadata.get("compatible_with", []))
+         ):
+             failed.append("portable_metadata")
+ 
+-        headings = {h.strip().lower() for h in re.findall(r"^##\s+(.+?)\s*$", text, re.M)}
++        body_text = strip_fences(text)
++        headings = {h.strip().lower() for h in re.findall(r"^##\s+(.+?)\s*$", body_text, re.M)}
+         if not REQUIRED_HEADINGS.issubset(headings):
+             failed.append("required_sections")
+         if not PORTABLE_HEADINGS.issubset(headings):
+             failed.append("portable_contracts")
+         if not ({"required inputs", "inputs"} & headings):
+             failed.append("input_contract")
+-        input_body = section_body(text, r"Required Inputs|Inputs")
+-        output_body = section_body(text, "Outputs")
+-        decision_body = section_body(text, r"Decision Rules")
+-        anti_body = section_body(text, r"Anti-Patterns(?:\s*\([^\n]+\))?")
++        input_body = section_body(body_text, r"Required Inputs|Inputs")
++        output_body = section_body(body_text, "Outputs")
++        decision_body = section_body(body_text, r"Decision Rules")
++        anti_body = section_body(body_text, r"Anti-Patterns(?:\s*\([^\n]+\))?")
+         if "|" not in input_body and not re.match(r"(?i)^None\b", input_body.strip()):
+             failed.append("input_contract")
+         if "|" not in output_body:
+@@ -159,7 +213,7 @@ def scan(root: Path, max_skill_bytes: int = DEFAULT_MAX_SKILL_BYTES) -> dict:
+         if not re.search(r"\b(recover|recovery|fallback|degraded|conditional|unverified)\b", text, re.I):
+             failed.append("recovery_condition")
+         for heading in ("Workflow", "Outputs", "Anti-Patterns", "Examples", "References"):
+-            if is_empty_section(text, heading):
++            if is_empty_section(body_text, heading):
+                 failed.append("empty_contract_section")
+                 break
+         if len(text.splitlines()) > 500:
+@@ -171,7 +225,9 @@ def scan(root: Path, max_skill_bytes: int = DEFAULT_MAX_SKILL_BYTES) -> dict:
+             failed.append("encoding_noise")
+         if not (path.parent / "examples").is_dir():
+             failed.append("worked_example")
+-        findings.append({"path": path.relative_to(root).as_posix(), "failed": sorted(set(failed))})
++        relative = path.relative_to(root).as_posix()
++        exempt = set(EXEMPTIONS.get(relative, {}))
++        findings.append({"path": relative, "failed": sorted(set(failed) - exempt)})
+ 
+     extraction_violations = scan_book_extractions(root)
+     duplicates = sorted(name for name, count in Counter(names).items() if count > 1)
+diff --git a/tests/test_validate_engine_tier1_refinements.py b/tests/test_validate_engine_tier1_refinements.py
+new file mode 100644
+index 0000000..fb1ec85
+--- /dev/null
++++ b/tests/test_validate_engine_tier1_refinements.py
+@@ -0,0 +1,67 @@
++"""Crafted fixtures for the four Tier-1 lint refinements (M10-03-T12)."""
++
++from __future__ import annotations
++
++import importlib.util
++import sys
++from pathlib import Path
++
++SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "validate_engine.py"
++SPEC = importlib.util.spec_from_file_location("design_validate_engine_t12", SCRIPT)
++MODULE = importlib.util.module_from_spec(SPEC)
++sys.modules[SPEC.name] = MODULE
++SPEC.loader.exec_module(MODULE)
++
++
++def skill(tmp_path: Path, frontmatter: str, body: str = "# Example\n") -> list[str]:
++    folder = tmp_path / "skills" / "99-test" / "example"
++    folder.mkdir(parents=True)
++    (folder / "SKILL.md").write_text(f"---\n{frontmatter}\n---\n\n{body}", encoding="utf-8")
++    result = MODULE.scan(tmp_path)
++    return result["findings"][0]["failed"] if result["findings"] else []
++
++
++def test_heading_inside_code_fence_is_not_counted():
++    fenced = "# Example\n\n```markdown\n## Workflow\n## Outputs\n```\n"
++    stripped = MODULE.strip_fences(fenced)
++    assert "## Workflow" not in stripped
++    assert MODULE.strip_fences("## Workflow\n") == "## Workflow\n"
++
++
++def test_fenced_headings_do_not_satisfy_required_sections(tmp_path):
++    body = "# Example\n\n~~~\n## Use When\n## Do Not Use When\n## Workflow\n## Outputs\n## Anti-Patterns\n## Examples\n## References\n~~~\n"
++    failed = skill(tmp_path, "name: example\ndescription: Use when testing fences.", body)
++    assert "required_sections" in failed
++
++
++def test_negated_trigger_alone_is_not_a_trigger():
++    assert MODULE.positive_trigger("Use when choosing a palette; do not use when auditing contrast.")
++    assert not MODULE.positive_trigger("Do not use when choosing fonts. Use when never.")
++    assert not MODULE.positive_trigger("Never use when auditing; picks fonts.")
++
++
++def test_frontmatter_exemption_key_is_a_finding(tmp_path):
++    failed = skill(tmp_path, "name: example\ndescription: Use when testing.\nmetadata:\n  lint-exempt: true")
++    assert "frontmatter_exemption" in failed
++
++
++def test_validator_owned_exemption_removes_only_the_named_code(tmp_path, monkeypatch):
++    monkeypatch.setattr(MODULE, "EXEMPTIONS", {"skills/99-test/example/SKILL.md": {"worked_example": "fixture"}})
++    failed = skill(tmp_path, "name: example\ndescription: Use when testing.")
++    assert "worked_example" not in failed
++    assert "required_sections" in failed
++
++
++def test_host_strict_yaml_subset():
++    text = "---\nname: example\ndescription: Use when x: y matters\n---\n"
++    assert any("unquoted ': '" in problem for problem in MODULE.host_strict_findings(text))
++    assert any("unclosed quote" in problem for problem in MODULE.host_strict_findings("---\nname: \"example\ndescription: ok\n---\n"))
++    assert any("tab" in problem for problem in MODULE.host_strict_findings("---\nname: example\n\tdescription: ok\n---\n"))
++    assert MODULE.host_strict_findings("---\nname: example\ndescription: \"Use when x: y\"\n---\n") == []
++
++
++def test_live_catalogue_has_no_new_findings():
++    root = Path(__file__).resolve().parents[1]
++    result = MODULE.scan(root)
++    for code in ("frontmatter_host_strict", "frontmatter_exemption"):
++        assert code not in result["failure_counts"]

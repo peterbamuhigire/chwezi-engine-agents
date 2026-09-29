@@ -1,0 +1,19 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 054-route-business-case-content-mirror
+task: Write the business case content with ROI, payback and NPV for the new ERP.
+fixture_path: evals/fixtures/054-route-business-case-content-mirror
+expected_primary: srs-skills/02-business-case
+run_mode: lexical
+required_observations:
+- srs-skills/02-business-case is the first skill loaded (mirrored design owned negative (pdf-proposal
+  must not win)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

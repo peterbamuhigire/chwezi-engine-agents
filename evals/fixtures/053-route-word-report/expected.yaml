@@ -1,0 +1,13 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 053-route-word-report
+kind: route-oracle
+engines:
+- design-system-skills
+expected_primary: design-system-skills/docx-report-and-document-formatting
+required_observations:
+- design-system-skills/docx-report-and-document-formatting is the first skill loaded (document formatting
+  (design vs research)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

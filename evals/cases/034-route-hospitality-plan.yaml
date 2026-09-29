@@ -1,0 +1,20 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 034-route-hospitality-plan
+task: Prepare a bankable business plan and feasibility study for a 40-room lodge near Queen Elizabeth
+  National Park.
+fixture_path: evals/fixtures/034-route-hospitality-plan
+expected_primary: business-plan-skills/hospitality-hotel-restaurant
+run_mode: lexical
+required_observations:
+- business-plan-skills/hospitality-hotel-restaurant is the first skill loaded (hospitality pack (mirrored,
+  business-plan slice)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

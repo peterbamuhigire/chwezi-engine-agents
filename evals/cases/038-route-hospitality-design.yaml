@@ -1,0 +1,19 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 038-route-hospitality-design
+task: Design the booking flow, digital menu screens and guest journey for a resort.
+fixture_path: evals/fixtures/038-route-hospitality-design
+expected_primary: design-system-skills/hospitality-hotel-restaurant
+run_mode: lexical
+required_observations:
+- design-system-skills/hospitality-hotel-restaurant is the first skill loaded (hospitality pack (mirrored,
+  design slice)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

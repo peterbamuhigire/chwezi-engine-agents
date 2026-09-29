@@ -1,0 +1,150 @@
+# Cross-engine skill ownership register (M10-03-T02).
+#
+# One entry per cross-engine skill pair (or group) whose union TF-IDF cosine is at or above 0.75.
+# The check `scripts/validate-runtime-skill-budget.py --collisions --ownership evals/routing/ownership.yaml`
+# fails on any pair >= 0.75 that is not declared here, and on a `fix_differentiate` pair that is still
+# >= 0.75. A declared pair that falls below 0.60 is reported as a stale declaration (warning).
+#
+# This file is read ONLY by that check. No agent, router or loader reads it at runtime; it is a
+# declaration, not a routing table (P04 still holds: no routing framework, loader or token target).
+#
+# Dispositions: canonical_owner | intentional_co_activation | mirrored_domain_pack | fix_differentiate | fix_alias
+# Scores are the union lexical proxy (not live routing; see agent-skills issue #620).
+# Keys use the catalogue engine id (`catalog/engines.yaml`): the digital research engine is
+# `digital-research-skills` (checked out at `digital-research-engine/`).
+schema_version: 1
+thresholds: {error: 0.75, warn: 0.50}
+pairs:
+  - skills: [chwezi-dev-engine/validation-contract, digital-research-skills/validation-contract]
+    score_at_decision: 1.00
+    disposition: canonical_owner
+    owner: chwezi-dev-engine/validation-contract
+    co_activate: []
+    reason: >-
+      Identical shared doctrine (the seven evidence categories and the Release Evidence Bundle). The
+      engineering-catalogue engine owns the contract; the research copy should become a pointer.
+    decided_by: orchestrator under Peter's delegated authority, 29 Sep 2026
+    decided_on: 2026-09-29
+    review_after: 2026-12-29
+    follow_up: later-wave (fix_alias; M10-04 closed before this register existed, so the meta-skill alias is a hand-off)
+
+  - skills: [chwezi-dev-engine/ai-slop-audit, digital-research-skills/ai-slop-audit, srs-skills/29-ai-slop-audit]
+    score_at_decision: 0.83
+    disposition: canonical_owner
+    owner: chwezi-dev-engine/ai-slop-audit
+    co_activate: []
+    reason: >-
+      Shared slop-audit doctrine copied into three engines (dev <-> research 0.83, research <-> srs 0.79).
+      The dev copy is canonical; the research and SRS copies keep only their artefact-specific evidence
+      rules and converge to pointers when M10-04 converges the meta-skills.
+    decided_by: orchestrator under Peter's delegated authority, 29 Sep 2026
+    decided_on: 2026-09-29
+    review_after: 2026-12-29
+    follow_up: later-wave (fix_alias; M10-04 closed before this register existed, so the meta-skill alias is a hand-off)
+
+  - skills: [business-plan-skills/anti-ai-slop, chwezi-dev-engine/anti-ai-slop]
+    score_at_decision: 0.82
+    disposition: canonical_owner
+    owner: chwezi-dev-engine/anti-ai-slop
+    co_activate: []
+    reason: >-
+      Shared live anti-slop doctrine; the business-plan copy adds plan-specific controls only. Dev owns
+      the doctrine; convergence of the duplicated meta-skill belongs to M10-04.
+    decided_by: orchestrator under Peter's delegated authority, 29 Sep 2026
+    decided_on: 2026-09-29
+    review_after: 2026-12-29
+    follow_up: later-wave (fix_alias; M10-04 closed before this register existed, so the meta-skill alias is a hand-off)
+
+  - skills: [chwezi-dev-engine/excel-spreadsheets, digital-research-skills/excel-spreadsheets]
+    score_at_decision: 0.82
+    disposition: canonical_owner
+    owner: chwezi-dev-engine/excel-spreadsheets
+    co_activate: []
+    reason: >-
+      Same workbook-production doctrine in two engines. Dev owns generation and validation of Excel
+      deliverables; the research copy should become an alias. Finance treatment inside a workbook stays
+      with chwezi-accounting-doctrine (cross-cutting, not a collision).
+    decided_by: orchestrator under Peter's delegated authority, 29 Sep 2026
+    decided_on: 2026-09-29
+    review_after: 2026-12-29
+    follow_up: later-wave (fix_alias; not a meta-skill, so outside M10-04)
+
+  - skills:
+      - business-plan-skills/hospitality-hotel-restaurant
+      - proposal-skills/hospitality-hotel-restaurant
+      - social-media-skills/hospitality-hotel-restaurant
+      - design-system-skills/hospitality-hotel-restaurant
+      - chwezi-dev-engine/hospitality-hotel-restaurant-systems
+    score_at_decision: 0.84
+    disposition: mirrored_domain_pack
+    owner: null
+    co_activate: [business-plan-skills, proposal-skills, social-media-skills, design-system-skills, chwezi-dev-engine]
+    reason: >-
+      Sector pack mirrored on purpose (pairwise 0.76-0.84). Each engine's slice differs: business-plan
+      writes bankable plans and feasibility studies; proposal writes bids for hospitality clients; social
+      writes marketing and reputation work; design owns guest journeys, menus and booking-flow UI; dev owns
+      PMS/POS and restaurant software engineering. The shared sector vocabulary is expected.
+    decided_by: orchestrator under Peter's delegated authority, 29 Sep 2026
+    decided_on: 2026-09-29
+    review_after: 2026-12-29
+    follow_up: none
+
+  - skills:
+      - business-plan-skills/blog-idea-generator
+      - proposal-skills/blog-idea-generator
+      - website-skills/blog-idea-generator
+      - social-media-skills/blog-idea-generator
+    score_at_decision: 0.81
+    disposition: canonical_owner
+    owner: social-media-skills/blog-idea-generator
+    co_activate: []
+    reason: >-
+      One blog-ideation skill copied into four engines (pairwise 0.76-0.81). Content ideation belongs to
+      the digital-marketing and content engine per the global routing table; website keeps blog build and
+      publication, and the business-plan and proposal copies are candidates for aliases.
+    decided_by: orchestrator under Peter's delegated authority, 29 Sep 2026
+    decided_on: 2026-09-29
+    review_after: 2026-12-29
+    follow_up: later-wave (fix_alias; enrich the social description, which is templated)
+
+  - skills: [proposal-skills/east-african-english, social-media-skills/east-african-english, website-skills/east-african-english]
+    score_at_decision: 0.78
+    disposition: mirrored_domain_pack
+    owner: null
+    co_activate: [proposal-skills, social-media-skills, website-skills]
+    reason: >-
+      Language pack mirrored on purpose (proposal <-> social 0.78, social <-> website 0.76). Each copy
+      applies East African English register to its own artefact: proposals and bids, social posts and ads,
+      website copy. The host engine of the artefact applies its own copy.
+    decided_by: orchestrator under Peter's delegated authority, 29 Sep 2026
+    decided_on: 2026-09-29
+    review_after: 2026-12-29
+    follow_up: none
+
+  - skills: [proposal-skills/language-standards, social-media-skills/east-african-english]
+    score_at_decision: 0.82
+    disposition: fix_differentiate
+    owner: null
+    co_activate: []
+    reason: >-
+      Accidental overlap: the proposal multilingual standard led with "British East African English",
+      so it read like the social English-only tone skill. Description edited in M10-03-T16 to lead with
+      French, Kiswahili and cross-language policy (0.82 -> 0.57).
+    decided_by: orchestrator under Peter's delegated authority, 29 Sep 2026
+    decided_on: 2026-09-29
+    review_after: 2026-12-29
+    follow_up: M10-03-T16
+
+  - skills: [chwezi-accounting-doctrine/electronic-fiscal-taxing, chwezi-dev-engine/electronic-fiscal-taxing]
+    score_at_decision: 0.76
+    disposition: intentional_co_activation
+    owner: null
+    co_activate: [chwezi-accounting-doctrine, chwezi-dev-engine]
+    reason: >-
+      Deliberate split: finance owns fiscal-tax controls and keeps tax administration separate from ledger
+      truth; dev owns the EFRIS-style integration (adapters, queues, offline operation, API security). An
+      e-invoicing integration needs both, so co-activation is correct.
+    decided_by: orchestrator under Peter's delegated authority, 29 Sep 2026
+    decided_on: 2026-09-29
+    review_after: 2026-12-29
+    follow_up: none

@@ -1,0 +1,21 @@
+# M10-03-T10 clean-session acceptance prompt (Superpowers-style harness case; behavioural run in M10-05).
+schema_version: '1.0'
+id: 073-accept-design-system-skills
+task: Our brand colours look washed out; build a palette that works in light and dark mode.
+fixture_path: evals/fixtures/073-accept-design-system-skills
+expected_primary: design-system-skills/color-system-and-palette
+run_mode: behavioural
+last_run: NOT_ASSESSED
+behavioural_owner_phase: M10-05
+required_observations:
+- design-system-skills/color-system-and-palette is the first skill loaded (acceptance prompt for design-system-skills).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+- name_the_skill_in_the_prompt
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

@@ -10,9 +10,28 @@
     "engine_id": {"type": "string", "minLength": 1},
     "checks": {"type": "array", "items": {"$ref": "#/$defs/check"}},
     "overall": {"type": "string", "enum": ["PASS", "FAIL", "PARTIAL", "NOT ASSESSED"]},
-    "next_action": {"type": "string", "minLength": 1}
+    "next_action": {"type": "string", "minLength": 1},
+    "findings": {
+      "type": "array",
+      "description": "Optional, backwards-compatible machine-actionable findings (M10-07-T05 / AR-09). Mirrors the Diagnostic shape of srs-skills engine/diagram_ir.py.",
+      "items": {"$ref": "#/$defs/finding"}
+    }
   },
   "$defs": {
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code"],
+      "properties": {
+        "code": {"type": "string", "minLength": 1, "description": "Stable finding code, for example schema-required or duplicate-id."},
+        "severity": {"type": "string", "enum": ["INFO", "LOW", "MEDIUM", "HIGH"]},
+        "message": {"type": "string", "minLength": 1},
+        "subject": {"type": "object", "description": "What the finding is about: file, figure id, element pointer."},
+        "evidence": {"type": "object", "description": "Structured evidence: keyword, actual value, unknown properties."},
+        "supported_fixes": {"type": "array", "items": {"type": "string", "minLength": 1}, "description": "Repairs the validator knows to be safe; none may remove the requirement or check that failed."},
+        "next_action": {"type": "string", "minLength": 1}
+      }
+    },
     "check": {
       "type": "object",
       "additionalProperties": false,

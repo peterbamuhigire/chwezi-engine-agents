@@ -1,0 +1,13 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 076-accept-chwezi-engine-agents
+kind: acceptance
+engines:
+- chwezi-engine-agents
+expected_primary: chwezi-engine-agents/rules-distill
+required_observations:
+- chwezi-engine-agents/rules-distill is the first skill loaded (acceptance prompt for chwezi-engine-agents).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+- name_the_skill_in_the_prompt
+expected_verdict: PASS

@@ -1,0 +1,12 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 051-route-prd
+kind: route-oracle
+engines:
+- srs-skills
+expected_primary: srs-skills/01-prd-generation
+required_observations:
+- srs-skills/01-prd-generation is the first skill loaded (requirements (control)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

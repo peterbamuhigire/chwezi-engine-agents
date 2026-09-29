@@ -366,9 +366,9 @@ assets:
         owner: design-system-skills
         reason: "Engine-specific always-on rules by design (absent in dev and agents); each must keep the invariant sentences."
       srs-skills/rules/common/core.md:
-        sha256: 01a13fd9413b72efbcf3b9c52907b4eaf1a2c8f4904b50e4e98d4e774a4857d2
+        sha256: be37b47b62b206078fe9ea4b9cd08fbae1052d051b8ce13dabbaa9a9bf67a71d
         owner: srs-skills
-        reason: "Engine-specific always-on rules by design (absent in dev and agents); each must keep the invariant sentences."
+        reason: "M10-08 SP-01 engine-native design gate"
       website-skills/rules/common/core.md:
         sha256: 4145a79ce8a21d999ce4613616bb826d9c60dcc22f244975c842488d60055dc1
         owner: website-skills
@@ -617,19 +617,19 @@ assets:
       - "*/scripts/routing-smoke-test.py"
     variants:
       chwezi-dev-engine/scripts/routing_smoke_test.py:
-        sha256: 92b106e5d8d6c07dcd107bb8119356a19e50fdd54b993c897887e1cae8bac372
+        sha256: 9a1cf744b15abe51196565e0b88c25ee45749d8acaee16ca156cb2264ce68611
         owner: chwezi-dev-engine
         reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
       design-system-skills/scripts/routing_smoke_test.py:
-        sha256: da56d0fbfb84d92a67a25f34e288a2a62662f4971169534ae2cc2561d8660dea
+        sha256: 1de1d6841684047e30d25c383682cc72f6083f3dcb3a1b6a0373b0e47fcf1561
         owner: design-system-skills
-        reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
+        reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06: the design copy vendors the dev TF-IDF ranker (chwezi-dev-engine/scripts/routing_smoke_test.py @ 317b475, sha256 92b106e5...); its header records the source, so any edit to this copy is detected here."
       srs-skills/scripts/routing_smoke_test.py:
-        sha256: 734b8eab1f19fc52a64499dc59a3014355f41d733221ec278d53b1acfb2c705b
+        sha256: 0a65725f02171e2106081988241c3d6b8d22f38b7b28d90223ce7d473ad55f79
         owner: srs-skills
         reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
       digital-research-engine/scripts/routing_smoke_test.py:
-        sha256: a284f02c741026f2d951b459bb8e8d40f4969c9d2cb0cb5c5c8d19d354e941c4
+        sha256: 8a53525d53c75db1ccbbdbd2b01dd12074c42e1f4cdbfdeb8fc76d7330cd99c3
         owner: digital-research-engine
         reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
       proposal-skills/scripts/routing_smoke_test.py:
@@ -653,7 +653,7 @@ assets:
         owner: windows-admin-engine-skills
         reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
       website-skills/scripts/routing-smoke-test.py:
-        sha256: bb9b920b0538169a3edae561e76b3b2d6383d51c8a345c52dbaca332823dceca
+        sha256: ac3846019dbdd1baf5f4655027558e5f8e03244ae2941e9eec0555ac31a4fae6
         owner: website-skills
         reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
     reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."

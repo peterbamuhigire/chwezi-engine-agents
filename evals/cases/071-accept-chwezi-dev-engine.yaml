@@ -1,0 +1,21 @@
+# M10-03-T10 clean-session acceptance prompt (Superpowers-style harness case; behavioural run in M10-05).
+schema_version: '1.0'
+id: 071-accept-chwezi-dev-engine
+task: Let's make a react todo list.
+fixture_path: evals/fixtures/071-accept-chwezi-dev-engine
+expected_primary: chwezi-dev-engine/react-development
+run_mode: behavioural
+last_run: NOT_ASSESSED
+behavioural_owner_phase: M10-05
+required_observations:
+- chwezi-dev-engine/react-development is the first skill loaded (acceptance prompt for chwezi-dev-engine).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+- name_the_skill_in_the_prompt
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

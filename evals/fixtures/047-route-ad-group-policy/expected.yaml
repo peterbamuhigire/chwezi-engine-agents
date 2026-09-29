@@ -1,0 +1,12 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 047-route-ad-group-policy
+kind: route-oracle
+engines:
+- windows-admin-engine-skills
+expected_primary: windows-admin-engine-skills/windows-group-policy
+required_observations:
+- windows-admin-engine-skills/windows-group-policy is the first skill loaded (Windows administration (control)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

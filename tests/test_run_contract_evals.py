@@ -43,3 +43,35 @@ def test_fixture_that_disagrees_with_case_fails(tmp_path):
     report = MODULE.evaluate(write_case(tmp_path, "997-borrowed", "evals/fixtures/001-route-srs"))
     assert report["status"] == "FAIL"
     assert "case_id does not match" in report["evidence"]
+
+
+def test_route_oracle_keys_are_shape_checked(tmp_path):
+    path = write_case(tmp_path, "996-bad-oracle", "evals/fixtures/001-route-srs")
+    text = path.read_text(encoding="utf-8").replace("id: 996-bad-oracle", "id: 996-bad-oracle\nexpected_primary: no-slash\nrun_mode: live")
+    path.write_text(text, encoding="utf-8")
+    report = MODULE.evaluate(path)
+    assert report["status"] == "FAIL"
+    assert "expected_primary must be" in report["evidence"]
+    assert "run_mode must be one of" in report["evidence"]
+
+
+def test_behavioural_pass_without_evidence_fails():
+    errors = MODULE.oracle_shape_errors({"expected_primary": "srs-skills/01-prd-generation", "run_mode": "behavioural", "last_run": "PASS"})
+    assert errors == ["a behavioural PASS needs last_run_evidence"]
+
+
+def test_route_oracles_are_not_assessed_without_siblings(tmp_path):
+    report = MODULE.route_oracles(sorted(CASES.glob("*.yaml")), tmp_path)
+    assert report["status"] == "NOT_ASSESSED"
+    assert "sibling engine unavailable" in report["reason"]
+
+
+def test_at_least_thirty_route_oracles_and_twelve_acceptance_cases():
+    import yaml
+
+    cases = [yaml.safe_load(path.read_text(encoding="utf-8")) for path in sorted(CASES.glob("*.yaml"))]
+    oracles = [case for case in cases if case.get("expected_primary") and case.get("run_mode") == "lexical"]
+    acceptance = [case for case in cases if case.get("run_mode") == "behavioural"]
+    assert len(oracles) >= 30
+    assert len(acceptance) == 12
+    assert all(case.get("last_run") == "NOT_ASSESSED" for case in acceptance)

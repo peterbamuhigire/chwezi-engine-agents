@@ -1,0 +1,12 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 039-route-ssh-hardening
+kind: route-oracle
+engines:
+- linux-skills
+expected_primary: linux-skills/linux-server-hardening
+required_observations:
+- linux-skills/linux-server-hardening is the first skill loaded (SSH hardening (linux vs dev; control)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

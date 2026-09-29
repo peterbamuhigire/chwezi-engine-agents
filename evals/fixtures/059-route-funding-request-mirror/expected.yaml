@@ -1,0 +1,13 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 059-route-funding-request-mirror
+kind: route-oracle
+engines:
+- business-plan-skills
+expected_primary: business-plan-skills/11-funding-request
+required_observations:
+- business-plan-skills/11-funding-request is the first skill loaded (mirrored srs owned negative (business
+  case must not win)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

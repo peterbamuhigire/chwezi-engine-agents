@@ -43,6 +43,10 @@ jobs:
         run: |
           python -m pip install pytest
           python -X utf8 -m pytest tests/test_render_host_files.py tests/test_kaizen_portfolio_snapshot.py -q -p no:cacheprovider
+      - name: Test routing, oracle, schema and marketplace tooling (M10-03)
+        run: |
+          python -X utf8 -m pytest tests/test_validate_runtime_skill_budget.py tests/test_run_contract_evals.py tests/test_validate_routing_baseline.py tests/test_validation_result_schema.py tests/test_marketplace_relevance.py -q -p no:cacheprovider
+          python -X utf8 scripts/validate-routing-baseline.py
       - name: Build and test MCP server
         working-directory: mcp-server
         run: |
@@ -108,3 +112,59 @@ jobs:
         run: node scripts/generate-plugin-manifest.js --check-marketplace --workspace-root ..
       - name: Prompt-contract byte identity
         run: ./scripts/validate-prompt-capability.ps1 -WorkspaceRoot (Resolve-Path ..).Path -CoordinatorRoot (Get-Location).Path
+
+  portfolio-routing:
+    # Tier 2 portfolio routing gate (M10-03-T17): union collision scan against the ownership register
+    # and the cross-engine route oracles. Lexical proxy; not live routing (agent-skills issue #620).
+    # The eleven public engines are shallow-checked-out as siblings; the private political-essay
+    # engine is never checked out. A missing sibling reports NOT_ASSESSED in the log and step summary,
+    # never a pass. To switch the gate to report-only, add --report-only to the collision step.
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: chwezi-engine-agents
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: chwezi-engine-agents
+      - {name: Check out srs-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/srs-skills, path: srs-skills}}
+      - {name: Check out business-plan-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/business-plan-skills, path: business-plan-skills}}
+      - {name: Check out website-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/website-skills, path: website-skills}}
+      - {name: Check out social-media-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/social-media-skills, path: social-media-skills}}
+      - {name: Check out linux-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/linux-skills, path: linux-skills}}
+      - {name: Check out proposal-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/proposal-skills, path: proposal-skills}}
+      - {name: Check out chwezi-dev-engine, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/chwezi-dev-engine, path: chwezi-dev-engine}}
+      - {name: Check out chwezi-accounting-doctrine, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/chwezi-accounting-doctrine, path: chwezi-accounting-doctrine}}
+      - {name: Check out design-system-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/design-system-skills, path: design-system-skills}}
+      - {name: Check out digital-research-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/digital-research-skills, path: digital-research-engine}}
+      - {name: Check out windows-admin-engine-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/windows-admin-engine-skills, path: windows-admin-engine-skills}}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install check dependencies
+        run: python -m pip install PyYAML
+      - name: Union collision scan with ownership register
+        shell: bash
+        run: |
+          set +e
+          python -X utf8 scripts/validate-runtime-skill-budget.py --collisions --ownership evals/routing/ownership.yaml --workspace-root ..
+          code=$?
+          if [ "$code" = "3" ]; then
+            echo "::warning::portfolio collision scan NOT_ASSESSED (a sibling engine is unavailable); this is not a pass"
+            echo "portfolio collision scan: NOT_ASSESSED (sibling unavailable)" >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          exit $code
+      - name: Cross-engine route oracles (floor from evals/routing/baseline.json)
+        shell: bash
+        run: |
+          set +e
+          floor=$(python -c "import json; print(json.load(open('evals/routing/baseline.json'))['portfolio']['floor'])")
+          python -X utf8 evals/runners/run-contract-evals.py --cases evals/cases --route-oracles --workspace-root .. --min-oracle-primary "$floor" --out "$RUNNER_TEMP/oracles.json"
+          code=$?
+          if [ "$code" = "3" ]; then
+            echo "::warning::route oracles NOT_ASSESSED (a sibling engine is unavailable); this is not a pass"
+            echo "route oracles: NOT_ASSESSED (sibling unavailable)" >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          exit $code

@@ -1,0 +1,13 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 057-route-social-roi-mirror
+kind: route-oracle
+engines:
+- social-media-skills
+expected_primary: social-media-skills/meta-social-media-roi-business-case
+required_observations:
+- social-media-skills/meta-social-media-roi-business-case is the first skill loaded (mirrored srs owned
+  negative (business case must not win)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

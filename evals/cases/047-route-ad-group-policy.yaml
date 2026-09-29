@@ -1,0 +1,18 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 047-route-ad-group-policy
+task: Audit Group Policy objects and fix the ones that are not applying to the finance OU.
+fixture_path: evals/fixtures/047-route-ad-group-policy
+expected_primary: windows-admin-engine-skills/windows-group-policy
+run_mode: lexical
+required_observations:
+- windows-admin-engine-skills/windows-group-policy is the first skill loaded (Windows administration (control)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

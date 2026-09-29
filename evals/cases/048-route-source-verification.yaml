@@ -1,0 +1,19 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 048-route-source-verification
+task: Verify these market-size claims against primary sources and record the access dates.
+fixture_path: evals/fixtures/048-route-source-verification
+expected_primary: digital-research-skills/source-verification
+run_mode: lexical
+required_observations:
+- digital-research-skills/source-verification is the first skill loaded (research verification (research
+  primary)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

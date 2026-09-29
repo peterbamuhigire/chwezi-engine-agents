@@ -1,0 +1,13 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 054-route-business-case-content-mirror
+kind: route-oracle
+engines:
+- srs-skills
+expected_primary: srs-skills/02-business-case
+required_observations:
+- srs-skills/02-business-case is the first skill loaded (mirrored design owned negative (pdf-proposal
+  must not win)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

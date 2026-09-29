@@ -1,0 +1,3467 @@
+{
+  "status": "FAIL",
+  "label": "lexical proxy; not live routing (see agent-skills issue #620)",
+  "skills": 1169,
+  "skills_per_engine": {
+    "srs-skills": 159,
+    "business-plan-skills": 137,
+    "website-skills": 62,
+    "social-media-skills": 191,
+    "linux-skills": 48,
+    "proposal-skills": 115,
+    "chwezi-dev-engine": 168,
+    "chwezi-accounting-doctrine": 108,
+    "design-system-skills": 101,
+    "digital-research-skills": 60,
+    "windows-admin-engine-skills": 20
+  },
+  "thresholds": {
+    "error": 0.75,
+    "warn": 0.5
+  },
+  "cross_engine_pairs_ge_error": 22,
+  "cross_engine_pairs_ge_warn": 203,
+  "within_engine_pairs_ge_error": 26,
+  "undeclared_pairs_ge_error": 22,
+  "cross_engine_pairs": [
+    {
+      "score": 1.0,
+      "skills": [
+        "chwezi-dev-engine/validation-contract",
+        "digital-research-skills/validation-contract"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.8422,
+      "skills": [
+        "proposal-skills/hospitality-hotel-restaurant",
+        "social-media-skills/hospitality-hotel-restaurant"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.8337,
+      "skills": [
+        "business-plan-skills/hospitality-hotel-restaurant",
+        "proposal-skills/hospitality-hotel-restaurant"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.8256,
+      "skills": [
+        "chwezi-dev-engine/ai-slop-audit",
+        "digital-research-skills/ai-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.823,
+      "skills": [
+        "chwezi-dev-engine/excel-spreadsheets",
+        "digital-research-skills/excel-spreadsheets"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.8222,
+      "skills": [
+        "proposal-skills/language-standards",
+        "social-media-skills/east-african-english"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.8173,
+      "skills": [
+        "chwezi-dev-engine/hospitality-hotel-restaurant-systems",
+        "proposal-skills/hospitality-hotel-restaurant"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.816,
+      "skills": [
+        "business-plan-skills/anti-ai-slop",
+        "chwezi-dev-engine/anti-ai-slop"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.8158,
+      "skills": [
+        "business-plan-skills/hospitality-hotel-restaurant",
+        "social-media-skills/hospitality-hotel-restaurant"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.8101,
+      "skills": [
+        "business-plan-skills/blog-idea-generator",
+        "proposal-skills/blog-idea-generator"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.8017,
+      "skills": [
+        "business-plan-skills/blog-idea-generator",
+        "website-skills/blog-idea-generator"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.799,
+      "skills": [
+        "design-system-skills/hospitality-hotel-restaurant",
+        "proposal-skills/hospitality-hotel-restaurant"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7895,
+      "skills": [
+        "digital-research-skills/ai-slop-audit",
+        "srs-skills/29-ai-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7868,
+      "skills": [
+        "chwezi-dev-engine/hospitality-hotel-restaurant-systems",
+        "social-media-skills/hospitality-hotel-restaurant"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7835,
+      "skills": [
+        "proposal-skills/east-african-english",
+        "social-media-skills/east-african-english"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7785,
+      "skills": [
+        "business-plan-skills/hospitality-hotel-restaurant",
+        "chwezi-dev-engine/hospitality-hotel-restaurant-systems"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.776,
+      "skills": [
+        "chwezi-dev-engine/hospitality-hotel-restaurant-systems",
+        "design-system-skills/hospitality-hotel-restaurant"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7686,
+      "skills": [
+        "business-plan-skills/blog-idea-generator",
+        "social-media-skills/blog-idea-generator"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7633,
+      "skills": [
+        "proposal-skills/blog-idea-generator",
+        "website-skills/blog-idea-generator"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7597,
+      "skills": [
+        "chwezi-accounting-doctrine/electronic-fiscal-taxing",
+        "chwezi-dev-engine/electronic-fiscal-taxing"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7588,
+      "skills": [
+        "design-system-skills/hospitality-hotel-restaurant",
+        "social-media-skills/hospitality-hotel-restaurant"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7573,
+      "skills": [
+        "social-media-skills/east-african-english",
+        "website-skills/east-african-english"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7497,
+      "skills": [
+        "proposal-skills/blog-idea-generator",
+        "social-media-skills/blog-idea-generator"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7418,
+      "skills": [
+        "business-plan-skills/east-african-english",
+        "proposal-skills/east-african-english"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.74,
+      "skills": [
+        "proposal-skills/hospitality-hotel-restaurant",
+        "srs-skills/hospitality-operating-model-srs"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7308,
+      "skills": [
+        "business-plan-skills/hospitality-hotel-restaurant",
+        "design-system-skills/hospitality-hotel-restaurant"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7266,
+      "skills": [
+        "business-plan-skills/ai-slop-audit",
+        "srs-skills/29-ai-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.721,
+      "skills": [
+        "business-plan-skills/ai-slop-audit",
+        "proposal-skills/ai-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7177,
+      "skills": [
+        "business-plan-skills/demand-forecasting",
+        "social-media-skills/demand-forecasting"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7162,
+      "skills": [
+        "business-plan-skills/blog-writer",
+        "website-skills/blog-writer"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.712,
+      "skills": [
+        "chwezi-dev-engine/project-requirements",
+        "digital-research-skills/project-requirements"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7115,
+      "skills": [
+        "business-plan-skills/east-african-english",
+        "proposal-skills/language-standards"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7102,
+      "skills": [
+        "proposal-skills/premium-commercial-writing",
+        "social-media-skills/premium-commercial-writing"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7101,
+      "skills": [
+        "business-plan-skills/blog-idea-generator",
+        "website-skills/blog-writer"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7046,
+      "skills": [
+        "business-plan-skills/ai-slop-audit",
+        "digital-research-skills/ai-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.703,
+      "skills": [
+        "business-plan-skills/language-standards",
+        "proposal-skills/language-standards"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7029,
+      "skills": [
+        "social-media-skills/french-native-copy",
+        "website-skills/french-native-copy"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6967,
+      "skills": [
+        "business-plan-skills/saas-ai-moat-and-defensibility",
+        "srs-skills/11-saas-moat-and-defensibility-plan"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6937,
+      "skills": [
+        "social-media-skills/blog-idea-generator",
+        "website-skills/blog-idea-generator"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6924,
+      "skills": [
+        "proposal-skills/language-standards",
+        "website-skills/east-african-english"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.691,
+      "skills": [
+        "proposal-skills/blog-writer",
+        "website-skills/blog-writer"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6899,
+      "skills": [
+        "proposal-skills/ai-slop-audit",
+        "srs-skills/29-ai-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6887,
+      "skills": [
+        "digital-research-skills/east-african-english",
+        "website-skills/east-african-english"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6874,
+      "skills": [
+        "proposal-skills/hospitality-hotel-restaurant",
+        "website-skills/hospitality-website-product"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6867,
+      "skills": [
+        "business-plan-skills/east-african-english",
+        "social-media-skills/east-african-english"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6861,
+      "skills": [
+        "linux-skills/skill-writing",
+        "social-media-skills/skill-writing"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6776,
+      "skills": [
+        "proposal-skills/east-african-english",
+        "website-skills/east-african-english"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6776,
+      "skills": [
+        "proposal-skills/update-claude-documentation",
+        "website-skills/update-claude-documentation"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.676,
+      "skills": [
+        "business-plan-skills/blog-writer",
+        "social-media-skills/blog-writer"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6741,
+      "skills": [
+        "digital-research-skills/ai-slop-audit",
+        "proposal-skills/ai-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6737,
+      "skills": [
+        "business-plan-skills/update-claude-documentation",
+        "digital-research-skills/update-claude-documentation"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6727,
+      "skills": [
+        "business-plan-skills/language-standards",
+        "proposal-skills/east-african-english"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6699,
+      "skills": [
+        "social-media-skills/swahili-native-copy",
+        "website-skills/swahili-native-copy"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6688,
+      "skills": [
+        "business-plan-skills/update-claude-documentation",
+        "website-skills/update-claude-documentation"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6679,
+      "skills": [
+        "social-media-skills/skill-writing",
+        "website-skills/skill-writing"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6678,
+      "skills": [
+        "business-plan-skills/00-client-intake",
+        "social-media-skills/00-client-intake"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6622,
+      "skills": [
+        "digital-research-skills/skill-writing",
+        "social-media-skills/skill-writing"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6614,
+      "skills": [
+        "business-plan-skills/update-claude-documentation",
+        "proposal-skills/update-claude-documentation"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6569,
+      "skills": [
+        "business-plan-skills/blog-writer",
+        "proposal-skills/blog-writer"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6543,
+      "skills": [
+        "chwezi-dev-engine/anti-ai-slop",
+        "social-media-skills/anti-ai-slop"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6532,
+      "skills": [
+        "proposal-skills/blog-idea-generator",
+        "website-skills/blog-writer"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6526,
+      "skills": [
+        "chwezi-accounting-doctrine/kaizen-engine-and-product-improvement",
+        "social-media-skills/kaizen-improvement-system"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6512,
+      "skills": [
+        "business-plan-skills/skill-writing",
+        "proposal-skills/skill-writing"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6504,
+      "skills": [
+        "chwezi-dev-engine/full-coverage-saas-seeding",
+        "srs-skills/10-full-coverage-saas-seeding"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6497,
+      "skills": [
+        "srs-skills/hospitality-operating-model-srs",
+        "website-skills/hospitality-website-product"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6484,
+      "skills": [
+        "business-plan-skills/kaizen-improvement-system",
+        "social-media-skills/kaizen-improvement-system"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6476,
+      "skills": [
+        "digital-research-skills/skill-safety-audit",
+        "proposal-skills/skill-safety-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6457,
+      "skills": [
+        "social-media-skills/hospitality-hotel-restaurant",
+        "website-skills/hospitality-website-product"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6423,
+      "skills": [
+        "digital-research-skills/east-african-english",
+        "social-media-skills/east-african-english"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6418,
+      "skills": [
+        "business-plan-skills/language-standards",
+        "social-media-skills/east-african-english"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6418,
+      "skills": [
+        "proposal-skills/kaizen-improvement-system",
+        "social-media-skills/kaizen-improvement-system"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6411,
+      "skills": [
+        "chwezi-dev-engine/ai-agent-safety-and-red-team",
+        "srs-skills/05-ai-red-team-test-plan"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6385,
+      "skills": [
+        "business-plan-skills/hospitality-hotel-restaurant",
+        "srs-skills/hospitality-operating-model-srs"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6376,
+      "skills": [
+        "digital-research-skills/east-african-english",
+        "proposal-skills/east-african-english"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6371,
+      "skills": [
+        "business-plan-skills/hospitality-hotel-restaurant",
+        "website-skills/hospitality-website-product"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6368,
+      "skills": [
+        "chwezi-dev-engine/ai-slop-audit",
+        "proposal-skills/ai-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6348,
+      "skills": [
+        "chwezi-dev-engine/ai-slop-audit",
+        "srs-skills/29-ai-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6306,
+      "skills": [
+        "digital-research-skills/anti-ai-slop",
+        "proposal-skills/anti-ai-slop"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.63,
+      "skills": [
+        "chwezi-dev-engine/game-3d-asset-pipeline",
+        "srs-skills/18-game-3d-content-and-blender-pipeline-specification"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6281,
+      "skills": [
+        "proposal-skills/skill-writing",
+        "social-media-skills/skill-writing"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6263,
+      "skills": [
+        "proposal-skills/blog-writer",
+        "website-skills/blog-idea-generator"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6247,
+      "skills": [
+        "social-media-skills/hospitality-hotel-restaurant",
+        "srs-skills/hospitality-operating-model-srs"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6229,
+      "skills": [
+        "business-plan-skills/language-standards",
+        "social-media-skills/language-standards"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6194,
+      "skills": [
+        "chwezi-accounting-doctrine/kaizen-engine-and-product-improvement",
+        "website-skills/kaizen-engine-and-product-improvement"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6171,
+      "skills": [
+        "chwezi-dev-engine/professional-word-output",
+        "digital-research-skills/professional-word-output"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6136,
+      "skills": [
+        "social-media-skills/language-standards",
+        "website-skills/language-standards"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6112,
+      "skills": [
+        "chwezi-accounting-doctrine/kaizen-engine-and-product-improvement",
+        "srs-skills/31-kaizen-engine-and-product-improvement"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6103,
+      "skills": [
+        "business-plan-skills/premium-commercial-writing",
+        "social-media-skills/premium-commercial-writing"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6103,
+      "skills": [
+        "digital-research-skills/anti-ai-slop",
+        "srs-skills/29-ai-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6103,
+      "skills": [
+        "proposal-skills/anti-ai-slop",
+        "srs-skills/28-anti-ai-slop"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6088,
+      "skills": [
+        "business-plan-skills/east-african-english",
+        "website-skills/east-african-english"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6081,
+      "skills": [
+        "business-plan-skills/meta-premium-go-to-market",
+        "proposal-skills/premium-client-proposal-strategy"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6078,
+      "skills": [
+        "business-plan-skills/ai-slop-audit",
+        "chwezi-dev-engine/ai-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6073,
+      "skills": [
+        "chwezi-dev-engine/hospitality-hotel-restaurant-systems",
+        "website-skills/hospitality-website-product"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6061,
+      "skills": [
+        "chwezi-dev-engine/hospitality-hotel-restaurant-systems",
+        "srs-skills/hospitality-operating-model-srs"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6057,
+      "skills": [
+        "digital-research-skills/east-african-english",
+        "proposal-skills/language-standards"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6051,
+      "skills": [
+        "proposal-skills/ai-slop-audit",
+        "social-media-skills/ai-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.6019,
+      "skills": [
+        "business-plan-skills/01-executive-summary",
+        "proposal-skills/02-executive-summary"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5997,
+      "skills": [
+        "linux-skills/kaizen-improvement-system",
+        "social-media-skills/kaizen-improvement-system"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5993,
+      "skills": [
+        "proposal-skills/anti-ai-slop",
+        "srs-skills/29-ai-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5969,
+      "skills": [
+        "business-plan-skills/pitch-deck",
+        "design-system-skills/deck-system"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5962,
+      "skills": [
+        "business-plan-skills/blog-idea-generator",
+        "proposal-skills/blog-writer"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5962,
+      "skills": [
+        "business-plan-skills/meta-operational-readiness-due-diligence",
+        "proposal-skills/operational-readiness-and-localisation"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5957,
+      "skills": [
+        "proposal-skills/retail-transformation-proposal",
+        "srs-skills/retail-operating-model-srs"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.594,
+      "skills": [
+        "chwezi-dev-engine/skill-composition-standards",
+        "digital-research-skills/skill-composition-standards"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5933,
+      "skills": [
+        "business-plan-skills/ai-slop-audit",
+        "proposal-skills/anti-ai-slop"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5869,
+      "skills": [
+        "social-media-skills/ai-slop-audit",
+        "srs-skills/29-ai-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5836,
+      "skills": [
+        "business-plan-skills/blog-writer",
+        "website-skills/blog-idea-generator"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5816,
+      "skills": [
+        "srs-skills/31-kaizen-engine-and-product-improvement",
+        "website-skills/kaizen-engine-and-product-improvement"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5815,
+      "skills": [
+        "digital-research-skills/update-claude-documentation",
+        "website-skills/update-claude-documentation"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5806,
+      "skills": [
+        "chwezi-dev-engine/kaizen-improvement-system",
+        "social-media-skills/kaizen-improvement-system"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5789,
+      "skills": [
+        "design-system-skills/visual-product-slop-audit",
+        "social-media-skills/ai-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5778,
+      "skills": [
+        "chwezi-dev-engine/ai-agent-safety-and-red-team",
+        "srs-skills/07-ai-agent-red-team-test-plan"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5773,
+      "skills": [
+        "proposal-skills/skill-writing",
+        "website-skills/skill-writing"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5756,
+      "skills": [
+        "proposal-skills/ai-slop-audit",
+        "social-media-skills/anti-ai-slop"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5739,
+      "skills": [
+        "digital-research-skills/skill-writing",
+        "proposal-skills/skill-writing"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5736,
+      "skills": [
+        "business-plan-skills/ai-slop-audit",
+        "digital-research-skills/anti-ai-slop"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5721,
+      "skills": [
+        "business-plan-skills/anti-ai-slop",
+        "social-media-skills/anti-ai-slop"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5721,
+      "skills": [
+        "chwezi-accounting-doctrine/kaizen-engine-and-product-improvement",
+        "proposal-skills/kaizen-improvement-system"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5706,
+      "skills": [
+        "business-plan-skills/east-african-english",
+        "digital-research-skills/east-african-english"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.57,
+      "skills": [
+        "business-plan-skills/skill-safety-audit",
+        "proposal-skills/skill-safety-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5687,
+      "skills": [
+        "business-plan-skills/skill-writing",
+        "social-media-skills/skill-writing"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5662,
+      "skills": [
+        "business-plan-skills/ai-slop-audit",
+        "social-media-skills/ai-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5646,
+      "skills": [
+        "business-plan-skills/saas-agent-revenue-recognition",
+        "chwezi-accounting-doctrine/ifrs-revenue-recognition"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5637,
+      "skills": [
+        "design-system-skills/hospitality-hotel-restaurant",
+        "website-skills/hospitality-website-product"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5636,
+      "skills": [
+        "business-plan-skills/meta-due-diligence",
+        "digital-research-skills/due-diligence"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5634,
+      "skills": [
+        "proposal-skills/anti-ai-slop",
+        "social-media-skills/anti-ai-slop"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5617,
+      "skills": [
+        "proposal-skills/language-standards",
+        "social-media-skills/language-standards"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5611,
+      "skills": [
+        "business-plan-skills/kaizen-improvement-system",
+        "proposal-skills/kaizen-improvement-system"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5611,
+      "skills": [
+        "chwezi-dev-engine/ai-incident-response",
+        "srs-skills/09-saas-incident-response-and-postmortem"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5598,
+      "skills": [
+        "chwezi-accounting-doctrine/e-invoicing-and-fiscal-device-integration",
+        "chwezi-dev-engine/electronic-fiscal-taxing"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5583,
+      "skills": [
+        "linux-skills/skill-writing",
+        "proposal-skills/skill-writing"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5581,
+      "skills": [
+        "business-plan-skills/language-standards",
+        "website-skills/east-african-english"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5572,
+      "skills": [
+        "social-media-skills/kaizen-improvement-system",
+        "website-skills/kaizen-engine-and-product-improvement"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5546,
+      "skills": [
+        "proposal-skills/skill-safety-audit",
+        "website-skills/skill-safety-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5542,
+      "skills": [
+        "social-media-skills/blog-writer",
+        "website-skills/blog-writer"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5531,
+      "skills": [
+        "business-plan-skills/idea-testing",
+        "social-media-skills/content-ideas"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5523,
+      "skills": [
+        "design-system-skills/visual-product-slop-audit",
+        "proposal-skills/ai-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5522,
+      "skills": [
+        "chwezi-dev-engine/ai-prompt-engineering",
+        "social-media-skills/image-prompt-engineer"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5498,
+      "skills": [
+        "social-media-skills/kaizen-improvement-system",
+        "srs-skills/31-kaizen-engine-and-product-improvement"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5497,
+      "skills": [
+        "social-media-skills/premium-commercial-writing",
+        "website-skills/premium-commercial-writing"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5495,
+      "skills": [
+        "business-plan-skills/skill-writing",
+        "linux-skills/skill-writing"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5494,
+      "skills": [
+        "business-plan-skills/language-standards",
+        "website-skills/language-standards"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5487,
+      "skills": [
+        "digital-research-skills/ai-slop-audit",
+        "social-media-skills/ai-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5485,
+      "skills": [
+        "chwezi-accounting-doctrine/hospitality-and-restaurant-pack",
+        "proposal-skills/hospitality-hotel-restaurant"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5479,
+      "skills": [
+        "chwezi-dev-engine/ai-prompt-engineering",
+        "social-media-skills/prompt-engineering-library"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5474,
+      "skills": [
+        "social-media-skills/blog-idea-generator",
+        "website-skills/blog-writer"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.547,
+      "skills": [
+        "business-plan-skills/premium-commercial-writing",
+        "proposal-skills/premium-commercial-writing"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5468,
+      "skills": [
+        "digital-research-skills/skill-writing",
+        "linux-skills/skill-writing"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5467,
+      "skills": [
+        "chwezi-dev-engine/ai-cost-and-metering",
+        "srs-skills/13-saas-billing-and-metering-spec"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5444,
+      "skills": [
+        "chwezi-dev-engine/premium-software-product-execution",
+        "proposal-skills/premium-client-proposal-strategy"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5441,
+      "skills": [
+        "business-plan-skills/saas-pricing-and-packaging-strategy",
+        "srs-skills/12-saas-pricing-and-packaging-spec"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5434,
+      "skills": [
+        "business-plan-skills/content-writing",
+        "social-media-skills/content-writing"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5414,
+      "skills": [
+        "chwezi-dev-engine/ai-slop-audit",
+        "social-media-skills/ai-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5395,
+      "skills": [
+        "digital-research-skills/anti-ai-slop",
+        "social-media-skills/anti-ai-slop"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5383,
+      "skills": [
+        "digital-research-skills/ai-slop-audit",
+        "proposal-skills/anti-ai-slop"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5369,
+      "skills": [
+        "proposal-skills/blog-writer",
+        "social-media-skills/blog-idea-generator"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5354,
+      "skills": [
+        "chwezi-accounting-doctrine/retail-and-pos-accounting-pack",
+        "proposal-skills/retail-transformation-proposal"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5347,
+      "skills": [
+        "design-system-skills/hospitality-hotel-restaurant",
+        "srs-skills/hospitality-operating-model-srs"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5347,
+      "skills": [
+        "linux-skills/skill-writing",
+        "website-skills/skill-writing"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5346,
+      "skills": [
+        "chwezi-accounting-doctrine/kaizen-engine-and-product-improvement",
+        "linux-skills/kaizen-improvement-system"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5337,
+      "skills": [
+        "linux-skills/linux-ngo-cyber-resilience",
+        "proposal-skills/civil-society-cyber-resilience"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.532,
+      "skills": [
+        "business-plan-skills/skill-safety-audit",
+        "website-skills/skill-safety-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5313,
+      "skills": [
+        "linux-skills/kaizen-improvement-system",
+        "proposal-skills/kaizen-improvement-system"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5297,
+      "skills": [
+        "business-plan-skills/ai-slop-audit",
+        "social-media-skills/anti-ai-slop"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5295,
+      "skills": [
+        "proposal-skills/blog-idea-generator",
+        "social-media-skills/content-ideas"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5288,
+      "skills": [
+        "social-media-skills/anti-ai-slop",
+        "srs-skills/28-anti-ai-slop"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5263,
+      "skills": [
+        "business-plan-skills/skill-safety-audit",
+        "digital-research-skills/skill-safety-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5259,
+      "skills": [
+        "business-plan-skills/kaizen-improvement-system",
+        "chwezi-accounting-doctrine/kaizen-engine-and-product-improvement"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5243,
+      "skills": [
+        "business-plan-skills/kaizen-improvement-system",
+        "linux-skills/kaizen-improvement-system"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5243,
+      "skills": [
+        "proposal-skills/blog-writer",
+        "social-media-skills/blog-writer"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5239,
+      "skills": [
+        "chwezi-dev-engine/anti-ai-slop",
+        "proposal-skills/anti-ai-slop"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5208,
+      "skills": [
+        "digital-research-skills/skill-writing",
+        "website-skills/skill-writing"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5204,
+      "skills": [
+        "business-plan-skills/saas-pricing-and-packaging-strategy",
+        "proposal-skills/saas-pricing-and-packaging-proposal"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.52,
+      "skills": [
+        "social-media-skills/anti-ai-slop",
+        "srs-skills/29-ai-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5197,
+      "skills": [
+        "digital-research-skills/anti-ai-slop",
+        "srs-skills/28-anti-ai-slop"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5193,
+      "skills": [
+        "chwezi-accounting-doctrine/hospitality-and-restaurant-pack",
+        "design-system-skills/hospitality-hotel-restaurant"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5192,
+      "skills": [
+        "business-plan-skills/ai-slop-audit",
+        "design-system-skills/visual-product-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.518,
+      "skills": [
+        "proposal-skills/kaizen-improvement-system",
+        "website-skills/kaizen-engine-and-product-improvement"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5179,
+      "skills": [
+        "chwezi-accounting-doctrine/kaizen-engine-and-product-improvement",
+        "chwezi-dev-engine/kaizen-improvement-system"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5175,
+      "skills": [
+        "proposal-skills/premium-commercial-writing",
+        "website-skills/premium-commercial-writing"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5171,
+      "skills": [
+        "business-plan-skills/anti-ai-slop",
+        "digital-research-skills/anti-ai-slop"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5163,
+      "skills": [
+        "business-plan-skills/saas-lifecycle-email-and-retention",
+        "chwezi-dev-engine/saas-lifecycle-email-orchestration"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5154,
+      "skills": [
+        "chwezi-accounting-doctrine/hospitality-and-restaurant-pack",
+        "chwezi-dev-engine/hospitality-hotel-restaurant-systems"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5151,
+      "skills": [
+        "chwezi-dev-engine/ai-incident-response",
+        "srs-skills/14-ai-incident-response-runbook"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5149,
+      "skills": [
+        "chwezi-dev-engine/kaizen-improvement-system",
+        "proposal-skills/kaizen-improvement-system"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.513,
+      "skills": [
+        "business-plan-skills/anti-ai-slop",
+        "proposal-skills/ai-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5114,
+      "skills": [
+        "chwezi-accounting-doctrine/kaizen-engine-and-product-improvement",
+        "windows-admin-engine-skills/windows-kaizen-engine-and-product-improvement"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5111,
+      "skills": [
+        "proposal-skills/kaizen-improvement-system",
+        "srs-skills/31-kaizen-engine-and-product-improvement"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5109,
+      "skills": [
+        "chwezi-dev-engine/ai-agent-multi-agent-coordination",
+        "srs-skills/15-ai-agent-multi-agent-coordination-spec"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5094,
+      "skills": [
+        "business-plan-skills/blog-idea-generator",
+        "social-media-skills/content-ideas"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5089,
+      "skills": [
+        "digital-research-skills/anti-ai-slop",
+        "proposal-skills/ai-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5087,
+      "skills": [
+        "chwezi-dev-engine/ai-analytics",
+        "social-media-skills/ai-predictive-analytics-social"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5086,
+      "skills": [
+        "business-plan-skills/kaizen-improvement-system",
+        "chwezi-dev-engine/kaizen-improvement-system"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5084,
+      "skills": [
+        "proposal-skills/ai-on-saas-business-case-and-roi",
+        "social-media-skills/meta-roi-framework"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5076,
+      "skills": [
+        "chwezi-accounting-doctrine/hospitality-and-restaurant-pack",
+        "social-media-skills/hospitality-hotel-restaurant"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5063,
+      "skills": [
+        "design-system-skills/ecommerce-and-checkout-ux",
+        "website-skills/ecommerce-checkout"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5049,
+      "skills": [
+        "business-plan-skills/hospitality-hotel-restaurant",
+        "chwezi-accounting-doctrine/hospitality-and-restaurant-pack"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5041,
+      "skills": [
+        "business-plan-skills/anti-ai-slop",
+        "srs-skills/29-ai-slop-audit"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5033,
+      "skills": [
+        "business-plan-skills/saas-lifecycle-email-and-retention",
+        "srs-skills/07-saas-lifecycle-email-strategy-doc"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5017,
+      "skills": [
+        "chwezi-dev-engine/anti-ai-slop",
+        "digital-research-skills/anti-ai-slop"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5013,
+      "skills": [
+        "business-plan-skills/saas-pricing-and-packaging-strategy",
+        "proposal-skills/ai-on-saas-pricing-and-packaging-proposal"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.5007,
+      "skills": [
+        "business-plan-skills/meta-agent-sla-financial-controls",
+        "proposal-skills/ai-agent-sla-and-credit-schedule"
+      ],
+      "declared": false,
+      "disposition": null
+    }
+  ],
+  "within_engine_pairs": [
+    {
+      "score": 0.9656,
+      "skills": [
+        "business-plan-skills/saas-agent-unit-economics-and-cogs",
+        "business-plan-skills/saas-ai-unit-economics-and-cogs"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.9533,
+      "skills": [
+        "business-plan-skills/saas-agent-risk-and-stress-test",
+        "business-plan-skills/saas-ai-risk-and-stress-test"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.9517,
+      "skills": [
+        "business-plan-skills/saas-agent-funding-stage-playbook",
+        "business-plan-skills/saas-ai-funding-stage-playbook"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.9497,
+      "skills": [
+        "business-plan-skills/saas-agent-sustainability-and-ethics",
+        "business-plan-skills/saas-ai-sustainability-and-ethics"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.9474,
+      "skills": [
+        "business-plan-skills/saas-agent-talent-strategy",
+        "business-plan-skills/saas-ai-talent-strategy"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.9451,
+      "skills": [
+        "business-plan-skills/saas-agent-product-strategy-and-roadmap",
+        "business-plan-skills/saas-ai-product-strategy-and-roadmap"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.9073,
+      "skills": [
+        "business-plan-skills/saas-agent-pricing-strategy",
+        "business-plan-skills/saas-ai-pricing-strategy"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.9023,
+      "skills": [
+        "business-plan-skills/13-implementation-timeline",
+        "business-plan-skills/saas-agent-implementation-timeline"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.8873,
+      "skills": [
+        "social-media-skills/platform-instagram",
+        "social-media-skills/platform-instagram-visual-system"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.8586,
+      "skills": [
+        "social-media-skills/platform-instagram",
+        "social-media-skills/platform-instagram-growth"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.8454,
+      "skills": [
+        "social-media-skills/playbook-ai-automation-workflow",
+        "social-media-skills/playbook-marketing-automation"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.841,
+      "skills": [
+        "proposal-skills/ai-on-saas-poc-and-pilot-scoping",
+        "proposal-skills/saas-poc-and-pilot-scoping"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.8337,
+      "skills": [
+        "proposal-skills/ai-on-saas-vertical-positioning",
+        "proposal-skills/saas-vertical-positioning"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.8321,
+      "skills": [
+        "social-media-skills/ai-data-foundation-audit",
+        "social-media-skills/ai-data-foundation-plan"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.8299,
+      "skills": [
+        "social-media-skills/framework-community-trust",
+        "social-media-skills/framework-digital-transparency"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.8258,
+      "skills": [
+        "business-plan-skills/kenya",
+        "business-plan-skills/tanzania"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.8168,
+      "skills": [
+        "social-media-skills/biz-dev-positioning",
+        "social-media-skills/biz-dev-practitioner-positioning"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.8046,
+      "skills": [
+        "linux-skills/linux-mysql-mariadb",
+        "linux-skills/linux-postgresql"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7903,
+      "skills": [
+        "social-media-skills/platform-linkedin",
+        "social-media-skills/platform-linkedin-company-pages"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7854,
+      "skills": [
+        "social-media-skills/biz-dev-positioning",
+        "social-media-skills/biz-dev-proposal"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7824,
+      "skills": [
+        "proposal-skills/east-african-english",
+        "proposal-skills/language-standards"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7753,
+      "skills": [
+        "business-plan-skills/meta-agent-valuation-adjustments",
+        "business-plan-skills/meta-ai-valuation-adjustments"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7618,
+      "skills": [
+        "social-media-skills/platform-instagram-growth",
+        "social-media-skills/platform-instagram-visual-system"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7597,
+      "skills": [
+        "design-system-skills/accessible-color-and-contrast",
+        "design-system-skills/color-system-and-palette"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.7563,
+      "skills": [
+        "srs-skills/09-saas-incident-response-and-postmortem",
+        "srs-skills/14-ai-incident-response-runbook"
+      ],
+      "declared": false,
+      "disposition": null
+    },
+    {
+      "score": 0.752,
+      "skills": [
+        "website-skills/blog-idea-generator",
+        "website-skills/blog-writer"
+      ],
+      "declared": false,
+      "disposition": null
+    }
+  ],
+  "findings": [
+    {
+      "severity": "error",
+      "code": "undeclared-collision",
+      "message": "chwezi-dev-engine/validation-contract <-> digital-research-skills/validation-contract cosine 1.000 >= 0.75 and not in the ownership register",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "business-plan-skills/saas-agent-unit-economics-and-cogs <-> business-plan-skills/saas-ai-unit-economics-and-cogs cosine 0.966 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "business-plan-skills/saas-agent-risk-and-stress-test <-> business-plan-skills/saas-ai-risk-and-stress-test cosine 0.953 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "business-plan-skills/saas-agent-funding-stage-playbook <-> business-plan-skills/saas-ai-funding-stage-playbook cosine 0.952 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "business-plan-skills/saas-agent-sustainability-and-ethics <-> business-plan-skills/saas-ai-sustainability-and-ethics cosine 0.950 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "business-plan-skills/saas-agent-talent-strategy <-> business-plan-skills/saas-ai-talent-strategy cosine 0.947 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "business-plan-skills/saas-agent-product-strategy-and-roadmap <-> business-plan-skills/saas-ai-product-strategy-and-roadmap cosine 0.945 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "business-plan-skills/saas-agent-pricing-strategy <-> business-plan-skills/saas-ai-pricing-strategy cosine 0.907 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "business-plan-skills/13-implementation-timeline <-> business-plan-skills/saas-agent-implementation-timeline cosine 0.902 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "social-media-skills/platform-instagram <-> social-media-skills/platform-instagram-visual-system cosine 0.887 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "social-media-skills/platform-instagram <-> social-media-skills/platform-instagram-growth cosine 0.859 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "social-media-skills/playbook-ai-automation-workflow <-> social-media-skills/playbook-marketing-automation cosine 0.845 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "error",
+      "code": "undeclared-collision",
+      "message": "proposal-skills/hospitality-hotel-restaurant <-> social-media-skills/hospitality-hotel-restaurant cosine 0.842 >= 0.75 and not in the ownership register",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "proposal-skills/ai-on-saas-poc-and-pilot-scoping <-> proposal-skills/saas-poc-and-pilot-scoping cosine 0.841 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "error",
+      "code": "undeclared-collision",
+      "message": "business-plan-skills/hospitality-hotel-restaurant <-> proposal-skills/hospitality-hotel-restaurant cosine 0.834 >= 0.75 and not in the ownership register",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "proposal-skills/ai-on-saas-vertical-positioning <-> proposal-skills/saas-vertical-positioning cosine 0.834 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "social-media-skills/ai-data-foundation-audit <-> social-media-skills/ai-data-foundation-plan cosine 0.832 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "social-media-skills/framework-community-trust <-> social-media-skills/framework-digital-transparency cosine 0.830 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "business-plan-skills/kenya <-> business-plan-skills/tanzania cosine 0.826 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "error",
+      "code": "undeclared-collision",
+      "message": "chwezi-dev-engine/ai-slop-audit <-> digital-research-skills/ai-slop-audit cosine 0.826 >= 0.75 and not in the ownership register",
+      "path": null
+    },
+    {
+      "severity": "error",
+      "code": "undeclared-collision",
+      "message": "chwezi-dev-engine/excel-spreadsheets <-> digital-research-skills/excel-spreadsheets cosine 0.823 >= 0.75 and not in the ownership register",
+      "path": null
+    },
+    {
+      "severity": "error",
+      "code": "undeclared-collision",
+      "message": "proposal-skills/language-standards <-> social-media-skills/east-african-english cosine 0.822 >= 0.75 and not in the ownership register",
+      "path": null
+    },
+    {
+      "severity": "error",
+      "code": "undeclared-collision",
+      "message": "chwezi-dev-engine/hospitality-hotel-restaurant-systems <-> proposal-skills/hospitality-hotel-restaurant cosine 0.817 >= 0.75 and not in the ownership register",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "social-media-skills/biz-dev-positioning <-> social-media-skills/biz-dev-practitioner-positioning cosine 0.817 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "error",
+      "code": "undeclared-collision",
+      "message": "business-plan-skills/anti-ai-slop <-> chwezi-dev-engine/anti-ai-slop cosine 0.816 >= 0.75 and not in the ownership register",
+      "path": null
+    },
+    {
+      "severity": "error",
+      "code": "undeclared-collision",
+      "message": "business-plan-skills/hospitality-hotel-restaurant <-> social-media-skills/hospitality-hotel-restaurant cosine 0.816 >= 0.75 and not in the ownership register",
+      "path": null
+    },
+    {
+      "severity": "error",
+      "code": "undeclared-collision",
+      "message": "business-plan-skills/blog-idea-generator <-> proposal-skills/blog-idea-generator cosine 0.810 >= 0.75 and not in the ownership register",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "linux-skills/linux-mysql-mariadb <-> linux-skills/linux-postgresql cosine 0.805 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "error",
+      "code": "undeclared-collision",
+      "message": "business-plan-skills/blog-idea-generator <-> website-skills/blog-idea-generator cosine 0.802 >= 0.75 and not in the ownership register",
+      "path": null
+    },
+    {
+      "severity": "error",
+      "code": "undeclared-collision",
+      "message": "design-system-skills/hospitality-hotel-restaurant <-> proposal-skills/hospitality-hotel-restaurant cosine 0.799 >= 0.75 and not in the ownership register",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "social-media-skills/platform-linkedin <-> social-media-skills/platform-linkedin-company-pages cosine 0.790 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "error",
+      "code": "undeclared-collision",
+      "message": "digital-research-skills/ai-slop-audit <-> srs-skills/29-ai-slop-audit cosine 0.789 >= 0.75 and not in the ownership register",
+      "path": null
+    },
+    {
+      "severity": "error",
+      "code": "undeclared-collision",
+      "message": "chwezi-dev-engine/hospitality-hotel-restaurant-systems <-> social-media-skills/hospitality-hotel-restaurant cosine 0.787 >= 0.75 and not in the ownership register",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "social-media-skills/biz-dev-positioning <-> social-media-skills/biz-dev-proposal cosine 0.785 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "error",
+      "code": "undeclared-collision",
+      "message": "proposal-skills/east-african-english <-> social-media-skills/east-african-english cosine 0.783 >= 0.75 and not in the ownership register",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "proposal-skills/east-african-english <-> proposal-skills/language-standards cosine 0.782 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "error",
+      "code": "undeclared-collision",
+      "message": "business-plan-skills/hospitality-hotel-restaurant <-> chwezi-dev-engine/hospitality-hotel-restaurant-systems cosine 0.778 >= 0.75 and not in the ownership register",
+      "path": null
+    },
+    {
+      "severity": "error",
+      "code": "undeclared-collision",
+      "message": "chwezi-dev-engine/hospitality-hotel-restaurant-systems <-> design-system-skills/hospitality-hotel-restaurant cosine 0.776 >= 0.75 and not in the ownership register",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "business-plan-skills/meta-agent-valuation-adjustments <-> business-plan-skills/meta-ai-valuation-adjustments cosine 0.775 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "error",
+      "code": "undeclared-collision",
+      "message": "business-plan-skills/blog-idea-generator <-> social-media-skills/blog-idea-generator cosine 0.769 >= 0.75 and not in the ownership register",
+      "path": null
+    },
+    {
+      "severity": "error",
+      "code": "undeclared-collision",
+      "message": "proposal-skills/blog-idea-generator <-> website-skills/blog-idea-generator cosine 0.763 >= 0.75 and not in the ownership register",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "social-media-skills/platform-instagram-growth <-> social-media-skills/platform-instagram-visual-system cosine 0.762 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "error",
+      "code": "undeclared-collision",
+      "message": "chwezi-accounting-doctrine/electronic-fiscal-taxing <-> chwezi-dev-engine/electronic-fiscal-taxing cosine 0.760 >= 0.75 and not in the ownership register",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "design-system-skills/accessible-color-and-contrast <-> design-system-skills/color-system-and-palette cosine 0.760 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "error",
+      "code": "undeclared-collision",
+      "message": "design-system-skills/hospitality-hotel-restaurant <-> social-media-skills/hospitality-hotel-restaurant cosine 0.759 >= 0.75 and not in the ownership register",
+      "path": null
+    },
+    {
+      "severity": "error",
+      "code": "undeclared-collision",
+      "message": "social-media-skills/east-african-english <-> website-skills/east-african-english cosine 0.757 >= 0.75 and not in the ownership register",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "srs-skills/09-saas-incident-response-and-postmortem <-> srs-skills/14-ai-incident-response-runbook cosine 0.756 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "within-engine-collision",
+      "message": "website-skills/blog-idea-generator <-> website-skills/blog-writer cosine 0.752 (reported, not gated)",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/blog-idea-generator <-> social-media-skills/blog-idea-generator cosine 0.750 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/east-african-english <-> proposal-skills/east-african-english cosine 0.742 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/hospitality-hotel-restaurant <-> srs-skills/hospitality-operating-model-srs cosine 0.740 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/hospitality-hotel-restaurant <-> design-system-skills/hospitality-hotel-restaurant cosine 0.731 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/ai-slop-audit <-> srs-skills/29-ai-slop-audit cosine 0.727 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/ai-slop-audit <-> proposal-skills/ai-slop-audit cosine 0.721 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/demand-forecasting <-> social-media-skills/demand-forecasting cosine 0.718 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/blog-writer <-> website-skills/blog-writer cosine 0.716 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/project-requirements <-> digital-research-skills/project-requirements cosine 0.712 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/east-african-english <-> proposal-skills/language-standards cosine 0.712 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/premium-commercial-writing <-> social-media-skills/premium-commercial-writing cosine 0.710 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/blog-idea-generator <-> website-skills/blog-writer cosine 0.710 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/ai-slop-audit <-> digital-research-skills/ai-slop-audit cosine 0.705 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/language-standards <-> proposal-skills/language-standards cosine 0.703 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "social-media-skills/french-native-copy <-> website-skills/french-native-copy cosine 0.703 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/saas-ai-moat-and-defensibility <-> srs-skills/11-saas-moat-and-defensibility-plan cosine 0.697 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "social-media-skills/blog-idea-generator <-> website-skills/blog-idea-generator cosine 0.694 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/language-standards <-> website-skills/east-african-english cosine 0.692 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/blog-writer <-> website-skills/blog-writer cosine 0.691 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/ai-slop-audit <-> srs-skills/29-ai-slop-audit cosine 0.690 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "digital-research-skills/east-african-english <-> website-skills/east-african-english cosine 0.689 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/hospitality-hotel-restaurant <-> website-skills/hospitality-website-product cosine 0.687 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/east-african-english <-> social-media-skills/east-african-english cosine 0.687 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "linux-skills/skill-writing <-> social-media-skills/skill-writing cosine 0.686 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/east-african-english <-> website-skills/east-african-english cosine 0.678 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/update-claude-documentation <-> website-skills/update-claude-documentation cosine 0.678 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/blog-writer <-> social-media-skills/blog-writer cosine 0.676 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "digital-research-skills/ai-slop-audit <-> proposal-skills/ai-slop-audit cosine 0.674 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/update-claude-documentation <-> digital-research-skills/update-claude-documentation cosine 0.674 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/language-standards <-> proposal-skills/east-african-english cosine 0.673 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "social-media-skills/swahili-native-copy <-> website-skills/swahili-native-copy cosine 0.670 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/update-claude-documentation <-> website-skills/update-claude-documentation cosine 0.669 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "social-media-skills/skill-writing <-> website-skills/skill-writing cosine 0.668 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/00-client-intake <-> social-media-skills/00-client-intake cosine 0.668 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "digital-research-skills/skill-writing <-> social-media-skills/skill-writing cosine 0.662 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/update-claude-documentation <-> proposal-skills/update-claude-documentation cosine 0.661 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/blog-writer <-> proposal-skills/blog-writer cosine 0.657 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/anti-ai-slop <-> social-media-skills/anti-ai-slop cosine 0.654 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/blog-idea-generator <-> website-skills/blog-writer cosine 0.653 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-accounting-doctrine/kaizen-engine-and-product-improvement <-> social-media-skills/kaizen-improvement-system cosine 0.653 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/skill-writing <-> proposal-skills/skill-writing cosine 0.651 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/full-coverage-saas-seeding <-> srs-skills/10-full-coverage-saas-seeding cosine 0.650 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "srs-skills/hospitality-operating-model-srs <-> website-skills/hospitality-website-product cosine 0.650 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/kaizen-improvement-system <-> social-media-skills/kaizen-improvement-system cosine 0.648 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "digital-research-skills/skill-safety-audit <-> proposal-skills/skill-safety-audit cosine 0.648 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "social-media-skills/hospitality-hotel-restaurant <-> website-skills/hospitality-website-product cosine 0.646 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "digital-research-skills/east-african-english <-> social-media-skills/east-african-english cosine 0.642 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/language-standards <-> social-media-skills/east-african-english cosine 0.642 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/kaizen-improvement-system <-> social-media-skills/kaizen-improvement-system cosine 0.642 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/ai-agent-safety-and-red-team <-> srs-skills/05-ai-red-team-test-plan cosine 0.641 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/hospitality-hotel-restaurant <-> srs-skills/hospitality-operating-model-srs cosine 0.638 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "digital-research-skills/east-african-english <-> proposal-skills/east-african-english cosine 0.638 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/hospitality-hotel-restaurant <-> website-skills/hospitality-website-product cosine 0.637 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/ai-slop-audit <-> proposal-skills/ai-slop-audit cosine 0.637 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/ai-slop-audit <-> srs-skills/29-ai-slop-audit cosine 0.635 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "digital-research-skills/anti-ai-slop <-> proposal-skills/anti-ai-slop cosine 0.631 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/game-3d-asset-pipeline <-> srs-skills/18-game-3d-content-and-blender-pipeline-specification cosine 0.630 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/skill-writing <-> social-media-skills/skill-writing cosine 0.628 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/blog-writer <-> website-skills/blog-idea-generator cosine 0.626 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "social-media-skills/hospitality-hotel-restaurant <-> srs-skills/hospitality-operating-model-srs cosine 0.625 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/language-standards <-> social-media-skills/language-standards cosine 0.623 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-accounting-doctrine/kaizen-engine-and-product-improvement <-> website-skills/kaizen-engine-and-product-improvement cosine 0.619 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/professional-word-output <-> digital-research-skills/professional-word-output cosine 0.617 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "social-media-skills/language-standards <-> website-skills/language-standards cosine 0.614 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-accounting-doctrine/kaizen-engine-and-product-improvement <-> srs-skills/31-kaizen-engine-and-product-improvement cosine 0.611 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/premium-commercial-writing <-> social-media-skills/premium-commercial-writing cosine 0.610 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "digital-research-skills/anti-ai-slop <-> srs-skills/29-ai-slop-audit cosine 0.610 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/anti-ai-slop <-> srs-skills/28-anti-ai-slop cosine 0.610 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/east-african-english <-> website-skills/east-african-english cosine 0.609 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/meta-premium-go-to-market <-> proposal-skills/premium-client-proposal-strategy cosine 0.608 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/ai-slop-audit <-> chwezi-dev-engine/ai-slop-audit cosine 0.608 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/hospitality-hotel-restaurant-systems <-> website-skills/hospitality-website-product cosine 0.607 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/hospitality-hotel-restaurant-systems <-> srs-skills/hospitality-operating-model-srs cosine 0.606 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "digital-research-skills/east-african-english <-> proposal-skills/language-standards cosine 0.606 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/ai-slop-audit <-> social-media-skills/ai-slop-audit cosine 0.605 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/01-executive-summary <-> proposal-skills/02-executive-summary cosine 0.602 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "linux-skills/kaizen-improvement-system <-> social-media-skills/kaizen-improvement-system cosine 0.600 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/anti-ai-slop <-> srs-skills/29-ai-slop-audit cosine 0.599 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/pitch-deck <-> design-system-skills/deck-system cosine 0.597 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/blog-idea-generator <-> proposal-skills/blog-writer cosine 0.596 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/meta-operational-readiness-due-diligence <-> proposal-skills/operational-readiness-and-localisation cosine 0.596 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/retail-transformation-proposal <-> srs-skills/retail-operating-model-srs cosine 0.596 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/skill-composition-standards <-> digital-research-skills/skill-composition-standards cosine 0.594 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/ai-slop-audit <-> proposal-skills/anti-ai-slop cosine 0.593 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "social-media-skills/ai-slop-audit <-> srs-skills/29-ai-slop-audit cosine 0.587 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/blog-writer <-> website-skills/blog-idea-generator cosine 0.584 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "srs-skills/31-kaizen-engine-and-product-improvement <-> website-skills/kaizen-engine-and-product-improvement cosine 0.582 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "digital-research-skills/update-claude-documentation <-> website-skills/update-claude-documentation cosine 0.582 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/kaizen-improvement-system <-> social-media-skills/kaizen-improvement-system cosine 0.581 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "design-system-skills/visual-product-slop-audit <-> social-media-skills/ai-slop-audit cosine 0.579 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/ai-agent-safety-and-red-team <-> srs-skills/07-ai-agent-red-team-test-plan cosine 0.578 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/skill-writing <-> website-skills/skill-writing cosine 0.577 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/ai-slop-audit <-> social-media-skills/anti-ai-slop cosine 0.576 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "digital-research-skills/skill-writing <-> proposal-skills/skill-writing cosine 0.574 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/ai-slop-audit <-> digital-research-skills/anti-ai-slop cosine 0.574 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/anti-ai-slop <-> social-media-skills/anti-ai-slop cosine 0.572 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-accounting-doctrine/kaizen-engine-and-product-improvement <-> proposal-skills/kaizen-improvement-system cosine 0.572 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/east-african-english <-> digital-research-skills/east-african-english cosine 0.571 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/skill-safety-audit <-> proposal-skills/skill-safety-audit cosine 0.570 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/skill-writing <-> social-media-skills/skill-writing cosine 0.569 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/ai-slop-audit <-> social-media-skills/ai-slop-audit cosine 0.566 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/saas-agent-revenue-recognition <-> chwezi-accounting-doctrine/ifrs-revenue-recognition cosine 0.565 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "design-system-skills/hospitality-hotel-restaurant <-> website-skills/hospitality-website-product cosine 0.564 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/meta-due-diligence <-> digital-research-skills/due-diligence cosine 0.564 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/anti-ai-slop <-> social-media-skills/anti-ai-slop cosine 0.563 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/language-standards <-> social-media-skills/language-standards cosine 0.562 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/kaizen-improvement-system <-> proposal-skills/kaizen-improvement-system cosine 0.561 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/ai-incident-response <-> srs-skills/09-saas-incident-response-and-postmortem cosine 0.561 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-accounting-doctrine/e-invoicing-and-fiscal-device-integration <-> chwezi-dev-engine/electronic-fiscal-taxing cosine 0.560 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "linux-skills/skill-writing <-> proposal-skills/skill-writing cosine 0.558 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/language-standards <-> website-skills/east-african-english cosine 0.558 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "social-media-skills/kaizen-improvement-system <-> website-skills/kaizen-engine-and-product-improvement cosine 0.557 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/skill-safety-audit <-> website-skills/skill-safety-audit cosine 0.555 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "social-media-skills/blog-writer <-> website-skills/blog-writer cosine 0.554 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/idea-testing <-> social-media-skills/content-ideas cosine 0.553 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "design-system-skills/visual-product-slop-audit <-> proposal-skills/ai-slop-audit cosine 0.552 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/ai-prompt-engineering <-> social-media-skills/image-prompt-engineer cosine 0.552 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "social-media-skills/kaizen-improvement-system <-> srs-skills/31-kaizen-engine-and-product-improvement cosine 0.550 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "social-media-skills/premium-commercial-writing <-> website-skills/premium-commercial-writing cosine 0.550 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/skill-writing <-> linux-skills/skill-writing cosine 0.549 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/language-standards <-> website-skills/language-standards cosine 0.549 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "digital-research-skills/ai-slop-audit <-> social-media-skills/ai-slop-audit cosine 0.549 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-accounting-doctrine/hospitality-and-restaurant-pack <-> proposal-skills/hospitality-hotel-restaurant cosine 0.548 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/ai-prompt-engineering <-> social-media-skills/prompt-engineering-library cosine 0.548 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "social-media-skills/blog-idea-generator <-> website-skills/blog-writer cosine 0.547 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/premium-commercial-writing <-> proposal-skills/premium-commercial-writing cosine 0.547 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "digital-research-skills/skill-writing <-> linux-skills/skill-writing cosine 0.547 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/ai-cost-and-metering <-> srs-skills/13-saas-billing-and-metering-spec cosine 0.547 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/premium-software-product-execution <-> proposal-skills/premium-client-proposal-strategy cosine 0.544 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/saas-pricing-and-packaging-strategy <-> srs-skills/12-saas-pricing-and-packaging-spec cosine 0.544 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/content-writing <-> social-media-skills/content-writing cosine 0.543 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/ai-slop-audit <-> social-media-skills/ai-slop-audit cosine 0.541 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "digital-research-skills/anti-ai-slop <-> social-media-skills/anti-ai-slop cosine 0.539 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "digital-research-skills/ai-slop-audit <-> proposal-skills/anti-ai-slop cosine 0.538 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/blog-writer <-> social-media-skills/blog-idea-generator cosine 0.537 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-accounting-doctrine/retail-and-pos-accounting-pack <-> proposal-skills/retail-transformation-proposal cosine 0.535 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "design-system-skills/hospitality-hotel-restaurant <-> srs-skills/hospitality-operating-model-srs cosine 0.535 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "linux-skills/skill-writing <-> website-skills/skill-writing cosine 0.535 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-accounting-doctrine/kaizen-engine-and-product-improvement <-> linux-skills/kaizen-improvement-system cosine 0.535 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "linux-skills/linux-ngo-cyber-resilience <-> proposal-skills/civil-society-cyber-resilience cosine 0.534 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/skill-safety-audit <-> website-skills/skill-safety-audit cosine 0.532 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "linux-skills/kaizen-improvement-system <-> proposal-skills/kaizen-improvement-system cosine 0.531 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/ai-slop-audit <-> social-media-skills/anti-ai-slop cosine 0.530 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/blog-idea-generator <-> social-media-skills/content-ideas cosine 0.529 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "social-media-skills/anti-ai-slop <-> srs-skills/28-anti-ai-slop cosine 0.529 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/skill-safety-audit <-> digital-research-skills/skill-safety-audit cosine 0.526 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/kaizen-improvement-system <-> chwezi-accounting-doctrine/kaizen-engine-and-product-improvement cosine 0.526 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/kaizen-improvement-system <-> linux-skills/kaizen-improvement-system cosine 0.524 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/blog-writer <-> social-media-skills/blog-writer cosine 0.524 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/anti-ai-slop <-> proposal-skills/anti-ai-slop cosine 0.524 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "digital-research-skills/skill-writing <-> website-skills/skill-writing cosine 0.521 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/saas-pricing-and-packaging-strategy <-> proposal-skills/saas-pricing-and-packaging-proposal cosine 0.520 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "social-media-skills/anti-ai-slop <-> srs-skills/29-ai-slop-audit cosine 0.520 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "digital-research-skills/anti-ai-slop <-> srs-skills/28-anti-ai-slop cosine 0.520 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-accounting-doctrine/hospitality-and-restaurant-pack <-> design-system-skills/hospitality-hotel-restaurant cosine 0.519 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/ai-slop-audit <-> design-system-skills/visual-product-slop-audit cosine 0.519 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/kaizen-improvement-system <-> website-skills/kaizen-engine-and-product-improvement cosine 0.518 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-accounting-doctrine/kaizen-engine-and-product-improvement <-> chwezi-dev-engine/kaizen-improvement-system cosine 0.518 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/premium-commercial-writing <-> website-skills/premium-commercial-writing cosine 0.517 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/anti-ai-slop <-> digital-research-skills/anti-ai-slop cosine 0.517 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/saas-lifecycle-email-and-retention <-> chwezi-dev-engine/saas-lifecycle-email-orchestration cosine 0.516 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-accounting-doctrine/hospitality-and-restaurant-pack <-> chwezi-dev-engine/hospitality-hotel-restaurant-systems cosine 0.515 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/ai-incident-response <-> srs-skills/14-ai-incident-response-runbook cosine 0.515 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/kaizen-improvement-system <-> proposal-skills/kaizen-improvement-system cosine 0.515 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/anti-ai-slop <-> proposal-skills/ai-slop-audit cosine 0.513 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-accounting-doctrine/kaizen-engine-and-product-improvement <-> windows-admin-engine-skills/windows-kaizen-engine-and-product-improvement cosine 0.511 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/kaizen-improvement-system <-> srs-skills/31-kaizen-engine-and-product-improvement cosine 0.511 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/ai-agent-multi-agent-coordination <-> srs-skills/15-ai-agent-multi-agent-coordination-spec cosine 0.511 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/blog-idea-generator <-> social-media-skills/content-ideas cosine 0.509 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "digital-research-skills/anti-ai-slop <-> proposal-skills/ai-slop-audit cosine 0.509 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/ai-analytics <-> social-media-skills/ai-predictive-analytics-social cosine 0.509 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/kaizen-improvement-system <-> chwezi-dev-engine/kaizen-improvement-system cosine 0.509 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "proposal-skills/ai-on-saas-business-case-and-roi <-> social-media-skills/meta-roi-framework cosine 0.508 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-accounting-doctrine/hospitality-and-restaurant-pack <-> social-media-skills/hospitality-hotel-restaurant cosine 0.508 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "design-system-skills/ecommerce-and-checkout-ux <-> website-skills/ecommerce-checkout cosine 0.506 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/hospitality-hotel-restaurant <-> chwezi-accounting-doctrine/hospitality-and-restaurant-pack cosine 0.505 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/anti-ai-slop <-> srs-skills/29-ai-slop-audit cosine 0.504 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/saas-lifecycle-email-and-retention <-> srs-skills/07-saas-lifecycle-email-strategy-doc cosine 0.503 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "chwezi-dev-engine/anti-ai-slop <-> digital-research-skills/anti-ai-slop cosine 0.502 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/saas-pricing-and-packaging-strategy <-> proposal-skills/ai-on-saas-pricing-and-packaging-proposal cosine 0.501 >= 0.5",
+      "path": null
+    },
+    {
+      "severity": "warning",
+      "code": "collision-warning",
+      "message": "business-plan-skills/meta-agent-sla-financial-controls <-> proposal-skills/ai-agent-sla-and-credit-schedule cosine 0.501 >= 0.5",
+      "path": null
+    }
+  ]
+}

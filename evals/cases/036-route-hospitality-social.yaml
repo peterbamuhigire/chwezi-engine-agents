@@ -1,0 +1,19 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 036-route-hospitality-social
+task: Plan Instagram marketing and online review replies for a lakeside restaurant and bar.
+fixture_path: evals/fixtures/036-route-hospitality-social
+expected_primary: social-media-skills/hospitality-hotel-restaurant
+run_mode: lexical
+required_observations:
+- social-media-skills/hospitality-hotel-restaurant is the first skill loaded (hospitality pack (mirrored,
+  social slice)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

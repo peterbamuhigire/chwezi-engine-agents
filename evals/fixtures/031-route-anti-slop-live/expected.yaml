@@ -1,0 +1,12 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 031-route-anti-slop-live
+kind: route-oracle
+engines:
+- chwezi-dev-engine
+expected_primary: chwezi-dev-engine/anti-ai-slop
+required_observations:
+- chwezi-dev-engine/anti-ai-slop is the first skill loaded (anti-slop (dev vs business-plan)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

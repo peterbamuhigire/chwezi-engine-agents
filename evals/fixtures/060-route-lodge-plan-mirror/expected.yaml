@@ -1,0 +1,13 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 060-route-lodge-plan-mirror
+kind: route-oracle
+engines:
+- business-plan-skills
+expected_primary: business-plan-skills/hospitality-hotel-restaurant
+required_observations:
+- business-plan-skills/hospitality-hotel-restaurant is the first skill loaded (mirrored dev owned negative
+  (hospitality systems must not win)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

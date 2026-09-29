@@ -1,0 +1,19 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 033-route-ifrs-leases
+task: Account for our five-year office lease under IFRS 16 and prepare the disclosure note.
+fixture_path: evals/fixtures/033-route-ifrs-leases
+expected_primary: chwezi-accounting-doctrine/ifrs-leases
+run_mode: lexical
+required_observations:
+- chwezi-accounting-doctrine/ifrs-leases is the first skill loaded (spreadsheet / finance boundary (finance
+  primary)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

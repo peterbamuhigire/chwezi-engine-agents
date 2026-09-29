@@ -1,0 +1,18 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 049-route-expression-of-interest
+task: Draft an expression of interest for a World Bank consultancy assignment.
+fixture_path: evals/fixtures/049-route-expression-of-interest
+expected_primary: proposal-skills/09-expression-of-interest
+run_mode: lexical
+required_observations:
+- proposal-skills/09-expression-of-interest is the first skill loaded (procurement response (control)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

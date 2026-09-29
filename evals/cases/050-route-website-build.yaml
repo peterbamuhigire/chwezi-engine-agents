@@ -1,0 +1,18 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 050-route-website-build
+task: Build a static company website from our markdown content and photos.
+fixture_path: evals/fixtures/050-route-website-build
+expected_primary: website-skills/website-builder
+run_mode: lexical
+required_observations:
+- website-skills/website-builder is the first skill loaded (website build (control)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

@@ -1,0 +1,20 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 028-route-game-srs
+task: 'Specify requirements for our mobile puzzle game: levels, player progression, in-app purchases and
+  store certification.'
+fixture_path: evals/fixtures/028-route-game-srs
+expected_primary: srs-skills/19-game-software-requirements-specification
+run_mode: lexical
+required_observations:
+- srs-skills/19-game-software-requirements-specification is the first skill loaded (generic SRS vs game
+  SRS (control)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

@@ -1,0 +1,18 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 040-route-paid-social
+task: Plan the paid social budget, audiences and bidding for next quarter's campaign.
+fixture_path: evals/fixtures/040-route-paid-social
+expected_primary: social-media-skills/playbook-paid-social-advertising
+run_mode: lexical
+required_observations:
+- social-media-skills/playbook-paid-social-advertising is the first skill loaded (paid social (control)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

@@ -1,0 +1,18 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 056-route-pr-slop-score-mirror
+task: Score the pull-request description and code comments of our web application for AI slop before merge.
+fixture_path: evals/fixtures/056-route-pr-slop-score-mirror
+expected_primary: chwezi-dev-engine/ai-slop-audit
+run_mode: lexical
+required_observations:
+- chwezi-dev-engine/ai-slop-audit is the first skill loaded (mirrored research owned negative).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

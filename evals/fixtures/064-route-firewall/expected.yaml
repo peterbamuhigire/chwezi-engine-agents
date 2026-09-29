@@ -1,0 +1,12 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 064-route-firewall
+kind: route-oracle
+engines:
+- linux-skills
+expected_primary: linux-skills/linux-firewall-ssl
+required_observations:
+- linux-skills/linux-firewall-ssl is the first skill loaded (Linux networking (control)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

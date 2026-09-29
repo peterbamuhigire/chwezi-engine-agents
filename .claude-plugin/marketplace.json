@@ -36,7 +36,8 @@
       "repository": "https://github.com/peterbamuhigire/srs-skills",
       "license": "MIT",
       "category": "requirements",
-      "strict": false
+      "strict": false,
+      "relevance": {"topic": "requirements specifications", "signals": {"cwd": ["**/requirements", "**/srs"], "filesRead": ["**/*srs*.md", "**/*requirements*.md", "**/*.srs.yaml"]}}
     },
     {
       "name": "business-plan",
@@ -52,7 +53,8 @@
       "repository": "https://github.com/peterbamuhigire/business-plan-skills",
       "license": "MIT",
       "category": "business",
-      "strict": false
+      "strict": false,
+      "relevance": {"topic": "business plans", "signals": {"filesRead": ["**/*business-plan*", "**/*financial-projections*", "**/*feasibility*"]}}
     },
     {
       "name": "website",
@@ -68,7 +70,8 @@
       "repository": "https://github.com/peterbamuhigire/website-skills",
       "license": "MIT",
       "category": "web",
-      "strict": false
+      "strict": false,
+      "relevance": {"topic": "website builds", "signals": {"filesRead": ["**/lighthouserc*.json", "**/lighthouserc*.js"], "cli": ["lighthouse", "lhci"]}}
     },
     {
       "name": "social",
@@ -84,7 +87,8 @@
       "repository": "https://github.com/peterbamuhigire/social-media-skills",
       "license": "MIT",
       "category": "marketing",
-      "strict": false
+      "strict": false,
+      "relevance": {"topic": "digital marketing", "signals": {"filesRead": ["**/*content-calendar*", "**/*campaign-brief*", "**/*media-plan*"]}}
     },
     {
       "name": "linux",
@@ -100,7 +104,8 @@
       "repository": "https://github.com/peterbamuhigire/linux-skills",
       "license": "MIT",
       "category": "infrastructure",
-      "strict": false
+      "strict": false,
+      "relevance": {"topic": "Linux servers", "signals": {"cli": ["systemctl", "journalctl", "ufw", "certbot", "nginx"]}}
     },
     {
       "name": "proposal",
@@ -116,7 +121,8 @@
       "repository": "https://github.com/peterbamuhigire/proposal-skills",
       "license": "MIT",
       "category": "consulting",
-      "strict": false
+      "strict": false,
+      "relevance": {"topic": "proposals and tenders", "signals": {"filesRead": ["**/*terms-of-reference*", "**/*expression-of-interest*", "**/*request-for-proposal*"]}}
     },
     {
       "name": "engineering",
@@ -132,7 +138,8 @@
       "repository": "https://github.com/peterbamuhigire/chwezi-dev-engine",
       "license": "MIT",
       "category": "engineering",
-      "strict": false
+      "strict": false,
+      "relevance": {"topic": "software engineering", "signals": {"filesRead": ["**/composer.json", "**/openapi*.yaml", "**/openapi*.json"], "cli": ["composer", "phpunit", "php"]}}
     },
     {
       "name": "accounting",
@@ -148,7 +155,8 @@
       "repository": "https://github.com/peterbamuhigire/chwezi-accounting-doctrine",
       "license": "MIT",
       "category": "finance",
-      "strict": false
+      "strict": false,
+      "relevance": {"topic": "accounting and IFRS", "signals": {"filesRead": ["**/*.xbrl", "**/trial-balance*", "**/*general-ledger*"]}}
     },
     {
       "name": "design-system",
@@ -164,7 +172,8 @@
       "repository": "https://github.com/peterbamuhigire/design-system-skills",
       "license": "MIT",
       "category": "design",
-      "strict": false
+      "strict": false,
+      "relevance": {"topic": "design", "signals": {"filesRead": ["**/*.css", "**/*.scss", "**/tokens*.json"]}}
     },
     {
       "name": "research",
@@ -180,7 +189,8 @@
       "repository": "https://github.com/peterbamuhigire/digital-research-skills",
       "license": "MIT",
       "category": "research",
-      "strict": false
+      "strict": false,
+      "relevance": {"topic": "research", "signals": {"filesRead": ["**/*literature-review*", "**/*research-plan*", "**/*source-register*"]}}
     },
     {
       "name": "windows-admin",
@@ -196,7 +206,8 @@
       "repository": "https://github.com/peterbamuhigire/windows-admin-engine-skills",
       "license": "MIT",
       "category": "infrastructure",
-      "strict": false
+      "strict": false,
+      "relevance": {"topic": "Windows administration", "signals": {"cli": ["pwsh", "powershell", "gpupdate", "dism", "sfc"]}}
     }
   ]
 }

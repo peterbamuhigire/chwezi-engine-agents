@@ -48,3 +48,15 @@ disclosure block.
 Adapted in paraphrase from obra/superpowers `AGENTS.md` (MIT,
 https://github.com/obra/superpowers, commit
 8ca22dba9a94f28898bbce59f2537ff4d87c747d). No text copied.
+
+## Routing changes (M10-03)
+
+A change that moves a Tier 2 routing figure (a skill description, a routing fixture, the union stop
+list or a ratchet floor) must add a row to
+[`evals/routing/rejected-changes.md`](evals/routing/rejected-changes.md), whether the change was kept
+or rejected. A new cross-engine pair at or above 0.75 must be declared in
+[`evals/routing/ownership.yaml`](evals/routing/ownership.yaml) before the collision check passes. That
+register is read only by `scripts/validate-runtime-skill-budget.py --collisions`; no agent reads it at
+runtime and it is not a router. Floors in `evals/routing/baseline.json` are raised, never lowered,
+unless a ledger row and Peter's approval are recorded. Tier 2 figures are a lexical proxy, not live
+routing.

@@ -1,0 +1,13 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 058-route-saas-tender-roi-mirror
+kind: route-oracle
+engines:
+- proposal-skills
+expected_primary: proposal-skills/saas-business-case-and-roi-modeling
+required_observations:
+- proposal-skills/saas-business-case-and-roi-modeling is the first skill loaded (mirrored srs owned negative
+  (business case must not win)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

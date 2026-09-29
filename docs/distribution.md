@@ -97,3 +97,22 @@ Related clean-up in the same change:
   `chwezi-engine-agents`. Its `name` stays `skills-engine-agents` on purpose:
   it is the Codex plugin identity that existing installs and the release
   archive (`release.yml`) use, and renaming it needs its own migration.
+
+## Plugin suggestions by relevance (M10-03-T14)
+
+Each of the 11 domain entries in `.claude-plugin/marketplace.json` carries a `relevance` block: a `topic` and one or more `signals` (`filesRead` globs, `cli` command names or `cwd` patterns). The limits and field names follow the Claude Code page [Recommend plugins for your org](https://code.claude.com/docs/en/plugins/relevance) (accessed 29 September 2026): `topic` at most 64 characters; `cwd` and `filesRead` at most 10 patterns of 256 characters; `cli` at most 10 entries of 64 characters. `tests/test_marketplace_relevance.py` enforces them, and `claude plugin validate --strict .` reports unknown keys.
+
+Signals only prompt a suggestion (a spinner tip, a session-start line for `cwd`, or a pin in the `/plugin` Discover tab). Claude Code never installs a plugin from a signal; the user always confirms. Matching runs locally and sends nothing to Anthropic or to this repository.
+
+Suggestions appear only after an administrator allowlists the marketplace in managed settings:
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "chwezi": {"source": {"source": "github", "repo": "peterbamuhigire/chwezi-engine-agents"}}
+  },
+  "pluginSuggestionMarketplaces": ["chwezi"]
+}
+```
+
+`pluginSuggestionMarketplaces` names the marketplace (`chwezi`, the `name` in `marketplace.json`); `extraKnownMarketplaces` declares its source, so an unrelated source cannot register under the same name. Enabling suggestions on a particular machine is a runtime-configuration change and is not made by this repository. The field names are vendor documentation that changes; recheck the page before relying on them (7-day currentness rule).

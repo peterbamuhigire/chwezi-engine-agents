@@ -1,0 +1,12 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 046-route-multilingual-proposal
+kind: route-oracle
+engines:
+- proposal-skills
+expected_primary: proposal-skills/language-standards
+required_observations:
+- proposal-skills/language-standards is the first skill loaded (language standards vs English tone (fix_differentiate)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

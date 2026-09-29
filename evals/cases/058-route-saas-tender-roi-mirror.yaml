@@ -1,0 +1,19 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 058-route-saas-tender-roi-mirror
+task: Write the ROI and payback section of our SaaS tender proposal for the evaluator.
+fixture_path: evals/fixtures/058-route-saas-tender-roi-mirror
+expected_primary: proposal-skills/saas-business-case-and-roi-modeling
+run_mode: lexical
+required_observations:
+- proposal-skills/saas-business-case-and-roi-modeling is the first skill loaded (mirrored srs owned negative
+  (business case must not win)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

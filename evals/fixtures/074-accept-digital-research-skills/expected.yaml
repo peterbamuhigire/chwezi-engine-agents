@@ -1,0 +1,13 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 074-accept-digital-research-skills
+kind: acceptance
+engines:
+- digital-research-skills
+expected_primary: digital-research-skills/research-orchestration
+required_observations:
+- digital-research-skills/research-orchestration is the first skill loaded (acceptance prompt for digital-research-skills).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+- name_the_skill_in_the_prompt
+expected_verdict: PASS

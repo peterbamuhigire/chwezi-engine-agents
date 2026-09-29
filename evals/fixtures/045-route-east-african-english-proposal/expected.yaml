@@ -1,0 +1,13 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 045-route-east-african-english-proposal
+kind: route-oracle
+engines:
+- proposal-skills
+expected_primary: proposal-skills/east-african-english
+required_observations:
+- proposal-skills/east-african-english is the first skill loaded (East African English (mirrored language
+  pack)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

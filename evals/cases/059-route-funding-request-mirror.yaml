@@ -1,0 +1,19 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 059-route-funding-request-mirror
+task: Prepare the funding request section of a bankable business plan for the lender.
+fixture_path: evals/fixtures/059-route-funding-request-mirror
+expected_primary: business-plan-skills/11-funding-request
+run_mode: lexical
+required_observations:
+- business-plan-skills/11-funding-request is the first skill loaded (mirrored srs owned negative (business
+  case must not win)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

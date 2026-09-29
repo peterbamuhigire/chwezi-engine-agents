@@ -17,6 +17,13 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import lexical_routing  # noqa: E402  (shared Tier 2 index, M10-03-T01)
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+DISPOSITIONS = {"canonical_owner", "intentional_co_activation", "mirrored_domain_pack", "fix_differentiate", "fix_alias"}
+STALE_BELOW = 0.60
+
 
 DEFAULT_MAX_SKILLS = 200
 DEFAULT_MAX_DESCRIPTION_CHARS = 400
@@ -184,6 +191,145 @@ def evaluate(
     return result
 
 
+def load_ownership(path: Path) -> tuple[dict[frozenset[str], dict[str, Any]], list[Finding]]:
+    """Read the ownership register; return declared pairs keyed by frozenset of skill keys."""
+    import yaml
+
+    findings: list[Finding] = []
+    try:
+        data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    except (OSError, UnicodeError, yaml.YAMLError) as exc:
+        return {}, [Finding("error", "ownership-unreadable", f"cannot read ownership register: {exc}", str(path))]
+    if data.get("schema_version") != 1:
+        findings.append(Finding("error", "ownership-schema", "schema_version must be 1", str(path)))
+    declared: dict[frozenset[str], dict[str, Any]] = {}
+    for index, entry in enumerate(data.get("pairs") or []):
+        where = f"{path}#pairs[{index}]"
+        if not isinstance(entry, dict):
+            findings.append(Finding("error", "ownership-schema", "pair entry must be a mapping", where))
+            continue
+        skills = entry.get("skills")
+        disposition = entry.get("disposition")
+        if not isinstance(skills, list) or len(skills) < 2 or not all(isinstance(item, str) and "/" in item for item in skills):
+            findings.append(Finding("error", "ownership-schema", "skills must list two or more <engine-id>/<skill> keys", where))
+            continue
+        if disposition not in DISPOSITIONS:
+            findings.append(Finding("error", "ownership-schema", f"unknown disposition {disposition!r}", where))
+        for required in ("reason", "decided_by", "decided_on", "review_after", "follow_up"):
+            if not entry.get(required):
+                findings.append(Finding("error", "ownership-schema", f"missing {required}", where))
+        if disposition in {"canonical_owner", "fix_alias"} and entry.get("owner") not in skills:
+            findings.append(Finding("error", "ownership-schema", "owner must be one of the declared skills", where))
+        if disposition in {"intentional_co_activation", "mirrored_domain_pack"} and not entry.get("co_activate"):
+            findings.append(Finding("error", "ownership-schema", "co_activate must list the engines that co-activate", where))
+        for i, first in enumerate(skills):
+            for second in skills[i + 1 :]:
+                declared[frozenset((first, second))] = entry
+    return declared, findings
+
+
+def collision_scan(
+    engines: list[tuple[str, Path]],
+    error_threshold: float,
+    warn_threshold: float,
+    ownership: Path | None,
+) -> tuple[int, dict[str, Any]]:
+    """Union TF-IDF collision scan (M10-03-T01). Returns (exit_code, payload); exit 3 = NOT_ASSESSED."""
+    findings: list[Finding] = []
+    missing = [f"{engine_id} ({root})" for engine_id, root in engines if not root.is_dir()]
+    if missing:
+        payload = {"status": "NOT_ASSESSED", "reason": "sibling engine unavailable: " + ", ".join(missing), "findings": []}
+        return 3, payload
+    docs: list[lexical_routing.SkillDoc] = []
+    per_engine: dict[str, int] = {}
+    for engine_id, root in engines:
+        found, issues = lexical_routing.discover_engine(engine_id, root)
+        docs.extend(found)
+        per_engine[engine_id] = len(found)
+        findings.extend(Finding("warning", issue.code, issue.message, issue.path) for issue in issues)
+    index = lexical_routing.LexicalIndex(docs)
+    all_pairs = index.pairs(min(warn_threshold, STALE_BELOW))
+    declared: dict[frozenset[str], dict[str, Any]] = {}
+    if ownership is not None:
+        declared, ownership_findings = load_ownership(ownership)
+        findings.extend(ownership_findings)
+    cross: list[dict[str, Any]] = []
+    within: list[dict[str, Any]] = []
+    scores: dict[frozenset[str], float] = {}
+    for score, first, second in all_pairs:
+        scores[frozenset((first, second))] = score
+        if score < warn_threshold:
+            continue
+        same_engine = index.by_key[first].engine == index.by_key[second].engine
+        entry = declared.get(frozenset((first, second)))
+        row = {"score": score, "skills": [first, second], "declared": entry is not None, "disposition": entry.get("disposition") if entry else None}
+        (within if same_engine else cross).append(row)
+        if same_engine:
+            if score >= error_threshold:
+                findings.append(Finding("warning", "within-engine-collision", f"{first} <-> {second} cosine {score:.3f} (reported, not gated)"))
+            continue
+        if score >= error_threshold and entry is None:
+            findings.append(Finding("error", "undeclared-collision", f"{first} <-> {second} cosine {score:.3f} >= {error_threshold} and not in the ownership register"))
+        elif score >= error_threshold and entry.get("disposition") == "fix_differentiate":
+            findings.append(Finding("error", "undifferentiated-collision", f"{first} <-> {second} cosine {score:.3f} is declared fix_differentiate but is still >= {error_threshold}"))
+        elif score < error_threshold:
+            findings.append(Finding("warning", "collision-warning", f"{first} <-> {second} cosine {score:.3f} >= {warn_threshold}"))
+    for pair, entry in declared.items():
+        unknown = sorted(key for key in pair if key not in index.by_key)
+        if unknown:
+            findings.append(Finding("warning", "ownership-unknown-skill", f"declared skill not found in the union: {', '.join(unknown)}"))
+            continue
+        score = scores.get(pair, 0.0)
+        if score < STALE_BELOW and entry.get("disposition") != "fix_differentiate":
+            findings.append(Finding("warning", "stale-declaration", f"{' <-> '.join(sorted(pair))} now scores {score:.3f} < {STALE_BELOW}"))
+    errors = [finding for finding in findings if finding.severity == "error"]
+    payload = {
+        "status": "FAIL" if errors else "PASS",
+        "label": "lexical proxy; not live routing (see agent-skills issue #620)",
+        "skills": len(docs),
+        "skills_per_engine": per_engine,
+        "thresholds": {"error": error_threshold, "warn": warn_threshold},
+        "cross_engine_pairs_ge_error": sum(row["score"] >= error_threshold for row in cross),
+        "cross_engine_pairs_ge_warn": len(cross),
+        "within_engine_pairs_ge_error": sum(row["score"] >= error_threshold for row in within),
+        "undeclared_pairs_ge_error": sum(finding.code == "undeclared-collision" for finding in findings),
+        "cross_engine_pairs": cross,
+        "within_engine_pairs": [row for row in within if row["score"] >= error_threshold],
+        "findings": [asdict(finding) for finding in findings],
+    }
+    return (1 if errors else 0), payload
+
+
+def run_collisions(args: argparse.Namespace) -> int:
+    try:
+        if args.root:
+            engines = [(root.resolve().name, root) for root in args.root]
+            for _engine_id, root in engines:
+                lexical_routing.refuse_private(root.resolve())
+        else:
+            engines = lexical_routing.load_catalog_engines(args.catalog, args.workspace_root)
+    except lexical_routing.PrivateEngineError as exc:
+        print(f"REFUSED: {exc}", file=sys.stderr)
+        return 2
+    code, payload = collision_scan(engines, args.collision_error, args.collision_warn, args.ownership)
+    if args.format == "json":
+        print(json.dumps(payload, indent=2))
+    elif code == 3:
+        print(f"NOT_ASSESSED: {payload['reason']}")
+    else:
+        print(
+            f"{payload['status']}: skills={payload['skills']} cross>={args.collision_error}: {payload['cross_engine_pairs_ge_error']} "
+            f"cross>={args.collision_warn}: {payload['cross_engine_pairs_ge_warn']} undeclared>={args.collision_error}: "
+            f"{payload['undeclared_pairs_ge_error']} ({payload['label']})"
+        )
+        for finding in payload["findings"]:
+            if finding["severity"] == "error":
+                print(f"- {finding['code']}: {finding['message']}")
+    if code == 3:
+        return 3
+    return 0 if args.report_only else code
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", action="append", type=Path, help="Exact runtime directory to scan; repeatable.")
@@ -197,7 +343,16 @@ def main() -> int:
     parser.add_argument("--max-total-metadata-chars", type=int, default=DEFAULT_MAX_TOTAL_METADATA_CHARS)
     parser.add_argument("--format", choices=("text", "json"), default="text")
     parser.add_argument("--report-only", action="store_true", help="Report findings but return success.")
+    parser.add_argument("--collisions", action="store_true", help="Run the union TF-IDF collision scan over the catalogued engines (or --root) instead of the budget check.")
+    parser.add_argument("--collision-error", type=float, default=0.75, help="Cross-engine cosine at or above which an undeclared pair is an error.")
+    parser.add_argument("--collision-warn", type=float, default=0.50, help="Cosine at or above which a pair is reported as a warning.")
+    parser.add_argument("--ownership", type=Path, help="Ownership register (evals/routing/ownership.yaml) declaring owners or co-activation.")
+    parser.add_argument("--catalog", type=Path, default=REPO_ROOT / "catalog" / "engines.yaml", help="Engine catalogue used by --collisions when no --root is given.")
+    parser.add_argument("--workspace-root", type=Path, default=REPO_ROOT.parent, help="Directory holding the sibling engine checkouts.")
     args = parser.parse_args()
+
+    if args.collisions:
+        return run_collisions(args)
 
     roots = list(args.root or [])
     initial_findings: list[Finding] = []

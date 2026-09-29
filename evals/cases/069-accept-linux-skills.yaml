@@ -1,0 +1,21 @@
+# M10-03-T10 clean-session acceptance prompt (Superpowers-style harness case; behavioural run in M10-05).
+schema_version: '1.0'
+id: 069-accept-linux-skills
+task: Set up a fresh Ubuntu VPS for our web app and lock it down properly.
+fixture_path: evals/fixtures/069-accept-linux-skills
+expected_primary: linux-skills/linux-server-hardening
+run_mode: behavioural
+last_run: NOT_ASSESSED
+behavioural_owner_phase: M10-05
+required_observations:
+- linux-skills/linux-server-hardening is the first skill loaded (acceptance prompt for linux-skills).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+- name_the_skill_in_the_prompt
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

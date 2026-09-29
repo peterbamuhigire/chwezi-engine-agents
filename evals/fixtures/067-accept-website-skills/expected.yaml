@@ -1,0 +1,13 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 067-accept-website-skills
+kind: acceptance
+engines:
+- website-skills
+expected_primary: website-skills/website-builder
+required_observations:
+- website-skills/website-builder is the first skill loaded (acceptance prompt for website-skills).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+- name_the_skill_in_the_prompt
+expected_verdict: PASS

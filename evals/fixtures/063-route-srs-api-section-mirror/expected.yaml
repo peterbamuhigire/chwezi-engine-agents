@@ -1,0 +1,12 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 063-route-srs-api-section-mirror
+kind: route-oracle
+engines:
+- srs-skills
+expected_primary: srs-skills/03-api-specification
+required_observations:
+- srs-skills/03-api-specification is the first skill loaded (mirrored dev owned negative (srs vs dev api-design-first)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

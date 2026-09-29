@@ -1,0 +1,19 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 045-route-east-african-english-proposal
+task: Edit this proposal so its English reads naturally for Ugandan evaluators.
+fixture_path: evals/fixtures/045-route-east-african-english-proposal
+expected_primary: proposal-skills/east-african-english
+run_mode: lexical
+required_observations:
+- proposal-skills/east-african-english is the first skill loaded (East African English (mirrored language
+  pack)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

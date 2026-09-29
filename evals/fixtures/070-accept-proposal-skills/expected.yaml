@@ -1,0 +1,13 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 070-accept-proposal-skills
+kind: acceptance
+engines:
+- proposal-skills
+expected_primary: proposal-skills/skills
+required_observations:
+- proposal-skills/skills is the first skill loaded (acceptance prompt for proposal-skills).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+- name_the_skill_in_the_prompt
+expected_verdict: PASS

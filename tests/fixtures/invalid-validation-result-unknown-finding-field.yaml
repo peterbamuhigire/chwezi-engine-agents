@@ -1,0 +1,13 @@
+schema_version: "1.0"
+engine_id: srs-skills
+checks:
+  - command: python -m engine diagrams check
+    status: FAIL
+    exit_code: 1
+    evidence: One diagram IR file fails schema validation.
+    duration_ms: 310
+overall: FAIL
+next_action: Repair the diagram IR and rerun the diagram gate
+findings:
+  - code: schema-required
+    auto_fix_applied: true

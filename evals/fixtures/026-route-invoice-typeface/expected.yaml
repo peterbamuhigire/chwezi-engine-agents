@@ -1,0 +1,13 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 026-route-invoice-typeface
+kind: route-oracle
+engines:
+- design-system-skills
+expected_primary: design-system-skills/pdf-proposal-and-bankable-document-design
+required_observations:
+- design-system-skills/pdf-proposal-and-bankable-document-design is the first skill loaded (invoice typeface
+  (design vs social; probe misroute)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

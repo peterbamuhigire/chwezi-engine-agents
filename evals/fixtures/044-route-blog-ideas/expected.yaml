@@ -1,0 +1,12 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 044-route-blog-ideas
+kind: route-oracle
+engines:
+- social-media-skills
+expected_primary: social-media-skills/blog-idea-generator
+required_observations:
+- social-media-skills/blog-idea-generator is the first skill loaded (blog ideation (canonical owner social)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

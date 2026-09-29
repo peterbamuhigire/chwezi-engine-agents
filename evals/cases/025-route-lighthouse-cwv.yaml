@@ -1,0 +1,23 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 025-route-lighthouse-cwv
+task: Run a Lighthouse audit on the company website and fix the Core Web Vitals failures before launch.
+fixture_path: evals/fixtures/025-route-lighthouse-cwv
+expected_primary: website-skills/deploy
+must_co_activate:
+- design-system-skills
+run_mode: lexical
+known_defect: M10-11
+required_observations:
+- website-skills/deploy is the first skill loaded (Lighthouse / Core Web Vitals (website vs design)).
+- 'Co-activated engines: design-system-skills; each owns its own slice and does not redecide the primary''s
+  scope.'
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

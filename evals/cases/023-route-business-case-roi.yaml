@@ -1,0 +1,23 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 023-route-business-case-roi
+task: Write a business case with ROI, payback period and NPV for replacing our ERP.
+fixture_path: evals/fixtures/023-route-business-case-roi
+expected_primary: srs-skills/02-business-case
+must_co_activate:
+- chwezi-accounting-doctrine
+run_mode: lexical
+required_observations:
+- srs-skills/02-business-case is the first skill loaded (business case / ROI (srs vs social, proposal,
+  business-plan)).
+- 'Co-activated engines: chwezi-accounting-doctrine; each owns its own slice and does not redecide the
+  primary''s scope.'
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

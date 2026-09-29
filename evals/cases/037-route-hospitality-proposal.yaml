@@ -1,0 +1,20 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 037-route-hospitality-proposal
+task: Our firm is bidding to a hotel group for guest Wi-Fi and a booking system; shape the proposal around
+  hospitality operations.
+fixture_path: evals/fixtures/037-route-hospitality-proposal
+expected_primary: proposal-skills/hospitality-hotel-restaurant
+run_mode: lexical
+required_observations:
+- proposal-skills/hospitality-hotel-restaurant is the first skill loaded (hospitality pack (mirrored,
+  proposal slice)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

@@ -1,0 +1,13 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 071-accept-chwezi-dev-engine
+kind: acceptance
+engines:
+- chwezi-dev-engine
+expected_primary: chwezi-dev-engine/react-development
+required_observations:
+- chwezi-dev-engine/react-development is the first skill loaded (acceptance prompt for chwezi-dev-engine).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+- name_the_skill_in_the_prompt
+expected_verdict: PASS

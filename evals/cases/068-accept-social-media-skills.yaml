@@ -1,0 +1,21 @@
+# M10-03-T10 clean-session acceptance prompt (Superpowers-style harness case; behavioural run in M10-05).
+schema_version: '1.0'
+id: 068-accept-social-media-skills
+task: Our new juice brand needs a plan for Instagram and TikTok over the next three months.
+fixture_path: evals/fixtures/068-accept-social-media-skills
+expected_primary: social-media-skills/05-social-media-strategy
+run_mode: behavioural
+last_run: NOT_ASSESSED
+behavioural_owner_phase: M10-05
+required_observations:
+- social-media-skills/05-social-media-strategy is the first skill loaded (acceptance prompt for social-media-skills).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+- name_the_skill_in_the_prompt
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

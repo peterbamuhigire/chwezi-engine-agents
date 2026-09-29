@@ -1,0 +1,13 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 073-accept-design-system-skills
+kind: acceptance
+engines:
+- design-system-skills
+expected_primary: design-system-skills/color-system-and-palette
+required_observations:
+- design-system-skills/color-system-and-palette is the first skill loaded (acceptance prompt for design-system-skills).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+- name_the_skill_in_the_prompt
+expected_verdict: PASS

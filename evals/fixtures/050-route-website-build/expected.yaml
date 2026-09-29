@@ -1,0 +1,12 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 050-route-website-build
+kind: route-oracle
+engines:
+- website-skills
+expected_primary: website-skills/website-builder
+required_observations:
+- website-skills/website-builder is the first skill loaded (website build (control)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

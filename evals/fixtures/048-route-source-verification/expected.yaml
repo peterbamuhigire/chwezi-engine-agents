@@ -1,0 +1,13 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 048-route-source-verification
+kind: route-oracle
+engines:
+- digital-research-skills
+expected_primary: digital-research-skills/source-verification
+required_observations:
+- digital-research-skills/source-verification is the first skill loaded (research verification (research
+  primary)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

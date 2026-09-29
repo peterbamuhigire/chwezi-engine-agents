@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "label": "Tier 2 lexical proxy; not live routing (see agent-skills issue #620). Floors are raised, never lowered (scripts/validate-routing-baseline.py).",
+  "measured_on": "2026-09-29",
+  "engines": {
+    "chwezi-dev-engine": {
+      "p_at_1": 90.6,
+      "p_at_3": 100.0,
+      "owned_negatives": {
+        "total": 78,
+        "pass": 74,
+        "fail": 0,
+        "not_assessed": 4
+      },
+      "coverage": {
+        "skills_with_positive_fixture": 123,
+        "active_skills": 167
+      },
+      "floor": 88,
+      "floor_history": [
+        {
+          "date": "2026-09-29",
+          "floor": 88,
+          "reason": "M10-03 first baseline: measured 90.6 % after the T05 fixture rewrites, minus 2"
+        }
+      ],
+      "fixtures": 191,
+      "command": "python -X utf8 scripts/routing_smoke_test.py --min-rank1 88 --lint-fixtures"
+    },
+    "design-system-skills": {
+      "p_at_1": 94.1,
+      "p_at_3": 100.0,
+      "owned_negatives": {
+        "total": 22,
+        "pass": 21,
+        "fail": 0,
+        "not_assessed": 1
+      },
+      "coverage": {
+        "skills_with_positive_fixture": 57,
+        "active_skills": 101
+      },
+      "floor": 92,
+      "floor_history": [
+        {
+          "date": "2026-09-29",
+          "floor": 92,
+          "reason": "M10-03 first baseline: measured 94.1 % after the T06 ranker swap, minus 2"
+        }
+      ],
+      "fixtures": 68,
+      "command": "python -X utf8 scripts/routing_smoke_test.py --min-rank1 92 --lint-fixtures"
+    },
+    "srs-skills": {
+      "p_at_1": 85.5,
+      "p_at_3": 100.0,
+      "owned_negatives": {
+        "total": 16,
+        "pass": 13,
+        "fail": 0,
+        "not_assessed": 3
+      },
+      "coverage": {
+        "skills_with_positive_fixture": 46,
+        "active_skills": 159
+      },
+      "floor": 83,
+      "floor_history": [
+        {
+          "date": "2026-09-29",
+          "floor": 83,
+          "reason": "M10-03 first baseline: measured 85.5 % after T07/T08 and the T05 rewrites, minus 2, rounded down"
+        }
+      ],
+      "fixtures": 71,
+      "command": "python -X utf8 scripts/routing_smoke_test.py --min-rank1 83 --lint-fixtures"
+    },
+    "website-skills": {
+      "p_at_1": 94.4,
+      "p_at_3": 100.0,
+      "owned_negatives": {
+        "total": 21,
+        "pass": 21,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "coverage": {
+        "skills_with_positive_fixture": 31,
+        "active_skills": 62
+      },
+      "floor": 92,
+      "floor_history": [
+        {
+          "date": "2026-09-29",
+          "floor": 92,
+          "reason": "M10-03 first baseline: measured 94.4 % after T08 and the T05 rewrites, minus 2, rounded down"
+        }
+      ],
+      "fixtures": 36,
+      "command": "python -X utf8 scripts/routing-smoke-test.py --min-rank1 92 --lint-fixtures"
+    },
+    "digital-research-skills": {
+      "p_at_1": 86.2,
+      "p_at_3": 100.0,
+      "owned_negatives": {
+        "total": 9,
+        "pass": 7,
+        "fail": 0,
+        "not_assessed": 2
+      },
+      "coverage": {
+        "skills_with_positive_fixture": 28,
+        "active_skills": 60
+      },
+      "floor": 84,
+      "floor_history": [
+        {
+          "date": "2026-09-29",
+          "floor": 84,
+          "reason": "M10-03 first baseline: measured 86.2 % after T08 and the T05 rewrites, minus 2, rounded down"
+        }
+      ],
+      "fixtures": 29,
+      "command": "python -X utf8 scripts/routing_smoke_test.py --min-rank1 84 --lint-fixtures"
+    }
+  },
+  "portfolio": {
+    "undeclared_pairs_ge_075": 0,
+    "cross_engine_pairs_ge_075": 21,
+    "cross_engine_pairs_ge_050": 200,
+    "within_engine_pairs_ge_075": 26,
+    "oracle_primary_at_1": 76.3,
+    "oracle_engine_at_1": 84.2,
+    "oracles": {
+      "total": 42,
+      "gated": 38,
+      "known_defects": 4
+    },
+    "must_co_activate_at_5": 66.7,
+    "acceptance_lexical_primary_at_1": 16.7,
+    "acceptance_behavioural": "NOT_ASSESSED (zero-spend rule; M10-05)",
+    "target": 97,
+    "floor": 74,
+    "floor_history": [
+      {
+        "date": "2026-09-29",
+        "floor": 74,
+        "reason": "M10-03 first baseline: oracle primary@1 76.3 % (29/38, known defects excluded), minus 2, rounded down"
+      }
+    ],
+    "command": "python -X utf8 evals/runners/run-contract-evals.py --cases evals/cases --route-oracles --min-oracle-primary 74 --out <scratch>/oracles.json"
+  }
+}

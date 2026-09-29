@@ -1,0 +1,20 @@
+schema_version: "1.0"
+engine_id: srs-skills
+checks:
+  - command: python -m engine diagrams check
+    status: FAIL
+    exit_code: 1
+    evidence: One diagram IR file fails schema validation.
+    duration_ms: 310
+overall: FAIL
+next_action: Repair the diagram IR and rerun the diagram gate
+findings:
+  - code: schema-required
+    severity: HIGH
+    message: "'edges' is a required property"
+    subject: {file: diagrams/order-flow.ir.json, figure_id: FIG-3-2, pointer: /}
+    evidence: {keyword: required, missing: edges}
+    supported_fixes:
+      - add an edges array to the figure without removing the requirement or the semantic check
+    next_action: Add the missing edges array, then rerun python -m engine diagrams check
+  - code: duplicate-id

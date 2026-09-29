@@ -1,0 +1,19 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 061-route-fiscal-policy-mirror
+task: Set the fiscal-tax controls and authority reporting policy for e-receipts, separate from ledger
+  truth.
+fixture_path: evals/fixtures/061-route-fiscal-policy-mirror
+expected_primary: chwezi-accounting-doctrine/electronic-fiscal-taxing
+run_mode: lexical
+required_observations:
+- chwezi-accounting-doctrine/electronic-fiscal-taxing is the first skill loaded (mirrored dev owned negative).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

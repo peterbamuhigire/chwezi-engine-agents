@@ -1,0 +1,12 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 027-route-generic-srs
+kind: route-oracle
+engines:
+- srs-skills
+expected_primary: srs-skills/01-initialize-srs
+required_observations:
+- srs-skills/01-initialize-srs is the first skill loaded (generic SRS vs game SRS (probe misroute)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

@@ -1,0 +1,18 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 027-route-generic-srs
+task: Write the SRS for the patient billing module.
+fixture_path: evals/fixtures/027-route-generic-srs
+expected_primary: srs-skills/01-initialize-srs
+run_mode: lexical
+required_observations:
+- srs-skills/01-initialize-srs is the first skill loaded (generic SRS vs game SRS (probe misroute)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

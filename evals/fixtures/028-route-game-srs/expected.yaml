@@ -1,0 +1,13 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 028-route-game-srs
+kind: route-oracle
+engines:
+- srs-skills
+expected_primary: srs-skills/19-game-software-requirements-specification
+required_observations:
+- srs-skills/19-game-software-requirements-specification is the first skill loaded (generic SRS vs game
+  SRS (control)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

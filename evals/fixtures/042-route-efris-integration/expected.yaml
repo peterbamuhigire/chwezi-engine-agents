@@ -1,0 +1,16 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 042-route-efris-integration
+kind: route-oracle
+engines:
+- chwezi-dev-engine
+- chwezi-accounting-doctrine
+expected_primary: chwezi-dev-engine/electronic-fiscal-taxing
+required_observations:
+- chwezi-dev-engine/electronic-fiscal-taxing is the first skill loaded (fiscal tax (dev integration, finance
+  co-activation)).
+- 'Co-activated engines: chwezi-accounting-doctrine; each owns its own slice and does not redecide the
+  primary''s scope.'
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

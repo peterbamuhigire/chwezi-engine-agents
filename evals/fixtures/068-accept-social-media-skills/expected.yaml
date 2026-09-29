@@ -1,0 +1,13 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 068-accept-social-media-skills
+kind: acceptance
+engines:
+- social-media-skills
+expected_primary: social-media-skills/05-social-media-strategy
+required_observations:
+- social-media-skills/05-social-media-strategy is the first skill loaded (acceptance prompt for social-media-skills).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+- name_the_skill_in_the_prompt
+expected_verdict: PASS

@@ -1,0 +1,12 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 049-route-expression-of-interest
+kind: route-oracle
+engines:
+- proposal-skills
+expected_primary: proposal-skills/09-expression-of-interest
+required_observations:
+- proposal-skills/09-expression-of-interest is the first skill loaded (procurement response (control)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

@@ -1,0 +1,19 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 029-route-validation-contract
+task: Assemble the release evidence bundle across the seven evidence categories before we ship the payments
+  feature.
+fixture_path: evals/fixtures/029-route-validation-contract
+expected_primary: chwezi-dev-engine/validation-contract
+run_mode: lexical
+required_observations:
+- chwezi-dev-engine/validation-contract is the first skill loaded (validation contract (dev vs research)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

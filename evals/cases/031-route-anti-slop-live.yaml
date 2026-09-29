@@ -1,0 +1,18 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 031-route-anti-slop-live
+task: Keep the staff handbook I am drafting specific and verified as I write; no generic AI filler.
+fixture_path: evals/fixtures/031-route-anti-slop-live
+expected_primary: chwezi-dev-engine/anti-ai-slop
+run_mode: lexical
+required_observations:
+- chwezi-dev-engine/anti-ai-slop is the first skill loaded (anti-slop (dev vs business-plan)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

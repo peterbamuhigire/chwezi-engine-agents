@@ -1,0 +1,12 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 032-route-excel-workbook
+kind: route-oracle
+engines:
+- chwezi-dev-engine
+expected_primary: chwezi-dev-engine/excel-spreadsheets
+required_observations:
+- chwezi-dev-engine/excel-spreadsheets is the first skill loaded (spreadsheet (dev vs research vs finance)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

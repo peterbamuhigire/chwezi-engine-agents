@@ -1,0 +1,18 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 063-route-srs-api-section-mirror
+task: Write the API specification section of the SRS with endpoints and error codes for sign-off.
+fixture_path: evals/fixtures/063-route-srs-api-section-mirror
+expected_primary: srs-skills/03-api-specification
+run_mode: lexical
+required_observations:
+- srs-skills/03-api-specification is the first skill loaded (mirrored dev owned negative (srs vs dev api-design-first)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

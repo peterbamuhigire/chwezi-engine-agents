@@ -1,0 +1,18 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 064-route-firewall
+task: Configure the firewall and install a Let's Encrypt certificate on our Ubuntu web server.
+fixture_path: evals/fixtures/064-route-firewall
+expected_primary: linux-skills/linux-firewall-ssl
+run_mode: lexical
+required_observations:
+- linux-skills/linux-firewall-ssl is the first skill loaded (Linux networking (control)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

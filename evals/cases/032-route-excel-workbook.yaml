@@ -1,0 +1,19 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 032-route-excel-workbook
+task: Build an Excel workbook with formulas, charts and data validation for the monthly stock count.
+fixture_path: evals/fixtures/032-route-excel-workbook
+expected_primary: chwezi-dev-engine/excel-spreadsheets
+run_mode: lexical
+known_defect: later-wave
+required_observations:
+- chwezi-dev-engine/excel-spreadsheets is the first skill loaded (spreadsheet (dev vs research vs finance)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

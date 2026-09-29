@@ -1,0 +1,22 @@
+# M10-03-T10 clean-session acceptance prompt (Superpowers-style harness case; behavioural run in M10-05).
+schema_version: '1.0'
+id: 065-accept-srs-skills
+task: We're building a clinic appointment app. Help me work out what it needs to do before anyone starts
+  coding.
+fixture_path: evals/fixtures/065-accept-srs-skills
+expected_primary: srs-skills/01-initialize-srs
+run_mode: behavioural
+last_run: NOT_ASSESSED
+behavioural_owner_phase: M10-05
+required_observations:
+- srs-skills/01-initialize-srs is the first skill loaded (acceptance prompt for srs-skills).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+- name_the_skill_in_the_prompt
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

@@ -1,0 +1,13 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 036-route-hospitality-social
+kind: route-oracle
+engines:
+- social-media-skills
+expected_primary: social-media-skills/hospitality-hotel-restaurant
+required_observations:
+- social-media-skills/hospitality-hotel-restaurant is the first skill loaded (hospitality pack (mirrored,
+  social slice)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

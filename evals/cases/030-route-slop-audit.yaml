@@ -1,0 +1,19 @@
+# M10-03-T09 cross-engine route oracle (lexical proxy over the union; not live routing).
+schema_version: '1.0'
+id: 030-route-slop-audit
+task: Grade this finished client report for AI slop and give it an A, B, C or F verdict with evidence.
+fixture_path: evals/fixtures/030-route-slop-audit
+expected_primary: chwezi-dev-engine/ai-slop-audit
+run_mode: lexical
+known_defect: later-wave
+required_observations:
+- chwezi-dev-engine/ai-slop-audit is the first skill loaded (slop audit (dev vs research vs srs)).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action

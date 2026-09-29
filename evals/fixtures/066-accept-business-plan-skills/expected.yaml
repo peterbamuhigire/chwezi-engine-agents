@@ -1,0 +1,13 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 066-accept-business-plan-skills
+kind: acceptance
+engines:
+- business-plan-skills
+expected_primary: business-plan-skills/business-plan-orchestrator
+required_observations:
+- business-plan-skills/business-plan-orchestrator is the first skill loaded (acceptance prompt for business-plan-skills).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+- name_the_skill_in_the_prompt
+expected_verdict: PASS

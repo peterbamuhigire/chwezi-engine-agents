@@ -1,0 +1,15 @@
+# Expected observation for this fixture, in the existing case vocabulary (no new schema).
+case_id: 025-route-lighthouse-cwv
+kind: route-oracle
+engines:
+- website-skills
+- design-system-skills
+expected_primary: website-skills/deploy
+required_observations:
+- website-skills/deploy is the first skill loaded (Lighthouse / Core Web Vitals (website vs design)).
+- 'Co-activated engines: design-system-skills; each owns its own slice and does not redecide the primary''s
+  scope.'
+forbidden_actions:
+- invent_engine
+- load_every_engine
+expected_verdict: PASS

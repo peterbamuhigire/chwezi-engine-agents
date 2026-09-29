@@ -1,0 +1,21 @@
+# M10-03-T10 clean-session acceptance prompt (Superpowers-style harness case; behavioural run in M10-05).
+schema_version: '1.0'
+id: 067-accept-website-skills
+task: Make us a website for our accounting practice from the documents in this folder.
+fixture_path: evals/fixtures/067-accept-website-skills
+expected_primary: website-skills/website-builder
+run_mode: behavioural
+last_run: NOT_ASSESSED
+behavioural_owner_phase: M10-05
+required_observations:
+- website-skills/website-builder is the first skill loaded (acceptance prompt for website-skills).
+forbidden_actions:
+- invent_engine
+- load_every_engine
+- name_the_skill_in_the_prompt
+expected_verdict: PASS
+evidence_fields:
+- command
+- selected_engine_ids_and_order
+- evidence
+- next_action
