@@ -389,9 +389,9 @@ assets:
         owner: business-plan-skills
         reason: "Engine-specific always-on rules by design (absent in dev and agents); each must keep the invariant sentences."
       social-media-skills/rules/common/core.md:
-        sha256: be48e1fd2cad4603be089e7e72ecb561c4d58b4a4403b754cab7bbc207c3b0c9
+        sha256: 3cf47392273c665083bb0559e1ed6e7f05b2077d36822ef6d36f9dc316f184f6
         owner: social-media-skills
-        reason: "Engine-specific always-on rules by design (absent in dev and agents); each must keep the invariant sentences."
+        reason: "Engine-specific always-on rules by design (absent in dev and agents); each must keep the invariant sentences. Social Kaizen S09 (2026-09-29) re-registered it after the SKILL.md line rule moved from 500 to 300 lines (D-SK-06)."
       linux-skills/rules/common/core.md:
         sha256: 39d9d9ba9c2e44bba0c5974afd0d77faf6dec022ac0a3747ded7cdbf1ac5829c
         owner: linux-skills
@@ -438,9 +438,9 @@ assets:
         owner: business-plan-skills
         reason: "Pointer stub for the canonical dev skill-writing standard (M10-04-T03): portable minimum, engine-local delta and degraded mode, shaped to pass this engine's Tier-1 validator. Re-register only when the portable minimum or the engine delta changes."
       social-media-skills/skills/meta-utility/skill-writing/SKILL.md:
-        sha256: 9e4e9b54106a95f8cbb748826bf9f193147c8836a75d2f49f8517d0a2103d62b
+        sha256: 87fec38a92cecf1f8bf278081d68b95d8db5a945a29829c73e21aa2bec8e380d
         owner: social-media-skills
-        reason: "Pointer stub for the canonical dev skill-writing standard (M10-04-T03): portable minimum, engine-local delta and degraded mode, shaped to pass this engine's Tier-1 validator. Re-register only when the portable minimum or the engine delta changes. Social Kaizen S08 (2026-09-29) re-registered it after the engine-local routing delta changed (description, Use When and Do Not Use When rewritten to the S08 formula; body unchanged)."
+        reason: "Pointer stub for the canonical dev skill-writing standard (M10-04-T03): portable minimum, engine-local delta and degraded mode, shaped to pass this engine's Tier-1 validator. Re-register only when the portable minimum or the engine delta changes. Social Kaizen S08 (2026-09-29) re-registered it after the engine-local routing delta changed (description, Use When and Do Not Use When rewritten to the S08 formula; body unchanged). Social Kaizen S09 (2026-09-29) re-registered it after the engine-local delta changed (300-line ceiling and the lean template, D-SK-06)."
       linux-skills/meta/skill-writing/SKILL.md:
         sha256: 9c891cdd869c1af161361be98a3daaf448542a4b8b2df751de3c2f97de93e65e
         owner: linux-skills
