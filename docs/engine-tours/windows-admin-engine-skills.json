@@ -2,7 +2,7 @@
   "display_name": "Windows Administration Skills",
   "engine_id": "windows-admin-engine-skills",
   "folder": "windows-admin-engine-skills",
-  "generated_from_commit": "9e12fd3af409e48b20bf08296c2e4bba8a2815f9",
+  "generated_from_commit": "52a2cdc6e29dfd493fbd83f68ebcf64c41439588",
   "generator": "scripts/generate_engine_tour.py",
   "schema_version": "1.0",
   "steps": [

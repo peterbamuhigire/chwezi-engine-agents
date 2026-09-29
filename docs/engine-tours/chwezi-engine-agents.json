@@ -2,7 +2,7 @@
   "display_name": "Chwezi Engine Agents",
   "engine_id": "chwezi-engine-agents",
   "folder": "chwezi-engine-agents",
-  "generated_from_commit": "a4cf31d898a2e8d1712daa87cf3021439939f774",
+  "generated_from_commit": "aef2dc59415cce44024d692fb6777a3ff82328fa",
   "generator": "scripts/generate_engine_tour.py",
   "schema_version": "1.0",
   "steps": [

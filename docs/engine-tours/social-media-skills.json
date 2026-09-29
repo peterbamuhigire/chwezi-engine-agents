@@ -2,7 +2,7 @@
   "display_name": "Digital Marketing and Advertising (social-media-skills)",
   "engine_id": "social-media-skills",
   "folder": "social-media-skills",
-  "generated_from_commit": "9a7ec760916c112e5938dd6a0ff78505530f2cbd",
+  "generated_from_commit": "973e1af313c501e70484561bac401d3453485487",
   "generator": "scripts/generate_engine_tour.py",
   "schema_version": "1.0",
   "steps": [
@@ -67,9 +67,9 @@
     },
     {
       "data": {
-        "active_skills": 110,
+        "active_skills": 112,
         "folders": {
-          "skills/advertising": 9,
+          "skills/advertising": 11,
           "skills/ai-marketing": 6,
           "skills/business-development": 6,
           "skills/content-writing": 7,
@@ -105,31 +105,31 @@
           "path": "skills/pipeline"
         }
       ],
-      "text": "110 active SKILL.md files in 15 folders; the largest are skills/playbooks (17), skills/strategy (15), skills/meta-analytics-ops (13), skills/pipeline (13).",
+      "text": "112 active SKILL.md files in 15 folders; the largest are skills/playbooks (17), skills/strategy (15), skills/meta-analytics-ops (13), skills/pipeline (13).",
       "title": "Skill layout"
     },
     {
       "data": {
         "hubs": [
           {
-            "inbound_skills": 164,
+            "inbound_skills": 103,
             "skill": "skills/ai-marketing/anti-ai-slop"
           },
           {
-            "inbound_skills": 92,
+            "inbound_skills": 50,
             "skill": "skills/language/east-african-english"
           },
           {
-            "inbound_skills": 67,
+            "inbound_skills": 45,
             "skill": "skills/ai-marketing/ai-slop-audit"
           },
           {
-            "inbound_skills": 53,
-            "skill": "skills/content-writing/premium-commercial-writing"
+            "inbound_skills": 27,
+            "skill": "skills/pipeline/04-brand-voice-intake"
           },
           {
-            "inbound_skills": 44,
-            "skill": "skills/content-writing/blog-writer"
+            "inbound_skills": 24,
+            "skill": "skills/meta-analytics-ops/meta-reporting"
           }
         ],
         "source": "scripts/skill_fanin.py"
@@ -150,21 +150,22 @@
         },
         {
           "engine": "social-media-skills",
-          "path": "skills/content-writing/premium-commercial-writing/SKILL.md"
+          "path": "skills/pipeline/04-brand-voice-intake/SKILL.md"
         },
         {
           "engine": "social-media-skills",
-          "path": "skills/content-writing/blog-writer/SKILL.md"
+          "path": "skills/meta-analytics-ops/meta-reporting/SKILL.md"
         }
       ],
-      "text": "The skills other skills lean on most (inbound links, mentions and aliases): anti-ai-slop (164), east-african-english (92), ai-slop-audit (67), premium-commercial-writing (53), blog-writer (44).",
+      "text": "The skills other skills lean on most (inbound links, mentions and aliases): anti-ai-slop (103), east-african-english (50), ai-slop-audit (45), 04-brand-voice-intake (27), meta-reporting (24).",
       "title": "Hub skills"
     },
     {
       "data": {
         "commands": [
           "python -X utf8 scripts/validate_skill_engine.py --baseline quality-baseline.json",
-          "python -X utf8 scripts/routing_smoke_test.py",
+          "python -X utf8 scripts/routing_smoke_test.py --lint-fixtures",
+          "python -X utf8 scripts/check_skill_aliases.py",
           "python -X utf8 scripts/check_source_freshness.py"
         ]
       },
@@ -180,16 +181,20 @@
         },
         {
           "engine": "social-media-skills",
+          "path": "scripts/check_skill_aliases.py"
+        },
+        {
+          "engine": "social-media-skills",
           "path": "scripts/check_source_freshness.py"
         }
       ],
-      "text": "Run these 3 checks before claiming the engine is healthy; an unavailable check is NOT_ASSESSED, never a pass.",
+      "text": "Run these 4 checks before claiming the engine is healthy; an unavailable check is NOT_ASSESSED, never a pass.",
       "title": "Gates"
     },
     {
       "data": {
         "fixture_cases": {
-          "tests/routing-fixtures.json": 359
+          "tests/routing-fixtures.json": 392
         }
       },
       "number": 7,
@@ -199,7 +204,7 @@
           "path": "tests/routing-fixtures.json"
         }
       ],
-      "text": "Routing fixtures record which skill should win for a realistic request: 359 cases in 1 file.",
+      "text": "Routing fixtures record which skill should win for a realistic request: 392 cases in 1 file.",
       "title": "Routing evidence"
     },
     {

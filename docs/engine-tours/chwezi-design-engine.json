@@ -2,7 +2,7 @@
   "display_name": "Chwezi Design Engine",
   "engine_id": "chwezi-design-engine",
   "folder": "chwezi-design-engine",
-  "generated_from_commit": "7e57891b0263be59d351601bed2190696ea010f2",
+  "generated_from_commit": "c9b334d770c449db7401730db29c9b70953e62f1",
   "generator": "scripts/generate_engine_tour.py",
   "schema_version": "1.0",
   "steps": [

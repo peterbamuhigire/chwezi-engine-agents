@@ -2,7 +2,7 @@
   "display_name": "Business Plan Skills",
   "engine_id": "business-plan-skills",
   "folder": "business-plan-skills",
-  "generated_from_commit": "cf1a232632af9c76f5f359913af88ab8898948cd",
+  "generated_from_commit": "d3d5013744b8a668e21647e45161c1c7f80fdc3d",
   "generator": "scripts/generate_engine_tour.py",
   "schema_version": "1.0",
   "steps": [
@@ -124,23 +124,23 @@
       "data": {
         "hubs": [
           {
-            "inbound_skills": 164,
+            "inbound_skills": 167,
             "skill": "skills/meta-utility/anti-ai-slop"
           },
           {
-            "inbound_skills": 92,
+            "inbound_skills": 93,
             "skill": "skills/language/east-african-english"
           },
           {
-            "inbound_skills": 67,
-            "skill": "skills/meta-utility/ai-slop-audit"
-          },
-          {
-            "inbound_skills": 65,
+            "inbound_skills": 73,
             "skill": "skills/writing-content/content-writing"
           },
           {
-            "inbound_skills": 52,
+            "inbound_skills": 62,
+            "skill": "skills/meta-utility/ai-slop-audit"
+          },
+          {
+            "inbound_skills": 53,
             "skill": "skills/writing-content/premium-commercial-writing"
           }
         ],
@@ -158,18 +158,18 @@
         },
         {
           "engine": "business-plan-skills",
-          "path": "skills/meta-utility/ai-slop-audit/SKILL.md"
+          "path": "skills/writing-content/content-writing/SKILL.md"
         },
         {
           "engine": "business-plan-skills",
-          "path": "skills/writing-content/content-writing/SKILL.md"
+          "path": "skills/meta-utility/ai-slop-audit/SKILL.md"
         },
         {
           "engine": "business-plan-skills",
           "path": "skills/writing-content/premium-commercial-writing/SKILL.md"
         }
       ],
-      "text": "The skills other skills lean on most (inbound links, mentions and aliases): anti-ai-slop (164), east-african-english (92), ai-slop-audit (67), content-writing (65), premium-commercial-writing (52).",
+      "text": "The skills other skills lean on most (inbound links, mentions and aliases): anti-ai-slop (167), east-african-english (93), content-writing (73), ai-slop-audit (62), premium-commercial-writing (53).",
       "title": "Hub skills"
     },
     {

@@ -2,7 +2,7 @@
   "display_name": "Chwezi Accounting Doctrine",
   "engine_id": "chwezi-accounting-doctrine",
   "folder": "chwezi-accounting-doctrine",
-  "generated_from_commit": "5bac314043027eaebbc673dc74974f7ec3a666f2",
+  "generated_from_commit": "ff33ff14b555fe7facb7b9a431e560cf497fd91b",
   "generator": "scripts/generate_engine_tour.py",
   "schema_version": "1.0",
   "steps": [

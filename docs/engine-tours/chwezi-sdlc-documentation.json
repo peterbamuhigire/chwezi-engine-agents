@@ -2,7 +2,7 @@
   "display_name": "Chwezi SDLC Documentation",
   "engine_id": "chwezi-sdlc-documentation",
   "folder": "chwezi-sdlc-documentation",
-  "generated_from_commit": "e52f1f3dc5a69dc0e2537291d234c27200c78a91",
+  "generated_from_commit": "b3b08b5be8066772e0bd29b0ffb9cbda39a95979",
   "generator": "scripts/generate_engine_tour.py",
   "schema_version": "1.0",
   "steps": [

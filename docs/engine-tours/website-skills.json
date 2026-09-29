@@ -2,7 +2,7 @@
   "display_name": "Website Skills",
   "engine_id": "website-skills",
   "folder": "website-skills",
-  "generated_from_commit": "26930bc8914de381e72bd0eceb1872ee24b02c8d",
+  "generated_from_commit": "2316d440ac0f63ca6e6e049009d0fa989223e8ac",
   "generator": "scripts/generate_engine_tour.py",
   "schema_version": "1.0",
   "steps": [
@@ -107,15 +107,15 @@
       "data": {
         "hubs": [
           {
-            "inbound_skills": 92,
+            "inbound_skills": 93,
             "skill": "skills/content-copy/east-african-english"
           },
           {
-            "inbound_skills": 65,
+            "inbound_skills": 73,
             "skill": "skills/content-copy/content-writing"
           },
           {
-            "inbound_skills": 52,
+            "inbound_skills": 53,
             "skill": "skills/content-copy/premium-commercial-writing"
           },
           {
@@ -123,7 +123,7 @@
             "skill": "skills/content-copy/blog-writer"
           },
           {
-            "inbound_skills": 39,
+            "inbound_skills": 40,
             "skill": "skills/seo-search/seo"
           }
         ],
@@ -152,7 +152,7 @@
           "path": "skills/seo-search/seo/SKILL.md"
         }
       ],
-      "text": "The skills other skills lean on most (inbound links, mentions and aliases): east-african-english (92), content-writing (65), premium-commercial-writing (52), blog-writer (43), seo (39).",
+      "text": "The skills other skills lean on most (inbound links, mentions and aliases): east-african-english (93), content-writing (73), premium-commercial-writing (53), blog-writer (43), seo (40).",
       "title": "Hub skills"
     },
     {

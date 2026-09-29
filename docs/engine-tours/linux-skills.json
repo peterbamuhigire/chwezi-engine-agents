@@ -2,7 +2,7 @@
   "display_name": "Linux Skills",
   "engine_id": "linux-skills",
   "folder": "linux-skills",
-  "generated_from_commit": "21eb90bca44615f20cc2238fea2582e6306c920d",
+  "generated_from_commit": "e874c08e73c31c873087f2901c11d9788ecaf54a",
   "generator": "scripts/generate_engine_tour.py",
   "schema_version": "1.0",
   "steps": [

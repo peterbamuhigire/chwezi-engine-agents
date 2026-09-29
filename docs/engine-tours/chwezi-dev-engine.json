@@ -2,7 +2,7 @@
   "display_name": "Chwezi Dev Engine",
   "engine_id": "chwezi-dev-engine",
   "folder": "chwezi-dev-engine",
-  "generated_from_commit": "a577be86eb56d724c159789b4daa1b3be1296e89",
+  "generated_from_commit": "68d1fe199f418bdb4b6dec60752a530024ceafe1",
   "generator": "scripts/generate_engine_tour.py",
   "schema_version": "1.0",
   "steps": [
@@ -116,16 +116,16 @@
       "data": {
         "hubs": [
           {
-            "inbound_skills": 164,
+            "inbound_skills": 167,
             "skill": "skills/sdlc-meta/anti-ai-slop"
           },
           {
-            "inbound_skills": 67,
-            "skill": "skills/sdlc-meta/ai-slop-audit"
+            "inbound_skills": 73,
+            "skill": "skills/product-business/content-writing"
           },
           {
-            "inbound_skills": 65,
-            "skill": "skills/product-business/content-writing"
+            "inbound_skills": 62,
+            "skill": "skills/sdlc-meta/ai-slop-audit"
           },
           {
             "inbound_skills": 48,
@@ -146,11 +146,11 @@
         },
         {
           "engine": "chwezi-dev-engine",
-          "path": "skills/sdlc-meta/ai-slop-audit/SKILL.md"
+          "path": "skills/product-business/content-writing/SKILL.md"
         },
         {
           "engine": "chwezi-dev-engine",
-          "path": "skills/product-business/content-writing/SKILL.md"
+          "path": "skills/sdlc-meta/ai-slop-audit/SKILL.md"
         },
         {
           "engine": "chwezi-dev-engine",
@@ -161,7 +161,7 @@
           "path": "skills/sdlc-meta/world-class-engineering/SKILL.md"
         }
       ],
-      "text": "The skills other skills lean on most (inbound links, mentions and aliases): anti-ai-slop (164), ai-slop-audit (67), content-writing (65), skill-composition-standards (48), world-class-engineering (46).",
+      "text": "The skills other skills lean on most (inbound links, mentions and aliases): anti-ai-slop (167), content-writing (73), ai-slop-audit (62), skill-composition-standards (48), world-class-engineering (46).",
       "title": "Hub skills"
     },
     {
