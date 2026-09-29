@@ -8,7 +8,7 @@ https://github.com/addyosmani/agent-skills, commit 2686b62; format adapted, case
 | Family | Fires | Stays quiet |
 |---|---|---|
 | 1 Business case with ROI | srs-skills/business-case-roi-fires | social-media-skills/business-case-roi-stays-quiet, proposal-skills/business-case-roi-stays-quiet |
-| 2 Lighthouse / Core Web Vitals | website-skills/lighthouse-cwv-fires, design-system-skills/lighthouse-cwv-co-activates-fires | (co-activation family; expected to fail until M10-11) |
+| 2 Lighthouse / Core Web Vitals | website-skills/lighthouse-cwv-fires, design-system-skills/lighthouse-cwv-co-activates-fires | (co-activation family; lexical misroute fixed in M10-11, oracle 025 unpinned; behavioural run NOT_ASSESSED) |
 | 3 Invoice typeface | design-system-skills/invoice-typeface-fires | social-media-skills/invoice-typeface-stays-quiet |
 | 4 SRS for billing | srs-skills/billing-srs-fires | srs-skills/billing-srs-game-stays-quiet |
 | 5 Validation contract | chwezi-dev-engine/validation-contract-fires | digital-research-skills/validation-contract-stays-quiet |
