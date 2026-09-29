@@ -1,0 +1,100 @@
+srs-skills HEAD: 360854a9fa24f5588cbd6b52602be616d2bb1e4f feat(srs): engine-native elicitation gate, as-built recovery, staleness check, agent brief, pairwise design, controls search (M10-08)
+
+$ python -X utf8 scripts/render_diagrams.py --help
+usage: render_diagrams.py [-h] --doc-dir DOC_DIR --name NAME --out OUT
+                          [--figures-dir FIGURES_DIR]
+                          files [files ...]
+
+Render fenced Mermaid blocks to figures before Pandoc builds a .docx.
+
+positional arguments:
+  files
+
+options:
+  -h, --help            show this help message and exit
+  --doc-dir DOC_DIR
+  --name NAME
+  --out OUT
+  --figures-dir FIGURES_DIR
+exit=0
+
+$ python -X utf8 scripts/check_docx_diagrams.py --help
+usage: check_docx_diagrams.py [-h] [--scan SCAN] [--exclude EXCLUDE]
+                              [--json JSON]
+                              [files ...]
+
+Post-build guard: fail when raw Mermaid source survives inside a .docx.
+
+positional arguments:
+  files
+
+options:
+  -h, --help         show this help message and exit
+  --scan SCAN        scan every .docx under this root
+  --exclude EXCLUDE  comma-separated directory names to skip in --scan
+  --json JSON        write the full report as JSON
+exit=0
+
+$ python -X utf8 -m engine diagrams --help
+Usage: python -m engine diagrams [OPTIONS] COMMAND [ARGS]...
+
+  Diagram IR commands: validate, generate, manifest, verify-manifest (M10-07).
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  generate         Write _generated/<FIG>.mmd and...
+  manifest         Write <name>.figures.json beside the built .docx...
+  validate         Validate diagram IR and record the accepted candidates.
+  verify-manifest  Re-hash every file a figures manifest records; fail...
+exit=0
+
+$ python -X utf8 -m engine diagrams validate --help
+Usage: python -m engine diagrams validate [OPTIONS] PROJECT
+
+  Validate diagram IR and record the accepted candidates.
+
+Options:
+  --doc TEXT   Limit to one document directory.
+  --json PATH  Also write the diagnostics as JSON.
+  --help       Show this message and exit.
+exit=0
+
+$ python -X utf8 -m engine diagrams generate --help
+Usage: python -m engine diagrams generate [OPTIONS] PROJECT
+
+  Write _generated/<FIG>.mmd and _generated/trace-table.md from validated IR.
+
+Options:
+  --doc TEXT  Limit to one document directory.
+  --help      Show this message and exit.
+exit=0
+
+$ python -X utf8 -m engine diagrams manifest --help
+Usage: python -m engine diagrams manifest [OPTIONS]
+
+  Write <name>.figures.json beside the built .docx (called by build-doc.sh).
+
+Options:
+  --doc-dir DIRECTORY  [required]
+  --name TEXT          [required]
+  --docx PATH          [required]
+  --help               Show this message and exit.
+exit=0
+
+$ python -X utf8 -m engine diagrams verify-manifest --help
+Usage: python -m engine diagrams verify-manifest [OPTIONS] TARGET
+
+  Re-hash every file a figures manifest records; fail naming changed figures.
+
+Options:
+  --help  Show this message and exit.
+exit=0
+
+$ head -3 scripts/build-doc.sh (bash script; no --help flag, usage line)
+# build-doc.sh — Stitch markdown section files and export to .docx via Pandoc
+#
+# Usage:
+#   ./scripts/build-doc.sh <doc-dir> <output-name>
+#

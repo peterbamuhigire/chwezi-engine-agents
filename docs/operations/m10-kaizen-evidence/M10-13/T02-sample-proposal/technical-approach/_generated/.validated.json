@@ -1,0 +1,10 @@
+{
+  "figures": {
+    "FIG-001": {
+      "ir_path": "diagrams/solution-context.ir.json",
+      "ir_sha256": "04b9b91ccabea1914bde539dc6dbc404f3f284e357559ef6f0cc57d8c8f463ed"
+    }
+  },
+  "note": "Written by `python -m engine diagrams validate`; do not edit.",
+  "schema": "srs-diagram-validated/1"
+}

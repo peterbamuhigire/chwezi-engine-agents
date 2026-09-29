@@ -1,0 +1,70 @@
+$ python tools/source_register_lookup.py --jurisdiction UG --register paye --date 2026-08-15 --as-of 2026-09-29 --json
+{
+  "query": {
+    "jurisdiction": "UG",
+    "register": "paye",
+    "date": "2026-08-15",
+    "as_of": "2026-09-29"
+  },
+  "register_file": "doctrine/source-register/uganda/paye.yaml",
+  "match": "covering",
+  "results": [
+    {
+      "id": "UG-PAYE-RATES",
+      "state": "draft",
+      "final_use_allowed": false,
+      "effective_from": "2026-07-01",
+      "expires_or_recheck_due": "2026-12-26",
+      "value_or_rule": "URA's current monthly page and September 2026 notice show: resident chargeable income 0-335,000 nil; 335,001-410,000 at 20% above 335,000; 410,001-485,000 at 15,000 plus 25% above 410,000; 485,001-10,000,000 at 33,750 plus 30% above 485,000; above 10,000,000 adds 10% above 10,000,000. Non-resident monthly schedule shown by URA: 0-335,000 at 10%; 335,000-410,000 at 33,500 plus 20% above 335,000; 410,000-10,000,000 at 48,500 plus 30% above 410,000; above 10,000,000 adds 10% above 10,000,000. URA's PAYE page also states 30% of total employment income for employment at more than one place. These are regulator-published values recorded for review, not approved final payroll rules.",
+      "source_url_or_doc": "https://ura.go.ug/en/domestic-taxes/paye-rates/; https://ura.go.ug/en/changes-to-paye-return-form-following-the-income-tax-amendment-act-2026/; https://ura.go.ug/en/effective-date-of-the-income-tax-amendment-act-2026-and-the-excise-duty-amendment-act-2026/; https://ura.go.ug/en/employment-income/; https://ura.go.ug/en/tax-amendments-for-fy-2026-2027/",
+      "warnings": [
+        "draft: not for final output",
+        "archive snapshot not captured"
+      ]
+    }
+  ],
+  "reason": "entry found; final use refused",
+  "exit_code": 3
+}
+exit=3
+$ python tools/source_register_lookup.py --jurisdiction UG --register paye --date 2026-05-15 --as-of 2026-09-29 --json
+{
+  "query": {
+    "jurisdiction": "UG",
+    "register": "paye",
+    "date": "2026-05-15",
+    "as_of": "2026-09-29"
+  },
+  "register_file": "doctrine/source-register/uganda/paye.yaml",
+  "match": "candidates",
+  "results": [
+    {
+      "id": "UG-PAYE-RATES-THROUGH-2026-06-30",
+      "state": "superseded",
+      "final_use_allowed": false,
+      "effective_from": "pending-review",
+      "expires_or_recheck_due": "2026-09-26",
+      "value_or_rule": "Historical schedule copied from the former UG-PAYE-RATES entry: resident monthly chargeable income 0-235,000 nil; 235,000-335,000 at 10% over 235,000; 335,000-410,000 at 20% over 335,000 plus 10,000; 410,000-10,000,000 at 30% over 410,000 plus 25,000; above 10,000,000 adds 10% on the excess over 10,000,000. Do not use for periods from 2026-07-01. Exact first effective date of this historical schedule is NOT_ASSESSED.",
+      "source_url_or_doc": "https://ura.go.ug/en/domestic-taxes/paye-rates/",
+      "warnings": [
+        "superseded",
+        "effective date NOT_ASSESSED",
+        "recheck overdue",
+        "archive snapshot not captured"
+      ]
+    }
+  ],
+  "reason": "entry found; final use refused",
+  "exit_code": 3
+}
+exit=3
+$ python tools/source_register_lookup.py --jurisdiction UG --register no-such-register --date 2026-08-15
+UG no-such-register on 2026-08-15 (as of 2026-09-29): no register 'no-such-register' for jurisdiction UG in uganda/ [exit 2]
+exit=2
+
+$ python -m unittest discover -s tests -p "test_*.py"
+....................
+----------------------------------------------------------------------
+Ran 20 tests in 3.182s
+
+OK

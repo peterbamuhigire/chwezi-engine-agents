@@ -1,0 +1,65 @@
+{
+  "schema": "srs-figures-manifest/1",
+  "attribution": "Candidate-freezing pattern adapted from Archify (MIT, https://github.com/tt-a1i/archify, commit 0e4949f910a8e390bd3b4933883a4dcabad571be)",
+  "artifact_id": "Sample_Technical_Proposal",
+  "built_at_utc": "2026-09-29T01:19:06+00:00",
+  "doc_dir": "technical-approach",
+  "docx": "Sample_Technical_Proposal.docx",
+  "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "renderer_packages": {
+    "@mermaid-js/mermaid-cli": "12.0.0",
+    "mermaid": "12.0.0",
+    "puppeteer": "25.12.0"
+  },
+  "font": {
+    "family": "Public Sans",
+    "fallback": "sans-serif",
+    "file": "PublicSans-VF.ttf",
+    "file_sha256": "d75a7dc1a27eb9e336d5b33f55489d2ecb5621bf694d5c43b2415bce2ca830a8"
+  },
+  "figures": [
+    {
+      "figure_id": "FIG-001",
+      "figure_number": 1,
+      "ir_path": "technical-approach/diagrams/solution-context.ir.json",
+      "ir_sha256": "04b9b91ccabea1914bde539dc6dbc404f3f284e357559ef6f0cc57d8c8f463ed",
+      "validated_ir_sha256": "04b9b91ccabea1914bde539dc6dbc404f3f284e357559ef6f0cc57d8c8f463ed",
+      "mermaid_sha256": "6aadd7c18cb51e6f93abf40c3f923539bf1a89883b5e934afa636d80f3c6e5ad",
+      "png_path": "technical-approach/_figures/Sample_Technical_Proposal-1.png",
+      "png_sha256": "8804b4bda57a7462eacf949d947a219eec4b5498cb5583d0d3ab59084983c372",
+      "svg_path": "technical-approach/_figures/Sample_Technical_Proposal-1.svg",
+      "svg_sha256": "587f1116e544351e2e5cc89a0e8c65ab421d73b7997899ec23d0d5fb8a0cefdb",
+      "renderer": "@mermaid-js/mermaid-cli",
+      "renderer_version": "12.0.0",
+      "font_family": "Public Sans",
+      "font_substitution_check": "PASS",
+      "state": "local-review-export"
+    },
+    {
+      "figure_id": "fig-2",
+      "figure_number": 2,
+      "ir_path": null,
+      "ir_sha256": null,
+      "validated_ir_sha256": null,
+      "mermaid_sha256": null,
+      "png_path": "technical-approach/_figures/Sample_Technical_Proposal-2.png",
+      "png_sha256": "3511429e93ba0430233d252f490ff5c1370154c2511d71c60678d315c0d832c9",
+      "svg_path": "technical-approach/_figures/Sample_Technical_Proposal-2.svg",
+      "svg_sha256": "81e82eba6f3b43be93c147ced722b8dd0c0aa2b2ca7845e0aa2ebb9406ff766b",
+      "renderer": "@mermaid-js/mermaid-cli",
+      "renderer_version": "12.0.0",
+      "font_family": "Public Sans",
+      "font_substitution_check": "PASS",
+      "state": "local-review-export"
+    }
+  ],
+  "artifact_sha256": {
+    "Sample_Technical_Proposal.docx": "943daf2cfbabf11806271dfe84d6fe098f613ffae871d4fa6fc6ea7be9375944",
+    "technical-approach/_figures/Sample_Technical_Proposal-1.png": "8804b4bda57a7462eacf949d947a219eec4b5498cb5583d0d3ab59084983c372",
+    "technical-approach/_figures/Sample_Technical_Proposal-1.svg": "587f1116e544351e2e5cc89a0e8c65ab421d73b7997899ec23d0d5fb8a0cefdb",
+    "technical-approach/_figures/Sample_Technical_Proposal-2.png": "3511429e93ba0430233d252f490ff5c1370154c2511d71c60678d315c0d832c9",
+    "technical-approach/_figures/Sample_Technical_Proposal-2.svg": "81e82eba6f3b43be93c147ced722b8dd0c0aa2b2ca7845e0aa2ebb9406ff766b",
+    "technical-approach/_generated/FIG-001.mmd": "6aadd7c18cb51e6f93abf40c3f923539bf1a89883b5e934afa636d80f3c6e5ad",
+    "technical-approach/diagrams/solution-context.ir.json": "04b9b91ccabea1914bde539dc6dbc404f3f284e357559ef6f0cc57d8c8f463ed"
+  }
+}

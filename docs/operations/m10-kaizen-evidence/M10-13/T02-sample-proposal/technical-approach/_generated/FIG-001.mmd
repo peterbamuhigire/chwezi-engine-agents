@@ -1,0 +1,15 @@
+%%{init: {"theme": "neutral", "themeVariables": {"fontFamily": "Public Sans, sans-serif"}}}%%
+flowchart LR
+  subgraph b_client["Client organisation (fictional Kagera Water Authority)"]
+    n_district_officers(["District officers"])
+    n_finance_staff(["Finance staff"])
+    n_ifms["Proposed financial management system"]
+  end
+  n_efris[/"URA EFRIS"/]
+  n_momo[/"Mobile-money gateway"/]
+  n_nira[/"NIRA identity service"/]
+  n_momo -->|"Confirms collections (signed webhook)"| n_ifms
+  n_ifms -->|"Submits fiscal invoices (REST API)"| n_efris
+  n_finance_staff -->|"Posts and approves transactions (web, role-based)"| n_ifms
+  n_district_officers -->|"Raises requisitions (web, mobile browser)"| n_ifms
+  n_ifms -->|"Verifies payee identity (agreed interface)"| n_nira

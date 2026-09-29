@@ -1,0 +1,75 @@
+{
+  "schema": "srs-render-manifest/1",
+  "attribution": "Render-receipt pattern adapted from tt-a1i/archify (MIT, https://github.com/tt-a1i/archify, commit 0e4949f910a8e390bd3b4933883a4dcabad571be)",
+  "documents": {
+    "Sample_Technical_Proposal": {
+      "generated": "2026-09-29T04:19:05+03:00",
+      "renderer": {
+        "packages": {
+          "@mermaid-js/mermaid-cli": "12.0.0",
+          "mermaid": "12.0.0",
+          "puppeteer": "25.12.0"
+        },
+        "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+        "hosted_renderer": false
+      },
+      "font": {
+        "family": "Public Sans",
+        "fallback": "sans-serif",
+        "file": "PublicSans-VF.ttf",
+        "file_sha256": "d75a7dc1a27eb9e336d5b33f55489d2ecb5621bf694d5c43b2415bce2ca830a8",
+        "loaded_via": "@font-face data URI from the local file; embedded in each SVG",
+        "headless_chrome_probe": {
+          "family": "Public Sans",
+          "facesLoaded": 1,
+          "resolved": true
+        },
+        "banned_list": "C:\\wamp64\\www\\design-system-skills\\doctrine\\references\\ai-slop-banned-fonts.json"
+      },
+      "figures": [
+        {
+          "figure": 1,
+          "source": "../01-technical-approach.md",
+          "block_index": 1,
+          "source_sha256": "ebf4e2203afd843844ac8e711b39f7d50f3b877b14ec66da7b300465e9cc2649",
+          "png": "Sample_Technical_Proposal-1.png",
+          "svg": "Sample_Technical_Proposal-1.svg",
+          "png_sha256": "8804b4bda57a7462eacf949d947a219eec4b5498cb5583d0d3ab59084983c372",
+          "svg_sha256": "587f1116e544351e2e5cc89a0e8c65ab421d73b7997899ec23d0d5fb8a0cefdb",
+          "png_px": [
+            3356,
+            548
+          ],
+          "printed_width_in": 6.25,
+          "ppi": 536,
+          "caption": "Proposed solution context",
+          "alt": "Solution context: finance staff and district officers use the proposed integrated financial management system, which submits invoices to URA EFRIS, receives collections through a mobile-money gateway and verifies payee identity against NIRA.",
+          "alt_source": "block-comment",
+          "ir_figure_id": "FIG-001",
+          "ir_path": "diagrams/solution-context.ir.json",
+          "ir_sha256": "04b9b91ccabea1914bde539dc6dbc404f3f284e357559ef6f0cc57d8c8f463ed",
+          "mermaid_sha256": "6aadd7c18cb51e6f93abf40c3f923539bf1a89883b5e934afa636d80f3c6e5ad"
+        },
+        {
+          "figure": 2,
+          "source": "../01-technical-approach.md",
+          "block_index": 2,
+          "source_sha256": "b56f5e6df01a7a06313edca12bf318bef89d0b9d0c313a5647b9790809924f95",
+          "png": "Sample_Technical_Proposal-2.png",
+          "svg": "Sample_Technical_Proposal-2.svg",
+          "png_sha256": "3511429e93ba0430233d252f490ff5c1370154c2511d71c60678d315c0d832c9",
+          "svg_sha256": "81e82eba6f3b43be93c147ced722b8dd0c0aa2b2ca7845e0aa2ebb9406ff766b",
+          "png_px": [
+            4068,
+            428
+          ],
+          "printed_width_in": 6.25,
+          "ppi": 650,
+          "caption": "Delivery workflow and approval gates",
+          "alt": "Delivery workflow: discovery, posting-rule design, configured prototype, migrated-data rehearsal, user acceptance testing, cutover and first close, each separated by a finance-owner approval gate.",
+          "alt_source": "block-comment"
+        }
+      ]
+    }
+  }
+}

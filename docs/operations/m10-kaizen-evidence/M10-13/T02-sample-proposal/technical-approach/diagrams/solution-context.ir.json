@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "diagram_kind": "context",
+  "meta": {
+    "figure_id": "FIG-001",
+    "title": "Proposed solution context",
+    "caption": "Proposed solution context",
+    "alt_text": "Solution context: finance staff and district officers use the proposed integrated financial management system, which submits invoices to URA EFRIS, receives collections through a mobile-money gateway and verifies payee identity against NIRA.",
+    "srs_section": "4.1",
+    "baseline_label": null,
+    "owner_document": "technical-approach/01-technical-approach.md"
+  },
+  "boundaries": [
+    {"id": "client", "label": "Client organisation (fictional Kagera Water Authority)"}
+  ],
+  "nodes": [
+    {"id": "finance-staff", "label": "Finance staff", "role": "person", "boundary": "client"},
+    {"id": "district-officers", "label": "District officers", "role": "person", "boundary": "client"},
+    {"id": "ifms", "label": "Proposed financial management system", "role": "system", "boundary": "client"},
+    {"id": "efris", "label": "URA EFRIS", "role": "external_system"},
+    {"id": "momo", "label": "Mobile-money gateway", "role": "external_system"},
+    {"id": "nira", "label": "NIRA identity service", "role": "external_system"}
+  ],
+  "edges": [
+    {"id": "post", "from": "finance-staff", "to": "ifms", "label": "Posts and approves transactions (web, role-based)"},
+    {"id": "request", "from": "district-officers", "to": "ifms", "label": "Raises requisitions (web, mobile browser)"},
+    {"id": "invoice", "from": "ifms", "to": "efris", "label": "Submits fiscal invoices (REST API)"},
+    {"id": "collect", "from": "momo", "to": "ifms", "label": "Confirms collections (signed webhook)"},
+    {"id": "verify", "from": "ifms", "to": "nira", "label": "Verifies payee identity (agreed interface)"}
+  ],
+  "evidence": {
+    "srs_section": "4.1",
+    "baseline_label": null,
+    "source_documents": ["technical-approach/01-technical-approach.md"]
+  }
+}
