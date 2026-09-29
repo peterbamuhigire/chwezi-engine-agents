@@ -1,0 +1,25 @@
+b3161da367947626e51049689938f6c1bfbc57b7
+- active SKILL.md files: 167
+- max active SKILL.md files: 200
+- findings: 0 (errors: 0, warnings: 0)
+- active skills indexed: 167
+- fixtures: 184
+- precision@1: 178/184 (96%)
+- precision@3: 184/184 (100%)
+- failures: 0
+contract-gate: evidence: scanned 161 | 0 errors | 0 warnings | 6 exempt
+usage: engine_compliance.py [-h] --root ROOT [--active-root ACTIVE_ROOT]
+                            [--json] [--details] [--fix-safe]
+engine_compliance.py: error: the following arguments are required: --root
+................................................................         [100%]
+133 passed, 3 skipped in 15.02s
+61/61 passed
+7/7 passed
+PASS: control-plane registry is valid
+chwezi-dev-engine: plugin.json is current — 165 skills.
+  "execution_status": "SPECIFIED_NOT_EXECUTED"
+}
+description collisions (cosine >= 0.45):
+- candidate pairs: 2
+  0.627  mysql-engineering  <->  postgresql-engineering
+  0.451  level-world-and-content-production  <->  ux-content-strategy

@@ -1,0 +1,37 @@
+1 | references/solution-selection.md | skills/sdlc-meta/world-class-engineering/SKILL.md
+1 | spike, bounded | skills/sdlc-meta/world-class-engineering/SKILL.md
+0 | delegated | rules/common/verification.md
+1 | suite defines green | skills/sdlc-meta/advanced-testing-strategy/references/test-first-seams-and-oracles.md
+2 | declined to judge | skills/ai/coding-agent-optimization/references/parallel-execution-lanes.md
+1 | capability tier | skills/ai/coding-agent-optimization/references/parallel-execution-lanes.md
+2 | untracked | skills/ai/coding-agent-optimization/references/worktree-safety.md
+1 | receiving-review-feedback | skills/sdlc-meta/git-collaboration-workflow/SKILL.md
+1 | graph-first | skills/sdlc-meta/ai-assisted-development/SKILL.md
+3 | AMBIGUOUS | skills/sdlc-meta/implementation-status-auditor/references/drill-down-templates.md
+1 | Topology-ordered | skills/sdlc-meta/doc-architect/references/code-tour.md
+1 | untrusted (i) | doc-architect/SKILL.md
+6 | ARCHITECTURE | skills/sdlc-meta/doc-architect/references/doc-maintenance-after-change.md
+1 | architecture-as-code | skills/architecture/system-architecture-design/SKILL.md
+3 | R0 | docs/continuous-improvement/english-output-standard-2026-09-02.md
+1 | needs-confirm. | skills/ai/coding-agent-optimization/references/parallel-execution-lanes.md
+1 | quality-bar-guard | skills/sdlc-meta/world-class-engineering/SKILL.md
+--- other acceptance
+69:`superpowers:brainstorming`) may be used; this engine's gates remain authoritative.
+80%: 0
+model ids: 0
+install graphify: 0
+full commit: 3
+  368 skills/sdlc-meta/world-class-engineering/SKILL.md
+   55 rules/common/verification.md
+  140 skills/ai/coding-agent-optimization/references/parallel-execution-lanes.md
+   65 skills/ai/coding-agent-optimization/references/worktree-safety.md
+   67 skills/sdlc-meta/git-collaboration-workflow/references/receiving-review-feedback.md
+   71 skills/execution-plan-scripts/references/plan-header-and-proportion.md
+  114 skills/sdlc-meta/world-class-engineering/references/quality-bar-guard.md
+  167 skills/sdlc-meta/ai-assisted-development/SKILL.md
+  104 skills/sdlc-meta/ai-assisted-development/references/graph-first-codebase-comprehension.md
+  175 skills/sdlc-meta/engine-control-plane/SKILL.md
+  179 skills/sdlc-meta/doc-architect/references/code-tour.md
+  109 skills/architecture/system-architecture-design/references/architecture-as-code.md
+  107 skills/ai/ai-rag-patterns/references/curated-corpus-worked-example.md
+ 1721 total

@@ -1,0 +1,47 @@
+## count
+167
+78
+## guardrails
+- active SKILL.md files: 167
+- max active SKILL.md files: 200
+- findings: 0 (errors: 0, warnings: 0)
+## routing
+- active skills indexed: 167
+- fixtures: 187
+- precision@1: 179/187 (95%)
+- precision@3: 187/187 (100%)
+- failures: 0
+description collisions (cosine >= 0.45):
+- candidate pairs: 2
+  0.627  mysql-engineering  <->  postgresql-engineering
+  0.451  level-world-and-content-production  <->  ux-content-strategy
+## contract gate
+contract-gate: evidence: scanned 161 | 0 errors | 0 warnings | 6 exempt
+## compliance
+engine-compliance: C:\wamp64\www\chwezi-dev-engine
+- skills: 165
+- fully compliant: 136
+## pytest
+..............................................                           [100%]
+187 passed, 3 skipped in 30.99s
+## hooks
+61/61 passed
+7/7 passed
+## control plane
+PASS: control-plane registry is valid
+## manifest
+chwezi-dev-engine: plugin.json is current — 165 skills.
+## benchmark
+{
+  "status": "PASS",
+  "errors": [],
+  "fixture_count": 16,
+  "execution_status": "SPECIFIED_NOT_EXECUTED"
+}
+## book
+PASS: book-extraction check roots=12 findings=0
+## work graph
+work-graph: nodes=1 findings=0 frontier=slice-1
+## tour
+budget: 6 steps within vibecoder 5-8
+validate-tour: PASS (0 finding(s))
