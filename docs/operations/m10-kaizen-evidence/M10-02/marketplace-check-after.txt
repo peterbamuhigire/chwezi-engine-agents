@@ -1,0 +1,25 @@
+ok     suite: chwezi-suite: no count in description (not checked)
+ok     suite: srs: 159 skills
+ok     suite: business-plan: 134 skills
+ok     suite: website: 62 skills
+ok     suite: social: 191 skills
+ok     suite: linux: 45 skills
+ok     suite: proposal: 115 skills
+ok     suite: engineering: 165 skills
+ok     suite: accounting: 108 skills
+ok     suite: design-system: 101 skills
+ok     suite: research: 59 skills
+ok     suite: windows-admin: 20 skills
+ok     srs-skills: srs: 159 skills
+ok     business-plan-skills: business-plan: 134 skills
+ok     website-skills: website: 62 skills
+ok     social-media-skills: social: 191 skills
+ok     linux-skills: linux: 45 skills
+ok     proposal-skills: proposal: 115 skills
+ok     chwezi-dev-engine: engineering: 165 skills
+ok     chwezi-accounting-doctrine: accounting: 108 skills
+ok     design-system-skills: design-system: 101 skills
+ok     digital-research-engine: research: 59 skills
+ok     windows-admin-engine-skills: windows-admin: 20 skills
+marketplace check: 23 ok, 0 drift, 0 not assessed
+exit=0

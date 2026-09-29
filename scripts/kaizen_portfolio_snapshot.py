@@ -39,32 +39,105 @@ def sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
-def git(root: Path, *args: str) -> str:
+def git(root: Path, *args: str, strip: bool = True) -> str:
+    """Run git and return stdout.
+
+    ``strip=False`` keeps leading whitespace, which is significant in
+    ``git status --porcelain`` output: a leading space is the empty index
+    column, so stripping it shifts the path of the first dirty entry.
+    """
     result = subprocess.run(
         ["git", *args], cwd=root, capture_output=True, check=False,
         text=True, encoding="utf-8", errors="replace",
     )
     if result.returncode:
         raise RuntimeError(f"git {' '.join(args)} failed in {root}: {result.stderr.strip()}")
-    return result.stdout.strip()
+    return result.stdout.strip() if strip else result.stdout.rstrip("\r\n")
+
+
+def parse_porcelain(status: str) -> list[tuple[str, str]]:
+    """Return (status code, path) pairs from ``git status --porcelain=v1``.
+
+    The first two columns are the index and worktree codes and column three is
+    a space, so the path always starts at offset 3. Renames report the new path.
+    """
+    rows = []
+    for line in status.splitlines():
+        if len(line) < 4:
+            continue
+        rel = line[3:]
+        if " -> " in rel:
+            rel = rel.split(" -> ", 1)[1]
+        if len(rel) >= 2 and rel[0] == rel[-1] == '"':
+            rel = rel[1:-1]
+        rows.append((line[:2].strip(), rel))
+    return sorted(rows, key=lambda row: row[1])
 
 
 def file_sha(path: Path) -> str | None:
     return sha256(path.read_bytes()) if path.is_file() else None
 
 
+IMPORT_LINE_RE = re.compile(r"^@(\S+)\s*$")
+MAX_IMPORT_DEPTH = 5
+
+
+def router_size(root: Path, router: str = "CLAUDE.md") -> dict:
+    """Measure the Claude router and everything it pulls in through ``@`` imports.
+
+    Import lines (``@<path>`` alone on a line) are resolved relative to the
+    importing file, recursively to ``MAX_IMPORT_DEPTH``, with a cycle guard.
+    Each file counts once. Missing targets are recorded, not followed.
+    """
+    entry = root / router
+    if not entry.is_file():
+        return {"router_bytes": None, "router_import_bytes": 0,
+                "router_effective_bytes": None, "router_imports": []}
+    imports: list[dict] = []
+    seen = {entry.resolve()}
+
+    def follow(path: Path, depth: int) -> None:
+        if depth >= MAX_IMPORT_DEPTH:
+            return
+        text = path.read_bytes().decode("utf-8-sig", errors="replace")
+        for line in text.splitlines():
+            match = IMPORT_LINE_RE.match(line.strip())
+            if not match:
+                continue
+            target = (path.parent / match.group(1)).resolve()
+            if target in seen:
+                continue
+            seen.add(target)
+            try:
+                rel = target.relative_to(root.resolve()).as_posix()
+            except ValueError:
+                rel = match.group(1)
+            if not target.is_file():
+                imports.append({"path": rel, "bytes": None, "missing": True})
+                continue
+            imports.append({"path": rel, "bytes": target.stat().st_size})
+            follow(target, depth + 1)
+
+    follow(entry, 0)
+    router_bytes = entry.stat().st_size
+    import_bytes = sum(item["bytes"] or 0 for item in imports)
+    return {
+        "router_bytes": router_bytes,
+        "router_import_bytes": import_bytes,
+        "router_effective_bytes": router_bytes + import_bytes,
+        "router_imports": imports,
+    }
+
+
 def collect_engine(root: Path, name: str) -> tuple[dict, list[dict]]:
     if not root.is_dir():
         raise FileNotFoundError(root)
-    status = git(root, "status", "--porcelain=v1", "--untracked-files=all")
+    status = git(root, "status", "--porcelain=v1", "--untracked-files=all", strip=False)
     dirty = []
-    for line in sorted(status.splitlines()):
-        if not line:
-            continue
-        rel = line[3:]
+    for code, rel in parse_porcelain(status):
         path = root / rel
         dirty.append({
-            "status": line[:2].strip(),
+            "status": code,
             "path": rel.replace("\\", "/"),
             "working_sha256": file_sha(path),
         })
@@ -78,6 +151,7 @@ def collect_engine(root: Path, name: str) -> tuple[dict, list[dict]]:
         "working_tree_clean": not dirty,
         "dirty_files": dirty,
         "tracked_diff_sha256": sha256(patch.encode("utf-8")),
+        **router_size(root),
     }
     skill_rows = []
     discovered = []
@@ -154,7 +228,12 @@ def main() -> int:
     with (out / "coordination-skill-inventory.jsonl").open("w", encoding="utf-8", newline="\n") as handle:
         for row in coordination_skills:
             handle.write(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n")
-    print(json.dumps({"engines": len(engines), "raw_skill_file_total": len(skills), "coordination_skill_file_total": len(coordination_skills), "output_dir": str(out)}, sort_keys=True))
+    summary = {"engines": len(engines), "raw_skill_file_total": len(skills), "coordination_skill_file_total": len(coordination_skills), "output_dir": str(out)}
+    # Local-only: the machine's global Claude memory size is printed to the
+    # console for the operator and never written into the public output files.
+    global_router = Path.home() / ".claude" / "CLAUDE.md"
+    summary["local_only_global_claude_md_bytes"] = global_router.stat().st_size if global_router.is_file() else None
+    print(json.dumps(summary, sort_keys=True))
     return 0
 
 

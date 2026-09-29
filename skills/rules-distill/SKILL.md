@@ -16,7 +16,9 @@ presented for explicit approval.
 ## When to Use
 
 - Periodic maintenance for an engine that already has a `rules/` layer (all
-  twelve Chwezi engines do, as of the 2026-09-20 Kaizen pass).
+  eleven catalogued domain engines do, as checked on 29 Sep 2026; this
+  coordination package has none, and the dev engine's `rules/common/` holds
+  topic files rather than a `core.md`).
 - After a skill-stocktake-style audit surfaces a pattern worth checking.
 - When a rule file feels thin relative to what the skills actually assume.
 

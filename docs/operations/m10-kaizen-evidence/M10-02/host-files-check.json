@@ -1,0 +1,161 @@
+{
+  "findings": [],
+  "not_assessed": [],
+  "checked": [
+    {
+      "engine": "srs-skills",
+      "claude_md_bytes": 44
+    },
+    {
+      "engine": "business-plan-skills",
+      "claude_md_bytes": 222
+    },
+    {
+      "engine": "website-skills",
+      "claude_md_bytes": 606
+    },
+    {
+      "engine": "social-media-skills",
+      "claude_md_bytes": 44
+    },
+    {
+      "engine": "linux-skills",
+      "claude_md_bytes": 362
+    },
+    {
+      "engine": "proposal-skills",
+      "claude_md_bytes": 44
+    },
+    {
+      "engine": "chwezi-dev-engine",
+      "claude_md_bytes": 44
+    },
+    {
+      "engine": "chwezi-accounting-doctrine",
+      "claude_md_bytes": 44
+    },
+    {
+      "engine": "design-system-skills",
+      "claude_md_bytes": 212
+    },
+    {
+      "engine": "digital-research-engine",
+      "claude_md_bytes": 889
+    },
+    {
+      "engine": "windows-admin-engine-skills",
+      "claude_md_bytes": 250
+    },
+    {
+      "engine": "chwezi-engine-agents",
+      "claude_md_bytes": 324
+    },
+    {
+      "register": [
+        {
+          "id": "hooks-destructive-bash-gate",
+          "mode": "byte",
+          "copies": 11,
+          "status": "ok"
+        },
+        {
+          "id": "hooks-test-destructive-bash-gate",
+          "mode": "byte",
+          "copies": 11,
+          "status": "ok"
+        },
+        {
+          "id": "hooks-plugin-hook-config",
+          "mode": "byte",
+          "copies": 11,
+          "status": "ok"
+        },
+        {
+          "id": "skills-engine-agents-integration",
+          "mode": "byte",
+          "copies": 10,
+          "status": "ok"
+        },
+        {
+          "id": "engine-install-sh",
+          "mode": "byte",
+          "copies": 11,
+          "status": "ok"
+        },
+        {
+          "id": "engine-install-ps1",
+          "mode": "byte",
+          "copies": 11,
+          "status": "ok"
+        },
+        {
+          "id": "install-engine-js",
+          "mode": "registered-variant",
+          "copies": 12,
+          "status": "ok"
+        },
+        {
+          "id": "design-trigger-block",
+          "mode": "block",
+          "copies": 12,
+          "status": "ok"
+        },
+        {
+          "id": "ai-slop-banned-fonts-json",
+          "mode": "byte",
+          "copies": 0,
+          "status": "ok"
+        },
+        {
+          "id": "domain-prompt-compilation-contract",
+          "mode": "external",
+          "copies": 11,
+          "status": "enforced by powershell -File scripts/validate-prompt-capability.ps1 -WorkspaceRoot <workspace>"
+        },
+        {
+          "id": "source-ingestion-guardrail",
+          "mode": "registered-variant",
+          "copies": 10,
+          "status": "ok"
+        },
+        {
+          "id": "rules-common-core",
+          "mode": "registered-variant",
+          "copies": 10,
+          "status": "ok"
+        },
+        {
+          "id": "skill-writing-skill",
+          "mode": "registered-variant",
+          "copies": 7,
+          "status": "ok"
+        },
+        {
+          "id": "skill-writing-quick-validate",
+          "mode": "registered-variant",
+          "copies": 7,
+          "status": "ok"
+        },
+        {
+          "id": "generate-plugin-manifest",
+          "mode": "registered-variant",
+          "copies": 12,
+          "status": "ok"
+        },
+        {
+          "id": "routing-smoke-test",
+          "mode": "registered-variant",
+          "copies": 10,
+          "status": "ok"
+        },
+        {
+          "id": "design-trigger-block",
+          "mode": "exclusion",
+          "engine": "design-system-skills",
+          "reason": "Owner of the block; design carries the design doctrine directly in AGENTS.md and README.md, so it does not carry a trigger to itself.",
+          "status": "excluded"
+        }
+      ]
+    }
+  ]
+}

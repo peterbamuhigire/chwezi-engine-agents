@@ -1,0 +1,631 @@
+# Shared-asset register for the Chwezi public portfolio (M10-02-T05).
+#
+# Enforced read-only by scripts/render_host_files.py --check. Paths are relative to the
+# workspace root that holds the sibling checkouts. Modes:
+#   byte               copy is identical to the canonical file after CRLF normalisation
+#   block              the text between the named markers is identical to the canonical block
+#   registered-variant each copy's SHA-256 (CRLF-normalised) is recorded with an owner and a
+#                      reason; any hash that is not registered fails
+#   external           enforced by another named check; listed here so the register is complete
+# "discover" globs (no "**") find copies on disk that the register does not list.
+# To re-register a deliberate change, replace the hash, keep the owner and reason, and move
+# review_date. The private political-essay engine is never listed.
+schema_version: "1.0"
+review_date: "2026-12-29"
+public_repositories:
+  - chwezi-dev-engine
+  - design-system-skills
+  - srs-skills
+  - website-skills
+  - digital-research-engine
+  - proposal-skills
+  - business-plan-skills
+  - social-media-skills
+  - linux-skills
+  - chwezi-accounting-doctrine
+  - windows-admin-engine-skills
+  - chwezi-engine-agents
+
+model_id_allowlist:
+  # Files that quote a corrupted model ID on purpose (as a record of a repaired defect).
+  - path: chwezi-dev-engine/docs/updates/2026-09-24-book-extraction-removal-and-kaizen.md
+    reason: "Change record of the K12 repair; it quotes one corrupted identifier as an example of what was fixed."
+
+coordination:
+  # The coordination package has no engine manifest; its bridge block, invariants and plugin
+  # exclusions live here. Its version source is .claude-plugin/plugin.json.
+  claude_only_block: |
+    - Read the workflow definitions in `agents/` and every engine `SKILL.md` directly; they are not
+      registered with Claude Code's native `Skill` tool.
+    - An engine's `CLAUDE.md` is a bridge that imports its `AGENTS.md`, so either file gives the
+      same router.
+  invariants:
+    - id: book-extraction-ban
+      phrase: "Never store book extractions in any engine or in this package: no"
+    - id: not-assessed
+      phrase: "Unavailable validation commands are reported as `NOT ASSESSED`, never"
+  invariant_exemptions:
+    british-english: "The coordination router has no British English output rule; the M10 binding rules carry it for plan outputs. Adding one is new doctrine outside M10-02."
+  plugin_exclusions:
+    - path: "adapters/*/skills/skills-engine-agents"
+      reason: "host adapter entry skills (Claude Code, OpenCode) installed by the adapter installers, not by the chwezi-suite plugin"
+
+assets:
+  - id: hooks-destructive-bash-gate
+    mode: byte
+    canonical: chwezi-engine-agents/hooks/destructive-bash-gate.js
+    copies:
+      - chwezi-dev-engine/hooks/destructive-bash-gate.js
+      - design-system-skills/hooks/destructive-bash-gate.js
+      - srs-skills/hooks/destructive-bash-gate.js
+      - website-skills/hooks/destructive-bash-gate.js
+      - digital-research-engine/hooks/destructive-bash-gate.js
+      - proposal-skills/hooks/destructive-bash-gate.js
+      - business-plan-skills/hooks/destructive-bash-gate.js
+      - social-media-skills/hooks/destructive-bash-gate.js
+      - linux-skills/hooks/destructive-bash-gate.js
+      - chwezi-accounting-doctrine/hooks/destructive-bash-gate.js
+      - windows-admin-engine-skills/hooks/destructive-bash-gate.js
+    discover:
+      - "*/hooks/destructive-bash-gate.js"
+    reason: "Shared destructive-Git hook (K19); identical in all twelve repositories and kept identical by hand."
+    owner: chwezi-engine-agents
+    review_date: "2026-12-29"
+  - id: hooks-test-destructive-bash-gate
+    mode: byte
+    canonical: chwezi-engine-agents/hooks/test-destructive-bash-gate.js
+    copies:
+      - chwezi-dev-engine/hooks/test-destructive-bash-gate.js
+      - design-system-skills/hooks/test-destructive-bash-gate.js
+      - srs-skills/hooks/test-destructive-bash-gate.js
+      - website-skills/hooks/test-destructive-bash-gate.js
+      - digital-research-engine/hooks/test-destructive-bash-gate.js
+      - proposal-skills/hooks/test-destructive-bash-gate.js
+      - business-plan-skills/hooks/test-destructive-bash-gate.js
+      - social-media-skills/hooks/test-destructive-bash-gate.js
+      - linux-skills/hooks/test-destructive-bash-gate.js
+      - chwezi-accounting-doctrine/hooks/test-destructive-bash-gate.js
+      - windows-admin-engine-skills/hooks/test-destructive-bash-gate.js
+    discover:
+      - "*/hooks/test-destructive-bash-gate.js"
+    reason: "Shared destructive-Git hook (K19); identical in all twelve repositories and kept identical by hand."
+    owner: chwezi-engine-agents
+    review_date: "2026-12-29"
+  - id: hooks-plugin-hook-config
+    mode: byte
+    canonical: chwezi-engine-agents/hooks/plugin-hook-config.js
+    copies:
+      - chwezi-dev-engine/hooks/plugin-hook-config.js
+      - design-system-skills/hooks/plugin-hook-config.js
+      - srs-skills/hooks/plugin-hook-config.js
+      - website-skills/hooks/plugin-hook-config.js
+      - digital-research-engine/hooks/plugin-hook-config.js
+      - proposal-skills/hooks/plugin-hook-config.js
+      - business-plan-skills/hooks/plugin-hook-config.js
+      - social-media-skills/hooks/plugin-hook-config.js
+      - linux-skills/hooks/plugin-hook-config.js
+      - chwezi-accounting-doctrine/hooks/plugin-hook-config.js
+      - windows-admin-engine-skills/hooks/plugin-hook-config.js
+    discover:
+      - "*/hooks/plugin-hook-config.js"
+    reason: "Shared destructive-Git hook (K19); identical in all twelve repositories and kept identical by hand."
+    owner: chwezi-engine-agents
+    review_date: "2026-12-29"
+  - id: skills-engine-agents-integration
+    mode: byte
+    canonical: chwezi-dev-engine/.skills-engine/AGENTS-INTEGRATION.md
+    copies:
+      - design-system-skills/.skills-engine/AGENTS-INTEGRATION.md
+      - srs-skills/.skills-engine/AGENTS-INTEGRATION.md
+      - website-skills/.skills-engine/AGENTS-INTEGRATION.md
+      - digital-research-engine/.skills-engine/AGENTS-INTEGRATION.md
+      - proposal-skills/.skills-engine/AGENTS-INTEGRATION.md
+      - business-plan-skills/.skills-engine/AGENTS-INTEGRATION.md
+      - social-media-skills/.skills-engine/AGENTS-INTEGRATION.md
+      - linux-skills/.skills-engine/AGENTS-INTEGRATION.md
+      - chwezi-accounting-doctrine/.skills-engine/AGENTS-INTEGRATION.md
+      - windows-admin-engine-skills/.skills-engine/AGENTS-INTEGRATION.md
+    discover:
+      - "*/.skills-engine/AGENTS-INTEGRATION.md"
+    reason: "Universal-agent integration note shipped with every engine manifest."
+    note: "No agents template exists for this file; the dev copy is the canonical source until one is added."
+    owner: chwezi-engine-agents
+    review_date: "2026-12-29"
+  - id: engine-install-sh
+    mode: byte
+    canonical: chwezi-engine-agents/scripts/install.sh.template
+    copies:
+      - chwezi-dev-engine/install.sh
+      - design-system-skills/install.sh
+      - srs-skills/install.sh
+      - website-skills/install.sh
+      - digital-research-engine/install.sh
+      - proposal-skills/install.sh
+      - business-plan-skills/install.sh
+      - social-media-skills/install.sh
+      - linux-skills/install.sh
+      - chwezi-accounting-doctrine/install.sh
+      - windows-admin-engine-skills/install.sh
+    reason: "Per-engine installer rendered from the agents template."
+    owner: chwezi-engine-agents
+    review_date: "2026-12-29"
+  - id: engine-install-ps1
+    mode: byte
+    canonical: chwezi-engine-agents/scripts/install.ps1.template
+    copies:
+      - chwezi-dev-engine/install.ps1
+      - design-system-skills/install.ps1
+      - srs-skills/install.ps1
+      - website-skills/install.ps1
+      - digital-research-engine/install.ps1
+      - proposal-skills/install.ps1
+      - business-plan-skills/install.ps1
+      - social-media-skills/install.ps1
+      - linux-skills/install.ps1
+      - chwezi-accounting-doctrine/install.ps1
+      - windows-admin-engine-skills/install.ps1
+    reason: "Per-engine installer rendered from the agents template."
+    owner: chwezi-engine-agents
+    review_date: "2026-12-29"
+  - id: install-engine-js
+    mode: registered-variant
+    copies:
+      - chwezi-engine-agents/scripts/install-engine.js
+      - chwezi-dev-engine/scripts/install-engine.js
+      - design-system-skills/scripts/install-engine.js
+      - srs-skills/scripts/install-engine.js
+      - website-skills/scripts/install-engine.js
+      - digital-research-engine/scripts/install-engine.js
+      - proposal-skills/scripts/install-engine.js
+      - business-plan-skills/scripts/install-engine.js
+      - social-media-skills/scripts/install-engine.js
+      - linux-skills/scripts/install-engine.js
+      - chwezi-accounting-doctrine/scripts/install-engine.js
+      - windows-admin-engine-skills/scripts/install-engine.js
+    discover:
+      - "*/scripts/install-engine.js"
+    variants:
+      chwezi-engine-agents/scripts/install-engine.js:
+        sha256: 5b8c7d86c7ac184a81855e66d1ecaf019f93530a742946668f15cdc294167b89
+        owner: chwezi-engine-agents
+        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+      chwezi-dev-engine/scripts/install-engine.js:
+        sha256: c4f63cfee68e7dc7484f92f10ef5149f3abcce3f6c090630637b2a80a2232e08
+        owner: chwezi-dev-engine
+        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+      design-system-skills/scripts/install-engine.js:
+        sha256: c4f63cfee68e7dc7484f92f10ef5149f3abcce3f6c090630637b2a80a2232e08
+        owner: design-system-skills
+        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+      srs-skills/scripts/install-engine.js:
+        sha256: c4f63cfee68e7dc7484f92f10ef5149f3abcce3f6c090630637b2a80a2232e08
+        owner: srs-skills
+        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+      website-skills/scripts/install-engine.js:
+        sha256: c4f63cfee68e7dc7484f92f10ef5149f3abcce3f6c090630637b2a80a2232e08
+        owner: website-skills
+        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+      digital-research-engine/scripts/install-engine.js:
+        sha256: c4f63cfee68e7dc7484f92f10ef5149f3abcce3f6c090630637b2a80a2232e08
+        owner: digital-research-engine
+        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+      proposal-skills/scripts/install-engine.js:
+        sha256: c4f63cfee68e7dc7484f92f10ef5149f3abcce3f6c090630637b2a80a2232e08
+        owner: proposal-skills
+        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+      business-plan-skills/scripts/install-engine.js:
+        sha256: c4f63cfee68e7dc7484f92f10ef5149f3abcce3f6c090630637b2a80a2232e08
+        owner: business-plan-skills
+        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+      social-media-skills/scripts/install-engine.js:
+        sha256: c4f63cfee68e7dc7484f92f10ef5149f3abcce3f6c090630637b2a80a2232e08
+        owner: social-media-skills
+        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+      linux-skills/scripts/install-engine.js:
+        sha256: c4f63cfee68e7dc7484f92f10ef5149f3abcce3f6c090630637b2a80a2232e08
+        owner: linux-skills
+        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+      chwezi-accounting-doctrine/scripts/install-engine.js:
+        sha256: c4f63cfee68e7dc7484f92f10ef5149f3abcce3f6c090630637b2a80a2232e08
+        owner: chwezi-accounting-doctrine
+        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+      windows-admin-engine-skills/scripts/install-engine.js:
+        sha256: c4f63cfee68e7dc7484f92f10ef5149f3abcce3f6c090630637b2a80a2232e08
+        owner: windows-admin-engine-skills
+        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+    reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+    review_date: "2026-12-29"
+  - id: design-trigger-block
+    mode: block
+    canonical: design-system-skills/integration/trigger-block.md
+    markers:
+      start: "<!-- design-system-skills:trigger v2 -->"
+      end: "<!-- /design-system-skills:trigger -->"
+    copies:
+      - chwezi-dev-engine/AGENTS.md
+      - srs-skills/AGENTS.md
+      - website-skills/AGENTS.md
+      - digital-research-engine/AGENTS.md
+      - proposal-skills/AGENTS.md
+      - business-plan-skills/AGENTS.md
+      - social-media-skills/AGENTS.md
+      - linux-skills/AGENTS.md
+      - chwezi-accounting-doctrine/AGENTS.md
+      - windows-admin-engine-skills/AGENTS.md
+      - chwezi-engine-agents/AGENTS.md
+      - design-system-skills/integration/integration-plan.md
+    reason: "Cross-cutting design trigger (output of M10-01-T13). Text outside the markers, such as a migration note, is not compared."
+    owner: design-system-skills
+    review_date: "2026-12-29"
+  - id: ai-slop-banned-fonts-json
+    mode: byte
+    canonical: design-system-skills/doctrine/references/ai-slop-banned-fonts.json
+    copies:
+    discover:
+      - "*/doctrine/references/ai-slop-banned-fonts.json"
+      - "*/references/ai-slop-banned-fonts.json"
+      - "*/data/ai-slop-banned-fonts.json"
+    reason: "One canonical banned-font JSON plus checked mirrors (roadmap section 5 row 9). No consumer vendors it yet; add the mirror path here when one does (for example website after M10-11)."
+    owner: chwezi-engine-agents
+    review_date: "2026-12-29"
+  - id: domain-prompt-compilation-contract
+    mode: external
+    enforced_by: "powershell -File scripts/validate-prompt-capability.ps1 -WorkspaceRoot <workspace>"
+    canonical: chwezi-engine-agents/docs/operations/domain-prompt-compilation-contract-2026-09-16.md
+    copies:
+      - chwezi-dev-engine/docs/ai-prompting/domain-prompt-compilation-contract.md
+      - design-system-skills/docs/ai-prompting/domain-prompt-compilation-contract.md
+      - srs-skills/docs/ai-prompting/domain-prompt-compilation-contract.md
+      - website-skills/docs/ai-prompting/domain-prompt-compilation-contract.md
+      - digital-research-engine/docs/ai-prompting/domain-prompt-compilation-contract.md
+      - proposal-skills/docs/ai-prompting/domain-prompt-compilation-contract.md
+      - business-plan-skills/docs/ai-prompting/domain-prompt-compilation-contract.md
+      - social-media-skills/docs/ai-prompting/domain-prompt-compilation-contract.md
+      - linux-skills/docs/ai-prompting/domain-prompt-compilation-contract.md
+      - chwezi-accounting-doctrine/docs/ai-prompting/domain-prompt-compilation-contract.md
+      - windows-admin-engine-skills/docs/ai-prompting/domain-prompt-compilation-contract.md
+    reason: "Byte identity already enforced by validate-prompt-capability.ps1 (K10/K11); referenced, not duplicated."
+    owner: chwezi-engine-agents
+    review_date: "2026-12-29"
+  - id: source-ingestion-guardrail
+    mode: registered-variant
+    copies:
+      - chwezi-dev-engine/scripts/source_ingestion_guardrail.py
+      - srs-skills/scripts/source_ingestion_guardrail.py
+      - website-skills/scripts/source_ingestion_guardrail.py
+      - digital-research-engine/scripts/source_ingestion_guardrail.py
+      - proposal-skills/scripts/source_ingestion_guardrail.py
+      - business-plan-skills/scripts/source_ingestion_guardrail.py
+      - social-media-skills/scripts/source_ingestion_guardrail.py
+      - linux-skills/scripts/source_ingestion_guardrail.py
+      - chwezi-accounting-doctrine/scripts/source_ingestion_guardrail.py
+      - windows-admin-engine-skills/scripts/source_ingestion_guardrail.py
+    discover:
+      - "*/scripts/source_ingestion_guardrail.py"
+    variants:
+      chwezi-dev-engine/scripts/source_ingestion_guardrail.py:
+        sha256: a0a2418ff5ecd7598b7c37924bc08af9ab13b469ad9c156a506e9d99763121a1
+        owner: chwezi-dev-engine
+        reason: "Engine-specific book-extraction guardrail; 8 variants in 10 copies (absent in design and agents). Consolidation needs its own value gate."
+      srs-skills/scripts/source_ingestion_guardrail.py:
+        sha256: 770c511b52c83bbe4139da7000c7e163cc93e4fb423e7ff4d2ddf2ce195f423a
+        owner: srs-skills
+        reason: "Engine-specific book-extraction guardrail; 8 variants in 10 copies (absent in design and agents). Consolidation needs its own value gate."
+      website-skills/scripts/source_ingestion_guardrail.py:
+        sha256: 55d52eb7a1dc21de4d462479c6cd48a52aed16f4e292c4985ac54c86573ecf0c
+        owner: website-skills
+        reason: "Engine-specific book-extraction guardrail; 8 variants in 10 copies (absent in design and agents). Consolidation needs its own value gate."
+      digital-research-engine/scripts/source_ingestion_guardrail.py:
+        sha256: f8b2e2670db995f11ad91a8510db54ed15d7c1d3f538322a29cef0c76712c40a
+        owner: digital-research-engine
+        reason: "Engine-specific book-extraction guardrail; 8 variants in 10 copies (absent in design and agents). Consolidation needs its own value gate."
+      proposal-skills/scripts/source_ingestion_guardrail.py:
+        sha256: d458d838e8408f0609b076a33bdd2c51a262619f5125a5ad695b1009d55571d3
+        owner: proposal-skills
+        reason: "Engine-specific book-extraction guardrail; 8 variants in 10 copies (absent in design and agents). Consolidation needs its own value gate."
+      business-plan-skills/scripts/source_ingestion_guardrail.py:
+        sha256: b91f3d648ead52b9660fabff246fc3575636cc148ebd5046d0833b7dbceb7d6b
+        owner: business-plan-skills
+        reason: "Engine-specific book-extraction guardrail; 8 variants in 10 copies (absent in design and agents). Consolidation needs its own value gate."
+      social-media-skills/scripts/source_ingestion_guardrail.py:
+        sha256: 449b62ff739f3787d0016bb85bdf5992aeab5c70d8368c2eaf2b55986f514ed9
+        owner: social-media-skills
+        reason: "Engine-specific book-extraction guardrail; 8 variants in 10 copies (absent in design and agents). Consolidation needs its own value gate."
+      linux-skills/scripts/source_ingestion_guardrail.py:
+        sha256: f8b2e2670db995f11ad91a8510db54ed15d7c1d3f538322a29cef0c76712c40a
+        owner: linux-skills
+        reason: "Engine-specific book-extraction guardrail; 8 variants in 10 copies (absent in design and agents). Consolidation needs its own value gate."
+      chwezi-accounting-doctrine/scripts/source_ingestion_guardrail.py:
+        sha256: f8b2e2670db995f11ad91a8510db54ed15d7c1d3f538322a29cef0c76712c40a
+        owner: chwezi-accounting-doctrine
+        reason: "Engine-specific book-extraction guardrail; 8 variants in 10 copies (absent in design and agents). Consolidation needs its own value gate."
+      windows-admin-engine-skills/scripts/source_ingestion_guardrail.py:
+        sha256: 79e877da2f92fc39a428f4a00cd6d9a0a6e9bbe2a2aa99fd9d62386ffa1435ab
+        owner: windows-admin-engine-skills
+        reason: "Engine-specific book-extraction guardrail; 8 variants in 10 copies (absent in design and agents). Consolidation needs its own value gate."
+    reason: "Engine-specific book-extraction guardrail; 8 variants in 10 copies (absent in design and agents). Consolidation needs its own value gate."
+    review_date: "2026-12-29"
+  - id: rules-common-core
+    mode: registered-variant
+    copies:
+      - design-system-skills/rules/common/core.md
+      - srs-skills/rules/common/core.md
+      - website-skills/rules/common/core.md
+      - digital-research-engine/rules/common/core.md
+      - proposal-skills/rules/common/core.md
+      - business-plan-skills/rules/common/core.md
+      - social-media-skills/rules/common/core.md
+      - linux-skills/rules/common/core.md
+      - chwezi-accounting-doctrine/rules/common/core.md
+      - windows-admin-engine-skills/rules/common/core.md
+    discover:
+      - "*/rules/common/core.md"
+    variants:
+      design-system-skills/rules/common/core.md:
+        sha256: c2c3fb7ad38e277c6687aee8bbf3d6538ff7337f75aed57e0c58b5ba1a807a20
+        owner: design-system-skills
+        reason: "Engine-specific always-on rules by design (absent in dev and agents); each must keep the invariant sentences."
+      srs-skills/rules/common/core.md:
+        sha256: 01a13fd9413b72efbcf3b9c52907b4eaf1a2c8f4904b50e4e98d4e774a4857d2
+        owner: srs-skills
+        reason: "Engine-specific always-on rules by design (absent in dev and agents); each must keep the invariant sentences."
+      website-skills/rules/common/core.md:
+        sha256: 4145a79ce8a21d999ce4613616bb826d9c60dcc22f244975c842488d60055dc1
+        owner: website-skills
+        reason: "Engine-specific always-on rules by design (absent in dev and agents); each must keep the invariant sentences."
+      digital-research-engine/rules/common/core.md:
+        sha256: 0a3d09f51b2c9e53be981f50b07867f8a96ae1f2d16ba9a016693be360a42f60
+        owner: digital-research-engine
+        reason: "Engine-specific always-on rules by design (absent in dev and agents); each must keep the invariant sentences."
+      proposal-skills/rules/common/core.md:
+        sha256: 8ad45df0d1bb19904c9090774f653ba50c21192070118c71d8bbef369907fbf0
+        owner: proposal-skills
+        reason: "Engine-specific always-on rules by design (absent in dev and agents); each must keep the invariant sentences."
+      business-plan-skills/rules/common/core.md:
+        sha256: d06fcc68374ffe331f1a2b3e5f3464578d8d9448cdcaebd310fcd7b8e30f949a
+        owner: business-plan-skills
+        reason: "Engine-specific always-on rules by design (absent in dev and agents); each must keep the invariant sentences."
+      social-media-skills/rules/common/core.md:
+        sha256: be48e1fd2cad4603be089e7e72ecb561c4d58b4a4403b754cab7bbc207c3b0c9
+        owner: social-media-skills
+        reason: "Engine-specific always-on rules by design (absent in dev and agents); each must keep the invariant sentences."
+      linux-skills/rules/common/core.md:
+        sha256: 39d9d9ba9c2e44bba0c5974afd0d77faf6dec022ac0a3747ded7cdbf1ac5829c
+        owner: linux-skills
+        reason: "Engine-specific always-on rules by design (absent in dev and agents); each must keep the invariant sentences."
+      chwezi-accounting-doctrine/rules/common/core.md:
+        sha256: 0debe718530a2b9523df211cc92146df6149c13dc057dd5b8b3daf87d2cc8200
+        owner: chwezi-accounting-doctrine
+        reason: "Engine-specific always-on rules by design (absent in dev and agents); each must keep the invariant sentences."
+      windows-admin-engine-skills/rules/common/core.md:
+        sha256: 09215da230b84902b772281060ed241cdea4a81ec30263efff6da791acf046e9
+        owner: windows-admin-engine-skills
+        reason: "Engine-specific always-on rules by design (absent in dev and agents); each must keep the invariant sentences."
+    reason: "Engine-specific always-on rules by design (absent in dev and agents); each must keep the invariant sentences."
+    review_date: "2026-12-29"
+  - id: skill-writing-skill
+    mode: registered-variant
+    canonical: chwezi-dev-engine/skills/sdlc-meta/skill-writing/SKILL.md
+    copies:
+      - chwezi-dev-engine/skills/sdlc-meta/skill-writing/SKILL.md
+      - website-skills/skills/meta/skill-writing/SKILL.md
+      - digital-research-engine/skills/skill-writing/SKILL.md
+      - proposal-skills/skills/meta/skill-writing/SKILL.md
+      - business-plan-skills/skills/meta-utility/skill-writing/SKILL.md
+      - social-media-skills/skills/meta-utility/skill-writing/SKILL.md
+      - linux-skills/meta/skill-writing/SKILL.md
+    discover:
+      - "*/skills/*/skill-writing/SKILL.md"
+      - "*/skills/skill-writing/SKILL.md"
+      - "*/meta/skill-writing/SKILL.md"
+    variants:
+      chwezi-dev-engine/skills/sdlc-meta/skill-writing/SKILL.md:
+        sha256: a08948a75e0ab67e93c01c7804d1921ad1d8a90455360ce5e5c1ea85efc5913b
+        owner: chwezi-dev-engine
+        reason: "Seven drifted skill-writing copies (SP-04); registered so drift is visible. Moves to canonical plus pointer stub or byte mode after M10-04."
+      website-skills/skills/meta/skill-writing/SKILL.md:
+        sha256: d51e1f37e4b6fdeba0023dcc537432167f2ded794177c427bced10dade936644
+        owner: website-skills
+        reason: "Seven drifted skill-writing copies (SP-04); registered so drift is visible. Moves to canonical plus pointer stub or byte mode after M10-04."
+      digital-research-engine/skills/skill-writing/SKILL.md:
+        sha256: 03ea88a5d35d99f13a82fcad66f2c77108d3242ac8649c5a722fdf65847d2f62
+        owner: digital-research-engine
+        reason: "Seven drifted skill-writing copies (SP-04); registered so drift is visible. Moves to canonical plus pointer stub or byte mode after M10-04."
+      proposal-skills/skills/meta/skill-writing/SKILL.md:
+        sha256: c05e8b4ad19880c47fc3902b33256ba658ce277c6ab6d641eb668526256e3e24
+        owner: proposal-skills
+        reason: "Seven drifted skill-writing copies (SP-04); registered so drift is visible. Moves to canonical plus pointer stub or byte mode after M10-04."
+      business-plan-skills/skills/meta-utility/skill-writing/SKILL.md:
+        sha256: f79451c0a661a47c3549cbb10e1325bc1196886f375995f025aa501a38d758ec
+        owner: business-plan-skills
+        reason: "Seven drifted skill-writing copies (SP-04); registered so drift is visible. Moves to canonical plus pointer stub or byte mode after M10-04."
+      social-media-skills/skills/meta-utility/skill-writing/SKILL.md:
+        sha256: 11ceaee95214c912d20b25b827f4db902238267305fe681a60d50f1493d2abab
+        owner: social-media-skills
+        reason: "Seven drifted skill-writing copies (SP-04); registered so drift is visible. Moves to canonical plus pointer stub or byte mode after M10-04."
+      linux-skills/meta/skill-writing/SKILL.md:
+        sha256: e3f7cb4ec7712e0be4bd43c22047dda7b0255103f54586e94d3fd23dd2455603
+        owner: linux-skills
+        reason: "Seven drifted skill-writing copies (SP-04); registered so drift is visible. Moves to canonical plus pointer stub or byte mode after M10-04."
+    reason: "Seven drifted skill-writing copies (SP-04); registered so drift is visible. Moves to canonical plus pointer stub or byte mode after M10-04."
+    note: "Canonical owner is the dev copy until M10-04 settles it."
+    review_date: "2026-12-29"
+  - id: skill-writing-quick-validate
+    mode: registered-variant
+    canonical: chwezi-dev-engine/skills/sdlc-meta/skill-writing/scripts/quick_validate.py
+    copies:
+      - chwezi-dev-engine/skills/sdlc-meta/skill-writing/scripts/quick_validate.py
+      - website-skills/skills/meta/skill-writing/scripts/quick_validate.py
+      - digital-research-engine/skills/skill-writing/scripts/quick_validate.py
+      - proposal-skills/skills/meta/skill-writing/scripts/quick_validate.py
+      - business-plan-skills/skills/meta-utility/skill-writing/scripts/quick_validate.py
+      - social-media-skills/skills/meta-utility/skill-writing/scripts/quick_validate.py
+      - linux-skills/meta/skill-writing/scripts/quick_validate.py
+    discover:
+      - "*/skills/*/skill-writing/scripts/quick_validate.py"
+      - "*/skills/skill-writing/scripts/quick_validate.py"
+      - "*/meta/skill-writing/scripts/quick_validate.py"
+    variants:
+      chwezi-dev-engine/skills/sdlc-meta/skill-writing/scripts/quick_validate.py:
+        sha256: 5c3995403c417aa8aef562a42155dab299295aca0027511b772617ddd4f835bc
+        owner: chwezi-dev-engine
+        reason: "Dev canonical quick validator versus the five-engine shared copy; handed to M10-04."
+      website-skills/skills/meta/skill-writing/scripts/quick_validate.py:
+        sha256: 381ab2d3d1fd5ec32371016413063eff99d0d48c415747085c61517e967dbb87
+        owner: website-skills
+        reason: "Dev canonical quick validator versus the five-engine shared copy; handed to M10-04."
+      digital-research-engine/skills/skill-writing/scripts/quick_validate.py:
+        sha256: bb9785d99f63de7061357924a89cf651bb56502f12280b99474a4297331e0de5
+        owner: digital-research-engine
+        reason: "Dev canonical quick validator versus the five-engine shared copy; handed to M10-04."
+      proposal-skills/skills/meta/skill-writing/scripts/quick_validate.py:
+        sha256: 381ab2d3d1fd5ec32371016413063eff99d0d48c415747085c61517e967dbb87
+        owner: proposal-skills
+        reason: "Dev canonical quick validator versus the five-engine shared copy; handed to M10-04."
+      business-plan-skills/skills/meta-utility/skill-writing/scripts/quick_validate.py:
+        sha256: 6ec558f79e3a7aa11cdab2ac8f18e7bf20f03aea85211567f2b2604781b13fd4
+        owner: business-plan-skills
+        reason: "Dev canonical quick validator versus the five-engine shared copy; handed to M10-04."
+      social-media-skills/skills/meta-utility/skill-writing/scripts/quick_validate.py:
+        sha256: 381ab2d3d1fd5ec32371016413063eff99d0d48c415747085c61517e967dbb87
+        owner: social-media-skills
+        reason: "Dev canonical quick validator versus the five-engine shared copy; handed to M10-04."
+      linux-skills/meta/skill-writing/scripts/quick_validate.py:
+        sha256: 381ab2d3d1fd5ec32371016413063eff99d0d48c415747085c61517e967dbb87
+        owner: linux-skills
+        reason: "Dev canonical quick validator versus the five-engine shared copy; handed to M10-04."
+    reason: "Dev canonical quick validator versus the five-engine shared copy; handed to M10-04."
+    review_date: "2026-12-29"
+  - id: generate-plugin-manifest
+    mode: registered-variant
+    canonical: chwezi-engine-agents/scripts/generate-plugin-manifest.js
+    copies:
+      - chwezi-engine-agents/scripts/generate-plugin-manifest.js
+      - chwezi-dev-engine/scripts/generate-plugin-manifest.js
+      - design-system-skills/scripts/generate-plugin-manifest.js
+      - srs-skills/scripts/generate-plugin-manifest.js
+      - website-skills/scripts/generate-plugin-manifest.js
+      - digital-research-engine/scripts/generate-plugin-manifest.js
+      - proposal-skills/scripts/generate-plugin-manifest.js
+      - business-plan-skills/scripts/generate-plugin-manifest.js
+      - social-media-skills/scripts/generate-plugin-manifest.js
+      - linux-skills/scripts/generate-plugin-manifest.js
+      - chwezi-accounting-doctrine/scripts/generate-plugin-manifest.js
+      - windows-admin-engine-skills/scripts/generate-plugin-manifest.js
+    discover:
+      - "*/scripts/generate-plugin-manifest.js"
+    variants:
+      chwezi-engine-agents/scripts/generate-plugin-manifest.js:
+        sha256: 0e2d1ce8e8a7a1bbac1af6dcef962dd659843678236dfff393d71042d21cc5ef
+        owner: chwezi-engine-agents
+        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+      chwezi-dev-engine/scripts/generate-plugin-manifest.js:
+        sha256: e3c47fc1bebfb6a9a094bf6de4b7e2a8c734f04dd89f14fd30764b3e3e859c4d
+        owner: chwezi-dev-engine
+        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+      design-system-skills/scripts/generate-plugin-manifest.js:
+        sha256: 8196c31b944960ae7b419f88e85d31baaf5a05af4f08be714f067e4f281cfa3e
+        owner: design-system-skills
+        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+      srs-skills/scripts/generate-plugin-manifest.js:
+        sha256: 2914d9e30b3858b89409f055ce71fd8b631615a4379a379fd372e85912acc898
+        owner: srs-skills
+        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+      website-skills/scripts/generate-plugin-manifest.js:
+        sha256: 2914d9e30b3858b89409f055ce71fd8b631615a4379a379fd372e85912acc898
+        owner: website-skills
+        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+      digital-research-engine/scripts/generate-plugin-manifest.js:
+        sha256: 8196c31b944960ae7b419f88e85d31baaf5a05af4f08be714f067e4f281cfa3e
+        owner: digital-research-engine
+        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+      proposal-skills/scripts/generate-plugin-manifest.js:
+        sha256: 8196c31b944960ae7b419f88e85d31baaf5a05af4f08be714f067e4f281cfa3e
+        owner: proposal-skills
+        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+      business-plan-skills/scripts/generate-plugin-manifest.js:
+        sha256: 8196c31b944960ae7b419f88e85d31baaf5a05af4f08be714f067e4f281cfa3e
+        owner: business-plan-skills
+        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+      social-media-skills/scripts/generate-plugin-manifest.js:
+        sha256: 8196c31b944960ae7b419f88e85d31baaf5a05af4f08be714f067e4f281cfa3e
+        owner: social-media-skills
+        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+      linux-skills/scripts/generate-plugin-manifest.js:
+        sha256: 8196c31b944960ae7b419f88e85d31baaf5a05af4f08be714f067e4f281cfa3e
+        owner: linux-skills
+        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+      chwezi-accounting-doctrine/scripts/generate-plugin-manifest.js:
+        sha256: 8196c31b944960ae7b419f88e85d31baaf5a05af4f08be714f067e4f281cfa3e
+        owner: chwezi-accounting-doctrine
+        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+      windows-admin-engine-skills/scripts/generate-plugin-manifest.js:
+        sha256: 2914d9e30b3858b89409f055ce71fd8b631615a4379a379fd372e85912acc898
+        owner: windows-admin-engine-skills
+        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+    reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+    review_date: "2026-12-29"
+  - id: routing-smoke-test
+    mode: registered-variant
+    copies:
+      - chwezi-dev-engine/scripts/routing_smoke_test.py
+      - design-system-skills/scripts/routing_smoke_test.py
+      - srs-skills/scripts/routing_smoke_test.py
+      - digital-research-engine/scripts/routing_smoke_test.py
+      - proposal-skills/scripts/routing_smoke_test.py
+      - business-plan-skills/scripts/routing_smoke_test.py
+      - social-media-skills/scripts/routing_smoke_test.py
+      - linux-skills/scripts/routing_smoke_test.py
+      - windows-admin-engine-skills/scripts/routing_smoke_test.py
+      - website-skills/scripts/routing-smoke-test.py
+    discover:
+      - "*/scripts/routing_smoke_test.py"
+      - "*/scripts/routing-smoke-test.py"
+    variants:
+      chwezi-dev-engine/scripts/routing_smoke_test.py:
+        sha256: 92b106e5d8d6c07dcd107bb8119356a19e50fdd54b993c897887e1cae8bac372
+        owner: chwezi-dev-engine
+        reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
+      design-system-skills/scripts/routing_smoke_test.py:
+        sha256: da56d0fbfb84d92a67a25f34e288a2a62662f4971169534ae2cc2561d8660dea
+        owner: design-system-skills
+        reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
+      srs-skills/scripts/routing_smoke_test.py:
+        sha256: 734b8eab1f19fc52a64499dc59a3014355f41d733221ec278d53b1acfb2c705b
+        owner: srs-skills
+        reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
+      digital-research-engine/scripts/routing_smoke_test.py:
+        sha256: a284f02c741026f2d951b459bb8e8d40f4969c9d2cb0cb5c5c8d19d354e941c4
+        owner: digital-research-engine
+        reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
+      proposal-skills/scripts/routing_smoke_test.py:
+        sha256: 8eea2bfbcfbd5014763a876331e516b9ec524c9ea19f92b93537747bca50f993
+        owner: proposal-skills
+        reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
+      business-plan-skills/scripts/routing_smoke_test.py:
+        sha256: c870fe5aeb2999dedc0c938b40b1191679f3661320a4e477938fbcd1c0e8ba8a
+        owner: business-plan-skills
+        reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
+      social-media-skills/scripts/routing_smoke_test.py:
+        sha256: 93f4f8f1cdae8f81acfc5801b6a046e549cd045c743a86e87f3be399cde0bdcb
+        owner: social-media-skills
+        reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
+      linux-skills/scripts/routing_smoke_test.py:
+        sha256: 2ba658a35caf7e44c5ad7a94771c4c073f0d9df3bf335100f7b770430022de82
+        owner: linux-skills
+        reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
+      windows-admin-engine-skills/scripts/routing_smoke_test.py:
+        sha256: 17f6a97c66e3b8463674d6e91e620b90d6883e2a91695f5f84eb5fe83c97d566
+        owner: windows-admin-engine-skills
+        reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
+      website-skills/scripts/routing-smoke-test.py:
+        sha256: bb9b920b0538169a3edae561e76b3b2d6383d51c8a345c52dbaca332823dceca
+        owner: website-skills
+        reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
+    reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
+    review_date: "2026-12-29"
+
+exclusions:
+  - asset: design-trigger-block
+    engine: design-system-skills
+    reason: "Owner of the block; design carries the design doctrine directly in AGENTS.md and README.md, so it does not carry a trigger to itself."

@@ -24,7 +24,10 @@ only the serialization format, not the required handoff fields.
 3. Add `design-system-skills` when the requested output changes visual design,
    typography, layout, accessibility, or document appearance.
 4. Add `digital-research-skills` when claims are current, uncertain,
-   source-sensitive, regulatory, comparative, or evidence-heavy.
+   source-sensitive, regulatory, comparative, or evidence-heavy. This is the
+   catalog id and GitHub repository name; its local checkout folder is
+   `digital-research-engine` (use the `path` field in `catalog/engines.yaml`
+   when calling `discover_engine(path)`).
 5. For each selected engine, call `discover_engine(path)` and then
    `read_router(engine_identity)` before selecting any skill.
 6. Select the smallest relevant set of skills from the router. Keep the local

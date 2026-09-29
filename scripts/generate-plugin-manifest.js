@@ -23,6 +23,14 @@
  *
  * Usage:
  *   node generate-plugin-manifest.js --engine <path> [--root <skills-subdir>] [--check] [--exclude <name,name>]
+ *   node generate-plugin-manifest.js --check-marketplace [--workspace-root <dir>] [--suite-root <dir>]
+ *
+ * --check-marketplace (read-only, M10-02-T09) compares the leading "N skills"
+ * integer of every marketplace description with the target plugin.json
+ * skills[].length, for the suite marketplace (this package) and for each
+ * catalogued engine's own marketplace.json, and asserts that every relative
+ * `source` path exists. Exit 0 consistent, 1 drift, 3 NOT_ASSESSED only
+ * (a sibling engine checkout is missing; never reported as a pass).
  *
  * Examples:
  *   node generate-plugin-manifest.js --engine ../../digital-research-engine
@@ -44,7 +52,11 @@ function parseArgs(argv) {
     else if (a === '--exclude') args.exclude = argv[++i];
     else if (a === '--check') args.check = true;
     else if (a === '--version') args.version = argv[++i];
+    else if (a === '--check-marketplace') args.checkMarketplace = true;
+    else if (a === '--workspace-root') args.workspaceRoot = argv[++i];
+    else if (a === '--suite-root') args.suiteRoot = argv[++i];
   }
+  if (args.checkMarketplace) return args;
   if (!args.engine) {
     console.error('Usage: node generate-plugin-manifest.js --engine <path> [--root <dir>] [--check] [--exclude a,b,c]');
     process.exit(2);
@@ -81,8 +93,96 @@ function findSkillDirs(dir, excludeSet, out) {
   return out;
 }
 
+/**
+ * Read the catalogued engines (repository name -> checkout path) from
+ * catalog/engines.yaml without a YAML dependency. The file is a flat list of
+ * "- id:" blocks with "repository:" and "path:" scalars.
+ */
+function readCatalog(suiteRoot) {
+  const file = path.join(suiteRoot, 'catalog', 'engines.yaml');
+  if (!fs.existsSync(file)) return [];
+  const engines = [];
+  let current = null;
+  for (const line of fs.readFileSync(file, 'utf8').split(/\r?\n/)) {
+    const id = line.match(/^\s*-\s+id:\s*"?([^"\s]+)"?/);
+    if (id) { current = { id: id[1] }; engines.push(current); continue; }
+    const kv = current && line.match(/^\s+(repository|path):\s*"?([^"\s]+)"?\s*$/);
+    if (kv) current[kv[1]] = kv[2];
+  }
+  return engines.filter((e) => e.path);
+}
+
+function leadingCount(description) {
+  const m = /^(\d+)\s+skills\b/.exec(description || '');
+  return m ? Number(m[1]) : null;
+}
+
+function pluginSkillCount(pluginRoot) {
+  const file = path.join(pluginRoot, '.claude-plugin', 'plugin.json');
+  if (!fs.existsSync(file)) return { missing: true };
+  const manifest = JSON.parse(fs.readFileSync(file, 'utf8'));
+  return { count: Array.isArray(manifest.skills) ? manifest.skills.length : null };
+}
+
+function checkMarketplaceFile(label, marketplaceFile, repoRoot, resolveUrl, out) {
+  const marketplace = JSON.parse(fs.readFileSync(marketplaceFile, 'utf8'));
+  for (const entry of marketplace.plugins || []) {
+    let target = null;
+    if (typeof entry.source === 'string') {
+      target = path.resolve(repoRoot, entry.source);
+      if (!fs.existsSync(target)) {
+        out.drift.push(`${label}: ${entry.name}: relative source ${entry.source} does not exist`);
+        continue;
+      }
+    } else if (entry.source && entry.source.url) {
+      target = resolveUrl(entry.source.url);
+      if (!target) { out.notAssessed.push(`${label}: ${entry.name}: no local checkout for ${entry.source.url}`); continue; }
+    } else {
+      out.drift.push(`${label}: ${entry.name}: source is neither a relative path nor a url`);
+      continue;
+    }
+    const stated = leadingCount(entry.description);
+    if (stated === null) { out.ok.push(`${label}: ${entry.name}: no count in description (not checked)`); continue; }
+    const actual = pluginSkillCount(target);
+    if (actual.missing) { out.drift.push(`${label}: ${entry.name}: ${path.relative(repoRoot, target) || '.'}/.claude-plugin/plugin.json missing`); continue; }
+    if (actual.count === null) { out.ok.push(`${label}: ${entry.name}: plugin.json skills is not a list (not checked)`); continue; }
+    if (stated !== actual.count) out.drift.push(`${label}: ${entry.name}: description says ${stated} skills, plugin.json lists ${actual.count}`);
+    else out.ok.push(`${label}: ${entry.name}: ${stated} skills`);
+  }
+}
+
+function checkMarketplace(args) {
+  const suiteRoot = path.resolve(args.suiteRoot || path.join(__dirname, '..'));
+  const workspace = path.resolve(args.workspaceRoot || path.join(suiteRoot, '..'));
+  const catalog = readCatalog(suiteRoot);
+  const byRepo = new Map(catalog.map((e) => [e.repository || e.path, e.path]));
+  const resolveUrl = (url) => {
+    const repo = url.replace(/\/+$/, '').split('/').pop().replace(/\.git$/, '');
+    const folder = byRepo.get(repo) || repo;
+    const dir = path.join(workspace, folder);
+    return fs.existsSync(dir) ? dir : null;
+  };
+  const out = { ok: [], drift: [], notAssessed: [] };
+  const suiteFile = path.join(suiteRoot, '.claude-plugin', 'marketplace.json');
+  if (fs.existsSync(suiteFile)) checkMarketplaceFile('suite', suiteFile, suiteRoot, resolveUrl, out);
+  else out.drift.push(`suite: ${suiteFile} missing`);
+  for (const engine of catalog) {
+    const root = path.join(workspace, engine.path);
+    if (!fs.existsSync(root)) { out.notAssessed.push(`${engine.path}: sibling checkout missing`); continue; }
+    const file = path.join(root, '.claude-plugin', 'marketplace.json');
+    if (fs.existsSync(file)) checkMarketplaceFile(engine.path, file, root, resolveUrl, out);
+  }
+  for (const line of out.ok) console.log(`ok     ${line}`);
+  for (const line of out.notAssessed) console.log(`NOT_ASSESSED ${line}`);
+  for (const line of out.drift) console.error(`DRIFT  ${line}`);
+  console.log(`marketplace check: ${out.ok.length} ok, ${out.drift.length} drift, ${out.notAssessed.length} not assessed`);
+  if (out.drift.length) process.exit(1);
+  if (out.notAssessed.length) process.exit(3);
+}
+
 function main() {
   const args = parseArgs(process.argv.slice(2));
+  if (args.checkMarketplace) return checkMarketplace(args);
   const ROOT = path.resolve(args.engine);
   const SKILLS_DIR = path.join(ROOT, args.root);
   const MANIFEST_PATH = path.join(ROOT, '.claude-plugin', 'plugin.json');

@@ -1,0 +1,31 @@
+diff -ru a/scripts/validate-skill-registry.py b/scripts/validate-skill-registry.py
+--- a/scripts/validate-skill-registry.py	2026-09-29 03:05:28.485943900 +0300
++++ b/scripts/validate-skill-registry.py	2026-09-29 03:05:28.727015100 +0300
+@@ -129,13 +129,13 @@
+     })
+     if readme_categories != dict(category_counts):
+         errors.append(f"README.md category counts {readme_categories} != {dict(category_counts)}")
+-    claude = (ROOT / "CLAUDE.md").read_text(encoding="utf-8")
++    claude = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
+     claude_categories = {
+         category: int(count)
+         for category, count in re.findall(r"\*\*`([a-z-]+)/`\*\*\s*\((\d+)\)", claude)
+     }
+     if claude_categories != dict(category_counts):
+-        errors.append(f"CLAUDE.md category counts {claude_categories} != {dict(category_counts)}")
++        errors.append(f"AGENTS.md category counts {claude_categories} != {dict(category_counts)}")
+     relocations = data.get("relocations", {})
+     relocation_map = (ROOT / "docs" / "relocation-map.md").read_text(encoding="utf-8")
+     if not isinstance(relocations, dict):
+diff -ru a/tests/test_kaizen_wave1_contracts.py b/tests/test_kaizen_wave1_contracts.py
+--- a/tests/test_kaizen_wave1_contracts.py	2026-09-29 03:05:28.854861100 +0300
++++ b/tests/test_kaizen_wave1_contracts.py	2026-09-29 03:05:29.005436300 +0300
+@@ -26,7 +26,7 @@
+         for category, count in re.findall(r"^\|\s*`([a-z-]+)`\s*\|\s*(\d+)\s*\|", readme, re.MULTILINE)
+     })
+     assert readme_counts == dict(counts)
+-    claude = (ROOT / "CLAUDE.md").read_text(encoding="utf-8")
++    claude = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
+     assert {
+         category: int(count)
+         for category, count in re.findall(r"\*\*`([a-z-]+)/`\*\*\s*\((\d+)\)", claude)

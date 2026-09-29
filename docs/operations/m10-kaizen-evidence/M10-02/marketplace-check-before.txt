@@ -1,0 +1,25 @@
+ok     suite: chwezi-suite: no count in description (not checked)
+ok     suite: srs: 159 skills
+ok     suite: website: 62 skills
+ok     suite: accounting: 108 skills
+ok     suite: research: 59 skills
+ok     suite: windows-admin: 20 skills
+ok     social-media-skills: social: 191 skills
+ok     linux-skills: linux: 45 skills
+ok     chwezi-accounting-doctrine: accounting: 108 skills
+ok     digital-research-engine: research: 59 skills
+DRIFT  suite: business-plan: description says 128 skills, plugin.json lists 134
+DRIFT  suite: social: description says 178 skills, plugin.json lists 191
+DRIFT  suite: linux: description says 48 skills, plugin.json lists 45
+DRIFT  suite: proposal: description says 113 skills, plugin.json lists 115
+DRIFT  suite: engineering: description says 183 skills, plugin.json lists 165
+DRIFT  suite: design-system: description says 97 skills, plugin.json lists 101
+DRIFT  srs-skills: srs: description says 158 skills, plugin.json lists 159
+DRIFT  business-plan-skills: business-plan: description says 94 skills, plugin.json lists 134
+DRIFT  website-skills: website: description says 61 skills, plugin.json lists 62
+DRIFT  proposal-skills: proposal: description says 94 skills, plugin.json lists 115
+DRIFT  chwezi-dev-engine: engineering: description says 169 skills, plugin.json lists 165
+DRIFT  design-system-skills: design-system: description says 91 skills, plugin.json lists 101
+DRIFT  windows-admin-engine-skills: windows-admin: description says 18 skills, plugin.json lists 20
+marketplace check: 10 ok, 13 drift, 0 not assessed
+exit=1

@@ -4,6 +4,8 @@ on:
   push:
   pull_request:
   workflow_dispatch:
+  schedule:
+    - cron: '17 5 * * 1'
 
 jobs:
   windows:
@@ -35,6 +37,12 @@ jobs:
           ./evals/runners/run-host-smoke-tests.ps1
       - name: Run deterministic evaluations
         run: python evals/runners/run-contract-evals.py --cases evals/cases --out evals/reports/ci.json
+      - name: Check runtime skill budget (package skills)
+        run: python -X utf8 scripts/validate-runtime-skill-budget.py --root skills
+      - name: Test drift-control and snapshot tooling
+        run: |
+          python -m pip install pytest
+          python -X utf8 -m pytest tests/test_render_host_files.py tests/test_kaizen_portfolio_snapshot.py -q -p no:cacheprovider
       - name: Build and test MCP server
         working-directory: mcp-server
         run: |
@@ -64,3 +72,39 @@ jobs:
           npm ci
           npm run build
           npm test
+
+  portfolio-drift:
+    # Read-only drift check across the eleven public engines (M10-02-T14). Each engine is checked
+    # out as a sibling of this package. A missing sibling is NOT_ASSESSED (exit 3), which fails the
+    # job: it is never reported as a pass. The private political-essay engine is never checked out.
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: pwsh
+        working-directory: chwezi-engine-agents
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: chwezi-engine-agents
+      - {name: Check out srs-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/srs-skills, path: srs-skills}}
+      - {name: Check out business-plan-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/business-plan-skills, path: business-plan-skills}}
+      - {name: Check out website-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/website-skills, path: website-skills}}
+      - {name: Check out social-media-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/social-media-skills, path: social-media-skills}}
+      - {name: Check out linux-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/linux-skills, path: linux-skills}}
+      - {name: Check out proposal-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/proposal-skills, path: proposal-skills}}
+      - {name: Check out chwezi-dev-engine, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/chwezi-dev-engine, path: chwezi-dev-engine}}
+      - {name: Check out chwezi-accounting-doctrine, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/chwezi-accounting-doctrine, path: chwezi-accounting-doctrine}}
+      - {name: Check out design-system-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/design-system-skills, path: design-system-skills}}
+      - {name: Check out digital-research-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/digital-research-skills, path: digital-research-engine}}
+      - {name: Check out windows-admin-engine-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/windows-admin-engine-skills, path: windows-admin-engine-skills}}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install check dependencies
+        run: python -m pip install PyYAML
+      - name: Host files, invariants, versions, hooks and shared-asset register
+        run: python -X utf8 scripts/render_host_files.py --check --workspace-root ..
+      - name: Marketplace counts and sources
+        run: node scripts/generate-plugin-manifest.js --check-marketplace --workspace-root ..
+      - name: Prompt-contract byte identity
+        run: ./scripts/validate-prompt-capability.ps1 -WorkspaceRoot (Resolve-Path ..).Path -CoordinatorRoot (Get-Location).Path

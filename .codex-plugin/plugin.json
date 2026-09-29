@@ -1,13 +1,13 @@
 {
   "name": "skills-engine-agents",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Codex adapter for the portable multi-host skills-engine coordination core.",
   "author": {
     "name": "Peter Bamuhigire",
     "url": "https://github.com/peterbamuhigire"
   },
-  "homepage": "https://github.com/peterbamuhigire/skills-engine-agents",
-  "repository": "https://github.com/peterbamuhigire/skills-engine-agents",
+  "homepage": "https://github.com/peterbamuhigire/chwezi-engine-agents",
+  "repository": "https://github.com/peterbamuhigire/chwezi-engine-agents",
   "keywords": ["codex", "agents", "skills", "orchestration", "maintenance", "validation"],
   "skills": "./skills/",
   "interface": {
