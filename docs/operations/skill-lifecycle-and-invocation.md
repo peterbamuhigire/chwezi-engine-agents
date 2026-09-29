@@ -36,6 +36,13 @@ Promotion requires a positive route, neighbour negative, degraded-capability cas
 output/evidence check, source/currentness review, safety review, runtime budget, and rollback. A
 deprecated skill names the replacement and preserves useful knowledge before removal.
 
+Discipline skills only (gates an agent can skip under pressure, such as verification, evidence,
+anti-slop and approval gates) also need one pressure scenario in the dev fixture format
+(`pressure_scenarios`, validated by `chwezi-dev-engine/tools/validate_benchmark_fixtures.py`) with
+`baseline_outcome` and `with_skill_outcome` recorded, or `NOT_ASSESSED` with a reason. The method is
+`chwezi-dev-engine/skills/sdlc-meta/skill-writing/references/discipline-skill-pressure-testing.md`
+(M10-04). Reference and workflow skills without a skippable gate are not pressure-tested.
+
 ## Validator
 
 ```powershell

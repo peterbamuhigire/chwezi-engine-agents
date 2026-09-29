@@ -1,0 +1,74 @@
+### [digital-research-engine] python -X utf8 scripts/skill_contract_validator.py --baseline tests/skill-engine/quality-baseline.json; echo rc=$?
+skill-contract-validator: C:\wamp64\www\digital-research-engine
+- active skills: 59
+- template skills: 1
+- fully compliant: 59
+- failure counts: {}
+rc=0
+### exit=0
+### [digital-research-engine] python -X utf8 scripts/routing_smoke_test.py; echo rc=$?
+routing-smoke-test: 29/29 top-3 precision=1.000 threshold=1.000
+rc=0
+### exit=0
+### [website-skills] python -X utf8 scripts/validate-skill-contracts.py; echo rc=$?
+usage: validate-skill-contracts.py [-h] --baseline BASELINE [--details]
+validate-skill-contracts.py: error: the following arguments are required: --baseline
+rc=2
+### exit=0
+### [website-skills] python -X utf8 scripts/routing-smoke-test.py; echo rc=$?
+routing-smoke: 36/36 top-3 hits (100.0%)
+rc=0
+### exit=0
+### [business-plan-skills] python -X utf8 scripts/validate_skill_engine.py --baseline docs/quality/skill-quality-baseline.json; echo rc=$?
+skill-engine: C:\wamp64\www\business-plan-skills
+- active skills: 137
+- templates: 3
+- fully compliant: 137
+- failure counts:
+rc=0
+### exit=0
+### [business-plan-skills] python -m compileall -q skills/meta-utility/skill-writing/scripts; echo rc=$?
+rc=0
+### exit=0
+### [business-plan-skills] python -X utf8 scripts/routing_smoke_test.py; echo rc=$?
+routing-smoke: 61/61 top-three matches (100.0%); threshold=100.0%
+- fixture classes: collision, failure-path, limited-capability, negative, positive
+rc=0
+### exit=0
+### [social-media-skills] python -X utf8 scripts/validate_skill_engine.py --baseline quality-baseline.json; echo rc=$?
+skills=191 compliant=191 failures=0
+
+rc=0
+### exit=0
+### [social-media-skills] python -X utf8 scripts/routing_smoke_test.py; echo rc=$?
+routing fixtures=56 passed=56 top_3_precision=1.000 threshold=1.000
+rc=0
+### exit=0
+### [proposal-skills] git diff --check; echo rc=$?
+rc=0
+### exit=0
+### [proposal-skills] python -X utf8 scripts/validate_skills.py; echo rc=$?
+proposal-skill-validator: C:\wamp64\www\proposal-skills
+- active skills: 115
+- findings: 0
+rc=0
+### exit=0
+### [proposal-skills] python -X utf8 scripts/routing_smoke_test.py; echo rc=$?
+PASS key-account-vs-discovery: skills/strategy-positioning/key-account-pursuit-and-account-plan | top3=skills/strategy-positioning/key-account-pursuit-and-account-plan, skills/saas-proposals/saas-discovery-and-qualification, skills/saas-proposals/saas-objection-handling-and-competitive-displacement
+PASS tender-orals: skills/strategy-positioning/tender-orals-and-proposal-presentation | top3=skills/strategy-positioning/tender-orals-and-proposal-presentation, skills/strategy-positioning/sales-discovery-and-objection-handling, skills/meta/bid-red-team-dual-review
+PASS orals-vs-storytelling: skills/strategy-positioning/proposal-storytelling-and-evaluator-journey | top3=skills/strategy-positioning/proposal-storytelling-and-evaluator-journey, skills/strategy-positioning/tender-orals-and-proposal-presentation, skills/language/language-standards
+PASS orals-no-invitation: skills/strategy-positioning/tender-orals-and-proposal-presentation | top3=skills/strategy-positioning/tender-orals-and-proposal-presentation, skills/strategy-positioning/proposal-storytelling-and-evaluator-journey, skills/ai-on-saas-proposals/ai-on-saas-poc-and-pilot-scoping
+routing fixtures: 25; top-three precision: 100.0%; threshold: 100.0%
+rc=0
+### exit=0
+### [linux-skills] python -X utf8 scripts/validate_skills.py --baseline quality-baseline.json; echo rc=$?
+linux-skills validator: 48 active skills, 1 templates
+fully compliant: 48
+failure counts: {}
+rc=0
+### exit=0
+### [linux-skills] python -X utf8 scripts/routing_smoke_test.py; echo rc=$?
+routing fixtures: 30/30 passed; top_k=3; precision=1.000
+fixture kinds: collision=5, failure-path=5, limited-capability=3, negative=6, positive=11
+rc=0
+### exit=0

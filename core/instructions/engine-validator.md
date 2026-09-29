@@ -46,3 +46,41 @@ portfolio checks and record them as separate checks:
 A structural pass is not evidence that an engine's output is senior-grade;
 report behavioural, render, and production evidence separately or as
 `NOT ASSESSED`, as the portfolio craft standard requires.
+
+## Session diagnosis
+
+Use this procedure when someone reports that an agent session went wrong (a
+skill did not load, a plan was abandoned, a check was claimed but not run) and
+asks why. It reads transcripts; it never replays or edits them.
+
+1. **Intake.** Record the symptom in the reporter's words, the session date,
+   and the engine or engines involved. Without a symptom there is nothing to
+   test; ask for one.
+2. **Locate.** Find the local transcript read-only: Claude Code keeps
+   `~/.claude/projects/<project>/<session>.jsonl`; Codex session logs where
+   present. Match on date and working directory. If no transcript can be read,
+   the whole diagnosis is `NOT ASSESSED`.
+3. **Analyse** along fixed dimensions, one pass each:
+   - skill and route timeline (which router and `SKILL.md` files were read,
+     and when);
+   - plan adherence (steps planned against steps done);
+   - repeated work (the same file read or command run again without a reason);
+   - tool errors and how they were handled;
+   - evidence claims against evidence produced (every "passes", "done" or
+     "verified" matched to a command result in the transcript);
+   - request conflicts (instructions that contradicted each other or the
+     engine router).
+4. **Findings.** Every finding cites `path:line` of the transcript (JSONL line
+   number) or of the repository file it concerns. A finding without a citation
+   is discarded, not softened.
+5. **Redaction before sharing.** Remove secrets and tokens, client names,
+   private paths beyond the project folder name, and anything from
+   `political-essay-skills`. The raw report stays on the local machine; only a
+   redacted summary may be committed.
+6. **Output.** Return the validation-result contract. Each dimension is a
+   check with `PASS`, `FAIL` or `NOT ASSESSED` (for example, an unreadable or
+   truncated transcript), and the evidence field carries the citations.
+
+Adapted in paraphrase from obra/superpowers `diagnosing-superpowers` (MIT,
+https://github.com/obra/superpowers, commit
+8ca22dba9a94f28898bbce59f2537ff4d87c747d). No text copied.

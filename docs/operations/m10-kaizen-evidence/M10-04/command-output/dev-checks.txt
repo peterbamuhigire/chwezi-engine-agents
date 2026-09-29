@@ -1,0 +1,76 @@
+## quick_validate (skill-writing)
+Skill is valid.
+rc=0
+## contract_gate --all
+contract-gate: evidence: scanned 161 | 0 errors | 0 warnings | 6 exempt
+rc=0
+## skill_catalog_guardrails --report-only
+skill-catalog-guardrails:
+- repo: C:\wamp64\www\chwezi-dev-engine
+- active roots:
+- retained reference roots:
+- active SKILL.md files: 167
+- max active SKILL.md files: 200
+- findings: 14 (errors: 0, warnings: 14)
+[WARNING] skill-bytes: skills\android\android-development\SKILL.md SKILL.md is 24838 bytes; report-only threshold is 20480 (455 lines)
+[WARNING] skill-bytes: skills\architecture\api-design-first\SKILL.md SKILL.md is 21999 bytes; report-only threshold is 20480 (276 lines)
+[WARNING] skill-bytes: skills\devops-cloud\cicd-pipelines\SKILL.md SKILL.md is 23953 bytes; report-only threshold is 20480 (373 lines)
+[WARNING] skill-bytes: skills\devops-cloud\cloud-architecture\SKILL.md SKILL.md is 23474 bytes; report-only threshold is 20480 (393 lines)
+[WARNING] skill-bytes: skills\devops-cloud\kubernetes-platform\SKILL.md SKILL.md is 22715 bytes; report-only threshold is 20480 (468 lines)
+[WARNING] skill-bytes: skills\mobile-cross\pwa-offline-first\SKILL.md SKILL.md is 22073 bytes; report-only threshold is 20480 (460 lines)
+[WARNING] skill-bytes: skills\product-business\product-led-growth\SKILL.md SKILL.md is 21905 bytes; report-only threshold is 20480 (439 lines)
+[WARNING] skill-bytes: skills\saas\multi-tenant-saas-architecture\SKILL.md SKILL.md is 21587 bytes; report-only threshold is 20480 (460 lines)
+[WARNING] skill-bytes: skills\saas\saas-admin-backoffice-tooling\SKILL.md SKILL.md is 25063 bytes; report-only threshold is 20480 (419 lines)
+[WARNING] skill-bytes: skills\saas\saas-rate-limiting-and-quotas\SKILL.md SKILL.md is 22343 bytes; report-only threshold is 20480 (469 lines)
+[WARNING] skill-bytes: skills\saas\stripe-payments\SKILL.md SKILL.md is 22814 bytes; report-only threshold is 20480 (437 lines)
+[WARNING] skill-bytes: skills\saas\subscription-billing\SKILL.md SKILL.md is 28881 bytes; report-only threshold is 20480 (449 lines)
+[WARNING] skill-bytes: skills\sdlc-meta\world-class-engineering\SKILL.md SKILL.md is 21649 bytes; report-only threshold is 20480 (368 lines)
+[WARNING] skill-bytes: skills\security\web-app-security-audit\SKILL.md SKILL.md is 21408 bytes; report-only threshold is 20480 (494 lines)
+rc=0
+## skill_catalog_guardrails (default mode, exit status)
+rc=0
+## validate_benchmark_fixtures
+{
+  "status": "PASS",
+  "errors": [],
+  "warnings": [
+    "PS02 records NOT_ASSESSED outcomes without not_assessed_reason"
+  ],
+  "fixture_count": 16,
+  "pressure_scenario_count": 2,
+  "pressure_scenario_sources": [
+    "fixtures.json",
+    "pressure-scenarios.json"
+  ],
+  "execution_status": "SPECIFIED_NOT_EXECUTED"
+}
+rc=0
+## seeded 2-pressure scenario (scratch copy)
+{
+  "status": "FAIL",
+  "errors": [
+    "PS09 needs at least three distinct combined pressures"
+  ],
+  "warnings": [
+    "PS02 records NOT_ASSESSED outcomes without not_assessed_reason"
+  ],
+  "fixture_count": 16,
+  "pressure_scenario_count": 2,
+  "pressure_scenario_sources": [
+    "fixtures.json",
+    "pressure-scenarios.json"
+  ],
+  "execution_status": "SPECIFIED_NOT_EXECUTED"
+}
+rc=1 (recorded above)
+## routing_smoke_test
+- precision@1: 179/187 (95%)
+- precision@3: 187/187 (100%)
+- failures: 0
+rc=0
+## pytest -q
+..............ss.......................................s................ [ 37%]
+........................................................................ [ 75%]
+..............................................                           [100%]
+187 passed, 3 skipped in 27.89s
+rc=0

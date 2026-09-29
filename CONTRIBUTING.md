@@ -20,3 +20,31 @@ channel is `NOT ASSESSED`; it is not a successful result.
 ## Multi-host implementation work
 
 For changes related to universal host adapters, MCP tools, or engine integration, use the phase-level plan in [`docs/plans/aug-25`](docs/plans/aug-25/README.md). Work on `main` unless a branch is explicitly requested, preserve the ten engines as independent repositories, and update the relevant phase document when implementation decisions change.
+
+## If you are an AI agent
+
+AI agents may propose changes here, on the same terms as people plus a few more:
+
+1. **Disclose** in the pull request your model or runtime label, the harness
+   (for example Claude Code or Codex CLI) and the plugins or skill packs loaded
+   in the session.
+2. **Search first.** Look through open and closed pull requests and issues for
+   the same problem before opening a new one, and link what you found.
+3. **One problem per pull request.** Do not bundle unrelated fixes, renames or
+   formatting sweeps.
+4. **Run the documented validators** listed above and in the affected engine's
+   router, and paste the real results. Report any check you could not run as
+   `NOT ASSESSED`, with the reason.
+5. **No book extractions and no copied third-party text.** Paraphrase ideas and
+   attribute them with licence, URL and commit.
+
+Model policy is not reopened by contributions: Codex runs on GPT-6 Luna with
+high reasoning, Astra only when Peter selects it explicitly, and other runtimes
+keep their own configuration.
+
+The pull request template (`.github/pull_request_template.md`) carries the
+disclosure block.
+
+Adapted in paraphrase from obra/superpowers `AGENTS.md` (MIT,
+https://github.com/obra/superpowers, commit
+8ca22dba9a94f28898bbce59f2537ff4d87c747d). No text copied.

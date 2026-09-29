@@ -1,0 +1,4 @@
+skill-writing-quick-validate: 1 finding(s)
+  [shared-asset-byte-drift] copy differs from canonical after CRLF normalisation (linux-skills/meta/skill-writing/scripts/quick_validate.py)
+checked 12 repositories; findings 1; not assessed 0
+rc=1

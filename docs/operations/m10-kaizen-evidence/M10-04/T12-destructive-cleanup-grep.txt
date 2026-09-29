@@ -1,0 +1,33 @@
+chwezi-dev-engine/skills/languages/python-modern-standards/scripts/desktop_suite_packager.py:827:            if (Test-Path -LiteralPath $stageDir) {{ Remove-Item -LiteralPath $stageDir -Recurse -Force }}
+chwezi-dev-engine/skills/languages/python-modern-standards/scripts/desktop_suite_packager.py:828:            if (Test-Path -LiteralPath $workDir) {{ Remove-Item -LiteralPath $workDir -Recurse -Force }}
+srs-skills/02-requirements-engineering/waterfall/01-initialize-srs/init_skill.py:53:            shutil.rmtree(PROJECT_CONTEXT)
+srs-skills/scripts/build-doc.sh:64:trap 'rm -rf "$STAGE_DIR"' EXIT
+srs-skills/scripts/seed_example_project.py:33:        shutil.rmtree(target)
+srs-skills/scripts/setup-srs-project.ps1:97:        Remove-Item -Recurse -Force $TargetDir
+srs-skills/scripts/setup-srs-project.sh:99:        rm -rf "$TARGET_DIR"
+website-skills/scripts/rollback.sh:164:        "$target"/.rollback.*) rm -rf -- "$tmp" ;;
+website-skills/scripts/rollback.sh:205:        "$target"/.rollback-recovery.*) rm -rf -- "$tmp" ;;
+website-skills/scripts/test-banned-phrase-scan.sh:12:trap 'rm -rf "$TMP"' EXIT
+digital-research-engine/engine/tests/test_example_project_seed.py:19:        shutil.rmtree(self.tmp)
+digital-research-engine/engine/tests/test_kernel.py:25:        shutil.rmtree(self.tmp)
+digital-research-engine/scripts/seed_example_project.py:31:            shutil.rmtree(root)
+linux-skills/scripts/lib/common.sh:693:            [[ -n "$p" && -e "$p" ]] && rm -rf "$p" 2>/dev/null || true
+linux-skills/scripts/lib/common.sh:698:        [[ -e "$p" ]] && rm -rf "$p" 2>/dev/null || true
+linux-skills/scripts/sk-mysql-backup.sh:103:    [[ -n "${DUMP_DIR:-}" ]] && rm -rf "$DUMP_DIR" 2>/dev/null || true
+linux-skills/scripts/sk-mysql-backup.sh:229:    rm -rf "$DUMP_DIR"
+linux-skills/scripts/tests/install-skills-bin.test.sh:11:trap 'rm -rf -- "$TEST_ROOT"' EXIT
+linux-skills/scripts/validate_safe_operation_fixture.py:41:    "rm -rf",
+chwezi-engine-agents/evals/runners/run-host-smoke-tests.ps1:17:        if (Test-Path -LiteralPath $target) { Remove-Item -LiteralPath $target -Recurse -Force }
+chwezi-engine-agents/scripts/install.ps1:154:        if (Test-Path -LiteralPath $backup) { Remove-Item -LiteralPath $backup -Recurse -Force }
+chwezi-engine-agents/scripts/install.ps1:162:    if (Test-Path -LiteralPath $stage) { Remove-Item -LiteralPath $stage -Recurse -Force }
+chwezi-engine-agents/scripts/install.sh:73:  [ ! -e "$stage" ] || rm -rf "$stage"
+chwezi-engine-agents/scripts/install.sh:106:if [ -n "$backup" ]; then rm -rf "$backup"; fi
+chwezi-engine-agents/tests/install/test_fork_discovery.ps1:19:    if (Test-Path -LiteralPath $target) { Remove-Item -LiteralPath $target -Recurse -Force }
+chwezi-engine-agents/tests/install/test_install_targets.ps1:19:    if (Test-Path -LiteralPath $target) { Remove-Item -LiteralPath $target -Recurse -Force }
+chwezi-engine-agents/tests/security/test_mutation_gates.ps1:16:    if (Test-Path -LiteralPath $target) { Remove-Item -LiteralPath $target -Recurse -Force }
+chwezi-engine-agents/tests/security/test_path_boundaries.ps1:16:    foreach ($path in @($target,$outside)) { if (Test-Path -LiteralPath $path) { Remove-Item -LiteralPath $path -Recurse -Force } }
+chwezi-engine-agents/tests/test_render_host_files.py:135:        shutil.rmtree(self.tmp, ignore_errors=True)
+chwezi-engine-agents/tests/test_render_host_files.py:238:        shutil.rmtree(self.engine)
+chwezi-engine-agents/tests/test_render_host_files.py:257:        shutil.rmtree(self.tmp, ignore_errors=True)
+chwezi-engine-agents/tests/test_render_host_files.py:298:        shutil.rmtree(self.tmp, ignore_errors=True)
+chwezi-engine-agents/tests/test_render_host_files.py:326:        shutil.rmtree(self.engine)

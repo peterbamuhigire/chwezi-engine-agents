@@ -407,7 +407,6 @@ assets:
     mode: registered-variant
     canonical: chwezi-dev-engine/skills/sdlc-meta/skill-writing/SKILL.md
     copies:
-      - chwezi-dev-engine/skills/sdlc-meta/skill-writing/SKILL.md
       - website-skills/skills/meta/skill-writing/SKILL.md
       - digital-research-engine/skills/skill-writing/SKILL.md
       - proposal-skills/skills/meta/skill-writing/SKILL.md
@@ -419,42 +418,38 @@ assets:
       - "*/skills/skill-writing/SKILL.md"
       - "*/meta/skill-writing/SKILL.md"
     variants:
-      chwezi-dev-engine/skills/sdlc-meta/skill-writing/SKILL.md:
-        sha256: a08948a75e0ab67e93c01c7804d1921ad1d8a90455360ce5e5c1ea85efc5913b
-        owner: chwezi-dev-engine
-        reason: "Seven drifted skill-writing copies (SP-04); registered so drift is visible. Moves to canonical plus pointer stub or byte mode after M10-04."
       website-skills/skills/meta/skill-writing/SKILL.md:
-        sha256: d51e1f37e4b6fdeba0023dcc537432167f2ded794177c427bced10dade936644
+        sha256: c0caa54880452eed328ae2e120a6e02bf85c51fe1169ee13fc4f8fbccd56afe1
         owner: website-skills
-        reason: "Seven drifted skill-writing copies (SP-04); registered so drift is visible. Moves to canonical plus pointer stub or byte mode after M10-04."
+        reason: "Pointer stub for the canonical dev skill-writing standard (M10-04-T03): portable minimum, engine-local delta and degraded mode, shaped to pass this engine's Tier-1 validator. Re-register only when the portable minimum or the engine delta changes."
       digital-research-engine/skills/skill-writing/SKILL.md:
-        sha256: 03ea88a5d35d99f13a82fcad66f2c77108d3242ac8649c5a722fdf65847d2f62
+        sha256: 999004e1cf8982d03ad082b784204846d5f7b855196abe37c8a9d2873feea63c
         owner: digital-research-engine
-        reason: "Seven drifted skill-writing copies (SP-04); registered so drift is visible. Moves to canonical plus pointer stub or byte mode after M10-04."
+        reason: "Pointer stub for the canonical dev skill-writing standard (M10-04-T03): portable minimum, engine-local delta and degraded mode, shaped to pass this engine's Tier-1 validator. Re-register only when the portable minimum or the engine delta changes."
       proposal-skills/skills/meta/skill-writing/SKILL.md:
-        sha256: c05e8b4ad19880c47fc3902b33256ba658ce277c6ab6d641eb668526256e3e24
+        sha256: 70522473f9005ab2a4a08bc83f44054767d2de3aa51015dc30dba0e6851a49b2
         owner: proposal-skills
-        reason: "Seven drifted skill-writing copies (SP-04); registered so drift is visible. Moves to canonical plus pointer stub or byte mode after M10-04."
+        reason: "Pointer stub for the canonical dev skill-writing standard (M10-04-T03): portable minimum, engine-local delta and degraded mode, shaped to pass this engine's Tier-1 validator. Re-register only when the portable minimum or the engine delta changes."
       business-plan-skills/skills/meta-utility/skill-writing/SKILL.md:
-        sha256: f79451c0a661a47c3549cbb10e1325bc1196886f375995f025aa501a38d758ec
+        sha256: d0ab9db42891ee97fa72b5a52b35df8a57d3f4ca3047a26a27c84007b11130d0
         owner: business-plan-skills
-        reason: "Seven drifted skill-writing copies (SP-04); registered so drift is visible. Moves to canonical plus pointer stub or byte mode after M10-04."
+        reason: "Pointer stub for the canonical dev skill-writing standard (M10-04-T03): portable minimum, engine-local delta and degraded mode, shaped to pass this engine's Tier-1 validator. Re-register only when the portable minimum or the engine delta changes."
       social-media-skills/skills/meta-utility/skill-writing/SKILL.md:
-        sha256: 11ceaee95214c912d20b25b827f4db902238267305fe681a60d50f1493d2abab
+        sha256: 7ac067d8f8582fe6697700b7249b1ee7e4ab6bf4d45a21b6e78887593c241de2
         owner: social-media-skills
-        reason: "Seven drifted skill-writing copies (SP-04); registered so drift is visible. Moves to canonical plus pointer stub or byte mode after M10-04."
+        reason: "Pointer stub for the canonical dev skill-writing standard (M10-04-T03): portable minimum, engine-local delta and degraded mode, shaped to pass this engine's Tier-1 validator. Re-register only when the portable minimum or the engine delta changes."
       linux-skills/meta/skill-writing/SKILL.md:
-        sha256: e3f7cb4ec7712e0be4bd43c22047dda7b0255103f54586e94d3fd23dd2455603
+        sha256: 9c891cdd869c1af161361be98a3daaf448542a4b8b2df751de3c2f97de93e65e
         owner: linux-skills
-        reason: "Seven drifted skill-writing copies (SP-04); registered so drift is visible. Moves to canonical plus pointer stub or byte mode after M10-04."
-    reason: "Seven drifted skill-writing copies (SP-04); registered so drift is visible. Moves to canonical plus pointer stub or byte mode after M10-04."
-    note: "Canonical owner is the dev copy until M10-04 settles it."
+        reason: "Pointer stub for the canonical dev skill-writing standard (M10-04-T03): portable minimum, engine-local delta and degraded mode, shaped to pass this engine's Tier-1 validator. Re-register only when the portable minimum or the engine delta changes."
+    reason: "M10-04 converged seven drifting copies into one canonical (dev) plus six pointer stubs; the canonical is free to change and is not hashed here."
+    note: "Decision record: chwezi-engine-agents/docs/operations/decisions/skill-writing-canonical.md. Preservation map: docs/operations/m10-kaizen-evidence/M10-04/preservation/."
+    owner: chwezi-dev-engine
     review_date: "2026-12-29"
   - id: skill-writing-quick-validate
-    mode: registered-variant
+    mode: byte
     canonical: chwezi-dev-engine/skills/sdlc-meta/skill-writing/scripts/quick_validate.py
     copies:
-      - chwezi-dev-engine/skills/sdlc-meta/skill-writing/scripts/quick_validate.py
       - website-skills/skills/meta/skill-writing/scripts/quick_validate.py
       - digital-research-engine/skills/skill-writing/scripts/quick_validate.py
       - proposal-skills/skills/meta/skill-writing/scripts/quick_validate.py
@@ -465,36 +460,75 @@ assets:
       - "*/skills/*/skill-writing/scripts/quick_validate.py"
       - "*/skills/skill-writing/scripts/quick_validate.py"
       - "*/meta/skill-writing/scripts/quick_validate.py"
-    variants:
-      chwezi-dev-engine/skills/sdlc-meta/skill-writing/scripts/quick_validate.py:
-        sha256: 5c3995403c417aa8aef562a42155dab299295aca0027511b772617ddd4f835bc
-        owner: chwezi-dev-engine
-        reason: "Dev canonical quick validator versus the five-engine shared copy; handed to M10-04."
-      website-skills/skills/meta/skill-writing/scripts/quick_validate.py:
-        sha256: 381ab2d3d1fd5ec32371016413063eff99d0d48c415747085c61517e967dbb87
-        owner: website-skills
-        reason: "Dev canonical quick validator versus the five-engine shared copy; handed to M10-04."
-      digital-research-engine/skills/skill-writing/scripts/quick_validate.py:
-        sha256: bb9785d99f63de7061357924a89cf651bb56502f12280b99474a4297331e0de5
-        owner: digital-research-engine
-        reason: "Dev canonical quick validator versus the five-engine shared copy; handed to M10-04."
-      proposal-skills/skills/meta/skill-writing/scripts/quick_validate.py:
-        sha256: 381ab2d3d1fd5ec32371016413063eff99d0d48c415747085c61517e967dbb87
-        owner: proposal-skills
-        reason: "Dev canonical quick validator versus the five-engine shared copy; handed to M10-04."
-      business-plan-skills/skills/meta-utility/skill-writing/scripts/quick_validate.py:
-        sha256: 6ec558f79e3a7aa11cdab2ac8f18e7bf20f03aea85211567f2b2604781b13fd4
-        owner: business-plan-skills
-        reason: "Dev canonical quick validator versus the five-engine shared copy; handed to M10-04."
-      social-media-skills/skills/meta-utility/skill-writing/scripts/quick_validate.py:
-        sha256: 381ab2d3d1fd5ec32371016413063eff99d0d48c415747085c61517e967dbb87
-        owner: social-media-skills
-        reason: "Dev canonical quick validator versus the five-engine shared copy; handed to M10-04."
-      linux-skills/meta/skill-writing/scripts/quick_validate.py:
-        sha256: 381ab2d3d1fd5ec32371016413063eff99d0d48c415747085c61517e967dbb87
-        owner: linux-skills
-        reason: "Dev canonical quick validator versus the five-engine shared copy; handed to M10-04."
-    reason: "Dev canonical quick validator versus the five-engine shared copy; handed to M10-04."
+    reason: "Byte mirror of the canonical dev quick validator (M10-04-T03); the repo root is found by marker, so one file works at every depth. Re-sync from dev after any canonical change."
+    owner: chwezi-dev-engine
+    review_date: "2026-12-29"
+  - id: skill-writing-init-skill
+    mode: byte
+    canonical: chwezi-dev-engine/skills/sdlc-meta/skill-writing/scripts/init_skill.py
+    copies:
+      - website-skills/skills/meta/skill-writing/scripts/init_skill.py
+      - digital-research-engine/skills/skill-writing/scripts/init_skill.py
+      - proposal-skills/skills/meta/skill-writing/scripts/init_skill.py
+      - business-plan-skills/skills/meta-utility/skill-writing/scripts/init_skill.py
+      - social-media-skills/skills/meta-utility/skill-writing/scripts/init_skill.py
+      - linux-skills/meta/skill-writing/scripts/init_skill.py
+    discover:
+      - "*/skills/*/skill-writing/scripts/init_skill.py"
+      - "*/skills/skill-writing/scripts/init_skill.py"
+      - "*/meta/skill-writing/scripts/init_skill.py"
+    reason: "Byte mirror of the canonical dev skill scaffolder (M10-04-T03)."
+    owner: chwezi-dev-engine
+    review_date: "2026-12-29"
+  - id: skill-writing-package-skill
+    mode: byte
+    canonical: chwezi-dev-engine/skills/sdlc-meta/skill-writing/scripts/package_skill.py
+    copies:
+      - website-skills/skills/meta/skill-writing/scripts/package_skill.py
+      - digital-research-engine/skills/skill-writing/scripts/package_skill.py
+      - proposal-skills/skills/meta/skill-writing/scripts/package_skill.py
+      - business-plan-skills/skills/meta-utility/skill-writing/scripts/package_skill.py
+      - social-media-skills/skills/meta-utility/skill-writing/scripts/package_skill.py
+      - linux-skills/meta/skill-writing/scripts/package_skill.py
+    discover:
+      - "*/skills/*/skill-writing/scripts/package_skill.py"
+      - "*/skills/skill-writing/scripts/package_skill.py"
+      - "*/meta/skill-writing/scripts/package_skill.py"
+    reason: "Byte mirror of the canonical dev skill packager (M10-04-T03)."
+    owner: chwezi-dev-engine
+    review_date: "2026-12-29"
+  - id: skill-writing-upgrade-dual-compat
+    mode: byte
+    canonical: chwezi-dev-engine/skills/sdlc-meta/skill-writing/scripts/upgrade_dual_compat.py
+    copies:
+      - digital-research-engine/skills/skill-writing/scripts/upgrade_dual_compat.py
+    discover:
+      - "*/skills/*/skill-writing/scripts/upgrade_dual_compat.py"
+      - "*/skills/skill-writing/scripts/upgrade_dual_compat.py"
+      - "*/meta/skill-writing/scripts/upgrade_dual_compat.py"
+    reason: "Byte mirror for the research engine, whose skill-composition-standards playbook calls it (M10-04-T03)."
+    owner: chwezi-dev-engine
+    review_date: "2026-12-29"
+  - id: skill-writing-license
+    mode: byte
+    canonical: chwezi-dev-engine/skills/sdlc-meta/skill-writing/LICENSE.txt
+    copies:
+      - website-skills/skills/meta/skill-writing/LICENSE.txt
+      - digital-research-engine/skills/skill-writing/LICENSE.txt
+      - proposal-skills/skills/meta/skill-writing/LICENSE.txt
+      - business-plan-skills/skills/meta-utility/skill-writing/LICENSE.txt
+      - social-media-skills/skills/meta-utility/skill-writing/LICENSE.txt
+      - linux-skills/meta/skill-writing/LICENSE.txt
+    reason: "Licence text shipped with the skill-writing scripts; identical in every copy."
+    owner: chwezi-dev-engine
+    review_date: "2026-12-29"
+  - id: skill-writing-authoring-practices
+    mode: byte
+    canonical: chwezi-dev-engine/skills/sdlc-meta/skill-writing/references/skill-authoring-best-practices.md
+    copies:
+      - social-media-skills/skills/meta-utility/skill-writing/references/skill-authoring-best-practices.md
+    reason: "Kept in social-media-skills only because its dated Kaizen record links it; byte mirror of the canonical reference (M10-04-T03)."
+    owner: chwezi-dev-engine
     review_date: "2026-12-29"
   - id: generate-plugin-manifest
     mode: registered-variant

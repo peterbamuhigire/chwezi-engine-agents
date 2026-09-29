@@ -1,0 +1,743 @@
+{
+  "generated": "2026-09-29",
+  "purpose": "M10-04-T01 pre-change preservation map",
+  "copies": [
+    {
+      "engine": "chwezi-dev-engine",
+      "path": "skills/sdlc-meta/skill-writing",
+      "head": "33574d94a5",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "bytes": 11558,
+          "lines": 201,
+          "sha256": "49bbe9114e49214df2ccc324cb3ac8d1d1aa1c3a0947f94c286765e86647b32e",
+          "sha256_lf": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+          "same_as_dev": "canonical"
+        },
+        {
+          "path": "references/completion-criteria-and-handoff.md",
+          "bytes": 1219,
+          "lines": 26,
+          "sha256": "2bb95de06524c8bce123a1c20b4d72dd88b362021aab0ea8d39891b83ced156a",
+          "sha256_lf": "2bb95de06524c8bce123a1c20b4d72dd88b362021aab0ea8d39891b83ced156a",
+          "same_as_dev": "canonical"
+        },
+        {
+          "path": "references/context-pointer-quality.md",
+          "bytes": 1363,
+          "lines": 29,
+          "sha256": "3f3a1961594c788e4130020bac442a9638c898b4a286641c537fe8c5e2c93ceb",
+          "sha256_lf": "3f3a1961594c788e4130020bac442a9638c898b4a286641c537fe8c5e2c93ceb",
+          "same_as_dev": "canonical"
+        },
+        {
+          "path": "references/generation-template.md",
+          "bytes": 5207,
+          "lines": 160,
+          "sha256": "2ff48ad2621cce053cc6d2518338bdfae7032201b4d9fd4c2680fba4283fa803",
+          "sha256_lf": "aa6d32d622b9cf0a09fca26268095be94c677861a940141b06fda42abb561119",
+          "same_as_dev": "canonical"
+        },
+        {
+          "path": "references/invocation-ownership.md",
+          "bytes": 1355,
+          "lines": 23,
+          "sha256": "5e38160c0c98b6c961a403da6b3c35dbb700fd2a312557b5e76710865664f737",
+          "sha256_lf": "5e38160c0c98b6c961a403da6b3c35dbb700fd2a312557b5e76710865664f737",
+          "same_as_dev": "canonical"
+        },
+        {
+          "path": "references/leading-words-and-trigger-design.md",
+          "bytes": 1143,
+          "lines": 27,
+          "sha256": "8d332aa77a9b386f4a69d8a2e4d11998b06aa13497ea15b3259a99f1ba4dc704",
+          "sha256_lf": "8d332aa77a9b386f4a69d8a2e4d11998b06aa13497ea15b3259a99f1ba4dc704",
+          "same_as_dev": "canonical"
+        },
+        {
+          "path": "references/output-patterns.md",
+          "bytes": 1895,
+          "lines": 82,
+          "sha256": "099a049fc70b4f3c5103efc2efa171758d7952db54e3fbc74fb3a1aeabe770e4",
+          "sha256_lf": "d6027800b9d8c26589edba85b42901a41ac36d753b4e9cebc7f4cbb03cdcf0a4",
+          "same_as_dev": "canonical"
+        },
+        {
+          "path": "references/prompting-patterns-for-skills.md",
+          "bytes": 12020,
+          "lines": 482,
+          "sha256": "d9e50689ef32eb17570b928b88560c84e365cd0f425a2f5e1d1c40f6d9b25c31",
+          "sha256_lf": "ca76d191fa9b0b18360969668fb5095c400c1a5e8887c7b7493c47f333e2c11d",
+          "same_as_dev": "canonical"
+        },
+        {
+          "path": "references/skill-authoring-best-practices.md",
+          "bytes": 24343,
+          "lines": 933,
+          "sha256": "a3f94bb70e2a0aef8883a04cb2d15fe9dbf0f09f6275ca1220825b30f618fecf",
+          "sha256_lf": "0fd0314fd18e2dcb4474c2e6e45b51f25716cce158a2389918af0360af4f0000",
+          "same_as_dev": "canonical"
+        },
+        {
+          "path": "references/source-distillation-and-copyright.md",
+          "bytes": 3551,
+          "lines": 77,
+          "sha256": "ece91e92f4b607962f2fccc40b08ea72d8a4839d77cfc43c5c290e1197874bfc",
+          "sha256_lf": "28ab6c028a255c600a54d6b7b644e4569e74a501e1591bd101972ea10d174a47",
+          "same_as_dev": "canonical"
+        },
+        {
+          "path": "references/two-loads-and-context-budget.md",
+          "bytes": 1251,
+          "lines": 25,
+          "sha256": "62dcc6310b8d0bb438a422c1da4609495fe5d7206e309f88a23a6c29dfba91fe",
+          "sha256_lf": "62dcc6310b8d0bb438a422c1da4609495fe5d7206e309f88a23a6c29dfba91fe",
+          "same_as_dev": "canonical"
+        },
+        {
+          "path": "references/universal-agent-skill-architecture.md",
+          "bytes": 6048,
+          "lines": 118,
+          "sha256": "0c0fd99a302e67b68f9c2f61cf0b8e25fb53c7e61472fcabff9e365d7f71cc8a",
+          "sha256_lf": "27e01829279ea55ddaa96a7730503f41ae9f345cc0248782688a67001ace4d3c",
+          "same_as_dev": "canonical"
+        },
+        {
+          "path": "references/workflows.md",
+          "bytes": 845,
+          "lines": 27,
+          "sha256": "82c591fb4d7fe184954c52db7697719c044755cd704fe49904a0350cfa748d09",
+          "sha256_lf": "ef4846877d5dab47511a01a6cf31476ad64f5bc5945635459295794575338980",
+          "same_as_dev": "canonical"
+        },
+        {
+          "path": "scripts/contract_gate.py",
+          "bytes": 13456,
+          "lines": 414,
+          "sha256": "662a048124f73705197ac37dcf261370bc3c523ad3fc92e1f28776d59e865b92",
+          "sha256_lf": "f82624df83b9f73b0a8fb81c79b2bdc8ff856a1875803863e4c1c069b3b3ab5c",
+          "same_as_dev": "canonical"
+        },
+        {
+          "path": "scripts/fix_mojibake.py",
+          "bytes": 3490,
+          "lines": 99,
+          "sha256": "771c07894772c05def4f6a8911add071b6eb4a86132a619e58f67b79a4819f0a",
+          "sha256_lf": "1980e0fc079f8c2b8d8a02be6afdb6adbdd7d9ca050564b1b1cb48264ea2bb23",
+          "same_as_dev": "canonical"
+        },
+        {
+          "path": "scripts/init_skill.py",
+          "bytes": 11166,
+          "lines": 303,
+          "sha256": "caa5b25a47228d65aec335414cdce1d1e0e4f5a42b34dd1ee327c84719e55074",
+          "sha256_lf": "0bba250b94caa4cb2b28b15dad26fdcf371aeda4c9797b8120e55c2e33e0c73c",
+          "same_as_dev": "canonical"
+        },
+        {
+          "path": "scripts/package_skill.py",
+          "bytes": 3398,
+          "lines": 110,
+          "sha256": "afc74988da979933ab76966a5539d78acc95b734f7201171c97c9edce3cc8966",
+          "sha256_lf": "b31fbcb3e362d5c5308e99255ff8e83cde3a513e0636953964a648494ca10931",
+          "same_as_dev": "canonical"
+        },
+        {
+          "path": "scripts/quick_validate.py",
+          "bytes": 9806,
+          "lines": 270,
+          "sha256": "673057d63aad23db16fbe7fab6f24225e7c5db25a68a2d2b55bc488fad3be058",
+          "sha256_lf": "5c3995403c417aa8aef562a42155dab299295aca0027511b772617ddd4f835bc",
+          "same_as_dev": "canonical"
+        },
+        {
+          "path": "scripts/split_oversized_skills.py",
+          "bytes": 2893,
+          "lines": 89,
+          "sha256": "86d9f2885fff9021d142a0d9b277b4eee1c55c3beb45673e0d95397110f56cdd",
+          "sha256_lf": "af9f2efac2f930d4463f3b4413019aec53c99d399406fc1a8317ee53bdb23cd6",
+          "same_as_dev": "canonical"
+        },
+        {
+          "path": "scripts/upgrade_dual_compat.py",
+          "bytes": 7996,
+          "lines": 204,
+          "sha256": "fc22edc04cf0c72a9233cbe6859fa4e983d3aa6d6cd5a6a0324ba962150a7981",
+          "sha256_lf": "63bbbf56573c0c2bd4ea51549f232f381d92226d26227b4232b214505f35697a",
+          "same_as_dev": "canonical"
+        },
+        {
+          "path": "SKILL.md",
+          "bytes": 17556,
+          "lines": 353,
+          "sha256": "a08948a75e0ab67e93c01c7804d1921ad1d8a90455360ce5e5c1ea85efc5913b",
+          "sha256_lf": "a08948a75e0ab67e93c01c7804d1921ad1d8a90455360ce5e5c1ea85efc5913b",
+          "same_as_dev": "canonical"
+        }
+      ]
+    },
+    {
+      "engine": "digital-research-engine",
+      "path": "skills/skill-writing",
+      "head": "2aa54bcdfd",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "bytes": 11558,
+          "lines": 201,
+          "sha256": "49bbe9114e49214df2ccc324cb3ac8d1d1aa1c3a0947f94c286765e86647b32e",
+          "sha256_lf": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "references/generation-template.md",
+          "bytes": 5207,
+          "lines": 160,
+          "sha256": "2ff48ad2621cce053cc6d2518338bdfae7032201b4d9fd4c2680fba4283fa803",
+          "sha256_lf": "aa6d32d622b9cf0a09fca26268095be94c677861a940141b06fda42abb561119",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "references/output-patterns.md",
+          "bytes": 1895,
+          "lines": 82,
+          "sha256": "099a049fc70b4f3c5103efc2efa171758d7952db54e3fbc74fb3a1aeabe770e4",
+          "sha256_lf": "d6027800b9d8c26589edba85b42901a41ac36d753b4e9cebc7f4cbb03cdcf0a4",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "references/prompting-patterns-for-skills.md",
+          "bytes": 12020,
+          "lines": 482,
+          "sha256": "d9e50689ef32eb17570b928b88560c84e365cd0f425a2f5e1d1c40f6d9b25c31",
+          "sha256_lf": "ca76d191fa9b0b18360969668fb5095c400c1a5e8887c7b7493c47f333e2c11d",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "references/skill-authoring-best-practices.md",
+          "bytes": 24343,
+          "lines": 933,
+          "sha256": "a3f94bb70e2a0aef8883a04cb2d15fe9dbf0f09f6275ca1220825b30f618fecf",
+          "sha256_lf": "0fd0314fd18e2dcb4474c2e6e45b51f25716cce158a2389918af0360af4f0000",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "references/workflows.md",
+          "bytes": 845,
+          "lines": 27,
+          "sha256": "82c591fb4d7fe184954c52db7697719c044755cd704fe49904a0350cfa748d09",
+          "sha256_lf": "ef4846877d5dab47511a01a6cf31476ad64f5bc5945635459295794575338980",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "scripts/contract_gate.py",
+          "bytes": 13044,
+          "lines": 412,
+          "sha256": "b61d6c7c8ff7067b9790ece6ed31eca4106fb91553164d063ebdd6e69624ce8e",
+          "sha256_lf": "bd02470dd0ef748f0e5737a72b2edbd50cd210546af882caa974f4a34e26e51f",
+          "same_as_dev": "no"
+        },
+        {
+          "path": "scripts/fix_mojibake.py",
+          "bytes": 1960,
+          "lines": 68,
+          "sha256": "c81cae9ce30addd82987e363f3eb9780c7ee63c18cff1420a1ec18dea682fed8",
+          "sha256_lf": "0e00a695f81026b59901be309e3c175911b3a1aca35eb06700087622adbe4a78",
+          "same_as_dev": "no"
+        },
+        {
+          "path": "scripts/init_skill.py",
+          "bytes": 11166,
+          "lines": 303,
+          "sha256": "caa5b25a47228d65aec335414cdce1d1e0e4f5a42b34dd1ee327c84719e55074",
+          "sha256_lf": "0bba250b94caa4cb2b28b15dad26fdcf371aeda4c9797b8120e55c2e33e0c73c",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "scripts/package_skill.py",
+          "bytes": 3398,
+          "lines": 110,
+          "sha256": "afc74988da979933ab76966a5539d78acc95b734f7201171c97c9edce3cc8966",
+          "sha256_lf": "b31fbcb3e362d5c5308e99255ff8e83cde3a513e0636953964a648494ca10931",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "scripts/quick_validate.py",
+          "bytes": 7996,
+          "lines": 241,
+          "sha256": "e7648b406093b1bd0b30d99f49a4f13b940cb44bbbc7abfc157976effb050345",
+          "sha256_lf": "bb9785d99f63de7061357924a89cf651bb56502f12280b99474a4297331e0de5",
+          "same_as_dev": "no"
+        },
+        {
+          "path": "scripts/split_oversized_skills.py",
+          "bytes": 2893,
+          "lines": 89,
+          "sha256": "86d9f2885fff9021d142a0d9b277b4eee1c55c3beb45673e0d95397110f56cdd",
+          "sha256_lf": "af9f2efac2f930d4463f3b4413019aec53c99d399406fc1a8317ee53bdb23cd6",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "scripts/upgrade_dual_compat.py",
+          "bytes": 9169,
+          "lines": 219,
+          "sha256": "3a7de23a851c52e0b0f5fb6a60d7d0dae2f0232c0707e9e889545c611bc1e3bb",
+          "sha256_lf": "80101dddc08ce72116a53b0edd26c8d5446ede67fe0a2a7be5ff5ba4f159e3f8",
+          "same_as_dev": "no"
+        },
+        {
+          "path": "SKILL.md",
+          "bytes": 9838,
+          "lines": 247,
+          "sha256": "a651be42eb2461f98e0c69b851e20b3074d15bf107a5e657508f6f957d467576",
+          "sha256_lf": "03ea88a5d35d99f13a82fcad66f2c77108d3242ac8649c5a722fdf65847d2f62",
+          "same_as_dev": "no"
+        }
+      ]
+    },
+    {
+      "engine": "social-media-skills",
+      "path": "skills/meta-utility/skill-writing",
+      "head": "52399fc556",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "bytes": 11558,
+          "lines": 201,
+          "sha256": "49bbe9114e49214df2ccc324cb3ac8d1d1aa1c3a0947f94c286765e86647b32e",
+          "sha256_lf": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "references/output-patterns.md",
+          "bytes": 1895,
+          "lines": 82,
+          "sha256": "099a049fc70b4f3c5103efc2efa171758d7952db54e3fbc74fb3a1aeabe770e4",
+          "sha256_lf": "d6027800b9d8c26589edba85b42901a41ac36d753b4e9cebc7f4cbb03cdcf0a4",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "references/prompting-patterns-for-skills.md",
+          "bytes": 12020,
+          "lines": 482,
+          "sha256": "d9e50689ef32eb17570b928b88560c84e365cd0f425a2f5e1d1c40f6d9b25c31",
+          "sha256_lf": "ca76d191fa9b0b18360969668fb5095c400c1a5e8887c7b7493c47f333e2c11d",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "references/skill-authoring-best-practices.md",
+          "bytes": 24483,
+          "lines": 933,
+          "sha256": "524616f9915568a6763594905d5e88ff910564958817226094088909d026c1ec",
+          "sha256_lf": "d188a61e65fe580dd95d8c424f9041cc40cc10d477cf24a463fbd02775b53084",
+          "same_as_dev": "no"
+        },
+        {
+          "path": "references/workflows.md",
+          "bytes": 845,
+          "lines": 27,
+          "sha256": "82c591fb4d7fe184954c52db7697719c044755cd704fe49904a0350cfa748d09",
+          "sha256_lf": "ef4846877d5dab47511a01a6cf31476ad64f5bc5945635459295794575338980",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "scripts/init_skill.py",
+          "bytes": 11166,
+          "lines": 303,
+          "sha256": "caa5b25a47228d65aec335414cdce1d1e0e4f5a42b34dd1ee327c84719e55074",
+          "sha256_lf": "0bba250b94caa4cb2b28b15dad26fdcf371aeda4c9797b8120e55c2e33e0c73c",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "scripts/package_skill.py",
+          "bytes": 3398,
+          "lines": 110,
+          "sha256": "afc74988da979933ab76966a5539d78acc95b734f7201171c97c9edce3cc8966",
+          "sha256_lf": "b31fbcb3e362d5c5308e99255ff8e83cde3a513e0636953964a648494ca10931",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "scripts/quick_validate.py",
+          "bytes": 3617,
+          "lines": 94,
+          "sha256": "b4f8d934d887a98418e24f86da22f20fbc9dda4e664b7ad7101cd85e0fddabf8",
+          "sha256_lf": "381ab2d3d1fd5ec32371016413063eff99d0d48c415747085c61517e967dbb87",
+          "same_as_dev": "no"
+        },
+        {
+          "path": "SKILL.md",
+          "bytes": 10580,
+          "lines": 193,
+          "sha256": "11ceaee95214c912d20b25b827f4db902238267305fe681a60d50f1493d2abab",
+          "sha256_lf": "11ceaee95214c912d20b25b827f4db902238267305fe681a60d50f1493d2abab",
+          "same_as_dev": "no"
+        }
+      ]
+    },
+    {
+      "engine": "website-skills",
+      "path": "skills/meta/skill-writing",
+      "head": "26677c5f2d",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "bytes": 11558,
+          "lines": 201,
+          "sha256": "49bbe9114e49214df2ccc324cb3ac8d1d1aa1c3a0947f94c286765e86647b32e",
+          "sha256_lf": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "references/generation-template.md",
+          "bytes": 5264,
+          "lines": 160,
+          "sha256": "51c96916015e05595dfdb296520ffa976d07e54b4b8d655b8e2db3e65d7e1a38",
+          "sha256_lf": "3543ff2068f4e9b89240005199a74ce304bc065d8ef3035cb21f0b6a87337b75",
+          "same_as_dev": "no"
+        },
+        {
+          "path": "references/legacy-guidance.md",
+          "bytes": 24040,
+          "lines": 514,
+          "sha256": "555707cca3e662d048b50616e48adb8a95fba22b626c5b777fdabbb962a3e881",
+          "sha256_lf": "4b989979f94a5ed3c3d281477c39da2c6edd3b20b884827618910a89bf0ff403",
+          "same_as_dev": "absent-in-dev"
+        },
+        {
+          "path": "references/output-patterns.md",
+          "bytes": 1895,
+          "lines": 82,
+          "sha256": "099a049fc70b4f3c5103efc2efa171758d7952db54e3fbc74fb3a1aeabe770e4",
+          "sha256_lf": "d6027800b9d8c26589edba85b42901a41ac36d753b4e9cebc7f4cbb03cdcf0a4",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "references/prompting-patterns-for-skills.md",
+          "bytes": 12020,
+          "lines": 482,
+          "sha256": "d9e50689ef32eb17570b928b88560c84e365cd0f425a2f5e1d1c40f6d9b25c31",
+          "sha256_lf": "ca76d191fa9b0b18360969668fb5095c400c1a5e8887c7b7493c47f333e2c11d",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "references/skill-authoring-best-practices.md",
+          "bytes": 24797,
+          "lines": 933,
+          "sha256": "003711b99b8d0409f510c149593adb79209c25c93a22c170726d6cbb6ffc9422",
+          "sha256_lf": "7b3760734370dfe13d2894bdc018d20f329716a6c47277842a59b2a529f5d01b",
+          "same_as_dev": "no"
+        },
+        {
+          "path": "references/workflows.md",
+          "bytes": 845,
+          "lines": 27,
+          "sha256": "82c591fb4d7fe184954c52db7697719c044755cd704fe49904a0350cfa748d09",
+          "sha256_lf": "ef4846877d5dab47511a01a6cf31476ad64f5bc5945635459295794575338980",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "scripts/init_skill.py",
+          "bytes": 11166,
+          "lines": 303,
+          "sha256": "caa5b25a47228d65aec335414cdce1d1e0e4f5a42b34dd1ee327c84719e55074",
+          "sha256_lf": "0bba250b94caa4cb2b28b15dad26fdcf371aeda4c9797b8120e55c2e33e0c73c",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "scripts/package_skill.py",
+          "bytes": 3398,
+          "lines": 110,
+          "sha256": "afc74988da979933ab76966a5539d78acc95b734f7201171c97c9edce3cc8966",
+          "sha256_lf": "b31fbcb3e362d5c5308e99255ff8e83cde3a513e0636953964a648494ca10931",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "scripts/quick_validate.py",
+          "bytes": 3617,
+          "lines": 94,
+          "sha256": "b4f8d934d887a98418e24f86da22f20fbc9dda4e664b7ad7101cd85e0fddabf8",
+          "sha256_lf": "381ab2d3d1fd5ec32371016413063eff99d0d48c415747085c61517e967dbb87",
+          "same_as_dev": "no"
+        },
+        {
+          "path": "SKILL.md",
+          "bytes": 5734,
+          "lines": 121,
+          "sha256": "161707adf6738ea280d69a9f32b9ecff2cb95fff716a4b6766d4b630e6ac7147",
+          "sha256_lf": "d51e1f37e4b6fdeba0023dcc537432167f2ded794177c427bced10dade936644",
+          "same_as_dev": "no"
+        }
+      ]
+    },
+    {
+      "engine": "business-plan-skills",
+      "path": "skills/meta-utility/skill-writing",
+      "head": "7b21210b22",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "bytes": 11558,
+          "lines": 201,
+          "sha256": "49bbe9114e49214df2ccc324cb3ac8d1d1aa1c3a0947f94c286765e86647b32e",
+          "sha256_lf": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "references/dual-compatible-skill-template.md",
+          "bytes": 3836,
+          "lines": 108,
+          "sha256": "8bf28d58c62fd04d8346171132865a4daecae4aa77fed523f89f76623599fd6e",
+          "sha256_lf": "5e688e356e7e9319f730faeb2d261829322347e1c292166ada1e7234ba7543ad",
+          "same_as_dev": "absent-in-dev"
+        },
+        {
+          "path": "references/dual-surface-migration-rules.md",
+          "bytes": 2334,
+          "lines": 36,
+          "sha256": "ee313c68824492f2058d53d79e11e1220b1e82313fa95f2d5959551fc02d0792",
+          "sha256_lf": "49508b982f3359e2e7f0a86d98a01d6f867b910b7ddf50349f23806edf5eedf5",
+          "same_as_dev": "absent-in-dev"
+        },
+        {
+          "path": "references/output-patterns.md",
+          "bytes": 1895,
+          "lines": 82,
+          "sha256": "099a049fc70b4f3c5103efc2efa171758d7952db54e3fbc74fb3a1aeabe770e4",
+          "sha256_lf": "d6027800b9d8c26589edba85b42901a41ac36d753b4e9cebc7f4cbb03cdcf0a4",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "references/prompting-patterns-for-skills.md",
+          "bytes": 12020,
+          "lines": 482,
+          "sha256": "d9e50689ef32eb17570b928b88560c84e365cd0f425a2f5e1d1c40f6d9b25c31",
+          "sha256_lf": "ca76d191fa9b0b18360969668fb5095c400c1a5e8887c7b7493c47f333e2c11d",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "references/skill-authoring-best-practices.md",
+          "bytes": 24343,
+          "lines": 933,
+          "sha256": "a3f94bb70e2a0aef8883a04cb2d15fe9dbf0f09f6275ca1220825b30f618fecf",
+          "sha256_lf": "0fd0314fd18e2dcb4474c2e6e45b51f25716cce158a2389918af0360af4f0000",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "references/workflows.md",
+          "bytes": 845,
+          "lines": 27,
+          "sha256": "82c591fb4d7fe184954c52db7697719c044755cd704fe49904a0350cfa748d09",
+          "sha256_lf": "ef4846877d5dab47511a01a6cf31476ad64f5bc5945635459295794575338980",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "scripts/init_skill.py",
+          "bytes": 11166,
+          "lines": 303,
+          "sha256": "caa5b25a47228d65aec335414cdce1d1e0e4f5a42b34dd1ee327c84719e55074",
+          "sha256_lf": "0bba250b94caa4cb2b28b15dad26fdcf371aeda4c9797b8120e55c2e33e0c73c",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "scripts/package_skill.py",
+          "bytes": 3398,
+          "lines": 110,
+          "sha256": "afc74988da979933ab76966a5539d78acc95b734f7201171c97c9edce3cc8966",
+          "sha256_lf": "b31fbcb3e362d5c5308e99255ff8e83cde3a513e0636953964a648494ca10931",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "scripts/quick_validate.py",
+          "bytes": 3793,
+          "lines": 86,
+          "sha256": "95fc20e708e03fc80f9bfff36742c5899f9904ca6b290733d522f5547e53487c",
+          "sha256_lf": "6ec558f79e3a7aa11cdab2ac8f18e7bf20f03aea85211567f2b2604781b13fd4",
+          "same_as_dev": "no"
+        },
+        {
+          "path": "SKILL.md",
+          "bytes": 9108,
+          "lines": 118,
+          "sha256": "2c2e98dc40e3aea9894d940ed3ee3b4c5f16c2f4edc059fe4bd8ef4fdaf1fc90",
+          "sha256_lf": "f79451c0a661a47c3549cbb10e1325bc1196886f375995f025aa501a38d758ec",
+          "same_as_dev": "no"
+        }
+      ]
+    },
+    {
+      "engine": "linux-skills",
+      "path": "meta/skill-writing",
+      "head": "42b3c1b7e7",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "bytes": 11558,
+          "lines": 201,
+          "sha256": "49bbe9114e49214df2ccc324cb3ac8d1d1aa1c3a0947f94c286765e86647b32e",
+          "sha256_lf": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "references/generation-template.md",
+          "bytes": 5207,
+          "lines": 160,
+          "sha256": "2ff48ad2621cce053cc6d2518338bdfae7032201b4d9fd4c2680fba4283fa803",
+          "sha256_lf": "aa6d32d622b9cf0a09fca26268095be94c677861a940141b06fda42abb561119",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "references/output-patterns.md",
+          "bytes": 1895,
+          "lines": 82,
+          "sha256": "099a049fc70b4f3c5103efc2efa171758d7952db54e3fbc74fb3a1aeabe770e4",
+          "sha256_lf": "d6027800b9d8c26589edba85b42901a41ac36d753b4e9cebc7f4cbb03cdcf0a4",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "references/prompting-patterns-for-skills.md",
+          "bytes": 12020,
+          "lines": 482,
+          "sha256": "d9e50689ef32eb17570b928b88560c84e365cd0f425a2f5e1d1c40f6d9b25c31",
+          "sha256_lf": "ca76d191fa9b0b18360969668fb5095c400c1a5e8887c7b7493c47f333e2c11d",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "references/skill-authoring-best-practices.md",
+          "bytes": 24343,
+          "lines": 933,
+          "sha256": "a3f94bb70e2a0aef8883a04cb2d15fe9dbf0f09f6275ca1220825b30f618fecf",
+          "sha256_lf": "0fd0314fd18e2dcb4474c2e6e45b51f25716cce158a2389918af0360af4f0000",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "references/workflows.md",
+          "bytes": 845,
+          "lines": 27,
+          "sha256": "82c591fb4d7fe184954c52db7697719c044755cd704fe49904a0350cfa748d09",
+          "sha256_lf": "ef4846877d5dab47511a01a6cf31476ad64f5bc5945635459295794575338980",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "scripts/init_skill.py",
+          "bytes": 11166,
+          "lines": 303,
+          "sha256": "caa5b25a47228d65aec335414cdce1d1e0e4f5a42b34dd1ee327c84719e55074",
+          "sha256_lf": "0bba250b94caa4cb2b28b15dad26fdcf371aeda4c9797b8120e55c2e33e0c73c",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "scripts/package_skill.py",
+          "bytes": 3398,
+          "lines": 110,
+          "sha256": "afc74988da979933ab76966a5539d78acc95b734f7201171c97c9edce3cc8966",
+          "sha256_lf": "b31fbcb3e362d5c5308e99255ff8e83cde3a513e0636953964a648494ca10931",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "scripts/quick_validate.py",
+          "bytes": 3617,
+          "lines": 94,
+          "sha256": "b4f8d934d887a98418e24f86da22f20fbc9dda4e664b7ad7101cd85e0fddabf8",
+          "sha256_lf": "381ab2d3d1fd5ec32371016413063eff99d0d48c415747085c61517e967dbb87",
+          "same_as_dev": "no"
+        },
+        {
+          "path": "SKILL.md",
+          "bytes": 6565,
+          "lines": 110,
+          "sha256": "d6909793929cd0063cb5d9f953e8b380d2a834f256038a729a33fa1b9da816ca",
+          "sha256_lf": "e3f7cb4ec7712e0be4bd43c22047dda7b0255103f54586e94d3fd23dd2455603",
+          "same_as_dev": "no"
+        }
+      ]
+    },
+    {
+      "engine": "proposal-skills",
+      "path": "skills/meta/skill-writing",
+      "head": "ead7a38ae2",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "bytes": 11558,
+          "lines": 201,
+          "sha256": "49bbe9114e49214df2ccc324cb3ac8d1d1aa1c3a0947f94c286765e86647b32e",
+          "sha256_lf": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "references/output-patterns.md",
+          "bytes": 1942,
+          "lines": 84,
+          "sha256": "da9dcb436e055755a950fe6e1e4752ffc45f17eaa00723543d1df0ab3d25e673",
+          "sha256_lf": "df2d34f12ee52a6900b038d986242648a67a9744450f89e7968d4faba480c85d",
+          "same_as_dev": "no"
+        },
+        {
+          "path": "references/prompting-patterns-for-skills.md",
+          "bytes": 12067,
+          "lines": 484,
+          "sha256": "8cd8d3004647b36cb7f7909aa8458806509394cf6f49e8e9e98933a0ddcce67a",
+          "sha256_lf": "e1199d0096a63698d672294fbbac8a3d898a202ac475add3822fe8aa33d270b3",
+          "same_as_dev": "no"
+        },
+        {
+          "path": "references/skill-authoring-best-practices.md",
+          "bytes": 24471,
+          "lines": 935,
+          "sha256": "b4e75f44bfa03e7f4564dde862c7ae712f7cba3295d4c175f93525bbbc59eac1",
+          "sha256_lf": "3f078e8e9596371841b0600ce907c564aacd15399c75708fdf170025d724bc90",
+          "same_as_dev": "no"
+        },
+        {
+          "path": "references/source-distillation-and-copyright.md",
+          "bytes": 4001,
+          "lines": 86,
+          "sha256": "5ea55e67662025ce3430a82e574f8b242b9ff74256400798955549b2162423ba",
+          "sha256_lf": "b484c946275365292c720c4fe7e9203455ebfbd270f9eef552e8d834291cead3",
+          "same_as_dev": "no"
+        },
+        {
+          "path": "references/workflows.md",
+          "bytes": 894,
+          "lines": 30,
+          "sha256": "ad85f86d6a7a902db77fa44e6840c16d99374ee532843d7ebc5dc7af9a73983c",
+          "sha256_lf": "9a2fe97dafad1589102b739e3b128dec39241ba719e3c0428f2f015d4df9cf49",
+          "same_as_dev": "no"
+        },
+        {
+          "path": "scripts/init_skill.py",
+          "bytes": 11166,
+          "lines": 303,
+          "sha256": "caa5b25a47228d65aec335414cdce1d1e0e4f5a42b34dd1ee327c84719e55074",
+          "sha256_lf": "0bba250b94caa4cb2b28b15dad26fdcf371aeda4c9797b8120e55c2e33e0c73c",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "scripts/package_skill.py",
+          "bytes": 3398,
+          "lines": 110,
+          "sha256": "afc74988da979933ab76966a5539d78acc95b734f7201171c97c9edce3cc8966",
+          "sha256_lf": "b31fbcb3e362d5c5308e99255ff8e83cde3a513e0636953964a648494ca10931",
+          "same_as_dev": "yes"
+        },
+        {
+          "path": "scripts/quick_validate.py",
+          "bytes": 3617,
+          "lines": 94,
+          "sha256": "b4f8d934d887a98418e24f86da22f20fbc9dda4e664b7ad7101cd85e0fddabf8",
+          "sha256_lf": "381ab2d3d1fd5ec32371016413063eff99d0d48c415747085c61517e967dbb87",
+          "same_as_dev": "no"
+        },
+        {
+          "path": "SKILL.md",
+          "bytes": 6775,
+          "lines": 106,
+          "sha256": "592d2843bdb3ec97e2d95be7d8384b3f9d4c0b397e8aa4601353790601a095b1",
+          "sha256_lf": "c05e8b4ad19880c47fc3902b33256ba658ce277c6ab6d641eb668526256e3e24",
+          "same_as_dev": "no"
+        }
+      ]
+    }
+  ]
+}

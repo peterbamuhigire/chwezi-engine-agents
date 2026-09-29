@@ -1,0 +1,205 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://skills-engine-agents.local/schemas/third-party-skill-register.schema.json",
+  "title": "Third-party skill register",
+  "description": "Register of third-party skill repositories vetted before any idea is borrowed. Sibling of docs/security/supply-chain-register.json (M10-04-T10, AC-04). The verdict vocabulary deliberately has no 'safe to install' value.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "review_date",
+    "scope",
+    "procedure",
+    "entries"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "review_date": {
+      "$ref": "#/$defs/date"
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "procedure": {
+      "type": "string",
+      "minLength": 1
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/entry"
+      }
+    }
+  },
+  "$defs": {
+    "date": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "na": {
+      "type": "string",
+      "const": "NOT_ASSESSED"
+    },
+    "url": {
+      "type": "string",
+      "pattern": "^https://"
+    },
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "component",
+        "url",
+        "commit",
+        "license_spdx",
+        "stars_at_review",
+        "last_push",
+        "archived",
+        "scripts_present",
+        "network_behavior",
+        "credential_asks",
+        "install_method",
+        "vendored_copy_of",
+        "overlap_paths",
+        "verdict",
+        "reason",
+        "reviewed_on",
+        "review_after",
+        "reviewer"
+      ],
+      "properties": {
+        "component": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/url"
+            },
+            {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "$ref": "#/$defs/url"
+              }
+            }
+          ]
+        },
+        "commit": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{7,40}$"
+            },
+            {
+              "$ref": "#/$defs/na"
+            }
+          ]
+        },
+        "license_spdx": {
+          "type": "string",
+          "pattern": "^(NOASSERTION|[A-Za-z0-9.+-]+)$"
+        },
+        "stars_at_review": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "string",
+              "pattern": "^\\d+-\\d+$"
+            },
+            {
+              "$ref": "#/$defs/na"
+            }
+          ]
+        },
+        "last_push": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/date"
+            },
+            {
+              "$ref": "#/$defs/na"
+            }
+          ]
+        },
+        "archived": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "#/$defs/na"
+            }
+          ]
+        },
+        "scripts_present": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "#/$defs/na"
+            }
+          ]
+        },
+        "network_behavior": {
+          "type": "string",
+          "minLength": 1
+        },
+        "credential_asks": {
+          "type": "string",
+          "minLength": 1
+        },
+        "install_method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "vendored_copy_of": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "overlap_paths": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "verdict": {
+          "type": "string",
+          "enum": [
+            "study",
+            "borrow_idea",
+            "ignore",
+            "block"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reviewed_on": {
+          "$ref": "#/$defs/date"
+        },
+        "review_after": {
+          "$ref": "#/$defs/date"
+        },
+        "reviewer": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+## design validate_engine.py
+skills=101 fully_compliant=101
+WARN skill-bytes skills/00-cross-cutting-ops-qa-a11y/design-audit/SKILL.md: 24039 bytes > 20480 (499 lines; report-only)
+WARN skill-bytes skills/04-web-and-ui-design/webapp-gui-design/SKILL.md: 24215 bytes > 20480 (482 lines; report-only)
+WARN skill-bytes skills/06-sector-and-domain-ux/ecommerce-and-checkout-ux/SKILL.md: 21418 bytes > 20480 (295 lines; report-only)
+WARN skill-bytes skills/06-sector-and-domain-ux/healthcare-ui-design/SKILL.md: 22354 bytes > 20480 (419 lines; report-only)
+WARN skill-bytes skills/12-data-viz-and-dashboards/data-visualization/SKILL.md: 29217 bytes > 20480 (486 lines; report-only)
+WARN skill-bytes skills/13-presentations-and-documents/email-and-newsletter-design/SKILL.md: 23087 bytes > 20480 (305 lines; report-only)
+rc=0
+rc_with_baseline=0
+## srs validate_skill_engine.py (patched scratch copy; live file untouched)
+skill-engine: C:\wamp64\www\srs-skills
+- active skills: 159
+- templates: 1
+- failure counts: {}
+WARN skill-bytes 02-requirements-engineering/fundamentals/before/02-elicitation-toolkit/SKILL.md: 23977 bytes > 20480 (report-only)
+WARN skill-bytes 02-requirements-engineering/fundamentals/during/04-requirements-analysis/SKILL.md: 20688 bytes > 20480 (report-only)
+WARN skill-bytes 02-requirements-engineering/fundamentals/during/07-requirements-validation/SKILL.md: 23037 bytes > 20480 (report-only)
+WARN skill-bytes 03-design-documentation/05-ux-specification/SKILL.md: 33701 bytes > 20480 (report-only)
+WARN skill-bytes 03-design-documentation/06-infrastructure-design/SKILL.md: 21978 bytes > 20480 (report-only)
+WARN skill-bytes 09-governance-compliance/28-anti-ai-slop/SKILL.md: 21985 bytes > 20480 (report-only)
+rc=0
+- failure counts: {}
+rc_live_unpatched=0

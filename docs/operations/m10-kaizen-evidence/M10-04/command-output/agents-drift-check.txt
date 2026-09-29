@@ -1,0 +1,7 @@
+## render_host_files --check
+rules-common-core: 1 finding(s)
+  [shared-asset-unregistered-variant] copy hash is not the registered variant (srs-skills/rules/common/core.md)
+checked 12 repositories; findings 1; not assessed 0
+rc=1
+## pytest tests/test_render_host_files.py tests/test_validate_skill_lifecycle.py
+34 passed in 10.74s
