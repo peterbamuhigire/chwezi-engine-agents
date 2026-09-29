@@ -8,7 +8,7 @@ Report a declared validator failure
 
 ## Target checkout
 
-- `srs-skills` (catalogued engine)
+- `chwezi-sdlc-documentation` (catalogued engine)
 
 ## Status
 

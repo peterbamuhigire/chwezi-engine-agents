@@ -8,7 +8,7 @@ Inspect a checkout without an upstream
 
 ## Target checkout
 
-- `srs-skills` (catalogued engine)
+- `chwezi-sdlc-documentation` (catalogued engine)
 
 ## Status
 

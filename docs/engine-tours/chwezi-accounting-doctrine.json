@@ -2,7 +2,7 @@
   "display_name": "Chwezi Accounting Doctrine",
   "engine_id": "chwezi-accounting-doctrine",
   "folder": "chwezi-accounting-doctrine",
-  "generated_from_commit": "d2d013c5eaa3ce365212515545ce1db2395186fe",
+  "generated_from_commit": "5bac314043027eaebbc673dc74974f7ec3a666f2",
   "generator": "scripts/generate_engine_tour.py",
   "schema_version": "1.0",
   "steps": [
@@ -118,7 +118,7 @@
       "data": {
         "hubs": [
           {
-            "inbound_skills": 22,
+            "inbound_skills": 23,
             "skill": "skills/01-foundations/ledger-posting-engine-core"
           },
           {
@@ -135,7 +135,7 @@
           },
           {
             "inbound_skills": 5,
-            "skill": "skills/10-controls-governance-and-fraud/internal-controls-library"
+            "skill": "skills/04-subledgers-and-operations/inventory-costing-and-stock-accounting"
           }
         ],
         "source": "scripts/skill_fanin.py"
@@ -160,10 +160,10 @@
         },
         {
           "engine": "chwezi-accounting-doctrine",
-          "path": "skills/10-controls-governance-and-fraud/internal-controls-library/SKILL.md"
+          "path": "skills/04-subledgers-and-operations/inventory-costing-and-stock-accounting/SKILL.md"
         }
       ],
-      "text": "The skills other skills lean on most (inbound links, mentions and aliases): ledger-posting-engine-core (22), tax-statutory-source-register-and-country-packs (22), finance-module-audit (20), bank-and-mobile-money-reconciliation (6), internal-controls-library (5).",
+      "text": "The skills other skills lean on most (inbound links, mentions and aliases): ledger-posting-engine-core (23), tax-statutory-source-register-and-country-packs (22), finance-module-audit (20), bank-and-mobile-money-reconciliation (6), inventory-costing-and-stock-accounting (5).",
       "title": "Hub skills"
     },
     {
@@ -223,7 +223,7 @@
           "path": "core/instructions/engine-orchestrator.md"
         }
       ],
-      "text": "In a cross-engine handoff this engine answers: \"What happens to the money?\" Add design-system-skills for any change to how an output looks; digital-research-skills for current, uncertain or source-sensitive claims. They activate alongside this engine, never instead of it.",
+      "text": "In a cross-engine handoff this engine answers: \"What happens to the money?\" Add chwezi-design-engine for any change to how an output looks; digital-research-skills for current, uncertain or source-sensitive claims. They activate alongside this engine, never instead of it.",
       "title": "Cross-cutting engines"
     }
   ]

@@ -8,11 +8,11 @@ Write the SRS for the patient billing module.
 
 ## Expected first skill
 
-`srs-skills/01-initialize-srs`
+`chwezi-sdlc-documentation/01-initialize-srs`
 
 ## Engines in scope
 
-- `srs-skills`
+- `chwezi-sdlc-documentation`
 
 ## Status
 

@@ -1,8 +1,8 @@
 {
-  "display_name": "Design System Skills",
-  "engine_id": "design-system-skills",
-  "folder": "design-system-skills",
-  "generated_from_commit": "23154086d5f1942627a8f26c8ce12282f3ec7cfc",
+  "display_name": "Chwezi Design Engine",
+  "engine_id": "chwezi-design-engine",
+  "folder": "chwezi-design-engine",
+  "generated_from_commit": "7e57891b0263be59d351601bed2190696ea010f2",
   "generator": "scripts/generate_engine_tour.py",
   "schema_version": "1.0",
   "steps": [
@@ -11,11 +11,11 @@
       "number": 1,
       "paths": [
         {
-          "engine": "design-system-skills",
+          "engine": "chwezi-design-engine",
           "path": "README.md"
         }
       ],
-      "text": "Start with README.md: it states what Design System Skills is for and what it does not cover.",
+      "text": "Start with README.md: it states what Chwezi Design Engine is for and what it does not cover.",
       "title": "Purpose"
     },
     {
@@ -26,11 +26,11 @@
       "number": 2,
       "paths": [
         {
-          "engine": "design-system-skills",
+          "engine": "chwezi-design-engine",
           "path": "AGENTS.md"
         },
         {
-          "engine": "design-system-skills",
+          "engine": "chwezi-design-engine",
           "path": "CLAUDE.md"
         }
       ],
@@ -58,7 +58,7 @@
       "number": 3,
       "paths": [
         {
-          "engine": "design-system-skills",
+          "engine": "chwezi-design-engine",
           "path": ".skills-engine/engine-manifest.yaml"
         }
       ],
@@ -90,19 +90,19 @@
       "number": 4,
       "paths": [
         {
-          "engine": "design-system-skills",
+          "engine": "chwezi-design-engine",
           "path": "skills/00-cross-cutting-ops-qa-a11y"
         },
         {
-          "engine": "design-system-skills",
+          "engine": "chwezi-design-engine",
           "path": "skills/04-web-and-ui-design"
         },
         {
-          "engine": "design-system-skills",
+          "engine": "chwezi-design-engine",
           "path": "skills/01-typography-and-fonts"
         },
         {
-          "engine": "design-system-skills",
+          "engine": "chwezi-design-engine",
           "path": "skills/02-color-brand-and-visual-identity"
         }
       ],
@@ -138,23 +138,23 @@
       "number": 5,
       "paths": [
         {
-          "engine": "design-system-skills",
+          "engine": "chwezi-design-engine",
           "path": "skills/04-web-and-ui-design/form-ux-design/SKILL.md"
         },
         {
-          "engine": "design-system-skills",
+          "engine": "chwezi-design-engine",
           "path": "skills/01-typography-and-fonts/font-selection-and-pairing/SKILL.md"
         },
         {
-          "engine": "design-system-skills",
+          "engine": "chwezi-design-engine",
           "path": "skills/02-color-brand-and-visual-identity/color-system-and-palette/SKILL.md"
         },
         {
-          "engine": "design-system-skills",
+          "engine": "chwezi-design-engine",
           "path": "skills/04-web-and-ui-design/practical-ui-design/SKILL.md"
         },
         {
-          "engine": "design-system-skills",
+          "engine": "chwezi-design-engine",
           "path": "skills/06-sector-and-domain-ux/sector-strategies/SKILL.md"
         }
       ],
@@ -171,11 +171,11 @@
       "number": 6,
       "paths": [
         {
-          "engine": "design-system-skills",
+          "engine": "chwezi-design-engine",
           "path": "scripts/validate_engine.py"
         },
         {
-          "engine": "design-system-skills",
+          "engine": "chwezi-design-engine",
           "path": "scripts/routing_smoke_test.py"
         }
       ],
@@ -191,7 +191,7 @@
       "number": 7,
       "paths": [
         {
-          "engine": "design-system-skills",
+          "engine": "chwezi-design-engine",
           "path": "tests/routing-fixtures.yml"
         }
       ],
@@ -209,7 +209,7 @@
       "number": 8,
       "paths": [
         {
-          "engine": "design-system-skills",
+          "engine": "chwezi-design-engine",
           "path": "hooks/hooks.json"
         }
       ],
@@ -223,7 +223,7 @@
       "number": 9,
       "paths": [
         {
-          "engine": "design-system-skills",
+          "engine": "chwezi-design-engine",
           "path": "CONTRIBUTING.md"
         }
       ],

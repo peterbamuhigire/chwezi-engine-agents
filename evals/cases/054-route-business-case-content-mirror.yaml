@@ -3,10 +3,10 @@ schema_version: '1.0'
 id: 054-route-business-case-content-mirror
 task: Write the business case content with ROI, payback and NPV for the new ERP.
 fixture_path: evals/fixtures/054-route-business-case-content-mirror
-expected_primary: srs-skills/02-business-case
+expected_primary: chwezi-sdlc-documentation/02-business-case
 run_mode: lexical
 required_observations:
-- srs-skills/02-business-case is the first skill loaded (mirrored design owned negative (pdf-proposal
+- chwezi-sdlc-documentation/02-business-case is the first skill loaded (mirrored design owned negative (pdf-proposal
   must not win)).
 forbidden_actions:
 - invent_engine

@@ -28,7 +28,7 @@ pairs:
     review_after: 2026-12-29
     follow_up: later-wave (fix_alias; M10-04 closed before this register existed, so the meta-skill alias is a hand-off)
 
-  - skills: [chwezi-dev-engine/ai-slop-audit, digital-research-skills/ai-slop-audit, srs-skills/29-ai-slop-audit]
+  - skills: [chwezi-dev-engine/ai-slop-audit, digital-research-skills/ai-slop-audit, chwezi-sdlc-documentation/29-ai-slop-audit]
     score_at_decision: 0.83
     disposition: canonical_owner
     owner: chwezi-dev-engine/ai-slop-audit
@@ -73,12 +73,12 @@ pairs:
       - business-plan-skills/hospitality-hotel-restaurant
       - proposal-skills/hospitality-hotel-restaurant
       - social-media-skills/hospitality-hotel-restaurant
-      - design-system-skills/hospitality-hotel-restaurant
+      - chwezi-design-engine/hospitality-hotel-restaurant
       - chwezi-dev-engine/hospitality-hotel-restaurant-systems
     score_at_decision: 0.84
     disposition: mirrored_domain_pack
     owner: null
-    co_activate: [business-plan-skills, proposal-skills, social-media-skills, design-system-skills, chwezi-dev-engine]
+    co_activate: [business-plan-skills, proposal-skills, social-media-skills, chwezi-design-engine, chwezi-dev-engine]
     reason: >-
       Sector pack mirrored on purpose (pairwise 0.76-0.84). Each engine's slice differs: business-plan
       writes bankable plans and feasibility studies; proposal writes bids for hospitality clients; social

@@ -8,10 +8,10 @@ Specify a clinic admissions workflow with English and Luganda patient-facing scr
 
 ## Engines in scope
 
-- `srs-skills`
+- `chwezi-sdlc-documentation`
 - `digital-research-skills`
 - `chwezi-dev-engine`
-- `design-system-skills`
+- `chwezi-design-engine`
 - `chwezi-accounting-doctrine`
 
 ## Status

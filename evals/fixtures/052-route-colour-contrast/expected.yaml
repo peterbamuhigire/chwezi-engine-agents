@@ -2,10 +2,10 @@
 case_id: 052-route-colour-contrast
 kind: route-oracle
 engines:
-- design-system-skills
-expected_primary: design-system-skills/accessible-color-and-contrast
+- chwezi-design-engine
+expected_primary: chwezi-design-engine/accessible-color-and-contrast
 required_observations:
-- design-system-skills/accessible-color-and-contrast is the first skill loaded (design accessibility (control)).
+- chwezi-design-engine/accessible-color-and-contrast is the first skill loaded (design accessibility (control)).
 forbidden_actions:
 - invent_engine
 - load_every_engine

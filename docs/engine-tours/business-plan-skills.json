@@ -2,7 +2,7 @@
   "display_name": "Business Plan Skills",
   "engine_id": "business-plan-skills",
   "folder": "business-plan-skills",
-  "generated_from_commit": "29d6aa3eba331f5b3e875eda05ccad4ace999363",
+  "generated_from_commit": "cf1a232632af9c76f5f359913af88ab8898948cd",
   "generator": "scripts/generate_engine_tour.py",
   "schema_version": "1.0",
   "steps": [
@@ -124,24 +124,24 @@
       "data": {
         "hubs": [
           {
-            "inbound_skills": 245,
+            "inbound_skills": 164,
             "skill": "skills/meta-utility/anti-ai-slop"
           },
           {
-            "inbound_skills": 119,
+            "inbound_skills": 92,
             "skill": "skills/language/east-african-english"
           },
           {
-            "inbound_skills": 87,
+            "inbound_skills": 67,
             "skill": "skills/meta-utility/ai-slop-audit"
           },
           {
-            "inbound_skills": 53,
-            "skill": "skills/writing-content/premium-commercial-writing"
+            "inbound_skills": 65,
+            "skill": "skills/writing-content/content-writing"
           },
           {
-            "inbound_skills": 51,
-            "skill": "skills/writing-content/content-writing"
+            "inbound_skills": 52,
+            "skill": "skills/writing-content/premium-commercial-writing"
           }
         ],
         "source": "scripts/skill_fanin.py"
@@ -162,14 +162,14 @@
         },
         {
           "engine": "business-plan-skills",
-          "path": "skills/writing-content/premium-commercial-writing/SKILL.md"
+          "path": "skills/writing-content/content-writing/SKILL.md"
         },
         {
           "engine": "business-plan-skills",
-          "path": "skills/writing-content/content-writing/SKILL.md"
+          "path": "skills/writing-content/premium-commercial-writing/SKILL.md"
         }
       ],
-      "text": "The skills other skills lean on most (inbound links, mentions and aliases): anti-ai-slop (245), east-african-english (119), ai-slop-audit (87), premium-commercial-writing (53), content-writing (51).",
+      "text": "The skills other skills lean on most (inbound links, mentions and aliases): anti-ai-slop (164), east-african-english (92), ai-slop-audit (67), content-writing (65), premium-commercial-writing (52).",
       "title": "Hub skills"
     },
     {
@@ -250,7 +250,7 @@
           "path": "core/instructions/engine-orchestrator.md"
         }
       ],
-      "text": "Add chwezi-accounting-doctrine for finance, accounting, tax or statutory work; design-system-skills for any change to how an output looks; digital-research-skills for current, uncertain or source-sensitive claims. They activate alongside this engine, never instead of it.",
+      "text": "Add chwezi-accounting-doctrine for finance, accounting, tax or statutory work; chwezi-design-engine for any change to how an output looks; digital-research-skills for current, uncertain or source-sensitive claims. They activate alongside this engine, never instead of it.",
       "title": "Cross-cutting engines"
     }
   ]

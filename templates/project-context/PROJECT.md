@@ -30,7 +30,7 @@ jurisdiction:
   country: Uganda
   statutes:
     - Data Protection and Privacy Act, 2019
-srs_context: srs-skills/projects/ExampleProject/_context
+srs_context: chwezi-sdlc-documentation/projects/ExampleProject/_context
 research_context: digital-research-engine/projects/example-project/_context
 code_repository: example-project
 project_brief: example-project/PROJECT_BRIEF.md

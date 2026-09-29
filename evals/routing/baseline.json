@@ -27,7 +27,7 @@
       "fixtures": 191,
       "command": "python -X utf8 scripts/routing_smoke_test.py --min-rank1 88 --lint-fixtures"
     },
-    "design-system-skills": {
+    "chwezi-design-engine": {
       "p_at_1": 94.1,
       "p_at_3": 100.0,
       "owned_negatives": {
@@ -51,7 +51,7 @@
       "fixtures": 68,
       "command": "python -X utf8 scripts/routing_smoke_test.py --min-rank1 92 --lint-fixtures"
     },
-    "srs-skills": {
+    "chwezi-sdlc-documentation": {
       "p_at_1": 85.5,
       "p_at_3": 100.0,
       "owned_negatives": {

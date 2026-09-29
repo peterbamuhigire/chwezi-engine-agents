@@ -14,8 +14,8 @@ schema_version: "1.0"
 review_date: "2026-12-29"
 public_repositories:
   - chwezi-dev-engine
-  - design-system-skills
-  - srs-skills
+  - chwezi-design-engine
+  - chwezi-sdlc-documentation
   - website-skills
   - digital-research-engine
   - proposal-skills
@@ -58,8 +58,8 @@ assets:
     canonical: chwezi-engine-agents/hooks/destructive-bash-gate.js
     copies:
       - chwezi-dev-engine/hooks/destructive-bash-gate.js
-      - design-system-skills/hooks/destructive-bash-gate.js
-      - srs-skills/hooks/destructive-bash-gate.js
+      - chwezi-design-engine/hooks/destructive-bash-gate.js
+      - chwezi-sdlc-documentation/hooks/destructive-bash-gate.js
       - website-skills/hooks/destructive-bash-gate.js
       - digital-research-engine/hooks/destructive-bash-gate.js
       - proposal-skills/hooks/destructive-bash-gate.js
@@ -78,8 +78,8 @@ assets:
     canonical: chwezi-engine-agents/hooks/test-destructive-bash-gate.js
     copies:
       - chwezi-dev-engine/hooks/test-destructive-bash-gate.js
-      - design-system-skills/hooks/test-destructive-bash-gate.js
-      - srs-skills/hooks/test-destructive-bash-gate.js
+      - chwezi-design-engine/hooks/test-destructive-bash-gate.js
+      - chwezi-sdlc-documentation/hooks/test-destructive-bash-gate.js
       - website-skills/hooks/test-destructive-bash-gate.js
       - digital-research-engine/hooks/test-destructive-bash-gate.js
       - proposal-skills/hooks/test-destructive-bash-gate.js
@@ -98,8 +98,8 @@ assets:
     canonical: chwezi-engine-agents/hooks/plugin-hook-config.js
     copies:
       - chwezi-dev-engine/hooks/plugin-hook-config.js
-      - design-system-skills/hooks/plugin-hook-config.js
-      - srs-skills/hooks/plugin-hook-config.js
+      - chwezi-design-engine/hooks/plugin-hook-config.js
+      - chwezi-sdlc-documentation/hooks/plugin-hook-config.js
       - website-skills/hooks/plugin-hook-config.js
       - digital-research-engine/hooks/plugin-hook-config.js
       - proposal-skills/hooks/plugin-hook-config.js
@@ -117,8 +117,8 @@ assets:
     mode: byte
     canonical: chwezi-dev-engine/.skills-engine/AGENTS-INTEGRATION.md
     copies:
-      - design-system-skills/.skills-engine/AGENTS-INTEGRATION.md
-      - srs-skills/.skills-engine/AGENTS-INTEGRATION.md
+      - chwezi-design-engine/.skills-engine/AGENTS-INTEGRATION.md
+      - chwezi-sdlc-documentation/.skills-engine/AGENTS-INTEGRATION.md
       - website-skills/.skills-engine/AGENTS-INTEGRATION.md
       - digital-research-engine/.skills-engine/AGENTS-INTEGRATION.md
       - proposal-skills/.skills-engine/AGENTS-INTEGRATION.md
@@ -138,8 +138,8 @@ assets:
     canonical: chwezi-engine-agents/scripts/install.sh.template
     copies:
       - chwezi-dev-engine/install.sh
-      - design-system-skills/install.sh
-      - srs-skills/install.sh
+      - chwezi-design-engine/install.sh
+      - chwezi-sdlc-documentation/install.sh
       - website-skills/install.sh
       - digital-research-engine/install.sh
       - proposal-skills/install.sh
@@ -156,8 +156,8 @@ assets:
     canonical: chwezi-engine-agents/scripts/install.ps1.template
     copies:
       - chwezi-dev-engine/install.ps1
-      - design-system-skills/install.ps1
-      - srs-skills/install.ps1
+      - chwezi-design-engine/install.ps1
+      - chwezi-sdlc-documentation/install.ps1
       - website-skills/install.ps1
       - digital-research-engine/install.ps1
       - proposal-skills/install.ps1
@@ -174,8 +174,8 @@ assets:
     copies:
       - chwezi-engine-agents/scripts/install-engine.js
       - chwezi-dev-engine/scripts/install-engine.js
-      - design-system-skills/scripts/install-engine.js
-      - srs-skills/scripts/install-engine.js
+      - chwezi-design-engine/scripts/install-engine.js
+      - chwezi-sdlc-documentation/scripts/install-engine.js
       - website-skills/scripts/install-engine.js
       - digital-research-engine/scripts/install-engine.js
       - proposal-skills/scripts/install-engine.js
@@ -188,64 +188,64 @@ assets:
       - "*/scripts/install-engine.js"
     variants:
       chwezi-engine-agents/scripts/install-engine.js:
-        sha256: 5b8c7d86c7ac184a81855e66d1ecaf019f93530a742946668f15cdc294167b89
+        sha256: e5c9e7c677b70711da82ab7dc8aacb31c66f4653465cce99a040c2c0d3f34aa7
         owner: chwezi-engine-agents
         reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
       chwezi-dev-engine/scripts/install-engine.js:
-        sha256: c4f63cfee68e7dc7484f92f10ef5149f3abcce3f6c090630637b2a80a2232e08
+        sha256: cfa564bc971dbc8d6826f130a21baa29ade2048bf65ec33040d1a9a56295ea73
         owner: chwezi-dev-engine
         reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
-      design-system-skills/scripts/install-engine.js:
-        sha256: c4f63cfee68e7dc7484f92f10ef5149f3abcce3f6c090630637b2a80a2232e08
-        owner: design-system-skills
+      chwezi-design-engine/scripts/install-engine.js:
+        sha256: cfa564bc971dbc8d6826f130a21baa29ade2048bf65ec33040d1a9a56295ea73
+        owner: chwezi-design-engine
         reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
-      srs-skills/scripts/install-engine.js:
-        sha256: c4f63cfee68e7dc7484f92f10ef5149f3abcce3f6c090630637b2a80a2232e08
-        owner: srs-skills
+      chwezi-sdlc-documentation/scripts/install-engine.js:
+        sha256: cfa564bc971dbc8d6826f130a21baa29ade2048bf65ec33040d1a9a56295ea73
+        owner: chwezi-sdlc-documentation
         reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
       website-skills/scripts/install-engine.js:
-        sha256: c4f63cfee68e7dc7484f92f10ef5149f3abcce3f6c090630637b2a80a2232e08
+        sha256: cfa564bc971dbc8d6826f130a21baa29ade2048bf65ec33040d1a9a56295ea73
         owner: website-skills
         reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
       digital-research-engine/scripts/install-engine.js:
-        sha256: c4f63cfee68e7dc7484f92f10ef5149f3abcce3f6c090630637b2a80a2232e08
+        sha256: cfa564bc971dbc8d6826f130a21baa29ade2048bf65ec33040d1a9a56295ea73
         owner: digital-research-engine
         reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
       proposal-skills/scripts/install-engine.js:
-        sha256: c4f63cfee68e7dc7484f92f10ef5149f3abcce3f6c090630637b2a80a2232e08
+        sha256: cfa564bc971dbc8d6826f130a21baa29ade2048bf65ec33040d1a9a56295ea73
         owner: proposal-skills
         reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
       business-plan-skills/scripts/install-engine.js:
-        sha256: c4f63cfee68e7dc7484f92f10ef5149f3abcce3f6c090630637b2a80a2232e08
+        sha256: cfa564bc971dbc8d6826f130a21baa29ade2048bf65ec33040d1a9a56295ea73
         owner: business-plan-skills
         reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
       social-media-skills/scripts/install-engine.js:
-        sha256: c4f63cfee68e7dc7484f92f10ef5149f3abcce3f6c090630637b2a80a2232e08
+        sha256: cfa564bc971dbc8d6826f130a21baa29ade2048bf65ec33040d1a9a56295ea73
         owner: social-media-skills
         reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
       linux-skills/scripts/install-engine.js:
-        sha256: c4f63cfee68e7dc7484f92f10ef5149f3abcce3f6c090630637b2a80a2232e08
+        sha256: cfa564bc971dbc8d6826f130a21baa29ade2048bf65ec33040d1a9a56295ea73
         owner: linux-skills
         reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
       chwezi-accounting-doctrine/scripts/install-engine.js:
-        sha256: c4f63cfee68e7dc7484f92f10ef5149f3abcce3f6c090630637b2a80a2232e08
+        sha256: cfa564bc971dbc8d6826f130a21baa29ade2048bf65ec33040d1a9a56295ea73
         owner: chwezi-accounting-doctrine
         reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
       windows-admin-engine-skills/scripts/install-engine.js:
-        sha256: c4f63cfee68e7dc7484f92f10ef5149f3abcce3f6c090630637b2a80a2232e08
+        sha256: cfa564bc971dbc8d6826f130a21baa29ade2048bf65ec33040d1a9a56295ea73
         owner: windows-admin-engine-skills
         reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
     reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
     review_date: "2026-12-29"
   - id: design-trigger-block
     mode: block
-    canonical: design-system-skills/integration/trigger-block.md
+    canonical: chwezi-design-engine/integration/trigger-block.md
     markers:
-      start: "<!-- design-system-skills:trigger v3 -->"
-      end: "<!-- /design-system-skills:trigger -->"
+      start: "<!-- chwezi-design-engine:trigger v4 -->"
+      end: "<!-- /chwezi-design-engine:trigger -->"
     copies:
       - chwezi-dev-engine/AGENTS.md
-      - srs-skills/AGENTS.md
+      - chwezi-sdlc-documentation/AGENTS.md
       - website-skills/AGENTS.md
       - digital-research-engine/AGENTS.md
       - proposal-skills/AGENTS.md
@@ -255,13 +255,13 @@ assets:
       - chwezi-accounting-doctrine/AGENTS.md
       - windows-admin-engine-skills/AGENTS.md
       - chwezi-engine-agents/AGENTS.md
-      - design-system-skills/integration/integration-plan.md
+      - chwezi-design-engine/integration/integration-plan.md
     reason: "Cross-cutting design trigger (output of M10-01-T13). Text outside the markers, such as a migration note, is not compared."
-    owner: design-system-skills
+    owner: chwezi-design-engine
     review_date: "2026-12-29"
   - id: ai-slop-banned-fonts-json
     mode: byte
-    canonical: design-system-skills/doctrine/references/ai-slop-banned-fonts.json
+    canonical: chwezi-design-engine/doctrine/references/ai-slop-banned-fonts.json
     copies:
       - website-skills/scripts/vendor/chwezi-slop/doctrine/references/ai-slop-banned-fonts.json
     discover:
@@ -277,8 +277,8 @@ assets:
     canonical: chwezi-engine-agents/docs/operations/domain-prompt-compilation-contract-2026-09-16.md
     copies:
       - chwezi-dev-engine/docs/ai-prompting/domain-prompt-compilation-contract.md
-      - design-system-skills/docs/ai-prompting/domain-prompt-compilation-contract.md
-      - srs-skills/docs/ai-prompting/domain-prompt-compilation-contract.md
+      - chwezi-design-engine/docs/ai-prompting/domain-prompt-compilation-contract.md
+      - chwezi-sdlc-documentation/docs/ai-prompting/domain-prompt-compilation-contract.md
       - website-skills/docs/ai-prompting/domain-prompt-compilation-contract.md
       - digital-research-engine/docs/ai-prompting/domain-prompt-compilation-contract.md
       - proposal-skills/docs/ai-prompting/domain-prompt-compilation-contract.md
@@ -294,7 +294,7 @@ assets:
     mode: registered-variant
     copies:
       - chwezi-dev-engine/scripts/source_ingestion_guardrail.py
-      - srs-skills/scripts/source_ingestion_guardrail.py
+      - chwezi-sdlc-documentation/scripts/source_ingestion_guardrail.py
       - website-skills/scripts/source_ingestion_guardrail.py
       - digital-research-engine/scripts/source_ingestion_guardrail.py
       - proposal-skills/scripts/source_ingestion_guardrail.py
@@ -310,9 +310,9 @@ assets:
         sha256: a0a2418ff5ecd7598b7c37924bc08af9ab13b469ad9c156a506e9d99763121a1
         owner: chwezi-dev-engine
         reason: "Engine-specific book-extraction guardrail; 8 variants in 10 copies (absent in design and agents). Consolidation needs its own value gate."
-      srs-skills/scripts/source_ingestion_guardrail.py:
+      chwezi-sdlc-documentation/scripts/source_ingestion_guardrail.py:
         sha256: 770c511b52c83bbe4139da7000c7e163cc93e4fb423e7ff4d2ddf2ce195f423a
-        owner: srs-skills
+        owner: chwezi-sdlc-documentation
         reason: "Engine-specific book-extraction guardrail; 8 variants in 10 copies (absent in design and agents). Consolidation needs its own value gate."
       website-skills/scripts/source_ingestion_guardrail.py:
         sha256: 55d52eb7a1dc21de4d462479c6cd48a52aed16f4e292c4985ac54c86573ecf0c
@@ -351,8 +351,8 @@ assets:
   - id: rules-common-core
     mode: registered-variant
     copies:
-      - design-system-skills/rules/common/core.md
-      - srs-skills/rules/common/core.md
+      - chwezi-design-engine/rules/common/core.md
+      - chwezi-sdlc-documentation/rules/common/core.md
       - website-skills/rules/common/core.md
       - digital-research-engine/rules/common/core.md
       - proposal-skills/rules/common/core.md
@@ -364,13 +364,13 @@ assets:
     discover:
       - "*/rules/common/core.md"
     variants:
-      design-system-skills/rules/common/core.md:
+      chwezi-design-engine/rules/common/core.md:
         sha256: a4a931704aad21c11832372fef6c38c2826cfe5c334b2ab072b44785d09df5af
-        owner: design-system-skills
+        owner: chwezi-design-engine
         reason: "Engine-specific always-on rules by design (absent in dev and agents); each must keep the invariant sentences."
-      srs-skills/rules/common/core.md:
+      chwezi-sdlc-documentation/rules/common/core.md:
         sha256: be37b47b62b206078fe9ea4b9cd08fbae1052d051b8ce13dabbaa9a9bf67a71d
-        owner: srs-skills
+        owner: chwezi-sdlc-documentation
         reason: "M10-08 SP-01 engine-native design gate"
       website-skills/rules/common/core.md:
         sha256: 4145a79ce8a21d999ce4613616bb826d9c60dcc22f244975c842488d60055dc1
@@ -539,8 +539,8 @@ assets:
     copies:
       - chwezi-engine-agents/scripts/generate-plugin-manifest.js
       - chwezi-dev-engine/scripts/generate-plugin-manifest.js
-      - design-system-skills/scripts/generate-plugin-manifest.js
-      - srs-skills/scripts/generate-plugin-manifest.js
+      - chwezi-design-engine/scripts/generate-plugin-manifest.js
+      - chwezi-sdlc-documentation/scripts/generate-plugin-manifest.js
       - website-skills/scripts/generate-plugin-manifest.js
       - digital-research-engine/scripts/generate-plugin-manifest.js
       - proposal-skills/scripts/generate-plugin-manifest.js
@@ -553,51 +553,51 @@ assets:
       - "*/scripts/generate-plugin-manifest.js"
     variants:
       chwezi-engine-agents/scripts/generate-plugin-manifest.js:
-        sha256: 0e2d1ce8e8a7a1bbac1af6dcef962dd659843678236dfff393d71042d21cc5ef
+        sha256: 3203d37e89fc9c9bfcd2c5c8dddf70704d0a5ebaa53b5dea8113a5250360a920
         owner: chwezi-engine-agents
         reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
       chwezi-dev-engine/scripts/generate-plugin-manifest.js:
-        sha256: e3c47fc1bebfb6a9a094bf6de4b7e2a8c734f04dd89f14fd30764b3e3e859c4d
+        sha256: b27827a0d3913ea1cc8130ef8dda9d6153d370b2c17ae05fd24824da9d46a44f
         owner: chwezi-dev-engine
         reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
-      design-system-skills/scripts/generate-plugin-manifest.js:
-        sha256: 8196c31b944960ae7b419f88e85d31baaf5a05af4f08be714f067e4f281cfa3e
-        owner: design-system-skills
+      chwezi-design-engine/scripts/generate-plugin-manifest.js:
+        sha256: 9f81bd41594c082443eaff2669559cf5e7a963af3006b37a49090d71df3ac6c5
+        owner: chwezi-design-engine
         reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
-      srs-skills/scripts/generate-plugin-manifest.js:
-        sha256: 2914d9e30b3858b89409f055ce71fd8b631615a4379a379fd372e85912acc898
-        owner: srs-skills
+      chwezi-sdlc-documentation/scripts/generate-plugin-manifest.js:
+        sha256: c5a2b7ad35da03ccadb7f1d586bbe024c5b9c20657acb6d98cc61134ff09efcb
+        owner: chwezi-sdlc-documentation
         reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
       website-skills/scripts/generate-plugin-manifest.js:
-        sha256: 2914d9e30b3858b89409f055ce71fd8b631615a4379a379fd372e85912acc898
+        sha256: c5a2b7ad35da03ccadb7f1d586bbe024c5b9c20657acb6d98cc61134ff09efcb
         owner: website-skills
         reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
       digital-research-engine/scripts/generate-plugin-manifest.js:
-        sha256: 8196c31b944960ae7b419f88e85d31baaf5a05af4f08be714f067e4f281cfa3e
+        sha256: 9f81bd41594c082443eaff2669559cf5e7a963af3006b37a49090d71df3ac6c5
         owner: digital-research-engine
         reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
       proposal-skills/scripts/generate-plugin-manifest.js:
-        sha256: 8196c31b944960ae7b419f88e85d31baaf5a05af4f08be714f067e4f281cfa3e
+        sha256: 9f81bd41594c082443eaff2669559cf5e7a963af3006b37a49090d71df3ac6c5
         owner: proposal-skills
         reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
       business-plan-skills/scripts/generate-plugin-manifest.js:
-        sha256: 8196c31b944960ae7b419f88e85d31baaf5a05af4f08be714f067e4f281cfa3e
+        sha256: 9f81bd41594c082443eaff2669559cf5e7a963af3006b37a49090d71df3ac6c5
         owner: business-plan-skills
         reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
       social-media-skills/scripts/generate-plugin-manifest.js:
-        sha256: 8196c31b944960ae7b419f88e85d31baaf5a05af4f08be714f067e4f281cfa3e
+        sha256: 9f81bd41594c082443eaff2669559cf5e7a963af3006b37a49090d71df3ac6c5
         owner: social-media-skills
         reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
       linux-skills/scripts/generate-plugin-manifest.js:
-        sha256: 8196c31b944960ae7b419f88e85d31baaf5a05af4f08be714f067e4f281cfa3e
+        sha256: 9f81bd41594c082443eaff2669559cf5e7a963af3006b37a49090d71df3ac6c5
         owner: linux-skills
         reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
       chwezi-accounting-doctrine/scripts/generate-plugin-manifest.js:
-        sha256: 8196c31b944960ae7b419f88e85d31baaf5a05af4f08be714f067e4f281cfa3e
+        sha256: 9f81bd41594c082443eaff2669559cf5e7a963af3006b37a49090d71df3ac6c5
         owner: chwezi-accounting-doctrine
         reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
       windows-admin-engine-skills/scripts/generate-plugin-manifest.js:
-        sha256: 2914d9e30b3858b89409f055ce71fd8b631615a4379a379fd372e85912acc898
+        sha256: c5a2b7ad35da03ccadb7f1d586bbe024c5b9c20657acb6d98cc61134ff09efcb
         owner: windows-admin-engine-skills
         reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
     reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
@@ -606,8 +606,8 @@ assets:
     mode: registered-variant
     copies:
       - chwezi-dev-engine/scripts/routing_smoke_test.py
-      - design-system-skills/scripts/routing_smoke_test.py
-      - srs-skills/scripts/routing_smoke_test.py
+      - chwezi-design-engine/scripts/routing_smoke_test.py
+      - chwezi-sdlc-documentation/scripts/routing_smoke_test.py
       - digital-research-engine/scripts/routing_smoke_test.py
       - proposal-skills/scripts/routing_smoke_test.py
       - business-plan-skills/scripts/routing_smoke_test.py
@@ -623,13 +623,13 @@ assets:
         sha256: 9a1cf744b15abe51196565e0b88c25ee45749d8acaee16ca156cb2264ce68611
         owner: chwezi-dev-engine
         reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
-      design-system-skills/scripts/routing_smoke_test.py:
+      chwezi-design-engine/scripts/routing_smoke_test.py:
         sha256: 1de1d6841684047e30d25c383682cc72f6083f3dcb3a1b6a0373b0e47fcf1561
-        owner: design-system-skills
+        owner: chwezi-design-engine
         reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06: the design copy vendors the dev TF-IDF ranker (chwezi-dev-engine/scripts/routing_smoke_test.py @ 317b475, sha256 92b106e5...); its header records the source, so any edit to this copy is detected here."
-      srs-skills/scripts/routing_smoke_test.py:
+      chwezi-sdlc-documentation/scripts/routing_smoke_test.py:
         sha256: 0a65725f02171e2106081988241c3d6b8d22f38b7b28d90223ce7d473ad55f79
-        owner: srs-skills
+        owner: chwezi-sdlc-documentation
         reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
       digital-research-engine/scripts/routing_smoke_test.py:
         sha256: 8a53525d53c75db1ccbbdbd2b01dd12074c42e1f4cdbfdeb8fc76d7330cd99c3
@@ -663,105 +663,105 @@ assets:
     review_date: "2026-12-29"
   # Vendored chwezi-slop detector (M10-11-T01): website client CI checks out only website-skills,
   # so the design detector travels as a hash-checked copy (website-skills/scripts/vendor/chwezi-slop/VENDOR.json).
-  # Re-vendor with: python -X utf8 website-skills/scripts/check-vendored-detector.py --sync-from ../design-system-skills
+  # Re-vendor with: python -X utf8 website-skills/scripts/check-vendored-detector.py --sync-from ../chwezi-design-engine
   # The vendored banned-font JSON is registered under ai-slop-banned-fonts-json above.
   - id: website-vendored-chwezi-slop-hooks-lib-font-matcher-js
     mode: byte
-    canonical: design-system-skills/hooks/lib/font-matcher.js
+    canonical: chwezi-design-engine/hooks/lib/font-matcher.js
     copies:
       - website-skills/scripts/vendor/chwezi-slop/hooks/lib/font-matcher.js
   - id: website-vendored-chwezi-slop-cli-mjs
     mode: byte
-    canonical: design-system-skills/tools/slop-detector/cli.mjs
+    canonical: chwezi-design-engine/tools/slop-detector/cli.mjs
     copies:
       - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/cli.mjs
   - id: website-vendored-chwezi-slop-lib-browser-rules-mjs
     mode: byte
-    canonical: design-system-skills/tools/slop-detector/lib/browser-rules.mjs
+    canonical: chwezi-design-engine/tools/slop-detector/lib/browser-rules.mjs
     copies:
       - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/browser-rules.mjs
   - id: website-vendored-chwezi-slop-lib-browser-mjs
     mode: byte
-    canonical: design-system-skills/tools/slop-detector/lib/browser.mjs
+    canonical: chwezi-design-engine/tools/slop-detector/lib/browser.mjs
     copies:
       - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/browser.mjs
   - id: website-vendored-chwezi-slop-lib-checks-mjs
     mode: byte
-    canonical: design-system-skills/tools/slop-detector/lib/checks.mjs
+    canonical: chwezi-design-engine/tools/slop-detector/lib/checks.mjs
     copies:
       - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/checks.mjs
   - id: website-vendored-chwezi-slop-lib-colour-mjs
     mode: byte
-    canonical: design-system-skills/tools/slop-detector/lib/colour.mjs
+    canonical: chwezi-design-engine/tools/slop-detector/lib/colour.mjs
     copies:
       - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/colour.mjs
   - id: website-vendored-chwezi-slop-lib-detector-mjs
     mode: byte
-    canonical: design-system-skills/tools/slop-detector/lib/detector.mjs
+    canonical: chwezi-design-engine/tools/slop-detector/lib/detector.mjs
     copies:
       - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/detector.mjs
   - id: website-vendored-chwezi-slop-lib-doctrine-consistency-mjs
     mode: byte
-    canonical: design-system-skills/tools/slop-detector/lib/doctrine-consistency.mjs
+    canonical: chwezi-design-engine/tools/slop-detector/lib/doctrine-consistency.mjs
     copies:
       - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/doctrine-consistency.mjs
   - id: website-vendored-chwezi-slop-lib-document-mjs
     mode: byte
-    canonical: design-system-skills/tools/slop-detector/lib/document.mjs
+    canonical: chwezi-design-engine/tools/slop-detector/lib/document.mjs
     copies:
       - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/document.mjs
   - id: website-vendored-chwezi-slop-lib-drift-mjs
     mode: byte
-    canonical: design-system-skills/tools/slop-detector/lib/drift.mjs
+    canonical: chwezi-design-engine/tools/slop-detector/lib/drift.mjs
     copies:
       - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/drift.mjs
   - id: website-vendored-chwezi-slop-lib-parse-css-mjs
     mode: byte
-    canonical: design-system-skills/tools/slop-detector/lib/parse-css.mjs
+    canonical: chwezi-design-engine/tools/slop-detector/lib/parse-css.mjs
     copies:
       - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/parse-css.mjs
   - id: website-vendored-chwezi-slop-lib-parse-html-mjs
     mode: byte
-    canonical: design-system-skills/tools/slop-detector/lib/parse-html.mjs
+    canonical: chwezi-design-engine/tools/slop-detector/lib/parse-html.mjs
     copies:
       - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/parse-html.mjs
   - id: website-vendored-chwezi-slop-lib-registry-mjs
     mode: byte
-    canonical: design-system-skills/tools/slop-detector/lib/registry.mjs
+    canonical: chwezi-design-engine/tools/slop-detector/lib/registry.mjs
     copies:
       - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/registry.mjs
   - id: website-vendored-chwezi-slop-lib-schema-mjs
     mode: byte
-    canonical: design-system-skills/tools/slop-detector/lib/schema.mjs
+    canonical: chwezi-design-engine/tools/slop-detector/lib/schema.mjs
     copies:
       - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/schema.mjs
   - id: website-vendored-chwezi-slop-lib-tailwind-mjs
     mode: byte
-    canonical: design-system-skills/tools/slop-detector/lib/tailwind.mjs
+    canonical: chwezi-design-engine/tools/slop-detector/lib/tailwind.mjs
     copies:
       - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/tailwind.mjs
   - id: website-vendored-chwezi-slop-lib-util-mjs
     mode: byte
-    canonical: design-system-skills/tools/slop-detector/lib/util.mjs
+    canonical: chwezi-design-engine/tools/slop-detector/lib/util.mjs
     copies:
       - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/util.mjs
   - id: website-vendored-chwezi-slop-lib-waivers-mjs
     mode: byte
-    canonical: design-system-skills/tools/slop-detector/lib/waivers.mjs
+    canonical: chwezi-design-engine/tools/slop-detector/lib/waivers.mjs
     copies:
       - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/lib/waivers.mjs
   - id: website-vendored-chwezi-slop-rules-registry-json
     mode: byte
-    canonical: design-system-skills/tools/slop-detector/rules/registry.json
+    canonical: chwezi-design-engine/tools/slop-detector/rules/registry.json
     copies:
       - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/rules/registry.json
   - id: website-vendored-chwezi-slop-rules-registry-schema-json
     mode: byte
-    canonical: design-system-skills/tools/slop-detector/rules/registry.schema.json
+    canonical: chwezi-design-engine/tools/slop-detector/rules/registry.schema.json
     copies:
       - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/rules/registry.schema.json
 
 exclusions:
   - asset: design-trigger-block
-    engine: design-system-skills
+    engine: chwezi-design-engine
     reason: "Owner of the block; design carries the design doctrine directly in AGENTS.md and README.md, so it does not carry a trigger to itself."

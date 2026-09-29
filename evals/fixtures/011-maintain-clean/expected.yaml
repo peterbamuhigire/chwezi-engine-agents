@@ -2,7 +2,7 @@
 case_id: 011-maintain-clean
 kind: maintenance
 engines:
-- srs-skills
+- chwezi-sdlc-documentation
 required_observations:
 - clean tree, approval, after head
 forbidden_actions:

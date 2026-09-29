@@ -8,11 +8,11 @@ Specify requirements for our mobile puzzle game: levels, player progression, in-
 
 ## Expected first skill
 
-`srs-skills/19-game-software-requirements-specification`
+`chwezi-sdlc-documentation/19-game-software-requirements-specification`
 
 ## Engines in scope
 
-- `srs-skills`
+- `chwezi-sdlc-documentation`
 
 ## Status
 

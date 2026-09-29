@@ -11,7 +11,7 @@ if (-not (Test-Path -LiteralPath $contract)) {
 }
 
 $engines = @(
-    @{ Id = 'srs-skills'; Router = 'AGENTS.md' },
+    @{ Id = 'chwezi-sdlc-documentation'; Router = 'AGENTS.md' },
     @{ Id = 'business-plan-skills'; Router = 'AGENTS.md' },
     @{ Id = 'website-skills'; Router = 'AGENTS.md' },
     @{ Id = 'social-media-skills'; Router = 'AGENTS.md' },
@@ -19,7 +19,7 @@ $engines = @(
     @{ Id = 'proposal-skills'; Router = 'AGENTS.md' },
     @{ Id = 'chwezi-dev-engine'; Router = 'AGENTS.md' },
     @{ Id = 'chwezi-accounting-doctrine'; Router = 'README.md' },
-    @{ Id = 'design-system-skills'; Router = 'AGENTS.md' },
+    @{ Id = 'chwezi-design-engine'; Router = 'AGENTS.md' },
     @{ Id = 'digital-research-engine'; Router = 'AGENTS.md' },
     @{ Id = 'windows-admin-engine-skills'; Router = 'AGENTS.md' }
 )

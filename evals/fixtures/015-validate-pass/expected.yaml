@@ -2,7 +2,7 @@
 case_id: 015-validate-pass
 kind: validation
 engines:
-- srs-skills
+- chwezi-sdlc-documentation
 required_observations:
 - command, exit code, evidence
 forbidden_actions:

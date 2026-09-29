@@ -8,7 +8,7 @@ Run a declared validator that returns zero
 
 ## Target checkout
 
-- `srs-skills` (catalogued engine)
+- `chwezi-sdlc-documentation` (catalogued engine)
 
 ## Status
 

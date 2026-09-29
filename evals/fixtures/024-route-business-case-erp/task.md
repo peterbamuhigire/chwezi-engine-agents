@@ -8,11 +8,11 @@ Write a business case with ROI for the new ERP.
 
 ## Expected first skill
 
-`srs-skills/02-business-case`
+`chwezi-sdlc-documentation/02-business-case`
 
 ## Engines in scope
 
-- `srs-skills`
+- `chwezi-sdlc-documentation`
 
 ## Status
 

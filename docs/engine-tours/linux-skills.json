@@ -2,7 +2,7 @@
   "display_name": "Linux Skills",
   "engine_id": "linux-skills",
   "folder": "linux-skills",
-  "generated_from_commit": "30ac859f45c1a55b7f68669ab0b5f5998c5a09f0",
+  "generated_from_commit": "21eb90bca44615f20cc2238fea2582e6306c920d",
   "generator": "scripts/generate_engine_tour.py",
   "schema_version": "1.0",
   "steps": [
@@ -246,7 +246,7 @@
           "path": "core/instructions/engine-orchestrator.md"
         }
       ],
-      "text": "Add chwezi-accounting-doctrine for finance, accounting, tax or statutory work; design-system-skills for any change to how an output looks; digital-research-skills for current, uncertain or source-sensitive claims. They activate alongside this engine, never instead of it.",
+      "text": "Add chwezi-accounting-doctrine for finance, accounting, tax or statutory work; chwezi-design-engine for any change to how an output looks; digital-research-skills for current, uncertain or source-sensitive claims. They activate alongside this engine, never instead of it.",
       "title": "Cross-cutting engines"
     }
   ]

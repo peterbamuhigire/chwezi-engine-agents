@@ -2,10 +2,10 @@
 case_id: 063-route-srs-api-section-mirror
 kind: route-oracle
 engines:
-- srs-skills
-expected_primary: srs-skills/03-api-specification
+- chwezi-sdlc-documentation
+expected_primary: chwezi-sdlc-documentation/03-api-specification
 required_observations:
-- srs-skills/03-api-specification is the first skill loaded (mirrored dev owned negative (srs vs dev api-design-first)).
+- chwezi-sdlc-documentation/03-api-specification is the first skill loaded (mirrored dev owned negative (srs vs dev api-design-first)).
 forbidden_actions:
 - invent_engine
 - load_every_engine

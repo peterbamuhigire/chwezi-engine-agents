@@ -1,6 +1,6 @@
 schema_version: "1.0"
 id: 009-route-design
-task: Route a typography and visual QA request to design-system-skills
+task: Route a typography and visual QA request to chwezi-design-engine
 fixture_path: evals/fixtures/009-route-design
 required_observations:
   - design decisions, visual evidence

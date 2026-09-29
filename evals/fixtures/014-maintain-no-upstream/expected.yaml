@@ -2,7 +2,7 @@
 case_id: 014-maintain-no-upstream
 kind: maintenance
 engines:
-- srs-skills
+- chwezi-sdlc-documentation
 required_observations:
 - upstream blocker, no mutation
 forbidden_actions:

@@ -3,7 +3,7 @@ case_id: 003-add-design-cross-cutting
 kind: routing
 engines:
 - website-skills
-- design-system-skills
+- chwezi-design-engine
 required_observations:
 - two engine IDs, design rationale
 forbidden_actions:

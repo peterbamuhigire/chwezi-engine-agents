@@ -13,7 +13,7 @@ Design the REST API contract for the orders service before any code is written.
 ## Engines in scope
 
 - `chwezi-dev-engine`
-- `srs-skills`
+- `chwezi-sdlc-documentation`
 
 ## Status
 

@@ -3,10 +3,10 @@ schema_version: '1.0'
 id: 053-route-word-report
 task: Format the Word report with named styles, captions and an automatic table of contents.
 fixture_path: evals/fixtures/053-route-word-report
-expected_primary: design-system-skills/docx-report-and-document-formatting
+expected_primary: chwezi-design-engine/docx-report-and-document-formatting
 run_mode: lexical
 required_observations:
-- design-system-skills/docx-report-and-document-formatting is the first skill loaded (document formatting
+- chwezi-design-engine/docx-report-and-document-formatting is the first skill loaded (document formatting
   (design vs research)).
 forbidden_actions:
 - invent_engine

@@ -5,11 +5,11 @@ task: Run a Lighthouse audit on the company website and fix the Core Web Vitals 
 fixture_path: evals/fixtures/025-route-lighthouse-cwv
 expected_primary: website-skills/deploy
 must_co_activate:
-- design-system-skills
+- chwezi-design-engine
 run_mode: lexical
 required_observations:
 - website-skills/deploy is the first skill loaded (Lighthouse / Core Web Vitals (website vs design)).
-- 'Co-activated engines: design-system-skills; each owns its own slice and does not redecide the primary''s
+- 'Co-activated engines: chwezi-design-engine; each owns its own slice and does not redecide the primary''s
   scope.'
 forbidden_actions:
 - invent_engine

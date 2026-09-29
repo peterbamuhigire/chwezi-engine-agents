@@ -18,7 +18,7 @@
       "install_method": "NOT_ASSESSED",
       "vendored_copy_of": null,
       "overlap_paths": [
-        "srs-skills/05-testing-documentation/02-test-plan (lists other techniques; no pairwise)"
+        "chwezi-sdlc-documentation/05-testing-documentation/02-test-plan (lists other techniques; no pairwise)"
       ],
       "verdict": "borrow_idea",
       "reason": "Pairwise (PICT) test design is absent from the engines; paraphrase into an SRS reference (AC-05). The licence file says MIT; the GitHub API reports NOASSERTION.",
@@ -63,7 +63,7 @@
       "vendored_copy_of": null,
       "overlap_paths": [
         "website-skills visual-qa guidance",
-        "design-system-skills ui-demo"
+        "chwezi-design-engine ui-demo"
       ],
       "verdict": "borrow_idea",
       "reason": "Dev-server detection and a never-report-success-without-inspecting step for website visual QA (AC-10).",
@@ -85,7 +85,7 @@
       "install_method": "NOT_ASSESSED",
       "vendored_copy_of": null,
       "overlap_paths": [
-        "design-system-skills/skills/09-design-systems-tokens-and-theming/measured-style-pack"
+        "chwezi-design-engine/skills/09-design-systems-tokens-and-theming/measured-style-pack"
       ],
       "verdict": "borrow_idea",
       "reason": "Capture budget and element-scope mode for measured-style-pack (AC-08); the human-authority gate is unchanged.",
@@ -109,7 +109,7 @@
       "overlap_paths": [
         "website-skills",
         "social-media-skills",
-        "design-system-skills"
+        "chwezi-design-engine"
       ],
       "verdict": "study",
       "reason": "Heavy overlap; study only its SKILLS.lock hash file and authoring contract.",
@@ -132,7 +132,7 @@
       "vendored_copy_of": "Identical copy in ComposioHQ/awesome-claude-skills",
       "overlap_paths": [
         "website-skills visual-qa guidance",
-        "design-system-skills ui-demo"
+        "chwezi-design-engine ui-demo"
       ],
       "verdict": "study",
       "reason": "Server-lifecycle helper; study alongside playwright-skill. The awesome-list copy is blob-identical to upstream.",
@@ -154,8 +154,8 @@
       "install_method": "NOT_ASSESSED",
       "vendored_copy_of": null,
       "overlap_paths": [
-        "design-system-skills group 07 (mobile)",
-        "design-system-skills slop audits"
+        "chwezi-design-engine group 07 (mobile)",
+        "chwezi-design-engine slop audits"
       ],
       "verdict": "study",
       "reason": "AI-authored heuristics: evidence for bans only, never design authority.",
@@ -365,7 +365,7 @@
       "overlap_paths": [
         "digital-research-engine/skills/anti-ai-slop",
         "chwezi-dev-engine/skills/sdlc-meta/anti-ai-slop",
-        "srs-skills/09-governance-compliance/28-anti-ai-slop",
+        "chwezi-sdlc-documentation/09-governance-compliance/28-anti-ai-slop",
         "business-plan-skills/skills/meta-utility/anti-ai-slop"
       ],
       "verdict": "study",
@@ -388,8 +388,8 @@
       "install_method": "/plugin install diagram-design@diagram-design; /plugin marketplace add cathrynlavery/diagram-design; git clone git@github.com:cathrynlavery/diagram-design.git ~/code/diagram-design; npx skills add",
       "vendored_copy_of": null,
       "overlap_paths": [
-        "design-system-skills/skills/13-presentations-and-documents/docx-report-and-document-formatting/references/diagram-visual-standards.md",
-        "srs-skills/scripts/render_diagrams.py"
+        "chwezi-design-engine/skills/13-presentations-and-documents/docx-report-and-document-formatting/references/diagram-visual-standards.md",
+        "chwezi-sdlc-documentation/scripts/render_diagrams.py"
       ],
       "verdict": "study",
       "reason": "Editorial HTML plus SVG diagram skill with a post-render font-fidelity receipt; the srs renderer already records the font-substitution result. Under the design-authority rule this AI-tool repository is evidence for bans only, never a source of positive typeface approvals. MIT.",
@@ -412,7 +412,7 @@
       "vendored_copy_of": null,
       "overlap_paths": [
         "chwezi-dev-engine/skills/execution-plan-scripts",
-        "srs-skills/09-governance-compliance/plan-canvas"
+        "chwezi-sdlc-documentation/09-governance-compliance/plan-canvas"
       ],
       "verdict": "study",
       "reason": "File-based plan and session-recovery pattern shipped with per-host hook adapters (.codex/hooks, permission_request.py). The hooks and the script surface rule out install; the plan-file idea is already covered by the dev engine and the installed Superpowers plugin. MIT.",
@@ -500,7 +500,7 @@
       "install_method": "NOT_ASSESSED (no install command found in README)",
       "vendored_copy_of": null,
       "overlap_paths": [
-        "srs-skills/01-strategic-vision/01-prd-generation",
+        "chwezi-sdlc-documentation/01-strategic-vision/01-prd-generation",
         "business-plan-skills/skills/meta-strategy/meta-market-validation"
       ],
       "verdict": "study",
@@ -569,8 +569,8 @@
       "install_method": "npx skills add; npx skills add https://github.com/Leonxlnx/taste-skill; npx skills add https://github.com/Leonxlnx/taste-skill --skill \"",
       "vendored_copy_of": null,
       "overlap_paths": [
-        "design-system-skills/skills/00-cross-cutting-ops-qa-a11y/visual-product-slop-audit",
-        "design-system-skills/skills/00-cross-cutting-ops-qa-a11y/design-audit"
+        "chwezi-design-engine/skills/00-cross-cutting-ops-qa-a11y/visual-product-slop-audit",
+        "chwezi-design-engine/skills/00-cross-cutting-ops-qa-a11y/design-audit"
       ],
       "verdict": "study",
       "reason": "Anti-generic UI taste skills. Under the design-authority rule an AI-tool repository is evidence for bans only; its ban lists may be compared at the next slop-doctrine refresh. MIT.",
@@ -636,7 +636,7 @@
       "install_method": "/plugin install ecc@ecc; /plugin marketplace add https://github.com/affaan-m/ECC; git clone https://github.com/affaan-m/ECC.git; npm install -g ecc-universal@2.2.2",
       "vendored_copy_of": null,
       "overlap_paths": [
-        "srs-skills/09-governance-compliance/plan-canvas"
+        "chwezi-sdlc-documentation/09-governance-compliance/plan-canvas"
       ],
       "verdict": "study",
       "reason": "Studied before (ECC audit of 20 Sep 2026; plan-canvas adapted into srs). Re-check only: 903 SKILL.md and multi-host hooks at this commit. No new borrowing proposed. MIT.",
@@ -1393,7 +1393,7 @@
       "install_method": "/plugin install ui-ux-pro-max@ui-ux-pro-max-skill; /plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill; git clone https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git; npm install -g ui-ux-pro-max-cli",
       "vendored_copy_of": null,
       "overlap_paths": [
-        "design-system-skills/skills/00-cross-cutting-ops-qa-a11y/visual-product-slop-audit"
+        "chwezi-design-engine/skills/00-cross-cutting-ops-qa-a11y/visual-product-slop-audit"
       ],
       "verdict": "study",
       "reason": "Re-check against pinned commit 09170ee. my-10-kaizen source (UX report). No movement since pin 09170ee (27 Sep 2026). No licence change; 0 advisories. Evidence for bans only under the design-authority rule; its data is not reused.",
@@ -1519,8 +1519,8 @@
       "install_method": "npx -y skills add tt-a1i/archify --skill archify --agent cursor; npx skills add tt-a1i/archify -g; npx skills use tt-a1i/archify@archify --agent codex",
       "vendored_copy_of": null,
       "overlap_paths": [
-        "srs-skills/engine/diagram_ir.py",
-        "srs-skills/scripts/render_diagrams.py"
+        "chwezi-sdlc-documentation/engine/diagram_ir.py",
+        "chwezi-sdlc-documentation/scripts/render_diagrams.py"
       ],
       "verdict": "study",
       "reason": "Re-check against pinned commit 0e4949f. my-10-kaizen source; ideas adapted into srs diagram IR and renderer (M10-01, M10-07). HEAD equals pin 0e4949f (v3.0.1, 28 Sep 2026). MIT unchanged; 0 advisories.",
@@ -1542,7 +1542,7 @@
       "install_method": "/plugin marketplace add pbakaus/impeccable; npx impeccable (README)",
       "vendored_copy_of": null,
       "overlap_paths": [
-        "design-system-skills/skills/00-cross-cutting-ops-qa-a11y/slop-doctrine-refresh-and-research-loop"
+        "chwezi-design-engine/skills/00-cross-cutting-ops-qa-a11y/slop-doctrine-refresh-and-research-loop"
       ],
       "verdict": "study",
       "reason": "Re-check against pinned commit 114ea1d. my-10-kaizen source; decision of 3 Sep 2026 not to install stands. main HEAD unchanged at 114ea1d; new tag engine-v0.1.7 published 29 Sep 2026 at 6dd107f, 59 commits ahead of main (Rust engine files). Apache-2.0 unchanged; 0 advisories.",

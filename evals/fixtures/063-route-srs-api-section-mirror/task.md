@@ -8,11 +8,11 @@ Write the API specification section of the SRS with endpoints and error codes fo
 
 ## Expected first skill
 
-`srs-skills/03-api-specification`
+`chwezi-sdlc-documentation/03-api-specification`
 
 ## Engines in scope
 
-- `srs-skills`
+- `chwezi-sdlc-documentation`
 
 ## Status
 

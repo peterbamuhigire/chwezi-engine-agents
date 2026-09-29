@@ -8,11 +8,11 @@ Format the Word report with named styles, captions and an automatic table of con
 
 ## Expected first skill
 
-`design-system-skills/docx-report-and-document-formatting`
+`chwezi-design-engine/docx-report-and-document-formatting`
 
 ## Engines in scope
 
-- `design-system-skills`
+- `chwezi-design-engine`
 
 ## Status
 

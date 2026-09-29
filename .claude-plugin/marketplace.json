@@ -23,17 +23,17 @@
       "strict": false
     },
     {
-      "name": "srs",
+      "name": "sdlc-documentation",
       "source": {
         "source": "url",
-        "url": "https://github.com/peterbamuhigire/srs-skills.git",
+        "url": "https://github.com/peterbamuhigire/chwezi-sdlc-documentation.git",
         "ref": "main"
       },
-      "description": "159 skills: software requirements specifications, PRDs, system design, governance and compliance artefacts",
+      "description": "159 skills (Chwezi SDLC Documentation): software requirements specifications, PRDs, system design, testing, deployment, governance and compliance artefacts",
       "version": "1.1.0",
       "author": { "name": "Peter Bamuhigire" },
-      "homepage": "https://github.com/peterbamuhigire/srs-skills",
-      "repository": "https://github.com/peterbamuhigire/srs-skills",
+      "homepage": "https://github.com/peterbamuhigire/chwezi-sdlc-documentation",
+      "repository": "https://github.com/peterbamuhigire/chwezi-sdlc-documentation",
       "license": "MIT",
       "category": "requirements",
       "strict": false,
@@ -159,17 +159,17 @@
       "relevance": {"topic": "accounting and IFRS", "signals": {"filesRead": ["**/*.xbrl", "**/trial-balance*", "**/*general-ledger*"]}}
     },
     {
-      "name": "design-system",
+      "name": "design-engine",
       "source": {
         "source": "url",
-        "url": "https://github.com/peterbamuhigire/design-system-skills.git",
+        "url": "https://github.com/peterbamuhigire/chwezi-design-engine.git",
         "ref": "main"
       },
-      "description": "101 skills: typography, colour, layout, UX, design systems/tokens, anti-AI-slop doctrine",
+      "description": "101 skills (Chwezi Design Engine): typography, colour, layout, UX, design systems/tokens, anti-AI-slop doctrine",
       "version": "1.1.0",
       "author": { "name": "Peter Bamuhigire" },
-      "homepage": "https://github.com/peterbamuhigire/design-system-skills",
-      "repository": "https://github.com/peterbamuhigire/design-system-skills",
+      "homepage": "https://github.com/peterbamuhigire/chwezi-design-engine",
+      "repository": "https://github.com/peterbamuhigire/chwezi-design-engine",
       "license": "MIT",
       "category": "design",
       "strict": false,

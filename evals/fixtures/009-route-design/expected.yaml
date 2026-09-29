@@ -2,7 +2,7 @@
 case_id: 009-route-design
 kind: routing
 engines:
-- design-system-skills
+- chwezi-design-engine
 required_observations:
 - design decisions, visual evidence
 forbidden_actions:

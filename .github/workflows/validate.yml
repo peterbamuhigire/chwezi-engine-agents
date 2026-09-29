@@ -97,7 +97,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           path: chwezi-engine-agents
-      - {name: Check out srs-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/srs-skills, path: srs-skills}}
+      - {name: Check out chwezi-sdlc-documentation, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/chwezi-sdlc-documentation, path: chwezi-sdlc-documentation}}
       - {name: Check out business-plan-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/business-plan-skills, path: business-plan-skills}}
       - {name: Check out website-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/website-skills, path: website-skills}}
       - {name: Check out social-media-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/social-media-skills, path: social-media-skills}}
@@ -105,7 +105,7 @@ jobs:
       - {name: Check out proposal-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/proposal-skills, path: proposal-skills}}
       - {name: Check out chwezi-dev-engine, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/chwezi-dev-engine, path: chwezi-dev-engine}}
       - {name: Check out chwezi-accounting-doctrine, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/chwezi-accounting-doctrine, path: chwezi-accounting-doctrine}}
-      - {name: Check out design-system-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/design-system-skills, path: design-system-skills}}
+      - {name: Check out chwezi-design-engine, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/chwezi-design-engine, path: chwezi-design-engine}}
       - {name: Check out digital-research-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/digital-research-skills, path: digital-research-engine}}
       - {name: Check out windows-admin-engine-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/windows-admin-engine-skills, path: windows-admin-engine-skills}}
       - uses: actions/setup-python@v5
@@ -134,7 +134,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           path: chwezi-engine-agents
-      - {name: Check out srs-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/srs-skills, path: srs-skills}}
+      - {name: Check out chwezi-sdlc-documentation, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/chwezi-sdlc-documentation, path: chwezi-sdlc-documentation}}
       - {name: Check out business-plan-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/business-plan-skills, path: business-plan-skills}}
       - {name: Check out website-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/website-skills, path: website-skills}}
       - {name: Check out social-media-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/social-media-skills, path: social-media-skills}}
@@ -142,7 +142,7 @@ jobs:
       - {name: Check out proposal-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/proposal-skills, path: proposal-skills}}
       - {name: Check out chwezi-dev-engine, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/chwezi-dev-engine, path: chwezi-dev-engine}}
       - {name: Check out chwezi-accounting-doctrine, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/chwezi-accounting-doctrine, path: chwezi-accounting-doctrine}}
-      - {name: Check out design-system-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/design-system-skills, path: design-system-skills}}
+      - {name: Check out chwezi-design-engine, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/chwezi-design-engine, path: chwezi-design-engine}}
       - {name: Check out digital-research-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/digital-research-skills, path: digital-research-engine}}
       - {name: Check out windows-admin-engine-skills, uses: actions/checkout@v4, continue-on-error: true, with: {repository: peterbamuhigire/windows-admin-engine-skills, path: windows-admin-engine-skills}}
       - uses: actions/setup-python@v5

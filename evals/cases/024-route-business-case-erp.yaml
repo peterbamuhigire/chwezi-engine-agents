@@ -3,10 +3,10 @@ schema_version: '1.0'
 id: 024-route-business-case-erp
 task: Write a business case with ROI for the new ERP.
 fixture_path: evals/fixtures/024-route-business-case-erp
-expected_primary: srs-skills/02-business-case
+expected_primary: chwezi-sdlc-documentation/02-business-case
 run_mode: lexical
 required_observations:
-- srs-skills/02-business-case is the first skill loaded (business case / ROI (probe misroute)).
+- chwezi-sdlc-documentation/02-business-case is the first skill loaded (business case / ROI (probe misroute)).
 forbidden_actions:
 - invent_engine
 - load_every_engine

@@ -2,7 +2,7 @@
   "display_name": "Chwezi Engine Agents",
   "engine_id": "chwezi-engine-agents",
   "folder": "chwezi-engine-agents",
-  "generated_from_commit": "48af46b63d350f7a12cfb7c960a6de0f0cc5188a",
+  "generated_from_commit": "a4cf31d898a2e8d1712daa87cf3021439939f774",
   "generator": "scripts/generate_engine_tour.py",
   "schema_version": "1.0",
   "steps": [
@@ -174,7 +174,7 @@
           "path": "core/instructions/engine-orchestrator.md"
         }
       ],
-      "text": "Add chwezi-accounting-doctrine for finance, accounting, tax or statutory work; design-system-skills for any change to how an output looks; digital-research-skills for current, uncertain or source-sensitive claims. They activate alongside this engine, never instead of it.",
+      "text": "Add chwezi-accounting-doctrine for finance, accounting, tax or statutory work; chwezi-design-engine for any change to how an output looks; digital-research-skills for current, uncertain or source-sensitive claims. They activate alongside this engine, never instead of it.",
       "title": "Cross-cutting engines"
     }
   ]

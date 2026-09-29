@@ -4,11 +4,11 @@ Case: `evals/cases/001-route-srs.yaml` (routing case).
 
 ## Task given to the host
 
-Route requirements work to srs-skills
+Route requirements work to chwezi-sdlc-documentation
 
 ## Engines in scope
 
-- `srs-skills`
+- `chwezi-sdlc-documentation`
 
 ## Status
 

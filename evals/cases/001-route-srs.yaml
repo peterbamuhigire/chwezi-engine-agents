@@ -1,6 +1,6 @@
 schema_version: "1.0"
 id: 001-route-srs
-task: Route requirements work to srs-skills
+task: Route requirements work to chwezi-sdlc-documentation
 fixture_path: evals/fixtures/001-route-srs
 required_observations:
   - catalog entry, router read

@@ -2,10 +2,10 @@
 case_id: 053-route-word-report
 kind: route-oracle
 engines:
-- design-system-skills
-expected_primary: design-system-skills/docx-report-and-document-formatting
+- chwezi-design-engine
+expected_primary: chwezi-design-engine/docx-report-and-document-formatting
 required_observations:
-- design-system-skills/docx-report-and-document-formatting is the first skill loaded (document formatting
+- chwezi-design-engine/docx-report-and-document-formatting is the first skill loaded (document formatting
   (design vs research)).
 forbidden_actions:
 - invent_engine

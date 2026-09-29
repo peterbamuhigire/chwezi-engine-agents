@@ -4,11 +4,11 @@ Case: `evals/cases/009-route-design.yaml` (routing case).
 
 ## Task given to the host
 
-Route a typography and visual QA request to design-system-skills
+Route a typography and visual QA request to chwezi-design-engine
 
 ## Engines in scope
 
-- `design-system-skills`
+- `chwezi-design-engine`
 
 ## Status
 

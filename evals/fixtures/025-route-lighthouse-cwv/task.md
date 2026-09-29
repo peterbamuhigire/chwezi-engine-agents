@@ -13,7 +13,7 @@ Run a Lighthouse audit on the company website and fix the Core Web Vitals failur
 ## Engines in scope
 
 - `website-skills`
-- `design-system-skills`
+- `chwezi-design-engine`
 
 ## Status
 

@@ -2,10 +2,10 @@
 case_id: 024-route-business-case-erp
 kind: route-oracle
 engines:
-- srs-skills
-expected_primary: srs-skills/02-business-case
+- chwezi-sdlc-documentation
+expected_primary: chwezi-sdlc-documentation/02-business-case
 required_observations:
-- srs-skills/02-business-case is the first skill loaded (business case / ROI (probe misroute)).
+- chwezi-sdlc-documentation/02-business-case is the first skill loaded (business case / ROI (probe misroute)).
 forbidden_actions:
 - invent_engine
 - load_every_engine

@@ -13,10 +13,10 @@ Prerequisites, taken from the adapter guides and scripts: Git; Windows PowerShel
 ```text
 /plugin marketplace add peterbamuhigire/chwezi-engine-agents
 /plugin install chwezi-suite@chwezi
-/plugin install srs@chwezi
+/plugin install sdlc-documentation@chwezi
 ```
 
-Marketplace plugin names: `chwezi-suite`, `srs`, `business-plan`, `website`, `social`, `linux`, `proposal`, `engineering`, `accounting`, `design-system`, `research` and `windows-admin`. The `chwezi-suite` plugin ships the `rules-distill` skill and the destructive-command hook; set the plugin option `hooks_enabled` to `false` to keep the skill without hook enforcement.
+Marketplace plugin names: `chwezi-suite`, `sdlc-documentation`, `business-plan`, `website`, `social`, `linux`, `proposal`, `engineering`, `accounting`, `design-engine`, `research` and `windows-admin`. The `chwezi-suite` plugin ships the `rules-distill` skill and the destructive-command hook; set the plugin option `hooks_enabled` to `false` to keep the skill without hook enforcement.
 
 **Host adapters (Codex, Claude Code, Gemini CLI, OpenCode, generic, MCP).** From a clone, install the coordination package for one host. The installer writes `.skills-engine-agents-install.json`, refuses an unmanaged non-empty destination, and refuses to overwrite locally modified files unless `-Force` is given after review.
 
@@ -108,16 +108,16 @@ One screen from idea to release. Each stage names its owning engine and an entry
 
 | Stage | Owner | Entry route |
 |---|---|---|
-| DEFINE | Requirements (`srs-skills`) | `srs-skills:01-strategic-vision/`, `srs-skills:02-requirements-engineering/fundamentals/before/02-elicitation-toolkit/` |
-| PLAN | Engineering and design documentation | `chwezi-dev-engine:skills/execution-plan-scripts/`, `srs-skills:03-design-documentation/` |
+| DEFINE | Requirements (`chwezi-sdlc-documentation`) | `chwezi-sdlc-documentation:01-strategic-vision/`, `chwezi-sdlc-documentation:02-requirements-engineering/fundamentals/before/02-elicitation-toolkit/` |
+| PLAN | Engineering and design documentation | `chwezi-dev-engine:skills/execution-plan-scripts/`, `chwezi-sdlc-documentation:03-design-documentation/` |
 | BUILD | Engineering; websites | `chwezi-dev-engine:skills/sdlc-meta/world-class-engineering/`, `website-skills:skills/orchestration/website-builder/` |
-| VERIFY | Engineering; design | `chwezi-dev-engine:skills/sdlc-meta/world-class-engineering/references/verification-loop.md`, `design-system-skills:skills/00-cross-cutting-ops-qa-a11y/visual-product-slop-audit/` |
+| VERIFY | Engineering; design | `chwezi-dev-engine:skills/sdlc-meta/world-class-engineering/references/verification-loop.md`, `chwezi-design-engine:skills/00-cross-cutting-ops-qa-a11y/visual-product-slop-audit/` |
 | REVIEW | Engineering | `chwezi-dev-engine:skills/sdlc-meta/git-collaboration-workflow/` |
 | SHIP | Engineering; websites; servers | `chwezi-dev-engine:skills/devops-cloud/deployment-release-engineering/`, `website-skills:skills/launch-ops/deploy/`, `linux-skills:linux-sysadmin/` |
 
 Cross-cutting overlays join any stage, alongside the owner and never instead of it: finance
 (`chwezi-accounting-doctrine:skills/`) wherever money moves, design
-(`design-system-skills:skills/`) wherever an output's appearance changes, and research
+(`chwezi-design-engine:skills/`) wherever an output's appearance changes, and research
 (`digital-research-skills:skills/`) for current or uncertain claims.[^commercial]
 
 [^commercial]: Commercial work comes before DEFINE: proposals (`proposal-skills:skills/`),
@@ -155,7 +155,7 @@ Repositories from the my-10-kaizen study (29 Sep 2026) from which this package a
 - JuliusBrussee/caveman — https://github.com/JuliusBrussee/caveman — skill text MIT — commit `2fd153c`: "measure before cutting" (`scripts/skill_usage_scan.py`); no BSL code used.
 - nextlevelbuilder/ui-ux-pro-max-skill (UI UX Pro Max) — https://github.com/nextlevelbuilder/ui-ux-pro-max-skill — MIT — commit `09170ee`: BM25 defaults and calibration idea (`scripts/lib/retrieval_metrics.py`).
 - ComposioHQ/awesome-claude-skills — https://github.com/ComposioHQ/awesome-claude-skills — no root licence — commit `be2a406`: red-flag patterns for imported setup text (`tests/fixtures/prompt-injection/red-flag-patterns.md`) and the seed list for the third-party skill register.
-- tt-a1i/archify — https://github.com/tt-a1i/archify — commit `0e4949f`: reviewed; estate-wide install rejected (tool dispositions, D3). Its diagram ideas were adopted in `srs-skills`, not here.
+- tt-a1i/archify — https://github.com/tt-a1i/archify — commit `0e4949f`: reviewed; estate-wide install rejected (tool dispositions, D3). Its diagram ideas were adopted in `chwezi-sdlc-documentation`, not here.
 - anthropics/skills — https://github.com/anthropics/skills — Apache-2.0 — commit `3337550`: the `mcp-builder` evaluation method used for the coordinator MCP tool-surface evaluation (`evals/mcp/coordinator-qa.yaml`).
 - affaan-m/ECC — https://github.com/affaan-m/ECC — commit `d3b8a3e`: the ECC audit (20 Sep 2026) supplied the standalone install tier and scope choice (`scripts/install-engine.js`) and the deterministic-collection-plus-judgement split in `rules-distill`.
 

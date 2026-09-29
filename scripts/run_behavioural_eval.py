@@ -73,7 +73,7 @@ ARMS_BY_SUITE = {
     "orientation": ("engine",),
 }
 DEFAULT_N = {"solution-selection": 3, "acceptance": 3, "pressure": 3, "mcp": 1, "orientation": 1}
-CONTAMINATION_MARKERS = ("Engine routing table", "Skill Engines", "chwezi-dev-engine\\skills", "srs-skills\\")
+CONTAMINATION_MARKERS = ("Engine routing table", "Skill Engines", "chwezi-dev-engine\\skills", "chwezi-sdlc-documentation\\")
 ISOLATION_PROBE = ("Reply with exactly one line. If your instructions contain the phrase 'Engine routing table', "
                    "reply ROUTING_TABLE_PRESENT; otherwise reply ROUTING_TABLE_ABSENT. Do not use any tool.")
 UNAVAILABLE_PATTERNS = (

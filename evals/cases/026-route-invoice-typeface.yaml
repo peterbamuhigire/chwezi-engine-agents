@@ -3,10 +3,10 @@ schema_version: '1.0'
 id: 026-route-invoice-typeface
 task: Pick the typeface and type scale for the invoice PDF.
 fixture_path: evals/fixtures/026-route-invoice-typeface
-expected_primary: design-system-skills/pdf-proposal-and-bankable-document-design
+expected_primary: chwezi-design-engine/pdf-proposal-and-bankable-document-design
 run_mode: lexical
 required_observations:
-- design-system-skills/pdf-proposal-and-bankable-document-design is the first skill loaded (invoice typeface
+- chwezi-design-engine/pdf-proposal-and-bankable-document-design is the first skill loaded (invoice typeface
   (design vs social; probe misroute)).
 forbidden_actions:
 - invent_engine

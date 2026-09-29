@@ -2,10 +2,10 @@
 case_id: 054-route-business-case-content-mirror
 kind: route-oracle
 engines:
-- srs-skills
-expected_primary: srs-skills/02-business-case
+- chwezi-sdlc-documentation
+expected_primary: chwezi-sdlc-documentation/02-business-case
 required_observations:
-- srs-skills/02-business-case is the first skill loaded (mirrored design owned negative (pdf-proposal
+- chwezi-sdlc-documentation/02-business-case is the first skill loaded (mirrored design owned negative (pdf-proposal
   must not win)).
 forbidden_actions:
 - invent_engine

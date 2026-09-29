@@ -64,10 +64,10 @@ MODEL_ID_RE = re.compile(r"\bCodex-(sonnet|opus|haiku)\b")
 COUNT_RE = re.compile(r"^(\d+)(\s+skills\b)")
 DEFAULT_INVARIANTS = ("british-english", "book-extraction-ban", "not-assessed")
 ENGINE_INVARIANTS = {
-    "srs-skills": ("iso-29148",),
-    "design-system-skills": ("banned-font-primary",),
+    "chwezi-sdlc-documentation": ("iso-29148",),
+    "chwezi-design-engine": ("banned-font-primary",),
 }
-TRIGGER_MARKER = "<!-- design-system-skills:trigger v3 -->"
+TRIGGER_MARKER = "<!-- chwezi-design-engine:trigger v4 -->"
 INTERPRETERS = {"node", "bash", "sh", "pwsh", "powershell", "powershell.exe", "pwsh.exe", "python", "python3", "py", "cmd", "cmd.exe"}
 SKIP_PARTS = {".git", "node_modules"}
 
@@ -148,7 +148,7 @@ def bridge_failures(text: str) -> list[str]:
         failures.append("Claude-only section exceeds 25 lines")
     if re.search(r"^@\S", remainder, re.MULTILINE):
         failures.append("Claude-only section adds an @ import")
-    if TRIGGER_MARKER in remainder or "design-system-skills:trigger" in remainder:
+    if TRIGGER_MARKER in remainder or "chwezi-design-engine:trigger" in remainder:
         failures.append("Claude-only section carries the design trigger block (doctrine)")
     if re.search(r"never store book extractions", remainder, re.IGNORECASE):
         failures.append("Claude-only section carries the book-extraction rule (doctrine)")

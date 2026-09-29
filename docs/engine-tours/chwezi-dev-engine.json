@@ -2,7 +2,7 @@
   "display_name": "Chwezi Dev Engine",
   "engine_id": "chwezi-dev-engine",
   "folder": "chwezi-dev-engine",
-  "generated_from_commit": "dec6bd9a10ce54008865a7c274d9e848b2a1f8ba",
+  "generated_from_commit": "a577be86eb56d724c159789b4daa1b3be1296e89",
   "generator": "scripts/generate_engine_tour.py",
   "schema_version": "1.0",
   "steps": [
@@ -116,15 +116,15 @@
       "data": {
         "hubs": [
           {
-            "inbound_skills": 245,
+            "inbound_skills": 164,
             "skill": "skills/sdlc-meta/anti-ai-slop"
           },
           {
-            "inbound_skills": 87,
+            "inbound_skills": 67,
             "skill": "skills/sdlc-meta/ai-slop-audit"
           },
           {
-            "inbound_skills": 51,
+            "inbound_skills": 65,
             "skill": "skills/product-business/content-writing"
           },
           {
@@ -132,7 +132,7 @@
             "skill": "skills/sdlc-meta/skill-composition-standards"
           },
           {
-            "inbound_skills": 45,
+            "inbound_skills": 46,
             "skill": "skills/sdlc-meta/world-class-engineering"
           }
         ],
@@ -161,7 +161,7 @@
           "path": "skills/sdlc-meta/world-class-engineering/SKILL.md"
         }
       ],
-      "text": "The skills other skills lean on most (inbound links, mentions and aliases): anti-ai-slop (245), ai-slop-audit (87), content-writing (51), skill-composition-standards (48), world-class-engineering (45).",
+      "text": "The skills other skills lean on most (inbound links, mentions and aliases): anti-ai-slop (164), ai-slop-audit (67), content-writing (65), skill-composition-standards (48), world-class-engineering (46).",
       "title": "Hub skills"
     },
     {
@@ -249,7 +249,7 @@
           "path": "core/instructions/engine-orchestrator.md"
         }
       ],
-      "text": "In a cross-engine handoff this engine answers: \"How is it built safely?\" Add chwezi-accounting-doctrine for finance, accounting, tax or statutory work; design-system-skills for any change to how an output looks; digital-research-skills for current, uncertain or source-sensitive claims. They activate alongside this engine, never instead of it.",
+      "text": "In a cross-engine handoff this engine answers: \"How is it built safely?\" Add chwezi-accounting-doctrine for finance, accounting, tax or statutory work; chwezi-design-engine for any change to how an output looks; digital-research-skills for current, uncertain or source-sensitive claims. They activate alongside this engine, never instead of it.",
       "title": "Cross-cutting engines"
     }
   ]

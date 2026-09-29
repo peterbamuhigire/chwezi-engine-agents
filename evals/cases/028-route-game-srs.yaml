@@ -4,10 +4,10 @@ id: 028-route-game-srs
 task: 'Specify requirements for our mobile puzzle game: levels, player progression, in-app purchases and
   store certification.'
 fixture_path: evals/fixtures/028-route-game-srs
-expected_primary: srs-skills/19-game-software-requirements-specification
+expected_primary: chwezi-sdlc-documentation/19-game-software-requirements-specification
 run_mode: lexical
 required_observations:
-- srs-skills/19-game-software-requirements-specification is the first skill loaded (generic SRS vs game
+- chwezi-sdlc-documentation/19-game-software-requirements-specification is the first skill loaded (generic SRS vs game
   SRS (control)).
 forbidden_actions:
 - invent_engine

@@ -8,11 +8,11 @@ Check that these foreground and background colour pairs meet WCAG contrast.
 
 ## Expected first skill
 
-`design-system-skills/accessible-color-and-contrast`
+`chwezi-design-engine/accessible-color-and-contrast`
 
 ## Engines in scope
 
-- `design-system-skills`
+- `chwezi-design-engine`
 
 ## Status
 

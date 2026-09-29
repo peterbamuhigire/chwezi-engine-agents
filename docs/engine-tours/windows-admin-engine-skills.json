@@ -2,7 +2,7 @@
   "display_name": "Windows Administration Skills",
   "engine_id": "windows-admin-engine-skills",
   "folder": "windows-admin-engine-skills",
-  "generated_from_commit": "243221f0fbca402b4dc833c22a7bdea48a59e043",
+  "generated_from_commit": "9e12fd3af409e48b20bf08296c2e4bba8a2815f9",
   "generator": "scripts/generate_engine_tour.py",
   "schema_version": "1.0",
   "steps": [
@@ -249,7 +249,7 @@
           "path": "core/instructions/engine-orchestrator.md"
         }
       ],
-      "text": "Add chwezi-accounting-doctrine for finance, accounting, tax or statutory work; design-system-skills for any change to how an output looks; digital-research-skills for current, uncertain or source-sensitive claims. They activate alongside this engine, never instead of it.",
+      "text": "Add chwezi-accounting-doctrine for finance, accounting, tax or statutory work; chwezi-design-engine for any change to how an output looks; digital-research-skills for current, uncertain or source-sensitive claims. They activate alongside this engine, never instead of it.",
       "title": "Cross-cutting engines"
     }
   ]

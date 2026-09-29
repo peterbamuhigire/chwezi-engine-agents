@@ -1,6 +1,6 @@
 schema_version: "1.0"
 id: 003-add-design-cross-cutting
-task: Route a website visual redesign to website-skills plus design-system-skills
+task: Route a website visual redesign to website-skills plus chwezi-design-engine
 fixture_path: evals/fixtures/003-add-design-cross-cutting
 required_observations:
   - two engine IDs, design rationale

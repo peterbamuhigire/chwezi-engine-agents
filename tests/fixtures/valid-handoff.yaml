@@ -1,7 +1,7 @@
 schema_version: "1.0"
 scope: Route a requirements request
 engines:
-  - id: srs-skills
+  - id: chwezi-sdlc-documentation
     reason: Requirements work
 inputs: [request text, repository path]
 sequence: [read catalog, read router, select skills]

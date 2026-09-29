@@ -13,7 +13,7 @@ if (-not (Test-Path -LiteralPath $contractValidator)) {
 }
 & python -X utf8 $contractValidator --schema (Join-Path (Split-Path $PSScriptRoot -Parent) 'schemas\engine-catalog.schema.json') --instance $catalogResolved
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-$expected = @('srs-skills','business-plan-skills','website-skills','social-media-skills','linux-skills','proposal-skills','chwezi-dev-engine','chwezi-accounting-doctrine','design-system-skills','digital-research-skills','windows-admin-engine-skills')
+$expected = @('chwezi-sdlc-documentation','business-plan-skills','website-skills','social-media-skills','linux-skills','proposal-skills','chwezi-dev-engine','chwezi-accounting-doctrine','chwezi-design-engine','digital-research-skills','windows-admin-engine-skills')
 $items = @()
 $current = $null
 $inValidators = $false

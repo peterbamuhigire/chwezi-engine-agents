@@ -33,7 +33,7 @@ def test_missing_fixture_path_fails(tmp_path):
 
 
 def test_comma_joined_fixture_path_fails(tmp_path):
-    report = MODULE.evaluate(write_case(tmp_path, "998-comma", "evals/fixtures/srs-skills,design-system-skills"))
+    report = MODULE.evaluate(write_case(tmp_path, "998-comma", "evals/fixtures/chwezi-sdlc-documentation,chwezi-design-engine"))
     assert report["status"] == "FAIL"
     assert "single directory" in report["evidence"]
 
@@ -56,7 +56,7 @@ def test_route_oracle_keys_are_shape_checked(tmp_path):
 
 
 def test_behavioural_pass_without_evidence_fails():
-    errors = MODULE.oracle_shape_errors({"expected_primary": "srs-skills/01-prd-generation", "run_mode": "behavioural", "last_run": "PASS"})
+    errors = MODULE.oracle_shape_errors({"expected_primary": "chwezi-sdlc-documentation/01-prd-generation", "run_mode": "behavioural", "last_run": "PASS"})
     assert errors == ["a behavioural PASS needs last_run_evidence"]
 
 

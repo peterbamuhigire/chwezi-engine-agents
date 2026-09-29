@@ -7,13 +7,13 @@ task: >-
   prepare an implementation handoff. Keep medical judgment out of scope.
 fixture_path: evals/fixtures/022-route-clinic-admissions
 expected_sequence: >-
-  srs-skills requirements first; digital-research-skills for volatile statutory
-  and health-data claims; coordinated chwezi-dev-engine and design-system-skills
+  chwezi-sdlc-documentation requirements first; digital-research-skills for volatile statutory
+  and health-data claims; coordinated chwezi-dev-engine and chwezi-design-engine
   slices; chwezi-accounting-doctrine for payment, tax, posting and refund rules
   wherever money moves.
 required_observations:
   - >-
-    srs-skills owns measurable admissions, billing, refund, language, role,
+    chwezi-sdlc-documentation owns measurable admissions, billing, refund, language, role,
     failure and acceptance requirements; unresolved stakeholder choices remain
     explicit questions.
   - >-
@@ -23,7 +23,7 @@ required_observations:
     chwezi-accounting-doctrine owns payment, tax, accounting-control and
     refund treatment; no tax rate or posting rule is invented.
   - >-
-    design-system-skills owns bilingual interaction, accessibility, content
+    chwezi-design-engine owns bilingual interaction, accessibility, content
     states and render review; unperformed checks remain NOT_ASSESSED.
   - >-
     chwezi-dev-engine owns safe architecture, data flow, security, failure,

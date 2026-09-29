@@ -8,11 +8,11 @@ Write a PRD for the new customer self-service portal.
 
 ## Expected first skill
 
-`srs-skills/01-prd-generation`
+`chwezi-sdlc-documentation/01-prd-generation`
 
 ## Engines in scope
 
-- `srs-skills`
+- `chwezi-sdlc-documentation`
 
 ## Status
 

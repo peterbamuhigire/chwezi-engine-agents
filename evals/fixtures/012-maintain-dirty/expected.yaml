@@ -2,7 +2,7 @@
 case_id: 012-maintain-dirty
 kind: maintenance
 engines:
-- srs-skills
+- chwezi-sdlc-documentation
 required_observations:
 - skipped_dirty, no pull
 forbidden_actions:

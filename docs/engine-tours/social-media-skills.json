@@ -2,7 +2,7 @@
   "display_name": "Digital Marketing and Advertising (social-media-skills)",
   "engine_id": "social-media-skills",
   "folder": "social-media-skills",
-  "generated_from_commit": "f9b90677cdccc0ddf03db8e54cbbf69f76047394",
+  "generated_from_commit": "9a7ec760916c112e5938dd6a0ff78505530f2cbd",
   "generator": "scripts/generate_engine_tour.py",
   "schema_version": "1.0",
   "steps": [
@@ -67,25 +67,23 @@
     },
     {
       "data": {
-        "active_skills": 191,
+        "active_skills": 110,
         "folders": {
-          "skills": 1,
           "skills/advertising": 9,
-          "skills/ai-marketing": 22,
-          "skills/business-development": 12,
-          "skills/content-writing": 14,
-          "skills/frameworks": 2,
+          "skills/ai-marketing": 6,
+          "skills/business-development": 6,
+          "skills/content-writing": 7,
           "skills/language": 4,
-          "skills/meta-analytics-ops": 25,
+          "skills/meta-analytics-ops": 13,
           "skills/meta-utility": 3,
-          "skills/pipeline": 14,
-          "skills/platforms": 12,
-          "skills/playbooks": 39,
-          "skills/policies": 2,
+          "skills/pipeline": 13,
+          "skills/platforms": 8,
+          "skills/playbooks": 17,
+          "skills/policies": 1,
           "skills/sectors": 2,
           "skills/seo-discovery": 2,
-          "skills/strategy": 22,
-          "skills/training": 6
+          "skills/strategy": 15,
+          "skills/training": 4
         }
       },
       "number": 4,
@@ -96,42 +94,42 @@
         },
         {
           "engine": "social-media-skills",
+          "path": "skills/strategy"
+        },
+        {
+          "engine": "social-media-skills",
           "path": "skills/meta-analytics-ops"
         },
         {
           "engine": "social-media-skills",
-          "path": "skills/ai-marketing"
-        },
-        {
-          "engine": "social-media-skills",
-          "path": "skills/strategy"
+          "path": "skills/pipeline"
         }
       ],
-      "text": "191 active SKILL.md files in 17 folders; the largest are skills/playbooks (39), skills/meta-analytics-ops (25), skills/ai-marketing (22), skills/strategy (22).",
+      "text": "110 active SKILL.md files in 15 folders; the largest are skills/playbooks (17), skills/strategy (15), skills/meta-analytics-ops (13), skills/pipeline (13).",
       "title": "Skill layout"
     },
     {
       "data": {
         "hubs": [
           {
-            "inbound_skills": 244,
+            "inbound_skills": 164,
             "skill": "skills/ai-marketing/anti-ai-slop"
           },
           {
-            "inbound_skills": 119,
+            "inbound_skills": 92,
             "skill": "skills/language/east-african-english"
           },
           {
-            "inbound_skills": 87,
+            "inbound_skills": 67,
             "skill": "skills/ai-marketing/ai-slop-audit"
-          },
-          {
-            "inbound_skills": 55,
-            "skill": "skills/content-writing"
           },
           {
             "inbound_skills": 53,
             "skill": "skills/content-writing/premium-commercial-writing"
+          },
+          {
+            "inbound_skills": 44,
+            "skill": "skills/content-writing/blog-writer"
           }
         ],
         "source": "scripts/skill_fanin.py"
@@ -152,14 +150,14 @@
         },
         {
           "engine": "social-media-skills",
-          "path": "skills/content-writing/SKILL.md"
+          "path": "skills/content-writing/premium-commercial-writing/SKILL.md"
         },
         {
           "engine": "social-media-skills",
-          "path": "skills/content-writing/premium-commercial-writing/SKILL.md"
+          "path": "skills/content-writing/blog-writer/SKILL.md"
         }
       ],
-      "text": "The skills other skills lean on most (inbound links, mentions and aliases): anti-ai-slop (244), east-african-english (119), ai-slop-audit (87), content-writing (55), premium-commercial-writing (53).",
+      "text": "The skills other skills lean on most (inbound links, mentions and aliases): anti-ai-slop (164), east-african-english (92), ai-slop-audit (67), premium-commercial-writing (53), blog-writer (44).",
       "title": "Hub skills"
     },
     {
@@ -191,7 +189,7 @@
     {
       "data": {
         "fixture_cases": {
-          "tests/routing-fixtures.json": 56
+          "tests/routing-fixtures.json": 359
         }
       },
       "number": 7,
@@ -201,7 +199,7 @@
           "path": "tests/routing-fixtures.json"
         }
       ],
-      "text": "Routing fixtures record which skill should win for a realistic request: 56 cases in 1 file.",
+      "text": "Routing fixtures record which skill should win for a realistic request: 359 cases in 1 file.",
       "title": "Routing evidence"
     },
     {
@@ -245,7 +243,7 @@
           "path": "core/instructions/engine-orchestrator.md"
         }
       ],
-      "text": "Add chwezi-accounting-doctrine for finance, accounting, tax or statutory work; design-system-skills for any change to how an output looks; digital-research-skills for current, uncertain or source-sensitive claims. They activate alongside this engine, never instead of it.",
+      "text": "Add chwezi-accounting-doctrine for finance, accounting, tax or statutory work; chwezi-design-engine for any change to how an output looks; digital-research-skills for current, uncertain or source-sensitive claims. They activate alongside this engine, never instead of it.",
       "title": "Cross-cutting engines"
     }
   ]

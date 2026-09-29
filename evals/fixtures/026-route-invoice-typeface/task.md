@@ -8,11 +8,11 @@ Pick the typeface and type scale for the invoice PDF.
 
 ## Expected first skill
 
-`design-system-skills/pdf-proposal-and-bankable-document-design`
+`chwezi-design-engine/pdf-proposal-and-bankable-document-design`
 
 ## Engines in scope
 
-- `design-system-skills`
+- `chwezi-design-engine`
 
 ## Status
 

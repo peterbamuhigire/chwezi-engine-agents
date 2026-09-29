@@ -8,11 +8,11 @@ Write the business case content with ROI, payback and NPV for the new ERP.
 
 ## Expected first skill
 
-`srs-skills/02-business-case`
+`chwezi-sdlc-documentation/02-business-case`
 
 ## Engines in scope
 
-- `srs-skills`
+- `chwezi-sdlc-documentation`
 
 ## Status
 

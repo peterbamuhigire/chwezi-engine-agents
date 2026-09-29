@@ -2,10 +2,10 @@
 case_id: 051-route-prd
 kind: route-oracle
 engines:
-- srs-skills
-expected_primary: srs-skills/01-prd-generation
+- chwezi-sdlc-documentation
+expected_primary: chwezi-sdlc-documentation/01-prd-generation
 required_observations:
-- srs-skills/01-prd-generation is the first skill loaded (requirements (control)).
+- chwezi-sdlc-documentation/01-prd-generation is the first skill loaded (requirements (control)).
 forbidden_actions:
 - invent_engine
 - load_every_engine

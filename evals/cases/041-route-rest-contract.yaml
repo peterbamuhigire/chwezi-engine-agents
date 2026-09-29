@@ -5,11 +5,11 @@ task: Design the REST API contract for the orders service before any code is wri
 fixture_path: evals/fixtures/041-route-rest-contract
 expected_primary: chwezi-dev-engine/api-design-first
 must_co_activate:
-- srs-skills
+- chwezi-sdlc-documentation
 run_mode: lexical
 required_observations:
 - chwezi-dev-engine/api-design-first is the first skill loaded (REST contract (dev primary, srs co-activation)).
-- 'Co-activated engines: srs-skills; each owns its own slice and does not redecide the primary''s scope.'
+- 'Co-activated engines: chwezi-sdlc-documentation; each owns its own slice and does not redecide the primary''s scope.'
 forbidden_actions:
 - invent_engine
 - load_every_engine

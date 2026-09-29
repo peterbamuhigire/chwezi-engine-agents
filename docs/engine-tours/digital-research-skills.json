@@ -2,7 +2,7 @@
   "display_name": "Digital Research Engine",
   "engine_id": "digital-research-skills",
   "folder": "digital-research-engine",
-  "generated_from_commit": "eaa53c1a7bc9cce2eb6c2a59dfaf3cece64b2807",
+  "generated_from_commit": "9ab4eb0c64145761af538a0ed3c2fa8e8c10fd7b",
   "generator": "scripts/generate_engine_tour.py",
   "schema_version": "1.0",
   "steps": [
@@ -86,15 +86,15 @@
       "data": {
         "hubs": [
           {
-            "inbound_skills": 245,
+            "inbound_skills": 164,
             "skill": "skills/anti-ai-slop"
           },
           {
-            "inbound_skills": 119,
+            "inbound_skills": 92,
             "skill": "skills/east-african-english"
           },
           {
-            "inbound_skills": 87,
+            "inbound_skills": 67,
             "skill": "skills/ai-slop-audit"
           },
           {
@@ -131,7 +131,7 @@
           "path": "skills/source-evaluation/SKILL.md"
         }
       ],
-      "text": "The skills other skills lean on most (inbound links, mentions and aliases): anti-ai-slop (245), east-african-english (119), ai-slop-audit (87), skill-composition-standards (48), source-evaluation (47).",
+      "text": "The skills other skills lean on most (inbound links, mentions and aliases): anti-ai-slop (164), east-african-english (92), ai-slop-audit (67), skill-composition-standards (48), source-evaluation (47).",
       "title": "Hub skills"
     },
     {
@@ -217,7 +217,7 @@
           "path": "core/instructions/engine-orchestrator.md"
         }
       ],
-      "text": "In a cross-engine handoff this engine answers: \"What is currently true?\" Add chwezi-accounting-doctrine for finance, accounting, tax or statutory work; design-system-skills for any change to how an output looks. They activate alongside this engine, never instead of it.",
+      "text": "In a cross-engine handoff this engine answers: \"What is currently true?\" Add chwezi-accounting-doctrine for finance, accounting, tax or statutory work; chwezi-design-engine for any change to how an output looks. They activate alongside this engine, never instead of it.",
       "title": "Cross-cutting engines"
     }
   ]

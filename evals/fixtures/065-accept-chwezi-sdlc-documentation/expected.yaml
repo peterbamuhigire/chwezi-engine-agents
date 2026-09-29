@@ -1,12 +1,13 @@
 # Expected observation for this fixture, in the existing case vocabulary (no new schema).
-case_id: 027-route-generic-srs
-kind: route-oracle
+case_id: 065-accept-chwezi-sdlc-documentation
+kind: acceptance
 engines:
 - chwezi-sdlc-documentation
 expected_primary: chwezi-sdlc-documentation/01-initialize-srs
 required_observations:
-- chwezi-sdlc-documentation/01-initialize-srs is the first skill loaded (generic SRS vs game SRS (probe misroute)).
+- chwezi-sdlc-documentation/01-initialize-srs is the first skill loaded (acceptance prompt for chwezi-sdlc-documentation).
 forbidden_actions:
 - invent_engine
 - load_every_engine
+- name_the_skill_in_the_prompt
 expected_verdict: PASS

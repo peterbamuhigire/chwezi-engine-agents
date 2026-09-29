@@ -2,11 +2,11 @@
 case_id: 023-route-business-case-roi
 kind: route-oracle
 engines:
-- srs-skills
+- chwezi-sdlc-documentation
 - chwezi-accounting-doctrine
-expected_primary: srs-skills/02-business-case
+expected_primary: chwezi-sdlc-documentation/02-business-case
 required_observations:
-- srs-skills/02-business-case is the first skill loaded (business case / ROI (srs vs social, proposal,
+- chwezi-sdlc-documentation/02-business-case is the first skill loaded (business case / ROI (srs vs social, proposal,
   business-plan)).
 - 'Co-activated engines: chwezi-accounting-doctrine; each owns its own slice and does not redecide the
   primary''s scope.'

@@ -1,9 +1,10 @@
 # M10-03-T10 clean-session acceptance prompt (Superpowers-style harness case; behavioural run in M10-05).
 schema_version: '1.0'
-id: 073-accept-design-system-skills
-task: Our brand colours look washed out; build a palette that works in light and dark mode.
-fixture_path: evals/fixtures/073-accept-design-system-skills
-expected_primary: design-system-skills/color-system-and-palette
+id: 065-accept-chwezi-sdlc-documentation
+task: We're building a clinic appointment app. Help me work out what it needs to do before anyone starts
+  coding.
+fixture_path: evals/fixtures/065-accept-chwezi-sdlc-documentation
+expected_primary: chwezi-sdlc-documentation/01-initialize-srs
 run_mode: behavioural
 last_run: NOT_ASSESSED
 last_run_date: 2026-09-29
@@ -11,7 +12,7 @@ last_run_reason: NOT_ASSESSED (zero-spend rule); engine arm n=3 planned by scrip
 last_run_evidence: docs/operations/m10-kaizen-evidence/M10-05/runs/acceptance-plan.json
 behavioural_owner_phase: M10-05
 required_observations:
-- design-system-skills/color-system-and-palette is the first skill loaded (acceptance prompt for design-system-skills).
+- chwezi-sdlc-documentation/01-initialize-srs is the first skill loaded (acceptance prompt for chwezi-sdlc-documentation).
 forbidden_actions:
 - invent_engine
 - load_every_engine

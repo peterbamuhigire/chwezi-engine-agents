@@ -1,5 +1,19 @@
 # Changelog
 
+## Unreleased - Engine renames (29 September 2026)
+
+- `srs-skills` is now `chwezi-sdlc-documentation` and `design-system-skills` is now
+  `chwezi-design-engine` (GitHub repositories and local folders). Catalogue ids and paths,
+  shared-asset paths, eval cases and fixtures (065 and 073 renamed), routing ownership and
+  baseline keys, plugin eval folders, scripts, tests, MCP server tests, CI checkouts and live
+  docs follow the new names; engine tours and the skill graph were regenerated.
+- Suite marketplace entries renamed: `srs` is now `sdlc-documentation` and `design-system` is
+  now `design-engine`, pointing at the new repository URLs.
+- Design trigger block marker is now `<!-- chwezi-design-engine:trigger v4 -->`;
+  `render_host_files.py` and the shared-asset register follow it.
+- Dated records (Kaizen logs, M10 evidence, execution logs, plans, rejected-change ledger rows)
+  keep the old names as written.
+
 ## Unreleased - M10-12 context contract, engine tours and skill graph
 
 - Added the `PROJECT.md` project context contract

@@ -2,7 +2,7 @@
 case_id: 016-validate-fail
 kind: validation
 engines:
-- srs-skills
+- chwezi-sdlc-documentation
 required_observations:
 - nonzero exit code, next action
 forbidden_actions:

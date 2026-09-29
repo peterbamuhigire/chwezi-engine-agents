@@ -4,12 +4,12 @@ Case: `evals/cases/003-add-design-cross-cutting.yaml` (routing case).
 
 ## Task given to the host
 
-Route a website visual redesign to website-skills plus design-system-skills
+Route a website visual redesign to website-skills plus chwezi-design-engine
 
 ## Engines in scope
 
 - `website-skills`
-- `design-system-skills`
+- `chwezi-design-engine`
 
 ## Status
 

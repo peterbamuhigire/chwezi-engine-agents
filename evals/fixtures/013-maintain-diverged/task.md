@@ -8,7 +8,7 @@ Attempt a pull from a diverged branch
 
 ## Target checkout
 
-- `srs-skills` (catalogued engine)
+- `chwezi-sdlc-documentation` (catalogued engine)
 
 ## Status
 

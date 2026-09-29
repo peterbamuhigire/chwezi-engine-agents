@@ -28,7 +28,7 @@ contradictory context. It replaces none of the engine folders.
    Copying text from a pointed file into `PROJECT.md` is a defect (`project/duplicated-content`).
 3. **The engine folder wins.** When `PROJECT.md` and a pointed source disagree, the conflict is
    resolved in the engine folder by that engine's owner, and `PROJECT.md` is corrected to match.
-   For requirements this keeps `srs-skills` `projects/<ProjectName>/_context/` as the Context
+   For requirements this keeps `chwezi-sdlc-documentation` `projects/<ProjectName>/_context/` as the Context
    Source of Truth, exactly as the SRS router states.
 4. **No visual choices.** No typeface, colour value or per-surface mode. Those belong to the
    design brief and design tokens (`design_brief`, `design_tokens` pointers); visitor modes stay
@@ -58,7 +58,7 @@ short prose sections for human readers; it must not grow into a second requireme
 | `PROJECT_BRIEF.md` in a code repository (dev `doc-architect`) | Repository orientation for developers | Pointed to through `project_brief` |
 | Portfolio craft brief (`core/instructions/engine-orchestrator.md` step 7) | One task: audience, job or decision, slice, constraints, evidence boundary, failure consequence | Pre-filled from `PROJECT.md` when one is present; the task-specific fields are still asked for |
 | dev `tools/ai/shared_context.py` | A versioned, trust-checked context packet for one task run | Different scope: a task packet may cite `PROJECT.md`, but `PROJECT.md` never carries run state, trust scores or expiry |
-| Design brief (`design-system-skills` `decisions.py`) and design tokens | Visual decisions and their rationale | Pointed to through `design_brief` and `design_tokens`; visual choices never appear in `PROJECT.md` |
+| Design brief (`chwezi-design-engine` `decisions.py`) and design tokens | Visual decisions and their rationale | Pointed to through `design_brief` and `design_tokens`; visual choices never appear in `PROJECT.md` |
 | `schemas/handoff.schema.json` | Cross-engine handoff for one request | May cite `PROJECT.md` as an input |
 
 ## 5. Where the file lives

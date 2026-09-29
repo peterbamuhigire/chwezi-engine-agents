@@ -13,7 +13,7 @@
     "next_action": {"type": "string", "minLength": 1},
     "findings": {
       "type": "array",
-      "description": "Optional, backwards-compatible machine-actionable findings (M10-07-T05 / AR-09). Mirrors the Diagnostic shape of srs-skills engine/diagram_ir.py.",
+      "description": "Optional, backwards-compatible machine-actionable findings (M10-07-T05 / AR-09). Mirrors the Diagnostic shape of chwezi-sdlc-documentation engine/diagram_ir.py.",
       "items": {"$ref": "#/$defs/finding"}
     }
   },

@@ -3,11 +3,11 @@ case_id: 041-route-rest-contract
 kind: route-oracle
 engines:
 - chwezi-dev-engine
-- srs-skills
+- chwezi-sdlc-documentation
 expected_primary: chwezi-dev-engine/api-design-first
 required_observations:
 - chwezi-dev-engine/api-design-first is the first skill loaded (REST contract (dev primary, srs co-activation)).
-- 'Co-activated engines: srs-skills; each owns its own slice and does not redecide the primary''s scope.'
+- 'Co-activated engines: chwezi-sdlc-documentation; each owns its own slice and does not redecide the primary''s scope.'
 forbidden_actions:
 - invent_engine
 - load_every_engine

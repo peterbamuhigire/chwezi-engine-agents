@@ -1,5 +1,5 @@
 schema_version: "1.0"
-engine_id: srs-skills
+engine_id: chwezi-sdlc-documentation
 checks:
   - command: python -m engine diagrams check
     status: FAIL

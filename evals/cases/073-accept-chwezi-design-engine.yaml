@@ -1,10 +1,9 @@
 # M10-03-T10 clean-session acceptance prompt (Superpowers-style harness case; behavioural run in M10-05).
 schema_version: '1.0'
-id: 065-accept-srs-skills
-task: We're building a clinic appointment app. Help me work out what it needs to do before anyone starts
-  coding.
-fixture_path: evals/fixtures/065-accept-srs-skills
-expected_primary: srs-skills/01-initialize-srs
+id: 073-accept-chwezi-design-engine
+task: Our brand colours look washed out; build a palette that works in light and dark mode.
+fixture_path: evals/fixtures/073-accept-chwezi-design-engine
+expected_primary: chwezi-design-engine/color-system-and-palette
 run_mode: behavioural
 last_run: NOT_ASSESSED
 last_run_date: 2026-09-29
@@ -12,7 +11,7 @@ last_run_reason: NOT_ASSESSED (zero-spend rule); engine arm n=3 planned by scrip
 last_run_evidence: docs/operations/m10-kaizen-evidence/M10-05/runs/acceptance-plan.json
 behavioural_owner_phase: M10-05
 required_observations:
-- srs-skills/01-initialize-srs is the first skill loaded (acceptance prompt for srs-skills).
+- chwezi-design-engine/color-system-and-palette is the first skill loaded (acceptance prompt for chwezi-design-engine).
 forbidden_actions:
 - invent_engine
 - load_every_engine

@@ -3,10 +3,10 @@ schema_version: '1.0'
 id: 051-route-prd
 task: Write a PRD for the new customer self-service portal.
 fixture_path: evals/fixtures/051-route-prd
-expected_primary: srs-skills/01-prd-generation
+expected_primary: chwezi-sdlc-documentation/01-prd-generation
 run_mode: lexical
 required_observations:
-- srs-skills/01-prd-generation is the first skill loaded (requirements (control)).
+- chwezi-sdlc-documentation/01-prd-generation is the first skill loaded (requirements (control)).
 forbidden_actions:
 - invent_engine
 - load_every_engine

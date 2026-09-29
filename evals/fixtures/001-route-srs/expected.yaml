@@ -2,7 +2,7 @@
 case_id: 001-route-srs
 kind: routing
 engines:
-- srs-skills
+- chwezi-sdlc-documentation
 required_observations:
 - catalog entry, router read
 forbidden_actions:

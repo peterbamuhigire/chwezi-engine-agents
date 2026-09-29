@@ -1,6 +1,6 @@
-# Contract-eval fixture 065-accept-srs-skills
+# Contract-eval fixture 065-accept-chwezi-sdlc-documentation
 
-Case: `evals/cases/065-accept-srs-skills.yaml` (acceptance prompt; family: acceptance prompt for srs-skills).
+Case: `evals/cases/065-accept-chwezi-sdlc-documentation.yaml` (acceptance prompt; family: acceptance prompt for chwezi-sdlc-documentation).
 
 ## Task given to the host
 
@@ -8,11 +8,11 @@ We're building a clinic appointment app. Help me work out what it needs to do be
 
 ## Expected first skill
 
-`srs-skills/01-initialize-srs`
+`chwezi-sdlc-documentation/01-initialize-srs`
 
 ## Engines in scope
 
-- `srs-skills`
+- `chwezi-sdlc-documentation`
 
 ## Status
 

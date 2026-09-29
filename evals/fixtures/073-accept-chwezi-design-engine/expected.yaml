@@ -1,11 +1,11 @@
 # Expected observation for this fixture, in the existing case vocabulary (no new schema).
-case_id: 073-accept-design-system-skills
+case_id: 073-accept-chwezi-design-engine
 kind: acceptance
 engines:
-- design-system-skills
-expected_primary: design-system-skills/color-system-and-palette
+- chwezi-design-engine
+expected_primary: chwezi-design-engine/color-system-and-palette
 required_observations:
-- design-system-skills/color-system-and-palette is the first skill loaded (acceptance prompt for design-system-skills).
+- chwezi-design-engine/color-system-and-palette is the first skill loaded (acceptance prompt for chwezi-design-engine).
 forbidden_actions:
 - invent_engine
 - load_every_engine

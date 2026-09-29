@@ -4,13 +4,13 @@ Case: `evals/cases/021-route-product-build-handoff.yaml` (routing case).
 
 ## Task given to the host
 
-Route a new mobile money checkout feature through srs-skills, chwezi-dev-engine, design-system-skills, chwezi-accounting-doctrine and digital research in handoff order
+Route a new mobile money checkout feature through chwezi-sdlc-documentation, chwezi-dev-engine, chwezi-design-engine, chwezi-accounting-doctrine and digital research in handoff order
 
 ## Engines in scope
 
-- `srs-skills`
+- `chwezi-sdlc-documentation`
 - `chwezi-dev-engine`
-- `design-system-skills`
+- `chwezi-design-engine`
 - `chwezi-accounting-doctrine`
 - `digital-research-skills`
 

@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 VALIDATOR = ROOT / "scripts" / "validate-rule-markers.py"
-DESIGN_DOC = ROOT.parent / "design-system-skills" / "doctrine" / "references" / "ai-slop-banned-fonts.md"
+DESIGN_DOC = ROOT.parent / "chwezi-design-engine" / "doctrine" / "references" / "ai-slop-banned-fonts.md"
 
 MARKDOWN = """# Fixture
 <!-- rule:font.ban.hard.inter -->
@@ -56,7 +56,7 @@ class RuleMarkerValidatorTests(unittest.TestCase):
         result = self.run_on(MARKDOWN.replace("font.ban.secondary.poppins", "Font_Poppins"), SIDECAR)
         self.assertEqual(result.returncode, 1)
 
-    @unittest.skipUnless(DESIGN_DOC.is_file(), "design-system-skills sibling checkout not present (NOT_ASSESSED)")
+    @unittest.skipUnless(DESIGN_DOC.is_file(), "chwezi-design-engine sibling checkout not present (NOT_ASSESSED)")
     def test_design_pilot_file_passes(self):
         result = subprocess.run([sys.executable, "-X", "utf8", str(VALIDATOR), str(DESIGN_DOC)],
                                 capture_output=True, text=True, check=False)

@@ -7,10 +7,10 @@ https://github.com/addyosmani/agent-skills, commit 2686b62; format adapted, case
 
 | Family | Fires | Stays quiet |
 |---|---|---|
-| 1 Business case with ROI | srs-skills/business-case-roi-fires | social-media-skills/business-case-roi-stays-quiet, proposal-skills/business-case-roi-stays-quiet |
-| 2 Lighthouse / Core Web Vitals | website-skills/lighthouse-cwv-fires, design-system-skills/lighthouse-cwv-co-activates-fires | (co-activation family; lexical misroute fixed in M10-11, oracle 025 unpinned; behavioural run NOT_ASSESSED) |
-| 3 Invoice typeface | design-system-skills/invoice-typeface-fires | social-media-skills/invoice-typeface-stays-quiet |
-| 4 SRS for billing | srs-skills/billing-srs-fires | srs-skills/billing-srs-game-stays-quiet |
+| 1 Business case with ROI | chwezi-sdlc-documentation/business-case-roi-fires | social-media-skills/business-case-roi-stays-quiet, proposal-skills/business-case-roi-stays-quiet |
+| 2 Lighthouse / Core Web Vitals | website-skills/lighthouse-cwv-fires, chwezi-design-engine/lighthouse-cwv-co-activates-fires | (co-activation family; lexical misroute fixed in M10-11, oracle 025 unpinned; behavioural run NOT_ASSESSED) |
+| 3 Invoice typeface | chwezi-design-engine/invoice-typeface-fires | social-media-skills/invoice-typeface-stays-quiet |
+| 4 SRS for billing | chwezi-sdlc-documentation/billing-srs-fires | chwezi-sdlc-documentation/billing-srs-game-stays-quiet |
 | 5 Validation contract | chwezi-dev-engine/validation-contract-fires | digital-research-skills/validation-contract-stays-quiet |
 
 Each engine is evaluated on its own, because loading several plugins in one arm was not verified.
@@ -20,7 +20,7 @@ Skill names in `input_match` carry the engine's plugin namespace (`srs:`, `socia
 Run through the wrapper, which hard-codes `--no-publish` and refuses without `--allow-model-calls`:
 
 ```powershell
-python -X utf8 scripts/run_behavioural_eval.py --plugin-eval --engine srs-skills --model <pinned> --grader-model <pinned> --runs 3
+python -X utf8 scripts/run_behavioural_eval.py --plugin-eval --engine chwezi-sdlc-documentation --model <pinned> --grader-model <pinned> --runs 3
 ```
 
 Under the zero-spend rule (29 Sep 2026) no plugin eval has been run: every family is

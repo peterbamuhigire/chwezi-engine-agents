@@ -1,9 +1,9 @@
 schema_version: "1.0"
 version: 1
 engines:
-  - id: srs-skills
-    repository: srs-skills
-    path: srs-skills
+  - id: chwezi-sdlc-documentation
+    repository: chwezi-sdlc-documentation
+    path: chwezi-sdlc-documentation
     router: AGENTS.md
     integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "905b9a4"}
     validators:
@@ -68,9 +68,9 @@ engines:
     integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "8c1d683"}
     validators:
       - ".\\tools\\validate-doctrine.ps1 -Strict"
-  - id: design-system-skills
-    repository: design-system-skills
-    path: design-system-skills
+  - id: chwezi-design-engine
+    repository: chwezi-design-engine
+    path: chwezi-design-engine
     router: AGENTS.md
     integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "f69c5d4"}
     validators:

@@ -8,11 +8,11 @@ Design the booking flow, digital menu screens and guest journey for a resort.
 
 ## Expected first skill
 
-`design-system-skills/hospitality-hotel-restaurant`
+`chwezi-design-engine/hospitality-hotel-restaurant`
 
 ## Engines in scope
 
-- `design-system-skills`
+- `chwezi-design-engine`
 
 ## Status
 

@@ -8,7 +8,7 @@ Pull a clean fast-forward engine checkout
 
 ## Target checkout
 
-- `srs-skills` (catalogued engine)
+- `chwezi-sdlc-documentation` (catalogued engine)
 
 ## Status
 

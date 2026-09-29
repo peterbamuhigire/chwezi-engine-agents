@@ -28,7 +28,7 @@ from pathlib import Path, PurePosixPath
 
 PACKAGE_ROOT = Path(__file__).resolve().parents[1]
 SCHEMA_PATH = PACKAGE_ROOT / "schemas" / "project-context.schema.json"
-BANNED_FONTS_REL = "design-system-skills/doctrine/references/ai-slop-banned-fonts.json"
+BANNED_FONTS_REL = "chwezi-design-engine/doctrine/references/ai-slop-banned-fonts.json"
 POINTER_FIELDS = (
     "srs_context", "research_context", "code_repository", "project_brief",
     "website_repository", "brand_brief", "design_tokens", "design_brief",
@@ -232,7 +232,7 @@ def visual_findings(front_text: str, body: str, workspace: Path) -> list[dict]:
         {"hex_colours": hexes, "typeface_declarations": len(typeface_lines), "banned_faces_named": named_banned,
          "banned_font_source": source},
         ["remove the value and point to the design brief or design tokens"],
-        "Route the choice to design-system-skills; keep only the design_brief and design_tokens pointers.")]
+        "Route the choice to chwezi-design-engine; keep only the design_brief and design_tokens pointers.")]
 
 
 # --------------------------------------------------------------------------- doctor

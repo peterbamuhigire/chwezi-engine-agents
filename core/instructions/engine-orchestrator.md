@@ -21,7 +21,7 @@ only the serialization format, not the required handoff fields.
    actual domain. Do not load every engine by default.
 2. Add `chwezi-accounting-doctrine` for finance, accounting, IFRS, IAS, tax,
    bookkeeping, controls, payroll, or statutory reporting.
-3. Add `design-system-skills` when the requested output changes visual design,
+3. Add `chwezi-design-engine` when the requested output changes visual design,
    typography, layout, accessibility, or document appearance.
 4. Add `digital-research-skills` when claims are current, uncertain,
    source-sensitive, regulatory, comparative, or evidence-heavy. This is the
@@ -50,9 +50,9 @@ does not re-decide it.
 
 | Question | Owner | Artefact handed on |
 |---|---|---|
-| What does success mean? | `srs-skills` | Prescriptive, verifiable requirements with actors, states, measurable acceptance criteria, traceability, and open questions. No implementation choices. |
+| What does success mean? | `chwezi-sdlc-documentation` | Prescriptive, verifiable requirements with actors, states, measurable acceptance criteria, traceability, and open questions. No implementation choices. |
 | How is it built safely? | `chwezi-dev-engine` | Architecture, data flow, security and failure handling, tests traced to the acceptance criteria, release and rollback proof. |
-| How does it look, behave, and get evaluated? | `design-system-skills` | Visual and interaction rationale, all key states, accessibility and render review; unperformed render/device/assistive-technology checks stay `NOT ASSESSED`. |
+| How does it look, behave, and get evaluated? | `chwezi-design-engine` | Visual and interaction rationale, all key states, accessibility and render review; unperformed render/device/assistive-technology checks stay `NOT ASSESSED`. |
 | What is currently true? | `digital-research-skills` | Claim-level sources with access dates for versions, platform rules, law, prices, and benchmarks. |
 | What happens to the money? | `chwezi-accounting-doctrine` | Recognition, posting, reconciliation, controls, and tax treatment; no invented rate or statutory value. |
 

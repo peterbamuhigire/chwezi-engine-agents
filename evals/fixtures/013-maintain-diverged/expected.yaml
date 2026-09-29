@@ -2,7 +2,7 @@
 case_id: 013-maintain-diverged
 kind: maintenance
 engines:
-- srs-skills
+- chwezi-sdlc-documentation
 required_observations:
 - blocked_diverged, counts
 forbidden_actions:

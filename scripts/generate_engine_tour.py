@@ -48,7 +48,7 @@ SKILL_WRITING_NAMES = ("skill-writing", "skill-authoring", "writing-skills")
 MIN_STEPS, MAX_STEPS = 7, 12
 CROSS_CUTTING = (
     ("chwezi-accounting-doctrine", "finance, accounting, tax or statutory work"),
-    ("design-system-skills", "any change to how an output looks"),
+    ("chwezi-design-engine", "any change to how an output looks"),
     ("digital-research-skills", "current, uncertain or source-sensitive claims"),
 )
 

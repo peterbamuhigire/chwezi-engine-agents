@@ -2,10 +2,10 @@
 case_id: 038-route-hospitality-design
 kind: route-oracle
 engines:
-- design-system-skills
-expected_primary: design-system-skills/hospitality-hotel-restaurant
+- chwezi-design-engine
+expected_primary: chwezi-design-engine/hospitality-hotel-restaurant
 required_observations:
-- design-system-skills/hospitality-hotel-restaurant is the first skill loaded (hospitality pack (mirrored,
+- chwezi-design-engine/hospitality-hotel-restaurant is the first skill loaded (hospitality pack (mirrored,
   design slice)).
 forbidden_actions:
 - invent_engine
