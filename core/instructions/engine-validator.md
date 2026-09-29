@@ -84,3 +84,7 @@ asks why. It reads transcripts; it never replays or edits them.
 Adapted in paraphrase from obra/superpowers `diagnosing-superpowers` (MIT,
 https://github.com/obra/superpowers, commit
 8ca22dba9a94f28898bbce59f2537ff4d87c747d). No text copied.
+
+## Portable links
+
+A validation run fails any link that resolves only on the author's host (host-absolute `C:/`, `/C:/`, `file:` links, or links escaping the repository). Cross-engine links are GitHub URLs. See `docs/operations/portable-links-rule.md`.
