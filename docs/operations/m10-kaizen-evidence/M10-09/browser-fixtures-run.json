@@ -1,0 +1,159 @@
+{
+  "tool": "chwezi-slop",
+  "version": "1.0.0",
+  "registry_sha256": "750eaf523fda9be3de2dd783d793498a035ec7a66c16323cfd89310dafd66cd0",
+  "generated": "2026-09-29T01:51:20.181Z",
+  "options": {
+    "tier": "browser",
+    "mode": null,
+    "fail_on": "block",
+    "waivers": true
+  },
+  "scanned_files": 0,
+  "findings": [
+    {
+      "rule": "clipped-positioned-child",
+      "as_overlay": "AS7",
+      "severity": "warning",
+      "evidence_mode": "browser",
+      "file": "../../../../../../../../../../wamp64/www/design-system-skills/tests/fixtures/slop-browser/clipped-positioned-child.flag.html",
+      "line": null,
+      "snippet": "body > main > div > span",
+      "message": "\"Tooltip text that is cut off\" is clipped by overflow on html > body > main > div [390x844]"
+    },
+    {
+      "rule": "content-hidden-at-rest",
+      "as_overlay": "AS7",
+      "severity": "warning",
+      "evidence_mode": "browser",
+      "file": "../../../../../../../../../../wamp64/www/design-system-skills/tests/fixtures/slop-browser/content-hidden-at-rest.flag.html",
+      "line": null,
+      "snippet": "html > body > main > p.reveal",
+      "message": "\"Same-day appointments are available in K\" is invisible at rest (opacity 0.00, visibility visible) [390x844]"
+    },
+    {
+      "rule": "clipped-positioned-child",
+      "as_overlay": "AS7",
+      "severity": "warning",
+      "evidence_mode": "browser",
+      "file": "../../../../../../../../../../wamp64/www/design-system-skills/tests/fixtures/slop-browser/failed-reveal-and-clipped-tooltip.html",
+      "line": null,
+      "snippet": "main > section > div > span",
+      "message": "\"Monday to Saturday, 8am to 6pm\" is clipped by overflow on body > main > section > div [390x844]"
+    },
+    {
+      "rule": "content-hidden-at-rest",
+      "as_overlay": "AS7",
+      "severity": "warning",
+      "evidence_mode": "browser",
+      "file": "../../../../../../../../../../wamp64/www/design-system-skills/tests/fixtures/slop-browser/failed-reveal-and-clipped-tooltip.html",
+      "line": null,
+      "snippet": "body > main > section > p.reveal",
+      "message": "\"Same-day appointments are available at e\" is invisible at rest (opacity 0.00, visibility visible) [390x844]"
+    },
+    {
+      "rule": "horizontal-overflow",
+      "as_overlay": "AS7",
+      "severity": "warning",
+      "evidence_mode": "browser",
+      "file": "../../../../../../../../../../wamp64/www/design-system-skills/tests/fixtures/slop-browser/first-viewport-column-overflow.flag.html",
+      "line": null,
+      "snippet": "html",
+      "message": "page scrollWidth 1568px exceeds viewport 390px [390x844]"
+    },
+    {
+      "rule": "first-viewport-column-overflow",
+      "as_overlay": "AS7",
+      "severity": "warning",
+      "evidence_mode": "browser",
+      "file": "../../../../../../../../../../wamp64/www/design-system-skills/tests/fixtures/slop-browser/first-viewport-column-overflow.flag.html",
+      "line": null,
+      "snippet": "html > body > main > p",
+      "message": "\"A first-viewport column that runs past t\" extends past the 390px viewport (68-1568) [390x844]"
+    },
+    {
+      "rule": "horizontal-overflow",
+      "as_overlay": "AS7",
+      "severity": "warning",
+      "evidence_mode": "browser",
+      "file": "../../../../../../../../../../wamp64/www/design-system-skills/tests/fixtures/slop-browser/horizontal-overflow.flag.html",
+      "line": null,
+      "snippet": "html",
+      "message": "page scrollWidth 2008px exceeds viewport 390px [390x844]"
+    },
+    {
+      "rule": "first-viewport-column-overflow",
+      "as_overlay": "AS7",
+      "severity": "warning",
+      "evidence_mode": "browser",
+      "file": "../../../../../../../../../../wamp64/www/design-system-skills/tests/fixtures/slop-browser/horizontal-overflow.flag.html",
+      "line": null,
+      "snippet": "html > body > main > div",
+      "message": "\"This row is wider than any phone viewpor\" extends past the 390px viewport (8-2008) [390x844]"
+    },
+    {
+      "rule": "low-contrast-computed",
+      "as_overlay": "AS7",
+      "severity": "block",
+      "evidence_mode": "browser",
+      "file": "../../../../../../../../../../wamp64/www/design-system-skills/tests/fixtures/slop-browser/low-contrast-computed.flag.html",
+      "line": null,
+      "snippet": "html > body > main > p",
+      "message": "\"Low contrast body text.\" contrast 2.17:1 is below 4.5:1 [390x844]"
+    },
+    {
+      "rule": "script-error",
+      "as_overlay": "AS7",
+      "severity": "warning",
+      "evidence_mode": "browser",
+      "file": "../../../../../../../../../../wamp64/www/design-system-skills/tests/fixtures/slop-browser/script-error.flag.html",
+      "line": null,
+      "snippet": "console",
+      "message": "undefinedFunctionCall is not defined [390x844]"
+    },
+    {
+      "rule": "text-occlusion",
+      "as_overlay": "AS7",
+      "severity": "warning",
+      "evidence_mode": "browser",
+      "file": "../../../../../../../../../../wamp64/www/design-system-skills/tests/fixtures/slop-browser/text-occlusion.flag.html",
+      "line": null,
+      "snippet": "body > main > div > p",
+      "message": "\"Opening hours are Monday to Saturday.\" is covered by body > main > div > div [390x844]"
+    }
+  ],
+  "not_assessed": [],
+  "waived": [],
+  "errors": [],
+  "known_rules": 49,
+  "rules_run": [
+    "horizontal-overflow",
+    "clipped-positioned-child",
+    "text-occlusion",
+    "content-hidden-at-rest",
+    "script-error",
+    "low-contrast-computed",
+    "first-viewport-column-overflow"
+  ],
+  "browser_tool": "playwright@1.61.1",
+  "summary": {
+    "findings": 11,
+    "waived": 0,
+    "not_assessed": 0,
+    "by_severity": {
+      "block": 1,
+      "warning": 10,
+      "advisory": 0
+    },
+    "by_rule": {
+      "clipped-positioned-child": 2,
+      "content-hidden-at-rest": 2,
+      "horizontal-overflow": 2,
+      "first-viewport-column-overflow": 2,
+      "low-contrast-computed": 1,
+      "script-error": 1,
+      "text-occlusion": 1
+    }
+  },
+  "exit_code": 2
+}

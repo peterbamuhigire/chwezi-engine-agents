@@ -1,0 +1,21 @@
+{
+  "conflicts": [],
+  "folders": [
+    {
+      "folder": "fonts/01-formal-institutional/crimson-pro/",
+      "family": "Crimson Pro",
+      "action": "REPORT ONLY - removal needs Peter's per-operation confirmation"
+    },
+    {
+      "folder": "fonts/02-editorial-literary/cormorant-garamond/",
+      "family": "Cormorant Garamond",
+      "action": "REPORT ONLY - removal needs Peter's per-operation confirmation"
+    },
+    {
+      "folder": "fonts/02-editorial-literary/newsreader/",
+      "family": "Newsreader",
+      "action": "REPORT ONLY - removal needs Peter's per-operation confirmation"
+    }
+  ],
+  "ok": true
+}

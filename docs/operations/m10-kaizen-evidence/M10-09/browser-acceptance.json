@@ -1,0 +1,64 @@
+{
+  "tool": "chwezi-slop",
+  "version": "1.0.0",
+  "registry_sha256": "750eaf523fda9be3de2dd783d793498a035ec7a66c16323cfd89310dafd66cd0",
+  "generated": "2026-09-29T01:51:15.224Z",
+  "options": {
+    "tier": "browser",
+    "mode": null,
+    "fail_on": "block",
+    "waivers": true
+  },
+  "scanned_files": 0,
+  "findings": [
+    {
+      "rule": "clipped-positioned-child",
+      "as_overlay": "AS7",
+      "severity": "warning",
+      "evidence_mode": "browser",
+      "file": "../../../../../../../../../../wamp64/www/design-system-skills/tests/fixtures/slop-browser/failed-reveal-and-clipped-tooltip.html",
+      "line": null,
+      "snippet": "main > section > div > span",
+      "message": "\"Monday to Saturday, 8am to 6pm\" is clipped by overflow on body > main > section > div [390x844]"
+    },
+    {
+      "rule": "content-hidden-at-rest",
+      "as_overlay": "AS7",
+      "severity": "warning",
+      "evidence_mode": "browser",
+      "file": "../../../../../../../../../../wamp64/www/design-system-skills/tests/fixtures/slop-browser/failed-reveal-and-clipped-tooltip.html",
+      "line": null,
+      "snippet": "body > main > section > p.reveal",
+      "message": "\"Same-day appointments are available at e\" is invisible at rest (opacity 0.00, visibility visible) [390x844]"
+    }
+  ],
+  "not_assessed": [],
+  "waived": [],
+  "errors": [],
+  "known_rules": 49,
+  "rules_run": [
+    "horizontal-overflow",
+    "clipped-positioned-child",
+    "text-occlusion",
+    "content-hidden-at-rest",
+    "script-error",
+    "low-contrast-computed",
+    "first-viewport-column-overflow"
+  ],
+  "browser_tool": "playwright@1.61.1",
+  "summary": {
+    "findings": 2,
+    "waived": 0,
+    "not_assessed": 0,
+    "by_severity": {
+      "block": 0,
+      "warning": 2,
+      "advisory": 0
+    },
+    "by_rule": {
+      "clipped-positioned-child": 1,
+      "content-hidden-at-rest": 1
+    }
+  },
+  "exit_code": 0
+}

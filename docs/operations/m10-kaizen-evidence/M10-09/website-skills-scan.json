@@ -1,0 +1,178 @@
+{
+  "tool": "chwezi-slop",
+  "version": "1.0.0",
+  "registry_sha256": "750eaf523fda9be3de2dd783d793498a035ec7a66c16323cfd89310dafd66cd0",
+  "generated": "2026-09-29T01:43:47.618Z",
+  "options": {
+    "tier": "deep",
+    "mode": null,
+    "fail_on": "block",
+    "waivers": true
+  },
+  "scanned_files": 489,
+  "findings": [
+    {
+      "rule": "glassmorphism",
+      "as_overlay": "AS4",
+      "severity": "block",
+      "evidence_mode": "cli",
+      "file": "skills/build/design-system/liquid-glass-effects.md",
+      "line": 25,
+      "snippet": "backdrop-filter: blur(12px);",
+      "message": "backdrop blur over a translucent background on .glass-panel"
+    },
+    {
+      "rule": "glassmorphism",
+      "as_overlay": "AS4",
+      "severity": "block",
+      "evidence_mode": "cli",
+      "file": "skills/build/design-system/liquid-glass-effects.md",
+      "line": 289,
+      "snippet": "backdrop-filter: blur(12px);",
+      "message": "backdrop blur over a translucent background on .glass-panel"
+    },
+    {
+      "rule": "thin-border-wide-shadow",
+      "as_overlay": "AS3",
+      "severity": "advisory",
+      "evidence_mode": "cli",
+      "file": "skills/build/design-system/liquid-glass-effects.md",
+      "line": 29,
+      "snippet": "box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);",
+      "message": "1px border with a 24px+ soft shadow"
+    },
+    {
+      "rule": "thin-border-wide-shadow",
+      "as_overlay": "AS3",
+      "severity": "advisory",
+      "evidence_mode": "cli",
+      "file": "skills/build/design-system/liquid-glass-effects.md",
+      "line": 87,
+      "snippet": "<div class=\"bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 md:p-12 max-w-2xl text-center shadow-2xl\">",
+      "message": "border with shadow-xl/2xl"
+    },
+    {
+      "rule": "thin-border-wide-shadow",
+      "as_overlay": "AS3",
+      "severity": "advisory",
+      "evidence_mode": "cli",
+      "file": "skills/build/design-system/liquid-glass-effects.md",
+      "line": 115,
+      "snippet": "<div class=\"bg-white/15 dark:bg-black/25 backdrop-blur-xl border border-white/20 rounded-3xl p-8 max-w-lg w-full shadow-2xl\" @click.stop>",
+      "message": "border with shadow-xl/2xl"
+    },
+    {
+      "rule": "banned-primary-font",
+      "as_overlay": "AS1",
+      "severity": "block",
+      "evidence_mode": "cli",
+      "file": "skills/build/design-system/references/legacy-guidance.md",
+      "line": 138,
+      "snippet": "body: ['DM Sans', 'sans-serif'],",
+      "message": "fontFamily.body: primary family is DM Sans [AI]"
+    },
+    {
+      "rule": "bounce-easing",
+      "as_overlay": "AS4",
+      "severity": "block",
+      "evidence_mode": "cli",
+      "file": "skills/build/design-system/references/legacy-guidance.md",
+      "line": 165,
+      "snippet": "--transition-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);",
+      "message": "overshooting cubic-bezier(0.34, 1.56, 0.64, 1)"
+    },
+    {
+      "rule": "missing-reduced-motion",
+      "as_overlay": "AS4",
+      "severity": "warning",
+      "evidence_mode": "cli",
+      "file": "skills/build/page-builder/references/advanced-navigation.md",
+      "line": 217,
+      "snippet": "<header x-data=\"stickyNav()\" x-init=\"init()\"",
+      "message": "duration-300 with no motion-safe/motion-reduce variant or prefers-reduced-motion block"
+    }
+  ],
+  "not_assessed": [
+    {
+      "rule": "design-system-font",
+      "reason": "no token source: pass --tokens, set \"tokens\" in .chwezi/slop.json, or add design-tokens.json / a DTCG tokens.json"
+    },
+    {
+      "rule": "design-system-color",
+      "reason": "no token source: pass --tokens, set \"tokens\" in .chwezi/slop.json, or add design-tokens.json / a DTCG tokens.json"
+    },
+    {
+      "rule": "design-system-radius",
+      "reason": "no token source: pass --tokens, set \"tokens\" in .chwezi/slop.json, or add design-tokens.json / a DTCG tokens.json"
+    },
+    {
+      "rule": "design-system-font-size",
+      "reason": "no token source: pass --tokens, set \"tokens\" in .chwezi/slop.json, or add design-tokens.json / a DTCG tokens.json"
+    }
+  ],
+  "waived": [],
+  "errors": [],
+  "known_rules": 49,
+  "rules_run": [
+    "banned-primary-font",
+    "conditional-source-sans-primary",
+    "flat-type-hierarchy",
+    "body-leading-tight",
+    "body-leading-loose",
+    "heading-wide-tracking",
+    "body-wide-tracking",
+    "extreme-negative-tracking",
+    "justified-body-text",
+    "tiny-text",
+    "all-caps-body",
+    "line-length",
+    "skipped-heading",
+    "italic-serif-display",
+    "gradient-text",
+    "purple-blue-gradient",
+    "neon-glow",
+    "glassmorphism",
+    "ai-beige-ground",
+    "radial-halo",
+    "pure-black-body-text",
+    "gray-on-color",
+    "stripes-or-grid-background",
+    "decorative-side-stripe",
+    "nested-cards",
+    "hero-eyebrow-chip",
+    "kicker-above-heading",
+    "numbered-section-labels",
+    "identical-three-column-feature-grid",
+    "thin-border-wide-shadow",
+    "bounce-easing",
+    "pulsing-dot",
+    "blinking-cursor",
+    "marquee",
+    "missing-reduced-motion",
+    "broken-local-image",
+    "placeholder-image-host",
+    "focus-indicator-removed",
+    "design-system-font",
+    "design-system-color",
+    "design-system-radius",
+    "design-system-font-size"
+  ],
+  "summary": {
+    "findings": 8,
+    "waived": 0,
+    "not_assessed": 4,
+    "by_severity": {
+      "block": 4,
+      "warning": 1,
+      "advisory": 3
+    },
+    "by_rule": {
+      "glassmorphism": 2,
+      "thin-border-wide-shadow": 3,
+      "banned-primary-font": 1,
+      "bounce-easing": 1,
+      "missing-reduced-motion": 1
+    }
+  },
+  "exit_code": 2
+}

@@ -1,0 +1,111 @@
+# M10-09 verification log (design-system-skills), 2026-09-29T04:52:07+03:00
+## node v24.8.0; Python 3.13.7; registry sha256 750eaf523fda9be3de2dd783d793498a035ec7a66c16323cfd89310dafd66cd0
+
+### $ python -X utf8 scripts/validate_engine.py --baseline tests/quality-baseline.json
+exit=0
+skills=101 fully_compliant=101
+slop_rules=49 slop_fixtures=98
+
+### $ python -X utf8 scripts/routing_smoke_test.py
+exit=0
+routing fixtures=68 precision@1=94% precision@3=100% owned_negatives=21/21 not_assessed=1 (lexical proxy; not live routing)
+
+### $ python -X utf8 scripts/validate_route_existence.py
+exit=0
+route-existence-validator:
+- checked routing fixtures and repaired-route fixtures
+- findings: 0
+PASS: route targets exist and repaired references are present
+
+### $ python -X utf8 scripts/validate_design_catalog.py data/design-catalog.json
+exit=0
+design-catalog-validator:
+- source: C:\wamp64\www\design-system-skills\data\design-catalog.json
+- revision: 2026-09-20-books-and-doctrine-v1
+- records: 13
+- stack guidance: 22
+PASS: schema, domain coverage, stack coverage, evidence and lifecycle checks passed
+
+### $ python -X utf8 -m pytest -q -p no:cacheprovider
+exit=0
+........................................................................ [ 66%]
+....................................                                     [100%]
+108 passed in 8.12s
+
+### $ node hooks/test-banned-font-gate.js
+exit=0
+
+45/45 passed
+
+### $ node hooks/test-token-file-gate.js
+exit=0
+
+10/10 passed
+
+### $ node hooks/test-plugin-hook-config.js
+exit=0
+PASS false config disables hooks
+PASS false config matching is case-insensitive
+PASS common false values disable hooks
+PASS unknown values fail enabled
+PASS empty values preserve the default
+7/7 passed
+
+### $ node hooks/test-destructive-bash-gate.js
+exit=0
+
+61/61 passed
+
+### $ node hooks/test-slop-immediate.js
+exit=0
+
+12/12 passed
+
+### $ node hooks/test-slop-deep-pass.js
+exit=0
+
+10/10 passed
+
+### $ node --test tools/slop-detector/test/
+exit=0
+ℹ pass 114
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 9580.7529
+
+### $ node tools/slop-detector/cli.mjs --validate-registry
+exit=0
+PASS: 49 rules (42 static, 7 browser); sha256 750eaf523fda9be3de2dd783d793498a035ec7a66c16323cfd89310dafd66cd0
+
+### $ node tools/slop-detector/cli.mjs --doctrine-consistency
+exit=0
+REPORT fonts/01-formal-institutional/crimson-pro/ holds banned family Crimson Pro (REPORT ONLY - removal needs Peter's per-operation confirmation)
+REPORT fonts/02-editorial-literary/cormorant-garamond/ holds banned family Cormorant Garamond (REPORT ONLY - removal needs Peter's per-operation confirmation)
+REPORT fonts/02-editorial-literary/newsreader/ holds banned family Newsreader (REPORT ONLY - removal needs Peter's per-operation confirmation)
+PASS: 0 baseline/ban conflict(s); 3 banned font folder(s) reported
+
+### $ node scripts/generate-plugin-manifest.js --engine . --check
+exit=0
+design-system-skills: plugin.json is current — 101 skills.
+
+### $ python -X utf8 /c/wamp64/www/chwezi-engine-agents/scripts/validate-rule-markers.py doctrine/references/ai-slop-banned-fonts.md
+exit=0
+PASS: 29 marker(s); sidecar checked; findings 0
+
+### $ python -X utf8 scripts/validate_design_delivery_evidence.py tests/fixtures/design-delivery/manifest.json
+exit=0
+design-delivery-evidence-validator:
+- manifest: tests\fixtures\design-delivery\manifest.json
+- findings: 0
+- delivery verdict: CONDITIONAL
+- stages: accessibility=NOT ASSESSED, generation=NOT ASSESSED, render=NOT ASSESSED, reopen=NOT ASSESSED, visual_qa=NOT ASSESSED
+PASS: manifest structure is valid; delivery verdict is reported above
+
+### $ python -X utf8 scripts/validate_token_example.py skills/09-design-systems-tokens-and-theming/design-tokens-and-naming/examples/tokens.json
+exit=0
+token-example-validator:
+- source: skills\09-design-systems-tokens-and-theming\design-tokens-and-naming\examples\tokens.json
+- findings: 0
+PASS: aliases, tiers, required roles and cycle checks passed

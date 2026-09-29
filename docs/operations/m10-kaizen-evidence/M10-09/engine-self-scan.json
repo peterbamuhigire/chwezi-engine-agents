@@ -1,0 +1,305 @@
+{
+  "tool": "chwezi-slop",
+  "version": "1.0.0",
+  "registry_sha256": "750eaf523fda9be3de2dd783d793498a035ec7a66c16323cfd89310dafd66cd0",
+  "generated": "2026-09-29T01:52:01.593Z",
+  "options": {
+    "tier": "deep",
+    "mode": null,
+    "fail_on": "block",
+    "waivers": true
+  },
+  "scanned_files": 623,
+  "findings": [
+    {
+      "rule": "kicker-above-heading",
+      "as_overlay": "AS2",
+      "severity": "warning",
+      "evidence_mode": "cli",
+      "file": "skills/03-layout-grid-and-composition/responsive-and-adaptive-layout/examples/responsive-grid-template.md",
+      "line": 34,
+      "snippet": "<p class=\"eyebrow\">Platform</p>",
+      "message": "kicker \"Platform\" above <h2>"
+    },
+    {
+      "rule": "tiny-text",
+      "as_overlay": "AS7",
+      "severity": "warning",
+      "evidence_mode": "cli",
+      "file": "skills/06-sector-and-domain-ux/healthcare-ui-design/references/components.md",
+      "line": 254,
+      "snippet": "font-size: 11px;",
+      "message": "font-size 11px (11.0px) is below 12px"
+    },
+    {
+      "rule": "skipped-heading",
+      "as_overlay": "AS7",
+      "severity": "warning",
+      "evidence_mode": "cli",
+      "file": "skills/06-sector-and-domain-ux/sector-strategies/DARK-MODE-IMPLEMENTATION.md",
+      "line": 316,
+      "snippet": "<h3 class=\"text-lg font-semibold text-neutral-900 dark:text-white mb-2\">",
+      "message": "<h3> follows <h1>: heading level skipped (WCAG 1.3.1)"
+    },
+    {
+      "rule": "missing-reduced-motion",
+      "as_overlay": "AS4",
+      "severity": "warning",
+      "evidence_mode": "cli",
+      "file": "skills/06-sector-and-domain-ux/sector-strategies/templates/education/IMPLEMENTATION-GUIDE.md",
+      "line": 516,
+      "snippet": "<div",
+      "message": "duration-300 with no motion-safe/motion-reduce variant or prefers-reduced-motion block"
+    },
+    {
+      "rule": "missing-reduced-motion",
+      "as_overlay": "AS4",
+      "severity": "warning",
+      "evidence_mode": "cli",
+      "file": "skills/06-sector-and-domain-ux/sector-strategies/templates/education/component-patterns-full.md",
+      "line": 146,
+      "snippet": "<img",
+      "message": "duration-300 with no motion-safe/motion-reduce variant or prefers-reduced-motion block"
+    },
+    {
+      "rule": "missing-reduced-motion",
+      "as_overlay": "AS4",
+      "severity": "warning",
+      "evidence_mode": "cli",
+      "file": "skills/06-sector-and-domain-ux/sector-strategies/templates/hobbyist-creator/component-patterns.md",
+      "line": 14,
+      "snippet": "<img src=\"work-1.jpg\" alt=\"Work title\" class=\"w-full h-full object-cover group-hover:scale-110 transition-transform duration-500\" />",
+      "message": "duration-500 with no motion-safe/motion-reduce variant or prefers-reduced-motion block"
+    },
+    {
+      "rule": "missing-reduced-motion",
+      "as_overlay": "AS4",
+      "severity": "warning",
+      "evidence_mode": "cli",
+      "file": "skills/06-sector-and-domain-ux/sector-strategies/templates/tour-travel/component-patterns.md",
+      "line": 16,
+      "snippet": "<img",
+      "message": "duration-500 with no motion-safe/motion-reduce variant or prefers-reduced-motion block"
+    },
+    {
+      "rule": "kicker-above-heading",
+      "as_overlay": "AS2",
+      "severity": "warning",
+      "evidence_mode": "cli",
+      "file": "examples/kraal-code-bilingual-spec/index.html",
+      "line": 215,
+      "snippet": "<p class=\"eyebrow\" data-i18n=\"eyebrow\">Daily overview</p>",
+      "message": "kicker \"Daily overview\" above <h1>"
+    }
+  ],
+  "not_assessed": [],
+  "waived": [
+    {
+      "rule": "banned-primary-font",
+      "as_overlay": "AS1",
+      "severity": "block",
+      "evidence_mode": "cli",
+      "file": "skills/01-typography-and-fonts/ai-slop-typography-audit/examples/typography-audit-filled.md",
+      "line": 20,
+      "snippet": "--font-sans:    \"Inter\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif;",
+      "message": "--font-sans: primary family is Inter [AI]",
+      "waiver": {
+        "source": "inline",
+        "kind": "disable",
+        "line": 18,
+        "reason": "Chwezi design engine (M10-09 review, 29 Sep 2026): audited stylesheet quoted as found, before the fix"
+      }
+    },
+    {
+      "rule": "banned-primary-font",
+      "as_overlay": "AS1",
+      "severity": "block",
+      "evidence_mode": "cli",
+      "file": "skills/01-typography-and-fonts/ai-slop-typography-audit/examples/typography-audit-filled.md",
+      "line": 21,
+      "snippet": "--font-display: \"Geist\", \"Inter\", sans-serif;",
+      "message": "--font-display: primary family is Geist [AI]",
+      "waiver": {
+        "source": "inline",
+        "kind": "disable",
+        "line": 18,
+        "reason": "Chwezi design engine (M10-09 review, 29 Sep 2026): audited stylesheet quoted as found, before the fix"
+      }
+    },
+    {
+      "rule": "banned-primary-font",
+      "as_overlay": "AS1",
+      "severity": "block",
+      "evidence_mode": "cli",
+      "file": "skills/01-typography-and-fonts/ai-slop-typography-audit/examples/typography-audit-filled.md",
+      "line": 22,
+      "snippet": "--font-accent:  \"Space Grotesk\", \"Inter\", sans-serif;   /* used on the eyebrow + pricing */",
+      "message": "--font-accent: primary family is Space Grotesk [AI]",
+      "waiver": {
+        "source": "inline",
+        "kind": "disable",
+        "line": 18,
+        "reason": "Chwezi design engine (M10-09 review, 29 Sep 2026): audited stylesheet quoted as found, before the fix"
+      }
+    },
+    {
+      "rule": "banned-primary-font",
+      "as_overlay": "AS1",
+      "severity": "block",
+      "evidence_mode": "cli",
+      "file": "skills/01-typography-and-fonts/ai-slop-typography-audit/examples/typography-audit-filled.md",
+      "line": 23,
+      "snippet": "--font-ui:      system-ui, -apple-system, sans-serif;   /* buttons, nav, form labels */",
+      "message": "--font-ui: primary family is bare system stack with no deliberate face",
+      "waiver": {
+        "source": "inline",
+        "kind": "disable",
+        "line": 18,
+        "reason": "Chwezi design engine (M10-09 review, 29 Sep 2026): audited stylesheet quoted as found, before the fix"
+      }
+    },
+    {
+      "rule": "pure-black-body-text",
+      "as_overlay": "AS1",
+      "severity": "warning",
+      "evidence_mode": "cli",
+      "file": "skills/01-typography-and-fonts/ai-slop-typography-audit/examples/typography-audit-filled.md",
+      "line": 28,
+      "snippet": "body { font-family: var(--font-sans); font-weight: 400; color: #000;",
+      "message": "pure black body text #000",
+      "waiver": {
+        "source": "inline",
+        "kind": "disable",
+        "line": 18,
+        "reason": "Chwezi design engine (M10-09 review, 29 Sep 2026): audited stylesheet quoted as found, before the fix"
+      }
+    },
+    {
+      "rule": "banned-primary-font",
+      "as_overlay": "AS1",
+      "severity": "block",
+      "evidence_mode": "cli",
+      "file": "skills/04-web-and-ui-design/practical-ui-design/examples/ui-before-after-worked.md",
+      "line": 16,
+      "snippet": "padding:18px; font-family:Inter, sans-serif; text-align:center;\">",
+      "message": "font-family: primary family is Inter [AI]",
+      "waiver": {
+        "source": "inline",
+        "kind": "disable",
+        "line": 12,
+        "reason": "Chwezi design engine (M10-09 review, 29 Sep 2026): deliberate BEFORE state that the AFTER version fixes"
+      }
+    },
+    {
+      "rule": "thin-border-wide-shadow",
+      "as_overlay": "AS3",
+      "severity": "advisory",
+      "evidence_mode": "cli",
+      "file": "skills/04-web-and-ui-design/practical-ui-design/examples/ui-before-after-worked.md",
+      "line": 15,
+      "snippet": "box-shadow:0 8px 30px rgba(0,0,0,0.35);",
+      "message": "1px border with a 24px+ soft shadow",
+      "waiver": {
+        "source": "inline",
+        "kind": "disable",
+        "line": 12,
+        "reason": "Chwezi design engine (M10-09 review, 29 Sep 2026): deliberate BEFORE state that the AFTER version fixes"
+      }
+    },
+    {
+      "rule": "decorative-side-stripe",
+      "as_overlay": "AS2",
+      "severity": "warning",
+      "evidence_mode": "cli",
+      "file": "skills/06-sector-and-domain-ux/healthcare-ui-design/examples/clinical-screen-worked.md",
+      "line": 66,
+      "snippet": ".vital-tile        { border-left: 6px solid var(--surface-border); background: #fff; }",
+      "message": "border-left: 6px solid var(--surface-border) side stripe on .vital-tile",
+      "waiver": {
+        "source": "inline",
+        "kind": "disable-next-line",
+        "line": 65,
+        "reason": "Peter Bamuhigire (side-stripe ruling, 29 Sep 2026): status encoding paired with a text label"
+      }
+    },
+    {
+      "rule": "decorative-side-stripe",
+      "as_overlay": "AS2",
+      "severity": "warning",
+      "evidence_mode": "cli",
+      "file": "skills/06-sector-and-domain-ux/healthcare-ui-design/references/components.md",
+      "line": 273,
+      "snippet": "border-left: 4px solid #EF4444;",
+      "message": "border-left: 4px solid #EF4444 side stripe on .clinical-table tr.critical",
+      "waiver": {
+        "source": "inline",
+        "kind": "disable-next-line",
+        "line": 272,
+        "reason": "Peter Bamuhigire (side-stripe ruling, 29 Sep 2026): status encoding paired with a text label"
+      }
+    }
+  ],
+  "errors": [],
+  "known_rules": 49,
+  "rules_run": [
+    "banned-primary-font",
+    "conditional-source-sans-primary",
+    "flat-type-hierarchy",
+    "body-leading-tight",
+    "body-leading-loose",
+    "heading-wide-tracking",
+    "body-wide-tracking",
+    "extreme-negative-tracking",
+    "justified-body-text",
+    "tiny-text",
+    "all-caps-body",
+    "line-length",
+    "skipped-heading",
+    "italic-serif-display",
+    "gradient-text",
+    "purple-blue-gradient",
+    "neon-glow",
+    "glassmorphism",
+    "ai-beige-ground",
+    "radial-halo",
+    "pure-black-body-text",
+    "gray-on-color",
+    "stripes-or-grid-background",
+    "decorative-side-stripe",
+    "nested-cards",
+    "hero-eyebrow-chip",
+    "kicker-above-heading",
+    "numbered-section-labels",
+    "identical-three-column-feature-grid",
+    "thin-border-wide-shadow",
+    "bounce-easing",
+    "pulsing-dot",
+    "blinking-cursor",
+    "marquee",
+    "missing-reduced-motion",
+    "broken-local-image",
+    "placeholder-image-host",
+    "focus-indicator-removed",
+    "design-system-font",
+    "design-system-color",
+    "design-system-radius",
+    "design-system-font-size"
+  ],
+  "summary": {
+    "findings": 8,
+    "waived": 9,
+    "not_assessed": 0,
+    "by_severity": {
+      "block": 0,
+      "warning": 8,
+      "advisory": 0
+    },
+    "by_rule": {
+      "kicker-above-heading": 2,
+      "tiny-text": 1,
+      "skipped-heading": 1,
+      "missing-reduced-motion": 4
+    }
+  },
+  "exit_code": 0
+}

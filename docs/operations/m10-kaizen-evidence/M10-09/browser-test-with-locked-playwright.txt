@@ -1,0 +1,12 @@
+✔ Playwright absent: all seven browser rules are NOT_ASSESSED and exit is 0 (191.5639ms)
+✔ lock rule: a range or a lockfile mismatch is refused (16.1113ms)
+✔ remote targets are refused unless --allow-remote (1.6427ms)
+✔ acceptance fixtures with a locked Playwright (38321.9707ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 38677.257

@@ -1,0 +1,78 @@
+{
+ "conflicts": [
+  {
+   "family": "Crimson Pro",
+   "list": "secondaryBan",
+   "file": "font-groups-and-usage.md",
+   "line": 28
+  },
+  {
+   "family": "Newsreader",
+   "list": "secondaryBan",
+   "file": "font-groups-and-usage.md",
+   "line": 38
+  },
+  {
+   "family": "Cormorant",
+   "list": "secondaryBan",
+   "file": "font-groups-and-usage.md",
+   "line": 38
+  },
+  {
+   "family": "Cormorant Garamond",
+   "list": "secondaryBan",
+   "file": "font-groups-and-usage.md",
+   "line": 38
+  },
+  {
+   "family": "Space Mono",
+   "list": "secondaryBan",
+   "file": "font-groups-and-usage.md",
+   "line": 60
+  },
+  {
+   "family": "Newsreader",
+   "list": "secondaryBan",
+   "file": "pairing-principles.md",
+   "line": 48
+  },
+  {
+   "family": "Crimson Pro",
+   "list": "secondaryBan",
+   "file": "pairing-catalog.md",
+   "line": 16
+  },
+  {
+   "family": "Newsreader",
+   "list": "secondaryBan",
+   "file": "pairing-catalog.md",
+   "line": 24
+  },
+  {
+   "family": "Cormorant",
+   "list": "secondaryBan",
+   "file": "pairing-catalog.md",
+   "line": 25
+  },
+  {
+   "family": "Cormorant Garamond",
+   "list": "secondaryBan",
+   "file": "pairing-catalog.md",
+   "line": 25
+  },
+  {
+   "family": "Cormorant",
+   "list": "secondaryBan",
+   "file": "pairing-catalog.md",
+   "line": 70
+  },
+  {
+   "family": "Cormorant Garamond",
+   "list": "secondaryBan",
+   "file": "pairing-catalog.md",
+   "line": 70
+  }
+ ],
+ "folders": [],
+ "ok": false
+}

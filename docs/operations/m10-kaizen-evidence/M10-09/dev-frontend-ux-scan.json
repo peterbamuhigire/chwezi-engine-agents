@@ -1,0 +1,104 @@
+{
+  "tool": "chwezi-slop",
+  "version": "1.0.0",
+  "registry_sha256": "750eaf523fda9be3de2dd783d793498a035ec7a66c16323cfd89310dafd66cd0",
+  "generated": "2026-09-29T01:43:49.403Z",
+  "options": {
+    "tier": "deep",
+    "mode": null,
+    "fail_on": "block",
+    "waivers": true
+  },
+  "scanned_files": 77,
+  "findings": [
+    {
+      "rule": "pure-black-body-text",
+      "as_overlay": "AS1",
+      "severity": "warning",
+      "evidence_mode": "cli",
+      "file": "skills/frontend-ux/tailwind-css/SKILL.md",
+      "line": 143,
+      "snippet": "<p class=\"text-gray-600 group-hover:text-black\">Text changes on parent hover</p>",
+      "message": "text-black on <p>"
+    }
+  ],
+  "not_assessed": [
+    {
+      "rule": "design-system-font",
+      "reason": "no token source: pass --tokens, set \"tokens\" in .chwezi/slop.json, or add design-tokens.json / a DTCG tokens.json"
+    },
+    {
+      "rule": "design-system-color",
+      "reason": "no token source: pass --tokens, set \"tokens\" in .chwezi/slop.json, or add design-tokens.json / a DTCG tokens.json"
+    },
+    {
+      "rule": "design-system-radius",
+      "reason": "no token source: pass --tokens, set \"tokens\" in .chwezi/slop.json, or add design-tokens.json / a DTCG tokens.json"
+    },
+    {
+      "rule": "design-system-font-size",
+      "reason": "no token source: pass --tokens, set \"tokens\" in .chwezi/slop.json, or add design-tokens.json / a DTCG tokens.json"
+    }
+  ],
+  "waived": [],
+  "errors": [],
+  "known_rules": 49,
+  "rules_run": [
+    "banned-primary-font",
+    "conditional-source-sans-primary",
+    "flat-type-hierarchy",
+    "body-leading-tight",
+    "body-leading-loose",
+    "heading-wide-tracking",
+    "body-wide-tracking",
+    "extreme-negative-tracking",
+    "justified-body-text",
+    "tiny-text",
+    "all-caps-body",
+    "line-length",
+    "skipped-heading",
+    "italic-serif-display",
+    "gradient-text",
+    "purple-blue-gradient",
+    "neon-glow",
+    "glassmorphism",
+    "ai-beige-ground",
+    "radial-halo",
+    "pure-black-body-text",
+    "gray-on-color",
+    "stripes-or-grid-background",
+    "decorative-side-stripe",
+    "nested-cards",
+    "hero-eyebrow-chip",
+    "kicker-above-heading",
+    "numbered-section-labels",
+    "identical-three-column-feature-grid",
+    "thin-border-wide-shadow",
+    "bounce-easing",
+    "pulsing-dot",
+    "blinking-cursor",
+    "marquee",
+    "missing-reduced-motion",
+    "broken-local-image",
+    "placeholder-image-host",
+    "focus-indicator-removed",
+    "design-system-font",
+    "design-system-color",
+    "design-system-radius",
+    "design-system-font-size"
+  ],
+  "summary": {
+    "findings": 1,
+    "waived": 0,
+    "not_assessed": 4,
+    "by_severity": {
+      "block": 0,
+      "warning": 1,
+      "advisory": 0
+    },
+    "by_rule": {
+      "pure-black-body-text": 1
+    }
+  },
+  "exit_code": 0
+}
