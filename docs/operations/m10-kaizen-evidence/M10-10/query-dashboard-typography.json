@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "catalog_revision": "2026-09-29-m10-10-v1",
+  "calibration_version": "2026-10-v1",
+  "query": "dashboard typography",
+  "query_tokens": [
+    "dashboard",
+    "typography"
+  ],
+  "route": {
+    "domain": "typography",
+    "confidence": 0.589,
+    "alternatives": [
+      [
+        "chart",
+        5.137
+      ],
+      [
+        "color",
+        3.069
+      ]
+    ],
+    "reason": "BM25 domain evidence"
+  },
+  "filters": {
+    "domain": null,
+    "stack": null,
+    "status": "current"
+  },
+  "results": [
+    {
+      "record_id": "type-04-public-sans-tabular-mono",
+      "domain": "typography",
+      "title": "Dashboard and admin UI: Public Sans with tabular figures and JetBrains Mono",
+      "score": 7.373,
+      "status": "active",
+      "stack": null,
+      "explanation": [
+        "BM25 7.363 (tags x3, title x2, content x1)",
+        "query-token coverage 1.00"
+      ],
+      "content": {
+        "heading": "Public Sans",
+        "body": "Public Sans",
+        "mono": "JetBrains Mono",
+        "group": "04",
+        "use_case": "Dashboards, admin panels, analytics and data tables",
+        "rules": [
+          "weight carries hierarchy: Public Sans 700 headings, 400 body",
+          "tabular-nums on every numeric column",
+          "mono confined to IDs, code and logs"
+        ]
+      },
+      "coverage": 1.0
+    },
+    {
+      "record_id": "typography-readable-scale",
+      "domain": "typography",
+      "title": "Readable product type scale",
+      "score": 1.417,
+      "status": "active",
+      "stack": null,
+      "explanation": [
+        "BM25 1.407 (tags x3, title x2, content x1)",
+        "query-token coverage 0.50"
+      ],
+      "content": {
+        "kind": "guidance",
+        "use_when": "Text density, scanning, or responsive reading is a concern.",
+        "practice": "Choose a contextual scale, then tune weight, line-height, measure, numeric alignment, tracking, and content expansion.",
+        "checks": [
+          "long labels fit",
+          "numbers remain scannable",
+          "body measure supports reading",
+          "font licensing is recorded"
+        ]
+      },
+      "coverage": 0.5
+    },
+    {
+      "record_id": "type-02-alegreya-alegreya-sans",
+      "domain": "typography",
+      "title": "Humanist editorial: Alegreya over Alegreya Sans",
+      "score": 1.388,
+      "status": "active",
+      "stack": null,
+      "explanation": [
+        "BM25 1.378 (tags x3, title x2, content x1)",
+        "query-token coverage 0.50"
+      ],
+      "content": {
+        "heading": "Alegreya",
+        "body": "Alegreya Sans",
+        "group": "02",
+        "use_case": "Education, culture and long-form narrative reports",
+        "rules": [
+          "Alegreya 700 headings, Alegreya Sans 400 body"
+        ]
+      },
+      "coverage": 0.5
+    },
+    {
+      "record_id": "type-06-eczar-alegreya-sans",
+      "domain": "typography",
+      "title": "Textured campaign: Eczar over Alegreya Sans",
+      "score": 1.384,
+      "status": "active",
+      "stack": null,
+      "explanation": [
+        "BM25 1.374 (tags x3, title x2, content x1)",
+        "query-token coverage 0.50"
+      ],
+      "content": {
+        "heading": "Eczar",
+        "body": "Alegreya Sans",
+        "group": "06",
+        "use_case": "Festival, arts and campaign headlines with warm body text",
+        "rules": [
+          "Eczar 700 heads only",
+          "Alegreya Sans 400 body"
+        ]
+      },
+      "coverage": 0.5
+    },
+    {
+      "record_id": "type-06-unbounded-public-sans",
+      "domain": "typography",
+      "title": "Event identity: Unbounded over Public Sans",
+      "score": 1.379,
+      "status": "active",
+      "stack": null,
+      "explanation": [
+        "BM25 1.369 (tags x3, title x2, content x1)",
+        "query-token coverage 0.50"
+      ],
+      "content": {
+        "heading": "Unbounded",
+        "body": "Public Sans",
+        "group": "06",
+        "use_case": "Event identities, portfolio covers, bold hero sections",
+        "rules": [
+          "Unbounded 700 for a few words",
+          "Public Sans 400 for everything readable"
+        ]
+      },
+      "coverage": 0.5
+    }
+  ],
+  "abstained": false
+}

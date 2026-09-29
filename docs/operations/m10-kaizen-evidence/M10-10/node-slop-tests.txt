@@ -1,0 +1,9 @@
+✔ --no-waivers reports waived findings and skips waiver validation (275.2092ms)
+ℹ tests 117
+ℹ suites 0
+ℹ pass 116
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 7990.0693

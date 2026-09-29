@@ -1,0 +1,150 @@
+$ validate_design_catalog.py data/design-catalog.json
+design-catalog-validator:
+- source: C:\wamp64\www\design-system-skills\data\design-catalog.json
+- revision: 2026-09-29-m10-10-v1
+- calibration: 2026-10-v1
+- font doctrine: C:\wamp64\www\design-system-skills\doctrine\references\ai-slop-banned-fonts.json
+- records: 66 (typography pairings 28, palettes 6, WCAG A/AA 19)
+- stack guidance: 22
+  contrast color-palette-maduuka-institutional [light] on_primary/primary = 4.86:1 (min 4.5:1) PASS
+  contrast color-palette-maduuka-institutional [light] on_secondary/secondary = 6.84:1 (min 4.5:1) PASS
+  contrast color-palette-maduuka-institutional [light] on_surface/surface = 17.45:1 (min 4.5:1) PASS
+  contrast color-palette-maduuka-institutional [light] foreground/background = 16.88:1 (min 4.5:1) PASS
+  contrast color-palette-maduuka-institutional [light] on_muted/muted = 6.71:1 (min 4.5:1) PASS
+  contrast color-palette-maduuka-institutional [light] on_destructive/destructive = 7.04:1 (min 4.5:1) PASS
+  contrast color-palette-maduuka-institutional [light] border/surface = 4.59:1 (min 3.0:1) PASS
+  contrast color-palette-maduuka-institutional [light] ring/background = 4.70:1 (min 3.0:1) PASS
+  contrast color-palette-maduuka-institutional [dark] on_primary/primary = 6.35:1 (min 4.5:1) PASS
+  contrast color-palette-maduuka-institutional [dark] on_secondary/secondary = 7.50:1 (min 4.5:1) PASS
+  contrast color-palette-maduuka-institutional [dark] on_surface/surface = 14.37:1 (min 4.5:1) PASS
+  contrast color-palette-maduuka-institutional [dark] foreground/background = 18.24:1 (min 4.5:1) PASS
+  contrast color-palette-maduuka-institutional [dark] on_muted/muted = 6.62:1 (min 4.5:1) PASS
+  contrast color-palette-maduuka-institutional [dark] on_destructive/destructive = 7.04:1 (min 4.5:1) PASS
+  contrast color-palette-maduuka-institutional [dark] border/surface = 5.63:1 (min 3.0:1) PASS
+  contrast color-palette-maduuka-institutional [dark] ring/background = 6.35:1 (min 3.0:1) PASS
+  contrast color-palette-kesilex-green [light] on_primary/primary = 6.08:1 (min 4.5:1) PASS
+  contrast color-palette-kesilex-green [light] on_secondary/secondary = 5.23:1 (min 4.5:1) PASS
+  contrast color-palette-kesilex-green [light] on_surface/surface = 17.45:1 (min 4.5:1) PASS
+  contrast color-palette-kesilex-green [light] foreground/background = 16.88:1 (min 4.5:1) PASS
+  contrast color-palette-kesilex-green [light] on_muted/muted = 6.71:1 (min 4.5:1) PASS
+  contrast color-palette-kesilex-green [light] on_destructive/destructive = 7.04:1 (min 4.5:1) PASS
+  contrast color-palette-kesilex-green [light] border/surface = 4.59:1 (min 3.0:1) PASS
+  contrast color-palette-kesilex-green [light] ring/background = 5.88:1 (min 3.0:1) PASS
+  contrast color-palette-forest-monochrome [light] on_primary/primary = 6.87:1 (min 4.5:1) PASS
+  contrast color-palette-forest-monochrome [light] on_secondary/secondary = 5.50:1 (min 4.5:1) PASS
+  contrast color-palette-forest-monochrome [light] on_surface/surface = 17.45:1 (min 4.5:1) PASS
+  contrast color-palette-forest-monochrome [light] foreground/background = 16.88:1 (min 4.5:1) PASS
+  contrast color-palette-forest-monochrome [light] on_muted/muted = 6.71:1 (min 4.5:1) PASS
+  contrast color-palette-forest-monochrome [light] on_destructive/destructive = 7.04:1 (min 4.5:1) PASS
+  contrast color-palette-forest-monochrome [light] border/surface = 4.59:1 (min 3.0:1) PASS
+  contrast color-palette-forest-monochrome [light] ring/background = 6.64:1 (min 3.0:1) PASS
+  contrast color-palette-terracotta-monochrome [light] on_primary/primary = 11.99:1 (min 4.5:1) PASS
+  contrast color-palette-terracotta-monochrome [light] on_secondary/secondary = 7.50:1 (min 4.5:1) PASS
+  contrast color-palette-terracotta-monochrome [light] on_surface/surface = 17.45:1 (min 4.5:1) PASS
+  contrast color-palette-terracotta-monochrome [light] foreground/background = 16.88:1 (min 4.5:1) PASS
+  contrast color-palette-terracotta-monochrome [light] on_muted/muted = 6.71:1 (min 4.5:1) PASS
+  contrast color-palette-terracotta-monochrome [light] on_destructive/destructive = 17.45:1 (min 4.5:1) PASS
+  contrast color-palette-terracotta-monochrome [light] border/surface = 4.59:1 (min 3.0:1) PASS
+  contrast color-palette-terracotta-monochrome [light] ring/background = 11.60:1 (min 3.0:1) PASS
+  contrast color-palette-ochre-monochrome [light] on_primary/primary = 7.20:1 (min 4.5:1) PASS
+  contrast color-palette-ochre-monochrome [light] on_secondary/secondary = 5.71:1 (min 4.5:1) PASS
+  contrast color-palette-ochre-monochrome [light] on_surface/surface = 17.45:1 (min 4.5:1) PASS
+  contrast color-palette-ochre-monochrome [light] foreground/background = 16.88:1 (min 4.5:1) PASS
+  contrast color-palette-ochre-monochrome [light] on_muted/muted = 6.71:1 (min 4.5:1) PASS
+  contrast color-palette-ochre-monochrome [light] on_destructive/destructive = 7.04:1 (min 4.5:1) PASS
+  contrast color-palette-ochre-monochrome [light] border/surface = 4.59:1 (min 3.0:1) PASS
+  contrast color-palette-ochre-monochrome [light] ring/background = 6.97:1 (min 3.0:1) PASS
+  contrast color-palette-ink-monochrome [light] on_primary/primary = 10.72:1 (min 4.5:1) PASS
+  contrast color-palette-ink-monochrome [light] on_secondary/secondary = 7.30:1 (min 4.5:1) PASS
+  contrast color-palette-ink-monochrome [light] on_surface/surface = 17.45:1 (min 4.5:1) PASS
+  contrast color-palette-ink-monochrome [light] foreground/background = 16.88:1 (min 4.5:1) PASS
+  contrast color-palette-ink-monochrome [light] on_muted/muted = 6.71:1 (min 4.5:1) PASS
+  contrast color-palette-ink-monochrome [light] on_destructive/destructive = 7.04:1 (min 4.5:1) PASS
+  contrast color-palette-ink-monochrome [light] border/surface = 4.59:1 (min 3.0:1) PASS
+  contrast color-palette-ink-monochrome [light] ring/background = 10.37:1 (min 3.0:1) PASS
+- stale as of 2026-09-29: 0
+PASS: schema, domain coverage, stack coverage, evidence, font doctrine lint, contrast and lifecycle checks passed
+rc=0
+$ ... --as-of 2027-12-01 --quiet-contrast
+design-catalog-validator:
+- source: C:\wamp64\www\design-system-skills\data\design-catalog.json
+- revision: 2026-09-29-m10-10-v1
+- calibration: 2026-10-v1
+- font doctrine: C:\wamp64\www\design-system-skills\doctrine\references\ai-slop-banned-fonts.json
+- records: 66 (typography pairings 28, palettes 6, WCAG A/AA 19)
+- stack guidance: 22
+WARN stale: chart-decision-story recheck_due 2026-12-19
+WARN stale: color-palette-forest-monochrome recheck_due 2026-12-28
+WARN stale: color-palette-ink-monochrome recheck_due 2026-12-28
+WARN stale: color-palette-kesilex-green recheck_due 2026-12-28
+WARN stale: color-palette-maduuka-institutional recheck_due 2026-12-28
+WARN stale: color-palette-ochre-monochrome recheck_due 2026-12-28
+WARN stale: color-palette-terracotta-monochrome recheck_due 2026-12-28
+WARN stale: color-semantic-state recheck_due 2026-12-19
+WARN stale: google-fonts-licensed-pairing recheck_due 2026-12-19
+WARN stale: gsap-reduced-motion recheck_due 2026-12-19
+WARN stale: icons-semantic-safe recheck_due 2026-12-19
+WARN stale: landing-trust-action recheck_due 2026-12-19
+WARN stale: product-outcome-first recheck_due 2026-12-19
+WARN stale: react-stateful-components recheck_due 2026-12-19
+WARN stale: style-feature-first-hierarchy recheck_due 2026-12-19
+WARN stale: style-legacy-flat recheck_due 2026-12-19
+WARN stale: type-01-source-serif-public-sans recheck_due 2027-09-29
+WARN stale: type-01-source-serif-public-sans-mono recheck_due 2027-09-29
+WARN stale: type-01-spectral-public-sans recheck_due 2027-09-29
+WARN stale: type-01-spectral-source-serif recheck_due 2027-09-29
+WARN stale: type-02-alegreya-alegreya-sans recheck_due 2027-09-29
+WARN stale: type-02-andada-source-serif recheck_due 2027-09-29
+WARN stale: type-02-libre-caslon-public-sans recheck_due 2027-09-29
+WARN stale: type-02-theano-didot-source-serif recheck_due 2027-09-29
+WARN stale: type-03-bricolage-hanken recheck_due 2027-09-29
+WARN stale: type-03-bricolage-public-sans recheck_due 2027-09-29
+WARN stale: type-03-cabinet-hanken recheck_due 2027-09-29
+WARN stale: type-04-jetbrains-mono-public-sans recheck_due 2027-09-29
+WARN stale: type-04-public-sans-tabular-mono recheck_due 2027-09-29
+WARN stale: type-04-source-serif-public-sans-mono recheck_due 2027-09-29
+WARN stale: type-04-unbounded-public-sans-mono recheck_due 2027-09-29
+WARN stale: type-05-alegreya-atkinson recheck_due 2027-09-29
+WARN stale: type-05-atkinson-public-sans recheck_due 2027-09-29
+WARN stale: type-05-bricolage-lexend recheck_due 2027-09-29
+WARN stale: type-06-bodoni-moda-public-sans recheck_due 2027-09-29
+WARN stale: type-06-eczar-alegreya-sans recheck_due 2027-09-29
+WARN stale: type-06-unbounded-public-sans recheck_due 2027-09-29
+WARN stale: type-07-caveat-alegreya-atkinson recheck_due 2027-09-29
+WARN stale: type-07-great-vibes-theano-public-sans recheck_due 2027-09-29
+WARN stale: type-07-kalam-alegreya-sans recheck_due 2027-09-29
+WARN stale: type-07-sacramento-bodoni-public-sans recheck_due 2027-09-29
+WARN stale: type-08-andada-public-sans recheck_due 2027-09-29
+WARN stale: type-08-libre-baskerville-public-sans recheck_due 2027-09-29
+WARN stale: type-08-spectral-atkinson recheck_due 2027-09-29
+WARN stale: typography-readable-scale recheck_due 2026-12-19
+WARN stale: ux-observe-fix-retest recheck_due 2026-12-19
+WARN stale: ux-wcag-1-1-1 recheck_due 2027-09-29
+WARN stale: ux-wcag-1-4-10 recheck_due 2027-09-29
+WARN stale: ux-wcag-1-4-11 recheck_due 2027-09-29
+WARN stale: ux-wcag-1-4-12 recheck_due 2027-09-29
+WARN stale: ux-wcag-1-4-13 recheck_due 2027-09-29
+WARN stale: ux-wcag-1-4-3 recheck_due 2027-09-29
+WARN stale: ux-wcag-1-4-4 recheck_due 2027-09-29
+WARN stale: ux-wcag-2-1-1 recheck_due 2027-09-29
+WARN stale: ux-wcag-2-2-2 recheck_due 2027-09-29
+WARN stale: ux-wcag-2-3-1 recheck_due 2027-09-29
+WARN stale: ux-wcag-2-4-11 recheck_due 2027-09-29
+WARN stale: ux-wcag-2-4-3 recheck_due 2027-09-29
+WARN stale: ux-wcag-2-4-7 recheck_due 2027-09-29
+WARN stale: ux-wcag-2-5-7 recheck_due 2027-09-29
+WARN stale: ux-wcag-2-5-8 recheck_due 2027-09-29
+WARN stale: ux-wcag-3-2-6 recheck_due 2027-09-29
+WARN stale: ux-wcag-3-3-7 recheck_due 2027-09-29
+WARN stale: ux-wcag-3-3-8 recheck_due 2027-09-29
+WARN stale: ux-wcag-4-1-2 recheck_due 2027-09-29
+WARN stale: web-progressive-enhancement recheck_due 2026-12-19
+- stale as of 2027-12-01: 66
+PASS: schema, domain coverage, stack coverage, evidence, font doctrine lint, contrast and lifecycle checks passed
+rc=0
+$ banned-heading.json
+FAIL: type-fixture-banned-heading: content.heading 'Inter' is banned by doctrine (hard)
+rc=1
+$ low-contrast-palette.json
+FAIL: color-fixture-low-contrast: contrast on_primary/primary (light) is 3.45:1, below 4.5:1
+rc=1

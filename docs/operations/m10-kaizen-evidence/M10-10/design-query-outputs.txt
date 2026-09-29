@@ -1,0 +1,12 @@
+$ design_query.py search "dashboard typography" 
+{"calibration_version": "2026-10-v1", "abstained": false, "error": null} [('type-04-public-sans-tabular-mono', 7.373, 1.0), ('typography-readable-scale', 1.417, 0.5)]
+rc=0
+$ design_query.py search "statutory report typography" --domain typography
+{"calibration_version": "2026-10-v1", "abstained": false, "error": null} [('type-01-source-serif-public-sans', 12.884, 1.0), ('type-02-alegreya-alegreya-sans', 4.355, 0.667)]
+rc=0
+$ design_query.py search "target size" --domain ux
+{"calibration_version": "2026-10-v1", "abstained": false, "error": null} [('ux-wcag-2-5-8', 9.323, 1.0), ('ux-wcag-1-4-4', 3.276, 0.5)]
+rc=0
+$ design_query.py search "quantum telescope" --strict
+{"calibration_version": "2026-10-v1", "abstained": true, "error": "no records satisfied the query and filters"} []
+rc=2

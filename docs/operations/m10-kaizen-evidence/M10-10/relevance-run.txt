@@ -1,0 +1,4 @@
+vendored retrieval_metrics.py hash check: PASS (header 1829b5880310 actual 1829b5880310)
+calibration: p_at_1=1.000 mrr_at_3=1.000 ndcg_at_3=0.907 negative_abstention=1.000 typo_recovery_at_3=1.000 (n=24)
+held_out: p_at_1=1.000 mrr_at_3=1.000 ndcg_at_3=0.968 negative_abstention=1.000 typo_recovery_at_3=1.000 (n=16)
+PASS: held-out metrics at or above floors (provisional regression gate); fingerprints match

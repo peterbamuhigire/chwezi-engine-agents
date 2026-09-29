@@ -1,0 +1,417 @@
+{
+  "calibration_version": "2026-10-v1",
+  "splits": {
+    "calibration": {
+      "metrics": {
+        "cases": 24,
+        "p_at_1": 1.0,
+        "mrr_at_3": 1.0,
+        "ndcg_at_3": 0.9073,
+        "negative_abstention": 1.0,
+        "typo_recovery_at_3": 1.0
+      },
+      "cases": [
+        {
+          "id": "c01",
+          "kind": "positive",
+          "query": "statutory report typography",
+          "top3": [
+            "type-01-source-serif-public-sans",
+            "type-02-alegreya-alegreya-sans",
+            "type-02-theano-didot-source-serif"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "c02",
+          "kind": "positive",
+          "query": "dashboard typography",
+          "top3": [
+            "type-04-public-sans-tabular-mono",
+            "typography-readable-scale",
+            "type-02-alegreya-alegreya-sans"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "c03",
+          "kind": "positive",
+          "query": "whitepaper typography",
+          "top3": [
+            "type-02-andada-source-serif",
+            "typography-readable-scale",
+            "type-02-alegreya-alegreya-sans"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "c04",
+          "kind": "positive",
+          "query": "saas landing page fonts",
+          "top3": [
+            "type-03-bricolage-hanken",
+            "type-02-theano-didot-source-serif",
+            "type-03-bricolage-public-sans"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "c05",
+          "kind": "positive",
+          "query": "target size touch",
+          "top3": [
+            "ux-wcag-2-5-8"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "c06",
+          "kind": "positive",
+          "query": "focus visible outline",
+          "top3": [
+            "ux-wcag-2-4-7"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "c07",
+          "kind": "positive",
+          "query": "keyboard operable controls",
+          "top3": [
+            "ux-wcag-2-1-1"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "c08",
+          "kind": "positive",
+          "query": "palette with dark mode tokens",
+          "top3": [
+            "color-palette-maduuka-institutional",
+            "color-semantic-state",
+            "color-palette-kesilex-green"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "c09",
+          "kind": "positive",
+          "query": "usability research retest",
+          "top3": [
+            "ux-observe-fix-retest"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "c10",
+          "kind": "positive",
+          "query": "reduced motion fallback",
+          "top3": [
+            "gsap-reduced-motion"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "c11",
+          "kind": "positive",
+          "query": "icon label pairing",
+          "top3": [
+            "icons-semantic-safe"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "c12",
+          "kind": "positive",
+          "query": "healthcare service typography",
+          "top3": [
+            "type-05-alegreya-atkinson",
+            "type-05-atkinson-public-sans",
+            "type-07-caveat-alegreya-atkinson"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "c13",
+          "kind": "positive",
+          "query": "signature script accent",
+          "top3": [
+            "type-07-great-vibes-theano-public-sans",
+            "type-07-caveat-alegreya-atkinson",
+            "type-07-kalam-alegreya-sans"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "c14",
+          "kind": "positive",
+          "query": "text contrast minimum",
+          "top3": [
+            "ux-wcag-1-4-3",
+            "ux-wcag-1-4-11"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "c15",
+          "kind": "positive",
+          "query": "second brand green palette",
+          "top3": [
+            "color-palette-kesilex-green",
+            "color-palette-forest-monochrome",
+            "color-palette-terracotta-monochrome"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "c16",
+          "kind": "negative",
+          "query": "kubernetes cluster autoscaling",
+          "top3": [],
+          "abstained": true
+        },
+        {
+          "id": "c17",
+          "kind": "negative",
+          "query": "chart of accounts ifrs",
+          "top3": [],
+          "abstained": true
+        },
+        {
+          "id": "c18",
+          "kind": "negative",
+          "query": "mortgage interest rate calculator",
+          "top3": [],
+          "abstained": true
+        },
+        {
+          "id": "c19",
+          "kind": "negative",
+          "query": "football league fixtures",
+          "top3": [],
+          "abstained": true
+        },
+        {
+          "id": "c20",
+          "kind": "negative",
+          "query": "colour of the sky at dusk",
+          "top3": [],
+          "abstained": true
+        },
+        {
+          "id": "c21",
+          "kind": "negative",
+          "query": "react to customer complaint email",
+          "top3": [],
+          "abstained": true
+        },
+        {
+          "id": "c22",
+          "kind": "typo",
+          "query": "dashbord typography",
+          "top3": [
+            "type-04-public-sans-tabular-mono",
+            "typography-readable-scale",
+            "type-02-alegreya-alegreya-sans"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "c23",
+          "kind": "typo",
+          "query": "targt size",
+          "top3": [
+            "ux-wcag-2-5-8",
+            "ux-wcag-1-4-4"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "c24",
+          "kind": "typo",
+          "query": "whitepapr typography",
+          "top3": [
+            "type-02-andada-source-serif",
+            "typography-readable-scale",
+            "type-02-alegreya-alegreya-sans"
+          ],
+          "abstained": false
+        }
+      ]
+    },
+    "held_out": {
+      "metrics": {
+        "cases": 16,
+        "p_at_1": 1.0,
+        "mrr_at_3": 1.0,
+        "ndcg_at_3": 0.9684,
+        "negative_abstention": 1.0,
+        "typo_recovery_at_3": 1.0
+      },
+      "cases": [
+        {
+          "id": "h01",
+          "kind": "positive",
+          "query": "policy brief typography",
+          "top3": [
+            "type-01-spectral-public-sans"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "h02",
+          "kind": "positive",
+          "query": "api documentation fonts",
+          "top3": [
+            "type-04-source-serif-public-sans-mono",
+            "type-04-jetbrains-mono-public-sans"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "h03",
+          "kind": "positive",
+          "query": "luxury poster display type",
+          "top3": [
+            "type-06-bodoni-moda-public-sans"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "h04",
+          "kind": "positive",
+          "query": "drag reorder alternative",
+          "top3": [
+            "ux-wcag-2-5-7"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "h05",
+          "kind": "positive",
+          "query": "password paste login",
+          "top3": [
+            "ux-wcag-3-3-8"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "h06",
+          "kind": "positive",
+          "query": "alt text for images",
+          "top3": [
+            "ux-wcag-1-1-1"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "h07",
+          "kind": "positive",
+          "query": "onboarding learning typography",
+          "top3": [
+            "type-05-bricolage-lexend"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "h08",
+          "kind": "positive",
+          "query": "pause carousel autoplay",
+          "top3": [
+            "ux-wcag-2-2-2"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "h09",
+          "kind": "positive",
+          "query": "forest green palette",
+          "top3": [
+            "color-palette-forest-monochrome",
+            "color-palette-kesilex-green"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "h10",
+          "kind": "negative",
+          "query": "quantum telescope",
+          "top3": [],
+          "abstained": true
+        },
+        {
+          "id": "h11",
+          "kind": "negative",
+          "query": "tax return deadline",
+          "top3": [],
+          "abstained": true
+        },
+        {
+          "id": "h12",
+          "kind": "negative",
+          "query": "recipe for banana bread",
+          "top3": [],
+          "abstained": true
+        },
+        {
+          "id": "h13",
+          "kind": "negative",
+          "query": "vpn firewall rules",
+          "top3": [],
+          "abstained": true
+        },
+        {
+          "id": "h14",
+          "kind": "negative",
+          "query": "invoice payment terms",
+          "top3": [],
+          "abstained": true
+        },
+        {
+          "id": "h15",
+          "kind": "typo",
+          "query": "pause carousl autoplay",
+          "top3": [
+            "ux-wcag-2-2-2"
+          ],
+          "abstained": false
+        },
+        {
+          "id": "h16",
+          "kind": "typo",
+          "query": "pasword paste login",
+          "top3": [
+            "ux-wcag-3-3-8"
+          ],
+          "abstained": false
+        }
+      ]
+    }
+  },
+  "baseline": {
+    "label": "provisional regression gate",
+    "note": "Floors = first measured held-out values minus 0.02, rounded down. Not a quality target until a second reviewer re-judges the cases.",
+    "calibration_version": "2026-10-v1",
+    "floors": {
+      "p_at_1": 0.98,
+      "mrr_at_3": 0.98,
+      "ndcg_at_3": 0.94,
+      "negative_abstention": 0.98,
+      "typo_recovery_at_3": 0.98
+    },
+    "held_out_at_baseline": {
+      "cases": 16,
+      "p_at_1": 1.0,
+      "mrr_at_3": 1.0,
+      "ndcg_at_3": 0.9684,
+      "negative_abstention": 1.0,
+      "typo_recovery_at_3": 1.0
+    },
+    "fingerprints_sha256_lf": {
+      "data/design-catalog.json": "56ffd9a4017d782172a9a48cbf348f8313cdc5e931da19c4fc028ec661671a4a",
+      "data/retrieval-calibration.json": "dde500c0fd6a7f89c43a9089306057797bec665d39cb576adb88e046d2a91169",
+      "engine/design_engine/catalog.py": "f595aa7669830ef09c18ed025240f760f2b2fd5eedecd83286a8ac97c6ad6628",
+      "tests/fixtures/catalog-relevance/cases.json": "39b2826397ae5fc57ed2cd6260323ea9e526fcfd9d2c9115225be2562a28cc85"
+    }
+  }
+}

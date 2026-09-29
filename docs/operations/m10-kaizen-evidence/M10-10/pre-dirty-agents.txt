@@ -1,0 +1,19 @@
+ M scripts/validate-contracts.py
+?? docs/engine-tours/
+?? docs/operations/m10-kaizen-evidence/M10-10/pre-dirty-agents.txt
+?? docs/operations/m10-kaizen-evidence/M10-10/pre-dirty-design.txt
+?? docs/operations/project-context-contract.md
+?? evals/behavioural/
+?? evals/mcp/
+?? evals/plugin/
+?? schemas/project-context.schema.json
+?? scripts/generate_engine_tour.py
+?? scripts/project_context_doctor.py
+?? scripts/run_behavioural_eval.py
+?? scripts/skill_fanin.py
+?? templates/
+?? tests/fixtures/engine-workspace/
+?? tests/fixtures/project-context/
+?? tests/test_project_context_doctor.py
+?? tests/test_run_behavioural_eval.py
+?? tests/test_skill_fanin.py
