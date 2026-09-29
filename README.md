@@ -32,6 +32,12 @@ The shared installer also supports project/user scope, dry-run, doctor, update, 
 | Safety and shared rules | Distributes a Bash destructive-command gate and provides a skill for proposing recurring principles for shared rules. | [`hooks/`](hooks/), [`skills/rules-distill/`](skills/rules-distill/) |
 | Coordination standards | Defines evidence expectations and craft practices for cross-engine work. | [`docs/operations/`](docs/operations/) |
 
+Coordination cards (checked by `scripts/validate-kaizen-cards.py`):
+
+- [`agentic-h2-readiness-card.md`](docs/operations/agentic-h2-readiness-card.md): H2 readiness and agentic-literacy card.
+- [`three-horizon-ai-adoption-card.md`](docs/operations/three-horizon-ai-adoption-card.md): three-horizon adoption and frontier card.
+- [`task-runbook-and-integration-evidence.md`](docs/operations/task-runbook-and-integration-evidence.md): task runbook and integration evidence card.
+
 ## References
 
 - [Chwezi Engine Agents source repository](https://github.com/peterbamuhigire/chwezi-engine-agents)
