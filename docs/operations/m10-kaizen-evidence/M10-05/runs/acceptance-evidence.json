@@ -1,0 +1,332 @@
+{
+  "schema_version": 1,
+  "baseline_id": "acceptance-baseline-arm",
+  "suite": "acceptance",
+  "runs": [
+    {
+      "run_id": "acceptance.065-accept-srs-skills.engine.r1",
+      "arm": "engine",
+      "fixture": "065-accept-srs-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.065-accept-srs-skills.engine.r2",
+      "arm": "engine",
+      "fixture": "065-accept-srs-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.065-accept-srs-skills.engine.r3",
+      "arm": "engine",
+      "fixture": "065-accept-srs-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.066-accept-business-plan-skills.engine.r1",
+      "arm": "engine",
+      "fixture": "066-accept-business-plan-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.066-accept-business-plan-skills.engine.r2",
+      "arm": "engine",
+      "fixture": "066-accept-business-plan-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.066-accept-business-plan-skills.engine.r3",
+      "arm": "engine",
+      "fixture": "066-accept-business-plan-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.067-accept-website-skills.engine.r1",
+      "arm": "engine",
+      "fixture": "067-accept-website-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.067-accept-website-skills.engine.r2",
+      "arm": "engine",
+      "fixture": "067-accept-website-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.067-accept-website-skills.engine.r3",
+      "arm": "engine",
+      "fixture": "067-accept-website-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.068-accept-social-media-skills.engine.r1",
+      "arm": "engine",
+      "fixture": "068-accept-social-media-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.068-accept-social-media-skills.engine.r2",
+      "arm": "engine",
+      "fixture": "068-accept-social-media-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.068-accept-social-media-skills.engine.r3",
+      "arm": "engine",
+      "fixture": "068-accept-social-media-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.069-accept-linux-skills.engine.r1",
+      "arm": "engine",
+      "fixture": "069-accept-linux-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.069-accept-linux-skills.engine.r2",
+      "arm": "engine",
+      "fixture": "069-accept-linux-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.069-accept-linux-skills.engine.r3",
+      "arm": "engine",
+      "fixture": "069-accept-linux-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.070-accept-proposal-skills.engine.r1",
+      "arm": "engine",
+      "fixture": "070-accept-proposal-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.070-accept-proposal-skills.engine.r2",
+      "arm": "engine",
+      "fixture": "070-accept-proposal-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.070-accept-proposal-skills.engine.r3",
+      "arm": "engine",
+      "fixture": "070-accept-proposal-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.071-accept-chwezi-dev-engine.engine.r1",
+      "arm": "engine",
+      "fixture": "071-accept-chwezi-dev-engine",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.071-accept-chwezi-dev-engine.engine.r2",
+      "arm": "engine",
+      "fixture": "071-accept-chwezi-dev-engine",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.071-accept-chwezi-dev-engine.engine.r3",
+      "arm": "engine",
+      "fixture": "071-accept-chwezi-dev-engine",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.072-accept-chwezi-accounting-doctrine.engine.r1",
+      "arm": "engine",
+      "fixture": "072-accept-chwezi-accounting-doctrine",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.072-accept-chwezi-accounting-doctrine.engine.r2",
+      "arm": "engine",
+      "fixture": "072-accept-chwezi-accounting-doctrine",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.072-accept-chwezi-accounting-doctrine.engine.r3",
+      "arm": "engine",
+      "fixture": "072-accept-chwezi-accounting-doctrine",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.073-accept-design-system-skills.engine.r1",
+      "arm": "engine",
+      "fixture": "073-accept-design-system-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.073-accept-design-system-skills.engine.r2",
+      "arm": "engine",
+      "fixture": "073-accept-design-system-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.073-accept-design-system-skills.engine.r3",
+      "arm": "engine",
+      "fixture": "073-accept-design-system-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.074-accept-digital-research-skills.engine.r1",
+      "arm": "engine",
+      "fixture": "074-accept-digital-research-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.074-accept-digital-research-skills.engine.r2",
+      "arm": "engine",
+      "fixture": "074-accept-digital-research-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.074-accept-digital-research-skills.engine.r3",
+      "arm": "engine",
+      "fixture": "074-accept-digital-research-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.075-accept-windows-admin-engine-skills.engine.r1",
+      "arm": "engine",
+      "fixture": "075-accept-windows-admin-engine-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.075-accept-windows-admin-engine-skills.engine.r2",
+      "arm": "engine",
+      "fixture": "075-accept-windows-admin-engine-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.075-accept-windows-admin-engine-skills.engine.r3",
+      "arm": "engine",
+      "fixture": "075-accept-windows-admin-engine-skills",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.076-accept-chwezi-engine-agents.engine.r1",
+      "arm": "engine",
+      "fixture": "076-accept-chwezi-engine-agents",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.076-accept-chwezi-engine-agents.engine.r2",
+      "arm": "engine",
+      "fixture": "076-accept-chwezi-engine-agents",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "acceptance.076-accept-chwezi-engine-agents.engine.r3",
+      "arm": "engine",
+      "fixture": "076-accept-chwezi-engine-agents",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "acceptance-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    }
+  ],
+  "note": "No model was run (zero-spend rule). cost_usd is omitted because it is unknown, not zero."
+}

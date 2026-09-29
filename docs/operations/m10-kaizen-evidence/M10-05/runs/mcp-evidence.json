@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "baseline_id": "mcp-baseline-arm",
+  "suite": "mcp",
+  "runs": [
+    {
+      "run_id": "mcp.Q01.mcp_only.r1",
+      "arm": "mcp_only",
+      "fixture": "Q01",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "mcp-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "mcp.Q02.mcp_only.r1",
+      "arm": "mcp_only",
+      "fixture": "Q02",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "mcp-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "mcp.Q03.mcp_only.r1",
+      "arm": "mcp_only",
+      "fixture": "Q03",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "mcp-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "mcp.Q04.mcp_only.r1",
+      "arm": "mcp_only",
+      "fixture": "Q04",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "mcp-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "mcp.Q05.mcp_only.r1",
+      "arm": "mcp_only",
+      "fixture": "Q05",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "mcp-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "mcp.Q06.mcp_only.r1",
+      "arm": "mcp_only",
+      "fixture": "Q06",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "mcp-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "mcp.Q07.mcp_only.r1",
+      "arm": "mcp_only",
+      "fixture": "Q07",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "mcp-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "mcp.Q08.mcp_only.r1",
+      "arm": "mcp_only",
+      "fixture": "Q08",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "mcp-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "mcp.Q09.mcp_only.r1",
+      "arm": "mcp_only",
+      "fixture": "Q09",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "mcp-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "mcp.Q10.mcp_only.r1",
+      "arm": "mcp_only",
+      "fixture": "Q10",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "mcp-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    }
+  ],
+  "note": "No model was run (zero-spend rule). cost_usd is omitted because it is unknown, not zero."
+}

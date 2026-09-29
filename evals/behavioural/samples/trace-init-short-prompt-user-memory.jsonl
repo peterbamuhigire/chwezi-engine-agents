@@ -1,0 +1,2 @@
+{"type": "system", "subtype": "init", "model": "SYNTHETIC-not-a-model", "cwd": "C:/Temp/chwezi-t3-synthetic/ws", "tools": ["Read", "Glob", "Grep"], "mcp_servers": [], "skills": [], "_synthetic": true, "plugins": [], "memory_files": ["C:/Users/example/.claude/CLAUDE.md"]}
+{"type": "result", "subtype": "success", "is_error": false, "num_turns": 1, "result": "ROUTING_TABLE_ABSENT", "_synthetic": true}

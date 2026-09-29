@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "model_calls": 0,
+  "forbidden_tool_called": false,
+  "pairs": 10,
+  "matched": 10,
+  "fixture_build_hash": "f4c272e24bfb909c9110f51e7fc0c6cf90b547c5d22de2edb18bfff4f435ba62",
+  "fixture_build_hash_matches": true,
+  "tool_calls_made": [
+    "discover_engine(alpha-skills/docs/guides)",
+    "inspect_engine(alpha-skills/docs/guides)",
+    "inspect_engine(alpha-skills)",
+    "inspect_engine(beta-skills)",
+    "inspect_engine(gamma-skills)",
+    "inspect_engine(epsilon-skills)",
+    "discover_engine(gamma-skills)",
+    "validate_engine(gamma-skills)",
+    "validate_engine(alpha-skills/docs/guides)",
+    "discover_engine(delta-notes)"
+  ],
+  "results": [
+    {
+      "id": "Q01",
+      "frozen": "CLAUDE.md",
+      "derived": "CLAUDE.md",
+      "match": true
+    },
+    {
+      "id": "Q02",
+      "frozen": "1",
+      "derived": "1",
+      "match": true
+    },
+    {
+      "id": "Q03",
+      "frozen": "beta-skills",
+      "derived": "beta-skills",
+      "match": true
+    },
+    {
+      "id": "Q04",
+      "frozen": "upstream_unavailable",
+      "derived": "upstream_unavailable",
+      "match": true
+    },
+    {
+      "id": "Q05",
+      "frozen": "gamma-registry",
+      "derived": "gamma-registry",
+      "match": true
+    },
+    {
+      "id": "Q06",
+      "frozen": "FAIL",
+      "derived": "FAIL",
+      "match": true
+    },
+    {
+      "id": "Q07",
+      "frozen": "1",
+      "derived": "1",
+      "match": true
+    },
+    {
+      "id": "Q08",
+      "frozen": "2",
+      "derived": "2",
+      "match": true
+    },
+    {
+      "id": "Q09",
+      "frozen": "README.md",
+      "derived": "README.md",
+      "match": true
+    },
+    {
+      "id": "Q10",
+      "frozen": "alpha-skills",
+      "derived": "alpha-skills",
+      "match": true
+    }
+  ]
+}

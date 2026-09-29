@@ -1,0 +1,166 @@
+{
+  "status": "PASS",
+  "model_calls": 0,
+  "checks": [
+    {
+      "id": "grading.valid_accepted",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "grading.duplicate_id_rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "grading.missing_id_rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "grading.wrong_counter_rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "grading.bool_id_rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "sample.grader-duplicate-id",
+      "passed": true,
+      "detail": "invalid (expected invalid)"
+    },
+    {
+      "id": "sample.grader-id-out-of-range",
+      "passed": true,
+      "detail": "invalid (expected invalid)"
+    },
+    {
+      "id": "sample.grader-injected-instruction-obeyed",
+      "passed": true,
+      "detail": "invalid (expected invalid)"
+    },
+    {
+      "id": "sample.grader-missing-id",
+      "passed": true,
+      "detail": "invalid (expected invalid)"
+    },
+    {
+      "id": "sample.grader-no-json",
+      "passed": true,
+      "detail": "invalid (expected invalid)"
+    },
+    {
+      "id": "sample.grader-string-passed",
+      "passed": true,
+      "detail": "invalid (expected invalid)"
+    },
+    {
+      "id": "sample.grader-valid-with-prose",
+      "passed": true,
+      "detail": "valid (expected valid)"
+    },
+    {
+      "id": "sample.grader-valid",
+      "passed": true,
+      "detail": "valid (expected valid)"
+    },
+    {
+      "id": "sample.grader-wrong-counter",
+      "passed": true,
+      "detail": "invalid (expected invalid)"
+    },
+    {
+      "id": "first_skill.trace-acceptance-skill-read",
+      "passed": true,
+      "detail": "02-business-case"
+    },
+    {
+      "id": "cost.trace-acceptance-skill-read",
+      "passed": true,
+      "detail": "None"
+    },
+    {
+      "id": "first_skill.trace-acceptance-skill-tool",
+      "passed": true,
+      "detail": "01-initialize-srs"
+    },
+    {
+      "id": "cost.trace-acceptance-skill-tool",
+      "passed": true,
+      "detail": "0.0123"
+    },
+    {
+      "id": "isolation.trace-init-baseline-clean",
+      "passed": true,
+      "detail": "PASS (expected PASS)"
+    },
+    {
+      "id": "isolation.trace-init-baseline-contaminated",
+      "passed": true,
+      "detail": "FAIL (expected FAIL)"
+    },
+    {
+      "id": "isolation.trace-init-engine-one-plugin",
+      "passed": true,
+      "detail": "PASS (expected PASS)"
+    },
+    {
+      "id": "isolation.trace-init-engine-two-plugins",
+      "passed": true,
+      "detail": "FAIL (expected FAIL)"
+    },
+    {
+      "id": "isolation.trace-init-no-plugins-field",
+      "passed": true,
+      "detail": "NOT_ASSESSED (expected NOT_ASSESSED)"
+    },
+    {
+      "id": "isolation.trace-init-short-prompt-routing-leak",
+      "passed": true,
+      "detail": "FAIL (expected FAIL)"
+    },
+    {
+      "id": "isolation.trace-init-short-prompt-user-memory",
+      "passed": true,
+      "detail": "FAIL (expected FAIL)"
+    },
+    {
+      "id": "forbidden_tool.trace-mcp-clean",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "forbidden_tool.trace-mcp-forbidden-pull",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "traversal.rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "plugin_eval.no_publish_enforced",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "plugin_cases.shape",
+      "passed": true,
+      "detail": "11 cases"
+    },
+    {
+      "id": "micro.stop_when_control_passes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "dev.checker_selftests",
+      "passed": true,
+      "detail": "16/16 fixtures good PASS + bad FAIL"
+    }
+  ]
+}

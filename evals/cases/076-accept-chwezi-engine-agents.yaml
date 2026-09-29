@@ -6,6 +6,9 @@ fixture_path: evals/fixtures/076-accept-chwezi-engine-agents
 expected_primary: chwezi-engine-agents/rules-distill
 run_mode: behavioural
 last_run: NOT_ASSESSED
+last_run_date: 2026-09-29
+last_run_reason: NOT_ASSESSED (zero-spend rule); engine arm n=3 planned by scripts/run_behavioural_eval.py --suite acceptance, not executed
+last_run_evidence: docs/operations/m10-kaizen-evidence/M10-05/runs/acceptance-plan.json
 behavioural_owner_phase: M10-05
 required_observations:
 - chwezi-engine-agents/rules-distill is the first skill loaded (acceptance prompt for chwezi-engine-agents).

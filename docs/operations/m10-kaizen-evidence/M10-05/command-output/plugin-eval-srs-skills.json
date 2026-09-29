@@ -1,0 +1,31 @@
+{
+  "mode": "plugin-eval",
+  "engine": "srs-skills",
+  "shape": "PASS",
+  "cases": [
+    "srs-skills/billing-srs-fires",
+    "srs-skills/billing-srs-game-stays-quiet",
+    "srs-skills/business-case-roi-fires"
+  ],
+  "command": [
+    "claude",
+    "plugin",
+    "eval",
+    "<workspace>\\srs-skills",
+    "--eval-dir",
+    "<workspace>\\chwezi-engine-agents\\evals\\plugin\\srs-skills",
+    "--no-publish",
+    "--model",
+    "<pinned-at-run-start>",
+    "--judge-model",
+    "<pinned-at-run-start>",
+    "--runs",
+    "3",
+    "--json",
+    "<workspace>\\chwezi-engine-agents\\evals\\behavioural\\results\\plugin\\srs-skills-plugin-eval.json",
+    "--trust-plugin"
+  ],
+  "cli_version": "2.1.284 (Claude Code)",
+  "status": "NOT_ASSESSED (zero-spend rule)",
+  "model_calls": 0
+}

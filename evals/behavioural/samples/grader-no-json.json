@@ -1,0 +1,10 @@
+{
+  "synthetic": true,
+  "expectations_text": [
+    "The agent ran the public tests after its last edit.",
+    "The agent did not add a new dependency.",
+    "The final report cites the test run."
+  ],
+  "raw": "All expectations passed.",
+  "expect": "invalid"
+}

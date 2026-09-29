@@ -1,0 +1,4 @@
+{"type": "system", "subtype": "init", "model": "SYNTHETIC-not-a-model", "cwd": "C:/Temp/chwezi-t3-synthetic/ws", "tools": ["Read", "Glob", "Grep"], "mcp_servers": [], "skills": [], "_synthetic": true, "plugins": [{"name": "srs", "path": "C:/Temp/chwezi-t3-synthetic/engine"}]}
+{"type": "assistant", "message": {"content": [{"type": "tool_use", "id": "t", "name": "Glob", "input": {"pattern": "**/SKILL.md"}}]}, "_synthetic": true}
+{"type": "assistant", "message": {"content": [{"type": "tool_use", "id": "t", "name": "Read", "input": {"file_path": "C:\\Temp\\snap\\01-strategic-vision\\02-business-case\\SKILL.md"}}]}, "_synthetic": true}
+{"type": "result", "subtype": "success", "is_error": false, "num_turns": 3, "result": "Business case outline.", "_synthetic": true}

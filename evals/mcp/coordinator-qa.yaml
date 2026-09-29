@@ -1,0 +1,122 @@
+# Coordinator MCP tool-surface evaluation (M10-05-T10, AC-06).
+#
+# Method adapted from anthropics/skills mcp-builder reference/evaluation.md (Apache-2.0,
+# https://github.com/anthropics/skills, commit 33375500bcea98d610eb30ce10ac4e59b89c390d); paraphrased,
+# no text copied. Doctrine: chwezi-dev-engine/skills/ai/ai-agent-tooling-and-hitl/references/mcp-tool-surface-evaluation.md
+#
+# Ten read-only, independent, multi-hop questions with one stable answer each, asked against the
+# pinned synthetic workspace built by build_fixture_workspace.py. Paths in questions are relative to
+# that workspace (the MCP server runs with cwd and SKILLS_ENGINE_WORKSPACE_ROOT set to it).
+# Every answer was re-derived from the compiled server functions with no model call by
+# verify_answers.py and frozen on the date below.
+schema_version: 1
+id: coordinator-mcp-qa
+server: chwezi-engine-agents/mcp-server (skills-engine-agents-mcp 1.0.0, dist/src)
+fixture:
+  builder: evals/mcp/build_fixture_workspace.py
+  build_hash: f4c272e24bfb909c9110f51e7fc0c6cf90b547c5d22de2edb18bfff4f435ba62
+  catalog: <workspace>/catalog/engines.yaml (pinned; passed as SKILLS_ENGINE_CATALOG)
+verifier: python -X utf8 evals/mcp/verify_answers.py
+answers_frozen_on: '2026-09-29'
+normalisers:
+  exact: strip surrounding whitespace; compare case-sensitively
+  lower: strip and lower-case both sides
+  integer: strip; parse as a base-10 integer
+run_config:
+  status: NOT_ASSESSED
+  not_assessed_reason: zero-spend rule (Peter, 29 Sep 2026); no model-executed run is made in M10-05
+  tool_source: coordinator MCP server only
+  allowed_tools: [discover_engine, inspect_engine, validate_engine]
+  disallowed_tools: [pull_engine_ff_only]
+  forbidden_tool_assertion: the trace must contain no tool_use whose name ends with pull_engine_ff_only; one invocation voids the run
+  environment:
+    SKILLS_ENGINE_WORKSPACE_ROOT: <workspace>
+    SKILLS_ENGINE_CATALOG: <workspace>/catalog/engines.yaml
+  mcp_config_example: {"mcpServers": {"coordinator": {"command": "node", "args": ["<agents>/mcp-server/dist/src/index.js"], "env": {"SKILLS_ENGINE_WORKSPACE_ROOT": "<workspace>", "SKILLS_ENGINE_CATALOG": "<workspace>/catalog/engines.yaml"}}}}
+  intended_command: >-
+    claude -p --verbose --output-format stream-json --setting-sources project,local
+    --strict-mcp-config --mcp-config <coordinator.json>
+    --allowedTools mcp__coordinator__discover_engine,mcp__coordinator__inspect_engine,mcp__coordinator__validate_engine
+    --disallowedTools mcp__coordinator__pull_engine_ff_only --model <pinned> (one fresh session per question, prompt on stdin)
+  record_per_run: [model_id, claude_cli_version, server_version, fixture_build_hash, utc_timestamp, answer_given, verdict, tool_calls, turns]
+qa_pairs:
+  - id: Q01
+    question: The folder alpha-skills/docs/guides sits inside an engine checkout. Which router file does the engine catalogue tell you to read first for that engine? Give the file name only.
+    answer: CLAUDE.md
+    answer_type: file name
+    normaliser: exact
+    tools_expected: [discover_engine]
+    hops: 2
+    verified_on: '2026-09-29'
+  - id: Q02
+    question: How many commits behind its upstream is the engine that owns alpha-skills/docs/guides? Answer with an integer.
+    answer: '1'
+    answer_type: integer
+    normaliser: integer
+    tools_expected: [discover_engine, inspect_engine]
+    hops: 2
+    verified_on: '2026-09-29'
+  - id: Q03
+    question: Among the catalogued engine folders alpha-skills, beta-skills and gamma-skills, exactly one has uncommitted changes in its working tree. Which folder is it?
+    answer: beta-skills
+    answer_type: folder name
+    normaliser: lower
+    tools_expected: [inspect_engine]
+    hops: 3
+    verified_on: '2026-09-29'
+  - id: Q04
+    question: Asking the coordinator for the upstream status of epsilon-skills does not return a status. What error code does it return instead?
+    answer: upstream_unavailable
+    answer_type: error code
+    normaliser: lower
+    tools_expected: [inspect_engine]
+    hops: 2
+    verified_on: '2026-09-29'
+  - id: Q05
+    question: The checkout in folder gamma-skills was cloned from a repository with a different name. What repository name does the coordinator derive for it?
+    answer: gamma-registry
+    answer_type: repository name
+    normaliser: lower
+    tools_expected: [discover_engine]
+    hops: 2
+    verified_on: '2026-09-29'
+  - id: Q06
+    question: Run the declared validators for the engine in gamma-skills with scope all. What overall verdict does the coordinator report? Answer PASS, FAIL, PARTIAL or NOT ASSESSED.
+    answer: FAIL
+    answer_type: verdict
+    normaliser: exact
+    tools_expected: [validate_engine]
+    hops: 2
+    verified_on: '2026-09-29'
+  - id: Q07
+    question: How many of the validators declared for the engine in gamma-skills pass when run with scope all? Answer with an integer.
+    answer: '1'
+    answer_type: integer
+    normaliser: integer
+    tools_expected: [validate_engine]
+    hops: 2
+    verified_on: '2026-09-29'
+  - id: Q08
+    question: How many validator commands does the catalogue declare for the engine that owns alpha-skills/docs/guides? Answer with an integer.
+    answer: '2'
+    answer_type: integer
+    normaliser: integer
+    tools_expected: [discover_engine, validate_engine]
+    hops: 2
+    verified_on: '2026-09-29'
+  - id: Q09
+    question: The folder delta-notes is not in the engine catalogue. Which file does the coordinator fall back to as its router? Give the file name only.
+    answer: README.md
+    answer_type: file name
+    normaliser: exact
+    tools_expected: [discover_engine]
+    hops: 2
+    verified_on: '2026-09-29'
+  - id: Q10
+    question: Of alpha-skills, beta-skills and gamma-skills, which single folder could be fast-forwarded right now because it is clean, has no local commits of its own and is behind its upstream? Give the folder name; do not perform the pull.
+    answer: alpha-skills
+    answer_type: folder name
+    normaliser: lower
+    tools_expected: [inspect_engine]
+    hops: 3
+    verified_on: '2026-09-29'

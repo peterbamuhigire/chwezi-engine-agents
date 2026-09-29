@@ -1,0 +1,4 @@
+[
+  {"name": "rule-one-line", "guidance": "Do not report work as done until you have run the verification after your last edit and can cite that run."},
+  {"name": "rule-with-reason", "guidance": "Before saying a task is done, run the tests after your final change and cite that run; yesterday's run or 'tests pending' is not evidence, because the last edit may have broken something."}
+]

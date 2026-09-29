@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "baseline_id": "orientation-baseline-arm",
+  "suite": "orientation",
+  "runs": [
+    {
+      "run_id": "orientation.orientation-chwezi-dev-engine.engine.r1",
+      "arm": "engine",
+      "fixture": "orientation-chwezi-dev-engine",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "orientation-plan.json",
+      "reason": "NOT_ASSESSED (ENGINE-TOUR.md does not exist yet; execution handed to M10-12 (UA-11) once UA-09 produces ENGINE-TOUR.md)"
+    }
+  ],
+  "note": "No model was run (zero-spend rule). cost_usd is omitted because it is unknown, not zero."
+}

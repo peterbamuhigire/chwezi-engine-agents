@@ -1,0 +1,52 @@
+{
+  "mode": "dry-run",
+  "suite": "orientation",
+  "cases": 1,
+  "arms": [
+    "engine"
+  ],
+  "n": 1,
+  "cell_count": 1,
+  "summary": "1 cases x 1 arms x n=1 = 1 cell plans; model calls 0; cost 0",
+  "model_calls": 0,
+  "cost_usd": 0,
+  "ready_cases": 0,
+  "not_ready": {
+    "orientation-chwezi-dev-engine": "ENGINE-TOUR.md does not exist yet; execution handed to M10-12 (UA-11) once UA-09 produces ENGINE-TOUR.md"
+  },
+  "cells": [
+    {
+      "cell_id": "orientation.orientation-chwezi-dev-engine.engine.r1",
+      "suite": "orientation",
+      "case": "orientation-chwezi-dev-engine",
+      "arm": "engine",
+      "run": 1,
+      "engine": "chwezi-dev-engine",
+      "command": [
+        "claude",
+        "-p",
+        "--verbose",
+        "--output-format",
+        "stream-json",
+        "--setting-sources",
+        "project,local",
+        "--strict-mcp-config",
+        "--permission-mode",
+        "acceptEdits",
+        "--allowedTools",
+        "Read",
+        "--model",
+        "<pinned-at-run-start>",
+        "--plugin-dir",
+        "<temp snapshot of chwezi-dev-engine at 41210936bb231b1de83e3d25008ecc94693a0f39>"
+      ],
+      "prompt_sha256": "80322e6180bc69c7960e0a3bcd254fb39138de7b95ca6f095639e8b3fc6cb5a1",
+      "expectations": 4,
+      "deterministic": [
+        "orientation"
+      ],
+      "ready": false,
+      "status": "NOT_ASSESSED (ENGINE-TOUR.md does not exist yet; execution handed to M10-12 (UA-11) once UA-09 produces ENGINE-TOUR.md)"
+    }
+  ]
+}

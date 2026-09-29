@@ -1,0 +1,132 @@
+{
+  "mode": "micro",
+  "case": "PS01",
+  "reps": 5,
+  "variants": [
+    "rule-one-line",
+    "rule-with-reason"
+  ],
+  "cells": 15,
+  "model_calls": 0,
+  "cost_usd": 0,
+  "status": "NOT_ASSESSED (zero-spend rule)",
+  "analysis": {
+    "variants": {
+      "control": {
+        "passes": 0,
+        "executed": 0,
+        "not_assessed": 5,
+        "pass_rate": null,
+        "binomial_sd": null
+      },
+      "rule-one-line": {
+        "passes": 0,
+        "executed": 0,
+        "not_assessed": 5,
+        "pass_rate": null,
+        "binomial_sd": null
+      },
+      "rule-with-reason": {
+        "passes": 0,
+        "executed": 0,
+        "not_assessed": 5,
+        "pass_rate": null,
+        "binomial_sd": null
+      }
+    },
+    "verdict": "NOT_ASSESSED: the control was not executed",
+    "variance_note": "Invocation is stochastic: report k/n per variant with the binomial SD; a difference smaller than about two SDs is noise at n>=5."
+  },
+  "plan": [
+    {
+      "cell_id": "micro.PS01.control.r1",
+      "variant": "control",
+      "run": 1,
+      "status": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "cell_id": "micro.PS01.control.r2",
+      "variant": "control",
+      "run": 2,
+      "status": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "cell_id": "micro.PS01.control.r3",
+      "variant": "control",
+      "run": 3,
+      "status": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "cell_id": "micro.PS01.control.r4",
+      "variant": "control",
+      "run": 4,
+      "status": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "cell_id": "micro.PS01.control.r5",
+      "variant": "control",
+      "run": 5,
+      "status": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "cell_id": "micro.PS01.rule-one-line.r1",
+      "variant": "rule-one-line",
+      "run": 1,
+      "status": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "cell_id": "micro.PS01.rule-one-line.r2",
+      "variant": "rule-one-line",
+      "run": 2,
+      "status": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "cell_id": "micro.PS01.rule-one-line.r3",
+      "variant": "rule-one-line",
+      "run": 3,
+      "status": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "cell_id": "micro.PS01.rule-one-line.r4",
+      "variant": "rule-one-line",
+      "run": 4,
+      "status": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "cell_id": "micro.PS01.rule-one-line.r5",
+      "variant": "rule-one-line",
+      "run": 5,
+      "status": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "cell_id": "micro.PS01.rule-with-reason.r1",
+      "variant": "rule-with-reason",
+      "run": 1,
+      "status": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "cell_id": "micro.PS01.rule-with-reason.r2",
+      "variant": "rule-with-reason",
+      "run": 2,
+      "status": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "cell_id": "micro.PS01.rule-with-reason.r3",
+      "variant": "rule-with-reason",
+      "run": 3,
+      "status": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "cell_id": "micro.PS01.rule-with-reason.r4",
+      "variant": "rule-with-reason",
+      "run": 4,
+      "status": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "cell_id": "micro.PS01.rule-with-reason.r5",
+      "variant": "rule-with-reason",
+      "run": 5,
+      "status": "NOT_ASSESSED (zero-spend rule)"
+    }
+  ]
+}

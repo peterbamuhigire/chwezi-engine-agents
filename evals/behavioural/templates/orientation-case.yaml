@@ -1,0 +1,30 @@
+# Orientation case template (M10-05-T14; split from UA-11). Kind `orientation`: the agent reads ONE
+# document (the engine tour) and answers fixed questions; the deterministic grader
+# (scripts/run_behavioural_eval.py grade_orientation_answers) checks that each answer names every
+# expected repository path. Expected paths must come from the engine manifest
+# (.skills-engine/engine-manifest.yaml) and exist at the recorded engine commit.
+#
+# Status: TEMPLATE. The input document ENGINE-TOUR.md is produced by UA-09 in M10-12, so the dry run
+# reports this case NOT_ASSESSED (input absent) and execution is handed to M10-12. The paths below
+# were checked to exist in chwezi-dev-engine on 29 Sep 2026; M10-12 re-derives them from the manifest.
+schema_version: 1
+id: orientation-chwezi-dev-engine
+kind: orientation
+engine: chwezi-dev-engine
+document: ENGINE-TOUR.md
+allowed_tools: [Read]
+runs: 3
+handoff: execution handed to M10-12 (UA-11) once UA-09 produces ENGINE-TOUR.md
+questions:
+  - id: q1
+    question: Which file should an agent read first to route a task inside this engine?
+    expected_paths: [CLAUDE.md]
+  - id: q2
+    question: Where is the frozen solution-selection benchmark specification, and which tool validates it?
+    expected_paths: [benchmarks/solution-selection/fixtures.json, tools/validate_benchmark_fixtures.py]
+  - id: q3
+    question: Which hook blocks destructive shell commands?
+    expected_paths: [hooks/destructive-bash-gate.js]
+  - id: q4
+    question: Which skill owns the release evidence bundle across the seven evidence categories?
+    expected_paths: [skills/architecture/validation-contract/SKILL.md]

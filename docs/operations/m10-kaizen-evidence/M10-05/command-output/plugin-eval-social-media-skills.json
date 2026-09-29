@@ -1,0 +1,30 @@
+{
+  "mode": "plugin-eval",
+  "engine": "social-media-skills",
+  "shape": "PASS",
+  "cases": [
+    "social-media-skills/business-case-roi-stays-quiet",
+    "social-media-skills/invoice-typeface-stays-quiet"
+  ],
+  "command": [
+    "claude",
+    "plugin",
+    "eval",
+    "<workspace>\\social-media-skills",
+    "--eval-dir",
+    "<workspace>\\chwezi-engine-agents\\evals\\plugin\\social-media-skills",
+    "--no-publish",
+    "--model",
+    "<pinned-at-run-start>",
+    "--judge-model",
+    "<pinned-at-run-start>",
+    "--runs",
+    "3",
+    "--json",
+    "<workspace>\\chwezi-engine-agents\\evals\\behavioural\\results\\plugin\\social-media-skills-plugin-eval.json",
+    "--trust-plugin"
+  ],
+  "cli_version": "2.1.284 (Claude Code)",
+  "status": "NOT_ASSESSED (zero-spend rule)",
+  "model_calls": 0
+}

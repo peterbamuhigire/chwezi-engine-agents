@@ -1,0 +1,168 @@
+{
+  "mode": "selftest-isolation",
+  "timestamp": "2026-09-29T02:07:06Z",
+  "static_checks": "PASS",
+  "detector_checks": "PASS",
+  "live_smoke": "NOT_ASSESSED (zero-spend rule)",
+  "paid_runs_permitted": false,
+  "static": [
+    {
+      "arm": "baseline",
+      "passed": true,
+      "plugin_dirs": [],
+      "command": [
+        "claude",
+        "-p",
+        "--verbose",
+        "--output-format",
+        "stream-json",
+        "--setting-sources",
+        "project,local",
+        "--strict-mcp-config",
+        "--permission-mode",
+        "acceptEdits",
+        "--allowedTools",
+        "Read,Glob,Grep,Edit,Write,Bash(python:*),Bash(git status:*),Bash(git diff:*)",
+        "--model",
+        "<pinned-at-run-start>"
+      ]
+    },
+    {
+      "arm": "engine",
+      "passed": true,
+      "plugin_dirs": [
+        "<temp>\\chwezi-t3-snapshot\\engine"
+      ],
+      "command": [
+        "claude",
+        "-p",
+        "--verbose",
+        "--output-format",
+        "stream-json",
+        "--setting-sources",
+        "project,local",
+        "--strict-mcp-config",
+        "--permission-mode",
+        "acceptEdits",
+        "--allowedTools",
+        "Read,Glob,Grep,Edit,Write,Bash(python:*),Bash(git status:*),Bash(git diff:*)",
+        "--model",
+        "<pinned-at-run-start>",
+        "--plugin-dir",
+        "<temp>\\chwezi-t3-snapshot\\engine"
+      ]
+    },
+    {
+      "arm": "short_prompt",
+      "passed": true,
+      "plugin_dirs": [],
+      "command": [
+        "claude",
+        "-p",
+        "--verbose",
+        "--output-format",
+        "stream-json",
+        "--setting-sources",
+        "project,local",
+        "--strict-mcp-config",
+        "--permission-mode",
+        "acceptEdits",
+        "--allowedTools",
+        "Read,Glob,Grep,Edit,Write,Bash(python:*),Bash(git status:*),Bash(git diff:*)",
+        "--model",
+        "<pinned-at-run-start>",
+        "--append-system-prompt",
+        "Reuse before you write."
+      ]
+    },
+    {
+      "arm": "baseline-refuses-plugin",
+      "passed": true
+    },
+    {
+      "arm": "short_prompt-refuses-plugin",
+      "passed": true
+    }
+  ],
+  "detector": [
+    {
+      "sample": "trace-init-baseline-clean.jsonl",
+      "arm": "baseline",
+      "verdict": "PASS",
+      "expected": "PASS",
+      "passed": true,
+      "problems": []
+    },
+    {
+      "sample": "trace-init-baseline-contaminated.jsonl",
+      "arm": "baseline",
+      "verdict": "FAIL",
+      "expected": "FAIL",
+      "passed": true,
+      "problems": [
+        "baseline arm loaded plugins ['superpowers']",
+        "baseline arm exposes plugin skills ['superpowers:brainstorming']"
+      ]
+    },
+    {
+      "sample": "trace-init-engine-one-plugin.jsonl",
+      "arm": "engine",
+      "verdict": "PASS",
+      "expected": "PASS",
+      "passed": true,
+      "problems": []
+    },
+    {
+      "sample": "trace-init-engine-two-plugins.jsonl",
+      "arm": "engine",
+      "verdict": "FAIL",
+      "expected": "FAIL",
+      "passed": true,
+      "problems": [
+        "engine arm must load exactly one plugin, saw ['engineering', 'superpowers']",
+        "engine arm plugin path C:/Users/example/.claude/plugins/superpowers is not the snapshot C:/Temp/chwezi-t3-synthetic/engine"
+      ]
+    },
+    {
+      "sample": "trace-init-no-plugins-field.jsonl",
+      "arm": "baseline",
+      "verdict": "NOT_ASSESSED",
+      "expected": "NOT_ASSESSED",
+      "passed": true,
+      "problems": [
+        "system/init has no plugins field; CLI surface changed, re-verify"
+      ]
+    },
+    {
+      "sample": "trace-init-short-prompt-routing-leak.jsonl",
+      "arm": "short_prompt",
+      "verdict": "FAIL",
+      "expected": "FAIL",
+      "passed": true,
+      "problems": [
+        "probe: global routing table present in the arm's context"
+      ]
+    },
+    {
+      "sample": "trace-init-short-prompt-user-memory.jsonl",
+      "arm": "short_prompt",
+      "verdict": "FAIL",
+      "expected": "FAIL",
+      "passed": true,
+      "problems": [
+        "user-level CLAUDE.md loaded: ['C:/Users/example/.claude/CLAUDE.md']"
+      ]
+    }
+  ],
+  "live": {
+    "status": "NOT_ASSESSED (zero-spend rule)",
+    "arms": {
+      "baseline": "NOT_ASSESSED (zero-spend rule)",
+      "engine": "NOT_ASSESSED (zero-spend rule)",
+      "short_prompt": "NOT_ASSESSED (zero-spend rule)"
+    }
+  },
+  "model_calls": 0,
+  "isolation_selftest_sha256": "83a06771f3fda7be998cfb0c4045db58fb14c63239a79d367bfc73f8231dea2d",
+  "status": "NOT_ASSESSED"
+}

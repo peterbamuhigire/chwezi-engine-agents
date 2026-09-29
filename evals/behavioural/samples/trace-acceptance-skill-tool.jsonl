@@ -1,0 +1,4 @@
+{"type": "system", "subtype": "init", "model": "SYNTHETIC-not-a-model", "cwd": "C:/Temp/chwezi-t3-synthetic/ws", "tools": ["Read", "Glob", "Grep"], "mcp_servers": [], "skills": [], "_synthetic": true, "plugins": [{"name": "srs", "path": "C:/Temp/chwezi-t3-synthetic/engine"}]}
+{"type": "assistant", "message": {"content": [{"type": "tool_use", "id": "t", "name": "Skill", "input": {"skill": "srs:01-initialize-srs"}}]}, "_synthetic": true}
+{"type": "assistant", "message": {"content": [{"type": "tool_use", "id": "t", "name": "Read", "input": {"file_path": "x/README.md"}}]}, "_synthetic": true}
+{"type": "result", "subtype": "success", "is_error": false, "num_turns": 4, "result": "Scoping questions follow.", "_synthetic": true, "total_cost_usd": 0.0123}

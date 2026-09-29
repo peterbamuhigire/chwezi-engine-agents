@@ -12,3 +12,5 @@ node_modules/
 mcp-server/dist/
 release/*.zip
 release/*.tar.gz
+# Tier-3 behavioural raw traces and gradings (M10-05): local only, may hold local paths
+evals/behavioural/results/

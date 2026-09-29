@@ -1,0 +1,4 @@
+{"type":"system","subtype":"init","model":"SYNTHETIC-not-a-model","tools":["mcp__coordinator__discover_engine","mcp__coordinator__inspect_engine","mcp__coordinator__validate_engine"],"_synthetic":true}
+{"type":"assistant","message":{"content":[{"type":"tool_use","id":"t1","name":"mcp__coordinator__inspect_engine","input":{"path":"alpha-skills"}}]},"_synthetic":true}
+{"type":"user","message":{"content":[{"type":"tool_result","tool_use_id":"t1","content":"{\"behind\": 1}"}]},"_synthetic":true}
+{"type":"result","subtype":"success","result":"1","_synthetic":true}

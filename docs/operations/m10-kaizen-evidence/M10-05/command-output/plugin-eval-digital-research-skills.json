@@ -1,0 +1,29 @@
+{
+  "mode": "plugin-eval",
+  "engine": "digital-research-skills",
+  "shape": "PASS",
+  "cases": [
+    "digital-research-skills/validation-contract-stays-quiet"
+  ],
+  "command": [
+    "claude",
+    "plugin",
+    "eval",
+    "<workspace>\\digital-research-engine",
+    "--eval-dir",
+    "<workspace>\\chwezi-engine-agents\\evals\\plugin\\digital-research-skills",
+    "--no-publish",
+    "--model",
+    "<pinned-at-run-start>",
+    "--judge-model",
+    "<pinned-at-run-start>",
+    "--runs",
+    "3",
+    "--json",
+    "<workspace>\\chwezi-engine-agents\\evals\\behavioural\\results\\plugin\\digital-research-skills-plugin-eval.json",
+    "--trust-plugin"
+  ],
+  "cli_version": "2.1.284 (Claude Code)",
+  "status": "NOT_ASSESSED (zero-spend rule)",
+  "model_calls": 0
+}

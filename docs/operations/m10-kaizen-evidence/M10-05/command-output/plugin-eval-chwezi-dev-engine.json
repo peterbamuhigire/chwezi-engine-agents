@@ -1,0 +1,29 @@
+{
+  "mode": "plugin-eval",
+  "engine": "chwezi-dev-engine",
+  "shape": "PASS",
+  "cases": [
+    "chwezi-dev-engine/validation-contract-fires"
+  ],
+  "command": [
+    "claude",
+    "plugin",
+    "eval",
+    "<workspace>\\chwezi-dev-engine",
+    "--eval-dir",
+    "<workspace>\\chwezi-engine-agents\\evals\\plugin\\chwezi-dev-engine",
+    "--no-publish",
+    "--model",
+    "<pinned-at-run-start>",
+    "--judge-model",
+    "<pinned-at-run-start>",
+    "--runs",
+    "3",
+    "--json",
+    "<workspace>\\chwezi-engine-agents\\evals\\behavioural\\results\\plugin\\chwezi-dev-engine-plugin-eval.json",
+    "--trust-plugin"
+  ],
+  "cli_version": "2.1.284 (Claude Code)",
+  "status": "NOT_ASSESSED (zero-spend rule)",
+  "model_calls": 0
+}

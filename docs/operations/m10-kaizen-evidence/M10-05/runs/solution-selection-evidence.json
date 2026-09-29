@@ -1,0 +1,1304 @@
+{
+  "schema_version": 1,
+  "baseline_id": "solution-selection-baseline-arm",
+  "suite": "solution-selection",
+  "runs": [
+    {
+      "run_id": "solution-selection.F01.baseline.r1",
+      "arm": "baseline",
+      "fixture": "F01",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F01.baseline.r2",
+      "arm": "baseline",
+      "fixture": "F01",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F01.baseline.r3",
+      "arm": "baseline",
+      "fixture": "F01",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F01.engine.r1",
+      "arm": "engine",
+      "fixture": "F01",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F01.engine.r2",
+      "arm": "engine",
+      "fixture": "F01",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F01.engine.r3",
+      "arm": "engine",
+      "fixture": "F01",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F01.short_prompt.r1",
+      "arm": "short_prompt",
+      "fixture": "F01",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F01.short_prompt.r2",
+      "arm": "short_prompt",
+      "fixture": "F01",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F01.short_prompt.r3",
+      "arm": "short_prompt",
+      "fixture": "F01",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F02.baseline.r1",
+      "arm": "baseline",
+      "fixture": "F02",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F02.baseline.r2",
+      "arm": "baseline",
+      "fixture": "F02",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F02.baseline.r3",
+      "arm": "baseline",
+      "fixture": "F02",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F02.engine.r1",
+      "arm": "engine",
+      "fixture": "F02",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F02.engine.r2",
+      "arm": "engine",
+      "fixture": "F02",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F02.engine.r3",
+      "arm": "engine",
+      "fixture": "F02",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F02.short_prompt.r1",
+      "arm": "short_prompt",
+      "fixture": "F02",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F02.short_prompt.r2",
+      "arm": "short_prompt",
+      "fixture": "F02",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F02.short_prompt.r3",
+      "arm": "short_prompt",
+      "fixture": "F02",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F03.baseline.r1",
+      "arm": "baseline",
+      "fixture": "F03",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F03.baseline.r2",
+      "arm": "baseline",
+      "fixture": "F03",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F03.baseline.r3",
+      "arm": "baseline",
+      "fixture": "F03",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F03.engine.r1",
+      "arm": "engine",
+      "fixture": "F03",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F03.engine.r2",
+      "arm": "engine",
+      "fixture": "F03",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F03.engine.r3",
+      "arm": "engine",
+      "fixture": "F03",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F03.short_prompt.r1",
+      "arm": "short_prompt",
+      "fixture": "F03",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F03.short_prompt.r2",
+      "arm": "short_prompt",
+      "fixture": "F03",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F03.short_prompt.r3",
+      "arm": "short_prompt",
+      "fixture": "F03",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F04.baseline.r1",
+      "arm": "baseline",
+      "fixture": "F04",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F04.baseline.r2",
+      "arm": "baseline",
+      "fixture": "F04",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F04.baseline.r3",
+      "arm": "baseline",
+      "fixture": "F04",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F04.engine.r1",
+      "arm": "engine",
+      "fixture": "F04",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F04.engine.r2",
+      "arm": "engine",
+      "fixture": "F04",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F04.engine.r3",
+      "arm": "engine",
+      "fixture": "F04",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F04.short_prompt.r1",
+      "arm": "short_prompt",
+      "fixture": "F04",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F04.short_prompt.r2",
+      "arm": "short_prompt",
+      "fixture": "F04",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F04.short_prompt.r3",
+      "arm": "short_prompt",
+      "fixture": "F04",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F05.baseline.r1",
+      "arm": "baseline",
+      "fixture": "F05",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F05.baseline.r2",
+      "arm": "baseline",
+      "fixture": "F05",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F05.baseline.r3",
+      "arm": "baseline",
+      "fixture": "F05",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F05.engine.r1",
+      "arm": "engine",
+      "fixture": "F05",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F05.engine.r2",
+      "arm": "engine",
+      "fixture": "F05",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F05.engine.r3",
+      "arm": "engine",
+      "fixture": "F05",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F05.short_prompt.r1",
+      "arm": "short_prompt",
+      "fixture": "F05",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F05.short_prompt.r2",
+      "arm": "short_prompt",
+      "fixture": "F05",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F05.short_prompt.r3",
+      "arm": "short_prompt",
+      "fixture": "F05",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F06.baseline.r1",
+      "arm": "baseline",
+      "fixture": "F06",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F06.baseline.r2",
+      "arm": "baseline",
+      "fixture": "F06",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F06.baseline.r3",
+      "arm": "baseline",
+      "fixture": "F06",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F06.engine.r1",
+      "arm": "engine",
+      "fixture": "F06",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F06.engine.r2",
+      "arm": "engine",
+      "fixture": "F06",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F06.engine.r3",
+      "arm": "engine",
+      "fixture": "F06",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F06.short_prompt.r1",
+      "arm": "short_prompt",
+      "fixture": "F06",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F06.short_prompt.r2",
+      "arm": "short_prompt",
+      "fixture": "F06",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F06.short_prompt.r3",
+      "arm": "short_prompt",
+      "fixture": "F06",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F07.baseline.r1",
+      "arm": "baseline",
+      "fixture": "F07",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F07.baseline.r2",
+      "arm": "baseline",
+      "fixture": "F07",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F07.baseline.r3",
+      "arm": "baseline",
+      "fixture": "F07",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F07.engine.r1",
+      "arm": "engine",
+      "fixture": "F07",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F07.engine.r2",
+      "arm": "engine",
+      "fixture": "F07",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F07.engine.r3",
+      "arm": "engine",
+      "fixture": "F07",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F07.short_prompt.r1",
+      "arm": "short_prompt",
+      "fixture": "F07",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F07.short_prompt.r2",
+      "arm": "short_prompt",
+      "fixture": "F07",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F07.short_prompt.r3",
+      "arm": "short_prompt",
+      "fixture": "F07",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F08.baseline.r1",
+      "arm": "baseline",
+      "fixture": "F08",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F08.baseline.r2",
+      "arm": "baseline",
+      "fixture": "F08",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F08.baseline.r3",
+      "arm": "baseline",
+      "fixture": "F08",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F08.engine.r1",
+      "arm": "engine",
+      "fixture": "F08",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F08.engine.r2",
+      "arm": "engine",
+      "fixture": "F08",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F08.engine.r3",
+      "arm": "engine",
+      "fixture": "F08",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F08.short_prompt.r1",
+      "arm": "short_prompt",
+      "fixture": "F08",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F08.short_prompt.r2",
+      "arm": "short_prompt",
+      "fixture": "F08",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F08.short_prompt.r3",
+      "arm": "short_prompt",
+      "fixture": "F08",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F09.baseline.r1",
+      "arm": "baseline",
+      "fixture": "F09",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F09.baseline.r2",
+      "arm": "baseline",
+      "fixture": "F09",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F09.baseline.r3",
+      "arm": "baseline",
+      "fixture": "F09",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F09.engine.r1",
+      "arm": "engine",
+      "fixture": "F09",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F09.engine.r2",
+      "arm": "engine",
+      "fixture": "F09",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F09.engine.r3",
+      "arm": "engine",
+      "fixture": "F09",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F09.short_prompt.r1",
+      "arm": "short_prompt",
+      "fixture": "F09",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F09.short_prompt.r2",
+      "arm": "short_prompt",
+      "fixture": "F09",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F09.short_prompt.r3",
+      "arm": "short_prompt",
+      "fixture": "F09",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F10.baseline.r1",
+      "arm": "baseline",
+      "fixture": "F10",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F10.baseline.r2",
+      "arm": "baseline",
+      "fixture": "F10",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F10.baseline.r3",
+      "arm": "baseline",
+      "fixture": "F10",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F10.engine.r1",
+      "arm": "engine",
+      "fixture": "F10",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F10.engine.r2",
+      "arm": "engine",
+      "fixture": "F10",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F10.engine.r3",
+      "arm": "engine",
+      "fixture": "F10",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F10.short_prompt.r1",
+      "arm": "short_prompt",
+      "fixture": "F10",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F10.short_prompt.r2",
+      "arm": "short_prompt",
+      "fixture": "F10",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F10.short_prompt.r3",
+      "arm": "short_prompt",
+      "fixture": "F10",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F11.baseline.r1",
+      "arm": "baseline",
+      "fixture": "F11",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F11.baseline.r2",
+      "arm": "baseline",
+      "fixture": "F11",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F11.baseline.r3",
+      "arm": "baseline",
+      "fixture": "F11",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F11.engine.r1",
+      "arm": "engine",
+      "fixture": "F11",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F11.engine.r2",
+      "arm": "engine",
+      "fixture": "F11",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F11.engine.r3",
+      "arm": "engine",
+      "fixture": "F11",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F11.short_prompt.r1",
+      "arm": "short_prompt",
+      "fixture": "F11",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F11.short_prompt.r2",
+      "arm": "short_prompt",
+      "fixture": "F11",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F11.short_prompt.r3",
+      "arm": "short_prompt",
+      "fixture": "F11",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F12.baseline.r1",
+      "arm": "baseline",
+      "fixture": "F12",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F12.baseline.r2",
+      "arm": "baseline",
+      "fixture": "F12",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F12.baseline.r3",
+      "arm": "baseline",
+      "fixture": "F12",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F12.engine.r1",
+      "arm": "engine",
+      "fixture": "F12",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F12.engine.r2",
+      "arm": "engine",
+      "fixture": "F12",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F12.engine.r3",
+      "arm": "engine",
+      "fixture": "F12",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F12.short_prompt.r1",
+      "arm": "short_prompt",
+      "fixture": "F12",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F12.short_prompt.r2",
+      "arm": "short_prompt",
+      "fixture": "F12",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F12.short_prompt.r3",
+      "arm": "short_prompt",
+      "fixture": "F12",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F13.baseline.r1",
+      "arm": "baseline",
+      "fixture": "F13",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F13.baseline.r2",
+      "arm": "baseline",
+      "fixture": "F13",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F13.baseline.r3",
+      "arm": "baseline",
+      "fixture": "F13",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F13.engine.r1",
+      "arm": "engine",
+      "fixture": "F13",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F13.engine.r2",
+      "arm": "engine",
+      "fixture": "F13",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F13.engine.r3",
+      "arm": "engine",
+      "fixture": "F13",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F13.short_prompt.r1",
+      "arm": "short_prompt",
+      "fixture": "F13",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F13.short_prompt.r2",
+      "arm": "short_prompt",
+      "fixture": "F13",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F13.short_prompt.r3",
+      "arm": "short_prompt",
+      "fixture": "F13",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F14.baseline.r1",
+      "arm": "baseline",
+      "fixture": "F14",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F14.baseline.r2",
+      "arm": "baseline",
+      "fixture": "F14",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F14.baseline.r3",
+      "arm": "baseline",
+      "fixture": "F14",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F14.engine.r1",
+      "arm": "engine",
+      "fixture": "F14",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F14.engine.r2",
+      "arm": "engine",
+      "fixture": "F14",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F14.engine.r3",
+      "arm": "engine",
+      "fixture": "F14",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F14.short_prompt.r1",
+      "arm": "short_prompt",
+      "fixture": "F14",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F14.short_prompt.r2",
+      "arm": "short_prompt",
+      "fixture": "F14",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F14.short_prompt.r3",
+      "arm": "short_prompt",
+      "fixture": "F14",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F15.baseline.r1",
+      "arm": "baseline",
+      "fixture": "F15",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F15.baseline.r2",
+      "arm": "baseline",
+      "fixture": "F15",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F15.baseline.r3",
+      "arm": "baseline",
+      "fixture": "F15",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F15.engine.r1",
+      "arm": "engine",
+      "fixture": "F15",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F15.engine.r2",
+      "arm": "engine",
+      "fixture": "F15",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F15.engine.r3",
+      "arm": "engine",
+      "fixture": "F15",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F15.short_prompt.r1",
+      "arm": "short_prompt",
+      "fixture": "F15",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F15.short_prompt.r2",
+      "arm": "short_prompt",
+      "fixture": "F15",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F15.short_prompt.r3",
+      "arm": "short_prompt",
+      "fixture": "F15",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F16.baseline.r1",
+      "arm": "baseline",
+      "fixture": "F16",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F16.baseline.r2",
+      "arm": "baseline",
+      "fixture": "F16",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F16.baseline.r3",
+      "arm": "baseline",
+      "fixture": "F16",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F16.engine.r1",
+      "arm": "engine",
+      "fixture": "F16",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F16.engine.r2",
+      "arm": "engine",
+      "fixture": "F16",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F16.engine.r3",
+      "arm": "engine",
+      "fixture": "F16",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F16.short_prompt.r1",
+      "arm": "short_prompt",
+      "fixture": "F16",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F16.short_prompt.r2",
+      "arm": "short_prompt",
+      "fixture": "F16",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "solution-selection.F16.short_prompt.r3",
+      "arm": "short_prompt",
+      "fixture": "F16",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "solution-selection-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    }
+  ],
+  "note": "No model was run (zero-spend rule). cost_usd is omitted because it is unknown, not zero."
+}

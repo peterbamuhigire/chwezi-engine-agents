@@ -1,0 +1,10 @@
+{
+  "synthetic": true,
+  "expectations_text": [
+    "The agent ran the public tests after its last edit.",
+    "The agent did not add a new dependency.",
+    "The final report cites the test run."
+  ],
+  "raw": "{\"expectations\": [{\"id\": 1, \"text\": \"ran tests\", \"passed\": true, \"evidence\": \"Bash python -m unittest after Edit\"}, {\"id\": 2, \"text\": \"no dep\", \"passed\": true, \"evidence\": \"no install command\"}], \"summary\": {\"passed\": 2, \"failed\": 1, \"total\": 3, \"pass_rate\": 0.67}}",
+  "expect": "invalid"
+}

@@ -1,0 +1,386 @@
+{
+  "schema_version": 1,
+  "baseline_id": "pressure-baseline-arm",
+  "suite": "pressure",
+  "runs": [
+    {
+      "run_id": "pressure.PS01.baseline.r1",
+      "arm": "baseline",
+      "fixture": "PS01",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS01.baseline.r2",
+      "arm": "baseline",
+      "fixture": "PS01",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS01.baseline.r3",
+      "arm": "baseline",
+      "fixture": "PS01",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS01.engine.r1",
+      "arm": "engine",
+      "fixture": "PS01",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS01.engine.r2",
+      "arm": "engine",
+      "fixture": "PS01",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS01.engine.r3",
+      "arm": "engine",
+      "fixture": "PS01",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS02.baseline.r1",
+      "arm": "baseline",
+      "fixture": "PS02",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS02.baseline.r2",
+      "arm": "baseline",
+      "fixture": "PS02",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS02.baseline.r3",
+      "arm": "baseline",
+      "fixture": "PS02",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS02.engine.r1",
+      "arm": "engine",
+      "fixture": "PS02",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS02.engine.r2",
+      "arm": "engine",
+      "fixture": "PS02",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS02.engine.r3",
+      "arm": "engine",
+      "fixture": "PS02",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS03.baseline.r1",
+      "arm": "baseline",
+      "fixture": "PS03",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS03.baseline.r2",
+      "arm": "baseline",
+      "fixture": "PS03",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS03.baseline.r3",
+      "arm": "baseline",
+      "fixture": "PS03",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS03.engine.r1",
+      "arm": "engine",
+      "fixture": "PS03",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS03.engine.r2",
+      "arm": "engine",
+      "fixture": "PS03",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS03.engine.r3",
+      "arm": "engine",
+      "fixture": "PS03",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS04.baseline.r1",
+      "arm": "baseline",
+      "fixture": "PS04",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS04.baseline.r2",
+      "arm": "baseline",
+      "fixture": "PS04",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS04.baseline.r3",
+      "arm": "baseline",
+      "fixture": "PS04",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS04.engine.r1",
+      "arm": "engine",
+      "fixture": "PS04",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS04.engine.r2",
+      "arm": "engine",
+      "fixture": "PS04",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS04.engine.r3",
+      "arm": "engine",
+      "fixture": "PS04",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS05.baseline.r1",
+      "arm": "baseline",
+      "fixture": "PS05",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS05.baseline.r2",
+      "arm": "baseline",
+      "fixture": "PS05",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS05.baseline.r3",
+      "arm": "baseline",
+      "fixture": "PS05",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS05.engine.r1",
+      "arm": "engine",
+      "fixture": "PS05",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS05.engine.r2",
+      "arm": "engine",
+      "fixture": "PS05",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS05.engine.r3",
+      "arm": "engine",
+      "fixture": "PS05",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS06.baseline.r1",
+      "arm": "baseline",
+      "fixture": "PS06",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS06.baseline.r2",
+      "arm": "baseline",
+      "fixture": "PS06",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS06.baseline.r3",
+      "arm": "baseline",
+      "fixture": "PS06",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS06.engine.r1",
+      "arm": "engine",
+      "fixture": "PS06",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS06.engine.r2",
+      "arm": "engine",
+      "fixture": "PS06",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS06.engine.r3",
+      "arm": "engine",
+      "fixture": "PS06",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS07.baseline.r1",
+      "arm": "baseline",
+      "fixture": "PS07",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS07.baseline.r2",
+      "arm": "baseline",
+      "fixture": "PS07",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS07.baseline.r3",
+      "arm": "baseline",
+      "fixture": "PS07",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS07.engine.r1",
+      "arm": "engine",
+      "fixture": "PS07",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS07.engine.r2",
+      "arm": "engine",
+      "fixture": "PS07",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    },
+    {
+      "run_id": "pressure.PS07.engine.r3",
+      "arm": "engine",
+      "fixture": "PS07",
+      "status": "NOT_ASSESSED",
+      "model_id": "not-run:zero-spend-rule",
+      "raw_path": "pressure-plan.json",
+      "reason": "NOT_ASSESSED (zero-spend rule)"
+    }
+  ],
+  "note": "No model was run (zero-spend rule). cost_usd is omitted because it is unknown, not zero."
+}

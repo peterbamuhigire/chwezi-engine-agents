@@ -1,0 +1,30 @@
+{
+  "mode": "plugin-eval",
+  "engine": "design-system-skills",
+  "shape": "PASS",
+  "cases": [
+    "design-system-skills/invoice-typeface-fires",
+    "design-system-skills/lighthouse-cwv-co-activates-fires"
+  ],
+  "command": [
+    "claude",
+    "plugin",
+    "eval",
+    "<workspace>\\design-system-skills",
+    "--eval-dir",
+    "<workspace>\\chwezi-engine-agents\\evals\\plugin\\design-system-skills",
+    "--no-publish",
+    "--model",
+    "<pinned-at-run-start>",
+    "--judge-model",
+    "<pinned-at-run-start>",
+    "--runs",
+    "3",
+    "--json",
+    "<workspace>\\chwezi-engine-agents\\evals\\behavioural\\results\\plugin\\design-system-skills-plugin-eval.json",
+    "--trust-plugin"
+  ],
+  "cli_version": "2.1.284 (Claude Code)",
+  "status": "NOT_ASSESSED (zero-spend rule)",
+  "model_calls": 0
+}
