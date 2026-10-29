@@ -48,7 +48,7 @@ import tarfile
 import tempfile
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 from typing import Any, Iterable
 
 AGENTS_ROOT = Path(__file__).resolve().parents[1]
@@ -113,7 +113,7 @@ def sha256_text(text: str) -> str:
 def safe_join(root: Path, relative: str | Path) -> Path:
     """Resolve ``relative`` under ``root``; refuse absolute paths, drive letters and ``..``."""
     rel = Path(str(relative).replace("\\", "/"))
-    if rel.is_absolute() or rel.drive or str(relative).startswith(("/", "\\")) or any(part == ".." for part in rel.parts):
+    if rel.is_absolute() or PureWindowsPath(str(relative)).drive or str(relative).startswith(("/", "\\")) or any(part == ".." for part in rel.parts):
         raise TraversalError(f"fixture path escapes its root: {relative}")
     base = root.resolve()
     target = (base / rel).resolve()

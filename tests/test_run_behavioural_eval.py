@@ -73,7 +73,7 @@ def test_grader_prompt_fences_trace_as_untrusted():
 
 # ---------------------------------------------------------------- traversal and workspaces
 
-@pytest.mark.parametrize("bad", ["../escape.txt", "a/../../b", "/etc/passwd", "C:/Windows/win.ini", "..\\up.txt"])
+@pytest.mark.parametrize("bad", ["../escape.txt", "a/../../b", "/etc/passwd", "C:/Windows/win.ini", "C:relative.txt", "//server/share/file", "..\\up.txt"])
 def test_traversal_fixture_path_is_rejected(tmp_path, bad):
     with pytest.raises(RBE.TraversalError):
         RBE.safe_join(tmp_path, bad)

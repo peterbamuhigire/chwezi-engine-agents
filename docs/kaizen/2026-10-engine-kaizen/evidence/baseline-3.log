@@ -1,0 +1,19 @@
+........................................................................ [ 44%]
+......F................ss........................................s...... [ 88%]
+..................                                                       [100%]
+=================================== FAILURES ===================================
+_________ test_traversal_fixture_path_is_rejected[C:/Windows/win.ini] __________
+
+tmp_path = PosixPath('/tmp/pytest-of-peter/pytest-120/test_traversal_fixture_path_is3')
+bad = 'C:/Windows/win.ini'
+
+    @pytest.mark.parametrize("bad", ["../escape.txt", "a/../../b", "/etc/passwd", "C:/Windows/win.ini", "..\\up.txt"])
+    def test_traversal_fixture_path_is_rejected(tmp_path, bad):
+>       with pytest.raises(RBE.TraversalError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE TraversalError
+
+tests/test_run_behavioural_eval.py:78: Failed
+=========================== short test summary info ============================
+FAILED tests/test_run_behavioural_eval.py::test_traversal_fixture_path_is_rejected[C:/Windows/win.ini]
+1 failed, 158 passed, 3 skipped in 5.15s
