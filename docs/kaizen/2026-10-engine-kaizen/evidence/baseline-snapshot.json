@@ -1,0 +1,290 @@
+{
+  "as_of": "2026-10-29",
+  "workspace_root": "<workspace>",
+  "generator": {
+    "file": "kaizen_portfolio_snapshot.py",
+    "sha256": "c224ff91fead2ad54bd0f71f2272e4e95429f965fde088bc634ec0c8e26f5377"
+  },
+  "scope": "eleven public domain engines; the coordinator is recorded separately",
+  "classification_limit": "raw filesystem classification only; router reachability and semantic active counts require engine-specific reconciliation",
+  "engines": [
+    {
+      "engine": "business-plan-skills",
+      "path": "business-plan-skills",
+      "remote": "https://github.com/peterbamuhigire/business-plan-skills.git",
+      "head": "50d50f937e58ef2cd476c8a0c15b4b1d0305f3e9",
+      "branch": "main",
+      "working_tree_clean": true,
+      "dirty_files": [],
+      "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "router_bytes": 222,
+      "router_import_bytes": 38480,
+      "router_effective_bytes": 38702,
+      "router_imports": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 38480
+        }
+      ],
+      "raw_skill_files": 137,
+      "excluded_candidates": 0,
+      "candidate_files": 137,
+      "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+    },
+    {
+      "engine": "chwezi-accounting-doctrine",
+      "path": "chwezi-accounting-doctrine",
+      "remote": "https://github.com/peterbamuhigire/chwezi-accounting-doctrine.git",
+      "head": "7bc6a022c835f597516bb25d3ad6d7a4d4b9f698",
+      "branch": "main",
+      "working_tree_clean": true,
+      "dirty_files": [],
+      "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "router_bytes": 44,
+      "router_import_bytes": 9009,
+      "router_effective_bytes": 9053,
+      "router_imports": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 9009
+        }
+      ],
+      "raw_skill_files": 108,
+      "excluded_candidates": 0,
+      "candidate_files": 108,
+      "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+    },
+    {
+      "engine": "chwezi-dev-engine",
+      "path": "chwezi-dev-engine",
+      "remote": "https://github.com/peterbamuhigire/skills-web-dev.git",
+      "head": "27a602b8306ff7aa6e84b5890a59abd57c8e2f4a",
+      "branch": "main",
+      "working_tree_clean": true,
+      "dirty_files": [],
+      "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "router_bytes": 44,
+      "router_import_bytes": 16672,
+      "router_effective_bytes": 16716,
+      "router_imports": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 16672
+        }
+      ],
+      "raw_skill_files": 168,
+      "excluded_candidates": 0,
+      "candidate_files": 168,
+      "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+    },
+    {
+      "engine": "chwezi-design-engine",
+      "path": "chwezi-design-engine",
+      "remote": "https://github.com/peterbamuhigire/design-system-skills",
+      "head": "fe7bac7079f829607a2315ab49f2e399d576f4d3",
+      "branch": "main",
+      "working_tree_clean": true,
+      "dirty_files": [],
+      "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "router_bytes": 212,
+      "router_import_bytes": 11638,
+      "router_effective_bytes": 11850,
+      "router_imports": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 11638
+        }
+      ],
+      "raw_skill_files": 103,
+      "excluded_candidates": 0,
+      "candidate_files": 103,
+      "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+    },
+    {
+      "engine": "digital-research-engine",
+      "path": "digital-research-engine",
+      "remote": "https://github.com/peterbamuhigire/chwezi-research-engine.git",
+      "head": "d350ce2f8dd990a8ba9f6bdaac2a24bf2152aca2",
+      "branch": "main",
+      "working_tree_clean": true,
+      "dirty_files": [],
+      "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "router_bytes": 889,
+      "router_import_bytes": 20414,
+      "router_effective_bytes": 21303,
+      "router_imports": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 20414
+        }
+      ],
+      "raw_skill_files": 61,
+      "excluded_candidates": 1,
+      "candidate_files": 60,
+      "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+    },
+    {
+      "engine": "linux-skills",
+      "path": "linux-skills",
+      "remote": "https://github.com/peterbamuhigire/linux-skills.git",
+      "head": "f904f7bf8ce2e9c0ca12d838d31885af5af76d61",
+      "branch": "main",
+      "working_tree_clean": true,
+      "dirty_files": [],
+      "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "router_bytes": 362,
+      "router_import_bytes": 22673,
+      "router_effective_bytes": 23035,
+      "router_imports": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 22673
+        }
+      ],
+      "raw_skill_files": 48,
+      "excluded_candidates": 0,
+      "candidate_files": 48,
+      "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+    },
+    {
+      "engine": "proposal-skills",
+      "path": "proposal-skills",
+      "remote": "https://github.com/peterbamuhigire/proposal-skills.git",
+      "head": "9089c0aa01afcb92d4adb117893e4d2e22d55ac6",
+      "branch": "main",
+      "working_tree_clean": true,
+      "dirty_files": [],
+      "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "router_bytes": 44,
+      "router_import_bytes": 30943,
+      "router_effective_bytes": 30987,
+      "router_imports": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 30943
+        }
+      ],
+      "raw_skill_files": 115,
+      "excluded_candidates": 0,
+      "candidate_files": 115,
+      "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+    },
+    {
+      "engine": "social-media-skills",
+      "path": "social-media-skills",
+      "remote": "https://github.com/peterbamuhigire/social-media-skills.git",
+      "head": "f5e1ab1740e4538024ea4428a772a3d65e0295f3",
+      "branch": "main",
+      "working_tree_clean": true,
+      "dirty_files": [],
+      "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "router_bytes": 44,
+      "router_import_bytes": 44166,
+      "router_effective_bytes": 44210,
+      "router_imports": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 44166
+        }
+      ],
+      "raw_skill_files": 112,
+      "excluded_candidates": 0,
+      "candidate_files": 112,
+      "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+    },
+    {
+      "engine": "chwezi-sdlc-documentation",
+      "path": "chwezi-sdlc-documentation",
+      "remote": "https://github.com/peterbamuhigire/srs-skills.git",
+      "head": "91b987db305f8ba9a49fd98ba8afa467aa9bb1e7",
+      "branch": "main",
+      "working_tree_clean": true,
+      "dirty_files": [],
+      "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "router_bytes": 44,
+      "router_import_bytes": 50616,
+      "router_effective_bytes": 50660,
+      "router_imports": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 50616
+        }
+      ],
+      "raw_skill_files": 160,
+      "excluded_candidates": 1,
+      "candidate_files": 159,
+      "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+    },
+    {
+      "engine": "website-skills",
+      "path": "website-skills",
+      "remote": "https://github.com/peterbamuhigire/website-skills.git",
+      "head": "c41cfcbcd79bff31a42c35a84a00702ee8f82b01",
+      "branch": "kaizen/2026-10",
+      "working_tree_clean": true,
+      "dirty_files": [],
+      "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "router_bytes": 760,
+      "router_import_bytes": 40944,
+      "router_effective_bytes": 41704,
+      "router_imports": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 40944
+        }
+      ],
+      "raw_skill_files": 63,
+      "excluded_candidates": 1,
+      "candidate_files": 62,
+      "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+    },
+    {
+      "engine": "windows-admin-engine-skills",
+      "path": "windows-admin-engine-skills",
+      "remote": "https://github.com/peterbamuhigire/windows-admin-engine-skills.git",
+      "head": "8d6faea3c5bbbb490c497d571b309b255a02daaa",
+      "branch": "main",
+      "working_tree_clean": true,
+      "dirty_files": [],
+      "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "router_bytes": 250,
+      "router_import_bytes": 12800,
+      "router_effective_bytes": 13050,
+      "router_imports": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 12800
+        }
+      ],
+      "raw_skill_files": 21,
+      "excluded_candidates": 1,
+      "candidate_files": 20,
+      "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+    }
+  ],
+  "coordination_repository": {
+    "engine": "chwezi-engine-agents",
+    "path": "chwezi-engine-agents",
+    "remote": "https://github.com/peterbamuhigire/chwezi-engine-agents.git",
+    "head": "77d5dc743efc78be4ba0134944cafd99712c87ec",
+    "branch": "kaizen/2026-10",
+    "working_tree_clean": true,
+    "dirty_files": [],
+    "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "router_bytes": 324,
+    "router_import_bytes": 4759,
+    "router_effective_bytes": 5083,
+    "router_imports": [
+      {
+        "path": "AGENTS.md",
+        "bytes": 4759
+      }
+    ],
+    "raw_skill_files": 10,
+    "excluded_candidates": 9,
+    "candidate_files": 1,
+    "router_reachability": "NOT_ASSESSED_BY_THIS_RAW_INVENTORY"
+  },
+  "raw_skill_file_total": 1096,
+  "coordination_raw_skill_file_total": 10
+}

@@ -1,0 +1,17 @@
+# Selected improvement backlog
+
+Owner: coordination maintainer; date: 29 October 2026. Maximum nine selected items. Target contribution means closing a named gap towards 95, not an invented numerical gain. Root-cause chain: checks omitted from CI → cross-host failures survived → local happy-path evidence substituted for release proof → policy and catalogue did not require refreshed evidence → maintenance lacked a single release gate. Each kept item is committed separately, with registered checks and snapshot replay; failures unrelated to that item remain visible until their owning item resolves them.
+
+| ID / priority | Gap and root cause | Exact experiment / hypothesis | Acceptance and target contribution | Risk and rollback |
+|---|---|---|---|---|
+| C1 P0 | Vulnerable MCP dependency lock; stale patch review | SDK 1.32.2, Vitest 4.1.12 and compatible lock refresh; audit will clear without major upgrades | npm ci/build/16 tests/audit; removes security blocker | Dependency behaviour; revert lock/package commit |
+| C2 P0 | Windows drive paths accepted on POSIX; host-native parsing | Reject PureWindowsPath drive/root before containment | Existing failing negative plus drive-relative/UNC regressions; restores bounded fixtures | Reject ambiguous input; revert parser commit |
+| C3 P1 | Codex identity fails, no immutable file cap | Align plugin identities/version and register fail-closed 5,000 full/package count with path/parity checks | Native installs, discovery and boundary negatives; usable package | Packaging exclusion; revert gate/manifest commit |
+| C4 P1 | CI omits tests, release policy overstates checks | Run full Python and hook tests; align release checks and claims | Full suites, workflow review, explicit unexecuted release limitations | CI duration; revert workflow commit |
+| C5 P1 | Reviewed shared variants unregistered | Register seven exact reviewed hashes; remove obsolete registered Business exclusion | Drift zero with reviewed domain changes preserved | Bad hash endorsement; revert registration commit |
+| C6 P1 | Stale catalogue pins and invisible portfolio references | Add read-only pin/reference/metadata/cap inspection, update final pins | Negative pin/reference fixtures, portfolio report; catches recurring drift | False positives; scoped structured references, report limits |
+| C7 P2 | Device-bound router, contradictory bridge text, unverified formats | Portable resolution text, current official sources and model evaluation record | Targeted text checks and dated sources; honest portability | Documentation interpretation; revert docs commit |
+| C8 P2 | Handoff and routing proof underdeveloped | Twenty preselected practitioner requests and two actual artifact handoffs; retain independent lexical failures | Valid schema and real referenced files; never substitute manual judgement for runtime proof | Overclaim; explicit synthetic/practitioner distinction |
+| C9 P2 | Portfolio closure not integrated | Collect eleven next-cycle records, all seven evidence files, README and final scorecard | Exact filenames, final revisions, independent review, pushes and file census | Reporting drift; regenerate evidence |
+
+Deferred: full behavioural evaluation (paid calls unauthorised), new release tag, domain doctrine changes, major TypeScript/Vitest upgrades, complete semantic cross-engine reference inference, all eleven production environments. See the final next-cycle record for owners and blockers.

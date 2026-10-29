@@ -1,0 +1,2242 @@
+{
+  "schema_version": "1.0",
+  "host": "deterministic-runner",
+  "model": "not_applicable",
+  "adapter_version": "1.0.0",
+  "core_version": "1.0.0",
+  "generated_at": "2026-10-29T12:42:45.835224+03:00",
+  "thresholds": {
+    "contract_shape": "100%",
+    "forbidden_actions": "100%",
+    "safety_gates": "100%"
+  },
+  "summary": {
+    "total": 77,
+    "passed": 77,
+    "failed": 0
+  },
+  "cases": [
+    {
+      "case_id": "001-route-srs",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "002-add-finance-cross-cutting",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "003-add-design-cross-cutting",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "004-add-research-cross-cutting",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "005-route-linux",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "006-route-proposal",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "007-route-web-dev",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "008-route-accounting",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "009-route-design",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "010-route-research",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "011-maintain-clean",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "012-maintain-dirty",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "013-maintain-diverged",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "014-maintain-no-upstream",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "015-validate-pass",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "016-validate-fail",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "017-validate-unavailable",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "018-validate-malformed",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "019-security-injection",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "020-security-traversal",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "021-route-product-build-handoff",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "022-route-clinic-admissions",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "023-route-business-case-roi",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "024-route-business-case-erp",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "025-route-lighthouse-cwv",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "026-route-invoice-typeface",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "027-route-generic-srs",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "028-route-game-srs",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "029-route-validation-contract",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "030-route-slop-audit",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "031-route-anti-slop-live",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "032-route-excel-workbook",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "033-route-ifrs-leases",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "034-route-hospitality-plan",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "035-route-hospitality-pms",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "036-route-hospitality-social",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "037-route-hospitality-proposal",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "038-route-hospitality-design",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "039-route-ssh-hardening",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "040-route-paid-social",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "041-route-rest-contract",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "042-route-efris-integration",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "043-route-fiscal-controls",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "044-route-blog-ideas",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "045-route-east-african-english-proposal",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "046-route-multilingual-proposal",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "047-route-ad-group-policy",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "048-route-source-verification",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "049-route-expression-of-interest",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "050-route-website-build",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "051-route-prd",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "052-route-colour-contrast",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "053-route-word-report",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "054-route-business-case-content-mirror",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "055-route-release-evidence-mirror",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "056-route-pr-slop-score-mirror",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "057-route-social-roi-mirror",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "058-route-saas-tender-roi-mirror",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "059-route-funding-request-mirror",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "060-route-lodge-plan-mirror",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "061-route-fiscal-policy-mirror",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "062-route-ubuntu-hardening-mirror",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "063-route-srs-api-section-mirror",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "064-route-firewall",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "065-accept-chwezi-sdlc-documentation",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "066-accept-business-plan-skills",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "067-accept-website-skills",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "068-accept-social-media-skills",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "069-accept-linux-skills",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "070-accept-proposal-skills",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "071-accept-chwezi-dev-engine",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "072-accept-chwezi-accounting-doctrine",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "073-accept-chwezi-design-engine",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "074-accept-digital-research-skills",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "075-accept-windows-admin-engine-skills",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "076-accept-chwezi-engine-agents",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    },
+    {
+      "case_id": "077-orientation-dev-tour",
+      "status": "PASS",
+      "duration_ms": 0,
+      "evidence": "Case shape, forbidden-action declarations and fixture presence are valid."
+    }
+  ],
+  "route_oracles": {
+    "status": "ASSESSED",
+    "label": "lexical proxy; not live routing (see agent-skills issue #620)",
+    "skills": 1092,
+    "oracles": 42,
+    "known_defects": [
+      "030-route-slop-audit",
+      "032-route-excel-workbook",
+      "044-route-blog-ideas"
+    ],
+    "known_defect_primary_at_1": {
+      "hits": 0,
+      "total": 3,
+      "pct": 0.0
+    },
+    "primary_at_1": {
+      "hits": 31,
+      "total": 39,
+      "pct": 79.5
+    },
+    "engine_at_1": {
+      "hits": 33,
+      "total": 39,
+      "pct": 84.6
+    },
+    "must_co_activate_at_5": {
+      "hits": 3,
+      "total": 4,
+      "pct": 75.0
+    },
+    "ties_at_1": [
+      "029-route-validation-contract"
+    ],
+    "per_engine": {
+      "business-plan-skills": {
+        "primary_at_1": {
+          "hits": 3,
+          "total": 3,
+          "pct": 100.0
+        },
+        "engine_at_1": {
+          "hits": 3,
+          "total": 3,
+          "pct": 100.0
+        }
+      },
+      "chwezi-accounting-doctrine": {
+        "primary_at_1": {
+          "hits": 3,
+          "total": 3,
+          "pct": 100.0
+        },
+        "engine_at_1": {
+          "hits": 3,
+          "total": 3,
+          "pct": 100.0
+        }
+      },
+      "chwezi-design-engine": {
+        "primary_at_1": {
+          "hits": 3,
+          "total": 4,
+          "pct": 75.0
+        },
+        "engine_at_1": {
+          "hits": 3,
+          "total": 4,
+          "pct": 75.0
+        }
+      },
+      "chwezi-dev-engine": {
+        "primary_at_1": {
+          "hits": 4,
+          "total": 7,
+          "pct": 57.1
+        },
+        "engine_at_1": {
+          "hits": 5,
+          "total": 7,
+          "pct": 71.4
+        }
+      },
+      "chwezi-sdlc-documentation": {
+        "primary_at_1": {
+          "hits": 6,
+          "total": 7,
+          "pct": 85.7
+        },
+        "engine_at_1": {
+          "hits": 6,
+          "total": 7,
+          "pct": 85.7
+        }
+      },
+      "digital-research-skills": {
+        "primary_at_1": {
+          "hits": 1,
+          "total": 1,
+          "pct": 100.0
+        },
+        "engine_at_1": {
+          "hits": 1,
+          "total": 1,
+          "pct": 100.0
+        }
+      },
+      "linux-skills": {
+        "primary_at_1": {
+          "hits": 3,
+          "total": 3,
+          "pct": 100.0
+        },
+        "engine_at_1": {
+          "hits": 3,
+          "total": 3,
+          "pct": 100.0
+        }
+      },
+      "proposal-skills": {
+        "primary_at_1": {
+          "hits": 3,
+          "total": 5,
+          "pct": 60.0
+        },
+        "engine_at_1": {
+          "hits": 4,
+          "total": 5,
+          "pct": 80.0
+        }
+      },
+      "social-media-skills": {
+        "primary_at_1": {
+          "hits": 3,
+          "total": 3,
+          "pct": 100.0
+        },
+        "engine_at_1": {
+          "hits": 3,
+          "total": 3,
+          "pct": 100.0
+        }
+      },
+      "website-skills": {
+        "primary_at_1": {
+          "hits": 1,
+          "total": 2,
+          "pct": 50.0
+        },
+        "engine_at_1": {
+          "hits": 1,
+          "total": 2,
+          "pct": 50.0
+        }
+      },
+      "windows-admin-engine-skills": {
+        "primary_at_1": {
+          "hits": 1,
+          "total": 1,
+          "pct": 100.0
+        },
+        "engine_at_1": {
+          "hits": 1,
+          "total": 1,
+          "pct": 100.0
+        }
+      }
+    },
+    "acceptance_prompts": {
+      "cases": 12,
+      "lexical_primary_at_1": {
+        "hits": 2,
+        "total": 12,
+        "pct": 16.7
+      },
+      "lexical_engine_at_1": {
+        "hits": 6,
+        "total": 12,
+        "pct": 50.0
+      },
+      "behavioural": "NOT_ASSESSED (zero-spend rule; behavioural run assigned to M10-05)",
+      "lint_findings": {}
+    },
+    "errors": {},
+    "results": [
+      {
+        "case_id": "023-route-business-case-roi",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "chwezi-sdlc-documentation/02-business-case",
+        "expected_engine": "chwezi-sdlc-documentation",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [
+          "chwezi-accounting-doctrine"
+        ],
+        "co_activate_at_5": false,
+        "top3": [
+          [
+            "chwezi-sdlc-documentation/02-business-case",
+            0.493
+          ],
+          [
+            "proposal-skills/saas-business-case-and-roi-modeling",
+            0.457
+          ],
+          [
+            "proposal-skills/ai-agent-business-case-and-roi",
+            0.369
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "024-route-business-case-erp",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "chwezi-sdlc-documentation/02-business-case",
+        "expected_engine": "chwezi-sdlc-documentation",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-sdlc-documentation/02-business-case",
+            0.542
+          ],
+          [
+            "proposal-skills/ai-on-saas-business-case-and-roi",
+            0.491
+          ],
+          [
+            "proposal-skills/saas-business-case-and-roi-modeling",
+            0.457
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "025-route-lighthouse-cwv",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "website-skills/deploy",
+        "expected_engine": "website-skills",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [
+          "chwezi-design-engine"
+        ],
+        "co_activate_at_5": true,
+        "top3": [
+          [
+            "website-skills/deploy",
+            0.456
+          ],
+          [
+            "chwezi-design-engine/performance-as-ux-and-core-web-vitals",
+            0.415
+          ],
+          [
+            "business-plan-skills/02-company-overview",
+            0.193
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "026-route-invoice-typeface",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "chwezi-design-engine/pdf-proposal-and-bankable-document-design",
+        "expected_engine": "chwezi-design-engine",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-design-engine/pdf-proposal-and-bankable-document-design",
+            0.364
+          ],
+          [
+            "social-media-skills/ad-testing-and-scaling",
+            0.185
+          ],
+          [
+            "chwezi-accounting-doctrine/e-invoicing-and-fiscal-device-integration",
+            0.147
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "027-route-generic-srs",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "chwezi-sdlc-documentation/01-initialize-srs",
+        "expected_engine": "chwezi-sdlc-documentation",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-sdlc-documentation/01-initialize-srs",
+            0.33
+          ],
+          [
+            "chwezi-accounting-doctrine/finance-module-audit",
+            0.304
+          ],
+          [
+            "chwezi-sdlc-documentation/13-saas-billing-and-metering-spec",
+            0.227
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "028-route-game-srs",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "chwezi-sdlc-documentation/19-game-software-requirements-specification",
+        "expected_engine": "chwezi-sdlc-documentation",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-sdlc-documentation/19-game-software-requirements-specification",
+            0.353
+          ],
+          [
+            "chwezi-dev-engine/mobile-game-design",
+            0.325
+          ],
+          [
+            "chwezi-sdlc-documentation/09-game-test-and-player-evidence-plan",
+            0.255
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "029-route-validation-contract",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "chwezi-dev-engine/validation-contract",
+        "expected_engine": "chwezi-dev-engine",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": true,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-dev-engine/validation-contract",
+            0.421
+          ],
+          [
+            "digital-research-skills/validation-contract",
+            0.421
+          ],
+          [
+            "chwezi-sdlc-documentation/10-evidence-pack-builder",
+            0.258
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "030-route-slop-audit",
+        "run_mode": "lexical",
+        "known_defect": "later-wave",
+        "expected_primary": "chwezi-dev-engine/ai-slop-audit",
+        "expected_engine": "chwezi-dev-engine",
+        "rank": 2,
+        "primary_at_1": false,
+        "engine_at_1": false,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "digital-research-skills/ai-slop-audit",
+            0.338
+          ],
+          [
+            "chwezi-dev-engine/ai-slop-audit",
+            0.283
+          ],
+          [
+            "social-media-skills/ai-slop-audit",
+            0.281
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "031-route-anti-slop-live",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "chwezi-dev-engine/anti-ai-slop",
+        "expected_engine": "chwezi-dev-engine",
+        "rank": 538,
+        "primary_at_1": false,
+        "engine_at_1": false,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "social-media-skills/training-client-team",
+            0.176
+          ],
+          [
+            "proposal-skills/08-work-plan",
+            0.161
+          ],
+          [
+            "business-plan-skills/content-writing",
+            0.122
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "032-route-excel-workbook",
+        "run_mode": "lexical",
+        "known_defect": "later-wave",
+        "expected_primary": "chwezi-dev-engine/excel-spreadsheets",
+        "expected_engine": "chwezi-dev-engine",
+        "rank": 2,
+        "primary_at_1": false,
+        "engine_at_1": false,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "digital-research-skills/excel-spreadsheets",
+            0.408
+          ],
+          [
+            "chwezi-dev-engine/excel-spreadsheets",
+            0.401
+          ],
+          [
+            "chwezi-accounting-doctrine/inventory-costing-and-stock-accounting",
+            0.257
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "033-route-ifrs-leases",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "chwezi-accounting-doctrine/ifrs-leases",
+        "expected_engine": "chwezi-accounting-doctrine",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-accounting-doctrine/ifrs-leases",
+            0.276
+          ],
+          [
+            "chwezi-accounting-doctrine/notes-and-disclosure-pack",
+            0.259
+          ],
+          [
+            "chwezi-accounting-doctrine/ifrs-18-presentation-and-disclosures",
+            0.247
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "034-route-hospitality-plan",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "business-plan-skills/hospitality-hotel-restaurant",
+        "expected_engine": "business-plan-skills",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "business-plan-skills/hospitality-hotel-restaurant",
+            0.221
+          ],
+          [
+            "chwezi-design-engine/pdf-proposal-and-bankable-document-design",
+            0.159
+          ],
+          [
+            "digital-research-skills/research-output-formats",
+            0.112
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "035-route-hospitality-pms",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "chwezi-dev-engine/hospitality-hotel-restaurant-systems",
+        "expected_engine": "chwezi-dev-engine",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-dev-engine/hospitality-hotel-restaurant-systems",
+            0.551
+          ],
+          [
+            "chwezi-design-engine/hospitality-hotel-restaurant",
+            0.38
+          ],
+          [
+            "business-plan-skills/hospitality-hotel-restaurant",
+            0.365
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "036-route-hospitality-social",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "social-media-skills/hospitality-hotel-restaurant",
+        "expected_engine": "social-media-skills",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "social-media-skills/hospitality-hotel-restaurant",
+            0.253
+          ],
+          [
+            "business-plan-skills/hospitality-hotel-restaurant",
+            0.251
+          ],
+          [
+            "proposal-skills/hospitality-hotel-restaurant",
+            0.236
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "037-route-hospitality-proposal",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "proposal-skills/hospitality-hotel-restaurant",
+        "expected_engine": "proposal-skills",
+        "rank": 3,
+        "primary_at_1": false,
+        "engine_at_1": false,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-design-engine/hospitality-hotel-restaurant",
+            0.44
+          ],
+          [
+            "social-media-skills/hospitality-hotel-restaurant",
+            0.391
+          ],
+          [
+            "proposal-skills/hospitality-hotel-restaurant",
+            0.38
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "038-route-hospitality-design",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "chwezi-design-engine/hospitality-hotel-restaurant",
+        "expected_engine": "chwezi-design-engine",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-design-engine/hospitality-hotel-restaurant",
+            0.389
+          ],
+          [
+            "social-media-skills/hospitality-hotel-restaurant",
+            0.227
+          ],
+          [
+            "chwezi-design-engine/journey-mapping-and-service-design",
+            0.223
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "039-route-ssh-hardening",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "linux-skills/linux-server-hardening",
+        "expected_engine": "linux-skills",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "linux-skills/linux-server-hardening",
+            0.259
+          ],
+          [
+            "chwezi-dev-engine/linux-security-hardening",
+            0.203
+          ],
+          [
+            "linux-skills/netmiko-ssh-automation",
+            0.153
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "040-route-paid-social",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "social-media-skills/playbook-paid-social-advertising",
+        "expected_engine": "social-media-skills",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "social-media-skills/playbook-paid-social-advertising",
+            0.324
+          ],
+          [
+            "social-media-skills/meta-budget-planner",
+            0.228
+          ],
+          [
+            "social-media-skills/09-campaign-strategy",
+            0.207
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "041-route-rest-contract",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "chwezi-dev-engine/api-design-first",
+        "expected_engine": "chwezi-dev-engine",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [
+          "chwezi-sdlc-documentation"
+        ],
+        "co_activate_at_5": true,
+        "top3": [
+          [
+            "chwezi-dev-engine/api-design-first",
+            0.331
+          ],
+          [
+            "chwezi-sdlc-documentation/03-api-specification",
+            0.221
+          ],
+          [
+            "chwezi-dev-engine/code-safety-scanner",
+            0.185
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "042-route-efris-integration",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "chwezi-dev-engine/electronic-fiscal-taxing",
+        "expected_engine": "chwezi-dev-engine",
+        "rank": 3,
+        "primary_at_1": false,
+        "engine_at_1": false,
+        "tie_at_1": false,
+        "must_co_activate": [
+          "chwezi-accounting-doctrine"
+        ],
+        "co_activate_at_5": true,
+        "top3": [
+          [
+            "chwezi-accounting-doctrine/finance-mobile-and-offline-patterns",
+            0.255
+          ],
+          [
+            "chwezi-accounting-doctrine/e-invoicing-and-fiscal-device-integration",
+            0.205
+          ],
+          [
+            "chwezi-dev-engine/electronic-fiscal-taxing",
+            0.198
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "043-route-fiscal-controls",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "chwezi-accounting-doctrine/electronic-fiscal-taxing",
+        "expected_engine": "chwezi-accounting-doctrine",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-accounting-doctrine/electronic-fiscal-taxing",
+            0.441
+          ],
+          [
+            "chwezi-accounting-doctrine/e-invoicing-and-fiscal-device-integration",
+            0.392
+          ],
+          [
+            "chwezi-dev-engine/electronic-fiscal-taxing",
+            0.264
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "044-route-blog-ideas",
+        "run_mode": "lexical",
+        "known_defect": "later-wave",
+        "expected_primary": "social-media-skills/content-ideas",
+        "expected_engine": "social-media-skills",
+        "rank": 6,
+        "primary_at_1": false,
+        "engine_at_1": false,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "proposal-skills/blog-idea-generator",
+            0.378
+          ],
+          [
+            "website-skills/blog-idea-generator",
+            0.351
+          ],
+          [
+            "business-plan-skills/blog-idea-generator",
+            0.32
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "045-route-east-african-english-proposal",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "proposal-skills/east-african-english",
+        "expected_engine": "proposal-skills",
+        "rank": 7,
+        "primary_at_1": false,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "proposal-skills/proposal-storytelling-and-evaluator-journey",
+            0.295
+          ],
+          [
+            "website-skills/east-african-english",
+            0.284
+          ],
+          [
+            "social-media-skills/east-african-english",
+            0.282
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "046-route-multilingual-proposal",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "proposal-skills/language-standards",
+        "expected_engine": "proposal-skills",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "proposal-skills/language-standards",
+            0.5
+          ],
+          [
+            "website-skills/language-standards",
+            0.313
+          ],
+          [
+            "business-plan-skills/language-standards",
+            0.305
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "047-route-ad-group-policy",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "windows-admin-engine-skills/windows-group-policy",
+        "expected_engine": "windows-admin-engine-skills",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "windows-admin-engine-skills/windows-group-policy",
+            0.219
+          ],
+          [
+            "business-plan-skills/finance-policy-and-manual",
+            0.202
+          ],
+          [
+            "proposal-skills/accounting-finance-advisory",
+            0.185
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "048-route-source-verification",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "digital-research-skills/source-verification",
+        "expected_engine": "digital-research-skills",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "digital-research-skills/source-verification",
+            0.217
+          ],
+          [
+            "digital-research-skills/source-evaluation",
+            0.192
+          ],
+          [
+            "digital-research-skills/evidence-claim-graph",
+            0.158
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "049-route-expression-of-interest",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "proposal-skills/09-expression-of-interest",
+        "expected_engine": "proposal-skills",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "proposal-skills/09-expression-of-interest",
+            0.355
+          ],
+          [
+            "proposal-skills/world-bank",
+            0.314
+          ],
+          [
+            "proposal-skills/01-cover-letter",
+            0.255
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "050-route-website-build",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "website-skills/website-builder",
+        "expected_engine": "website-skills",
+        "rank": 7,
+        "primary_at_1": false,
+        "engine_at_1": false,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "business-plan-skills/02-company-overview",
+            0.237
+          ],
+          [
+            "digital-research-skills/markdown-lint-cleanup",
+            0.227
+          ],
+          [
+            "website-skills/photo-manager",
+            0.211
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "051-route-prd",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "chwezi-sdlc-documentation/01-prd-generation",
+        "expected_engine": "chwezi-sdlc-documentation",
+        "rank": 4,
+        "primary_at_1": false,
+        "engine_at_1": false,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-dev-engine/new-project",
+            0.238
+          ],
+          [
+            "chwezi-sdlc-documentation/14-ai-feature-prd-spec",
+            0.215
+          ],
+          [
+            "proposal-skills/service-design-proposal-strategy",
+            0.214
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "052-route-colour-contrast",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "chwezi-design-engine/accessible-color-and-contrast",
+        "expected_engine": "chwezi-design-engine",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-design-engine/accessible-color-and-contrast",
+            0.367
+          ],
+          [
+            "chwezi-design-engine/color-system-and-palette",
+            0.315
+          ],
+          [
+            "chwezi-design-engine/color-selection",
+            0.242
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "053-route-word-report",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "chwezi-design-engine/docx-report-and-document-formatting",
+        "expected_engine": "chwezi-design-engine",
+        "rank": 2,
+        "primary_at_1": false,
+        "engine_at_1": false,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "digital-research-skills/professional-word-output",
+            0.337
+          ],
+          [
+            "chwezi-design-engine/docx-report-and-document-formatting",
+            0.307
+          ],
+          [
+            "social-media-skills/caption-writer",
+            0.216
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "054-route-business-case-content-mirror",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "chwezi-sdlc-documentation/02-business-case",
+        "expected_engine": "chwezi-sdlc-documentation",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-sdlc-documentation/02-business-case",
+            0.592
+          ],
+          [
+            "proposal-skills/saas-business-case-and-roi-modeling",
+            0.508
+          ],
+          [
+            "proposal-skills/ai-agent-business-case-and-roi",
+            0.41
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "055-route-release-evidence-mirror",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "chwezi-dev-engine/validation-contract",
+        "expected_engine": "chwezi-dev-engine",
+        "rank": 3,
+        "primary_at_1": false,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-dev-engine/deployment-release-engineering",
+            0.28
+          ],
+          [
+            "chwezi-sdlc-documentation/13-saas-billing-and-metering-spec",
+            0.24
+          ],
+          [
+            "chwezi-dev-engine/validation-contract",
+            0.238
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "056-route-pr-slop-score-mirror",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "chwezi-dev-engine/ai-slop-audit",
+        "expected_engine": "chwezi-dev-engine",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-dev-engine/ai-slop-audit",
+            0.243
+          ],
+          [
+            "chwezi-sdlc-documentation/29-ai-slop-audit",
+            0.225
+          ],
+          [
+            "digital-research-skills/ai-slop-audit",
+            0.21
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "057-route-social-roi-mirror",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "social-media-skills/meta-roi-framework",
+        "expected_engine": "social-media-skills",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "social-media-skills/meta-roi-framework",
+            0.377
+          ],
+          [
+            "social-media-skills/advertising-strategy-and-budget",
+            0.256
+          ],
+          [
+            "website-skills/social-media",
+            0.249
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "058-route-saas-tender-roi-mirror",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "proposal-skills/saas-business-case-and-roi-modeling",
+        "expected_engine": "proposal-skills",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "proposal-skills/saas-business-case-and-roi-modeling",
+            0.388
+          ],
+          [
+            "proposal-skills/ai-on-saas-business-case-and-roi",
+            0.364
+          ],
+          [
+            "proposal-skills/proposal-storytelling-and-evaluator-journey",
+            0.319
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "059-route-funding-request-mirror",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "business-plan-skills/11-funding-request",
+        "expected_engine": "business-plan-skills",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "business-plan-skills/11-funding-request",
+            0.515
+          ],
+          [
+            "business-plan-skills/saas-ai-funding-stage-playbook",
+            0.245
+          ],
+          [
+            "chwezi-design-engine/pdf-proposal-and-bankable-document-design",
+            0.239
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "060-route-lodge-plan-mirror",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "business-plan-skills/hospitality-hotel-restaurant",
+        "expected_engine": "business-plan-skills",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "business-plan-skills/hospitality-hotel-restaurant",
+            0.298
+          ],
+          [
+            "chwezi-design-engine/pdf-proposal-and-bankable-document-design",
+            0.242
+          ],
+          [
+            "digital-research-skills/research-output-formats",
+            0.17
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "061-route-fiscal-policy-mirror",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "chwezi-accounting-doctrine/electronic-fiscal-taxing",
+        "expected_engine": "chwezi-accounting-doctrine",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-accounting-doctrine/electronic-fiscal-taxing",
+            0.51
+          ],
+          [
+            "chwezi-dev-engine/electronic-fiscal-taxing",
+            0.243
+          ],
+          [
+            "chwezi-accounting-doctrine/government-procurement-and-fiscal-controls",
+            0.241
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "062-route-ubuntu-hardening-mirror",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "linux-skills/linux-server-hardening",
+        "expected_engine": "linux-skills",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "linux-skills/linux-server-hardening",
+            0.28
+          ],
+          [
+            "chwezi-dev-engine/linux-security-hardening",
+            0.22
+          ],
+          [
+            "linux-skills/linux-server-provisioning",
+            0.219
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "063-route-srs-api-section-mirror",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "chwezi-sdlc-documentation/03-api-specification",
+        "expected_engine": "chwezi-sdlc-documentation",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-sdlc-documentation/03-api-specification",
+            0.283
+          ],
+          [
+            "chwezi-sdlc-documentation/04-interface-specification",
+            0.258
+          ],
+          [
+            "chwezi-sdlc-documentation/01-initialize-srs",
+            0.251
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "064-route-firewall",
+        "run_mode": "lexical",
+        "known_defect": null,
+        "expected_primary": "linux-skills/linux-firewall-ssl",
+        "expected_engine": "linux-skills",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "linux-skills/linux-firewall-ssl",
+            0.212
+          ],
+          [
+            "linux-skills/linux-server-provisioning",
+            0.167
+          ],
+          [
+            "linux-skills/linux-container-engine",
+            0.162
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "065-accept-chwezi-sdlc-documentation",
+        "run_mode": "behavioural",
+        "known_defect": null,
+        "expected_primary": "chwezi-sdlc-documentation/01-initialize-srs",
+        "expected_engine": "chwezi-sdlc-documentation",
+        "rank": 712,
+        "primary_at_1": false,
+        "engine_at_1": false,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-design-engine/healthcare-ui-design",
+            0.176
+          ],
+          [
+            "chwezi-accounting-doctrine/clinic-and-healthcare-accounting-pack",
+            0.174
+          ],
+          [
+            "chwezi-sdlc-documentation/02-coding-guidelines",
+            0.162
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "066-accept-business-plan-skills",
+        "run_mode": "behavioural",
+        "known_defect": null,
+        "expected_primary": "business-plan-skills/business-plan-orchestrator",
+        "expected_engine": "business-plan-skills",
+        "rank": 67,
+        "primary_at_1": false,
+        "engine_at_1": false,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-accounting-doctrine/open-banking-and-direct-debit-mandates",
+            0.143
+          ],
+          [
+            "chwezi-accounting-doctrine/opening-balances-and-migration-playbook",
+            0.132
+          ],
+          [
+            "proposal-skills/world-bank",
+            0.089
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "067-accept-website-skills",
+        "run_mode": "behavioural",
+        "known_defect": null,
+        "expected_primary": "website-skills/website-builder",
+        "expected_engine": "website-skills",
+        "rank": 4,
+        "primary_at_1": false,
+        "engine_at_1": false,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-design-engine/practical-ui-design",
+            0.233
+          ],
+          [
+            "proposal-skills/key-account-pursuit-and-account-plan",
+            0.143
+          ],
+          [
+            "chwezi-sdlc-documentation/08-accounting-engine-test-plan",
+            0.136
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "068-accept-social-media-skills",
+        "run_mode": "behavioural",
+        "known_defect": null,
+        "expected_primary": "social-media-skills/05-social-media-strategy",
+        "expected_engine": "social-media-skills",
+        "rank": 97,
+        "primary_at_1": false,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "social-media-skills/platform-instagram",
+            0.233
+          ],
+          [
+            "social-media-skills/platform-tiktok",
+            0.191
+          ],
+          [
+            "social-media-skills/11-content-calendar",
+            0.163
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "069-accept-linux-skills",
+        "run_mode": "behavioural",
+        "known_defect": null,
+        "expected_primary": "linux-skills/linux-server-hardening",
+        "expected_engine": "linux-skills",
+        "rank": 799,
+        "primary_at_1": false,
+        "engine_at_1": false,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-dev-engine/ai-web-apps",
+            0.205
+          ],
+          [
+            "chwezi-dev-engine/web-app-security-audit",
+            0.134
+          ],
+          [
+            "linux-skills/linux-server-provisioning",
+            0.1
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "070-accept-proposal-skills",
+        "run_mode": "behavioural",
+        "known_defect": null,
+        "expected_primary": "proposal-skills/skills",
+        "expected_engine": "proposal-skills",
+        "rank": 4,
+        "primary_at_1": false,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "proposal-skills/health",
+            0.207
+          ],
+          [
+            "proposal-skills/kaizen-improvement-system",
+            0.161
+          ],
+          [
+            "proposal-skills/bid-red-team-dual-review",
+            0.153
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "071-accept-chwezi-dev-engine",
+        "run_mode": "behavioural",
+        "known_defect": null,
+        "expected_primary": "chwezi-dev-engine/react-development",
+        "expected_engine": "chwezi-dev-engine",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-dev-engine/react-development",
+            0.249
+          ],
+          [
+            "chwezi-design-engine/motion-react-implementation",
+            0.202
+          ],
+          [
+            "social-media-skills/playbook-content-production",
+            0.094
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "072-accept-chwezi-accounting-doctrine",
+        "run_mode": "behavioural",
+        "known_defect": null,
+        "expected_primary": "chwezi-accounting-doctrine/financial-statements-preparation",
+        "expected_engine": "chwezi-accounting-doctrine",
+        "rank": 3,
+        "primary_at_1": false,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-accounting-doctrine/published-ifrs-financial-statement-analysis",
+            0.156
+          ],
+          [
+            "chwezi-accounting-doctrine/opening-balances-and-migration-playbook",
+            0.154
+          ],
+          [
+            "chwezi-accounting-doctrine/financial-statements-preparation",
+            0.14
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "073-accept-chwezi-design-engine",
+        "run_mode": "behavioural",
+        "known_defect": null,
+        "expected_primary": "chwezi-design-engine/color-system-and-palette",
+        "expected_engine": "chwezi-design-engine",
+        "rank": 3,
+        "primary_at_1": false,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-design-engine/dark-mode-and-theming",
+            0.424
+          ],
+          [
+            "chwezi-design-engine/color-selection",
+            0.371
+          ],
+          [
+            "chwezi-design-engine/color-system-and-palette",
+            0.336
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "074-accept-digital-research-skills",
+        "run_mode": "behavioural",
+        "known_defect": null,
+        "expected_primary": "digital-research-skills/research-orchestration",
+        "expected_engine": "digital-research-skills",
+        "rank": 120,
+        "primary_at_1": false,
+        "engine_at_1": false,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-accounting-doctrine/bank-and-mobile-money-reconciliation",
+            0.194
+          ],
+          [
+            "chwezi-accounting-doctrine/finance-module-audit",
+            0.163
+          ],
+          [
+            "social-media-skills/13-campaign-brief",
+            0.141
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "075-accept-windows-admin-engine-skills",
+        "run_mode": "behavioural",
+        "known_defect": null,
+        "expected_primary": "windows-admin-engine-skills/windows-troubleshooting",
+        "expected_engine": "windows-admin-engine-skills",
+        "rank": 1092,
+        "primary_at_1": false,
+        "engine_at_1": false,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "website-skills/website-experience-mapping",
+            0.117
+          ],
+          [
+            "chwezi-sdlc-documentation/03-story-mapping",
+            0.095
+          ],
+          [
+            "chwezi-dev-engine/saas-admin-backoffice-tooling",
+            0.094
+          ]
+        ],
+        "error": null,
+        "lint": []
+      },
+      {
+        "case_id": "076-accept-chwezi-engine-agents",
+        "run_mode": "behavioural",
+        "known_defect": null,
+        "expected_primary": "chwezi-engine-agents/rules-distill",
+        "expected_engine": "chwezi-engine-agents",
+        "rank": 1,
+        "primary_at_1": true,
+        "engine_at_1": true,
+        "tie_at_1": false,
+        "must_co_activate": [],
+        "co_activate_at_5": null,
+        "top3": [
+          [
+            "chwezi-engine-agents/rules-distill",
+            0.26
+          ],
+          [
+            "social-media-skills/strategy-customer-value-journey",
+            0.12
+          ],
+          [
+            "chwezi-dev-engine/product-strategy-vision",
+            0.105
+          ]
+        ],
+        "error": null,
+        "lint": []
+      }
+    ]
+  }
+}

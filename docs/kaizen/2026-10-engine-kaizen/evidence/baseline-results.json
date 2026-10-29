@@ -1,0 +1,37 @@
+[
+  {
+    "command": "python -X utf8 scripts/render_host_files.py --check --workspace-root <workspace>",
+    "exit": 1,
+    "log": "0.log"
+  },
+  {
+    "command": "python -X utf8 scripts/validate-no-book-extractions.py --workspace-root <workspace>",
+    "exit": 0,
+    "log": "1.log"
+  },
+  {
+    "command": "python -X utf8 scripts/validate-kaizen-cards.py",
+    "exit": 0,
+    "log": "2.log"
+  },
+  {
+    "command": "python -X utf8 -m pytest tests -q -p no:cacheprovider",
+    "exit": 1,
+    "log": "3.log"
+  },
+  {
+    "command": "python -X utf8 scripts/kaizen_portfolio_snapshot.py --workspace-root <workspace> --coordination-root . --output-dir <evidence>/snapshot --as-of 2026-10-29",
+    "exit": 0,
+    "log": "4.log"
+  },
+  {
+    "command": "python -X utf8 scripts/validate-runtime-skill-budget.py --collisions --ownership evals/routing/ownership.yaml --workspace-root <workspace>",
+    "exit": 0,
+    "log": "5.log"
+  },
+  {
+    "command": "python -X utf8 evals/runners/run-contract-evals.py --cases evals/cases --route-oracles --workspace-root <workspace> --out <evidence>/oracles.json",
+    "exit": 0,
+    "log": "6.log"
+  }
+]
