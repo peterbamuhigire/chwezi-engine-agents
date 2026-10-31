@@ -1,5 +1,32 @@
 # Changelog
 
+## Unreleased - Documentation wave and pin refresh (31 October 2026)
+
+The pass-2 entry below has no commit hashes and says the catalogue pins were not refreshed; this entry adds the hashes by theme
+and records what happened after. The pass-2 commits are on `main`; the documentation commits are on branch `kaizen/2026-10-docs`
+and are not merged. Nothing was pushed, tagged or released from this package.
+
+- Engine location: `eb8dae1` (locator and catalogue `aliases`), `9329a82` (`--engines-root` for the drift check).
+- New checks: `5d7dbc8` and `2259900` (public-repository hygiene), `0d539fa` (canonical hook copy, installed copies compared),
+  `2af312e` (`released_commit` refresh script and pin-lag rule), `608f466` (catalogue validators checked against engine
+  manifests), `d4450f7` (path-free router wording, router rules and `--render-router-blocks`).
+- MCP server: `0267684` (discovery test follows the checkout's branch; an unstartable validator is `NOT ASSESSED`). The critical
+  lockfile finding F-01 is still open and needs the maintainer's authority.
+- CI and policy: `6763854` (every Python test file and both hook tests; the release workflow calls validate; the supply-chain policy
+  matches the workflows). Suite marketplace counts: `f099c75`.
+- Teaching and evidence: `903243e` (router and changelog), `39ee3a1` and `c887dfa` (baseline and backlog), `dc743e3`, `4b9a30e`
+  and `3dde18e` (experiment log, validation record, final report, next cycle and the evidence logs).
+- `f1e4565` refreshed the catalogue `released_commit` pins to the eleven engines' `main` commits, which supersedes the pass-2 entry's
+  "deliberately not refreshed". The pin-lag rule fails again as soon as an engine moves past its pin.
+- Documentation (`ce48567`, `62ca327`, `a706b4d`, `b216053`, `eb2134b`): README gains measured installation notes, a Validation
+  section (commands, dependencies, results, `NOT_ASSESSED` items), a Portfolio table of the twelve repositories with current GitHub
+  names and pass-2 scores, and Quality and improvement (open findings, maintainer decisions, the portfolio calendar of
+  date-triggered gates); `AGENTS.md` and `CONTRIBUTING.md` lose a stale Codex validator path and point at those sections;
+  `docs/README.md` is a new index; `docs/runtime-skill-budget.md` loses five workstation paths; the portable links rule states the
+  research repository name correctly; [`07-docs-followups.md`](docs/kaizen/2026-10-engine-kaizen-pass-2/07-docs-followups.md) lists
+  what the wave could not fix. No script, catalogue entry, marketplace entry or lockfile was changed. This package has no managed
+  router sentences, so the router renderer was not applied (dry run: nothing to change).
+
 ## Unreleased - Portfolio kaizen pass 2 (31 October 2026)
 
 - Added `scripts/lib/engine_roots.py` (engine locator with catalogue `aliases` for the four renamed engines) and
