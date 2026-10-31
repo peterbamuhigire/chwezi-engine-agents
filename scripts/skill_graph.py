@@ -138,7 +138,9 @@ def main(argv: list[str] | None = None) -> int:
     catalog_folders = set(roots)
     for engine, doc, owner in documents:
         root = roots[engine]
-        rel = doc.relative_to(ws).as_posix()
+        # Relative to the engine root, not the workspace root, so a layout whose engines sit in
+        # more than one parent folder (or behind links) produces the same report path.
+        rel = f"{engine}/{doc.relative_to(root).as_posix()}"
         for number, line in enumerate(lines_of(doc), 1):
             low = line.lower()
             tokens = set(FANIN.TOKEN_RE.findall(low))
@@ -160,7 +162,8 @@ def main(argv: list[str] | None = None) -> int:
                     continue
                 head = value.split("/", 1)[0]
                 if head in catalog_folders or head in FOLDER_ONLY or head in RENAMED_ENGINES:
-                    base, sub = ws / FOLDER_ONLY.get(head, RENAMED_ENGINES.get(head, head)), value.split("/", 1)[1]
+                    base_name = FOLDER_ONLY.get(head, RENAMED_ENGINES.get(head, head))
+                    base, sub = roots.get(base_name, ws / base_name), value.split("/", 1)[1]
                 elif head == "skills":
                     base, sub = root, value
                 else:

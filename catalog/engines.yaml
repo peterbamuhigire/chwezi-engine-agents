@@ -5,6 +5,7 @@ engines:
     repository: chwezi-sdlc-documentation
     path: chwezi-sdlc-documentation
     router: AGENTS.md
+    aliases: [srs-skills]
     integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "905b9a4"}
     validators:
       - "python -X utf8 scripts/validate_skill_engine.py --baseline tests/skill-quality-baseline.json"
@@ -57,6 +58,7 @@ engines:
     repository: chwezi-dev-engine
     path: chwezi-dev-engine
     router: AGENTS.md
+    aliases: [skills-web-dev]
     integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "b3161da"}
     validators:
       - "python scripts/validate_engine_control_plane.py --workspace-root .."
@@ -73,6 +75,7 @@ engines:
     repository: chwezi-design-engine
     path: chwezi-design-engine
     router: AGENTS.md
+    aliases: [design-system-skills]
     integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "f69c5d4"}
     validators:
       - "python -X utf8 scripts/validate_engine.py --baseline tests/quality-baseline.json"
@@ -81,6 +84,7 @@ engines:
     repository: digital-research-skills
     path: digital-research-engine
     router: AGENTS.md
+    aliases: [chwezi-research-engine]
     integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "d4a613d"}
     validators:
       - "python -X utf8 scripts/skill_contract_validator.py --baseline tests/skill-engine/quality-baseline.json"

@@ -49,6 +49,21 @@ class SkillGraphTests(unittest.TestCase):
         self.assertEqual(pairs, [("skill:engine-a/skills/core/invoice-layout", "skill:engine-b/skills/docs/printable-invoices")])
         self.assertEqual(graph["provenance"]["similar_trigger"], "AMBIGUOUS")
 
+    def test_runs_when_engines_sit_behind_links_outside_the_workspace(self) -> None:
+        """Pass-2 K1: a workspace whose engine folders are links into another parent used to crash."""
+        workspace = self.tmp / "linked"
+        workspace.mkdir()
+        try:
+            for name in ("engine-a", "engine-b"):
+                (workspace / name).symlink_to(FIXTURE / name, target_is_directory=True)
+        except OSError:
+            self.skipTest("symbolic links are not available on this host")
+        out = self.tmp / "linked-out"
+        result = run("--workspace-root", str(workspace), "--engine", "engine-a", "--engine", "engine-b", "--out", str(out))
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        report = json.loads((out / "skill-graph-report.json").read_text(encoding="utf-8"))
+        self.assertEqual(report["retired_alias_mentions"][0]["at"], "engine-a/skills/core/ledger-posting/SKILL.md:8")
+
     def test_two_runs_are_byte_identical(self) -> None:
         first, second = self.build("a"), self.build("b")
         for name in ("skill-graph.json", "skill-graph-report.json"):
