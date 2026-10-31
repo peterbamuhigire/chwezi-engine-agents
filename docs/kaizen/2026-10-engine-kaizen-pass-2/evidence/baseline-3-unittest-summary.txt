@@ -1,0 +1,16 @@
+AssertionError: 3 != 0 : NOT ASSESSED: dependency unavailable: No module named 'jsonschema'
+ERROR: test_absent_repository_folder_is_not_assessed (test_project_context_doctor.DoctorFixtureTests.test_absent_repository_folder_is_not_assessed)
+ERROR: test_doctor_performs_no_write (test_project_context_doctor.DoctorFixtureTests.test_doctor_performs_no_write)
+ERROR: test_each_code_comes_from_exactly_one_fixture (test_project_context_doctor.DoctorFixtureTests.test_each_code_comes_from_exactly_one_fixture)
+ERROR: test_findings_use_ar09_fields (test_project_context_doctor.DoctorFixtureTests.test_findings_use_ar09_fields)
+ERROR: test_omitted_pointer_declared_absent_is_a_mention (test_project_context_doctor.DoctorFixtureTests.test_omitted_pointer_declared_absent_is_a_mention)
+ERROR: test_run_behavioural_eval (unittest.loader._FailedTest.test_run_behavioural_eval)
+ERROR: test_validation_result_schema (unittest.loader._FailedTest.test_validation_result_schema)
+ERROR: test_valid_fixture_exits_zero_with_no_findings (test_project_context_doctor.DoctorFixtureTests.test_valid_fixture_exits_zero_with_no_findings)
+FAILED (failures=2, errors=8, skipped=1)
+FAIL: test_template_front_matter_validates (test_project_context_doctor.TemplateSchemaTests.test_template_front_matter_validates)
+FAIL: test_unknown_field_fails (test_project_context_doctor.TemplateSchemaTests.test_unknown_field_fails)
+    import jsonschema  # noqa: F401
+ModuleNotFoundError: No module named 'jsonschema'
+project_context_doctor.NotAssessed: dependency unavailable: jsonschema
+Ran 102 tests in 5.614s

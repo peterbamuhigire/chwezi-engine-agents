@@ -1,0 +1,30 @@
+skill docs: 1092 unique names: 1032
+names appearing more than once: 27 of which across engines: 27 within one engine only: 0
+cross-engine duplicate names:
+   00-meta-initialization ['chwezi-dev-engine', 'digital-research-skills'] x2
+   ai-slop-audit ['business-plan-skills', 'chwezi-dev-engine', 'digital-research-skills', 'proposal-skills', 'social-media-skills'] x5
+   anti-ai-slop ['business-plan-skills', 'chwezi-dev-engine', 'digital-research-skills', 'proposal-skills', 'social-media-skills'] x5
+   blog-idea-generator ['business-plan-skills', 'proposal-skills', 'website-skills'] x3
+   blog-writer ['business-plan-skills', 'proposal-skills', 'social-media-skills', 'website-skills'] x4
+   content-writing ['business-plan-skills', 'chwezi-dev-engine', 'website-skills'] x3
+   demand-forecasting ['business-plan-skills', 'social-media-skills'] x2
+   doc-architect ['chwezi-dev-engine', 'digital-research-skills'] x2
+   east-african-english ['business-plan-skills', 'digital-research-skills', 'proposal-skills', 'social-media-skills', 'website-skills'] x5
+   electronic-fiscal-taxing ['chwezi-accounting-doctrine', 'chwezi-dev-engine'] x2
+   excel-spreadsheets ['chwezi-dev-engine', 'digital-research-skills'] x2
+   french-native-copy ['social-media-skills', 'website-skills'] x2
+   hospitality-hotel-restaurant ['business-plan-skills', 'chwezi-design-engine', 'proposal-skills', 'social-media-skills'] x4
+   image-compression ['chwezi-dev-engine', 'website-skills'] x2
+   kaizen-engine-and-product-improvement ['chwezi-accounting-doctrine', 'website-skills'] x2
+   kaizen-improvement-system ['business-plan-skills', 'chwezi-dev-engine', 'linux-skills', 'proposal-skills', 'social-media-skills'] x5
+   language-standards ['business-plan-skills', 'proposal-skills', 'social-media-skills', 'website-skills'] x4
+   premium-commercial-writing ['business-plan-skills', 'proposal-skills', 'social-media-skills', 'website-skills'] x4
+   premium-ui-ux-design ['chwezi-design-engine', 'website-skills'] x2
+   professional-word-output ['chwezi-dev-engine', 'digital-research-skills'] x2
+   project-requirements ['chwezi-dev-engine', 'digital-research-skills'] x2
+   skill-composition-standards ['chwezi-dev-engine', 'digital-research-skills'] x2
+   skill-safety-audit ['business-plan-skills', 'digital-research-skills', 'linux-skills', 'proposal-skills', 'social-media-skills', 'website-skills'] x6
+   skill-writing ['business-plan-skills', 'chwezi-dev-engine', 'digital-research-skills', 'linux-skills', 'proposal-skills', 'social-media-skills', 'website-skills'] x7
+   swahili-native-copy ['social-media-skills', 'website-skills'] x2
+   update-claude-documentation ['business-plan-skills', 'digital-research-skills', 'proposal-skills', 'website-skills'] x4
+   validation-contract ['chwezi-dev-engine', 'digital-research-skills'] x2

@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "info": 0,
+    "low": 0,
+    "moderate": 6,
+    "high": 6,
+    "critical": 1,
+    "total": 13
+  },
+  "packages": {
+    "@hono/node-server": {
+      "severity": "moderate",
+      "direct": false,
+      "range": "1.19.10 - 2.1.2",
+      "fix": "lock refresh"
+    },
+    "@modelcontextprotocol/sdk": {
+      "severity": "high",
+      "direct": true,
+      "range": "<=1.31.0",
+      "fix": {
+        "package": "@modelcontextprotocol/sdk",
+        "to": "1.32.2",
+        "major": false
+      }
+    },
+    "@vitest/mocker": {
+      "severity": "moderate",
+      "direct": false,
+      "range": "<=4.1.11",
+      "fix": {
+        "package": "vitest",
+        "to": "4.1.12",
+        "major": false
+      }
+    },
+    "body-parser": {
+      "severity": "high",
+      "direct": false,
+      "range": "2.0.0 - 2.3.0",
+      "fix": "lock refresh"
+    },
+    "fast-uri": {
+      "severity": "high",
+      "direct": false,
+      "range": "3.0.0 - 3.1.8",
+      "fix": "lock refresh"
+    },
+    "hono": {
+      "severity": "moderate",
+      "direct": false,
+      "range": "4.12.4 - 4.13.10",
+      "fix": "lock refresh"
+    },
+    "ip-address": {
+      "severity": "moderate",
+      "direct": false,
+      "range": "<=10.7.3",
+      "fix": "lock refresh"
+    },
+    "proxy-addr": {
+      "severity": "critical",
+      "direct": false,
+      "range": "1.1.0 - 2.0.7",
+      "fix": "lock refresh"
+    },
+    "qs": {
+      "severity": "moderate",
+      "direct": false,
+      "range": "6.7.0 - 6.16.0",
+      "fix": "lock refresh"
+    },
+    "source-map-js": {
+      "severity": "high",
+      "direct": false,
+      "range": "1.0.0 - 1.2.1",
+      "fix": "lock refresh"
+    },
+    "vite": {
+      "severity": "high",
+      "direct": false,
+      "range": "8.3.0 - 8.3.2",
+      "fix": "lock refresh"
+    },
+    "vitest": {
+      "severity": "moderate",
+      "direct": true,
+      "range": "2.1.0-beta.1 - 4.1.11",
+      "fix": {
+        "package": "vitest",
+        "to": "4.1.12",
+        "major": false
+      }
+    },
+    "zod": {
+      "severity": "high",
+      "direct": false,
+      "range": "<4.6.6",
+      "fix": "lock refresh"
+    }
+  }
+}

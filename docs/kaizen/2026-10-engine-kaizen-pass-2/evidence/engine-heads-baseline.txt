@@ -1,0 +1,13 @@
+engine_id|checkout_label|branch|HEAD|porcelain_lines|last_commit_subject
+chwezi-sdlc-documentation|srs-skills|main|d65b2e9|0|docs(chwezi-sdlc-documentation): point final report at the commit list
+business-plan-skills|business-plan-skills|main|f05f1b3|0|docs(kaizen): complete business plan pass-2 evidence (final 50.0 raw against 44.0 baseline
+website-skills|website-skills|main|1c7e007|0|docs(website): tie the 29 October marketplace validation records to clean commit c41cfcb
+social-media-skills|social-media-skills|main|df61a68|0|docs(social): record branch and checkout state for pass 2
+linux-skills|linux-skills|main|74e2b6d|0|docs(linux): P2-00 publish pass-2 evidence, operator note and router pointer
+proposal-skills|proposal-skills|main|a7f15b7|0|docs(proposal): pass-2 experiment log, validation record, final report and next cycle
+chwezi-dev-engine|skills-web-dev|main|79df717|0|docs(kaizen): record pass-2 backlog, experiments, validation, final report and handoff
+chwezi-accounting-doctrine|chwezi-accounting-doctrine|main|e955bd0|0|docs(accounting): kaizen pass 2 experiment log, validation record, final report and next c
+chwezi-design-engine|design-system-skills|main|72a3a37|0|docs(kaizen): close design-engine pass 2 with report, validation record and router lines
+digital-research-engine|chwezi-research-engine|main|cfd910c|0|docs(research-kaizen): record pass 2 experiments, validation, report and next cycle
+windows-admin-engine-skills|windows-admin-engine-skills|main|a0fe01b|0|docs(windows): record pass-2 experiments, validation, final report and next-cycle handoffs
+chwezi-engine-agents|chwezi-engine-agents|kaizen/2026-10-pass2|edc0a70|0|fix(coordination): reject foreign drive paths in C2 fixture bounds

@@ -1,0 +1,47 @@
+# Handoff 2 of 2 (request R16): SDLC documentation engine -> development engine.
+# Record shape: core/contracts/handoff.yaml and schemas/handoff.schema.json.
+# Written by following the routes by hand on 2026-10-31; no model call was made.
+schema_version: "1.0"
+scope: >-
+  School-fees app: write down what it must do, then design the API and tenant isolation so developers can start.
+engines:
+  - id: chwezi-sdlc-documentation
+    reason: Defines what success means (requirements, API specification) before anyone builds.
+  - id: chwezi-dev-engine
+    reason: Owns how to build it safely (API design patterns, multi-tenant architecture).
+inputs:
+  - kind: user_request
+    text: "We are building a school-fees app: first write down what it must do, then design the API and the tenant isolation so developers can start."
+  - kind: router_file
+    ref: "chwezi-engine-agents/AGENTS.md (SRS defines what success means, the dev engine how to build it safely)"
+sequence:
+  - step: 1
+    engine: chwezi-sdlc-documentation
+    action: Initialise the requirements specification, then the API specification.
+    skill_files:
+      - 02-requirements-engineering/waterfall/01-initialize-srs/SKILL.md
+      - 03-design-documentation/03-api-specification/SKILL.md
+    skill_files_present_at_head: true
+  - step: 2
+    engine: chwezi-dev-engine
+    action: Follow the API specification skill's own hand-off links into the development engine's API references.
+    reference_files:
+      - skills/architecture/api-design-first/references/api-error-handling.md
+      - skills/architecture/api-design-first/references/api-pagination.md
+    reference_files_present_at_head: true
+  - step: 3
+    engine: chwezi-dev-engine
+    action: Design tenant isolation with the multi-tenant architecture skill.
+    skill_name: multi-tenant-saas-architecture
+evidence:
+  - kind: link_check
+    ref: "The SDLC API specification skill links both development-engine references as GitHub URLs; both files exist in the development engine checkout at HEAD"
+  - kind: skill_present
+    ref: "chwezi-dev-engine/multi-tenant-saas-architecture is present in the lexical index (1,092 skills)"
+blockers:
+  - The SDLC pass-2 report says the development engine's alias file points retired skills at a `doctrine/skills/<name>` prefix that no longer matches the accounting engine's folders. The alias file declares `external_target_prefixes` (a symbolic prefix mapped to an engine id), so those targets are name-resolved; whether any consumer resolves them as filesystem paths was not tested (NOT_ASSESSED). Not treated as a blocker.
+  - Lexical routing places the accounting engine's school-and-education pack first for this request and does not place the SDLC engine in the top five (R16), so the SDLC leg depends on the agent reading the router, not on description matching.
+  - Money flows (fee receipts, mobile-money settlement) would need the accounting engine as a third owner; none was requested here.
+next_action: >-
+  Start with the SDLC requirements skill, then pass the API specification to the development engine's api-design-first
+  references; add the accounting engine if fee receipts reach the ledger.

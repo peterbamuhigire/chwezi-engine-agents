@@ -1,0 +1,6 @@
+      Tests  1 failed | 15 passed (16)
+   Start at  17:03:38
+   Duration  1.15s (transform 234ms, setup 0ms, import 671ms, tests 379ms, environment 2ms)
+
+ FAIL  tests/discovery.test.ts > engine discovery > returns the stable identity contract for this checkout
+AssertionError: expected 'kaizen/2026-10-pass2' to be 'main' // Object.is equality

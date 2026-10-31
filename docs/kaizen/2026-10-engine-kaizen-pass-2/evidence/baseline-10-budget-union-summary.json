@@ -1,0 +1,14 @@
+{
+  "status": "FAIL",
+  "skills": 1097,
+  "description_chars": 262441,
+  "metadata_chars": 290189,
+  "runtime_budget_chars": 60000,
+  "findings_by_code": {
+    "skill-count": 1,
+    "description-length": 12,
+    "duplicate-name": 28,
+    "description-budget": 1,
+    "metadata-budget": 1
+  }
+}

@@ -1,0 +1,22 @@
+[
+ {"id":"R01","kind":"single","request":"Our retailer collects customer payments through MTN and Airtel mobile money and the bank statement never matches the ledger at month end. How do we reconcile it?","expected":["chwezi-accounting-doctrine/bank-and-mobile-money-reconciliation"]},
+ {"id":"R02","kind":"single","request":"A client says the employer NSSF contribution in Uganda is 10 percent. Is that still the current rate, and what is the primary source?","expected":["digital-research-skills/source-evaluation"]},
+ {"id":"R03","kind":"single","request":"Design the REST API for tenant-scoped invoices, including pagination, error responses and idempotency for retries.","expected":["chwezi-dev-engine/api-design-first"]},
+ {"id":"R04","kind":"single","request":"Choose a body typeface and a type scale for a clinic patient portal that must be readable on cheap Android phones.","expected":["chwezi-design-engine/font-selection-and-pairing"]},
+ {"id":"R05","kind":"single","request":"Turn this idea into a product requirements document: parents pay school fees by mobile money and schools see who has paid.","expected":["chwezi-sdlc-documentation/01-prd-generation"]},
+ {"id":"R06","kind":"single","request":"Harden SSH on a new Ubuntu 24.04 cloud server: key-only login, no root, and a safe way to roll back if I lock myself out.","expected":["linux-skills/linux-server-hardening"]},
+ {"id":"R07","kind":"single","request":"Which of our Windows servers are behind on updates, and how should we roll patches out without taking the domain down?","expected":["windows-admin-engine-skills/windows-patch-management"]},
+ {"id":"R08","kind":"single","request":"Write the methodology section of our technical proposal for a World Bank consulting assignment.","expected":["proposal-skills/06-methodology"]},
+ {"id":"R09","kind":"single","request":"Build the five-year financial projections chapter of a bank loan application for a Kenyan logistics start-up.","expected":["business-plan-skills/10-financial-projections"]},
+ {"id":"R10","kind":"single","request":"Build a five-page website for a dental clinic in Kampala with a booking enquiry form and good local search visibility.","expected":["website-skills/website-builder"]},
+ {"id":"R11","kind":"single","request":"Plan four weeks of LinkedIn and Instagram posts for the launch of a Kampala fintech app.","expected":["social-media-skills/11-content-calendar"]},
+ {"id":"R12","kind":"single","request":"Calculate and disclose the lease liability for a new three-year warehouse rental under IFRS.","expected":["chwezi-accounting-doctrine/ifrs-leases"]},
+ {"id":"R13","kind":"single","request":"Our MySQL replica on Debian keeps falling behind the primary at night. Diagnose it.","expected":["linux-skills/linux-mysql-mariadb"]},
+ {"id":"R14","kind":"single","request":"Check whether the colours in our admin dashboard meet WCAG 2.2 contrast and suggest fixes.","expected":["chwezi-design-engine/accessible-color-and-contrast"]},
+ {"id":"R15","kind":"single","request":"The file server in our Nairobi office is running out of disk space; work out what is filling it and what is safe to clean.","expected":["windows-admin-engine-skills/windows-storage-files-services"]},
+ {"id":"R16","kind":"multi","request":"We are building a school-fees app: first write down what it must do, then design the API and the tenant isolation so developers can start.","expected":["chwezi-sdlc-documentation","chwezi-dev-engine"]},
+ {"id":"R17","kind":"multi","request":"Prepare our response to a Ugandan PPDA tender, including a financial proposal whose tax and VAT treatment an accountant would accept.","expected":["proposal-skills","chwezi-accounting-doctrine"]},
+ {"id":"R18","kind":"multi","request":"Turn our finished business plan into a branded investor pitch deck with proper typography and charts.","expected":["business-plan-skills","chwezi-design-engine"]},
+ {"id":"R19","kind":"multi","request":"Find the current Uganda VAT registration threshold and put it, with its source and date, into our client's accounting policy manual.","expected":["digital-research-skills","chwezi-accounting-doctrine"]},
+ {"id":"R20","kind":"multi","request":"Launch the dental clinic website on a Linux VPS: accessibility audit first, then deployment with TLS and a firewall.","expected":["website-skills","linux-skills"]}
+]

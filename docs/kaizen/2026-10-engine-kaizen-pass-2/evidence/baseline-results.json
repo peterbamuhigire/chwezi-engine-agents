@@ -1,0 +1,102 @@
+[
+  {
+    "command": "python3 -X utf8 scripts/render_host_files.py --check --workspace-root <workspace>",
+    "exit": 1,
+    "log": "baseline-0-render-check.log"
+  },
+  {
+    "command": "python3 -X utf8 scripts/validate-no-book-extractions.py --workspace-root <workspace>",
+    "exit": 0,
+    "log": "baseline-1-no-book.log"
+  },
+  {
+    "command": "python3 -X utf8 scripts/validate-kaizen-cards.py",
+    "exit": 0,
+    "log": "baseline-2-kaizen-cards.log"
+  },
+  {
+    "command": "python3 -X utf8 -m unittest discover -s tests -p 'test_*.py'",
+    "exit": 1,
+    "log": "baseline-3-unittest-summary.txt"
+  },
+  {
+    "command": "python3 -X utf8 <scratch>/mini_pytest.py <7 plain-function test files>  [STAND-IN, not pytest]",
+    "exit": 0,
+    "log": "baseline-3b-standin.log"
+  },
+  {
+    "command": "python3 -X utf8 scripts/kaizen_portfolio_snapshot.py --workspace-root <workspace> --coordination-root . --output-dir <scratch>/snapshot --as-of 2026-10-31",
+    "exit": 0,
+    "log": "baseline-4-snapshot.log"
+  },
+  {
+    "command": "python3 -X utf8 scripts/validate-runtime-skill-budget.py --collisions --ownership evals/routing/ownership.yaml --workspace-root <workspace>",
+    "exit": 0,
+    "log": "baseline-5-collisions.log"
+  },
+  {
+    "command": "python3 -X utf8 evals/runners/run-contract-evals.py --cases evals/cases --route-oracles --workspace-root <workspace> --out <scratch>/oracles.json",
+    "exit": 0,
+    "log": "baseline-oracles-summary.json"
+  },
+  {
+    "command": "python3 -X utf8 scripts/validate-routing-baseline.py",
+    "exit": 0,
+    "log": "baseline-7-routing-baseline.log"
+  },
+  {
+    "command": "python3 -X utf8 scripts/validate-runtime-skill-budget.py --root skills",
+    "exit": 0,
+    "log": "baseline-8-budget-pkg.log"
+  },
+  {
+    "command": "node scripts/generate-plugin-manifest.js --check-marketplace --workspace-root <workspace>",
+    "exit": 1,
+    "log": "baseline-9-marketplace.log"
+  },
+  {
+    "command": "python3 -X utf8 scripts/validate-runtime-skill-budget.py --root <each engine> --root skills --report-only --format json",
+    "exit": 0,
+    "log": "baseline-10-budget-union-summary.json"
+  },
+  {
+    "command": "python3 -X utf8 scripts/skill_graph.py --workspace-root <workspace-copy> --out <scratch>/graph  (git-archive copy: the script fails on symlinked or two-parent layouts)",
+    "exit": 0,
+    "log": "baseline-11-graph.log"
+  },
+  {
+    "command": "node hooks/test-destructive-bash-gate.js",
+    "exit": 0,
+    "log": "61/61 passed"
+  },
+  {
+    "command": "node hooks/test-plugin-hook-config.js",
+    "exit": 0,
+    "log": "7/7 passed"
+  },
+  {
+    "command": "npm ci --ignore-scripts  (mcp-server)",
+    "exit": 0,
+    "log": "baseline-14-npm-ci.log"
+  },
+  {
+    "command": "npm test  (mcp-server)",
+    "exit": 1,
+    "log": "baseline-15-npm-test-summary.txt"
+  },
+  {
+    "command": "npm run build  (mcp-server)",
+    "exit": 0,
+    "log": "tsc clean"
+  },
+  {
+    "command": "npm audit --json  (mcp-server)",
+    "exit": 1,
+    "log": "baseline-17-npm-audit-summary.json"
+  },
+  {
+    "command": "real pytest (python3 -m pytest tests)",
+    "exit": "NOT_ASSESSED",
+    "log": "pytest is not installed on this host; see 04-validation-record.md"
+  }
+]

@@ -1,0 +1,121 @@
+R01 single expected=chwezi-accounting-doctrine/bank-and-mobile-money-reconciliation rank=1 engine@1=True
+      chwezi-accounting-doctrine/bank-and-mobile-money-reconciliation 0.379
+      proposal-skills/financial-services 0.205
+      chwezi-accounting-doctrine/month-end-and-year-end-close-playbook 0.203
+      chwezi-accounting-doctrine/finance-module-audit 0.187
+      chwezi-accounting-doctrine/bank-feed-and-payment-gateway-integration 0.166
+R02 single expected=digital-research-skills/source-evaluation rank=8 engine@1=False
+      business-plan-skills/uganda 0.23
+      chwezi-accounting-doctrine/payroll-and-statutory-postings-east-africa 0.17
+      chwezi-sdlc-documentation/04-contribution-guide 0.161
+      digital-research-skills/source-verification 0.115
+      chwezi-dev-engine/saas-rate-limiting-and-quotas 0.106
+R03 single expected=chwezi-dev-engine/api-design-first rank=1 engine@1=True
+      chwezi-dev-engine/api-design-first 0.326
+      chwezi-sdlc-documentation/03-api-specification 0.206
+      chwezi-design-engine/empty-error-and-loading-states 0.187
+      chwezi-dev-engine/ai-agent-runtime-architecture 0.164
+      chwezi-dev-engine/multi-tenant-saas-architecture 0.139
+R04 single expected=chwezi-design-engine/font-selection-and-pairing rank=17 engine@1=True
+      chwezi-design-engine/healthcare-ui-design 0.231
+      chwezi-accounting-doctrine/clinic-and-healthcare-accounting-pack 0.197
+      chwezi-design-engine/android-ui-ux-design 0.168
+      social-media-skills/healthcare 0.15
+      social-media-skills/ad-testing-and-scaling 0.136
+R05 single expected=chwezi-sdlc-documentation/01-prd-generation rank=691 engine@1=False
+      chwezi-accounting-doctrine/school-and-education-accounting-pack 0.41
+      chwezi-accounting-doctrine/bank-and-mobile-money-reconciliation 0.16
+      business-plan-skills/idea-testing 0.156
+      chwezi-accounting-doctrine/finance-module-audit 0.135
+      social-media-skills/content-ideas 0.128
+R06 single expected=linux-skills/linux-server-hardening rank=1 engine@1=True
+      linux-skills/linux-server-hardening 0.18
+      chwezi-dev-engine/cloud-architecture 0.161
+      chwezi-dev-engine/linux-security-hardening 0.141
+      chwezi-accounting-doctrine/budgeting-and-rolling-forecasts 0.14
+      linux-skills/linux-cloud-init 0.137
+R07 single expected=windows-admin-engine-skills/windows-patch-management rank=1 engine@1=True
+      windows-admin-engine-skills/windows-patch-management 0.316
+      chwezi-accounting-doctrine/budgeting-and-rolling-forecasts 0.232
+      windows-admin-engine-skills/windows-sysadmin 0.173
+      windows-admin-engine-skills/windows-development-workstation 0.162
+      windows-admin-engine-skills/windows-troubleshooting 0.141
+R08 single expected=proposal-skills/06-methodology rank=2 engine@1=True
+      proposal-skills/world-bank 0.455
+      proposal-skills/06-methodology 0.33
+      proposal-skills/kaizen-improvement-system 0.295
+      business-plan-skills/meta-consulting-synthesis 0.267
+      proposal-skills/consulting-frameworks 0.253
+R09 single expected=business-plan-skills/10-financial-projections rank=1 engine@1=True
+      business-plan-skills/10-financial-projections 0.207
+      business-plan-skills/meta-accounting-finance-review 0.16
+      business-plan-skills/saas-agent-sla-economics-in-projection 0.127
+      proposal-skills/operational-readiness-and-localisation 0.126
+      chwezi-accounting-doctrine/month-end-and-year-end-close-playbook 0.115
+R10 single expected=website-skills/website-builder rank=14 engine@1=False
+      business-plan-skills/saas-ai-for-good-grant-proposal 0.221
+      social-media-skills/ai-generative-search-optimisation 0.176
+      chwezi-accounting-doctrine/clinic-and-healthcare-accounting-pack 0.143
+      website-skills/google-ai-search 0.14
+      chwezi-design-engine/healthcare-ui-design 0.137
+R11 single expected=social-media-skills/11-content-calendar rank=53 engine@1=True
+      social-media-skills/platform-instagram 0.21
+      chwezi-accounting-doctrine/fintech-and-payments-pack 0.208
+      social-media-skills/platform-linkedin 0.202
+      social-media-skills/meta-algorithm-guide 0.138
+      chwezi-design-engine/fintech-and-financial-product-ui 0.133
+R12 single expected=chwezi-accounting-doctrine/ifrs-leases rank=2 engine@1=True
+      chwezi-accounting-doctrine/finance-data-contracts-and-warehouse-models 0.202
+      chwezi-accounting-doctrine/ifrs-leases 0.198
+      chwezi-accounting-doctrine/ifrs-segment-reporting-ifrs8 0.15
+      chwezi-accounting-doctrine/ifrs-business-combinations-ifrs3 0.14
+      chwezi-dev-engine/new-project 0.136
+R13 single expected=linux-skills/linux-mysql-mariadb rank=2 engine@1=False
+      chwezi-dev-engine/mysql-engineering 0.188
+      linux-skills/linux-mysql-mariadb 0.168
+      linux-skills/linux-postgresql 0.128
+      website-skills/experimentation 0.1
+      chwezi-accounting-doctrine/hospitality-and-restaurant-pack 0.089
+R14 single expected=chwezi-design-engine/accessible-color-and-contrast rank=1 engine@1=True
+      chwezi-design-engine/accessible-color-and-contrast 0.377
+      chwezi-design-engine/color-system-and-palette 0.324
+      chwezi-design-engine/color-selection 0.249
+      website-skills/accessibility-audit 0.202
+      chwezi-design-engine/accessibility-wcag-2-2-compliance 0.176
+R15 single expected=windows-admin-engine-skills/windows-storage-files-services rank=4 engine@1=False
+      linux-skills/linux-disk-storage 0.146
+      social-media-skills/ad-testing-and-scaling 0.113
+      business-plan-skills/meta-strategic-optionality 0.107
+      windows-admin-engine-skills/windows-storage-files-services 0.105
+      chwezi-design-engine/layout-grid-and-spacing 0.101
+R16 multi expected=['chwezi-sdlc-documentation', 'chwezi-dev-engine'] both-in-top5=False top5_engines=['chwezi-accounting-doctrine', 'chwezi-dev-engine', 'chwezi-dev-engine', 'chwezi-dev-engine', 'chwezi-dev-engine']
+      chwezi-accounting-doctrine/school-and-education-accounting-pack 0.238
+      chwezi-dev-engine/multi-tenant-saas-architecture 0.195
+      chwezi-dev-engine/api-design-first 0.191
+      chwezi-dev-engine/ai-app-architecture 0.18
+      chwezi-dev-engine/nextjs-app-router 0.171
+R17 multi expected=['proposal-skills', 'chwezi-accounting-doctrine'] both-in-top5=True top5_engines=['chwezi-accounting-doctrine', 'chwezi-accounting-doctrine', 'proposal-skills', 'chwezi-accounting-doctrine', 'business-plan-skills']
+      chwezi-accounting-doctrine/indirect-tax-vat-mechanics 0.248
+      chwezi-accounting-doctrine/finance-ux-for-non-accountants 0.178
+      proposal-skills/tender-orals-and-proposal-presentation 0.162
+      chwezi-accounting-doctrine/ias-income-tax-deferred-tax 0.157
+      business-plan-skills/saas-agent-sla-cogs-treatment 0.141
+R18 multi expected=['business-plan-skills', 'chwezi-design-engine'] both-in-top5=True top5_engines=['business-plan-skills', 'business-plan-skills', 'business-plan-skills', 'chwezi-design-engine', 'business-plan-skills']
+      business-plan-skills/pitch-deck 0.418
+      business-plan-skills/meta-pitch-preparation 0.341
+      business-plan-skills/meta-presentation-design 0.255
+      chwezi-design-engine/deck-system 0.234
+      business-plan-skills/meta-agent-board-and-investor-reporting 0.189
+R19 multi expected=['digital-research-skills', 'chwezi-accounting-doctrine'] both-in-top5=False top5_engines=['chwezi-accounting-doctrine', 'business-plan-skills', 'business-plan-skills', 'business-plan-skills', 'business-plan-skills']
+      chwezi-accounting-doctrine/indirect-tax-vat-mechanics 0.237
+      business-plan-skills/finance-policy-and-manual 0.229
+      business-plan-skills/hr-policy-manual 0.226
+      business-plan-skills/procurement-policy-and-manual 0.213
+      business-plan-skills/uganda 0.187
+R20 multi expected=['website-skills', 'linux-skills'] both-in-top5=False top5_engines=['linux-skills', 'linux-skills', 'linux-skills', 'linux-skills', 'linux-skills']
+      linux-skills/linux-firewall-ssl 0.249
+      linux-skills/linux-troubleshooting 0.215
+      linux-skills/linux-server-hardening 0.189
+      linux-skills/linux-server-provisioning 0.172
+      linux-skills/linux-site-deployment 0.171
+SINGLE primary@1 6/15; engine@1 10/15; MULTI both engines in top5 2/5

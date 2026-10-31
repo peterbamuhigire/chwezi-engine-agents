@@ -1,0 +1,47 @@
+# Handoff 1 of 2 (request R19): research engine -> accounting engine.
+# Record shape: core/contracts/handoff.yaml and schemas/handoff.schema.json.
+# Written by following the routes by hand on 2026-10-31; no model call was made.
+schema_version: "1.0"
+scope: >-
+  Find the current Uganda VAT registration threshold and state it, with source and date, in a client's
+  accounting policy manual.
+engines:
+  - id: digital-research-skills
+    reason: A current statutory figure is a time-sensitive claim; the research engine owns source evaluation, premise checks and single-claim lookup.
+  - id: chwezi-accounting-doctrine
+    reason: The figure feeds a finance policy; the accounting engine owns what may be used in final output through its source register and its draft/verified states.
+inputs:
+  - kind: user_request
+    text: "Find the current Uganda VAT registration threshold and put it, with its source and date, into our client's accounting policy manual."
+  - kind: router_file
+    ref: "chwezi-engine-agents/AGENTS.md (cross-engine handoffs: research says what is currently true, finance says what happens to money)"
+sequence:
+  - step: 1
+    engine: digital-research-skills
+    action: Read the premise-check and single-claim lookup procedure before answering.
+    skill_file: skills/source-evaluation/references/single-claim-lookup.md
+    skill_file_present_at_head: true
+  - step: 2
+    engine: chwezi-accounting-doctrine
+    action: Look the claim up in the accounting source register and read its state before any use in final output.
+    register_file: doctrine/source-register/uganda/vat.yaml
+    register_entry: UG-VAT-REG-THRESHOLD
+    register_entry_present_at_head: true
+    register_state_at_head: draft
+  - step: 3
+    engine: chwezi-accounting-doctrine
+    action: Apply the engine rule that a draft or unreviewed entry is blocked from final statutory output.
+evidence:
+  - kind: file_read
+    ref: "chwezi-accounting-doctrine/doctrine/source-register/uganda/vat.yaml entry UG-VAT-REG-THRESHOLD: state draft, effective_from pending-review, archive_snapshot NOT_CAPTURED (the guide PDF holds page images only), recheck due 2026-12-29"
+  - kind: file_read
+    ref: "digital-research-skills/skills/source-evaluation/references/single-claim-lookup.md exists"
+  - kind: cross_reference
+    ref: "chwezi-accounting-doctrine/docs/kaizen/2026-10-engine-kaizen-pass-2/06-next-cycle.md open finding 1: the threshold rests on regulator guidance with no effective date or amending Act located"
+blockers:
+  - The accounting register entry is draft, so the figure may be shown as an observation with its source and access date but not as a released statutory value.
+  - No archived snapshot of the source exists (archive_snapshot is NOT_CAPTURED; the guide PDF has no extractable text).
+  - Independent Uganda VAT reviewer is not named (NOT_ASSESSED).
+next_action: >-
+  Hand the client manual a sentence that names the figure as a regulator-published observation, gives the
+  access date, and marks release as blocked until the accounting engine's reviewer promotes the entry.
