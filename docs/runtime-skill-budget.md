@@ -12,14 +12,18 @@ discover. Mark repository-owned roots with `--catalog-root`; plugin roots still
 contribute to the aggregate budget but are governed by their own publisher. The
 Codex configuration helper selects enabled plugins and prefers a `latest` cache:
 
-```powershell
-python -X utf8 scripts/validate-runtime-skill-budget.py `
-  --root C:\Users\Peter\.agents\skills `
-  --catalog-root C:\Users\Peter\.agents\skills\skills `
-  --catalog-root C:\Users\Peter\.agents\skills\00-meta-initialization `
-  --config C:\Users\Peter\.codex\config.toml `
-  --plugin-cache C:\Users\Peter\.codex\plugins\cache
+```sh
+python3 -X utf8 scripts/validate-runtime-skill-budget.py \
+  --root <agents-skills-folder> \
+  --catalog-root <agents-skills-folder>/skills \
+  --catalog-root <agents-skills-folder>/00-meta-initialization \
+  --config <codex-home>/config.toml \
+  --plugin-cache <codex-home>/plugins/cache
 ```
+
+The folders are placeholders for the directories the host discovers on that
+machine. On Windows, write the same command in PowerShell with a backtick for
+each line break and `python` or `py -3` for the interpreter.
 
 Repeat `--root` for each deliberately enabled plugin skill directory. Do not
 scan staging or cache directories unless the host actually exposes them.

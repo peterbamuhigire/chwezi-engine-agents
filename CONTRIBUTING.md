@@ -8,7 +8,7 @@ Before submitting a change:
 2. Keep repository paths relative or discoverable from Git metadata.
 3. Do not add a validation command unless it is documented by the target engine.
 4. Treat unavailable checks as `NOT ASSESSED`, never as passing.
-5. Run the plugin validator, catalog validation, adapter/install/security tests, deterministic evaluations, MCP build/tests, and `git diff --check`.
+5. Run the plugin validator, catalog validation, adapter/install/security tests, deterministic evaluations, MCP build/tests, and `git diff --check`. The README section "Validation" gives each command for a POSIX host, what it needs (`PyYAML`, `jsonschema`, `pytest`, Node.js, `pwsh`, network access) and its last measured result; run the test suite with `python3 -X utf8 -m pytest -p no:cacheprovider tests`, and the drift, hygiene and hook-copy checks against your engine checkouts through `CHWEZI_ENGINES_ROOT`. A check that cannot run on your host is `NOT ASSESSED`.
 6. Inspect the complete diff and confirm no machine-specific secrets or paths were added.
 
 Agent prompts should define scope, evidence requirements, safety boundaries, degraded behavior, and a predictable handoff format.
@@ -19,7 +19,7 @@ channel is `NOT ASSESSED`; it is not a successful result.
 
 ## Multi-host implementation work
 
-For changes related to universal host adapters, MCP tools, or engine integration, use the phase-level plan in [`docs/plans/aug-25`](docs/plans/aug-25/README.md). Work on `main` unless a branch is explicitly requested, preserve the ten engines as independent repositories, and update the relevant phase document when implementation decisions change.
+For changes related to universal host adapters, MCP tools, or engine integration, use the phase-level plan in [`docs/plans/aug-25`](docs/plans/aug-25/README.md). Work on `main` unless a branch is explicitly requested, preserve the eleven engines as independent repositories, and update the relevant phase document when implementation decisions change.
 
 ## If you are an AI agent
 

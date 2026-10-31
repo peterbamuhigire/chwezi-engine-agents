@@ -3,7 +3,7 @@
 **Rule.** Every link in a public engine must resolve on a clean CI runner that has checked out only that one repository.
 
 - A link to another engine is a GitHub URL (`https://github.com/peterbamuhigire/<repo>/blob/main/<path>`).
-  - Exception: the research engine's GitHub repository is named `digital-research-skills`, although its local folder is `digital-research-engine`.
+  - Exception: the research engine's GitHub repository is named `chwezi-research-engine`. Its former name `digital-research-skills` redirects to it and remains its catalogue id, and `digital-research-engine` is its catalogue folder name, not a repository (checked with the GitHub API on 31 October 2026).
 - A link inside an engine is repository-relative. It never starts with `/C:/…`, `C:\…` or `file:`, and it never climbs out of the repository with `../..`.
 - Plain host paths in prose (`C:\wamp64\www\<engine>\…`) are written as engine-relative names (`<engine>/…`). The device-specific root comes from the active runner's global routing table.
 - Every engine's link validator treats host-absolute links and repository-escaping links as broken, both locally and on CI. That way a link that works only on the author's machine fails before it is pushed.
