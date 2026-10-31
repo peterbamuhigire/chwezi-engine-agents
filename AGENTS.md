@@ -36,7 +36,8 @@ Safety boundaries (binding):
   `*-book-extraction.md`, book summaries, or chapter-by-chapter notes. Book
   knowledge enters only as paraphrased, task-oriented skill content with a
   short `Sources` line. Check with
-  `python -X utf8 scripts/validate-no-book-extractions.py` (path-based; domain
+  `python3 -X utf8 scripts/validate-no-book-extractions.py --workspace-root <folder>`
+  (path-based; the folder holds the engines under their catalogue paths; domain
   topics such as a skill's `references/juice-extraction.md` pass; other
   exceptions need a reasoned line in `catalog/content-integrity-allowlist.txt`).
 
@@ -49,12 +50,13 @@ build it safely, design how it looks, behaves, and is evaluated, research what
 is currently true, and finance what happens to money. See
 `core/instructions/engine-orchestrator.md`.
 
-Host-specific material: `README.md` documents Codex-specific installation and a
-`~/.codex/...` validator path; those apply to the Codex host only. Claude Code
-reads this file through `CLAUDE.md`.
+Host-specific material: `README.md` and `docs/adapters/` document installation per
+host (Codex reads `.codex-plugin/plugin.json`); each applies to the host it names
+only. Claude Code reads this file through `CLAUDE.md`.
 
-Portfolio drift control: `python -X utf8 scripts/render_host_files.py --check
---workspace-root ..` checks every public repository's `CLAUDE.md` bridge,
+Portfolio drift control: `python3 -X utf8 scripts/render_host_files.py --check
+--engines-root <folder>` (or `--workspace-root <folder>`) checks every public
+repository's `CLAUDE.md` bridge,
 canary invariants, version consistency, model-ID corruption, BOMs, hook
 configuration and the shared-asset register (`catalog/shared-assets.yaml`).
 It is read-only; `--render --engine <path>` writes only the closed list of
@@ -73,6 +75,12 @@ and key files, credential-shaped strings, host paths; policy in
 canonical copy and procedure in `docs/operations/hook-canonical-copy.md`).
 `scripts/refresh_released_commits.py --write` refreshes the pins and refuses when an
 engine is dirty, missing or off `main`.
+
+Tests and validators: `README.md` section "Validation" lists each command, what it needs
+(PyYAML, `jsonschema`, `pytest`, Node.js, `pwsh`, network access) and its measured result
+on 2026-10-31; the test suite is `python3 -X utf8 -m pytest -p no:cacheprovider tests`.
+Open findings, decisions and the portfolio calendar of date-triggered gates are under
+"Quality and improvement" in `README.md`; evidence is in `docs/kaizen/`.
 
 <!-- chwezi-design-engine:trigger v4 -->
 ### Design / typography / UI/UX (cross-cutting — consult IN ADDITION)
