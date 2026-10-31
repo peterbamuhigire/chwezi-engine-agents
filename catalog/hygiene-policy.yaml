@@ -1,0 +1,50 @@
+# Policy for scripts/check_public_hygiene.py (pass-2 K2). Read only by that check.
+#
+# Rules and what they mean are in the script's docstring. This file decides two things:
+#
+# record_globs   dated records and test data. Machine-path lines inside them are counted, not
+#                failed, and each repository's count may not exceed its ceiling. Secrets, tracked
+#                local settings and tracked environment files are never excused by this list.
+# allow          a deliberate exception: {rule, path (glob), reason}. A missing reason voids it.
+#
+# Ceilings only fall. Lower a number when a record is cleaned; raising one needs a written reason
+# in the commit that raises it. Live files (router, skills, scripts, templates) are never listed.
+schema_version: 1
+review_date: "2026-12-29"
+# Account names that identify a person on a workstation. A path under /home/<name> with one of
+# these names is a user-profile path; example users such as /home/deploy are not.
+private_user_names: [peter]
+record_globs:
+  - "docs/**"
+  - "CHANGELOG.md"
+  - "docs/CHANGELOG.md"
+  - "integration/**"
+  - "tests/**"
+  - "engine/tests/**"
+  - "SESSION_*"
+  - "MEMORY.md"
+  - "prompts/**"
+  - "projects/**"
+  - "notes/**"
+
+# Deliberate exceptions. A path-shaped string inside guard code is the pattern the guard rejects,
+# not a leaked path.
+allow:
+  - {rule: machine-path, path: "scripts/check_marketplace.py", reason: "proposal-skills guard code: the literal is the web-root pattern its marketplace check rejects"}
+  - {rule: user-profile-path, path: "scripts/encoding_link_gate.py", reason: "proposal-skills guard code: the literal is the user-profile pattern its link gate rejects"}
+
+# Per-repository ceilings for dated-record lines (machine-path and user-profile-path together),
+# set to the count measured on 2026-10-31. They may only fall.
+repositories:
+  chwezi-sdlc-documentation: {record_path_ceiling: 65}
+  business-plan-skills: {record_path_ceiling: 17}
+  website-skills: {record_path_ceiling: 62}
+  social-media-skills: {record_path_ceiling: 26}
+  linux-skills: {record_path_ceiling: 19}
+  proposal-skills: {record_path_ceiling: 24}
+  chwezi-dev-engine: {record_path_ceiling: 348}
+  chwezi-accounting-doctrine: {record_path_ceiling: 44}
+  chwezi-design-engine: {record_path_ceiling: 30}
+  digital-research-skills: {record_path_ceiling: 61}
+  windows-admin-engine-skills: {record_path_ceiling: 3}
+  chwezi-engine-agents: {record_path_ceiling: 968}
