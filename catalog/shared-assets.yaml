@@ -113,6 +113,26 @@ assets:
     reason: "Shared destructive-Git hook (K19); identical in all twelve repositories and kept identical by hand."
     owner: chwezi-engine-agents
     review_date: "2026-12-29"
+  - id: hooks-test-plugin-hook-config
+    mode: byte
+    canonical: chwezi-engine-agents/hooks/test-plugin-hook-config.js
+    copies:
+      - chwezi-dev-engine/hooks/test-plugin-hook-config.js
+      - chwezi-design-engine/hooks/test-plugin-hook-config.js
+      - chwezi-sdlc-documentation/hooks/test-plugin-hook-config.js
+      - website-skills/hooks/test-plugin-hook-config.js
+      - digital-research-engine/hooks/test-plugin-hook-config.js
+      - proposal-skills/hooks/test-plugin-hook-config.js
+      - business-plan-skills/hooks/test-plugin-hook-config.js
+      - social-media-skills/hooks/test-plugin-hook-config.js
+      - linux-skills/hooks/test-plugin-hook-config.js
+      - chwezi-accounting-doctrine/hooks/test-plugin-hook-config.js
+      - windows-admin-engine-skills/hooks/test-plugin-hook-config.js
+    discover:
+      - "*/hooks/test-plugin-hook-config.js"
+    reason: "Test for the shared plugin hook configuration (K19); identical in all twelve repositories. Registered in pass 2 so the register covers all four shared hook files that scripts/check_hook_copies.py compares."
+    owner: chwezi-engine-agents
+    review_date: "2026-12-29"
   - id: skills-engine-agents-integration
     mode: byte
     canonical: chwezi-dev-engine/.skills-engine/AGENTS-INTEGRATION.md
