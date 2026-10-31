@@ -16,13 +16,15 @@ Commands      Every non-comment line of every fenced code block in the old READM
               the others in ``COMMAND_RE``) and has an argument, must still appear in the new README or
               in a changed Markdown file. Runs of white space are treated as one space.
 Anchors       Every heading anchor that a tracked file links to the README must still exist in the new
-              README, and every in-page link in the new README must resolve to a heading. In Markdown files
-              a link counts when its target, resolved against that file's folder, is the README
-              (``](../README.md#anchor)``); in other text files (scripts, YAML, JSON) a written
-              ``README.md#anchor`` counts as a link to the README at the repository root. A plain-text
-              mention in Markdown that is not a link is not checked; write it as a link. Anchors are
-              GitHub's: lower case, punctuation removed, spaces to hyphens, repeated headings suffixed
-              ``-1``, ``-2``. Setext headings and headings in raw HTML are not read.
+              README, and every in-page link in the new README must resolve to a heading. In a Markdown
+              file a link counts when its target, resolved against that file's folder, is the README and
+              it carries a fragment; links inside fenced code blocks and inline code are examples and are
+              skipped. In other text files (scripts, YAML, JSON) the README file name followed by a hash
+              and an anchor counts as a link to the README at the repository root; there is no way to tell
+              an example from a link there, so write fixtures in pieces (see ``tests/test_readme_preservation.py``).
+              A plain-text mention in Markdown that is not a link is not checked; write it as a link.
+              Anchors are GitHub's: lower case, punctuation removed, spaces to hyphens, repeated headings
+              suffixed ``-1``, ``-2``. Setext headings and headings in raw HTML are not read.
 
 Also printed, without failing: heading anchors the old README had and the new one lacks. Other
 repositories may link to them; this check cannot see those links.
@@ -136,22 +138,30 @@ def commands(text: str) -> set[str]:
     return found
 
 
+def strip_markdown_code(text: str) -> str:
+    """Drop fenced code blocks and inline code spans: a link written there is an example, not a link."""
+    kept, in_code = [], False
+    for line in text.splitlines():
+        if line.lstrip().startswith("```"):
+            in_code = not in_code
+            continue
+        if not in_code:
+            kept.append(re.sub(r"`[^`\n]*`", "", line))
+    return "\n".join(kept)
+
+
 def linked_readme_anchors(repo: str, rev: str, readme: str) -> dict[str, set[str]]:
     """Map each anchor that a tracked file links to README (at REV) to the files that link it."""
-    result = git(repo, "grep", "-I", "-z", "--no-color", "-e", r"README\.md#", rev, "--")
+    listing = git(repo, "grep", "-I", "-l", "-z", "--no-color", "-e", r"README\.md#", rev, "--")
     linked: dict[str, set[str]] = {}
     target_readme = posixpath.normpath(readme)
-    # With -z every hit is "REV:path", a NUL, then the matching line and a newline; the next hit follows at once.
-    fields = result.stdout.split("\0")
-    path = fields[0]
-    for chunk in fields[1:]:
-        text, _, next_path = chunk.rpartition("\n")
-        source = path[len(rev) + 1:]
-        path = next_path
-        if not source.endswith(TEXT_SUFFIXES):
+    for entry in listing.stdout.split("\0"):
+        source = entry[len(rev) + 1:]  # git prefixes each hit with "REV:"
+        if not entry or not source.endswith(TEXT_SUFFIXES):
             continue
+        text = show(repo, rev, source) or ""
         if source.endswith(".md"):
-            hits, folder = README_LINK_RE.findall(text), posixpath.dirname(source)
+            hits, folder = README_LINK_RE.findall(strip_markdown_code(text)), posixpath.dirname(source)
         else:
             hits, folder = TEXT_ANCHOR_RE.findall(text), ""
         for file_part, anchor in hits:
@@ -224,16 +234,22 @@ def check(repo: str, base: str, new: str, readme: str = "README.md") -> Report:
     return report
 
 
-def print_report(report: Report, limit: int = 30) -> None:
+def print_report(report: Report, limit: int = 30, verbose: bool = False) -> None:
     print(f"links: old README {report.old_links} targets; new README {report.new_links}; "
           f"moved to docs {len(report.moved_links)}; LOST {len(report.lost_links)}")
     for target in report.lost_links[:limit]:
         print(f"  LOST link target: {target}")
+    if verbose:
+        for target in report.moved_links:
+            print(f"  moved link target: {target}")
     kept = report.old_commands - len(report.lost_commands) - len(report.moved_commands)
     print(f"commands: old README {report.old_commands}; kept in README {kept}; "
           f"moved to docs {len(report.moved_commands)}; LOST {len(report.lost_commands)}")
     for command in report.lost_commands[:limit]:
         print(f"  LOST command: {command[:150]}")
+    if verbose:
+        for command in report.moved_commands:
+            print(f"  moved command: {command[:150]}")
     print(f"anchors: {report.linked_anchors} README anchor links in tracked files; BROKEN {len(report.broken_anchors)}")
     for anchor, files in sorted(report.broken_anchors.items())[:limit]:
         print(f"  BROKEN anchor #{anchor} linked from {sorted(files)[:3]}")
@@ -252,13 +268,14 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("base", help="revision that holds the old README")
     parser.add_argument("new", help="revision that holds the new README")
     parser.add_argument("--readme", default="README.md", help="README path inside the repository (default README.md)")
+    parser.add_argument("-v", "--verbose", action="store_true", help="also list every link target and command that moved")
     args = parser.parse_args(argv)
     try:
         report = check(args.repo, args.base, args.new, args.readme)
     except NotAssessed as error:
         print(f"NOT_ASSESSED: {error}", file=sys.stderr)
         return 3
-    print_report(report)
+    print_report(report, verbose=args.verbose)
     return 1 if report.problems else 0
 
 

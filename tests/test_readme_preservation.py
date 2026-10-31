@@ -27,6 +27,16 @@ sys.modules[SPEC.name] = P
 SPEC.loader.exec_module(P)
 
 FENCE = "```"
+# The check scans every tracked text file for the README file name followed by a hash and an anchor, so the
+# fixtures below build such links from pieces and this file never contains one.
+README_FILE = "README" + ".md"
+
+
+def link(prefix: str, anchor: str, text: str = "x") -> str:
+    """A Markdown link to ANCHOR in the README file reached through PREFIX (a folder path or empty)."""
+    return f"[{text}]({prefix}{README_FILE}#{anchor})"
+
+
 OLD_README = f"""# Demo
 
 Intro with [skill a](skills/a/SKILL.md) and [the site](https://example.org/x).
@@ -248,58 +258,88 @@ class AnchorTests(PreservationCase):
         self.assertEqual(self.run_check()[0], 0)
 
     def test_a_heading_linked_from_a_docs_page_must_survive(self) -> None:
-        docs = {"README.md": OLD_README, "docs/index.md": "See the [details](../README.md#details).\n"}
+        docs = {"README.md": OLD_README, "docs/index.md": f"See the {link('../', 'details', 'details')}.\n"}
         self.build({"README.md": self.readme("## Details", "## More")}, old=docs)
         code, out, _ = self.run_check()
         self.assertEqual(code, 1)
         self.assertIn("BROKEN anchor #details linked from ['docs/index.md']", out)
 
     def test_a_link_added_by_the_branch_to_a_missing_heading_fails(self) -> None:
-        self.build({"docs/index.md": "See the [part](../README.md#no-such-part).\n"})
+        self.build({"docs/index.md": f"See the {link('../', 'no-such-part', 'part')}.\n"})
         code, out, _ = self.run_check()
         self.assertEqual(code, 1)
         self.assertIn("BROKEN anchor #no-such-part linked from ['docs/index.md']", out)
 
     def test_a_link_removed_together_with_its_heading_passes(self) -> None:
-        old = {"README.md": OLD_README, "docs/index.md": "See the [details](../README.md#details).\n"}
+        old = {"README.md": OLD_README, "docs/index.md": f"See the {link('../', 'details', 'details')}.\n"}
         self.build({"README.md": self.readme("## Details", "## More"), "docs/index.md": "No link now.\n"}, old=old)
         code, out, _ = self.run_check()
         self.assertEqual(code, 0, out)
 
     def test_a_renamed_heading_that_keeps_its_anchor_passes(self) -> None:
-        docs = {"README.md": OLD_README, "docs/index.md": "See the [details](../README.md#details).\n"}
+        docs = {"README.md": OLD_README, "docs/index.md": f"See the {link('../', 'details', 'details')}.\n"}
         self.build({"README.md": self.readme("## Details", "## `Details`")}, old=docs)
         self.assertEqual(self.run_check()[0], 0)
 
     def test_the_link_is_resolved_against_the_folder_of_the_linking_file(self) -> None:
         # docs/adapters/README.md is another README: its anchors are not this README's anchors.
-        old = {"README.md": OLD_README, "docs/index.md": "[x](adapters/README.md#gone)\n", "docs/adapters/README.md": "# A\n"}
+        old = {"README.md": OLD_README, "docs/index.md": link("adapters/", "gone") + "\n", "docs/adapters/README.md": "# A\n"}
         self.build({"README.md": OLD_README}, old=old)
         code, out, _ = self.run_check()
         self.assertEqual(code, 0, out)
         self.assertIn("anchors: 0 README anchor links", out)
 
     def test_a_link_two_folders_up_from_a_nested_page_reaches_the_readme(self) -> None:
-        old = {"README.md": OLD_README, "docs/deep/page.md": "[x](../../README.md#gone)\n"}
+        old = {"README.md": OLD_README, "docs/deep/page.md": link("../../", "gone") + "\n"}
         self.build({"README.md": OLD_README}, old=old)
         code, out, _ = self.run_check()
         self.assertEqual(code, 1)
         self.assertIn("BROKEN anchor #gone linked from ['docs/deep/page.md']", out)
 
+    def test_every_linking_file_is_read_not_only_the_first(self) -> None:
+        old = {
+            "README.md": OLD_README,
+            "docs/a.md": link("../", "gone-a") + "\n",
+            "docs/b.md": link("../", "gone-b") + "\n",
+            "scripts/c.py": f"# {README_FILE}#gone-c\n",
+        }
+        self.build({"README.md": OLD_README}, old=old)
+        code, out, _ = self.run_check()
+        self.assertEqual(code, 1)
+        for anchor, source in (("gone-a", "docs/a.md"), ("gone-b", "docs/b.md"), ("gone-c", "scripts/c.py")):
+            self.assertIn(f"BROKEN anchor #{anchor} linked from ['{source}']", out)
+
     def test_a_script_that_names_a_missing_anchor_fails(self) -> None:
-        old = {"README.md": OLD_README, "scripts/tool.py": "# see README.md#gone for the table\n"}
+        old = {"README.md": OLD_README, "scripts/tool.py": f"# see {README_FILE}#gone for the table\n"}
         self.build({"README.md": OLD_README}, old=old)
         code, out, _ = self.run_check()
         self.assertEqual(code, 1)
         self.assertIn("BROKEN anchor #gone linked from ['scripts/tool.py']", out)
 
     def test_a_script_that_names_an_existing_anchor_passes(self) -> None:
-        old = {"README.md": OLD_README, "scripts/tool.py": "# see README.md#details for the table\n"}
+        old = {"README.md": OLD_README, "scripts/tool.py": f"# see {README_FILE}#details for the table\n"}
         self.build({"README.md": OLD_README}, old=old)
         self.assertEqual(self.run_check()[0], 0)
 
+    def test_a_link_shown_in_inline_code_or_a_code_fence_is_an_example_not_a_link(self) -> None:
+        example = link("../", "gone")
+        page = f"Write it as `{example}`.\n\n{FENCE}md\n{example}\n{FENCE}\n"
+        self.build({"README.md": OLD_README}, old={"README.md": OLD_README, "docs/howto.md": page})
+        code, out, _ = self.run_check()
+        self.assertEqual(code, 0, out)
+        self.assertIn("anchors: 0 README anchor links", out)
+
+    def test_a_real_link_next_to_a_code_example_still_counts(self) -> None:
+        example = link("../", "example-only")
+        page = f"Write it as `{example}` or see {link('../', 'gone')}.\n"
+        self.build({"README.md": OLD_README}, old={"README.md": OLD_README, "docs/howto.md": page})
+        code, out, _ = self.run_check()
+        self.assertEqual(code, 1)
+        self.assertIn("BROKEN anchor #gone linked from ['docs/howto.md']", out)
+        self.assertNotIn("#example-only", out)
+
     def test_a_plain_text_mention_in_markdown_is_not_a_link(self) -> None:
-        old = {"README.md": OLD_README, "docs/note.md": "The anchor `README.md#gone` is an example.\n"}
+        old = {"README.md": OLD_README, "docs/note.md": f"The anchor `{README_FILE}#gone` is an example.\n"}
         self.build({"README.md": OLD_README}, old=old)
         self.assertEqual(self.run_check()[0], 0)
 
@@ -332,7 +372,7 @@ class AnchorTests(PreservationCase):
         self.assertIn("#details", out)
 
     def test_an_abbreviated_commit_hash_works_as_a_revision(self) -> None:
-        docs = {"README.md": OLD_README, "docs/index.md": "[x](../README.md#gone)\n"}
+        docs = {"README.md": OLD_README, "docs/index.md": link("../", "gone") + "\n"}
         self.build({"README.md": OLD_README}, old=docs)
         short = git(self.repo, "rev-parse", "--short", "change")
         code, out, _ = self.run_check(new=short)
@@ -377,6 +417,16 @@ class RunTests(PreservationCase):
         code, out, _ = self.run_check()
         self.assertEqual(code, 0, out)
 
+    def test_verbose_lists_what_moved_and_the_default_does_not(self) -> None:
+        new_readme = self.readme("npm ci\n", "").replace("[skill a](skills/a/SKILL.md)", "[catalogue](docs/catalogue.md)")
+        page = f"# Catalogue\n\n[a](../skills/a/SKILL.md)\n\n{FENCE}sh\nnpm ci\n{FENCE}\n"
+        self.build({"README.md": new_readme, "docs/catalogue.md": page})
+        _, quiet, _ = self.run_check()
+        _, loud, _ = self.run_check("--verbose")
+        self.assertNotIn("moved link target", quiet)
+        self.assertIn("moved link target: skills/a/SKILL.md", loud)
+        self.assertIn("moved command: npm ci", loud)
+
     def test_output_never_names_the_repository_path(self) -> None:
         self.build({"README.md": self.readme("npm ci\n", "") + "\n[x](#nowhere)\n"})
         code, out, err = self.run_check()
@@ -385,7 +435,7 @@ class RunTests(PreservationCase):
 
     def test_the_readme_path_can_be_another_file(self) -> None:
         old = {"README.md": "# Root\n", "docs/README.md": "# Docs\n\n## Part\n"}
-        new = {"docs/README.md": "# Docs\n\n## Other\n", "docs/link.md": "[p](README.md#part)\n"}
+        new = {"docs/README.md": "# Docs\n\n## Other\n", "docs/link.md": link("", "part", "p") + "\n"}
         self.build(new, old=old)
         code, out, _ = self.run_check("--readme", "docs/README.md")
         self.assertEqual(code, 1)
