@@ -1,5 +1,27 @@
 # Changelog
 
+## Unreleased - README kaizen and README standard (31 October 2026)
+
+A scoped cycle on this README and on the README practice of the portfolio. It publishes no score. The record is
+[`docs/kaizen/2026-10-readme-kaizen/readme-kaizen-record.md`](docs/kaizen/2026-10-readme-kaizen/readme-kaizen-record.md).
+Nothing was pushed, tagged or released. No existing script, catalogue entry, marketplace entry or lockfile was changed.
+
+- Added `scripts/readme_metrics.py` (readability measures and `--check` limits) and `scripts/check_readme_preservation.py`
+  (lost links, lost commands and broken anchors between two git revisions), with 90 tests in `tests/test_readme_metrics.py`
+  and `tests/test_readme_preservation.py`. Forty-seven one-line mutations over the two scripts were each caught. Commits
+  `398c4f4` and `0e559fa`.
+- Added `docs/operations/readme-standard-2026-10-31.md`: the shared README structure, limits, preservation rules, the procedure
+  for an engine README kaizen and the measured result for the eleven engines. Linked from the README, `AGENTS.md` and the
+  documentation index. CI runs both scripts on this README (`3dd7f8b`).
+- README restructured (`abe8c65`): front door, contents list, plain English, smaller sections. The tool detail moved to
+  `docs/operations/package-tools-reference.md` and the reference lists to `docs/references.md`. Words 7,470 to 7,538, longest
+  section 3,100 to 1,136, lines over 300 characters 61 to 7, words per sentence 19.6 to 12.1, reading ease 44 to 59.
+- Corrections made while rewriting, each re-measured on 2026-10-31: the MCP server has one approval-gated tool, so it is not
+  "read-only"; every `released_commit` pin is 5 to 9 commits behind (was 4 to 8) now that the engines merged their README work;
+  the documentation wave is on `main`; the suite reads 352 passed and 3 skipped.
+- `42cfab7` records a conflict: `scripts/validate-portfolio-craft.ps1` still expects a Capabilities heading that ten engine READMEs
+  no longer have. The script was not run (no `pwsh`) and not changed.
+
 ## Unreleased - Documentation wave and pin refresh (31 October 2026)
 
 The pass-2 entry below has no commit hashes and says the catalogue pins were not refreshed; this entry adds the hashes by theme
