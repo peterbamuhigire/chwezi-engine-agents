@@ -93,6 +93,10 @@ jobs:
           node hooks/test-plugin-hook-config.js
       - name: Public-repository hygiene of this package (tracked settings, env files, credential-shaped strings, host paths)
         run: python -X utf8 scripts/check_public_hygiene.py --repo .
+      - name: README readability limits and anchors of this package (the tests above cover both tools; HEAD against HEAD checks the anchors only)
+        run: |
+          python -X utf8 scripts/readme_metrics.py --check README.md
+          python -X utf8 scripts/check_readme_preservation.py . HEAD HEAD
       - name: Build and test MCP server
         working-directory: mcp-server
         run: |

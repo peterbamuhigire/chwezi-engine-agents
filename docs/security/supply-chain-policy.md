@@ -11,7 +11,7 @@
   patterns listed in its docstring and nothing else.
 - The release workflow first calls the validate workflow (plugin, contract,
   catalogue, adapter, installer, security, deterministic evaluation, hook, MCP,
-  portfolio drift and hygiene checks) and packages only if it passes. It then
+  portfolio drift, hygiene and README checks) and packages only if it passes. It then
   repeats the catalogue schema check, the contract evaluations and the MCP
   build and tests, packages the archive and writes a SHA-256 checksum.
 - Not yet true, and not claimed: the workflow does not generate

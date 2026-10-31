@@ -79,8 +79,16 @@ engine is dirty, missing or off `main`.
 Tests and validators: `README.md` section "Validation" lists each command, what it needs
 (PyYAML, `jsonschema`, `pytest`, Node.js, `pwsh`, network access) and its measured result
 on 2026-10-31; the test suite is `python3 -X utf8 -m pytest -p no:cacheprovider tests`.
-Open findings, decisions and the portfolio calendar of date-triggered gates are under
-"Quality and improvement" in `README.md`; evidence is in `docs/kaizen/`.
+Open findings, decisions and the portfolio calendar of date-triggered gates are in the
+sections "Open findings", "Decisions waiting for the maintainer" and "Date-triggered gates
+across the portfolio" of `README.md`; evidence is in `docs/kaizen/`.
+
+README quality: before you edit any Chwezi `README.md`, read
+`docs/operations/readme-standard-2026-10-31.md` (structure, limits, preservation rules).
+`python3 -X utf8 scripts/readme_metrics.py --check README.md` measures a README against the
+limits, and `python3 -X utf8 scripts/check_readme_preservation.py <repo> <base> <new>` reports
+the links, commands and heading anchors that a rewrite lost between two git revisions. Both
+are read-only; exit 3 means NOT ASSESSED.
 
 <!-- chwezi-design-engine:trigger v4 -->
 ### Design / typography / UI/UX (cross-cutting — consult IN ADDITION)
