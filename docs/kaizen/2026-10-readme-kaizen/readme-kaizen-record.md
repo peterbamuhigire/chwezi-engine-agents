@@ -197,6 +197,8 @@ The first round caught 39 of 40. The survivor, a redundant `p != readme` filter,
 
 `scripts/validate-portfolio-craft.ps1` (lines 49 and 50) requires a `## Capability map` or `## Capabilities` heading among each engine's first four H2 headings. Applying that rule to the eleven READMEs on `main` gives ten failures (all but the accounting engine). The script is Windows-only, runs in no CI job and was not run here (no `pwsh`). Neither the script nor any engine README was changed. The maintainer decides which side moves.
 
+**Resolved after the cycle (31 October 2026).** The conflict above was fixed rather than left to a decision: each of the ten engine READMEs regained a short `## Capabilities` section within its first four H2 headings (the task table stays beneath it as `### Find the right skill`), and `scripts/check_readme_contract.py` now applies the rule on every host. The finding is kept here because it is evidence: a Windows-only validator let a restructure break ten READMEs, and no agent on this Linux host could see it.
+
 ### Not assessed
 
 - Any PowerShell suite, because there is no `pwsh`.

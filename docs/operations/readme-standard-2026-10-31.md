@@ -22,7 +22,7 @@ Use this order. Adapt names only where a validator or another file needs a headi
 | 2 | At a glance | Five or six measured facts, each with a date or a command behind it. |
 | 3 | Start here | Three numbered steps with exact commands: install or load, check, first use. |
 | 4 | Contents | A list of in-page links to the H2 sections. Every link resolves. |
-| 5 | When to use it, and Find the right skill | Six to twelve rows from task to skill, with real names. A coordination package lists tasks and tools. |
+| 5 | Capabilities, with Find the right skill beneath it | A `## Capabilities` heading within the first four H2 headings, with the engine's counts and a link to the catalogue. Under it, as `### Find the right skill`, six to twelve rows from task to skill with real names. A coordination package lists tasks and tools. |
 | 6 | How it works | Routing and architecture, short. |
 | 7 | What is inside | Counts and categories, with a link to the full catalogue if there is one. |
 | 8 | Install and update | Each route, with the findings from running it. |
@@ -33,7 +33,7 @@ Then come the engine's own sections, a References or Cited sources section, and 
 
 A README that is also the engine's router keeps its routing text exactly as it is. Add the front door and the contents list around it.
 
-**Known conflict.** `scripts/validate-portfolio-craft.ps1` (lines 49 and 50) still expects the layout of 20 September 2026: a `## Capability map` or `## Capabilities` heading among the first four H2 headings. Ten of the eleven engine READMEs lack it now. The script is Windows-only and no CI job runs it. Until the maintainer changes the rule or the READMEs, a Windows run of that script reports ten failures. The standard does not override it.
+**Required heading.** `scripts/validate-portfolio-craft.ps1` requires a `## Capabilities` or `## Capability map` heading among each engine README's first four H2 headings. That script is Windows-only, so a README kaizen on 31 October 2026 removed the heading from ten engines unnoticed. `python3 -X utf8 scripts/check_readme_contract.py --engines-root <folder>` applies the same rule on any host, and the portfolio-drift CI job runs it. Keep the heading when you restructure a README; a task table can sit beneath it.
 
 ## 3. The limits
 

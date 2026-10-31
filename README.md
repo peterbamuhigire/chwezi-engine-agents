@@ -108,6 +108,7 @@ It does not hold domain skills, and it writes to an engine only when you ask. `g
 | Find principles that recur across an engine's skills | the [`rules-distill`](skills/rules-distill/SKILL.md) skill |
 | Measure how readable a README is | `python3 -X utf8 scripts/readme_metrics.py --check README.md` |
 | Check that a README rewrite lost no link, command or anchor | `python3 -X utf8 scripts/check_readme_preservation.py . main <branch>` |
+| Check that every engine README keeps its `## Capabilities` heading in the first four H2 headings | `python3 -X utf8 scripts/check_readme_contract.py --engines-root <folder>` |
 
 Every command above only reads, except `refresh_released_commits.py --write` (it edits the pins in `catalog/engines.yaml`) and an `install-engine.js` run without `--dry-run`. [`docs/operations/package-tools-reference.md`](docs/operations/package-tools-reference.md) describes every tool group in full.
 
@@ -447,10 +448,6 @@ Earlier audits, execution logs and plans are indexed in [`docs/README.md`](docs/
 - **Script defects found while documenting.** They are recorded in [`07-docs-followups.md`](docs/kaizen/2026-10-engine-kaizen-pass-2/07-docs-followups.md).
   - `scripts/update.sh` exits 126 on a fresh clone (see Install and update).
   - CI runs neither `tests/security/install-engine-ownership.test.js` (it passes locally) nor the two `tests/security/install-*-preservation.ps1` scripts.
-- **The portfolio craft check expects the earlier README layout.** `scripts/validate-portfolio-craft.ps1` (lines 49 and 50) requires a `## Capability map` or `## Capabilities` heading among each engine's first four H2 headings.
-  - Ten of the eleven engine READMEs no longer have one after their README work. Only the accounting README does.
-  - The script is Windows-only and no CI job runs it. It was not run here. This finding comes from applying its rule to the READMEs with a short Python script.
-  - The maintainer decides whether to change the rule or the READMEs. This package changed neither.
 - **Not established.** No remote CI run of the edited workflows, no PowerShell run, no native install in a host, no Tier 3 behavioural run and no live-model routing. Routing figures are a lexical proxy.
 - **Open work in the pass-2 backlog** ([`06-next-cycle.md`](docs/kaizen/2026-10-engine-kaizen-pass-2/06-next-cycle.md)):
   - ten more scripts still need `--workspace-root` instead of the engine locator;
@@ -573,6 +570,10 @@ Each check was added with a control: a case built to fail.
   - The rule flagged exactly the accounting (2 lines) and social (3 lines) routers. The renderer was idempotent on scratch copies.
   - Those engines then applied it in their own documentation waves (their commits `f405a5b` and `830f154`). The drift check now reports no router finding (re-measured).
   - 14 tests, five mutations caught (evidence).
+- **README layout contract on every host (found after the README kaizen).** `scripts/validate-portfolio-craft.ps1` requires `## Capabilities` or `## Capability map` among each engine README's first four H2 headings. It is Windows-only and runs in no CI job, so the README kaizen removed the heading from ten of eleven engines without any check noticing.
+  - Each of the ten READMEs got a short Capabilities section with its own counts. The task table stays beneath it as "Find the right skill", so that anchor is unchanged.
+  - `scripts/check_readme_contract.py` ports the rule to Python and mirrors the PowerShell comparison (case-insensitive, whole line, any `## ` line). It reports 0 findings on the eleven READMEs now and would have reported ten before the fix (re-measured).
+  - 17 tests, six one-line mutations each caught. CI runs it in the portfolio-drift job.
 - **Tests.** 101 new `unittest` tests for the six checks (evidence). 73 sit in four new files (re-counted: 13, 26, 13 and 21).
   - `unittest discover` collected 102 tests at baseline and 203 after (evidence).
   - A real pytest run at the pass-2 close gave 262 passed and 3 skipped, or 265 passed with sibling folders present (re-measured). The baseline had no pytest on this host, so seven pytest-style files ran only through a labelled stand-in.

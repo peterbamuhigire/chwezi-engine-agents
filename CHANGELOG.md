@@ -19,8 +19,10 @@ Nothing was pushed, tagged or released. No existing script, catalogue entry, mar
 - Corrections made while rewriting, each re-measured on 2026-10-31: the MCP server has one approval-gated tool, so it is not
   "read-only"; every `released_commit` pin is 5 to 9 commits behind (was 4 to 8) now that the engines merged their README work;
   the documentation wave is on `main`; the suite reads 352 passed and 3 skipped.
-- `42cfab7` records a conflict: `scripts/validate-portfolio-craft.ps1` still expects a Capabilities heading that ten engine READMEs
-  no longer have. The script was not run (no `pwsh`) and not changed.
+- `42cfab7` recorded a conflict: `scripts/validate-portfolio-craft.ps1` still expected a Capabilities heading that ten engine READMEs
+  no longer had. Resolved the same day: each of the ten READMEs regained a `## Capabilities` section within its first four H2 headings
+  (their commits are titled "restore a Capabilities section"), and `scripts/check_readme_contract.py` now applies the rule on any host
+  with 17 tests and six caught mutations.
 
 ## Unreleased - Documentation wave and pin refresh (31 October 2026)
 

@@ -89,6 +89,8 @@ README quality: before you edit any Chwezi `README.md`, read
 limits, and `python3 -X utf8 scripts/check_readme_preservation.py <repo> <base> <new>` reports
 the links, commands and heading anchors that a rewrite lost between two git revisions. Both
 are read-only; exit 3 means NOT ASSESSED.
+`python3 -X utf8 scripts/check_readme_contract.py --engines-root <folder>` checks that each engine README keeps `## Capabilities`
+or `## Capability map` among its first four H2 headings (the rule of `scripts/validate-portfolio-craft.ps1`, on any host).
 
 <!-- chwezi-design-engine:trigger v4 -->
 ### Design / typography / UI/UX (cross-cutting — consult IN ADDITION)
