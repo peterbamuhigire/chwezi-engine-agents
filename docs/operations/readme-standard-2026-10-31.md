@@ -29,7 +29,7 @@ Use this order. Adapt names only where a validator or another file needs a headi
 | 9 | Validate | Commands, dependencies, dated results and what ran where. A check that could not run is `NOT_ASSESSED`. |
 | 10 | Quality and improvement | Status, what improved, open items, date gates. |
 
-Then come the engine's own sections, a References or Cited sources section, and Contributing, author and licence. Sections 1 to 3 sit in the first 40 lines. The first fenced command block starts by line 40.
+Then come the engine's own sections, a References or Cited sources section, and Contributing, author and licence. Sections 1 to 3 belong at the top: aim to end the three Start here steps by line 40. The first fenced command block must start by line 40, and `--check` tests that.
 
 A README that is also the engine's router keeps its routing text exactly as it is. Add the front door and the contents list around it.
 
@@ -189,7 +189,7 @@ Each cell reads "before to after".
 | Website | 9,334 to 4,421 | 6 to 12 | 0 to 1 | 13 to 22 | 3,500 to 1,000 |
 | Social media | 11,393 to 5,731 | 6 to 18 | 0 to 1 | 15 to 24 | 6,019 to 833 |
 | **Eleven engines** | 97,394 to 58,889 | 62 to 160 | 1 of 11 to 11 of 11 | latest 105 to 37 | largest 6,019 to 1,445 |
-| This package | 7,470 to 7,545 | 8 to 23 | 0 to 1 | 13 to 22 | 3,100 to 1,136 |
+| This package | 7,470 to 7,538 | 8 to 23 | 0 to 1 | 13 to 20 | 3,100 to 1,136 |
 
 ### Readability
 
@@ -207,7 +207,7 @@ Each cell reads "before to after".
 | Website | 54 to 16 | 1,171 to 458 | 18.0 to 12.3 | 45 to 61 |
 | Social media | 39 to 12 | 1,783 to 542 | 20.7 to 11.3 | 31 to 57 |
 | **Eleven engines** | 483 to 71 | worst 1,983 to 542 | mean 17.6 to 11.6 | mean 41.5 to 55.6 |
-| This package | 61 to 6 | 1,461 to 322 | 19.6 to 12.1 | 44 to 59 |
+| This package | 61 to 7 | 1,461 to 416 | 19.6 to 12.1 | 44 to 59 |
 
 ### What the results show
 
@@ -215,7 +215,7 @@ Each cell reads "before to after".
 - The word count fell by 38,505, about 40%. Most of that is relocation, not deletion. The kaizen added 26 pages under `docs/` for catalogues, source lists and October-kaizen detail. They hold about 52,800 words, counted by splitting on white space, so the count differs from `words`.
 - The earlier figure of 58,890 words was one word higher. The social-media README changed by one word after that count.
 - The first command moved later in eight engines, because six facts now come first. It moved earlier in the SDLC, Linux and Windows engines. The latest is line 37 of the dev engine, inside the 40-line limit.
-- The Linux README already had a contents list. This package's README stayed near its baseline (7,470 to 7,545 words, plus 1%). It gained a front door, a contents list and tables while it moved its tool detail and reference lists to `docs/`. It missed the aim of 10% fewer words and met the 5% ceiling.
+- The Linux README already had a contents list. This package's README stayed near its baseline (7,470 to 7,538 words, plus 1%). It gained a front door, a contents list and tables while it moved its tool detail and reference lists to `docs/`. It missed the aim of 10% fewer words and met the 5% ceiling.
 - Reading ease and sentence length cover prose only. The kaizen sections of several READMEs still hold bullets with long sentences, commit hashes and figures. The mean of 55.6 is therefore not a reading-ease score for the whole page.
 
 ## 7. Where the records are
