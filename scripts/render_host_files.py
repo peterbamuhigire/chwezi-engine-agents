@@ -23,7 +23,10 @@
 (h) plugin      - every SKILL.md is listed in ``plugin.json`` or excluded in
                   ``engine-manifest.yaml`` ``plugin_exclusions`` with a reason;
 (i) marketplace - the leading "N skills" count in marketplace descriptions
-                  equals ``plugin.json`` ``skills[]`` length.
+                  equals ``plugin.json`` ``skills[]`` length;
+(j) pins        - each catalogue ``released_commit`` is in its engine's history and no
+                  more than ``--pin-lag-max`` commits behind HEAD (skipped in a shallow
+                  clone that lacks the pin; refresh with ``scripts/refresh_released_commits.py``).
 
 Exit codes: 0 clean, 1 findings (or bad input), 3 NOT_ASSESSED only (a sibling
 repository is missing). A missing sibling is never a pass.
@@ -57,6 +60,7 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / "lib"))
 import engine_roots  # noqa: E402
+import released_commits as RC  # noqa: E402
 
 PACKAGE_ROOT = Path(__file__).resolve().parents[1]
 COORDINATION = "chwezi-engine-agents"
@@ -412,6 +416,26 @@ def check_marketplace_counts(engine: Engine, report: Report) -> None:
                        f"description says {stated} skills, plugin.json lists {actual}", ".claude-plugin/marketplace.json")
 
 
+def check_released_commit(engine: Engine, pin: str | None, lag_max: int, report: Report) -> None:
+    """The catalogue's ``released_commit`` must be in the engine's history and no further behind HEAD than allowed.
+
+    Uses scripts/lib/released_commits.py, the same facts ``scripts/refresh_released_commits.py`` writes from.
+    A shallow clone that lacks the pin cannot answer, so the rule is skipped there rather than guessed.
+    """
+    if engine.coordination or not pin:
+        return
+    status = RC.pin_status(engine.root, pin)
+    state = status["state"]
+    refresh = "refresh with scripts/refresh_released_commits.py --write"
+    if state == "unknown":
+        report.add(engine.name, "released-commit", "released-commit-unknown", f"released_commit {pin} is not in the engine history", "catalog/engines.yaml")
+    elif state == "diverged":
+        report.add(engine.name, "released-commit", "released-commit-diverged", f"released_commit {pin} is not an ancestor of HEAD {status['head']}", "catalog/engines.yaml")
+    elif state == "behind" and status["behind"] > lag_max:
+        report.add(engine.name, "released-commit", "released-commit-lag",
+                   f"released_commit {pin} is {status['behind']} commits behind HEAD {status['head']} (allowed {lag_max}); {refresh}", "catalog/engines.yaml")
+
+
 def locate(layout: dict[str, Path], workspace: Path, rel: str) -> Path:
     """Path of a register entry ``<engine>/<file>`` under the resolved layout."""
     head, _, tail = rel.partition("/")
@@ -524,13 +548,14 @@ def suite_entries(package_root: Path, engines: list[Engine]) -> dict[str, dict]:
 
 # --------------------------------------------------------------------------- drivers
 
-def run_check(package_root: Path, workspace: Path, only: Path | None, tag: str | None, roots: list[Path] | None = None) -> Report:
+def run_check(package_root: Path, workspace: Path, only: Path | None, tag: str | None, roots: list[Path] | None = None, pin_lag_max: int = 0) -> Report:
     report = Report()
     register_path = package_root / "catalog" / "shared-assets.yaml"
     register = load_yaml(register_path) if register_path.is_file() else {}
     layout, layout_problems = build_layout(package_root, workspace, roots)
     report.not_assessed.extend(layout_problems)
     engines = catalog_engines(package_root, workspace, layout)
+    pins = {e["path"]: (e.get("integration") or {}).get("released_commit") for e in load_yaml(package_root / "catalog" / "engines.yaml")["engines"]}
     if only is not None:
         only = only.resolve()
         engines = [e for e in engines if e.root.resolve() == only] or [Engine(only.name, only, only.name)]
@@ -563,6 +588,7 @@ def run_check(package_root: Path, workspace: Path, only: Path | None, tag: str |
         check_hooks(engine, report)
         check_plugin_listing(engine, settings, files, report)
         check_marketplace_counts(engine, report)
+        check_released_commit(engine, pins.get(engine.name), pin_lag_max, report)
         report.checked.append({"engine": engine.name, "claude_md_bytes": (engine.root / "CLAUDE.md").stat().st_size if (engine.root / "CLAUDE.md").is_file() else None})
     if only is None:
         report.checked.append({"register": check_register(register, workspace, missing, report, layout)})
@@ -664,6 +690,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--workspace-root", type=Path, default=PACKAGE_ROOT.parent)
     parser.add_argument("--engines-root", type=Path, action="append", default=[],
                         help="extra folder that holds engine checkouts (repeatable; also CHWEZI_ENGINES_ROOT); catalogue aliases cover former folder names")
+    parser.add_argument("--pin-lag-max", type=int, default=0,
+                        help="commits a released_commit pin may trail its engine HEAD before it is a finding (default 0)")
     parser.add_argument("--package-root", type=Path, default=PACKAGE_ROOT, help=argparse.SUPPRESS)
     parser.add_argument("--engine", type=Path)
     parser.add_argument("--tag")
@@ -678,7 +706,7 @@ def main(argv: list[str] | None = None) -> int:
         return code
     try:
         roots = engine_roots.roots_from(args.engines_root) if (args.engines_root or engine_roots.ENV_VAR in os.environ) else None
-        report = run_check(args.package_root.resolve(), args.workspace_root.resolve(), args.engine, args.tag, roots)
+        report = run_check(args.package_root.resolve(), args.workspace_root.resolve(), args.engine, args.tag, roots, args.pin_lag_max)
     except (OSError, yaml.YAMLError, json.JSONDecodeError, KeyError) as error:
         print(f"check could not run: {error}", file=sys.stderr)
         return 1
