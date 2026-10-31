@@ -1,6 +1,6 @@
 # Documentation index
 
-This folder holds the contracts, policies, evidence and generated reports of the coordination package. The package overview, installation, validation commands and the quality status are in the [README](../README.md); the runner-neutral router is [`AGENTS.md`](../AGENTS.md). Records dated before 31 October 2026 keep the names and paths they were written with (for example `srs-skills` and `design-system-skills` for the engines now called `chwezi-sdlc-documentation` and `chwezi-design-engine`).
+This folder holds the contracts, policies, evidence and generated reports of the coordination package. The package overview, installation, validation commands, the quality status and an account of what the October 2026 kaizen improved ([README](../README.md#what-the-october-2026-kaizen-improved)) are in the [README](../README.md); the runner-neutral router is [`AGENTS.md`](../AGENTS.md). Records dated before 31 October 2026 keep the names and paths they were written with (for example `srs-skills` and `design-system-skills` for the engines now called `chwezi-sdlc-documentation` and `chwezi-design-engine`).
 
 ## Current contracts and policies
 
