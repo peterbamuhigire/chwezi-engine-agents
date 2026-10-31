@@ -1,0 +1,6 @@
+chwezi-accounting-doctrine dry-run: {"changed": ["currentness-gate-location", "craft-standard-location"], "dry_run": true}
+chwezi-accounting-doctrine render:  {"changed": ["currentness-gate-location", "craft-standard-location"], "dry_run": false}
+chwezi-accounting-doctrine rerun:   {"changed": [], "dry_run": false}
+social-media-skills dry-run: {"changed": ["currentness-gate-location", "control-plane-location", "craft-standard-location"], "dry_run": true}
+social-media-skills render:  {"changed": ["currentness-gate-location", "control-plane-location", "craft-standard-location"], "dry_run": false}
+social-media-skills rerun:   {"changed": [], "dry_run": false}

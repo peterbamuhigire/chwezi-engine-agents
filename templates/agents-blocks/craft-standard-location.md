@@ -1,0 +1,1 @@
+Load `chwezi-engine-agents/docs/operations/portfolio-craft-standard-2026-09-04.md` when available (resolve `chwezi-engine-agents` through the active engine-routing table or the catalogue).

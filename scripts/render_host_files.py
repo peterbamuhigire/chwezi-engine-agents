@@ -24,6 +24,9 @@
                   ``engine-manifest.yaml`` ``plugin_exclusions`` with a reason;
 (i) marketplace - the leading "N skills" count in marketplace descriptions
                   equals ``plugin.json`` ``skills[]`` length;
+(l) router      - AGENTS.md and CLAUDE.md name no workstation path and no former engine folder name;
+                  ``--render-router-blocks`` rewrites the three managed sentences from
+                  ``templates/agents-blocks/``;
 (k) validators  - every catalogue validator script exists in its engine, and every command in
                   the engine manifest's ``validation`` block has a catalogue counterpart;
 (j) pins        - each catalogue ``released_commit`` is in its engine's history and no
@@ -61,7 +64,9 @@ from pathlib import Path
 
 import yaml
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 sys.path.insert(0, str(Path(__file__).resolve().parent / "lib"))
+import check_public_hygiene as HYG  # noqa: E402
 import engine_roots  # noqa: E402
 import released_commits as RC  # noqa: E402
 
@@ -608,6 +613,8 @@ def run_check(package_root: Path, workspace: Path, only: Path | None, tag: str |
     engines = catalog_engines(package_root, workspace, layout)
     catalog_entries = load_yaml(package_root / "catalog" / "engines.yaml")["engines"]
     pins = {e["path"]: (e.get("integration") or {}).get("released_commit") for e in catalog_entries}
+    former_names = {e["path"]: [str(a) for a in e.get("aliases") or []] for e in catalog_entries}
+    private_users = frozenset(str(n).lower() for n in (HYG.load_policy(package_root / "catalog" / "hygiene-policy.yaml").get("private_user_names") or []))
     validators = {e["path"]: ([e["validators"]] if isinstance(e.get("validators"), str) else list(e.get("validators") or [])) for e in catalog_entries}
     if only is not None:
         only = only.resolve()
@@ -643,10 +650,64 @@ def run_check(package_root: Path, workspace: Path, only: Path | None, tag: str |
         check_marketplace_counts(engine, report)
         check_released_commit(engine, pins.get(engine.name), pin_lag_max, report)
         check_validators(engine, validators.get(engine.name), report)
+        check_router_portable(engine, former_names.get(engine.name, []), private_users, report)
         report.checked.append({"engine": engine.name, "claude_md_bytes": (engine.root / "CLAUDE.md").stat().st_size if (engine.root / "CLAUDE.md").is_file() else None})
     if only is None:
         report.checked.append({"register": check_register(register, workspace, missing, report, layout)})
     return report
+
+
+ROUTER_FILES = ("AGENTS.md", "CLAUDE.md")
+HOST_PATH_RE = re.compile(r"[A-Za-z]:[\\/]|(?<![A-Za-z0-9_./-])/(?:home|Users)/|wamp64|xampp|laragon", re.IGNORECASE)
+# Portfolio-managed router sentences: id -> pattern for the legacy (host-path) form. The path-free wording is
+# templates/agents-blocks/<id>.md. A match is rewritten only when it also names a host path.
+ROUTER_BLOCKS = (
+    ("currentness-gate-location", re.compile(r"Digital Research Engine at\s+`[^`\n]*`\.")),
+    ("control-plane-location", re.compile(r"governed centrally by `[^`\n]*engine-control-plane\.(?:md|json)`\.")),
+    ("craft-standard-location", re.compile(r"Load `[^`\n]*portfolio-craft-standard-2026-09-04\.md` when available\.")),
+)
+
+
+def check_router_portable(engine: Engine, former_names: list[str], private_users: frozenset[str], report: Report) -> None:
+    """Router files carry no host path and no former engine folder name (pass-2 K6)."""
+    for rel in ROUTER_FILES:
+        path = engine.root / rel
+        if not path.is_file():
+            continue
+        text = read_text(path)
+        for rule, number, _detail in HYG.line_findings(text, private_users):
+            if rule in HYG.PATH_RULES:
+                report.add(engine.name, "router", "router-host-path", f"{rel} line {number} names a path on one workstation; use the catalogue wording in templates/agents-blocks/", rel)
+        for name in former_names:
+            pattern = re.compile(rf"(?<![A-Za-z0-9_./-]){re.escape(name)}(?![A-Za-z0-9_-])")
+            for number, line in enumerate(text.splitlines(), 1):
+                if pattern.search(line):
+                    report.add(engine.name, "router", "router-former-name", f"{rel} line {number} uses the former engine name {name!r}; use the catalogue id", rel)
+
+
+def render_router_blocks(engine_root: Path, package_root: Path, dry_run: bool = False) -> tuple[int, list[str]]:
+    """Rewrite the legacy host-path form of the three managed router sentences. Returns (exit code, changed block ids)."""
+    agents = engine_root / "AGENTS.md"
+    if not agents.is_file():
+        print("refusing to render: AGENTS.md is missing", file=sys.stderr)
+        return 1, []
+    raw = agents.read_bytes().decode("utf-8")
+    crlf = "\r\n" in raw
+    text = raw.replace("\r\n", "\n")
+    changed: list[str] = []
+    for block_id, pattern in ROUTER_BLOCKS:
+        template_path = package_root / "templates" / "agents-blocks" / f"{block_id}.md"
+        if not template_path.is_file():
+            print(f"refusing to render: template {block_id}.md is missing", file=sys.stderr)
+            return 1, []
+        fragment = template_path.read_text(encoding="utf-8").strip("\n")
+        if any(HOST_PATH_RE.search(m.group(0)) for m in pattern.finditer(text)):
+            changed.append(block_id)
+            text = pattern.sub(lambda m: fragment if HOST_PATH_RE.search(m.group(0)) else m.group(0), text)
+    new = text.replace("\n", "\r\n") if crlf else text
+    if new != raw and not dry_run:
+        agents.write_bytes(new.encode("utf-8"))
+    return 0, changed
 
 
 def render_engine(engine_root: Path, dry_run: bool = False) -> tuple[int, list[str]]:
@@ -741,6 +802,8 @@ def main(argv: list[str] | None = None) -> int:
     mode = parser.add_mutually_exclusive_group(required=True)
     mode.add_argument("--check", action="store_true")
     mode.add_argument("--render", action="store_true")
+    mode.add_argument("--render-router-blocks", action="store_true",
+                      help="rewrite the legacy host-path form of the managed router sentences in AGENTS.md (needs --engine)")
     parser.add_argument("--workspace-root", type=Path, default=PACKAGE_ROOT.parent)
     parser.add_argument("--engines-root", type=Path, action="append", default=[],
                         help="extra folder that holds engine checkouts (repeatable; also CHWEZI_ENGINES_ROOT); catalogue aliases cover former folder names")
@@ -750,8 +813,14 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--engine", type=Path)
     parser.add_argument("--tag")
     parser.add_argument("--json", action="store_true", help="print the JSON report instead of the text summary")
-    parser.add_argument("--dry-run", action="store_true", help="with --render: list files that would change")
+    parser.add_argument("--dry-run", action="store_true", help="with --render or --render-router-blocks: list what would change without writing")
     args = parser.parse_args(argv)
+    if args.render_router_blocks:
+        if not args.engine:
+            parser.error("--render-router-blocks needs --engine <path>")
+        code, changed = render_router_blocks(args.engine.resolve(), args.package_root.resolve(), args.dry_run)
+        print(json.dumps({"changed": changed, "dry_run": args.dry_run}))
+        return code
     if args.render:
         if not args.engine:
             parser.error("--render needs --engine <path>")

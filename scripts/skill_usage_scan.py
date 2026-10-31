@@ -258,7 +258,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--until", required=True, help="ISO date, inclusive")
     parser.add_argument("--out", required=True, type=Path, help="Output folder outside every Git repository")
     parser.add_argument("--inventory", type=Path, action="append")
-    parser.add_argument("--workspace-root", type=Path, default=Path(r"C:\wamp64\www"))
+    parser.add_argument("--workspace-root", type=Path, default=Path(__file__).resolve().parents[1].parent)
     parser.add_argument("--allow-repo-output", action="store_true")
     args = parser.parse_args(argv)
 

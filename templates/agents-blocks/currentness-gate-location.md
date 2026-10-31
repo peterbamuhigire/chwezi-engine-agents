@@ -1,0 +1,1 @@
+Digital Research Engine (catalogue id `digital-research-skills`; resolve its checkout through the active engine-routing table or `chwezi-engine-agents/catalog/engines.yaml`, never a fixed path).

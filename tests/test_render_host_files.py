@@ -353,6 +353,123 @@ class ValidatorRuleTests(unittest.TestCase):
                 self.assertIsNotNone(MODULE.validator_key(command), f"{entry['id']}: {command}")
 
 
+WIN_ROOT = "C:" + "\\wamp64\\www"
+LEGACY_ROUTER = (
+    "Every Kaizen decision MUST begin with the Digital Research Engine at\n"
+    "`" + WIN_ROOT + "\\digital-research-engine`. Read its `source-evaluation` skill.\n\n"
+    "Shared behaviour is governed centrally by `" + WIN_ROOT + "\\chwezi-dev-engine\\docs\\engine-control-plane.md`.\n\n"
+    "Load `" + WIN_ROOT + "\\chwezi-engine-agents\\docs\\operations\\portfolio-craft-standard-2026-09-04.md` when available. Build in slices.\n"
+)
+
+
+class RouterPortableTests(unittest.TestCase):
+    """Pass-2 K6: router files carry no workstation path or former engine name; the renderer fixes the three sentences."""
+
+    def setUp(self) -> None:
+        self.tmp = Path(tempfile.mkdtemp())
+        self.engine = self.tmp / "demo"
+        self.engine.mkdir()
+
+    def tearDown(self) -> None:
+        shutil.rmtree(self.tmp, ignore_errors=True)
+
+    def codes(self, former=("old-demo",)) -> list[str]:
+        report = MODULE.Report()
+        MODULE.check_router_portable(MODULE.Engine("demo", self.engine, "demo"), list(former), frozenset({"peter"}), report)
+        return sorted(f.code for f in report.findings)
+
+    def render(self, dry_run=False):
+        return MODULE.render_router_blocks(self.engine, PACKAGE, dry_run)
+
+    def test_clean_router_passes(self) -> None:
+        write(self.engine / "AGENTS.md", "# Demo\n\nResolve engines through the catalogue.\n")
+        self.assertEqual(self.codes(), [])
+
+    def test_host_path_in_agents_and_claude_files_fails(self) -> None:
+        write(self.engine / "AGENTS.md", f"Engines live under `{WIN_ROOT}`.\n")
+        write(self.engine / "CLAUDE.md", f"Also `{WIN_ROOT}`.\n")
+        self.assertEqual(self.codes(), ["router-host-path", "router-host-path"])
+
+    def test_host_path_outside_the_router_files_is_not_this_rules_business(self) -> None:
+        write(self.engine / "AGENTS.md", "# Demo\n")
+        write(self.engine / "docs" / "note.md", f"Old note: {WIN_ROOT}\n")
+        self.assertEqual(self.codes(), [])
+
+    def test_former_engine_name_fails_but_a_url_and_a_longer_name_pass(self) -> None:
+        write(self.engine / "AGENTS.md", "Use `old-demo` for this.\n")
+        self.assertEqual(self.codes(), ["router-former-name"])
+        write(self.engine / "AGENTS.md", "See https://github.com/example/old-demo and old-demo-extras and not-old-demo.\n")
+        self.assertEqual(self.codes(), [])
+
+    def test_renderer_replaces_the_three_legacy_sentences_and_the_rule_then_passes(self) -> None:
+        write(self.engine / "AGENTS.md", LEGACY_ROUTER)
+        self.assertEqual(self.codes(), ["router-host-path"] * 3)
+        code, changed = self.render()
+        self.assertEqual((code, changed), (0, ["currentness-gate-location", "control-plane-location", "craft-standard-location"]))
+        text = (self.engine / "AGENTS.md").read_text(encoding="utf-8")
+        self.assertIn("Digital Research Engine (catalogue id `digital-research-skills`;", text)
+        self.assertIn("governed centrally by `chwezi-dev-engine/docs/engine-control-plane.md` (resolve", text)
+        self.assertIn("Load `chwezi-engine-agents/docs/operations/portfolio-craft-standard-2026-09-04.md` when available (resolve", text)
+        self.assertIn("Build in slices.", text)
+        self.assertEqual(self.codes(), [])
+
+    def test_renderer_is_idempotent(self) -> None:
+        write(self.engine / "AGENTS.md", LEGACY_ROUTER)
+        self.render()
+        first = (self.engine / "AGENTS.md").read_bytes()
+        self.assertEqual(self.render(), (0, []))
+        self.assertEqual((self.engine / "AGENTS.md").read_bytes(), first)
+
+    def test_dry_run_lists_changes_and_writes_nothing(self) -> None:
+        write(self.engine / "AGENTS.md", LEGACY_ROUTER)
+        before = (self.engine / "AGENTS.md").read_bytes()
+        self.assertEqual(len(self.render(dry_run=True)[1]), 3)
+        self.assertEqual((self.engine / "AGENTS.md").read_bytes(), before)
+
+    def test_crlf_line_endings_are_preserved(self) -> None:
+        write(self.engine / "AGENTS.md", LEGACY_ROUTER.replace("\n", "\r\n"))
+        self.render()
+        data = (self.engine / "AGENTS.md").read_bytes()
+        self.assertEqual(data.count(b"\r\n"), data.count(b"\n"))
+        self.assertNotIn(b"wamp64", data)
+
+    def test_renderer_never_inserts_a_sentence_the_engine_does_not_carry(self) -> None:
+        write(self.engine / "AGENTS.md", "# Demo\n\nNothing managed here.\n")
+        self.assertEqual(self.render(), (0, []))
+        self.assertEqual((self.engine / "AGENTS.md").read_text(encoding="utf-8"), "# Demo\n\nNothing managed here.\n")
+
+    def test_a_sentence_that_is_already_path_free_is_left_alone(self) -> None:
+        text = "Load `docs/operations/portfolio-craft-standard-2026-09-04.md` when available.\n"
+        write(self.engine / "AGENTS.md", text)
+        self.assertEqual(self.render(), (0, []))
+        self.assertEqual((self.engine / "AGENTS.md").read_text(encoding="utf-8"), text)
+
+    def test_only_the_sentence_that_names_a_host_path_is_rewritten(self) -> None:
+        clean = "Load `docs/operations/portfolio-craft-standard-2026-09-04.md` when available.\n"
+        legacy = "Load `" + WIN_ROOT + "\\chwezi-engine-agents\\docs\\operations\\portfolio-craft-standard-2026-09-04.md` when available.\n"
+        write(self.engine / "AGENTS.md", clean + "\n" + legacy)
+        self.assertEqual(self.render(), (0, ["craft-standard-location"]))
+        text = (self.engine / "AGENTS.md").read_text(encoding="utf-8")
+        self.assertTrue(text.startswith(clean))
+        self.assertEqual(text.count("(resolve `chwezi-engine-agents`"), 1)
+
+    def test_renderer_refuses_without_agents_md(self) -> None:
+        self.assertEqual(self.render()[0], 1)
+
+    def test_command_line_mode_requires_an_engine(self) -> None:
+        write(self.engine / "AGENTS.md", LEGACY_ROUTER)
+        with self.assertRaises(SystemExit):
+            MODULE.main(["--render-router-blocks"])
+        code = MODULE.main(["--render-router-blocks", "--engine", str(self.engine), "--package-root", str(PACKAGE), "--dry-run"])
+        self.assertEqual(code, 0)
+
+    def test_shipped_templates_are_single_path_free_fragments(self) -> None:
+        for block_id, _ in MODULE.ROUTER_BLOCKS:
+            text = (PACKAGE / "templates" / "agents-blocks" / f"{block_id}.md").read_text(encoding="utf-8")
+            self.assertNotIn("\n", text, block_id)
+            self.assertFalse(MODULE.HOST_PATH_RE.search(text), block_id)
+
+
 class RenderTests(unittest.TestCase):
     def setUp(self) -> None:
         self.tmp = Path(tempfile.mkdtemp())

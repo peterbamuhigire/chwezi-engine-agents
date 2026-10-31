@@ -9,7 +9,7 @@ From a cloned release:
 
 ```powershell
 .\scripts\install.ps1 -Host codex -Destination "$env:USERPROFILE\plugins\skills-engine-agents"
-python C:\Users\Peter\.codex\skills\.system\plugin-creator\scripts\validate_plugin.py .
+python "$env:USERPROFILE\.codex\skills\.system\plugin-creator\scripts\validate_plugin.py" .
 ```
 
 Run `scripts/discover-engine.ps1` for read-only discovery. Use the validator

@@ -11,7 +11,9 @@ is a thin bridge that imports it (portfolio bridge contract,
 How to use this package:
 
 1. Resolve the engine for the current task from `catalog/engines.yaml`
-   (paths are relative to `C:\wamp64\www\` on this machine).
+   (catalogue paths are folder names, not locations: find each checkout through the active
+   engine-routing table, `--engines-root` or `CHWEZI_ENGINES_ROOT`; former folder names are
+   catalogue `aliases`).
 2. Read that engine's own `AGENTS.md` (falling back to `CLAUDE.md` or
    `README.md`) before loading any of its `SKILL.md` files.
 3. Use the three workflows in `agents/` — `engine-orchestrator`,

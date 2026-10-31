@@ -47,4 +47,8 @@ repositories:
   chwezi-design-engine: {record_path_ceiling: 30}
   digital-research-skills: {record_path_ceiling: 61}
   windows-admin-engine-skills: {record_path_ceiling: 3}
-  chwezi-engine-agents: {record_path_ceiling: 968}
+  chwezi-engine-agents:
+    record_path_ceiling: 968
+    allow:
+      - {rule: machine-path, path: "scripts/validate-portfolio-craft.ps1", reason: "Windows-only maintainer script; the default workspace root is overridden by every documented invocation. Editing PowerShell is NOT_ASSESSED on a host without pwsh, so the default is recorded here and left for a Windows run"}
+      - {rule: machine-path, path: "scripts/validate-prompt-capability.ps1", reason: "Windows-only maintainer script; CI passes explicit roots. Editing PowerShell is NOT_ASSESSED on a host without pwsh"}
