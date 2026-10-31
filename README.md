@@ -451,6 +451,10 @@ Earlier audits, execution logs and plans are indexed in [`docs/README.md`](docs/
 - **Script defects found while documenting.** They are recorded in [`07-docs-followups.md`](docs/kaizen/2026-10-engine-kaizen-pass-2/07-docs-followups.md).
   - `scripts/update.sh` exits 126 on a fresh clone (see Install and update).
   - CI runs neither `tests/security/install-engine-ownership.test.js` (it passes locally) nor the two `tests/security/install-*-preservation.ps1` scripts.
+- **The portfolio craft check expects the earlier README layout.** `scripts/validate-portfolio-craft.ps1` (lines 49 and 50) requires a `## Capability map` or `## Capabilities` heading among each engine's first four H2 headings.
+  - Ten of the eleven engine READMEs no longer have one after their README work. Only the accounting README does.
+  - The script is Windows-only and no CI job runs it. It was not run here. This finding comes from applying its rule to the READMEs with a short Python script.
+  - The maintainer decides whether to change the rule or the READMEs. This package changed neither.
 - **Not established.** No remote CI run of the edited workflows, no PowerShell run, no native install in a host, no Tier 3 behavioural run and no live-model routing. Routing figures are a lexical proxy.
 - **Open work in the pass-2 backlog** ([`06-next-cycle.md`](docs/kaizen/2026-10-engine-kaizen-pass-2/06-next-cycle.md)):
   - ten more scripts still need `--workspace-root` instead of the engine locator;
