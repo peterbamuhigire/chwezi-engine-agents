@@ -139,6 +139,8 @@ jobs:
         run: node scripts/generate-plugin-manifest.js --check-marketplace --workspace-root ..
       - name: Shared hook files identical in every engine (installed host copies are checked on a workstation, not here)
         run: python -X utf8 scripts/check_hook_copies.py --workspace-root .. --plugins-dir does-not-exist
+      - name: README layout contract (Capabilities heading) in every engine README
+        run: python -X utf8 scripts/check_readme_contract.py --workspace-root ..
       - name: Public-repository hygiene across the eleven engines and this package
         run: python -X utf8 scripts/check_public_hygiene.py --workspace-root ..
       - name: Prompt-contract byte identity
