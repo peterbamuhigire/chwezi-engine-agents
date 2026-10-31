@@ -46,7 +46,7 @@
         "url": "https://github.com/peterbamuhigire/business-plan-skills.git",
         "ref": "main"
       },
-      "description": "134 skills: business plans, bankable plans, investor materials, financial models, market/country context",
+      "description": "137 skills: business plans, bankable plans, investor materials, financial models, market/country context",
       "version": "1.1.0",
       "author": { "name": "Peter Bamuhigire" },
       "homepage": "https://github.com/peterbamuhigire/business-plan-skills",
@@ -165,7 +165,7 @@
         "url": "https://github.com/peterbamuhigire/chwezi-design-engine.git",
         "ref": "main"
       },
-      "description": "101 skills (Chwezi Design Engine): typography, colour, layout, UX, design systems/tokens, anti-AI-slop doctrine",
+      "description": "102 skills (Chwezi Design Engine): typography, colour, layout, UX, design systems/tokens, anti-AI-slop doctrine",
       "version": "1.1.0",
       "author": { "name": "Peter Bamuhigire" },
       "homepage": "https://github.com/peterbamuhigire/chwezi-design-engine",
