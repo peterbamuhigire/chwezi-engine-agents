@@ -1,0 +1,15 @@
+Local replay of the commands added to CI (2026-10-31). Real CI was not run (NOT_ASSESSED).
+exit=0 node hooks/test-destructive-bash-gate.js
+        61/61 passed
+exit=0 node hooks/test-plugin-hook-config.js
+        7/7 passed
+exit=0 python3 -X utf8 scripts/check_public_hygiene.py --repo .
+        checked 1 repositories; findings 0; path lines in dated records 968; not assessed 0
+exit=0 python3 -X utf8 scripts/check_hook_copies.py --workspace-root <workspace> --plugins-dir does-not-exist
+        compared 11 engine repositories and 0 installed plugin copies (44 files); differences 0; not assessed 0
+exit=1 python3 -X utf8 scripts/check_public_hygiene.py --workspace-root <workspace>
+        checked 12 repositories; findings 19; path lines in dated records 1667; not assessed 0
+exit=1 python3 -X utf8 scripts/render_host_files.py --check --workspace-root <workspace>
+        checked 12 repositories; findings 37; not assessed 0
+exit=0 bash -n scripts/install.sh scripts/update.sh scripts/uninstall.sh
+pytest tests (posix job): NOT_ASSESSED on this host (pytest is not installed); unittest discover and the stand-in runner results are in 04-validation-record.md

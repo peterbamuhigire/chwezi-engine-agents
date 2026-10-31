@@ -9,7 +9,12 @@ permissions:
   contents: read
 
 jobs:
+  validate:
+    # Everything the validate workflow runs (plugin, contract, catalogue, adapter, installer, security, deterministic
+    # evaluation, hook, MCP, portfolio drift and hygiene checks) must pass before a release is packaged.
+    uses: ./.github/workflows/validate.yml
   release-gate:
+    needs: validate
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

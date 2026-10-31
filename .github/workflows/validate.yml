@@ -4,6 +4,7 @@ on:
   push:
   pull_request:
   workflow_dispatch:
+  workflow_call:
   schedule:
     - cron: '17 5 * * 1'
 
@@ -54,6 +55,10 @@ jobs:
           python -X utf8 scripts/project_context_doctor.py --project tests/fixtures/project-context/valid/PROJECT.md --workspace-root tests/fixtures/project-context/workspace --json
           python -X utf8 scripts/generate_engine_tour.py --workspace-root tests/fixtures/engine-workspace --engine demo-engine --out-dir "$env:RUNNER_TEMP/tours"
           python -X utf8 scripts/generate_engine_tour.py --workspace-root tests/fixtures/engine-workspace --engine demo-engine --out-dir "$env:RUNNER_TEMP/tours" --check
+      - name: Hook tests (destructive-command gate and plugin hook configuration)
+        run: |
+          node hooks/test-destructive-bash-gate.js
+          node hooks/test-plugin-hook-config.js
       - name: Build and test MCP server
         working-directory: mcp-server
         run: |
@@ -71,12 +76,23 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install contract dependencies
-        run: python -m pip install PyYAML jsonschema
+      - name: Install contract and test dependencies
+        run: python -m pip install PyYAML jsonschema pytest
       - name: Check POSIX scripts
         run: bash -n scripts/install.sh scripts/update.sh scripts/uninstall.sh
       - name: Run contract evaluations
         run: python evals/runners/run-contract-evals.py --cases evals/cases --out evals/reports/posix.json
+      - name: Every Python test file (the Windows job runs a fixed subset)
+        run: python -X utf8 -m pytest tests -q -p no:cacheprovider
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Hook tests (destructive-command gate and plugin hook configuration)
+        run: |
+          node hooks/test-destructive-bash-gate.js
+          node hooks/test-plugin-hook-config.js
+      - name: Public-repository hygiene of this package (tracked settings, env files, credential-shaped strings, host paths)
+        run: python -X utf8 scripts/check_public_hygiene.py --repo .
       - name: Build and test MCP server
         working-directory: mcp-server
         run: |
@@ -117,6 +133,10 @@ jobs:
         run: python -X utf8 scripts/render_host_files.py --check --workspace-root ..
       - name: Marketplace counts and sources
         run: node scripts/generate-plugin-manifest.js --check-marketplace --workspace-root ..
+      - name: Shared hook files identical in every engine (installed host copies are checked on a workstation, not here)
+        run: python -X utf8 scripts/check_hook_copies.py --workspace-root .. --plugins-dir does-not-exist
+      - name: Public-repository hygiene across the eleven engines and this package
+        run: python -X utf8 scripts/check_public_hygiene.py --workspace-root ..
       - name: Prompt-contract byte identity
         run: ./scripts/validate-prompt-capability.ps1 -WorkspaceRoot (Resolve-Path ..).Path -CoordinatorRoot (Get-Location).Path
 
