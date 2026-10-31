@@ -24,6 +24,8 @@
                   ``engine-manifest.yaml`` ``plugin_exclusions`` with a reason;
 (i) marketplace - the leading "N skills" count in marketplace descriptions
                   equals ``plugin.json`` ``skills[]`` length;
+(k) validators  - every catalogue validator script exists in its engine, and every command in
+                  the engine manifest's ``validation`` block has a catalogue counterpart;
 (j) pins        - each catalogue ``released_commit`` is in its engine's history and no
                   more than ``--pin-lag-max`` commits behind HEAD (skipped in a shallow
                   clone that lacks the pin; refresh with ``scripts/refresh_released_commits.py``).
@@ -51,6 +53,7 @@ import hashlib
 import json
 import os
 import re
+import shlex
 import subprocess
 import sys
 from dataclasses import asdict, dataclass, field
@@ -416,6 +419,54 @@ def check_marketplace_counts(engine: Engine, report: Report) -> None:
                        f"description says {stated} skills, plugin.json lists {actual}", ".claude-plugin/marketplace.json")
 
 
+SCRIPT_SUFFIXES = (".py", ".js", ".mjs", ".cjs", ".sh", ".ps1")
+
+
+def validator_key(command: str) -> tuple[str, str] | None:
+    """Identity of a validator command for comparison: the script it runs, or the module or tool.
+
+    Interpreter names, flags and arguments are ignored, so ``python -X utf8 scripts/x.py --baseline b.json``
+    and ``python scripts/x.py`` are the same validator. Returns None when no stable identity can be read.
+    """
+    try:
+        tokens = shlex.split(command.replace("\\", "/"))
+    except ValueError:
+        return None
+    if "-m" in tokens and tokens.index("-m") + 1 < len(tokens):
+        return ("module", tokens[tokens.index("-m") + 1])
+    for token in tokens:
+        if token.lower().endswith(SCRIPT_SUFFIXES) and "*" not in token:
+            return ("script", token[2:] if token.startswith("./") else token)
+    if tokens and tokens[0] in ("git", "npm") and len(tokens) > 1:
+        return (tokens[0], tokens[1])
+    if "--test" in tokens and tokens and tokens[0] == "node":
+        rest = [x for x in tokens[tokens.index("--test") + 1:] if not x.startswith("-")]
+        return ("node-test", rest[0] if rest else "")
+    return None
+
+
+def check_validators(engine: Engine, validators: list[str] | None, report: Report) -> None:
+    """Every catalogued validator script exists, and every command the engine's manifest declares is catalogued."""
+    if not validators:
+        return
+    keys = set()
+    for command in validators:
+        key = validator_key(command)
+        if key is None:
+            continue
+        keys.add(key)
+        if key[0] == "script" and not (engine.root / key[1]).is_file():
+            report.add(engine.name, "validators", "validator-script-missing",
+                       f"catalogue validator script does not exist in the engine: {key[1]}", "catalog/engines.yaml")
+    for item in (engine.manifest or {}).get("validation") or []:
+        if not isinstance(item, dict) or not isinstance(item.get("command"), str):
+            continue
+        key = validator_key(item["command"])
+        if key is not None and key not in keys:
+            report.add(engine.name, "validators", "validator-undeclared",
+                       f"manifest validator {item.get('id', '?')!r} ({key[1] or key[0]}) is not in the catalogue validators", "catalog/engines.yaml")
+
+
 def check_released_commit(engine: Engine, pin: str | None, lag_max: int, report: Report) -> None:
     """The catalogue's ``released_commit`` must be in the engine's history and no further behind HEAD than allowed.
 
@@ -555,7 +606,9 @@ def run_check(package_root: Path, workspace: Path, only: Path | None, tag: str |
     layout, layout_problems = build_layout(package_root, workspace, roots)
     report.not_assessed.extend(layout_problems)
     engines = catalog_engines(package_root, workspace, layout)
-    pins = {e["path"]: (e.get("integration") or {}).get("released_commit") for e in load_yaml(package_root / "catalog" / "engines.yaml")["engines"]}
+    catalog_entries = load_yaml(package_root / "catalog" / "engines.yaml")["engines"]
+    pins = {e["path"]: (e.get("integration") or {}).get("released_commit") for e in catalog_entries}
+    validators = {e["path"]: ([e["validators"]] if isinstance(e.get("validators"), str) else list(e.get("validators") or [])) for e in catalog_entries}
     if only is not None:
         only = only.resolve()
         engines = [e for e in engines if e.root.resolve() == only] or [Engine(only.name, only, only.name)]
@@ -589,6 +642,7 @@ def run_check(package_root: Path, workspace: Path, only: Path | None, tag: str |
         check_plugin_listing(engine, settings, files, report)
         check_marketplace_counts(engine, report)
         check_released_commit(engine, pins.get(engine.name), pin_lag_max, report)
+        check_validators(engine, validators.get(engine.name), report)
         report.checked.append({"engine": engine.name, "claude_md_bytes": (engine.root / "CLAUDE.md").stat().st_size if (engine.root / "CLAUDE.md").is_file() else None})
     if only is None:
         report.checked.append({"register": check_register(register, workspace, missing, report, layout)})

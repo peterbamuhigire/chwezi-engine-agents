@@ -27,6 +27,12 @@ engines:
       - "python scripts/validate-skill-registry.py"
       - "python scripts/website_fixture_benchmark.py"
       - "python scripts/routing-smoke-test.py"
+      - "python scripts/validate-skill-contracts.py --baseline quality/skill-contract-baseline.json"
+      - "python scripts/validate-search-doctrine.py"
+      - "python scripts/validate-source-registers.py"
+      - "python scripts/check_portable_references.py"
+      - "python scripts/source_ingestion_guardrail.py --root ."
+      - "python -m pytest -q"
   - id: social-media-skills
     repository: social-media-skills
     path: social-media-skills
@@ -54,6 +60,11 @@ engines:
     validators:
       - "python -X utf8 scripts/validate_skills.py --baseline quality-baseline.json"
       - "python -X utf8 scripts/routing_smoke_test.py"
+      - "python -X utf8 scripts/encoding_link_gate.py"
+      - "python -X utf8 scripts/source_ingestion_guardrail.py"
+      - "python scripts/proposal_fixture_check.py"
+      - "python -X utf8 -m unittest discover -s tests"
+      - "git diff --check"
   - id: chwezi-dev-engine
     repository: chwezi-dev-engine
     path: chwezi-dev-engine
@@ -71,6 +82,9 @@ engines:
     integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "8c1d683"}
     validators:
       - ".\\tools\\validate-doctrine.ps1 -Strict"
+      - "python tools/source_register_integrity.py"
+      - "python tools/check_machine_paths.py"
+      - "python -m unittest discover -s tests -p 'test_*.py'"
   - id: chwezi-design-engine
     repository: chwezi-design-engine
     path: chwezi-design-engine
@@ -80,6 +94,9 @@ engines:
     validators:
       - "python -X utf8 scripts/validate_engine.py --baseline tests/quality-baseline.json"
       - "python -X utf8 scripts/routing_smoke_test.py"
+      - "python -X utf8 scripts/validate_portability.py"
+      - "node hooks/test-rendered-font-names.js"
+      - "node --test tools/slop-detector/test/"
   - id: digital-research-skills
     repository: digital-research-skills
     path: digital-research-engine
@@ -90,6 +107,7 @@ engines:
       - "python -X utf8 scripts/skill_contract_validator.py --baseline tests/skill-engine/quality-baseline.json"
       - "python -X utf8 scripts/routing_smoke_test.py"
       - "python -X utf8 scripts/validate_engine.py"
+      - "python -X utf8 scripts/validate_source_currency.py --registers-dir docs/source-registers"
   - id: windows-admin-engine-skills
     repository: windows-admin-engine-skills
     path: windows-admin-engine-skills
@@ -99,3 +117,6 @@ engines:
       - "python -X utf8 scripts/validate_engine.py"
       - "python -X utf8 scripts/routing_smoke_test.py"
       - "python -X utf8 scripts/source_ingestion_guardrail.py"
+      - "python -X utf8 -m unittest discover -s tests/python -v"
+      - "python -X utf8 scripts/check_source_register.py"
+      - "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/test-powershell.ps1"

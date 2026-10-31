@@ -289,6 +289,70 @@ class LayoutTests(unittest.TestCase):
         self.assertEqual(MODULE.main(args + ["--engines-root", str(self.other)]), 0)
 
 
+class ValidatorRuleTests(unittest.TestCase):
+    """Pass-2 K5: catalogue validators exist, and every manifest-declared command is catalogued."""
+
+    KEYS = [
+        ("python -X utf8 scripts/a.py --baseline b.json", ("script", "scripts/a.py")),
+        ("python scripts/a.py", ("script", "scripts/a.py")),
+        (".\\tools\\v.ps1 -Strict", ("script", "tools/v.ps1")),
+        ("powershell -NoProfile -ExecutionPolicy Bypass -File scripts/t.ps1", ("script", "scripts/t.ps1")),
+        ("python -m pytest -q", ("module", "pytest")),
+        ("python -X utf8 -m unittest discover -s tests -p 'test_*.py'", ("module", "unittest")),
+        ("git diff --check", ("git", "diff")),
+        ("node --test tools/x/test/", ("node-test", "tools/x/test/")),
+        ("echo hello", None),
+    ]
+
+    def setUp(self) -> None:
+        self.tmp = Path(tempfile.mkdtemp())
+        write(self.tmp / "scripts" / "a.py", "pass\n")
+
+    def tearDown(self) -> None:
+        shutil.rmtree(self.tmp, ignore_errors=True)
+
+    def findings(self, validators, manifest=None) -> list[tuple[str, str]]:
+        report = MODULE.Report()
+        MODULE.check_validators(MODULE.Engine("demo", self.tmp, "demo", manifest=manifest), validators, report)
+        return [(f.code, f.message) for f in report.findings]
+
+    def test_validator_identity_ignores_interpreter_flags_and_arguments(self) -> None:
+        for command, expected in self.KEYS:
+            self.assertEqual(MODULE.validator_key(command), expected, command)
+
+    def test_catalogued_script_that_exists_passes(self) -> None:
+        self.assertEqual(self.findings(["python -X utf8 scripts/a.py --strict"]), [])
+
+    def test_catalogued_script_that_is_absent_fails(self) -> None:
+        found = self.findings(["python scripts/gone.py"])
+        self.assertEqual([code for code, _ in found], ["validator-script-missing"])
+        self.assertIn("scripts/gone.py", found[0][1])
+
+    def test_manifest_command_missing_from_the_catalogue_fails(self) -> None:
+        manifest = {"validation": [{"id": "extra", "command": "python scripts/other.py"}]}
+        found = self.findings(["python scripts/a.py"], manifest)
+        self.assertEqual([code for code, _ in found], ["validator-undeclared"])
+        self.assertIn("'extra'", found[0][1])
+
+    def test_manifest_command_with_different_flags_is_the_same_validator(self) -> None:
+        manifest = {"validation": [{"id": "gate", "command": "python scripts/a.py --workspace-root .."}]}
+        self.assertEqual(self.findings(["python -X utf8 scripts/a.py"], manifest), [])
+
+    def test_manifest_module_and_tool_commands_are_matched_by_module(self) -> None:
+        manifest = {"validation": [{"id": "t", "command": "python -m pytest -q"}, {"id": "d", "command": "git diff --check"}]}
+        self.assertEqual(self.findings(["python -m pytest", "git diff --check", "python scripts/a.py"], manifest), [])
+        self.assertEqual(len(self.findings(["python scripts/a.py"], manifest)), 2)
+
+    def test_engine_without_catalogued_validators_is_skipped(self) -> None:
+        self.assertEqual(self.findings(None, {"validation": [{"id": "x", "command": "python scripts/other.py"}]}), [])
+
+    def test_the_shipped_catalogue_parses_to_a_key_for_every_validator(self) -> None:
+        catalog = MODULE.load_yaml(PACKAGE / "catalog" / "engines.yaml")
+        for entry in catalog["engines"]:
+            for command in ([entry["validators"]] if isinstance(entry["validators"], str) else entry["validators"]):
+                self.assertIsNotNone(MODULE.validator_key(command), f"{entry['id']}: {command}")
+
+
 class RenderTests(unittest.TestCase):
     def setUp(self) -> None:
         self.tmp = Path(tempfile.mkdtemp())
