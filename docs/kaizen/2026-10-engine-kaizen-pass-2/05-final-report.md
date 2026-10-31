@@ -14,8 +14,8 @@ unsafe trees), catalogue validators, router wording. The catalogue pins themselv
 The checks found real exposures in other engines (listed below and in `06`). They did not fix them; fixing belongs to the documentation wave.
 Nothing was pushed, tagged, released or sent to a model. The 95 target is not reached and is not claimed.
 
-**Branches.** Started on `kaizen/2026-10` at `edc0a70` (clean tree); work is on `kaizen/2026-10-pass2`, 15 commits after the starting HEAD with
-this one. `kaizen/2026-10` is checked out again at the end. The earlier branch was not modified.
+**Branches.** Started on `kaizen/2026-10` at `edc0a70` (clean tree); work is on `kaizen/2026-10-pass2`, 17 commits after the starting HEAD, this
+one included (`git log edc0a70..kaizen/2026-10-pass2`). `kaizen/2026-10` is checked out again at the end. The earlier branch was not modified.
 
 ## Scores
 
