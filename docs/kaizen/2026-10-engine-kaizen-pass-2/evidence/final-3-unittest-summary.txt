@@ -1,0 +1,12 @@
+Ran 203 tests in 6.569s
+FAILED (failures=2, errors=8, skipped=1)
+ERROR: test_absent_repository_folder_is_not_assessed
+ERROR: test_doctor_performs_no_write
+ERROR: test_each_code_comes_from_exactly_one_fixture
+ERROR: test_findings_use_ar09_fields
+ERROR: test_omitted_pointer_declared_absent_is_a_mention
+ERROR: test_run_behavioural_eval
+ERROR: test_validation_result_schema
+ERROR: test_valid_fixture_exits_zero_with_no_findings
+FAIL: test_template_front_matter_validates
+FAIL: test_unknown_field_fails

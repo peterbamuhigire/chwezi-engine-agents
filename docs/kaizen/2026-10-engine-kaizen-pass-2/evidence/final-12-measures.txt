@@ -1,0 +1,39 @@
+RELEASED_COMMIT LAG
+  chwezi-sdlc-documentation    pin=905b9a4 head=d65b2e9 behind=47 ancestor=True
+  business-plan-skills         pin=2b41c08 head=f05f1b3 behind=38 ancestor=True
+  website-skills               pin=75bc5c9 head=1c7e007 behind=47 ancestor=True
+  social-media-skills          pin=724970f head=df61a68 behind=51 ancestor=True
+  linux-skills                 pin=9de82cf head=74e2b6d behind=44 ancestor=True
+  proposal-skills              pin=ba94f15 head=a7f15b7 behind=32 ancestor=True
+  chwezi-dev-engine            pin=b3161da head=79df717 behind=51 ancestor=True
+  chwezi-accounting-doctrine   pin=8c1d683 head=e955bd0 behind=28 ancestor=True
+  chwezi-design-engine         pin=f69c5d4 head=72a3a37 behind=40 ancestor=True
+  digital-research-skills      pin=d4a613d head=cfd910c behind=42 ancestor=True
+  windows-admin-engine-skills  pin=132cbe9 head=a0fe01b behind=31 ancestor=True
+  engines lagging: 11 of 11 total commits behind: 451
+MACHINE PATHS (tracked text files, all lines, historical + live)
+  chwezi-sdlc-documentation    files=  15 lines=69
+  business-plan-skills         files=  13 lines=17
+  website-skills               files=  17 lines=61
+  social-media-skills          files=  21 lines=28
+  linux-skills                 files=  29 lines=152
+  proposal-skills              files=  11 lines=20
+  chwezi-dev-engine            files=  92 lines=252
+  chwezi-accounting-doctrine   files=  25 lines=52
+  chwezi-design-engine         files=  21 lines=31
+  digital-research-engine      files=  28 lines=61
+  windows-admin-engine-skills  files=   4 lines=11
+  chwezi-engine-agents         files=  97 lines=875
+TRACKED LOCAL SETTINGS / ENV
+  chwezi-sdlc-documentation    []
+  business-plan-skills         []
+  website-skills               []
+  social-media-skills          []
+  linux-skills                 ['.claude/settings.local.json']
+  proposal-skills              []
+  chwezi-dev-engine            ['.claude/settings.local.json']
+  chwezi-accounting-doctrine   []
+  chwezi-design-engine         []
+  digital-research-engine      []
+  windows-admin-engine-skills  []
+  chwezi-engine-agents         []
