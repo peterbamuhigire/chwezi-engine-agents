@@ -26,6 +26,8 @@ and are not merged. Nothing was pushed, tagged or released from this package.
   research repository name correctly; [`07-docs-followups.md`](docs/kaizen/2026-10-engine-kaizen-pass-2/07-docs-followups.md) lists
   what the wave could not fix. No script, catalogue entry, marketplace entry or lockfile was changed. This package has no managed
   router sentences, so the router renderer was not applied (dry run: nothing to change).
+- The README section [What the October 2026 kaizen improved](README.md#what-the-october-2026-kaizen-improved) lists each kept
+  change with its check and figures; this entry does not repeat it.
 
 ## Unreleased - Portfolio kaizen pass 2 (31 October 2026)
 
