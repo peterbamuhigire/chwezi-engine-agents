@@ -248,6 +248,47 @@ class HostFileCheckTests(unittest.TestCase):
         self.assertEqual(MODULE.main(args), 1)
 
 
+class LayoutTests(unittest.TestCase):
+    """Pass-2 K1: the drift check runs on a layout that differs from the catalogue."""
+
+    def setUp(self) -> None:
+        self.tmp = Path(tempfile.mkdtemp()).resolve()
+        self.package, self.engine = build_workspace(self.tmp)
+        self.other = self.tmp.parent / (self.tmp.name + "-other")
+        self.other.mkdir()
+        shutil.move(str(self.engine), str(self.other / "old-demo"))
+        catalog = self.package / "catalog" / "engines.yaml"
+        catalog.write_text(catalog.read_text(encoding="utf-8") + "    aliases: [old-demo]\n", encoding="utf-8")
+
+    def tearDown(self) -> None:
+        shutil.rmtree(self.tmp, ignore_errors=True)
+        shutil.rmtree(self.other, ignore_errors=True)
+
+    def test_engine_under_a_second_root_and_former_name_is_checked(self) -> None:
+        report = MODULE.run_check(self.package, self.tmp, None, None, roots=[self.other])
+        self.assertEqual((report.findings, report.not_assessed), ([], []))
+        self.assertTrue(any("register" in item for item in report.checked))
+
+    def test_without_the_extra_root_the_engine_is_not_assessed(self) -> None:
+        report = MODULE.run_check(self.package, self.tmp, None, None)
+        self.assertEqual([item["engine"] for item in report.not_assessed], ["demo-engine"])
+
+    def test_drift_is_still_found_through_the_locator(self) -> None:
+        write(self.other / "old-demo" / "hooks" / "shared.js", "// drifted\n")
+        report = MODULE.run_check(self.package, self.tmp, None, None, roots=[self.other])
+        self.assertIn("shared-asset-byte-drift", {f.code for f in report.findings})
+
+    def test_stale_second_checkout_is_ambiguous_and_not_assessed(self) -> None:
+        (self.other / "demo-engine").mkdir()
+        report = MODULE.run_check(self.package, self.tmp, None, None, roots=[self.other])
+        self.assertTrue(any("ambiguous" in item["reason"] for item in report.not_assessed), report.not_assessed)
+
+    def test_cli_flag_resolves_the_same_layout(self) -> None:
+        args = ["--check", "--workspace-root", str(self.tmp), "--package-root", str(self.package)]
+        self.assertEqual(MODULE.main(args), 3)
+        self.assertEqual(MODULE.main(args + ["--engines-root", str(self.other)]), 0)
+
+
 class RenderTests(unittest.TestCase):
     def setUp(self) -> None:
         self.tmp = Path(tempfile.mkdtemp())

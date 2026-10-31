@@ -46,6 +46,7 @@ import argparse
 import fnmatch
 import hashlib
 import json
+import os
 import re
 import subprocess
 import sys
@@ -53,6 +54,9 @@ from dataclasses import asdict, dataclass, field
 from pathlib import Path
 
 import yaml
+
+sys.path.insert(0, str(Path(__file__).resolve().parent / "lib"))
+import engine_roots  # noqa: E402
 
 PACKAGE_ROOT = Path(__file__).resolve().parents[1]
 COORDINATION = "chwezi-engine-agents"
@@ -176,10 +180,33 @@ class Engine:
     manifest: dict | None = None
 
 
-def catalog_engines(package_root: Path, workspace: Path) -> list[Engine]:
+def build_layout(package_root: Path, workspace: Path, roots: list[Path] | None = None) -> tuple[dict[str, Path], list[dict]]:
+    """Map each catalogue path (and the coordination package) to a directory.
+
+    Default: ``<workspace>/<path>``. With ``roots`` (``--engines-root`` and ``CHWEZI_ENGINES_ROOT``) each engine is
+    resolved through ``scripts/lib/engine_roots.py`` (catalogue path, repository, id, then former-name aliases) over
+    those roots and finally the workspace. Unresolvable or ambiguous engines keep the default path and are reported.
+    """
     catalog = load_yaml(package_root / "catalog" / "engines.yaml")
-    engines = [Engine(e["path"], workspace / e["path"], e.get("repository", e["path"])) for e in catalog["engines"]]
-    engines.append(Engine(COORDINATION, package_root if package_root.parent.resolve() == workspace.resolve() else workspace / COORDINATION, COORDINATION, coordination=True))
+    layout = {e["path"]: workspace / e["path"] for e in catalog["engines"]}
+    layout[COORDINATION] = package_root if package_root.parent.resolve() == workspace.resolve() else workspace / COORDINATION
+    problems: list[dict] = []
+    if roots:
+        search = engine_roots.roots_from(roots, fallback=workspace)
+        for entry in catalog["engines"]:
+            result = engine_roots.resolve_engine(entry, search)
+            if result.found:
+                layout[entry["path"]] = result.path
+            elif result.status == "ambiguous":
+                problems.append({"engine": entry["path"], "reason": engine_roots.describe(result)})
+    return layout, problems
+
+
+def catalog_engines(package_root: Path, workspace: Path, layout: dict[str, Path] | None = None) -> list[Engine]:
+    catalog = load_yaml(package_root / "catalog" / "engines.yaml")
+    layout = layout or build_layout(package_root, workspace)[0]
+    engines = [Engine(e["path"], layout[e["path"]], e.get("repository", e["path"])) for e in catalog["engines"]]
+    engines.append(Engine(COORDINATION, layout[COORDINATION], COORDINATION, coordination=True))
     return engines
 
 
@@ -385,7 +412,14 @@ def check_marketplace_counts(engine: Engine, report: Report) -> None:
                        f"description says {stated} skills, plugin.json lists {actual}", ".claude-plugin/marketplace.json")
 
 
-def check_register(register: dict, workspace: Path, missing_repos: set[str], report: Report) -> list[dict]:
+def locate(layout: dict[str, Path], workspace: Path, rel: str) -> Path:
+    """Path of a register entry ``<engine>/<file>`` under the resolved layout."""
+    head, _, tail = rel.partition("/")
+    return (layout.get(head) or workspace / head) / tail
+
+
+def check_register(register: dict, workspace: Path, missing_repos: set[str], report: Report, layout: dict[str, Path] | None = None) -> list[dict]:
+    layout = layout or {}
     rows = []
     for row in register.get("assets") or []:
         asset = row.get("id", "?")
@@ -398,7 +432,7 @@ def check_register(register: dict, workspace: Path, missing_repos: set[str], rep
             return rel.split("/", 1)[0] in missing_repos
 
         if mode == "byte":
-            canonical = workspace / row["canonical"]
+            canonical = locate(layout, workspace, row["canonical"])
             if missing_sibling(row["canonical"]):
                 summary["status"] = "NOT_ASSESSED"
             elif not canonical.is_file():
@@ -408,14 +442,14 @@ def check_register(register: dict, workspace: Path, missing_repos: set[str], rep
                 for rel in copies:
                     if missing_sibling(rel):
                         continue
-                    path = workspace / rel
+                    path = locate(layout, workspace, rel)
                     if not path.is_file():
                         report.add(asset, "register", "shared-asset-missing-copy", "registered copy missing", rel)
                     elif sha256_norm(path) != want:
                         report.add(asset, "register", "shared-asset-byte-drift", "copy differs from canonical after CRLF normalisation", rel)
         elif mode == "block":
             start, end = row["markers"]["start"], row["markers"]["end"]
-            canonical = workspace / row["canonical"]
+            canonical = locate(layout, workspace, row["canonical"])
             block = None
             if canonical.is_file():
                 text = read_text(canonical)
@@ -427,7 +461,7 @@ def check_register(register: dict, workspace: Path, missing_repos: set[str], rep
                 for rel in copies:
                     if missing_sibling(rel):
                         continue
-                    path = workspace / rel
+                    path = locate(layout, workspace, rel)
                     text = read_text(path) if path.is_file() else ""
                     if block not in text:
                         report.add(asset, "register", "shared-asset-block-drift", "text between the markers differs from the canonical block", rel)
@@ -436,7 +470,7 @@ def check_register(register: dict, workspace: Path, missing_repos: set[str], rep
             for rel in copies:
                 if missing_sibling(rel):
                     continue
-                path = workspace / rel
+                path = locate(layout, workspace, rel)
                 if not path.is_file():
                     report.add(asset, "register", "shared-asset-missing-copy", "registered copy missing", rel)
                     continue
@@ -451,14 +485,17 @@ def check_register(register: dict, workspace: Path, missing_repos: set[str], rep
             report.add(asset, "register", "shared-asset-bad-mode", f"unknown mode {mode!r}")
         for pattern in row.get("discover") or []:
             known = set(copies) | ({row["canonical"]} if row.get("canonical") else set())
-            for found in sorted(workspace.glob(pattern)):
-                rel = found.relative_to(workspace).as_posix()
-                if SKIP_PARTS & set(rel.split("/")):
+            head, _, tail = pattern.partition("/")
+            for repo in (register.get("public_repositories") or []):
+                if head not in ("*", repo):
                     continue
-                if rel.split("/", 1)[0] not in (register.get("public_repositories") or []):
-                    continue
-                if rel not in known:
-                    report.add(asset, "register", "shared-asset-unregistered-copy", "copy found on disk but not in the register", rel)
+                base = layout.get(repo) or workspace / repo
+                for found in sorted(base.glob(tail)):
+                    rel = f"{repo}/{found.relative_to(base).as_posix()}"
+                    if SKIP_PARTS & set(rel.split("/")):
+                        continue
+                    if rel not in known:
+                        report.add(asset, "register", "shared-asset-unregistered-copy", "copy found on disk but not in the register", rel)
         if len(report.findings) > before:
             summary["status"] = "drift"
         rows.append(summary)
@@ -487,11 +524,13 @@ def suite_entries(package_root: Path, engines: list[Engine]) -> dict[str, dict]:
 
 # --------------------------------------------------------------------------- drivers
 
-def run_check(package_root: Path, workspace: Path, only: Path | None, tag: str | None) -> Report:
+def run_check(package_root: Path, workspace: Path, only: Path | None, tag: str | None, roots: list[Path] | None = None) -> Report:
     report = Report()
     register_path = package_root / "catalog" / "shared-assets.yaml"
     register = load_yaml(register_path) if register_path.is_file() else {}
-    engines = catalog_engines(package_root, workspace)
+    layout, layout_problems = build_layout(package_root, workspace, roots)
+    report.not_assessed.extend(layout_problems)
+    engines = catalog_engines(package_root, workspace, layout)
     if only is not None:
         only = only.resolve()
         engines = [e for e in engines if e.root.resolve() == only] or [Engine(only.name, only, only.name)]
@@ -526,7 +565,7 @@ def run_check(package_root: Path, workspace: Path, only: Path | None, tag: str |
         check_marketplace_counts(engine, report)
         report.checked.append({"engine": engine.name, "claude_md_bytes": (engine.root / "CLAUDE.md").stat().st_size if (engine.root / "CLAUDE.md").is_file() else None})
     if only is None:
-        report.checked.append({"register": check_register(register, workspace, missing, report)})
+        report.checked.append({"register": check_register(register, workspace, missing, report, layout)})
     return report
 
 
@@ -623,6 +662,8 @@ def main(argv: list[str] | None = None) -> int:
     mode.add_argument("--check", action="store_true")
     mode.add_argument("--render", action="store_true")
     parser.add_argument("--workspace-root", type=Path, default=PACKAGE_ROOT.parent)
+    parser.add_argument("--engines-root", type=Path, action="append", default=[],
+                        help="extra folder that holds engine checkouts (repeatable; also CHWEZI_ENGINES_ROOT); catalogue aliases cover former folder names")
     parser.add_argument("--package-root", type=Path, default=PACKAGE_ROOT, help=argparse.SUPPRESS)
     parser.add_argument("--engine", type=Path)
     parser.add_argument("--tag")
@@ -636,7 +677,8 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps({"changed": changed, "dry_run": args.dry_run}))
         return code
     try:
-        report = run_check(args.package_root.resolve(), args.workspace_root.resolve(), args.engine, args.tag)
+        roots = engine_roots.roots_from(args.engines_root) if (args.engines_root or engine_roots.ENV_VAR in os.environ) else None
+        report = run_check(args.package_root.resolve(), args.workspace_root.resolve(), args.engine, args.tag, roots)
     except (OSError, yaml.YAMLError, json.JSONDecodeError, KeyError) as error:
         print(f"check could not run: {error}", file=sys.stderr)
         return 1
