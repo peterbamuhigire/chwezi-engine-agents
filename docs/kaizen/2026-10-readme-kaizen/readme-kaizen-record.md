@@ -2,7 +2,7 @@
 
 A scoped micro-cycle on the root `README.md` of the coordination package, plus the step that standardises the README practice for the whole portfolio. It follows the Portfolio Kaizen steps (Observe, Baseline, Select, Experiment, Check, Standardise, Teach, Re-measure). **It publishes no score.** The latest published score stays 48.09 out of 100.
 
-Branch `kaizen/2026-10-readme-kaizen`, created from `main` at `cf64878` with a clean tree (0 `git status --porcelain` lines). Nothing was pushed, tagged or merged. The branch holds six commits, this record among them.
+Branch `kaizen/2026-10-readme-kaizen`, created from `main` at `cf64878` with a clean tree (0 `git status --porcelain` lines). Nothing was pushed, tagged or merged. The commits are listed under Experiment.
 
 Two things in this cycle go beyond the README:
 
@@ -70,7 +70,9 @@ What reads the README:
 | `abe8c65` | Structure, front door, plain English, relocation, standard | The new README, the two relocated pages and the README standard. One commit, because the README was rewritten in one pass and no honest intermediate version exists |
 | `3dd7f8b` | Registration | A CI step, the `AGENTS.md` pointer and the supply-chain policy line |
 | `42cfab7` | Finding | The README and the standard record the conflict with `validate-portfolio-craft.ps1` |
-| this commit | Record | This file, the changelog entry and the documentation index |
+| `f82d155` | Front door | The opening became two paragraphs and Start here step 1 points to Install and update, so the three steps end at line 39 and the first command moves to line 20 |
+| `a6b7c5f` | Record | This file, the changelog entry and the documentation index rows |
+| the commit after it | Record | Corrects the commit list in this file |
 
 ### Deliberate corrections to facts
 
