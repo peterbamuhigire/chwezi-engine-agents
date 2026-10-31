@@ -1,0 +1,4 @@
+SKIP test_run_behavioural_eval.py::test_plan_evidence_validates_as_not_assessed dev engine checkout not present
+SKIP test_run_behavioural_eval.py::test_solution_selection_dry_run_plans_16_by_3_at_zero_cost dev engine checkout not present
+SKIP test_validation_result_schema.py::module importorskip jsonschema: No module named 'jsonschema'
+STAND-IN RUNNER (not pytest): passed=58 skipped=3 failed=0

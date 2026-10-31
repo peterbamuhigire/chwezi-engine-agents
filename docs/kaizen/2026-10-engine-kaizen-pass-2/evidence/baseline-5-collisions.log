@@ -1,0 +1,1 @@
+PASS: skills=1091 cross>=0.75: 15 cross>=0.5: 157 undeclared>=0.75: 0 (lexical proxy; not live routing (see agent-skills issue #620))

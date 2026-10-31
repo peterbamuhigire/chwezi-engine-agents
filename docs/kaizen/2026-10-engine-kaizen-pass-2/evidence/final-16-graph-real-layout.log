@@ -1,0 +1,2 @@
+{"nodes": 1105, "edges": 12035, "by_type": {"alias_of": 94, "defers_to": 527, "links_to": 1523, "mentions": 8795, "routes_to": 1081, "similar_trigger": 15}}
+retired=117 missing_paths=14 renamed=0 unrouted=0

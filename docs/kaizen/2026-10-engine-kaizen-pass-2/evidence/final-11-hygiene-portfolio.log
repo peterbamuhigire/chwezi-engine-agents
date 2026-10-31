@@ -1,0 +1,25 @@
+social-media-skills: 3 finding(s)
+  [machine-path] AGENTS.md:47: local web-root or drive-mount path
+  [machine-path] AGENTS.md:60: local web-root or drive-mount path
+  [machine-path] AGENTS.md:443: local web-root or drive-mount path
+linux-skills: 11 finding(s)
+  [tracked-local-settings] .claude/settings.local.json: a per-user settings file is tracked in a public repository
+  [user-profile-path] 01-provisioning-and-bootstrap/linux-cloud-init/references/user-data-reference.md:498: path inside a person's profile folder
+  [user-profile-path] 01-provisioning-and-bootstrap/linux-cloud-init/references/user-data-reference.md:501: path inside a person's profile folder
+  [user-profile-path] 01-provisioning-and-bootstrap/linux-cloud-init/references/user-data-reference.md:503: path inside a person's profile folder
+  [user-profile-path] 08-observability-and-logging/linux-log-management/references/log-locations.md:83: path inside a person's profile folder
+  [machine-path] meta/skill-writing/SKILL.md:16: local web-root or drive-mount path
+  [user-profile-path] scripts/setup-claude-code.sh:105: path inside a person's profile folder
+  [user-profile-path] scripts/setup-claude-code.sh:112: path inside a person's profile folder
+  [user-profile-path] scripts/setup-claude-code.sh:116: path inside a person's profile folder
+  [user-profile-path] scripts/setup-claude-code.sh:117: path inside a person's profile folder
+  [user-profile-path] scripts/setup-claude-code.sh:119: path inside a person's profile folder
+chwezi-dev-engine: 1 finding(s)
+  [tracked-local-settings] .claude/settings.local.json: a per-user settings file is tracked in a public repository
+chwezi-accounting-doctrine: 3 finding(s)
+  [machine-path] AGENTS.md:56: local web-root or drive-mount path
+  [machine-path] AGENTS.md:145: local web-root or drive-mount path
+  [machine-path] governance/how-to-reference-this-doctrine.md:7: local web-root or drive-mount path
+chwezi-design-engine: 1 finding(s)
+  [machine-path] doctrine/design-doctrine.md:161: local web-root or drive-mount path
+checked 12 repositories; findings 19; path lines in dated records 1667; not assessed 0
