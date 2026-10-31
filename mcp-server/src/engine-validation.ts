@@ -8,6 +8,9 @@ const execFileAsync = promisify(execFile);
 
 function commands(value: string | readonly string[]): readonly string[] { return typeof value === "string" ? [value] : value; }
 
+/** POSIX shell exit codes meaning the command never ran: 126 not executable, 127 not found. They are not validator failures. */
+const COULD_NOT_START = new Set([126, 127]);
+
 async function runDeclared(command: string, cwd: string): Promise<ValidationCheck> {
   const started = Date.now();
   const executable = process.platform === "win32" ? "powershell.exe" : "/bin/sh";
@@ -19,7 +22,11 @@ async function runDeclared(command: string, cwd: string): Promise<ValidationChec
   } catch (error: unknown) {
     const result = error as {code?: number | string; stdout?: string; stderr?: string};
     const exitCode = typeof result.code === "number" ? result.code : null;
-    return {command, status: exitCode === null ? "NOT ASSESSED" : "FAIL", exit_code: exitCode, evidence: `${result.stdout ?? ""}${result.stderr ?? ""}`.trim() || "No command output.", duration_ms: Date.now() - started, ...(exitCode === null ? {reason: "Validator process or dependency was unavailable."} : {})};
+    const unavailable = exitCode === null || (process.platform !== "win32" && COULD_NOT_START.has(exitCode));
+    const reason = exitCode === null
+      ? "Validator process or dependency was unavailable."
+      : `Validator could not start (shell exit ${exitCode}): the command or an interpreter it needs is not installed on this host.`;
+    return {command, status: unavailable ? "NOT ASSESSED" : "FAIL", exit_code: exitCode, evidence: `${result.stdout ?? ""}${result.stderr ?? ""}`.trim() || "No command output.", duration_ms: Date.now() - started, ...(unavailable ? {reason} : {})};
   }
 }
 

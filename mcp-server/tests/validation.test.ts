@@ -40,6 +40,22 @@ describe("declared validator execution", () => {
     expect(result.overall).toBe("PASS");
   }, 60_000);
 
+  it.skipIf(process.platform === "win32")("reports a validator that could not start as NOT ASSESSED, never FAIL", async () => {
+    const {root, engine} = await fixtureEngine(["exit 0", "validator-that-is-not-installed-on-this-host"]);
+    const result = await validateEngine(engine, "all", root);
+    expect(result.checks.map((check) => check.status)).toEqual(["PASS", "NOT ASSESSED"]);
+    expect(result.checks[1]?.exit_code).toBe(127);
+    expect(result.checks[1]?.reason).toContain("could not start");
+    expect(result.overall).toBe("PARTIAL");
+  }, 60_000);
+
+  it.skipIf(process.platform === "win32")("treats shell exit 126 the same way and keeps ordinary failures as FAIL", async () => {
+    const {root, engine} = await fixtureEngine(["exit 126", "exit 1", "exit 2"]);
+    const result = await validateEngine(engine, "all", root);
+    expect(result.checks.map((check) => check.status)).toEqual(["NOT ASSESSED", "FAIL", "FAIL"]);
+    expect(result.overall).toBe("FAIL");
+  }, 60_000);
+
   it("keeps every live catalogue validator as a separate, unpiped command", async () => {
     const catalog = parse(await readFile(liveCatalog, "utf8")) as {engines: {id: string; validators: string | string[]}[]};
     for (const entry of catalog.engines) {
