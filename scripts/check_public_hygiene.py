@@ -11,13 +11,15 @@ All twelve Chwezi repositories are public. For each one this check reads the *tr
 ``key-shaped-string``       a string shaped like a credential (cloud, source-host, chat, payment
                             and AI-provider keys, private-key blocks, JSON web tokens, and
                             high-entropy ``secret = ...`` assignments). Always a finding.
-``user-profile-path``       a path inside a person's profile: ``C:\\Users\\<name>``, ``/Users/<name>`` or a
-                            ``/home/<name>`` whose name is listed in the policy's ``private_user_names``.
-                            It names a person, so it is a finding in live files and in dated records alike.
-``machine-path``            a local development web-root (``C:\\wamp64\\...``, ``xampp``, ``laragon``) or a
-                            WSL drive mount (``/mnt/c/``). Findings in *live* files fail; lines in dated
-                            *record* files (``catalog/hygiene-policy.yaml`` ``record_globs``) are counted
+``user-profile-path``       a path inside a person's profile folder: a Windows or macOS user folder with a
+                            real name, or a Linux home folder whose name is listed in the policy's
+                            ``private_user_names``.
+``machine-path``            a local development web-root (the WAMP, XAMPP and Laragon default folders) or a
+                            WSL drive mount. Both path rules fail in *live* files. In dated *record* files
+                            (``catalog/hygiene-policy.yaml`` ``record_globs``) their lines are counted
                             against a per-repository ceiling that may only fall (a ratchet).
+
+Secrets, settings and environment files are never excused by the record list.
 
 Placeholders (``<name>``, ``$USER``, ``/home/user``, ``C:\\Users\\<you>``) and standard operating-system
 folders (``C:\\Windows``, ``/home/deploy`` in an administration example) are not machine paths.
