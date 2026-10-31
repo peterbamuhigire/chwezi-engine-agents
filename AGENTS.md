@@ -60,6 +60,20 @@ configuration and the shared-asset register (`catalog/shared-assets.yaml`).
 It is read-only; `--render --engine <path>` writes only the closed list of
 derived fields named in the script.
 
+Portfolio checks find engines through `scripts/lib/engine_roots.py` (repeatable
+`--engines-root`, `CHWEZI_ENGINES_ROOT`, catalogue `aliases` for former folder
+names), so they run on any layout; a missing or ambiguous engine is `NOT ASSESSED`.
+`--check` also reports `released_commit` lag, catalogue validators that do not exist
+or that an engine manifest declares and the catalogue lacks, and workstation paths or
+former engine names in router files. `--render-router-blocks --engine <path>` rewrites
+only the legacy host-path form of three router sentences from `templates/agents-blocks/`.
+Other read-only checks: `scripts/check_public_hygiene.py` (tracked local settings, env
+and key files, credential-shaped strings, host paths; policy in
+`catalog/hygiene-policy.yaml`), `scripts/check_hook_copies.py` (the shared hook files;
+canonical copy and procedure in `docs/operations/hook-canonical-copy.md`).
+`scripts/refresh_released_commits.py --write` refreshes the pins and refuses when an
+engine is dirty, missing or off `main`.
+
 <!-- chwezi-design-engine:trigger v4 -->
 ### Design / typography / UI/UX (cross-cutting — consult IN ADDITION)
 

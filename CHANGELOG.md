@@ -1,5 +1,21 @@
 # Changelog
 
+## Unreleased - Portfolio kaizen pass 2 (31 October 2026)
+
+- Added `scripts/lib/engine_roots.py` (engine locator with catalogue `aliases` for the four renamed engines) and
+  `--engines-root` / `CHWEZI_ENGINES_ROOT` for the drift check; `skill_graph.py` no longer fails when engines sit
+  outside the workspace root.
+- Added `scripts/check_public_hygiene.py` and `catalog/hygiene-policy.yaml`, `scripts/check_hook_copies.py` and
+  `docs/operations/hook-canonical-copy.md`, `scripts/refresh_released_commits.py` with a pin-lag rule in the drift
+  check, validator and router rules in the drift check, and `templates/agents-blocks/` with
+  `render_host_files.py --render-router-blocks`. The `hooks-test-plugin-hook-config` row joined the shared-asset register.
+- Catalogue validators refreshed for windows, website, proposal, accounting, design and research; suite marketplace
+  counts corrected for business-plan and design-engine; catalogue `released_commit` pins deliberately not refreshed.
+- MCP server: the discovery test follows the checkout's branch; a validator that could not start (shell exit 126 or 127)
+  is `NOT ASSESSED`, not `FAIL`. The critical lockfile finding is escalated, not fixed.
+- CI runs every Python test file on the ubuntu job, both hook test files and the hygiene scan; the release workflow calls
+  the validate workflow; `docs/security/supply-chain-policy.md` states what the workflows do and what they do not.
+
 ## Unreleased - Engine renames (29 September 2026)
 
 - `srs-skills` is now `chwezi-sdlc-documentation` and `design-system-skills` is now
