@@ -70,7 +70,7 @@ engines:
     path: chwezi-dev-engine
     router: AGENTS.md
     aliases: [skills-web-dev]
-    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "c532389"}
+    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "5057b8c"}
     validators:
       - "python scripts/validate_engine_control_plane.py --workspace-root .."
       - "python scripts/routing_smoke_test.py"
@@ -90,7 +90,7 @@ engines:
     path: chwezi-design-engine
     router: AGENTS.md
     aliases: [design-system-skills]
-    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "05f6fb8"}
+    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "a3278ad"}
     validators:
       - "python -X utf8 scripts/validate_engine.py --baseline tests/quality-baseline.json"
       - "python -X utf8 scripts/routing_smoke_test.py"
