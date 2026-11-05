@@ -6,7 +6,7 @@ engines:
     path: chwezi-sdlc-documentation
     router: AGENTS.md
     aliases: [srs-skills]
-    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "739dcd3"}
+    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "a097f02"}
     validators:
       - "python -X utf8 scripts/validate_skill_engine.py --baseline tests/skill-quality-baseline.json"
       - "python -X utf8 scripts/routing_smoke_test.py"
@@ -22,7 +22,7 @@ engines:
     repository: website-skills
     path: website-skills
     router: AGENTS.md
-    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "a9b8872"}
+    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "a75745c"}
     validators:
       - "python scripts/validate-skill-registry.py"
       - "python scripts/website_fixture_benchmark.py"
@@ -70,7 +70,7 @@ engines:
     path: chwezi-dev-engine
     router: AGENTS.md
     aliases: [skills-web-dev]
-    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "a4d037a"}
+    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "c532389"}
     validators:
       - "python scripts/validate_engine_control_plane.py --workspace-root .."
       - "python scripts/routing_smoke_test.py"
@@ -90,7 +90,7 @@ engines:
     path: chwezi-design-engine
     router: AGENTS.md
     aliases: [design-system-skills]
-    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "6942ac7"}
+    integration: {manifest: .skills-engine/engine-manifest.yaml, contract_version: "1.0", status: available, released_commit: "05f6fb8"}
     validators:
       - "python -X utf8 scripts/validate_engine.py --baseline tests/quality-baseline.json"
       - "python -X utf8 scripts/routing_smoke_test.py"
