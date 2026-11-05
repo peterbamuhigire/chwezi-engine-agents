@@ -304,7 +304,7 @@ A check that needs a sibling engine that is absent exits 3 with `NOT_ASSESSED`. 
 | `python3 -X utf8 scripts/validate-no-book-extractions.py --workspace-root "$WS"` | workspace | Exit 0: 12 roots, 0 findings |
 | `python3 -X utf8 scripts/validate-kaizen-cards.py` | none beyond Python | Exit 0, three cards valid |
 | `python3 -X utf8 scripts/validate-routing-baseline.py` and `python3 -X utf8 scripts/validate-runtime-skill-budget.py --root skills` | PyYAML | Exit 0 each: the routing ratchet holds; this package's one skill exposes 255 metadata characters |
-| `python3 -X utf8 scripts/validate-runtime-skill-budget.py --collisions --ownership evals/routing/ownership.yaml --workspace-root "$WS"` | workspace | Exit 0: 1,091 skills, 15 cross-engine pairs at 0.75 or above, 0 undeclared (a lexical proxy, not live routing) |
+| `python3 -X utf8 scripts/validate-runtime-skill-budget.py --collisions --ownership evals/routing/ownership.yaml --workspace-root "$WS"` | workspace | Exit 0. On 2026-11-06: 1,092 skills, 15 cross-engine pairs at 0.75 or above, 0 undeclared. On 2026-10-31: 1,091 skills; the extra skill is `tenant-document-numbering` in the dev engine. A lexical proxy, not live routing |
 | `python3 -X utf8 scripts/validate-skill-lifecycle.py --root skills` | PyYAML | Exit 0, 0 findings |
 | `python3 -X utf8 scripts/validate-rule-markers.py <design-engine>/doctrine/references/ai-slop-banned-fonts.md` | PyYAML | Exit 0: 29 markers, sidecar checked |
 | `python3 -X utf8 evals/runners/run-contract-evals.py --cases evals/cases --route-oracles --workspace-root "$WS" --out <report.json>` | workspace | Exit 0, 77 of 77 assertions; the report goes where `--out` points |
