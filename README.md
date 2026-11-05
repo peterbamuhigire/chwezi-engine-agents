@@ -9,7 +9,7 @@ It also keeps every engine's registry entry, plugin manifests, host bridge files
 - **Twelve repositories.** The catalogue ([`catalog/engines.yaml`](catalog/engines.yaml)) lists eleven public domain engines. This package makes twelve.
 - **One skill and four workflows.** The skill is `rules-distill`. The workflows are the engine orchestrator, the engine maintainer, the engine validator and the capability negotiator.
 - **Tests.** The package suite gives `352 passed, 3 skipped` with pytest (exit 0), measured on 2026-10-31.
-- **Drift check.** `render_host_files.py --check` exits 1 with 30 findings: 19 sit in the engines and 11 are pin lag. See [Open findings](#open-findings).
+- **Drift check.** `render_host_files.py --check` exits 1 with 19 findings, all in the engines (re-run 2026-11-06). It gave 30 on 2026-10-31, when 11 were pin lag. See [Open findings](#open-findings).
 - **Hygiene check.** This package alone exits 0 with 0 findings. Across the portfolio it finds 14 in four repositories.
 - **Score.** 48.09 out of 100 (raw and capped) on 31 October 2026, against a target of 95. One critical finding, F-01, is open.
 
@@ -36,7 +36,7 @@ It also keeps every engine's registry entry, plugin manifests, host bridge files
    python3 -X utf8 scripts/render_host_files.py --check --engines-root <folder>
    ```
 
-   On 2026-10-31 it exits 1 with 30 findings. [Open findings](#open-findings) explains each group.
+   On 2026-11-06 it exits 1 with 19 findings (30 on 2026-10-31). [Open findings](#open-findings) explains each group.
 
 ## Contents
 
@@ -296,10 +296,10 @@ A check that needs a sibling engine that is absent exits 3 with `NOT_ASSESSED`. 
 |---|---|---|
 | `python3 -X utf8 -m pytest -p no:cacheprovider tests -q` | pytest, PyYAML, jsonschema | 352 passed, 3 skipped (note 1) |
 | `python3 -X utf8 -m unittest discover -s tests -p 'test_*.py'` | PyYAML | Not a substitute for pytest: 293 tests ran, 2 failures and 8 errors, all environmental (note 2) |
-| `python3 -X utf8 scripts/render_host_files.py --check` | PyYAML | Exit 1, 30 findings, 0 not assessed (note 3) |
+| `python3 -X utf8 scripts/render_host_files.py --check` | PyYAML | Exit 1, 19 findings on 2026-11-06 (30 on 2026-10-31), 0 not assessed (note 3) |
 | `python3 -X utf8 scripts/check_public_hygiene.py` (`--repo .` for this package alone) | PyYAML, git | Exit 1, 14 findings in four repositories; this package alone exits 0 with 0 findings (note 4) |
 | `python3 -X utf8 scripts/check_hook_copies.py` | none beyond Python | Exit 0: 11 engine repositories and 8 installed plugin copies, 76 files, 0 differences (note 5) |
-| `python3 -X utf8 scripts/refresh_released_commits.py` (check mode) | git | Exit 1: 11 engines, 11 not at HEAD, 5 to 9 commits behind. It exited 0 when the pins were refreshed in `f1e4565` (note 6) |
+| `python3 -X utf8 scripts/refresh_released_commits.py` (check mode) | git | Exit 0 on 2026-11-06: 11 engines, 0 not at HEAD, after `--write` moved three pins. On 2026-10-31 it exited 1 (11 not at HEAD, 5 to 9 commits behind) and exited 0 when the pins were refreshed in `f1e4565` (note 6) |
 | `python3 -X utf8 scripts/validate-contracts.py --schema schemas/engine-catalog.schema.json --instance catalog/engines.yaml` | PyYAML, jsonschema | Exit 0. The same command with `schemas/adapter-manifest.schema.json` passes for each of the six `adapters/*/adapter.yaml` |
 | `python3 -X utf8 scripts/validate-no-book-extractions.py --workspace-root "$WS"` | workspace | Exit 0: 12 roots, 0 findings |
 | `python3 -X utf8 scripts/validate-kaizen-cards.py` | none beyond Python | Exit 0, three cards valid |
@@ -432,13 +432,12 @@ Earlier audits, execution logs and plans are indexed in [`docs/README.md`](docs/
   - `zod`, also flagged, is used by the SDK at run time. Its exposure was not assessed.
   - The SDK pin 1.30.0 is behind 1.32.2. The fix is an `npm install` of two minor versions, which needs the maintainer's authority. The exact commands and the acceptance check are in [`06-next-cycle.md`](docs/kaizen/2026-10-engine-kaizen-pass-2/06-next-cycle.md).
   - The MCP server is optional. Nothing else in the package depends on it.
-- **The drift check exits 1 with 30 findings.** Re-run on 2026-10-31 as `python3 -X utf8 scripts/render_host_files.py --check --engines-root <folder> --engines-root <folder>`. Nineteen are engine-side.
+- **The drift check exits 1 with 19 findings.** It gave 30 on 2026-10-31, run as `python3 -X utf8 scripts/render_host_files.py --check --engines-root <folder> --engines-root <folder>`. It was re-run on 2026-11-06 with `--workspace-root <folder>`, a folder of symlinks to the engines under their catalogue names. All 19 are engine-side.
   - 17 `shared-asset-unregistered-variant`: `routing_smoke_test.py` in six engines, `rules/common/core.md` in four, the `skill-writing` skill in five, and the design engine's `generate-plugin-manifest.js` and `install-engine.js`.
   - 1 `shared-asset-byte-drift` (the design engine's `install.sh`) and 1 `plugin-exclusion-stale` (the business-plan manifest's `country-context/*`).
   - There were 16 variants when pass 2 closed. The 17th is the social-media engine's `rules/common/core.md`, edited in `3075062` on 31 October after that.
   - Each variant needs a content review before its hash is registered with an owner and a reason in [`catalog/shared-assets.yaml`](catalog/shared-assets.yaml), after the last engine wave. The order is in `06-next-cycle.md`.
-  - The other 11 are `released-commit-lag`: every pin is 5 to 9 commits behind its engine's HEAD, now that the engines have merged their README work. That is the pin rule working.
-  - The lag clears when the pins are refreshed again with `scripts/refresh_released_commits.py --write`, after every engine is clean and on `main`.
+  - The 11 `released-commit-lag` findings of 2026-10-31 are cleared. The pins were refreshed to the engines' `main` commits on 2026-11-06 (three moved) and `refresh_released_commits.py` exits 0. The lag returns after any engine commit, which is the pin rule working.
   - The portfolio-drift CI job runs this check and the hygiene check, so it fails while either exits 1.
 - **The hygiene check exits 1 with 14 findings in four repositories.**
   - Linux has 11: a tracked `.claude/settings.local.json` and ten live path lines.
