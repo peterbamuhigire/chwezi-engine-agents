@@ -147,6 +147,7 @@ def refuse_private(path: Path | str) -> None:
 
 def discover_engine(engine_id: str, root: Path, excluded: Iterable[str] = EXCLUDED_DIRS) -> tuple[list[SkillDoc], list[ReadIssue]]:
     refuse_private(root)
+    refuse_private(root.resolve())
     excluded = set(excluded)
     docs: list[SkillDoc] = []
     issues: list[ReadIssue] = []
@@ -157,6 +158,7 @@ def discover_engine(engine_id: str, root: Path, excluded: Iterable[str] = EXCLUD
         if any(part in excluded or part.startswith(".trash") for part in relative.parts[:-1]):
             continue
         try:
+            refuse_private(path.resolve())
             meta = read_frontmatter(path.read_text(encoding="utf-8-sig"))
         except Exception as exc:  # noqa: BLE001 - unreadable metadata is reported, not fatal
             issues.append(ReadIssue("frontmatter-error", f"{type(exc).__name__}: {exc}", str(path)))

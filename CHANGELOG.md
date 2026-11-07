@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-07 - Cross-engine negative fixture check
+
+- Added a read-only checker using the existing lexical union index and native Dev/Research fixtures. It preserves missing/malformed cases, rejects ties and checks resolved private paths before reading. [Usage, validation and limits](docs/operations/cross-engine-negative-check.md).
+
 ## Unreleased - README kaizen and README standard (31 October 2026)
 
 A scoped cycle on this README and on the README practice of the portfolio. It publishes no score. The record is
