@@ -1,5 +1,26 @@
 # Changelog
 
+## Unreleased - Chwezi Product Excellence Standard routing (8 November 2026)
+
+The Chwezi Product Excellence Standard was adopted by Lead Developer Peter Bamuhigire and the Chwezi Core Systems design
+team, effective 01 November 2026 until further communication. It is mandatory for every Chwezi app and system.
+
+- `core/instructions/engine-orchestrator.md`: step 3 and a new section "Chwezi app and system interface work". Any screen,
+  flow, component, interface string or front-end of a Chwezi app or system routes to `chwezi-design-engine` with its
+  `chwezi-product-excellence-standard` skill as a mandatory gate in the handoff sequence, alongside the house style (visual
+  layer), `chwezi-dev-engine` front-end, mobile, offline and POS skills (engineering gates), interface wording and the finance
+  engine for money values. A verdict comes only from that skill's scorecard and hard gates; `NOT_ASSESSED` gate evidence blocks.
+- `catalog/shared-assets.yaml`: row `chwezi-product-excellence-standard` (mode `external`, canonical
+  `chwezi-design-engine/doctrine/product-excellence-standard.md`, owner `chwezi-design-engine`). Local copies kept in
+  repositories outside the public register are described by role and not listed; a discover glob flags any unregistered public
+  copy at `skills/product-excellence-standard/`.
+- `catalog/engines.yaml` has no capability lists, so it is unchanged.
+- Wave 2 (Kaizen, 8 Nov 2026): every path and skill named in the orchestrator section and the shared-assets row was
+  re-checked against the design and dev engine working copies (all present). The orchestrator now states the 13 hard gates
+  (`PX-GATE-01` to `PX-GATE-13`), the PASS / CONDITIONAL / BLOCKED rule and the document-numbering gate, and lists
+  `ios-development` and `pos-sales-operations-engineering` among the engineering gates. The shared-assets reason no longer
+  names which private repository holds a local copy.
+
 ## 2026-11-07 - Cross-engine negative fixture check
 
 - Added a read-only checker using the existing lexical union index and native Dev/Research fixtures. It preserves missing/malformed cases, rejects ties and checks resolved private paths before reading. [Usage, validation and limits](docs/operations/cross-engine-negative-check.md).

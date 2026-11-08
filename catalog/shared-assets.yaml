@@ -780,6 +780,16 @@ assets:
     canonical: chwezi-design-engine/tools/slop-detector/rules/registry.schema.json
     copies:
       - website-skills/scripts/vendor/chwezi-slop/tools/slop-detector/rules/registry.schema.json
+  - id: chwezi-product-excellence-standard
+    mode: external
+    enforced_by: "python -X utf8 scripts/validate_engine.py --baseline tests/quality-baseline.json (in chwezi-design-engine, for the canonical text); each local copy is checked by its own repository"
+    canonical: chwezi-design-engine/doctrine/product-excellence-standard.md
+    copies: []
+    discover:
+      - "*/skills/product-excellence-standard/SKILL.md"
+    reason: "Chwezi Product Excellence Standard (adopted by Lead Developer Peter Bamuhigire and the Chwezi Core Systems design team, effective 01 Nov 2026 until further communication). Canonical: the design engine doctrine plus skills/00-cross-cutting-ops-qa-a11y/chwezi-product-excellence-standard. A condensed, self-sufficient local copy (a deliberate variant, not a byte copy) is kept by a repository outside this public register, so it is described by role only and not listed; the discover glob flags any public repository that adds a copy at skills/product-excellence-standard/ without registering it."
+    owner: chwezi-design-engine
+    review_date: "2026-12-29"
 
 exclusions:
   - asset: design-trigger-block

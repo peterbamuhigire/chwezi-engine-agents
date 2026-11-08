@@ -4,12 +4,17 @@ Chwezi Engine Agents is the coordination package for the Chwezi skills portfolio
 
 It also keeps every engine's registry entry, plugin manifests, host bridge files and validators consistent. It holds no domain doctrine. Each of the eleven domain engines stays the only source of its own skills. It is for people who maintain one or more Chwezi engine checkouts, and for teams that need the same routing, installation and checks across several engines. The domain engines install and work without it.
 
+**Design standard.** The Chwezi Product Excellence Standard is the design style chosen by Lead Developer Peter Bamuhigire and the Chwezi Core Systems design team.
+It is effective from 01 November 2026 until further communication is given on the matter.
+It is mandatory for all Chwezi apps and systems.
+The orchestrator sends all Chwezi app and system screen work through it. See [the section below](#chwezi-product-excellence-standard).
+
 ## At a glance
 
 - **Twelve repositories.** The catalogue ([`catalog/engines.yaml`](catalog/engines.yaml)) lists eleven public domain engines. This package makes twelve.
 - **One skill and four workflows.** The skill is `rules-distill`. The workflows are the engine orchestrator, the engine maintainer, the engine validator and the capability negotiator.
-- **Tests.** The package suite gives `352 passed, 3 skipped` with pytest (exit 0), measured on 2026-10-31.
-- **Drift check.** `render_host_files.py --check` exits 1 with 19 findings, all in the engines (re-run 2026-11-06). It gave 30 on 2026-10-31, when 11 were pin lag. See [Open findings](#open-findings).
+- **Tests.** The package suite gives `352 passed, 3 skipped` with pytest (exit 0), measured on 2026-10-31 on Linux. On Windows on 2026-11-08 it gives 372 passed and 6 failed; see [Validation](#validation).
+- **Drift check.** `render_host_files.py --check` exits 1 with 25 findings on 2026-11-08: the same 19 engine-side findings as on 2026-11-06, plus 6 pin lag. It gave 30 on 2026-10-31. See [Open findings](#open-findings).
 - **Hygiene check.** This package alone exits 0 with 0 findings. Across the portfolio it finds 14 in four repositories.
 - **Score.** 48.09 out of 100 (raw and capped) on 31 October 2026, against a target of 95. One critical finding, F-01, is open.
 
@@ -40,6 +45,7 @@ It also keeps every engine's registry entry, plugin manifests, host bridge files
 
 ## Contents
 
+- [Chwezi Product Excellence Standard](#chwezi-product-excellence-standard)
 - [What it is and who runs it](#what-it-is-and-who-runs-it)
 - [Find the right tool](#find-the-right-tool)
 - [How it works](#how-it-works)
@@ -60,6 +66,27 @@ It also keeps every engine's registry entry, plugin manifests, host bridge files
   - [Scores and measures](#scores-and-measures)
 - [References](#references)
 - [Contributing, author and licence](#contributing-author-and-licence)
+
+## Chwezi Product Excellence Standard
+
+The standard binds the UI and UX of every Chwezi app and system on Android, iOS, tablet, desktop and web.
+Its text and skill live in the design engine, `chwezi-design-engine`.
+
+- **Routing rule:** the [orchestrator section](core/instructions/engine-orchestrator.md#chwezi-app-and-system-interface-work) "Chwezi app and system interface work". Any Chwezi app screen, flow or interface string adds the `chwezi-product-excellence-standard` skill to the handoff as a mandatory gate.
+- **Same handoff:** the house style, the dev engine's front-end and mobile skills, and the finance engine for money.
+- **Verdict:** only the skill's scorecard and gates give one. `NOT_ASSESSED` gate evidence blocks release.
+- **Shared-asset row:** `chwezi-product-excellence-standard` in [`catalog/shared-assets.yaml`](catalog/shared-assets.yaml) names the design engine's text as canonical.
+
+What the gate checks:
+
+- **13 hard release gates** (`PX-GATE-01` to `PX-GATE-13`), from duplicate records and false confirmation to accessibility and large-text loss. Any open gate blocks release.
+- **The release rule.** PASS needs a weighted score of at least 85, zero open gates and no dimension below 2. A score of 70 to 84 with owned, dated remediation is CONDITIONAL, which is not production-ready.
+- **13 screen states**, from initial loading to session expired and success, each shown or declared not applicable with a reason.
+- **Money.** Decimals follow the ISO 4217 minor unit, so UGX shows 0 decimals.
+- **Offline and low-end Android.** Queued work is never shown as confirmed, and performance is measured on a declared baseline device.
+- **Languages and numbering.** Seven default languages, including Spanish and right-to-left Arabic. Contiguous document numbering (`PX-GATE-13`) is a hard gate wherever a screen issues numbered documents.
+
+The record is the 8 November 2026 entry in [`CHANGELOG.md`](CHANGELOG.md).
 
 ## What it is and who runs it
 
@@ -98,6 +125,7 @@ It does not hold domain skills, and it writes to an engine only when you ask. `g
 | I want to | Use |
 |---|---|
 | Decide which engines own a task | [`catalog/engines.yaml`](catalog/engines.yaml) and the [engine orchestrator](core/instructions/engine-orchestrator.md) |
+| Route Chwezi app or system interface work through the mandatory product-quality gate | [Chwezi Product Excellence Standard](#chwezi-product-excellence-standard) |
 | See whether the engines drifted from the shared rules | `python3 -X utf8 scripts/render_host_files.py --check --engines-root <folder>` |
 | Scan every public repository for settings files, keys and workstation paths | `python3 -X utf8 scripts/check_public_hygiene.py --engines-root <folder>` |
 | Compare the shared hook files in every engine | `python3 -X utf8 scripts/check_hook_copies.py --engines-root <folder>` |
@@ -296,7 +324,7 @@ A check that needs a sibling engine that is absent exits 3 with `NOT_ASSESSED`. 
 |---|---|---|
 | `python3 -X utf8 -m pytest -p no:cacheprovider tests -q` | pytest, PyYAML, jsonschema | 352 passed, 3 skipped (note 1) |
 | `python3 -X utf8 -m unittest discover -s tests -p 'test_*.py'` | PyYAML | Not a substitute for pytest: 293 tests ran, 2 failures and 8 errors, all environmental (note 2) |
-| `python3 -X utf8 scripts/render_host_files.py --check` | PyYAML | Exit 1, 19 findings on 2026-11-06 (30 on 2026-10-31), 0 not assessed (note 3) |
+| `python3 -X utf8 scripts/render_host_files.py --check` | PyYAML | Exit 1, 25 findings on 2026-11-08 (19 on 2026-11-06, 30 on 2026-10-31), 0 not assessed (note 3) |
 | `python3 -X utf8 scripts/check_public_hygiene.py` (`--repo .` for this package alone) | PyYAML, git | Exit 1, 14 findings in four repositories; this package alone exits 0 with 0 findings (note 4) |
 | `python3 -X utf8 scripts/check_hook_copies.py` | none beyond Python | Exit 0: 11 engine repositories and 8 installed plugin copies, 76 files, 0 differences (note 5) |
 | `python3 -X utf8 scripts/refresh_released_commits.py` (check mode) | git | Exit 0 on 2026-11-06: 11 engines, 0 not at HEAD, after `--write` moved three pins. On 2026-10-31 it exited 1 (11 not at HEAD, 5 to 9 commits behind) and exited 0 when the pins were refreshed in `f1e4565` (note 6) |
@@ -319,9 +347,9 @@ A check that needs a sibling engine that is absent exits 3 with `NOT_ASSESSED`. 
 
 Notes on the table:
 
-1. The three skips look for sibling folders named `chwezi-dev-engine` and `chwezi-design-engine` next to this package (`tests/test_run_behavioural_eval.py`, `tests/test_validate_rule_markers.py`). With those siblings present: 355 passed, 0 skipped. The two README tools added 90 tests to the 262 before them.
+1. The three skips look for sibling folders named `chwezi-dev-engine` and `chwezi-design-engine` next to this package (`tests/test_run_behavioural_eval.py`, `tests/test_validate_rule_markers.py`). With those siblings present: 355 passed, 0 skipped. The two README tools added 90 tests to the 262 before them. On Windows on 2026-11-08: 372 passed and 6 failed. The six are hygiene and pin tests whose test repositories could not add a settings file on that host. No script changed.
 2. The failures are environmental: eight tests need `jsonschema`, two files import `pytest`, and the pytest-style files collect no tests. The count was 203 tests with the same 2 failures and 8 errors before the README tools.
-3. Nineteen findings sit in the engines: 17 `shared-asset-unregistered-variant`, 1 `shared-asset-byte-drift` and 1 `plugin-exclusion-stale`. The other 11 are `released-commit-lag`. The count is the same through `--engines-root`, `CHWEZI_ENGINES_ROOT` and `--workspace-root`. [Open findings](#open-findings) names each one.
+3. Nineteen findings sit in the engines: 17 `shared-asset-unregistered-variant`, 1 `shared-asset-byte-drift` and 1 `plugin-exclusion-stale`. The rest are `released-commit-lag`: 11 on 2026-10-31 and 6 on 2026-11-08 (design, dev, SDLC, research, social media and website). The count is the same through `--engines-root`, `CHWEZI_ENGINES_ROOT` and `--workspace-root`. [Open findings](#open-findings) names each one.
 4. The 14 findings are Linux 11, dev engine 1, accounting 1 and design 1. There is no credential-shaped string.
 5. The check also reads the host plugin folder (`~/.claude/plugins` by default; `--plugins-dir` overrides).
 6. With `--write` it exits 2 and writes nothing when any engine is dirty or not on `main`. That was confirmed the same day against engine checkouts that held uncommitted files.
@@ -437,7 +465,8 @@ Earlier audits, execution logs and plans are indexed in [`docs/README.md`](docs/
   - 1 `shared-asset-byte-drift` (the design engine's `install.sh`) and 1 `plugin-exclusion-stale` (the business-plan manifest's `country-context/*`).
   - There were 16 variants when pass 2 closed. The 17th is the social-media engine's `rules/common/core.md`, edited in `3075062` on 31 October after that.
   - Each variant needs a content review before its hash is registered with an owner and a reason in [`catalog/shared-assets.yaml`](catalog/shared-assets.yaml), after the last engine wave. The order is in `06-next-cycle.md`.
-  - The 11 `released-commit-lag` findings of 2026-10-31 are cleared. The pins were refreshed to the engines' `main` commits on 2026-11-06 (three moved) and `refresh_released_commits.py` exits 0. The lag returns after any engine commit, which is the pin rule working.
+  - The 11 `released-commit-lag` findings of 2026-10-31 were cleared on 2026-11-06. On 2026-11-08 six engines are one to three commits ahead of their pins again, which is the pin rule working. Refresh the pins after the Product Excellence work is committed.
+  - The design engine's marketplace row now reads 105 skills, matching its manifest. The suite's engineering row still reads 165 where the dev plugin ships 166 (read on 2026-11-08).
   - The portfolio-drift CI job runs this check and the hygiene check, so it fails while either exits 1.
 - **The hygiene check exits 1 with 14 findings in four repositories.**
   - Linux has 11: a tracked `.claude/settings.local.json` and ten live path lines.
@@ -537,8 +566,7 @@ The changes follow in four parts: [correctness fixes](#kept-changes-correctness-
 - **`skill_graph.py` crashed on a linked layout, and most portfolio scripts needed a hand-built workspace (K1, `eb8dae1`, `9329a82`).**
   - It raised a `ValueError` on any checkout outside one workspace folder.
   - The new locator finds engines through repeatable `--engines-root`, `CHWEZI_ENGINES_ROOT` and catalogue `aliases` for the four renamed engines. The drift check takes `--engines-root`.
-  - Tests: 13 locator tests and 5 drift-layout tests (re-counted: 13 in `tests/test_engine_roots.py`).
-  - On the real two-parent layout the drift check gave the same output as the hand-built symlink workspace (evidence: 37 findings each way). Today the three routes all give 30 findings (re-measured).
+  - Tests: 13 locator tests and 5 drift-layout tests. The three routes give the same findings (re-measured).
   - The graph script exits 0 where it crashed (evidence: 1,105 nodes, 12,035 edges). Ten more scripts still need `--workspace-root`.
 - **This package's router, one adapter note and one script default carried workstation paths (K6, `d4450f7`).**
   - Package-side machine-path findings: 7 before (evidence), 0 after (`check_public_hygiene.py --repo .`, re-measured).
@@ -559,9 +587,8 @@ Each check was added with a control: a case built to fail.
   - Re-measured: 11 repositories and 8 installed copies, 76 files, 0 differences.
 - **`released_commit` pins (K4, `2af312e`, applied in `f1e4565`).** Pins lagged 11 of 11 engines by 28 to 51 commits with no check (evidence).
   - `scripts/refresh_released_commits.py` writes the pins. It refuses, and writes nothing, if an engine is dirty, missing or off `main`. The drift check reports the lag.
-  - 21 tests on throw-away repositories, six mutations caught (evidence).
+  - 21 tests on throw-away repositories, six mutations caught (evidence). A mistaken `--write` run during testing was undone with `git restore`.
   - `f1e4565` changed the eleven pin lines only (`git show --stat`). The check then exited 0 with 0 engines behind (re-measured at those commits).
-  - A `--write` run against the live catalogue by mistake during testing was restored with `git restore` and not committed (evidence).
 - **Catalogue validators against engine manifests (K5, `608f466`).** Ten manifest commands (website six, Windows three, proposal one) were missing from the catalogue.
   - Two rules now fail on a catalogue validator whose script is absent and on a manifest command the catalogue lacks. Both read 0 after the refresh.
   - 8 tests, four mutations caught (evidence).
@@ -574,8 +601,7 @@ Each check was added with a control: a case built to fail.
   - `scripts/check_readme_contract.py` ports the rule to Python and mirrors the PowerShell comparison (case-insensitive, whole line, any `## ` line). It reports 0 findings on the eleven READMEs now and would have reported ten before the fix (re-measured).
   - 17 tests, six one-line mutations each caught. CI runs it in the portfolio-drift job.
 - **Tests.** 101 new `unittest` tests for the six checks (evidence). 73 sit in four new files (re-counted: 13, 26, 13 and 21).
-  - `unittest discover` collected 102 tests at baseline and 203 after (evidence).
-  - A real pytest run at the pass-2 close gave 262 passed and 3 skipped, or 265 passed with sibling folders present (re-measured). The baseline had no pytest on this host, so seven pytest-style files ran only through a labelled stand-in.
+  - A real pytest run at the pass-2 close gave 262 passed and 3 skipped (re-measured).
 
 ## Kept changes: documentation and README work
 

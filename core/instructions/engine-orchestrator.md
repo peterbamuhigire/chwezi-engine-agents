@@ -22,7 +22,10 @@ only the serialization format, not the required handoff fields.
 2. Add `chwezi-accounting-doctrine` for finance, accounting, IFRS, IAS, tax,
    bookkeeping, controls, payroll, or statutory reporting.
 3. Add `chwezi-design-engine` when the requested output changes visual design,
-   typography, layout, accessibility, or document appearance.
+   typography, layout, accessibility, or document appearance. Any Chwezi app or
+   system interface work (see "Chwezi app and system interface work" below)
+   always adds it, with its `chwezi-product-excellence-standard` skill as a
+   mandatory gate.
 4. Add `digital-research-skills` when claims are current, uncertain,
    source-sensitive, regulatory, comparative, or evidence-heavy. This is the
    catalog id and GitHub repository name; its local checkout folder is
@@ -62,6 +65,45 @@ coordinated slices, then finance wherever money moves. When a downstream
 engine finds a missing or untestable requirement, route it back to the owner
 as a blocker; do not invent an acceptance criterion, stakeholder intent, or
 source to close the gap.
+
+## Chwezi app and system interface work
+
+The Chwezi Product Excellence Standard was adopted by Lead Developer Peter
+Bamuhigire and the Chwezi Core Systems design team, effective 01 November 2026
+until further communication is given on the matter. It is mandatory for every
+Chwezi app and system: Android, iOS, tablet, desktop and web, including internal
+tools, tenant portals and admin consoles.
+
+Trigger: the request designs, builds, changes, reviews or releases a screen,
+flow, component, state, interface string or front-end of a Chwezi app or system,
+on any stack. Marketing websites, decks and print collateral are out of scope
+unless they reproduce product screens.
+
+| Gate | Owner | What it decides |
+|---|---|---|
+| Product-quality gate (mandatory) | `chwezi-design-engine`, skill `skills/00-cross-cutting-ops-qa-a11y/chwezi-product-excellence-standard` (binding text `doctrine/product-excellence-standard.md`) | Screen contract and state matrix, the hard release gates, the weighted scorecard and the PASS, CONDITIONAL or BLOCKED verdict |
+| Visual layer | `chwezi-design-engine`, `chwezi-business-app-house-style` | Tokens, type pair, shapes, components and motion |
+| Engineering gates | `chwezi-dev-engine` front-end, mobile, offline and POS skills (for example `frontend-architecture`, `kmp-development`, `android-development`, `ios-development`, `pwa-offline-first`, `pos-sales-operations-engineering`) | Idempotency, offline durability, backend authorisation, performance on the declared baseline device, tests |
+| Interface wording | `chwezi-design-engine` `ux-writing-and-microcopy`; where the operator's local routing table lists a private writing engine, its interface-copy skill owns the wording | Labels, state and error messages, payment and sync wording, number and date wording, translation-ready strings |
+| Money, tax and statutory values | `chwezi-accounting-doctrine` | Recognition, posting and reconciliation behind the figures shown |
+
+Rules:
+
+- The product-quality gate is added to the handoff `sequence` for every
+  triggered request, even when the user asks only for code. A request routed
+  without it is incomplete.
+- A release verdict comes only from that skill's scorecard and hard gates. A
+  gate with `NOT_ASSESSED` evidence blocks release; the orchestrator never
+  reports a pass the gate did not record.
+- The skill defines 13 hard gates, `PX-GATE-01` to `PX-GATE-13`; any open
+  gate means `BLOCKED`. `PASS` needs a weighted score of at least 85 out of
+  100, no dimension below 2 and zero open gates; 70 to 84 with every shortfall
+  owned, dated and accepted in writing is `CONDITIONAL`, which is not
+  production-ready. `PX-GATE-13` (contiguous document numbering) applies
+  wherever a screen issues numbered documents.
+- Engines that carry a local copy of the standard apply it from that copy; the
+  design engine's text is canonical, and a difference is a drift finding for the
+  copy's owner, not a second standard.
 
 Output must read as the work of a senior practitioner in each domain: specific
 to the named user, decision, and context, never a generic template. Apply
