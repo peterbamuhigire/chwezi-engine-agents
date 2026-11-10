@@ -1,5 +1,6 @@
 ---
 name: engine-validator
+model: sonnet
 description: Codex wrapper for the canonical engine-validator instruction.
 canonical_id: engine-validator
 contract_version: "1.0"

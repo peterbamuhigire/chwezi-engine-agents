@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased - Model classes and token economy (10 November 2026)
+
+- New `docs/operations/model-classes-and-token-economy-2026-11.md`: version-free model classes (M, N, X, S), escalation triggers, token rules for Claude Code and Codex, plan-resume rule.
+- New `scripts/check_token_budget.py` (rules T-01 to T-07: instruction-file sizes, class block present and version-free, subagent model pins, plan-file size).
+- Agent definitions in `agents/` pin a model through `model:` front matter; `AGENTS.md` carries the class block.
+
 ## Unreleased - Chwezi Product Excellence Standard routing (8 November 2026)
 
 The Chwezi Product Excellence Standard was adopted by Lead Developer Peter Bamuhigire and the Chwezi Core Systems design

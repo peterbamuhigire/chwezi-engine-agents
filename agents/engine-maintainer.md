@@ -1,5 +1,6 @@
 ---
 name: engine-maintainer
+model: sonnet
 description: Codex wrapper for the canonical engine-maintainer instruction.
 canonical_id: engine-maintainer
 contract_version: "1.0"

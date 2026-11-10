@@ -1,5 +1,6 @@
 ---
 name: engine-orchestrator
+model: opus
 description: Codex wrapper for the canonical engine-orchestrator instruction.
 canonical_id: engine-orchestrator
 contract_version: "1.0"
