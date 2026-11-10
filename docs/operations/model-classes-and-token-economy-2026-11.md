@@ -44,3 +44,16 @@ Subagent definitions pin a model through `model:` front matter and return summar
 ## Plan resume
 
 Command: "resume plan-name". The runner reads only `docs/plans/<plan>/RESUME.md`, does one phase, updates `RESUME.md`, and tells the owner to start a fresh session.
+
+## New device or fresh clone (do this before relying on any engine)
+
+A rule that lives only in one machine's personal instruction file is not enforced on another. On every device that runs an engine:
+
+1. Pull all engine repositories and confirm each carries the class block (marker `MODEL-ROUTING-BLOCK`) in `AGENTS.md` or `CLAUDE.md`.
+2. Put the owner's class-to-model mapping and the token rules in that device's personal (global) instruction file, copied from the owner's routing file (`model-routing.json`). Repositories name classes only; the mapping is never copied into a repository.
+3. Install the `resume-plan` command so "resume plan x" reads only the small `RESUME.md`.
+4. Run `python scripts/check_token_budget.py <repo> [<repo> ...] --strict --deep` from this repository. Any FAIL (start-up file over its cap, missing block, unpinned subagent, oversize resume file, retired model ID) is fixed before work starts. A check that cannot be run is reported as NOT_ASSESSED.
+5. Apply the organisation-level settings that live outside the repositories: engine consultation by task domain (one engine, a second only when the task spans two domains), and disable unused connectors and plugin skill listings.
+6. Record the date and result in the monthly Kaizen note.
+
+An agent that finds step 2 or step 4 missing on a device says so at the start of the session and does not continue silently.
