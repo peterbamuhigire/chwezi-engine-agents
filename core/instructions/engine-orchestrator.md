@@ -130,3 +130,8 @@ provider detail, command, source, or repository path.
 
 Return a payload that satisfies `core/contracts/handoff.yaml`. A host without
 structured output must preserve the same field names in Markdown.
+
+
+## Unattended development handoff
+
+For a user-authorised long-running development plan, route to the project-local `auto-agents/README.md` and `auto-agents/config.json`. Require a committed plan, appropriate independent checks, explicit publication settings and a recovery handoff. The driver inherits host permissions; a worktree is not a security sandbox. Report live-runtime and unattended acceptance as NOT_ASSESSED until actually exercised.
