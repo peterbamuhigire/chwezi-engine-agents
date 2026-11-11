@@ -135,3 +135,8 @@ structured output must preserve the same field names in Markdown.
 ## Unattended development handoff
 
 For a user-authorised long-running development plan, route to the project-local `auto-agents/README.md` and `auto-agents/config.json`. Require a committed plan, appropriate independent checks, explicit publication settings and a recovery handoff. The driver inherits host permissions; a worktree is not a security sandbox. Report live-runtime and unattended acceptance as NOT_ASSESSED until actually exercised.
+
+
+### Propagate tool upgrades
+
+When this engine changes `auto-agents`, update the canonical copy in `skills-engine-agents` first, regenerate its manifest, run its tests, then discover and update the installed project and engine copies with its managed `propagate.py --apply` workflow. Preserve each copy?s config, plan and local edits; report blocked or missing targets. Batch necessary host plugin-cache refreshes at the end of the change; preserve hook trust checks and report any required review. See `auto-agents/README.md`.
