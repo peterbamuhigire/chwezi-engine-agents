@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-15 - auto-agents 2.0.1: macOS restart detection
+
+- `durable.boot_identity()` now reads `sysctl` on macOS and BSD (`kern.bootsessionuuid`, else `kern.boottime`). Before, it returned nothing there, so crash recovery could not reuse an exact finished gate and one runtime test failed on macOS. Two regression tests added; 66 tests pass on macOS. Actual reboot behaviour remains NOT_ASSESSED.
+
 ## 2026-11-15 - Resumable execution and capable specialist handoffs
 
 - Added `core/instructions/specialist-execution-contract.md` and routed it from the orchestrator: live tools/skills, bounded authority, independent evidence, dependency-ready continuation, recovery and truthful progress.
