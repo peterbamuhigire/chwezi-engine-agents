@@ -13,7 +13,9 @@ The orchestrator sends all Chwezi app and system screen work through it. See [th
 
 - **Twelve repositories.** The catalogue ([`catalog/engines.yaml`](catalog/engines.yaml)) lists eleven public domain engines. This package makes twelve.
 - **One skill and four workflows.** The skill is `rules-distill`. The workflows are the engine orchestrator, the engine maintainer, the engine validator and the capability negotiator.
-- **Tests.** The package suite gives `352 passed, 3 skipped` with pytest (exit 0), measured on 2026-10-31 on Linux. On Windows on 2026-11-08 it gives 372 passed and 6 failed; see [Validation](#validation).
+- **Tests.** On 2026-11-15, the coordinator suite gives 378 passed with 24 subtests. The unattended runtime suite gives 64 passed in 218.268 seconds. The older Linux and Windows readings remain in [Validation](#validation) as dated history.
+- **Local plan runner.** `auto-agents/` now contains a bounded PowerShell and Command Prompt launcher, durable supervision, checkpoints, recovery controls and an optional plan contract. It runs only the committed plan selected in local configuration. Smoke checks pass; a real implementation run, provider quota behavior and power-cut recovery remain `NOT_ASSESSED`.
+- **Managed release.** Release `2.0.0` covers all 20 managed files across four host targets.
 - **Drift check.** `render_host_files.py --check` exits 1 with 25 findings on 2026-11-08: the same 19 engine-side findings as on 2026-11-06, plus 6 pin lag. It gave 30 on 2026-10-31. See [Open findings](#open-findings).
 - **Hygiene check.** This package alone exits 0 with 0 findings. Across the portfolio it finds 14 in four repositories.
 - **Score.** 48.09 out of 100 (raw and capped) on 31 October 2026, against a target of 95. One critical finding, F-01, is open.
@@ -34,7 +36,7 @@ The orchestrator sends all Chwezi app and system screen work through it. See [th
    python3 -X utf8 -m pytest -p no:cacheprovider tests -q
    ```
 
-   Expect `352 passed, 3 skipped` and exit 0. The three skips need sibling engine folders; see [Validation](#validation).
+   The 2026-11-15 Windows run passed 378 tests with 24 subtests. The three historical skips need sibling engine folders; see [Validation](#validation).
 3. Run the read-only drift check against your engine checkouts. `<folder>` is a folder that holds them; repeat the flag for a second folder.
 
    ```sh
@@ -90,7 +92,7 @@ The record is the 8 November 2026 entry in [`CHANGELOG.md`](CHANGELOG.md).
 
 ## What it is and who runs it
 
-The package has eight functions:
+The package has nine functions:
 
 - routing and handoff between engines;
 - the engine catalogue;
@@ -99,6 +101,7 @@ The package has eight functions:
 - contract and behavioural evaluation;
 - a Model Context Protocol (MCP) server with six tools, one of them an approval-gated fast-forward pull;
 - deterministic engine tours and skill-graph reports;
+- a local, opt-in unattended plan runner with durable supervision, separate activity and completion gates, checkpoints, recovery and descriptive status;
 - a destructive-command safety hook.
 
 A maintainer runs it on a workstation that holds several engine checkouts. CI runs a subset of the same checks.
@@ -137,6 +140,7 @@ It does not hold domain skills, and it writes to an engine only when you ask. `g
 | Measure how readable a README is | `python3 -X utf8 scripts/readme_metrics.py --check README.md` |
 | Check that a README rewrite lost no link, command or anchor | `python3 -X utf8 scripts/check_readme_preservation.py . main <branch>` |
 | Check that every engine README keeps its `## Capabilities` heading in the first four H2 headings | `python3 -X utf8 scripts/check_readme_contract.py --engines-root <folder>` |
+| Configure and operate the local plan runner | [`auto-agents/ENGINE.md`](auto-agents/ENGINE.md) and [`auto-agents/RECOVERY.md`](auto-agents/RECOVERY.md) |
 
 Every command above only reads, except `refresh_released_commits.py --write` (it edits the pins in `catalog/engines.yaml`) and an `install-engine.js` run without `--dry-run`. [`docs/operations/package-tools-reference.md`](docs/operations/package-tools-reference.md) describes every tool group in full.
 
@@ -146,6 +150,8 @@ Every command above only reads, except `refresh_released_commits.py --write` (it
 - **The locator.** [`scripts/lib/engine_roots.py`](scripts/lib/engine_roots.py) finds each checkout from repeatable `--engines-root` folders and the `CHWEZI_ENGINES_ROOT` variable. It matches the catalogue `path`, repository, id or `aliases` (former folder names).
 - **Missing engines.** A missing or ambiguous engine is `NOT ASSESSED`, never a pass.
 - **The orchestrator.** It picks the smallest set of engines for a task. It records ownership, sequence, evidence boundaries, blockers and the next action in a handoff record.
+- **The local plan runner.** An operator selects a committed project plan and optional JSON contract in `auto-agents/config.json`; `run.ps1` and `run.cmd` expose readiness, run, watch, status, stop, cancel, resume and recover actions. Readiness, activity checkpoints and verified completion are distinct. An optional plan contract checks structure and evidence references; it does not prove semantic acceptance. Logon restart registration is opt-in and is not installed by default.
+- **Recovery boundary.** Replay is controlled by the configured local-only policy. The shipped smoke checks cover launcher and bounded CLI behavior; they do not establish a completed real implementation, provider quota reset, or power-cut recovery in production conditions.
 - **The checks.** Each check reads the engines and reports. A check that cannot run exits 3. Write actions are separate flags and refuse when an engine is dirty or off `main`.
 - **The safety rules.** [`core/policies/safety-boundaries.md`](core/policies/safety-boundaries.md) is binding: read-only by default, approval for writes, and the destructive-command hook in `hooks/`.
 
@@ -289,7 +295,7 @@ Resolve the engine from [`catalog/engines.yaml`](catalog/engines.yaml), then rea
 
 ## Validation
 
-Run every command from the package root. Results were measured on 2026-10-31 on Fedora, in scratch copies of this package (`PYTHONDONTWRITEBYTECODE=1`, `-p no:cacheprovider`).
+Run every command from the package root. The command table preserves dated historical results. Current coordinator suite results are listed separately below; runner smoke evidence does not establish real implementation, provider quota or power-cut behavior.
 
 The rows that read the engines were re-run after the engines merged their README work, so they read each engine's `main` of that day. The npm rows need network access and are from the earlier run the same day.
 
@@ -319,6 +325,15 @@ WS=<folder-of-catalogue-named-links>
 A check that needs a sibling engine that is absent exits 3 with `NOT_ASSESSED`. For example, `validate-no-book-extractions.py` with no workspace folder reports 11 of 12 roots not assessed.
 
 ### Commands and results
+
+Current evidence, measured 2026-11-15:
+
+- Coordinator suite: 378 passed, 24 subtests.
+- Unattended runtime suite: 64 passed in 218.268 seconds.
+- Managed release `2.0.0`: 20 managed files across four targets.
+- Bounded CLI smoke checks passed. Real implementation, provider quota behavior and power-cut recovery are `NOT_ASSESSED`.
+
+The results below are historical unless their row carries a later date.
 
 | Command | Needs | Result on 2026-10-31 |
 |---|---|---|

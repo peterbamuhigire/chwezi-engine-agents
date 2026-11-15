@@ -15,6 +15,9 @@ import unittest
 from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from windows_temp import remove_temp_tree
+
 import yaml
 
 PACKAGE = Path(__file__).resolve().parents[1]
@@ -87,7 +90,7 @@ class RefreshTests(unittest.TestCase):
         self.catalog.write_text(CATALOG % (self.alpha[0], self.beta[0]), encoding="utf-8", newline="")
 
     def tearDown(self) -> None:
-        shutil.rmtree(self.tmp, ignore_errors=True)
+        remove_temp_tree(self.tmp, self.tmp)
 
     def run_main(self, *args: str) -> tuple[int, str, str]:
         out, err = io.StringIO(), io.StringIO()
@@ -158,7 +161,7 @@ class RefreshTests(unittest.TestCase):
         self.assertEqual(self.run_main("--write")[0], 0)
 
     def test_a_missing_engine_refuses_and_writes_nothing(self) -> None:
-        shutil.rmtree(self.engines / "alpha")
+        remove_temp_tree(self.engines / "alpha", self.tmp)
         before = self.catalog.read_bytes()
         code, out, _ = self.run_main("--write")
         self.assertEqual(code, 2)
@@ -167,7 +170,7 @@ class RefreshTests(unittest.TestCase):
         self.assertNotIn(str(self.tmp), out)
 
     def test_check_mode_reports_a_missing_engine_as_not_assessed(self) -> None:
-        shutil.rmtree(self.engines / "alpha")
+        remove_temp_tree(self.engines / "alpha", self.tmp)
         self.assertEqual(self.run_main()[0], 3)
 
     def test_a_feature_branch_is_refused_unless_allowed(self) -> None:
@@ -212,7 +215,7 @@ class PinRuleInDriftCheckTests(unittest.TestCase):
         self.engine_obj = H.Engine("demo", self.engine, "demo")
 
     def tearDown(self) -> None:
-        shutil.rmtree(self.tmp, ignore_errors=True)
+        remove_temp_tree(self.tmp, self.tmp)
 
     def codes(self, pin: str | None, lag_max: int = 0) -> list[str]:
         report = H.Report()

@@ -18,6 +18,9 @@ import unittest
 from contextlib import redirect_stdout
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from windows_temp import remove_temp_tree
+
 import yaml
 
 PACKAGE = Path(__file__).resolve().parents[1]
@@ -59,14 +62,17 @@ class HygieneTests(unittest.TestCase):
         self.write("README.md", "# Demo\n\nNothing sensitive here.\n")
 
     def tearDown(self) -> None:
-        shutil.rmtree(self.tmp, ignore_errors=True)
+        remove_temp_tree(self.tmp, self.tmp)
 
     def write(self, rel: str, content: str | bytes, track: bool = True) -> None:
         path = self.repo / rel
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(content if isinstance(content, bytes) else content.encode("utf-8"))
         if track:
-            git(self.repo, "add", "--", rel)
+            if rel == ".claude/settings.local.json":
+                git(self.repo, "add", "-f", "--", rel)
+            else:
+                git(self.repo, "add", "--", rel)
 
     def scan(self, policy: dict | None = None) -> H.RepoResult:
         return H.scan_repo("demo", self.repo, POLICY if policy is None else policy)
@@ -212,7 +218,7 @@ class CommandLineTests(unittest.TestCase):
         git(self.engine, "add", "--", "README.md")
 
     def tearDown(self) -> None:
-        shutil.rmtree(self.tmp, ignore_errors=True)
+        remove_temp_tree(self.tmp, self.tmp)
 
     def run_main(self, *args: str) -> tuple[int, str]:
         stream = io.StringIO()
@@ -228,13 +234,13 @@ class CommandLineTests(unittest.TestCase):
     def test_a_planted_settings_file_makes_the_run_fail(self) -> None:
         (self.engine / ".claude").mkdir()
         (self.engine / ".claude" / "settings.local.json").write_text("{}\n", encoding="utf-8")
-        git(self.engine, "add", "--", ".claude/settings.local.json")
+        git(self.engine, "add", "-f", "--", ".claude/settings.local.json")
         code, out = self.run_main()
         self.assertEqual(code, 1)
         self.assertIn("[tracked-local-settings]", out)
 
     def test_a_missing_engine_is_not_assessed_never_a_pass(self) -> None:
-        shutil.rmtree(self.engine)
+        remove_temp_tree(self.engine, self.tmp)
         code, out = self.run_main()
         self.assertEqual(code, 3)
         self.assertIn("NOT_ASSESSED demo-engine", out)

@@ -15,6 +15,11 @@ First apply `core/instructions/capability-negotiator.md`. A missing read
 capability changes routing to `NOT ASSESSED`; missing structured output changes
 only the serialization format, not the required handoff fields.
 
+For specialist assignments or unattended plan execution, apply
+[`specialist-execution-contract.md`](specialist-execution-contract.md). Confirm actual
+capabilities, preserve independent review evidence, and hand off revision-bound recovery
+state. Model names and expert personas do not establish capability or acceptance.
+
 ## Procedure
 
 1. Read the canonical catalog and identify candidate engines by the request's

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-15 - Resumable execution and capable specialist handoffs
+
+- Added `core/instructions/specialist-execution-contract.md` and routed it from the orchestrator: live tools/skills, bounded authority, independent evidence, dependency-ready continuation, recovery and truthful progress.
+- Updated auto-agents with durable detached jobs, revision-bound verification, bounded usage-limit waits, descriptive watch, optional plan metadata and local PowerShell/CMD launchers. See `auto-agents/ENGINE.md` for this engine's verification profile and setup. Project configuration and plans remain outside managed updates.
+- Corrected Windows test fixtures for explicitly planted globally ignored files and read-only Git temporary objects; production hygiene rules and global Git configuration were preserved.
+- Digital Research checked official APIs and the available runtime model catalogue; retained owner model pins. Actual power loss, installed logon recovery and real quota-window exhaustion remain unassessed. No startup task or implementation plan was launched.
+
 ## Unreleased - Model classes and token economy (10 November 2026)
 
 - New `docs/operations/model-classes-and-token-economy-2026-11.md`: version-free model classes (M, N, X, S), escalation triggers, token rules for Claude Code and Codex, plan-resume rule.
