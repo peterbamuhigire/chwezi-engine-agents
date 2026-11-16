@@ -29,7 +29,7 @@
         "url": "https://github.com/peterbamuhigire/chwezi-sdlc-documentation.git",
         "ref": "main"
       },
-      "description": "159 skills (Chwezi SDLC Documentation): software requirements specifications, PRDs, system design, testing, deployment, governance and compliance artefacts",
+      "description": "160 skills (Chwezi SDLC Documentation): software requirements specifications, PRDs, system design, testing, deployment, governance and compliance artefacts",
       "version": "1.1.0",
       "author": { "name": "Peter Bamuhigire" },
       "homepage": "https://github.com/peterbamuhigire/chwezi-sdlc-documentation",
@@ -131,7 +131,7 @@
         "url": "https://github.com/peterbamuhigire/chwezi-dev-engine.git",
         "ref": "main"
       },
-      "description": "165 skills: architecture, APIs, databases, PHP, security, testing, SaaS, AI systems, game development, SDLC",
+      "description": "168 skills: architecture, APIs, databases, PHP, security, testing, SaaS, AI systems, game development, SDLC",
       "version": "1.1.0",
       "author": { "name": "Peter Bamuhigire" },
       "homepage": "https://github.com/peterbamuhigire/chwezi-dev-engine",
@@ -165,7 +165,7 @@
         "url": "https://github.com/peterbamuhigire/chwezi-design-engine.git",
         "ref": "main"
       },
-      "description": "105 skills (Chwezi Design Engine): typography, colour, layout, UX, design systems/tokens, anti-AI-slop doctrine",
+      "description": "109 skills (Chwezi Design Engine): typography, colour, layout, UX, design systems/tokens, anti-AI-slop doctrine",
       "version": "1.1.0",
       "author": { "name": "Peter Bamuhigire" },
       "homepage": "https://github.com/peterbamuhigire/chwezi-design-engine",

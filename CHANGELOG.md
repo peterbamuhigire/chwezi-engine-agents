@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-16 - Approved intent during execution and recovery
+
+- Bind optional task definitions to the committed owner baseline; validate retained recovery context before launching another worker while permitting legitimate progress/evidence updates.
+- Clarified review capacity and integration ownership; updated owner-selected Codex Terra/medium defaults, retaining explicit Astra/high.
+- Record independent review, regressions and managed-copy results in [the Kaizen record](docs/kaizen/2026-11-16-approved-intent.md). No live factory, startup task or publication was activated.
+
 ## 2026-11-15 - auto-agents 2.0.1: macOS restart detection
 
 - `durable.boot_identity()` now reads `sysctl` on macOS and BSD (`kern.bootsessionuuid`, else `kern.boottime`). Before, it returned nothing there, so crash recovery could not reuse an exact finished gate and one runtime test failed on macOS. Two regression tests added; 66 tests pass on macOS. Actual reboot behaviour remains NOT_ASSESSED.

@@ -158,7 +158,6 @@ assets:
     canonical: chwezi-engine-agents/scripts/install.sh.template
     copies:
       - chwezi-dev-engine/install.sh
-      - chwezi-design-engine/install.sh
       - chwezi-sdlc-documentation/install.sh
       - website-skills/install.sh
       - digital-research-engine/install.sh
@@ -189,6 +188,17 @@ assets:
     reason: "Per-engine installer rendered from the agents template."
     owner: chwezi-engine-agents
     review_date: "2026-12-29"
+  - id: design-engine-install-sh
+    mode: registered-variant
+    copies:
+      - chwezi-design-engine/install.sh
+    variants:
+      chwezi-design-engine/install.sh:
+        sha256: 6f19067e3a5244580e150bc8f6b7cf19c7f3d92e892428064575ca205686cab4
+        owner: chwezi-design-engine
+        reason: "Reviewed 2026-11-16: executable shell lines match the canonical installer; only its comment replaces a workstation path example with portable prose. Preserve the design portability gate. Evidence: docs/kaizen/2026-11-16-portfolio-drift.md."
+    owner: chwezi-design-engine
+    review_date: "2026-12-29"
   - id: install-engine-js
     mode: registered-variant
     copies:
@@ -210,52 +220,52 @@ assets:
       chwezi-engine-agents/scripts/install-engine.js:
         sha256: e5c9e7c677b70711da82ab7dc8aacb31c66f4653465cce99a040c2c0d3f34aa7
         owner: chwezi-engine-agents
-        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+        reason: "Shared installer baseline; the coordinator fork and the design entry-limit guard are registered separately."
       chwezi-dev-engine/scripts/install-engine.js:
         sha256: cfa564bc971dbc8d6826f130a21baa29ade2048bf65ec33040d1a9a56295ea73
         owner: chwezi-dev-engine
-        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+        reason: "Shared installer baseline; the coordinator fork and the design entry-limit guard are registered separately."
       chwezi-design-engine/scripts/install-engine.js:
-        sha256: cfa564bc971dbc8d6826f130a21baa29ade2048bf65ec33040d1a9a56295ea73
+        sha256: c09bf30fce32048d63aa3240a7bd5056a32385fcd337d3f7b207d8f00ec10d36
         owner: chwezi-design-engine
-        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+        reason: "Retain the design-specific pre-install entry-limit guard; validates the source before any install write. Reviewed 2026-11-16 against c9b334d770c4. Evidence: docs/kaizen/2026-11-16-portfolio-drift.md."
       chwezi-sdlc-documentation/scripts/install-engine.js:
         sha256: cfa564bc971dbc8d6826f130a21baa29ade2048bf65ec33040d1a9a56295ea73
         owner: chwezi-sdlc-documentation
-        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+        reason: "Shared installer baseline; the coordinator fork and the design entry-limit guard are registered separately."
       website-skills/scripts/install-engine.js:
         sha256: cfa564bc971dbc8d6826f130a21baa29ade2048bf65ec33040d1a9a56295ea73
         owner: website-skills
-        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+        reason: "Shared installer baseline; the coordinator fork and the design entry-limit guard are registered separately."
       digital-research-engine/scripts/install-engine.js:
         sha256: cfa564bc971dbc8d6826f130a21baa29ade2048bf65ec33040d1a9a56295ea73
         owner: digital-research-engine
-        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+        reason: "Shared installer baseline; the coordinator fork and the design entry-limit guard are registered separately."
       proposal-skills/scripts/install-engine.js:
         sha256: cfa564bc971dbc8d6826f130a21baa29ade2048bf65ec33040d1a9a56295ea73
         owner: proposal-skills
-        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+        reason: "Shared installer baseline; the coordinator fork and the design entry-limit guard are registered separately."
       business-plan-skills/scripts/install-engine.js:
         sha256: cfa564bc971dbc8d6826f130a21baa29ade2048bf65ec33040d1a9a56295ea73
         owner: business-plan-skills
-        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+        reason: "Shared installer baseline; the coordinator fork and the design entry-limit guard are registered separately."
       social-media-skills/scripts/install-engine.js:
         sha256: cfa564bc971dbc8d6826f130a21baa29ade2048bf65ec33040d1a9a56295ea73
         owner: social-media-skills
-        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+        reason: "Shared installer baseline; the coordinator fork and the design entry-limit guard are registered separately."
       linux-skills/scripts/install-engine.js:
         sha256: cfa564bc971dbc8d6826f130a21baa29ade2048bf65ec33040d1a9a56295ea73
         owner: linux-skills
-        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+        reason: "Shared installer baseline; the coordinator fork and the design entry-limit guard are registered separately."
       chwezi-accounting-doctrine/scripts/install-engine.js:
         sha256: cfa564bc971dbc8d6826f130a21baa29ade2048bf65ec33040d1a9a56295ea73
         owner: chwezi-accounting-doctrine
-        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+        reason: "Shared installer baseline; the coordinator fork and the design entry-limit guard are registered separately."
       windows-admin-engine-skills/scripts/install-engine.js:
         sha256: cfa564bc971dbc8d6826f130a21baa29ade2048bf65ec33040d1a9a56295ea73
         owner: windows-admin-engine-skills
-        reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
-    reason: "Two variants: the agents fork (564 lines) and the engine copy (469 lines, identical in all eleven engines); convergence is decided separately."
+        reason: "Shared installer baseline; the coordinator fork and the design entry-limit guard are registered separately."
+    reason: "Shared installer baseline; the coordinator fork and the design entry-limit guard are registered separately."
     review_date: "2026-12-29"
   - id: design-trigger-block
     mode: block
@@ -389,13 +399,13 @@ assets:
         owner: chwezi-design-engine
         reason: "Engine-specific always-on rules by design (absent in dev and agents); each must keep the invariant sentences."
       chwezi-sdlc-documentation/rules/common/core.md:
-        sha256: be37b47b62b206078fe9ea4b9cd08fbae1052d051b8ce13dabbaa9a9bf67a71d
+        sha256: 9ffc2d262c7db0b8fa34c638fe114b67adcb06512e801ccff3a089d4d0b7e761
         owner: chwezi-sdlc-documentation
-        reason: "M10-08 SP-01 engine-native design gate"
+        reason: "Retain reviewed engine-specific rules: portable research/source references or the owner-directed short user-command handoff. Reviewed 2026-11-16 against 360854a9fa24. Evidence: docs/kaizen/2026-11-16-portfolio-drift.md."
       website-skills/rules/common/core.md:
-        sha256: 4145a79ce8a21d999ce4613616bb826d9c60dcc22f244975c842488d60055dc1
+        sha256: 248d2748f68bd04542e40c53b1d30df9a994a3e5853015fa395e9847966b07f9
         owner: website-skills
-        reason: "Engine-specific always-on rules by design (absent in dev and agents); each must keep the invariant sentences."
+        reason: "Retain reviewed engine-specific rules: portable research/source references or the owner-directed short user-command handoff. Reviewed 2026-11-16 against b8c9edf3992d. Evidence: docs/kaizen/2026-11-16-portfolio-drift.md."
       digital-research-engine/rules/common/core.md:
         sha256: 0a3d09f51b2c9e53be981f50b07867f8a96ae1f2d16ba9a016693be360a42f60
         owner: digital-research-engine
@@ -409,13 +419,13 @@ assets:
         owner: business-plan-skills
         reason: "Engine-specific always-on rules by design (absent in dev and agents); each must keep the invariant sentences."
       social-media-skills/rules/common/core.md:
-        sha256: 3cf47392273c665083bb0559e1ed6e7f05b2077d36822ef6d36f9dc316f184f6
+        sha256: 8f18444594aed2b1be713c7acf2a63b8b5e6db71796bb5d28486d38a3887b37a
         owner: social-media-skills
-        reason: "Engine-specific always-on rules by design (absent in dev and agents); each must keep the invariant sentences. Social Kaizen S09 (2026-09-29) re-registered it after the SKILL.md line rule moved from 500 to 300 lines (D-SK-06)."
+        reason: "Retain reviewed engine-specific rules: portable research/source references or the owner-directed short user-command handoff. Reviewed 2026-11-16 against 3416d0b5c1f3. Evidence: docs/kaizen/2026-11-16-portfolio-drift.md."
       linux-skills/rules/common/core.md:
-        sha256: 39d9d9ba9c2e44bba0c5974afd0d77faf6dec022ac0a3747ded7cdbf1ac5829c
+        sha256: 2b28405a5d7c4e9af7b1fb7ecc9513d36995ef001d3714a7933c8bb83d127e7e
         owner: linux-skills
-        reason: "Engine-specific always-on rules by design (absent in dev and agents); each must keep the invariant sentences."
+        reason: "Retain reviewed engine-specific rules: portable research/source references or the owner-directed short user-command handoff. Reviewed 2026-11-16 against 41dc74ebb107. Evidence: docs/kaizen/2026-11-16-portfolio-drift.md."
       chwezi-accounting-doctrine/rules/common/core.md:
         sha256: 0debe718530a2b9523df211cc92146df6149c13dc057dd5b8b3daf87d2cc8200
         owner: chwezi-accounting-doctrine
@@ -442,29 +452,29 @@ assets:
       - "*/meta/skill-writing/SKILL.md"
     variants:
       website-skills/skills/meta/skill-writing/SKILL.md:
-        sha256: c0caa54880452eed328ae2e120a6e02bf85c51fe1169ee13fc4f8fbccd56afe1
+        sha256: 86aabda102644a0d46a2a15d7854996afb13dddcdcdb33b23888ab845b10172f
         owner: website-skills
-        reason: "Pointer stub for the canonical dev skill-writing standard (M10-04-T03): portable minimum, engine-local delta and degraded mode, shaped to pass this engine's Tier-1 validator. Re-register only when the portable minimum or the engine delta changes."
+        reason: "Retain portable canonical pointers with the existing engine-specific authoring contract; remove workstation-only paths. Reviewed 2026-11-16 against 74d085518f29. Evidence: docs/kaizen/2026-11-16-portfolio-drift.md."
       digital-research-engine/skills/skill-writing/SKILL.md:
-        sha256: 999004e1cf8982d03ad082b784204846d5f7b855196abe37c8a9d2873feea63c
+        sha256: cd031066ed90090071890db715f014e990c879c1434e7e2c60a5203fbf933417
         owner: digital-research-engine
-        reason: "Pointer stub for the canonical dev skill-writing standard (M10-04-T03): portable minimum, engine-local delta and degraded mode, shaped to pass this engine's Tier-1 validator. Re-register only when the portable minimum or the engine delta changes."
+        reason: "Retain portable canonical pointers with the existing engine-specific authoring contract; remove workstation-only paths. Reviewed 2026-11-16 against 95f69eadc8a7. Evidence: docs/kaizen/2026-11-16-portfolio-drift.md."
       proposal-skills/skills/meta/skill-writing/SKILL.md:
-        sha256: 70522473f9005ab2a4a08bc83f44054767d2de3aa51015dc30dba0e6851a49b2
+        sha256: b28c5a43e9bbc0338d07f7c371a530b858fa46e2725684e31db81c637be69e5b
         owner: proposal-skills
-        reason: "Pointer stub for the canonical dev skill-writing standard (M10-04-T03): portable minimum, engine-local delta and degraded mode, shaped to pass this engine's Tier-1 validator. Re-register only when the portable minimum or the engine delta changes."
+        reason: "Retain portable canonical pointers with the existing engine-specific authoring contract; remove workstation-only paths. Reviewed 2026-11-16 against cb0b23668978. Evidence: docs/kaizen/2026-11-16-portfolio-drift.md."
       business-plan-skills/skills/meta-utility/skill-writing/SKILL.md:
-        sha256: d0ab9db42891ee97fa72b5a52b35df8a57d3f4ca3047a26a27c84007b11130d0
+        sha256: e6078a6785bca88b1210da7298200a9847df7e4352ba1957446af119805b4332
         owner: business-plan-skills
-        reason: "Pointer stub for the canonical dev skill-writing standard (M10-04-T03): portable minimum, engine-local delta and degraded mode, shaped to pass this engine's Tier-1 validator. Re-register only when the portable minimum or the engine delta changes."
+        reason: "Retain portable canonical pointers with the existing engine-specific authoring contract; remove workstation-only paths. Reviewed 2026-11-16 against 5f5e17df7cfa. Evidence: docs/kaizen/2026-11-16-portfolio-drift.md."
       social-media-skills/skills/meta-utility/skill-writing/SKILL.md:
-        sha256: 87fec38a92cecf1f8bf278081d68b95d8db5a945a29829c73e21aa2bec8e380d
+        sha256: 396fee253a9cd00707228fae54812978ae63f519ff7fee2cbce5a65b256cd914
         owner: social-media-skills
-        reason: "Pointer stub for the canonical dev skill-writing standard (M10-04-T03): portable minimum, engine-local delta and degraded mode, shaped to pass this engine's Tier-1 validator. Re-register only when the portable minimum or the engine delta changes. Social Kaizen S08 (2026-09-29) re-registered it after the engine-local routing delta changed (description, Use When and Do Not Use When rewritten to the S08 formula; body unchanged). Social Kaizen S09 (2026-09-29) re-registered it after the engine-local delta changed (300-line ceiling and the lean template, D-SK-06)."
+        reason: "Retain portable canonical pointers with the existing engine-specific authoring contract; remove workstation-only paths. Reviewed 2026-11-16 against 3416d0b5c1f3. Evidence: docs/kaizen/2026-11-16-portfolio-drift.md."
       linux-skills/meta/skill-writing/SKILL.md:
-        sha256: 9c891cdd869c1af161361be98a3daaf448542a4b8b2df751de3c2f97de93e65e
+        sha256: 103dfc84128ccc8745fd311c79eb982535ee9e28fe8d7bc66ec43f925e59617f
         owner: linux-skills
-        reason: "Pointer stub for the canonical dev skill-writing standard (M10-04-T03): portable minimum, engine-local delta and degraded mode, shaped to pass this engine's Tier-1 validator. Re-register only when the portable minimum or the engine delta changes."
+        reason: "Pointer stub for the canonical dev skill-writing standard (M10-04-T03): portable minimum, engine-local delta and degraded mode, shaped to pass this engine's Tier-1 validator. The local pointer now resolves through the device catalogue; the remaining stub is byte-identical after line-ending normalization. Reviewed 2026-11-16 against registered hash 9c891cdd869c. Evidence: docs/kaizen/2026-11-16-portfolio-drift.md."
     reason: "M10-04 converged seven drifting copies into one canonical (dev) plus six pointer stubs; the canonical is free to change and is not hashed here."
     note: "Decision record: chwezi-engine-agents/docs/operations/decisions/skill-writing-canonical.md. Preservation map: docs/operations/m10-kaizen-evidence/M10-04/preservation/."
     owner: chwezi-dev-engine
@@ -575,52 +585,52 @@ assets:
       chwezi-engine-agents/scripts/generate-plugin-manifest.js:
         sha256: 3203d37e89fc9c9bfcd2c5c8dddf70704d0a5ebaa53b5dea8113a5250360a920
         owner: chwezi-engine-agents
-        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+        reason: "Engine-specific generators; the coordinator carries --check-marketplace and design adds an entry-limit guard."
       chwezi-dev-engine/scripts/generate-plugin-manifest.js:
         sha256: b27827a0d3913ea1cc8130ef8dda9d6153d370b2c17ae05fd24824da9d46a44f
         owner: chwezi-dev-engine
-        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+        reason: "Engine-specific generators; the coordinator carries --check-marketplace and design adds an entry-limit guard."
       chwezi-design-engine/scripts/generate-plugin-manifest.js:
-        sha256: 9f81bd41594c082443eaff2669559cf5e7a963af3006b37a49090d71df3ac6c5
+        sha256: 9ff0211efa5c3149355f942e5c3f78bc26226e76f6cb1854584566722db9011b
         owner: chwezi-design-engine
-        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+        reason: "Retain the design-specific entry-limit guard before generating a plugin manifest. Reviewed 2026-11-16 against c9b334d770c4. Evidence: docs/kaizen/2026-11-16-portfolio-drift.md."
       chwezi-sdlc-documentation/scripts/generate-plugin-manifest.js:
         sha256: c5a2b7ad35da03ccadb7f1d586bbe024c5b9c20657acb6d98cc61134ff09efcb
         owner: chwezi-sdlc-documentation
-        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+        reason: "Engine-specific generators; the coordinator carries --check-marketplace and design adds an entry-limit guard."
       website-skills/scripts/generate-plugin-manifest.js:
         sha256: c5a2b7ad35da03ccadb7f1d586bbe024c5b9c20657acb6d98cc61134ff09efcb
         owner: website-skills
-        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+        reason: "Engine-specific generators; the coordinator carries --check-marketplace and design adds an entry-limit guard."
       digital-research-engine/scripts/generate-plugin-manifest.js:
         sha256: 9f81bd41594c082443eaff2669559cf5e7a963af3006b37a49090d71df3ac6c5
         owner: digital-research-engine
-        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+        reason: "Engine-specific generators; the coordinator carries --check-marketplace and design adds an entry-limit guard."
       proposal-skills/scripts/generate-plugin-manifest.js:
         sha256: 9f81bd41594c082443eaff2669559cf5e7a963af3006b37a49090d71df3ac6c5
         owner: proposal-skills
-        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+        reason: "Engine-specific generators; the coordinator carries --check-marketplace and design adds an entry-limit guard."
       business-plan-skills/scripts/generate-plugin-manifest.js:
         sha256: 9f81bd41594c082443eaff2669559cf5e7a963af3006b37a49090d71df3ac6c5
         owner: business-plan-skills
-        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+        reason: "Engine-specific generators; the coordinator carries --check-marketplace and design adds an entry-limit guard."
       social-media-skills/scripts/generate-plugin-manifest.js:
         sha256: 9f81bd41594c082443eaff2669559cf5e7a963af3006b37a49090d71df3ac6c5
         owner: social-media-skills
-        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+        reason: "Engine-specific generators; the coordinator carries --check-marketplace and design adds an entry-limit guard."
       linux-skills/scripts/generate-plugin-manifest.js:
         sha256: 9f81bd41594c082443eaff2669559cf5e7a963af3006b37a49090d71df3ac6c5
         owner: linux-skills
-        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+        reason: "Engine-specific generators; the coordinator carries --check-marketplace and design adds an entry-limit guard."
       chwezi-accounting-doctrine/scripts/generate-plugin-manifest.js:
         sha256: 9f81bd41594c082443eaff2669559cf5e7a963af3006b37a49090d71df3ac6c5
         owner: chwezi-accounting-doctrine
-        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+        reason: "Engine-specific generators; the coordinator carries --check-marketplace and design adds an entry-limit guard."
       windows-admin-engine-skills/scripts/generate-plugin-manifest.js:
         sha256: c5a2b7ad35da03ccadb7f1d586bbe024c5b9c20657acb6d98cc61134ff09efcb
         owner: windows-admin-engine-skills
-        reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
-    reason: "Four generator variants; only the agents copy carries --check-marketplace (M10-02-T09)."
+        reason: "Engine-specific generators; the coordinator carries --check-marketplace and design adds an entry-limit guard."
+    reason: "Engine-specific generators; the coordinator carries --check-marketplace and design adds an entry-limit guard."
     review_date: "2026-12-29"
   - id: routing-smoke-test
     mode: registered-variant
@@ -640,41 +650,41 @@ assets:
       - "*/scripts/routing-smoke-test.py"
     variants:
       chwezi-dev-engine/scripts/routing_smoke_test.py:
-        sha256: 9a1cf744b15abe51196565e0b88c25ee45749d8acaee16ca156cb2264ce68611
+        sha256: fbbeb1d4d2027887b08ba64d13d5a3b7d93c198fc3b630b1b40011eeb39d0fab
         owner: chwezi-dev-engine
-        reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
+        reason: "Retain engine-specific fixture coverage, primary-rank and owned-negative reporting/checks; no acceptance floor is lowered. Reviewed 2026-11-16 against ca226ae79846. Evidence: docs/kaizen/2026-11-16-portfolio-drift.md."
       chwezi-design-engine/scripts/routing_smoke_test.py:
         sha256: 1de1d6841684047e30d25c383682cc72f6083f3dcb3a1b6a0373b0e47fcf1561
         owner: chwezi-design-engine
         reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06: the design copy vendors the dev TF-IDF ranker (chwezi-dev-engine/scripts/routing_smoke_test.py @ 317b475, sha256 92b106e5...); its header records the source, so any edit to this copy is detected here."
       chwezi-sdlc-documentation/scripts/routing_smoke_test.py:
-        sha256: 0a65725f02171e2106081988241c3d6b8d22f38b7b28d90223ce7d473ad55f79
+        sha256: fb9056b3a8b865728c115668dd9caa85c38927378ca179dc6a7c8df95270f62c
         owner: chwezi-sdlc-documentation
-        reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
+        reason: "Retain engine-specific fixture coverage, primary-rank and owned-negative reporting/checks; no acceptance floor is lowered. Reviewed 2026-11-16 against 702a5ab32ea2. Evidence: docs/kaizen/2026-11-16-portfolio-drift.md."
       digital-research-engine/scripts/routing_smoke_test.py:
         sha256: 8a53525d53c75db1ccbbdbd2b01dd12074c42e1f4cdbfdeb8fc76d7330cd99c3
         owner: digital-research-engine
         reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
       proposal-skills/scripts/routing_smoke_test.py:
-        sha256: 8eea2bfbcfbd5014763a876331e516b9ec524c9ea19f92b93537747bca50f993
+        sha256: 74b21c58ba2b6373ac0baceae04ad9b2f99cef524017eefc4986326afe1bc16b
         owner: proposal-skills
-        reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
+        reason: "Retain engine-specific fixture coverage, primary-rank and owned-negative reporting/checks; no acceptance floor is lowered. Reviewed 2026-11-16 against 3905b5408592. Evidence: docs/kaizen/2026-11-16-portfolio-drift.md."
       business-plan-skills/scripts/routing_smoke_test.py:
-        sha256: c870fe5aeb2999dedc0c938b40b1191679f3661320a4e477938fbcd1c0e8ba8a
+        sha256: 9a10c2652f6731db4b0ead47c90ab1a8030801c1375bf0c40226cc059877cd93
         owner: business-plan-skills
-        reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
+        reason: "Retain engine-specific fixture coverage, primary-rank and owned-negative reporting/checks; no acceptance floor is lowered. Reviewed 2026-11-16 against 21f38e3e7617. Evidence: docs/kaizen/2026-11-16-portfolio-drift.md."
       social-media-skills/scripts/routing_smoke_test.py:
         sha256: ef8ae0ac8f394279f97c5c40260554e95c1f1dc0762a5443671dcb00e0a666a2
         owner: social-media-skills
         reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker. Social Kaizen S01-T08 (2026-09-29) adds p@1 reporting, --min-rank1, --lint-fixtures and the alias_of fixture field; S08 (2026-09-29) adds owned negatives (negative_for) and the slug and routing-text-copy fixture lint."
       linux-skills/scripts/routing_smoke_test.py:
-        sha256: 2ba658a35caf7e44c5ad7a94771c4c073f0d9df3bf335100f7b770430022de82
+        sha256: c5a0cd0dae6a734cb68ca1ad322c59c0ce0dd2b52b5bdaf6b5547339ccb8803a
         owner: linux-skills
-        reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
+        reason: "Retain engine-specific fixture coverage, primary-rank and owned-negative reporting/checks; no acceptance floor is lowered. Reviewed 2026-11-16 against 3baac6798807. Evidence: docs/kaizen/2026-11-16-portfolio-drift.md."
       windows-admin-engine-skills/scripts/routing_smoke_test.py:
-        sha256: 17f6a97c66e3b8463674d6e91e620b90d6883e2a91695f5f84eb5fe83c97d566
+        sha256: 6671ac40c7757f66b8836302aeffb3bbe2f06edeb8a040ef351d360baefdaecc
         owner: windows-admin-engine-skills
-        reason: "Nine engine-specific routing smoke tests plus the website variant. M10-03-T06 adds the design copy vendored from the dev TF-IDF ranker."
+        reason: "Retain engine-specific fixture coverage, primary-rank and owned-negative reporting/checks; no acceptance floor is lowered. Reviewed 2026-11-16 against 053aec14e550. Evidence: docs/kaizen/2026-11-16-portfolio-drift.md."
       website-skills/scripts/routing-smoke-test.py:
         sha256: ac3846019dbdd1baf5f4655027558e5f8e03244ae2941e9eec0555ac31a4fae6
         owner: website-skills

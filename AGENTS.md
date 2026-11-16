@@ -1,6 +1,6 @@
 ## Unattended development
 
-When this engine changes `auto-agents`, update the canonical copy in `skills-engine-agents` first, regenerate its manifest, run its tests, then discover and update the installed project and engine copies with its managed `propagate.py --apply` workflow. Preserve each copy?s config, plan and local edits; report blocked or missing targets. Batch necessary host plugin-cache refreshes at the end of the change; preserve hook trust checks and report any required review. See `auto-agents/README.md`.
+When this engine changes the community `auto-agents` runtime, this repository (`chwezi-engine-agents`, formerly `skills-engine-agents`) owns that canonical copy. Regenerate its manifest, run its tests, then discover and update authorised community copies with its managed `propagate.py --apply` workflow. Independently maintained engines retain their own authority and lineage. Preserve each copy's config, plan and local edits; report blocked or missing targets. Batch necessary host plugin-cache refreshes at the end of the change; preserve hook trust checks and report any required review. See `auto-agents/README.md`.
 
 For an owner-authorised long-running development plan, use `auto-agents/README.md` and `auto-agents/config.json`. Prepare a committed, scoped plan and project-specific verification commands first. Respect existing runtime permissions, project controls, data boundaries and publication settings. Do not run this and `scripts/autorun` concurrently on shared resources.
 
@@ -128,3 +128,14 @@ Roboto Mono and IBM Plex Mono are banned as monospace choices; Source Sans 3 onl
 body face; no bare system stacks alone. State the chosen typeface and reason before producing
 any artifact.
 <!-- /chwezi-design-engine:trigger -->
+
+## Codex model selection (owner decision, 16 November 2026)
+
+For Codex, root, reviewer and execution roles default to `gpt-6.1-terra` with
+medium reasoning. `gpt-6-astra` with high reasoning is reserved for Peter's
+explicit selection; never escalate models automatically. This Codex-specific
+instruction takes precedence over generic model-class routing. Preserve Claude
+and other hosts' own model configuration, domain gates and permissions. A file
+change affects newly started sessions, not the current session's model. Every
+Kaizen checks current official releases and the active account/runtime catalogue;
+record task fit, cost/latency/quality uncertainty and the retain/change decision.

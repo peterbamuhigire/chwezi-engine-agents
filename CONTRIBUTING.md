@@ -38,8 +38,8 @@ AI agents may propose changes here, on the same terms as people plus a few more:
 5. **No book extractions and no copied third-party text.** Paraphrase ideas and
    attribute them with licence, URL and commit.
 
-Model policy is not reopened by contributions: Codex runs on GPT-6 Luna with
-high reasoning, Astra only when Peter selects it explicitly, and other runtimes
+Model policy is not reopened by contributions: Codex defaults to GPT-6.1 Terra
+with medium reasoning; GPT-6 Astra uses high reasoning only when Peter selects it explicitly. Other runtimes
 keep their own configuration.
 
 The pull request template (`.github/pull_request_template.md`) carries the

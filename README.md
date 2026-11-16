@@ -475,14 +475,18 @@ Earlier audits, execution logs and plans are indexed in [`docs/README.md`](docs/
   - `zod`, also flagged, is used by the SDK at run time. Its exposure was not assessed.
   - The SDK pin 1.30.0 is behind 1.32.2. The fix is an `npm install` of two minor versions, which needs the maintainer's authority. The exact commands and the acceptance check are in [`06-next-cycle.md`](docs/kaizen/2026-10-engine-kaizen-pass-2/06-next-cycle.md).
   - The MCP server is optional. Nothing else in the package depends on it.
-- **The drift check exits 1 with 19 findings.** It gave 30 on 2026-10-31, run as `python3 -X utf8 scripts/render_host_files.py --check --engines-root <folder> --engines-root <folder>`. It was re-run on 2026-11-06 with `--workspace-root <folder>`, a folder of symlinks to the engines under their catalogue names. All 19 are engine-side.
-  - 17 `shared-asset-unregistered-variant`: `routing_smoke_test.py` in six engines, `rules/common/core.md` in four, the `skill-writing` skill in five, and the design engine's `generate-plugin-manifest.js` and `install-engine.js`.
-  - 1 `shared-asset-byte-drift` (the design engine's `install.sh`) and 1 `plugin-exclusion-stale` (the business-plan manifest's `country-context/*`).
-  - There were 16 variants when pass 2 closed. The 17th is the social-media engine's `rules/common/core.md`, edited in `3075062` on 31 October after that.
-  - Each variant needs a content review before its hash is registered with an owner and a reason in [`catalog/shared-assets.yaml`](catalog/shared-assets.yaml), after the last engine wave. The order is in `06-next-cycle.md`.
-  - The 11 `released-commit-lag` findings of 2026-10-31 were cleared on 2026-11-06. On 2026-11-08 six engines are one to three commits ahead of their pins again, which is the pin rule working. Refresh the pins after the Product Excellence work is committed.
-  - The design engine's marketplace row now reads 105 skills, matching its manifest. The suite's engineering row still reads 165 where the dev plugin ships 166 (read on 2026-11-08).
-  - The portfolio-drift CI job runs this check and the hygiene check, so it fails while either exits 1.
+- **Release pins await the next authorised commit cycle.** The 16 November repair cleared
+  24 content/register findings from a 35-finding baseline. Eleven release-pin findings
+  remain visible because pending engine changes are uncommitted.
+  - Reviewed all 17 deliberate variants against their registered Git versions before
+    updating [`catalog/shared-assets.yaml`](catalog/shared-assets.yaml). Preserved
+    routing checks, installer limits and engine-specific rules.
+  - Repaired moved invariant locations, the design trigger, a stale plugin exclusion
+    and marketplace counts. The separate marketplace check found three more stale
+    suite descriptions; these now match the local plugin manifests.
+  - [Repair evidence and remaining work](docs/kaizen/2026-11-16-portfolio-drift.md)
+    records the checks and pin-refresh order. The full drift gate still exits 1;
+    no tolerance, exemption or clean-tree safeguard was relaxed.
 - **The hygiene check exits 1 with 14 findings in four repositories.**
   - Linux has 11: a tracked `.claude/settings.local.json` and ten live path lines.
   - The dev engine has 1 (a tracked `.claude/settings.local.json`) and the design engine has 1 (a path in `doctrine/design-doctrine.md` line 161).

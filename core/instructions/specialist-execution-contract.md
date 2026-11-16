@@ -28,6 +28,18 @@ does not close an acceptance criterion. Missing specialist evidence stays open.
 
 ## Plan-to-run handoff
 
+Keep work admission within the reviewers' capacity. Choose concurrency from
+independent ownership, shared-resource contention and the available acceptance
+queue, not the number of tasks or agents. A worker reports progress and evidence;
+it cannot revise the parent's scope, dependencies or acceptance oracle to obtain
+a pass. Return a proposed baseline change with its impact to the plan owner.
+
+Verify both the result and observed execution conduct: required checks ran,
+actions stayed in scope and prohibited effects did not occur. Inspect raw
+artifacts and the actual diff, including changes to tests and gate configuration;
+a summary, role label, schema pass or model vote is insufficient. Stage only
+owned paths, then check integration behavior after combining independent work.
+
 The plan owns the intended outcomes; a runner owns execution state. Link stable task
 IDs, dependencies, ready conditions, write scopes, acceptance oracles and command
 arguments to the project plan in `docs/plans/`. Use a small durable handoff for the
