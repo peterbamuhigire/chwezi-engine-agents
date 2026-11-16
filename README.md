@@ -13,11 +13,11 @@ The orchestrator sends all Chwezi app and system screen work through it. See [th
 
 - **Twelve repositories.** The catalogue ([`catalog/engines.yaml`](catalog/engines.yaml)) lists eleven public domain engines. This package makes twelve.
 - **One skill and four workflows.** The skill is `rules-distill`. The workflows are the engine orchestrator, the engine maintainer, the engine validator and the capability negotiator.
-- **Tests.** On 2026-11-15, the coordinator suite gives 378 passed with 24 subtests. The unattended runtime suite gives 64 passed in 218.268 seconds. The older Linux and Windows readings remain in [Validation](#validation) as dated history.
+- **Tests.** On 2026-11-16, the coordinator suite gives 378 passed with 24 subtests. The combined runtime ran 80 tests on Windows: 79 passed and 1 Mac-only skip. Earlier results remain in [Validation](#validation) as dated history.
 - **Local plan runner.** `auto-agents/` now contains a bounded PowerShell and Command Prompt launcher, durable supervision, checkpoints, recovery controls and an optional plan contract. It runs only the committed plan selected in local configuration. Smoke checks pass; a real implementation run, provider quota behavior and power-cut recovery remain `NOT_ASSESSED`.
-- **Managed release.** Release `2.0.0` covers all 20 managed files across four host targets.
-- **Drift check.** `render_host_files.py --check` exits 1 with 25 findings on 2026-11-08: the same 19 engine-side findings as on 2026-11-06, plus 6 pin lag. It gave 30 on 2026-10-31. See [Open findings](#open-findings).
-- **Hygiene check.** This package alone exits 0 with 0 findings. Across the portfolio it finds 14 in four repositories.
+- **Managed release.** Release `2.1.1` covers 23 managed files in the canonical runtime and its two community engine copies.
+- **Drift check.** `render_host_files.py --check` exits 0 with zero findings on 2026-11-16 after the authorised commits and pin refresh. See [Open findings](#open-findings) for other backlog items.
+- **Hygiene check.** The full 12-repository scan exits 0 with zero findings on 2026-11-16. Local settings remain on disk and are excluded from tracking.
 - **Score.** 48.09 out of 100 (raw and capped) on 31 October 2026, against a target of 95. One critical finding, F-01, is open.
 
 ## Start here
@@ -475,23 +475,10 @@ Earlier audits, execution logs and plans are indexed in [`docs/README.md`](docs/
   - `zod`, also flagged, is used by the SDK at run time. Its exposure was not assessed.
   - The SDK pin 1.30.0 is behind 1.32.2. The fix is an `npm install` of two minor versions, which needs the maintainer's authority. The exact commands and the acceptance check are in [`06-next-cycle.md`](docs/kaizen/2026-10-engine-kaizen-pass-2/06-next-cycle.md).
   - The MCP server is optional. Nothing else in the package depends on it.
-- **Release pins await the next authorised commit cycle.** The 16 November repair cleared
-  24 content/register findings from a 35-finding baseline. Eleven release-pin findings
-  remain visible because pending engine changes are uncommitted.
-  - Reviewed all 17 deliberate variants against their registered Git versions before
-    updating [`catalog/shared-assets.yaml`](catalog/shared-assets.yaml). Preserved
-    routing checks, installer limits and engine-specific rules.
-  - Repaired moved invariant locations, the design trigger, a stale plugin exclusion
-    and marketplace counts. The separate marketplace check found three more stale
-    suite descriptions; these now match the local plugin manifests.
-  - [Repair evidence and remaining work](docs/kaizen/2026-11-16-portfolio-drift.md)
-    records the checks and pin-refresh order. The full drift gate still exits 1;
-    no tolerance, exemption or clean-tree safeguard was relaxed.
-- **The hygiene check exits 1 with 14 findings in four repositories.**
-  - Linux has 11: a tracked `.claude/settings.local.json` and ten live path lines.
-  - The dev engine has 1 (a tracked `.claude/settings.local.json`) and the design engine has 1 (a path in `doctrine/design-doctrine.md` line 161).
-  - Accounting has 1: 45 path lines in dated records against a ceiling of 44.
-  - It found no credential-shaped string. A tracked file stays in public history after it is removed from the tree. Removing it from history needs a rewrite and force-push, which is the maintainer's decision.
+- **Closed 16 November: portfolio drift and hygiene.** The owner authorised commits and pushes after the hold. All eleven release pins now match clean main commits, and the full drift and hygiene checks report zero findings.
+  - The reviewed variants remain recorded in [`catalog/shared-assets.yaml`](catalog/shared-assets.yaml); engine-specific rules and routing checks are retained.
+  - [Repair evidence](docs/kaizen/2026-11-16-portfolio-drift.md) records the content fixes, portable paths and preserved local settings. No tolerance or clean-tree safeguard was relaxed; published history was not rewritten.
+  - [Publication evidence](docs/kaizen/2026-11-16-publication.md) records integration, validation and the final release pins. Historical local-settings content may remain in older commits.
 - **Script defects found while documenting.** They are recorded in [`07-docs-followups.md`](docs/kaizen/2026-10-engine-kaizen-pass-2/07-docs-followups.md).
   - `scripts/update.sh` exits 126 on a fresh clone (see Install and update).
   - CI runs neither `tests/security/install-engine-ownership.test.js` (it passes locally) nor the two `tests/security/install-*-preservation.ps1` scripts.
