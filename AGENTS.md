@@ -129,10 +129,12 @@ body face; no bare system stacks alone. State the chosen typeface and reason bef
 any artifact.
 <!-- /chwezi-design-engine:trigger -->
 
-## Codex model selection (owner decision, 16 November 2026)
+## Codex model selection (owner decision, 17 November 2026)
 
-For Codex, root, reviewer and execution roles default to `gpt-6.1-terra` with
-medium reasoning. `gpt-6-astra` with high reasoning is reserved for Peter's
+For Codex, root, reviewer and execution roles prefer `gpt-6.2-sol` with
+medium reasoning when available. If unavailable, use catalogue-confirmed
+`gpt-6.1-terra`/medium and report the fallback. If neither is available,
+report the limitation before launch. `gpt-6.2-astra` with high reasoning is reserved for Peter's
 explicit selection; never escalate models automatically. This Codex-specific
 instruction takes precedence over generic model-class routing. Preserve Claude
 and other hosts' own model configuration, domain gates and permissions. A file
