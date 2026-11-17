@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-17 - auto-agents 2.2.0: parallel lanes
+
+- `--lane <name>` runs an independent lane of one repository: overlay config `auto-agents/lanes/<name>.json`, its own state, worktree and branch `auto-agents/lane-<name>-<runner>`.
+- `integrate`: lanes start each fresh session from the published target and rebase verified commits onto it before pushing; conflicts go to the next session under a subject-preserving check; rejected pushes integrate again. `integration_commands` regenerate shared generated files; `integration_verify` is a quick check used only when the incoming and lane files are disjoint.
+- `gate_slots`: a shared cap on concurrent gates across lanes. Interrupted integrations are abandoned and retried; an interrupted integration job sends the slice back through the full gate.
+- An independent review found six recovery gaps (crashes inside a rebase, an integration command or a sync; an interrupted integration session; STOP while waiting for a slot; uncounted push rejections); all fixed with tests. Integration commands now survive a crash, and a change to the plan's first line forces the full gate.
+- 14 new tests (94 in all with 2.1.1, 4 skipped) pass on macOS, Python 3.9.6. Lanes on Windows, and throughput with several real lanes: NOT_ASSESSED.
+
 ## 2026-11-16 - Approved intent during execution and recovery
 
 - Bind optional task definitions to the committed owner baseline; validate retained recovery context before launching another worker while permitting legitimate progress/evidence updates.
