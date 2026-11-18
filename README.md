@@ -2,6 +2,8 @@
 
 When promoting a rule across engines, trace repeated reports to their original incident so a copied fix counts once. See [rules distillation](skills/rules-distill/SKILL.md).
 
+Use the [specialist job descriptions](core/instructions/specialist-execution-contract.md#specialist-job-descriptions) when assigning a cross-engine consultation or review.
+
 Chwezi Engine Agents is the coordination package for the Chwezi skills portfolio. It routes a task to the smallest set of engines that owns it and records the handoff between them.
 
 It also keeps every engine's registry entry, plugin manifests, host bridge files and validators consistent. It holds no domain doctrine. Each of the eleven domain engines stays the only source of its own skills. It is for people who maintain one or more Chwezi engine checkouts, and for teams that need the same routing, installation and checks across several engines. The domain engines install and work without it.

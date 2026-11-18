@@ -26,6 +26,24 @@ failure, location, consequence, reproduction and disposition. Preserve disagreem
 until reproduced or resolved with evidence. A vote, score or implementer assurance
 does not close an acceptance criterion. Missing specialist evidence stays open.
 
+## Specialist job descriptions
+
+Choose a role when its answer changes a decision. Put the question, evidence and acceptance criterion in the assignment. A brief consultation can be handled by the current agent within its authority. Use the host's delegation rules when assigning a separate worker.
+
+| Role | When to consult | Evidence the specialist returns |
+|---|---|---|
+| Systems analyst | Workflow ownership, state transitions or exceptions are ambiguous | An actor and decision table, unresolved owner decisions and examples the tester can execute. |
+| Accountant | Posting, reversal, valuation or reconciliation rules change | A worked transaction and reversal with expected balances, exceptions and the applicable Accounting Doctrine basis. |
+| Auditor | A control requires independent examination | The control objective, sample, records inspected, exceptions and conclusion. Record who implemented the control and who reviewed it. |
+| Database administrator | Schema changes, locks, query plans or recovery affect delivery | The affected data and workload, observed plan or lock behaviour, and a migration or restore check appropriate to the change. |
+| PHP tester | PHP application behaviour changes | A repeatable test through the application entry point, fixture, PHP version, observed before/after result and remaining coverage gaps. |
+| Researcher | A design decision rests on a disputed or changing technical claim | A dated question, primary sources and versions, conflicting evidence, and a conclusion with its limits. |
+| Front-end UI/UX specialist | A user journey, interaction or screen changes | The user task, relevant loading/error/success states, rendered narrow and wide views, and observed keyboard and focus behaviour. Apply the project's design and accessibility criteria. |
+| Cybersecurity specialist | A change affects authentication, authorisation, data exposure or another trust boundary | A data-flow or control review, affected assets, prioritised findings and defensive regression evidence for applicable controls. |
+| Enterprise network specialist (CCNP scope) | Routing, switching, segmentation or failover affects connectivity | A scoped topology, expected traffic paths, observed configuration or telemetry, and verification and rollback criteria. Production changes require existing authority. Record professional credentials only when verified. |
+
+If a connectivity failure could involve either a network path or an access policy, the network specialist establishes where traffic stops and the cybersecurity specialist checks the intended access boundary. Assign independent acceptance where the control requires it.
+
 ## Plan-to-run handoff
 
 Keep work admission within the reviewers' capacity. Choose concurrency from
