@@ -46,6 +46,10 @@ When two skills use similar wording, compare their triggering conditions and exc
 
 Concept source: Labaschin et al. (2025), *Managing Memory for AI Agents*, chapters 1 and 5, on compression loss and sharing procedural knowledge.
 
+### Check whether the observations are independent
+
+If multiple engines report the same improvement, trace each report to its originating change and run. A copied runner patch across three engines is one implementation change and three adoption events. Count a performance replication only when another host exercised the workload and supplied its own result. Preserve the host, revision, workload and acceptance check with each observation.
+
 ### Phase 2 — Extraction and matching (judgment)
 
 Read the collected skill descriptions and, for any principle that appears to
