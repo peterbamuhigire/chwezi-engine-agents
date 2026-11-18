@@ -13,6 +13,8 @@ It is effective from 01 November 2026 until further communication is given on th
 It is mandatory for all Chwezi apps and systems.
 The orchestrator sends all Chwezi app and system screen work through it. See [the section below](#chwezi-product-excellence-standard).
 
+The [cross-engine handoff](core/instructions/engine-orchestrator.md) selects specialist guides from the owning engine for business plans, proposals and software delivery.
+
 ## At a glance
 
 - **Twelve repositories.** The catalogue ([`catalog/engines.yaml`](catalog/engines.yaml)) lists eleven public domain engines. This package makes twelve.

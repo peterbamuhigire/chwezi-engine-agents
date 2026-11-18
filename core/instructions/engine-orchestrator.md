@@ -20,6 +20,8 @@ For specialist assignments or unattended plan execution, apply
 capabilities, preserve independent review evidence, and hand off revision-bound recovery
 state. Model names and expert personas do not establish capability or acceptance.
 
+For a business-plan, bid or SDLC handoff, resolve the owning engine from the catalogue. Select the relevant role in its strategy, proposal or software delivery specialist guide. For a document deliverable, use that engine’s editorial guide when commissioning, verification, layout or proof decisions remain. Return one versioned artefact and its acceptance evidence to the lead.
+
 ## Procedure
 
 1. Read the canonical catalog and identify candidate engines by the request's
