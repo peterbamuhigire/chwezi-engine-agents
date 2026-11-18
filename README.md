@@ -136,7 +136,7 @@ It does not hold domain skills, and it writes to an engine only when you ask. `g
 | Install one engine without the plugin system | `node scripts/install-engine.js install --engine <path-to-engine> --scope user --dry-run` |
 | Check the catalogue against its schema | `python3 -X utf8 scripts/validate-contracts.py --schema schemas/engine-catalog.schema.json --instance catalog/engines.yaml` |
 | Read a generated tour of an engine | [`docs/engine-tours/`](docs/engine-tours/) |
-| Find principles that recur across an engine's skills | the [`rules-distill`](skills/rules-distill/SKILL.md) skill |
+| Assess a recurring rule for promotion and check that its exceptions survive | the [`rules-distill`](skills/rules-distill/SKILL.md) skill |
 | Measure how readable a README is | `python3 -X utf8 scripts/readme_metrics.py --check README.md` |
 | Check that a README rewrite lost no link, command or anchor | `python3 -X utf8 scripts/check_readme_preservation.py . main <branch>` |
 | Check that every engine README keeps its `## Capabilities` heading in the first four H2 headings | `python3 -X utf8 scripts/check_readme_contract.py --engines-root <folder>` |

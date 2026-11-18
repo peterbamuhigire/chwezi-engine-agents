@@ -40,6 +40,12 @@ bash scripts/scan-skills.sh <engine-root>   # every SKILL.md path + description
 bash scripts/scan-rules.sh <engine-root>    # every rules/**/*.md path + headings
 ```
 
+### Preserve exceptions during promotion
+
+When two skills use similar wording, compare their triggering conditions and exceptions against the proposed common rule. For example, a retry after a failed read and a retry after a write with an unknown outcome need different evidence. Try the proposed wording against both cases. If it would repeat a possibly completed write, narrow the shared instruction or keep the rules local. Include both source locators and the counterexample in the proposal so the reviewer can reconstruct the decision.
+
+Concept source: Labaschin et al. (2025), *Managing Memory for AI Agents*, chapters 1 and 5, on compression loss and sharing procedural knowledge.
+
 ### Phase 2 — Extraction and matching (judgment)
 
 Read the collected skill descriptions and, for any principle that appears to
