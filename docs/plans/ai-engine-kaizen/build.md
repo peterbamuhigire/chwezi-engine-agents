@@ -1,6 +1,6 @@
 # skills-engine-agents · AI capability implementation
 
-**Current handoff.** Committed task evidence: C01, C02. Remaining: C03, C04.
+**Current handoff.** Committed task evidence: C01, C02, C03. Remaining: C04.
 **Accountable owner** Peter. **Execution role** Coordination maintainer. **Observed starting revision** `9b87cbc19de0c5927f4bb66c959157b32c152777`. Recheck the revision on staging. Apply ordinary commits to the isolated JAD branch. Link a receipt for each criterion. All tasks begin pending.
 
 **User journey** discover owner → transfer contract → accept or return evidence. The owner's named scope covers this repository's own contracts, fixtures and README. D-11 keeps private Development's runner canonical. Do not propagate runner code or add an implicit private dependency.

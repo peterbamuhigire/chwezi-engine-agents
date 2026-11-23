@@ -88,8 +88,17 @@
           "evidence_oracle": "A stopped handoff resumes without accepting a stale test receipt, writing twice or broadening permissions. An unavailable specialist leaves its result NOT_ASSESSED while independent tasks proceed. Legacy coordination remains valid."
         }
       ],
-      "state": "pending",
-      "evidence": []
+      "state": "complete",
+      "evidence": [
+        {
+          "criterion_id": "AC-C03",
+          "path": "docs/plans/ai-engine-kaizen/evidence/C03/receipt.md",
+          "tested_revision": "da8866341cb81534b4ca036f3cde30de8aee6a9e",
+          "sha256": "e096c8972ff715ba5045c65520f9c3165f165278193831b67e074f217aa7a50b",
+          "command": "python -B -m unittest discover -s tests -p test_ai_coordination.py -v",
+          "result": "PASS"
+        }
+      ]
     },
     {
       "id": "C04",
