@@ -122,8 +122,17 @@
           "evidence_oracle": "The classifier journey reaches the documented prediction and outcome checks. The coding journey catches the bad patch through K3. Missing provider evidence stays missing. The coordinator reports which route, producer, artifact and criterion failed if a receipt is removed."
         }
       ],
-      "state": "pending",
-      "evidence": []
+      "state": "complete",
+      "evidence": [
+        {
+          "criterion_id": "AC-C04",
+          "path": "docs/plans/ai-engine-kaizen/evidence/C04/receipt.md",
+          "tested_revision": "edcffa8178f012df6e691b21412cb3f5f4a51708",
+          "sha256": "7b15020725e337e7b075bf6c5cdc5ad68bb1e73d1322d1a006858fb23a4b04e1",
+          "command": "python -B evals/cases/replay_ai_journeys.py and python -B -m unittest discover -s tests -p test_cross_engine_ai_journeys.py -v",
+          "result": "PASS"
+        }
+      ]
     }
   ]
 }
