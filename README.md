@@ -8,7 +8,7 @@ Start with the [engine orchestrator](core/instructions/engine-orchestrator.md) t
 
 - **Twelve repositories.** The catalogue ([`catalog/engines.yaml`](catalog/engines.yaml)) lists eleven public domain engines. This package makes twelve.
 - **One skill and four workflows.** `rules-distill` is the skill; the orchestrator, maintainer, validator and capability negotiator are the workflows.
-- **Tests.** On 2026-11-16 the coordinator suite recorded 378 passed with 24 subtests; the combined runtime recorded 79 passed and one Mac-only skip. Current README-lane checks and their revision are in [the 2026-11-23 record](docs/plans/ai-engine-kaizen/evidence/CR3/receipt.md).
+- **Tests.** The 2026-11-23 disposable Windows checkout recorded 377 passed, 6 skipped and 24 subtests. The 2026-11-16 coordinator and combined-runtime counts remain historical; current checks are in [the CR3 receipt](docs/plans/ai-engine-kaizen/evidence/CR3/receipt.md).
 - **Plan execution.** Private Development owns the canonical JAD runner. This package also has a separate opt-in runner for its own committed plans; it is not part of JAD.
 - **Portfolio checks.** The last recorded drift and hygiene checks are dated 2026-11-16; see [Validation](#validation) and [Open findings](#open-findings) for their scope and later dated history.
 - **Assessment.** The 48.09/100 score is from 31 October 2026. It is historical; F-01 remains open until its separately authorised remediation is verified.

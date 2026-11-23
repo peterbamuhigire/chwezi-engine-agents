@@ -1,7 +1,7 @@
 # CR1 evidence receipt
 
 **Criterion:** AC-CR1  
-**Reviewed source revision:** pending the committed README candidate.  
+**Reviewed source revision:** `b29578464b2bd3281f0a8126fd292acf07030017`.  
 **Artifact:** [claim inventory](claim-inventory.md).  
 **Procedure:** Compare each new material README claim with the owner, local entry point, revision or date, observed result and limits in the inventory. Compare the local build integration summary with the owner-provided report; do not copy private Development's revision or packet.  
 **Result:** PASS for the public-safe claims listed. Synthetic casebook outcomes are labeled as expected fixture behavior. The finance route remains a proxy; live routing is `NOT ASSESSED`. Private Development details remain in its owner record.  

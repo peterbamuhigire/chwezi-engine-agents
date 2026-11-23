@@ -1,7 +1,7 @@
 # CR2 first-use walkthrough
 
 **Date:** 2026-11-23  
-**Source:** README candidate based on coordinator revision `e9adbe7ca9de9c6c238999067f932b79a6c4d7d5`.  
+**Source:** README and walkthrough tested at coordinator revision `b29578464b2bd3281f0a8126fd292acf07030017`.  
 **Method:** Follow each task row from the README to the named local case or oracle, then check its stated outcome and limitation. No hosted service or private data was used.
 
 ## AI-system feature: K1

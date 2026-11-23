@@ -13,7 +13,18 @@
 | JAD runner ownership; private Development owner | The D-11 decision recorded in `docs/plans/ai-engine-kaizen/build.md`; README Capabilities | Decision in the accepted build plan, 2026-11-23 | The README distinguishes this package's optional local runner from JAD's canonical private Development runner. | The private runner's revision and internals are intentionally not reproduced in this public record. |
 | Historical coordinator and portfolio measurements; coordinator maintainer | README Validation, Open findings and the dated source records linked there | Dates remain attached to each historical measurement | The 2026-11-16 test result, 2026-11-16 drift/hygiene results and 2026-10-31 assessment are explicitly dated. | They are not represented as current 2026-11-23 measurements. Current README-lane checks are reported in CR3. |
 
-The owner's local integration report records four build packets as integrated on 2026-11-23. This public record does not reproduce its private Development revision or packet contents. The README makes no claim that hosted inference, production deployment, provider behavior or private operational details were independently verified here.
+## Build receipt basis
+
+The owner-provided local integration report records four build packets as integrated on 2026-11-23. This public-safe summary names the accepted public source revisions but excludes run IDs and all private Development revision or packet details.
+
+| Producer | Tested revision | Local integration status | Public limit |
+|---|---|---|---|
+| `srs-skills` | `65d3f6fd587f96e411e6e18b10889c3661f6f1b3` | Integrated | Synthetic requirements and handoffs; no production project claim. |
+| `chwezi-development-engine` | Private revision retained by owner | Integrated in the owner's local report | No private revision, bundle, prompt, test input or detailed result is published. Public-reader verification is `NOT ASSESSED`. |
+| `chwezi-dev-engine` | `7965083c0dedbfd5c6e52847d1c2db9ddfec3dba` | Integrated | Synthetic examples and public caller checks; no production deployment claim. |
+| `skills-engine-agents` | `e9adbe7ca9de9c6c238999067f932b79a6c4d7d5` | Integrated | Coordination fixtures; no hosted inference or external rollout claim. |
+
+This report is a starting receipt for the README rewrite, not an independent acceptance of a downstream model or service. The README makes no claim that hosted inference, production deployment, provider behavior or private operational details were independently verified here.
 
 ## Verification
 
