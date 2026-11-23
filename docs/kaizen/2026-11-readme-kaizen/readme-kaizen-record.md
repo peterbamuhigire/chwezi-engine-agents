@@ -23,7 +23,11 @@ The README now places `Capabilities` fourth among H2 headings, after the opening
 
 ## Check
 
-See the [CR3 receipt](../../plans/ai-engine-kaizen/evidence/CR3/receipt.md) for exact command strings, source revision, return codes, preservation output, metrics and the disposable-checkout run. The owner-provided route-oracle command reported 77/77 fixture checks but exited 3 because eleven sibling engines were absent; this is `NOT ASSESSED` for live routing, not a pass. A first invocation used the wrong script path and was corrected to `evals/runners/run-contract-evals.py`. The README labels the distinction.
+See the [CR3 receipt](../../plans/ai-engine-kaizen/evidence/CR3/receipt.md) for exact command strings, source revision, return codes, preservation output, metrics and the disposable-checkout run. The owner-provided route-oracle command reported 77/77 fixture checks but exited 1 because eleven sibling engines were absent; this is `NOT ASSESSED` for live routing, not a pass. A first invocation used the wrong script path and was corrected to `evals/runners/run-contract-evals.py`. The README labels the distinction.
+
+### Model release currentness
+
+On 2026-11-23, OpenAI's [model release notes](https://help.openai.com/en/articles/9624314-model-release-notes) listed GPT-6.2 Astra and Sol releases dated 17 November for the API; the [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) also stated availability in Work and Codex preview. Model IDs observed: `gpt-6.2-astra` and `gpt-6.2-sol`. The active Codex account's model picker/catalogue was not available to this lane, so account-level availability is `NOT_ASSESSED`; the tool's delegation choices are not treated as account availability. No model comparison for this README task measured quality, latency or cost. Decision: no model policy change or recommendation is made in this documentation lane; current account/runtime evaluation remains `NOT_ASSESSED`.
 
 ## Teach and re-measure
 

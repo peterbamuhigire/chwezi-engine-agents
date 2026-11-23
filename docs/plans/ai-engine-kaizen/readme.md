@@ -1,3 +1,5 @@
+STATUS: DONE
+
 # skills-engine-agents · Post-implementation README rewrite
 
 **Accountable owner** Peter. **Execution role** Coordination maintainer. **Observed starting revision** `9b87cbc19de0c5927f4bb66c959157b32c152777`. Recheck the revision on staging. Apply ordinary commits to the isolated JAD branch. Link a receipt for each criterion. All tasks begin pending.
@@ -48,4 +50,4 @@ Keep an independent test oracle and the frozen synthetic case IDs. Use original 
 
 For interruption, inspect JAD status, branch, plan and the verification receipt. A matching digest can identify an existing artifact. Reconcile partial effects by their operation ID. Resume the existing lane after confirming the saved intent. Never reissue an uncertain external action. A gate failure retains its log and remains failed until repaired and rerun. Continue independent tasks. Enter a blocked result only if no permitted work remains.
 
-**Handoff at staging.** Current task is CR1. No implementation or README evidence has been submitted. Update the next-ready IDs, blockers, tested revision and receipt paths after each slice. Once all criteria genuinely pass, place `STATUS: DONE` on the first line and commit the completion candidate and complete sidecar. The independent JAD final verification must still succeed. Local integration and cross-engine receipts are recorded separately.
+**Progress and handoff.** CR1, CR2 and CR3 are complete for tested README revision `b9005a848a87d530ec260a869f187f6fb3020304`; receipts are `evidence/CR1/receipt.md`, `evidence/CR2/walkthrough.md` and `evidence/CR3/receipt.md`. The sidecar contains criterion-level evidence references and limits. This is the completion candidate; independent JAD verification and local integration are still separate gates. Local integration and cross-engine receipts are recorded separately.

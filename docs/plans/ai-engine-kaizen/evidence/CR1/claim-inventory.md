@@ -26,6 +26,18 @@ The owner-provided local integration report records four build packets as integr
 
 This report is a starting receipt for the README rewrite, not an independent acceptance of a downstream model or service. The README makes no claim that hosted inference, production deployment, provider behavior or private operational details were independently verified here.
 
+## Frozen artifact digests
+
+SHA-256 values are for the checked-in UTF-8 fixture bytes at the tested coordinator source revision `b9005a848a87d530ec260a869f187f6fb3020304`:
+
+| Case or artifact | Path | SHA-256 |
+|---|---|---|
+| K1 and K3 casebook | `docs/plans/ai-engine-kaizen/casebook.md` | `cb00e249cef5153b0926a03affe42e7f901d7ab906c5d52c92b656ed3bcf8921` |
+| Non-AI route oracle | `evals/cases/033-route-ifrs-leases.yaml` | `444fc1fc363475d227439390608f0923b189ecf65c8cc2a9257dfa49aecc86ed` |
+| Non-AI route task | `evals/fixtures/033-route-ifrs-leases/task.md` | `9874213958c42743ff16a8aa175a283b8a3251ca22e1c0747bc94a30cb05766e` |
+| Ordinary handoff fixture | `tests/fixtures/valid-handoff.yaml` | `b5bcf7092d2d6f1d54cd40f96b12f30fde429b796796612510598bba29bea434` |
+| Reviewer-owned evidence expectation | `evals/contracts/ai-examples/expected-import.json` | `85e84694047cc22bd8c938dc3c46b2ac41dc164e35daa851886635a46129f024` |
+
 ## Verification
 
 - Source inventory: README, the plan casebook and build plan, handoff card, schema, fixture, validator and existing dated records.
