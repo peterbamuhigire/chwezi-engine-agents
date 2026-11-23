@@ -20,8 +20,17 @@
           "evidence_oracle": "A legacy handoff remains valid. Positive data, code and evaluation handoffs are parsed. A wrong digest, unknown revision or missing evidence yields a blocked claim and a specific next action. A schema-valid envelope alone cannot mark a task accepted."
         }
       ],
-      "state": "pending",
-      "evidence": []
+      "state": "complete",
+      "evidence": [
+        {
+          "criterion_id": "AC-C01",
+          "path": "docs/plans/ai-engine-kaizen/evidence/C01/receipt.md",
+          "tested_revision": "fc07266f80c1c595e9b9635e1aaa8d812a42249b",
+          "sha256": "3e648d66cbc188259861e3c1d23ebae0cefe43676c97816ae981055df52f6ca4",
+          "command": "python -B scripts/validate-contracts.py --schema schemas/handoff.schema.json --instance tests/fixtures/valid-handoff.yaml and python -B scripts/validate-contracts.py --schema schemas/handoff.schema.json --instance evals/contracts/ai-examples/handoff.json and python -B evals/contracts/ai_evidence.py evals/contracts/ai-examples/handoff.json evals/contracts/ai-examples/expected-import.json",
+          "result": "PASS"
+        }
+      ]
     },
     {
       "id": "C02",
