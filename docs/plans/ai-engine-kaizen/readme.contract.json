@@ -25,7 +25,7 @@
           "criterion_id": "AC-CR1",
           "path": "docs/plans/ai-engine-kaizen/evidence/CR1/receipt.md",
           "tested_revision": "b9005a848a87d530ec260a869f187f6fb3020304",
-          "sha256": "8a69452f5a241c2a1b0a77dfa5b9b2a0a6a56b7723511ed619194fdf5467be25",
+          "sha256": "df8212ff1ac85c7b28e83d817da7d95c889fdac0b243ac510728f65265c7f18f",
           "command": "Compare each README front-door claim with the owner, local entry point, source revision, frozen fixture digests, observed result, environment and limits in the claim inventory.",
           "result": "PASS"
         }
@@ -57,7 +57,7 @@
           "criterion_id": "AC-CR2",
           "path": "docs/plans/ai-engine-kaizen/evidence/CR2/walkthrough.md",
           "tested_revision": "b9005a848a87d530ec260a869f187f6fb3020304",
-          "sha256": "5deeb1c3a45b2c598dc9cf7ffb1aa59c938bd915515b3e0f10554d7a96159528",
+          "sha256": "1899c4e6e4a98375a6a5b27e67b0af7e20c4c4df674aa59006a9edccc8faacc0",
           "command": "Independent first-use walkthrough: follow README task rows, replay classifier and coding evidence journeys, validate the ordinary handoff fixture, and inspect the explicit non-AI route limitation.",
           "result": "PASS"
         }
@@ -89,7 +89,7 @@
           "criterion_id": "AC-CR3",
           "path": "docs/plans/ai-engine-kaizen/evidence/CR3/receipt.md",
           "tested_revision": "b9005a848a87d530ec260a869f187f6fb3020304",
-          "sha256": "4532704b3a47f4fd224ac4841126718c5a92a34fe37672e8ac3b442af38e72d2",
+          "sha256": "f9820c2e39463ad039fa6762842bf8107a46eae3b1555443171d64c38763f79a",
           "command": "README metrics, preservation, local Markdown targets, documented schema and route examples, disposable-checkout pytest, and owner-reported independent reader result; see receipt for exact commands and outcomes.",
           "result": "PASS"
         }
