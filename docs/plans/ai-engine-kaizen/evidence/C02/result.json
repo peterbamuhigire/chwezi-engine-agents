@@ -1,0 +1,101 @@
+{
+  "rows": [
+    {
+      "id": "train",
+      "family": "classifier",
+      "ranked": [
+        "predict"
+      ],
+      "label_source": "docs/plans/ai-engine-kaizen/casebook.md section K1",
+      "split": "development",
+      "route_match": true,
+      "reciprocal_rank": 1.0,
+      "execution": "FAIL"
+    },
+    {
+      "id": "alias",
+      "family": "classifier",
+      "ranked": [
+        "predict"
+      ],
+      "label_source": "docs/plans/ai-engine-kaizen/casebook.md section K1",
+      "split": "development",
+      "route_match": true,
+      "reciprocal_rank": 1.0,
+      "execution": "NOT_ASSESSED"
+    },
+    {
+      "id": "patch",
+      "family": "code",
+      "ranked": [
+        "review"
+      ],
+      "label_source": "docs/plans/ai-engine-kaizen/casebook.md section K3",
+      "split": "development",
+      "route_match": true,
+      "reciprocal_rank": 1.0,
+      "execution": "PASS"
+    },
+    {
+      "id": "incident",
+      "family": "restore",
+      "ranked": [
+        "recover"
+      ],
+      "label_source": "docs/plans/ai-engine-kaizen/casebook.md section K4",
+      "split": "development",
+      "route_match": true,
+      "reciprocal_rank": 1.0,
+      "execution": "NOT_ASSESSED"
+    },
+    {
+      "id": "vague",
+      "family": "ambiguous",
+      "ranked": [],
+      "label_source": "catalog/engines.yaml (no engineering intent specified)",
+      "split": "development",
+      "route_match": true,
+      "reciprocal_rank": null,
+      "execution": "NOT_ASSESSED"
+    },
+    {
+      "id": "outside",
+      "family": "unrelated",
+      "ranked": [],
+      "label_source": "catalog/engines.yaml (music arrangement outside listed engine purposes)",
+      "split": "development",
+      "route_match": true,
+      "reciprocal_rank": null,
+      "execution": "NOT_ASSESSED"
+    },
+    {
+      "id": "deny",
+      "family": "held-out-empty",
+      "ranked": [],
+      "label_source": "catalog/engines.yaml (explicitly empty permitted set)",
+      "split": "held-out",
+      "route_match": true,
+      "reciprocal_rank": null,
+      "execution": "NOT_ASSESSED"
+    },
+    {
+      "id": "held",
+      "family": "held-out-grounding",
+      "ranked": [
+        "rag"
+      ],
+      "label_source": "docs/plans/ai-engine-kaizen/casebook.md section K2",
+      "split": "held-out",
+      "route_match": true,
+      "reciprocal_rank": 1.0,
+      "execution": "NOT_ASSESSED"
+    }
+  ],
+  "request_count": 8,
+  "family_count": 7,
+  "route_matches": 8,
+  "abstentions": 3,
+  "task_passed": 1,
+  "task_assessed": 2,
+  "rank_control": 0.5
+}

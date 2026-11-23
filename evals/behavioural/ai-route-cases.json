@@ -1,0 +1,121 @@
+{
+  "owners": {
+    "predict": "classify messages by urgency support ticket text classification scoring",
+    "review": "patch review retry duplicate history and regression",
+    "recover": "restore model release incident bundle rollback",
+    "rag": "grounded answer passage retrieval and citations"
+  },
+  "queries": [
+    {
+      "id": "train",
+      "family": "classifier",
+      "request": "classify ticket messages by urgency",
+      "owner": "predict",
+      "permitted": [
+        "predict",
+        "review",
+        "recover",
+        "rag"
+      ],
+      "expected_output": "urgent",
+      "observed_output": "routine",
+      "label_source": "docs/plans/ai-engine-kaizen/casebook.md section K1",
+      "split": "development"
+    },
+    {
+      "id": "alias",
+      "family": "classifier",
+      "request": "classify messages by urgency for support",
+      "owner": "predict",
+      "permitted": [
+        "predict",
+        "review",
+        "recover",
+        "rag"
+      ],
+      "label_source": "docs/plans/ai-engine-kaizen/casebook.md section K1",
+      "split": "development"
+    },
+    {
+      "id": "patch",
+      "family": "code",
+      "request": "review patch for duplicate history",
+      "owner": "review",
+      "permitted": [
+        "predict",
+        "review",
+        "recover",
+        "rag"
+      ],
+      "expected_output": 1,
+      "observed_output": 1,
+      "label_source": "docs/plans/ai-engine-kaizen/casebook.md section K3",
+      "split": "development"
+    },
+    {
+      "id": "incident",
+      "family": "restore",
+      "request": "restore bundle after incident",
+      "owner": "recover",
+      "permitted": [
+        "predict",
+        "review",
+        "recover",
+        "rag"
+      ],
+      "label_source": "docs/plans/ai-engine-kaizen/casebook.md section K4",
+      "split": "development"
+    },
+    {
+      "id": "vague",
+      "family": "ambiguous",
+      "request": "help please",
+      "owner": null,
+      "permitted": [
+        "predict",
+        "review",
+        "recover",
+        "rag"
+      ],
+      "label_source": "catalog/engines.yaml (no engineering intent specified)",
+      "split": "development"
+    },
+    {
+      "id": "outside",
+      "family": "unrelated",
+      "request": "arrange a viola concerto",
+      "owner": null,
+      "permitted": [
+        "predict",
+        "review",
+        "recover",
+        "rag"
+      ],
+      "label_source": "catalog/engines.yaml (music arrangement outside listed engine purposes)",
+      "split": "development"
+    },
+    {
+      "id": "deny",
+      "family": "held-out-empty",
+      "request": "retrieval of passages",
+      "owner": null,
+      "permitted": [],
+      "label_source": "catalog/engines.yaml (explicitly empty permitted set)",
+      "split": "held-out"
+    },
+    {
+      "id": "held",
+      "family": "held-out-grounding",
+      "request": "find citations in a grounded answer",
+      "owner": "rag",
+      "permitted": [
+        "predict",
+        "review",
+        "recover",
+        "rag"
+      ],
+      "label_source": "docs/plans/ai-engine-kaizen/casebook.md section K2",
+      "split": "held-out"
+    }
+  ]
+}
