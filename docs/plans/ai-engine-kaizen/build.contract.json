@@ -54,8 +54,17 @@
           "evidence_oracle": "For ranked IDs X,Y with only Y relevant, reciprocal rank is 0.5. Empty permitted corpus yields the specified no-route result. A correct top route followed by an incorrect output counts as a routing success and execution failure, with denominators recorded. Deduplicating query families changes the denominator explicitly. The report never converts a retrieval proxy into a live execution pass."
         }
       ],
-      "state": "pending",
-      "evidence": []
+      "state": "complete",
+      "evidence": [
+        {
+          "criterion_id": "AC-C02",
+          "path": "docs/plans/ai-engine-kaizen/evidence/C02/receipt.md",
+          "tested_revision": "511ae4fd250f5cb5d4047d6e108e9dfd6ef12729",
+          "sha256": "395307b2e53a19c6bac520482741b09fe5329de0cd3c628193c3883e9f1e48db",
+          "command": "python -B evals/behavioural/ai_routes.py",
+          "result": "PASS"
+        }
+      ]
     },
     {
       "id": "C03",
