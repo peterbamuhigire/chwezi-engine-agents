@@ -1,0 +1,11 @@
+{
+  "tested_revision": "65d3f6fd587f96e411e6e18b10889c3661f6f1b3",
+  "producer": "srs-skills",
+  "scope": "Synthetic local behavior. External provider not assessed.",
+  "case_outcomes": {
+    "K1": "CAP-2 rejects candidate-v1. CAP-ALL requires further evidence.",
+    "K2": "P2 rank one passes retrieval. A five-day answer fails support.",
+    "K3": "One committed effect per event; distinct E8 is retained.",
+    "K4": "Restore the entire G1 bundle and compare the eligible response."
+  }
+}
