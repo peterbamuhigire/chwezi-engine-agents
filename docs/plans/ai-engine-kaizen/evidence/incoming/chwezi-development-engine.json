@@ -1,0 +1,87 @@
+{
+  "producer": "chwezi-development-engine",
+  "tested_revision": "ed0f781eaf83e6b90790d62ef09d4bcfdd3d37bf",
+  "gates_passed": 4,
+  "cases": [
+    {
+      "id": "K1",
+      "revision": "tickets-v1",
+      "outcome": "CAP-2 rejects candidate-v1. CAP-ALL requires further evidence.",
+      "fixture_sha256": "301e269039a03074d5e0f294d2ed89b901291f7b2c815b9088b8e32b95f2ac82",
+      "evaluation_sha256": "1e2102901d1405d3393429e5277a4b4129f5170dbfad9436859099b197b2acbf"
+    },
+    {
+      "id": "K2",
+      "revision": "atlas-v2",
+      "outcome": "P2 rank one passes retrieval. A five-day answer fails support.",
+      "fixture_sha256": "301e269039a03074d5e0f294d2ed89b901291f7b2c815b9088b8e32b95f2ac82",
+      "evaluation_sha256": "1e2102901d1405d3393429e5277a4b4129f5170dbfad9436859099b197b2acbf"
+    },
+    {
+      "id": "K3",
+      "revision": "synthetic-event-store-v1",
+      "outcome": "One committed effect per event; distinct E8 is retained.",
+      "fixture_sha256": "a7bf2355f6c78a8449e55e3e9dd5fd478e24d829e13518803b3d9a2946967cce",
+      "evaluation_sha256": "a7bf2355f6c78a8449e55e3e9dd5fd478e24d829e13518803b3d9a2946967cce"
+    },
+    {
+      "id": "K4",
+      "revision": "G1",
+      "outcome": "Restore the entire G1 bundle and compare the eligible response.",
+      "fixture_sha256": "9403bf82be1150ae6af4df8c22f647f44cc2db129184a7075480549588e893e0",
+      "evaluation_sha256": "9403bf82be1150ae6af4df8c22f647f44cc2db129184a7075480549588e893e0"
+    }
+  ],
+  "outcome": "Private AI-system and coding examples verified locally; only synthetic attestations are public",
+  "receipts": [
+    {
+      "criterion_id": "AC-D01",
+      "tested_revision": "628c1365475647d9d08f90249610fcf0044092cb",
+      "sha256": "56b45c31f4b4fc9fdc606b267172010661f6d73cbd22525c91d07b0334edc655",
+      "result": "PASS"
+    },
+    {
+      "criterion_id": "AC-D02",
+      "tested_revision": "62fde92f78ab820a0671a45881a2ae308f1ecd77",
+      "sha256": "82b5e96e92dc0df54946e7978bc1d3e6c4461306824a5fa7a92639e04aff2be1",
+      "result": "PASS"
+    },
+    {
+      "criterion_id": "AC-D03",
+      "tested_revision": "6762bd7ec19ffe1b462f7b3dc168891092fdffd2",
+      "sha256": "ba17f185334e8f0fc5e6a9cc8cf51ada8d1e007e51ba6219645836162548fa97",
+      "result": "PASS"
+    },
+    {
+      "criterion_id": "AC-D04",
+      "tested_revision": "e69a2badfaf811da5a67815a850ac96d8b667a32",
+      "sha256": "0f4746a70dc5a2b059742159088d49ba2c923c97efe78969ea1b4e3c768b93c7",
+      "result": "PASS"
+    },
+    {
+      "criterion_id": "AC-D05",
+      "tested_revision": "b692432122bddfadfebb7c0d64272db89444b04e",
+      "sha256": "3401bcbc5995501cf31769369e71c779a3f93e8b9058021ae68122d678b7c6d1",
+      "result": "PASS"
+    },
+    {
+      "criterion_id": "AC-D06",
+      "tested_revision": "bb9dc7c4763266d82788067938d11c3150f500cf",
+      "sha256": "e4f7f9a4f2987275fd97f7937fe30d0843aaea1835bd4e74116ef650901745a9",
+      "result": "PASS"
+    },
+    {
+      "criterion_id": "AC-D07",
+      "tested_revision": "7f57db7377dbd1147bbf7066bcb49f6a87caf3b5",
+      "sha256": "022539ea4ff8340e11a24f5a582f4a651874755371e1ee08f95010bb7dcc344a",
+      "result": "PASS"
+    },
+    {
+      "criterion_id": "AC-D08",
+      "tested_revision": "3810df002a5175c8d785839ba1280b77b8ecc912",
+      "sha256": "a37c7a51fc9ec071740a39ba4c3660bce21b6e38c38243e806ffc1b63ca5e994",
+      "result": "PASS"
+    }
+  ],
+  "limits": "Synthetic local work only. Provider inference, production performance and external rollout remain unverified."
+}
