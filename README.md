@@ -1,30 +1,17 @@
 # Chwezi Engine Agents
 
-When promoting a rule across engines, trace repeated reports to their original incident so a copied fix counts once. See [rules distillation](skills/rules-distill/SKILL.md).
+Chwezi Engine Agents routes portfolio work to the smallest set of engines that owns it and records handoffs for people who maintain one or more engine checkouts. Each domain engine remains the source of its own skills and doctrine; this package provides shared catalogue, installation, host and validation tools.
 
-Use the [specialist job descriptions](core/instructions/specialist-execution-contract.md#specialist-job-descriptions) when assigning a cross-engine consultation or review.
-
-Chwezi Engine Agents is the coordination package for the Chwezi skills portfolio. It routes a task to the smallest set of engines that owns it and records the handoff between them.
-
-It also keeps every engine's registry entry, plugin manifests, host bridge files and validators consistent. It holds no domain doctrine. Each of the eleven domain engines stays the only source of its own skills. It is for people who maintain one or more Chwezi engine checkouts, and for teams that need the same routing, installation and checks across several engines. The domain engines install and work without it.
-
-**Design standard.** The Chwezi Product Excellence Standard is the design style chosen by Lead Developer Peter Bamuhigire and the Chwezi Core Systems design team.
-It is effective from 01 November 2026 until further communication is given on the matter.
-It is mandatory for all Chwezi apps and systems.
-The orchestrator sends all Chwezi app and system screen work through it. See [the section below](#chwezi-product-excellence-standard).
-
-The [cross-engine handoff](core/instructions/engine-orchestrator.md) selects specialist guides from the owning engine for business plans, proposals and software delivery.
+Start with the [engine orchestrator](core/instructions/engine-orchestrator.md) to choose owners, then use the [handoff contract](core/contracts/handoff.yaml) to carry scope, sequence, evidence and next action. The [specialist job descriptions](core/instructions/specialist-execution-contract.md#specialist-job-descriptions) define consultation and review roles.
 
 ## At a glance
 
 - **Twelve repositories.** The catalogue ([`catalog/engines.yaml`](catalog/engines.yaml)) lists eleven public domain engines. This package makes twelve.
-- **One skill and four workflows.** The skill is `rules-distill`. The workflows are the engine orchestrator, the engine maintainer, the engine validator and the capability negotiator.
-- **Tests.** On 2026-11-16, the coordinator suite gives 378 passed with 24 subtests. The combined runtime ran 80 tests on Windows: 79 passed and 1 Mac-only skip. Earlier results remain in [Validation](#validation) as dated history.
-- **Local plan runner.** `auto-agents/` now contains a bounded PowerShell and Command Prompt launcher, durable supervision, checkpoints, recovery controls and an optional plan contract. It runs only the committed plan selected in local configuration. Smoke checks pass; a real implementation run, provider quota behavior and power-cut recovery remain `NOT_ASSESSED`.
-- **Managed release.** Release `2.1.1` covers 23 managed files in the canonical runtime and its two community engine copies.
-- **Drift check.** `render_host_files.py --check` exits 0 with zero findings on 2026-11-16 after the authorised commits and pin refresh. See [Open findings](#open-findings) for other backlog items.
-- **Hygiene check.** The full 12-repository scan exits 0 with zero findings on 2026-11-16. Local settings remain on disk and are excluded from tracking.
-- **Score.** 48.09 out of 100 (raw and capped) on 31 October 2026, against a target of 95. One critical finding, F-01, is open.
+- **One skill and four workflows.** `rules-distill` is the skill; the orchestrator, maintainer, validator and capability negotiator are the workflows.
+- **Tests.** The 2026-11-23 disposable Windows checkout recorded 377 passed, 6 skipped and 24 subtests. The 2026-11-16 coordinator and combined-runtime counts remain historical; current checks are in [the CR3 receipt](docs/plans/ai-engine-kaizen/evidence/CR3/receipt.md).
+- **Plan execution.** Private Development owns the canonical JAD runner. This package also has a separate opt-in runner for its own committed plans; it is not part of JAD.
+- **Portfolio checks.** The last recorded drift and hygiene checks are dated 2026-11-16; see [Validation](#validation) and [Open findings](#open-findings) for their scope and later dated history.
+- **Assessment.** The 48.09/100 score is from 31 October 2026. It is historical; F-01 remains open until its separately authorised remediation is verified.
 
 ## Start here
 
@@ -49,10 +36,13 @@ The [cross-engine handoff](core/instructions/engine-orchestrator.md) selects spe
    python3 -X utf8 scripts/render_host_files.py --check --engines-root <folder>
    ```
 
-   On 2026-11-06 it exits 1 with 19 findings (30 on 2026-10-31). [Open findings](#open-findings) explains each group.
+   The latest dated run exited 0 with zero findings on 2026-11-16; earlier drift results remain in [Validation](#validation). [Open findings](#open-findings) explains other outstanding groups.
 
 ## Contents
 
+- [At a glance](#at-a-glance)
+- [Start here](#start-here)
+- [Capabilities](#capabilities)
 - [Chwezi Product Excellence Standard](#chwezi-product-excellence-standard)
 - [What it is and who runs it](#what-it-is-and-who-runs-it)
 - [Find the right tool](#find-the-right-tool)
@@ -74,6 +64,23 @@ The [cross-engine handoff](core/instructions/engine-orchestrator.md) selects spe
   - [Scores and measures](#scores-and-measures)
 - [References](#references)
 - [Contributing, author and licence](#contributing-author-and-licence)
+
+## Capabilities
+
+Use the task table to start a handoff. The examples use frozen synthetic cases; they teach the contract and do not establish production performance.
+
+| Task | Start here | Check the result |
+|---|---|---|
+| Specify an AI feature | Route the request with the [orchestrator](core/instructions/engine-orchestrator.md); follow the [K1 classifier case](docs/plans/ai-engine-kaizen/casebook.md#k1--dispatch-support-tickets-under-a-fixed-review-capacity). | Under the two-review profile, reject the candidate's five alerts. The fixture's larger review profile still needs owner and representative evidence. |
+| Review an AI-assisted code change | Use the [K3 idempotent import case](docs/plans/ai-engine-kaizen/casebook.md#k3--fix-duplicate-delivery-in-an-existing-software-feature) and record the engineering and reviewer handoffs in the [AI change handoff](docs/operations/ai-change-handoff.md). | Replaying E7 leaves one history entry; distinct E8 adds another. The casebook lists conflict, recovery, legacy-record and concurrency checks. |
+| Validate an ordinary handoff | Run `python3 -X utf8 scripts/validate-contracts.py --schema schemas/handoff.schema.json --instance tests/fixtures/valid-handoff.yaml`. | The envelope passes schema validation. Evidence and revision acceptance still need the separate reviewer check below. |
+| Route non-AI finance work | Follow the [IFRS 16 lease route case](evals/fixtures/033-route-ifrs-leases/task.md) and verify it against the [route oracle](evals/cases/033-route-ifrs-leases.yaml). | The expected first skill is `chwezi-accounting-doctrine/ifrs-leases`. The deterministic fixture is a proxy; this checkout lacks that sibling engine, so live routing is `NOT ASSESSED`. |
+
+For a broader tool map, see [Find the right tool](#find-the-right-tool), [Install and update](#install-and-update) and [Validation](#validation). The AI evaluation harness is a retrieval and fixture proxy, not a live task-execution result.
+
+Evidence needs a separate reviewer check: compare its digest, case and revisions with the reviewer-owned expectation in the [C01 example](docs/plans/ai-engine-kaizen/evidence/C01/receipt.md). A schema pass alone does not accept the evidence claim.
+
+On resumption, re-read evidence and use the event or promotion ID from the [K3/K4 handoff](docs/operations/ai-change-handoff.md); return stale evidence for reconciliation. The plan runner in this package is opt-in and local. **JAD's canonical runner belongs to private Development**; this package neither copies nor silently invokes it.
 
 ## Chwezi Product Excellence Standard
 
@@ -107,7 +114,7 @@ The package has nine functions:
 - contract and behavioural evaluation;
 - a Model Context Protocol (MCP) server with six tools, one of them an approval-gated fast-forward pull;
 - deterministic engine tours and skill-graph reports;
-- a local, opt-in unattended plan runner with durable supervision, separate activity and completion gates, checkpoints, recovery and descriptive status;
+- a local, opt-in plan runner for committed local plans, with durable supervision, separate activity and completion gates, checkpoints, recovery and descriptive status;
 - a destructive-command safety hook.
 
 A maintainer runs it on a workstation that holds several engine checkouts. CI runs a subset of the same checks.
@@ -156,8 +163,9 @@ Every command above only reads, except `refresh_released_commits.py --write` (it
 - **The locator.** [`scripts/lib/engine_roots.py`](scripts/lib/engine_roots.py) finds each checkout from repeatable `--engines-root` folders and the `CHWEZI_ENGINES_ROOT` variable. It matches the catalogue `path`, repository, id or `aliases` (former folder names).
 - **Missing engines.** A missing or ambiguous engine is `NOT ASSESSED`, never a pass.
 - **The orchestrator.** It picks the smallest set of engines for a task. It records ownership, sequence, evidence boundaries, blockers and the next action in a handoff record.
+- **On-demand routing.** The catalogue is an index, not an activation switch. A maintainer resolves the required checkout and reads its router; community routes stay on demand.
 - **The local plan runner.** An operator selects a committed project plan and optional JSON contract in `auto-agents/config.json`; `run.ps1` and `run.cmd` expose readiness, run, watch, status, stop, cancel, resume and recover actions. Readiness, activity checkpoints and verified completion are distinct. An optional plan contract checks structure and evidence references; it does not prove semantic acceptance. Logon restart registration is opt-in and is not installed by default.
-- **Recovery boundary.** Replay is controlled by the configured local-only policy. The shipped smoke checks cover launcher and bounded CLI behavior; they do not establish a completed real implementation, provider quota reset, or power-cut recovery in production conditions.
+- **JAD ownership.** The JAD plan runner is canonically owned by private Development. This package's separate local runner remains opt-in. It is not a JAD dependency and does not establish provider quota reset, production implementation quality or power-cut recovery.
 - **The checks.** Each check reads the engines and reports. A check that cannot run exits 3. Write actions are separate flags and refuse when an engine is dirty or off `main`.
 - **The safety rules.** [`core/policies/safety-boundaries.md`](core/policies/safety-boundaries.md) is binding: read-only by default, approval for writes, and the destructive-command hook in `hooks/`.
 

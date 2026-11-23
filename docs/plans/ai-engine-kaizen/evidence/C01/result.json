@@ -1,0 +1,8 @@
+{
+  "producer": "public-engineering",
+  "consumer": "reviewer",
+  "case_id": "K3",
+  "criterion": "AC-K3",
+  "status": "ACCEPTED",
+  "next_action": "Inspect persisted history and accept the reviewed change."
+}

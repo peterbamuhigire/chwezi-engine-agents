@@ -21,6 +21,8 @@ The domain prompt compilation contract and the portfolio craft standard carry re
 
 | Path | What it holds |
 |---|---|
+| [`plans/ai-engine-kaizen/`](plans/ai-engine-kaizen/readme.md) | The AI-system and assisted-code coordination cases, build plan and README acceptance evidence. Public records contain synthetic cases and safe receipt summaries; private Development bundles and inputs stay outside this repository. |
+| [`kaizen/2026-11-readme-kaizen/`](kaizen/2026-11-readme-kaizen/readme-kaizen-record.md) | The 23 November 2026 README cycle: measured baseline, selection, front-door changes, compatibility checks and remaining limits. |
 | [`kaizen/2026-10-readme-kaizen/`](kaizen/2026-10-readme-kaizen/readme-kaizen-record.md) | The 31 October 2026 README readability cycle: baseline, selection, checks, conventions and results for this package's README. It publishes no score. |
 | [`kaizen/2026-10-engine-kaizen-pass-2/`](kaizen/2026-10-engine-kaizen-pass-2/) | The 31 October 2026 cycle: scope and evidence, baseline scorecard, backlog, experiment log, validation record, [final report](kaizen/2026-10-engine-kaizen-pass-2/05-final-report.md), [next cycle](kaizen/2026-10-engine-kaizen-pass-2/06-next-cycle.md), [documentation follow-ups](kaizen/2026-10-engine-kaizen-pass-2/07-docs-followups.md) and raw logs under `evidence/`. |
 | [`kaizen/2026-10-engine-kaizen/`](kaizen/2026-10-engine-kaizen/) | The 29 October 2026 cycle: scope, baseline scorecard and backlog. It stopped after its second commit and has no final report. |

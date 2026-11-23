@@ -1,0 +1,14 @@
+{
+  "chwezi-dev-engine": {
+    "canonical_sha256": "75c4af4d7d568460c015eeb8880b111639f2872b5af60228d0411e23349a4082",
+    "revision": "7965083c0dedbfd5c6e52847d1c2db9ddfec3dba"
+  },
+  "chwezi-development-engine": {
+    "canonical_sha256": "4a476078d50c9c67f556fda86ebdb85315327be9e4e734e52f4632595989d345",
+    "revision": "ed0f781eaf83e6b90790d62ef09d4bcfdd3d37bf"
+  },
+  "srs-skills": {
+    "canonical_sha256": "64841fe6b6ba05f98704af95d0392a49374b69325d11124690c7bf0bc0ea12f4",
+    "revision": "65d3f6fd587f96e411e6e18b10889c3661f6f1b3"
+  }
+}

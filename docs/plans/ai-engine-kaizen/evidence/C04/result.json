@@ -1,0 +1,81 @@
+{
+  "journeys": {
+    "classifier": {
+      "steps": [
+        {
+          "route": "classifier",
+          "producer": "srs-skills",
+          "artifact": "srs-skills.json",
+          "criterion": "AC-S01",
+          "tested_revision": "65d3f6fd587f96e411e6e18b10889c3661f6f1b3",
+          "evidence_sha256": "671f01babaa9b3de9ebfd0b620660f86c614bb1ebdbf911c7d9afa3921959fbb",
+          "expected_outcome": "CAP-2 rejects candidate-v1. CAP-ALL requires further evidence.",
+          "status": "ACCEPTED",
+          "next_action": "Use the tested local result."
+        },
+        {
+          "route": "classifier",
+          "producer": "chwezi-development-engine",
+          "artifact": "chwezi-development-engine.json",
+          "criterion": "AC-D01",
+          "tested_revision": "ed0f781eaf83e6b90790d62ef09d4bcfdd3d37bf",
+          "evidence_sha256": "56b45c31f4b4fc9fdc606b267172010661f6d73cbd22525c91d07b0334edc655",
+          "expected_outcome": "CAP-2 rejects candidate-v1. CAP-ALL requires further evidence.",
+          "status": "ACCEPTED",
+          "next_action": "Use the tested local result."
+        },
+        {
+          "route": "classifier",
+          "producer": "chwezi-dev-engine",
+          "artifact": "chwezi-dev-engine.json",
+          "criterion": "AC-E01",
+          "tested_revision": "7965083c0dedbfd5c6e52847d1c2db9ddfec3dba",
+          "evidence_sha256": "dcad56a836bb40353a592a238703badececdadfe4718af19393be85eced7b77b",
+          "expected_outcome": "CAP-2 rejects candidate-v1. CAP-ALL requires further evidence.",
+          "status": "ACCEPTED",
+          "next_action": "Use the tested local result."
+        }
+      ],
+      "status": "ACCEPTED"
+    },
+    "coding": {
+      "steps": [
+        {
+          "route": "coding",
+          "producer": "srs-skills",
+          "artifact": "srs-skills.json",
+          "criterion": "AC-S04",
+          "tested_revision": "65d3f6fd587f96e411e6e18b10889c3661f6f1b3",
+          "evidence_sha256": "91acfeaaa5b5da0dab5af3f0ead998c1c80a58823e2f6bb7c5d1cc98e6561668",
+          "expected_outcome": "One committed effect per event; distinct E8 is retained.",
+          "status": "ACCEPTED",
+          "next_action": "Use the tested local result."
+        },
+        {
+          "route": "coding",
+          "producer": "chwezi-development-engine",
+          "artifact": "chwezi-development-engine.json",
+          "criterion": "AC-D07",
+          "tested_revision": "ed0f781eaf83e6b90790d62ef09d4bcfdd3d37bf",
+          "evidence_sha256": "022539ea4ff8340e11a24f5a582f4a651874755371e1ee08f95010bb7dcc344a",
+          "expected_outcome": "One committed effect per event; distinct E8 is retained.",
+          "status": "ACCEPTED",
+          "next_action": "Use the tested local result."
+        },
+        {
+          "route": "coding",
+          "producer": "chwezi-dev-engine",
+          "artifact": "chwezi-dev-engine.json",
+          "criterion": "AC-E05",
+          "tested_revision": "7965083c0dedbfd5c6e52847d1c2db9ddfec3dba",
+          "evidence_sha256": "53d58343c11c5fbcfede416920b8d423a72e67a55942ff02f51700c8d72d87b6",
+          "expected_outcome": "One committed effect per event; distinct E8 is retained.",
+          "status": "ACCEPTED",
+          "next_action": "Use the tested local result."
+        }
+      ],
+      "status": "ACCEPTED"
+    }
+  },
+  "hosted_provider": "NOT_ASSESSED"
+}

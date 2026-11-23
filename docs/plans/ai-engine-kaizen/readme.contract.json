@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "tasks": [
+    {
+      "id": "CR1",
+      "title": "Inventory release evidence and preserve the front door",
+      "depends_on": [],
+      "scope": [
+        "README.md",
+        "docs",
+        "docs/plans/ai-engine-kaizen/readme.md",
+        "docs/plans/ai-engine-kaizen/readme.contract.json",
+        "docs/plans/ai-engine-kaizen/evidence"
+      ],
+      "acceptance": [
+        {
+          "id": "AC-CR1",
+          "description": "Inventory release evidence and preserve the front door with a reproducible observable result",
+          "evidence_oracle": "Every proposed material claim has an owner, real entry point, revision and a result with its environment. Unverified claims have explicit limits. Historic broad capabilities missing from the proposed outline are restored or given an intentional, resolvable destination."
+        }
+      ],
+      "state": "complete",
+      "evidence": [
+        {
+          "criterion_id": "AC-CR1",
+          "path": "docs/plans/ai-engine-kaizen/evidence/CR1/receipt.md",
+          "tested_revision": "b9005a848a87d530ec260a869f187f6fb3020304",
+          "sha256": "8a69452f5a241c2a1b0a77dfa5b9b2a0a6a56b7723511ed619194fdf5467be25",
+          "command": "Compare each README front-door claim with the owner, local entry point, source revision, frozen fixture digests, observed result, environment and limits in the claim inventory.",
+          "result": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "CR2",
+      "title": "Write the coordination README",
+      "depends_on": [
+        "CR1"
+      ],
+      "scope": [
+        "README.md",
+        "docs",
+        "docs/plans/ai-engine-kaizen/readme.md",
+        "docs/plans/ai-engine-kaizen/readme.contract.json",
+        "docs/plans/ai-engine-kaizen/evidence"
+      ],
+      "acceptance": [
+        {
+          "id": "AC-CR2",
+          "description": "Write the coordination README with a reproducible observable result",
+          "evidence_oracle": "A first-time reader can use the new task table to complete one AI-system journey and one assisted-software journey. A relevant non-AI route still works. Each example resolves on this checkout. No prototype, metadata check, vendor benchmark or planned work is described as a verified production capability."
+        }
+      ],
+      "state": "complete",
+      "evidence": [
+        {
+          "criterion_id": "AC-CR2",
+          "path": "docs/plans/ai-engine-kaizen/evidence/CR2/walkthrough.md",
+          "tested_revision": "b9005a848a87d530ec260a869f187f6fb3020304",
+          "sha256": "5deeb1c3a45b2c598dc9cf7ffb1aa59c938bd915515b3e0f10554d7a96159528",
+          "command": "Independent first-use walkthrough: follow README task rows, replay classifier and coding evidence journeys, validate the ordinary handoff fixture, and inspect the explicit non-AI route limitation.",
+          "result": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "CR3",
+      "title": "Validate and release the rewritten README",
+      "depends_on": [
+        "CR2"
+      ],
+      "scope": [
+        "README.md",
+        "docs",
+        "docs/plans/ai-engine-kaizen/readme.md",
+        "docs/plans/ai-engine-kaizen/readme.contract.json",
+        "docs/plans/ai-engine-kaizen/evidence"
+      ],
+      "acceptance": [
+        {
+          "id": "AC-CR3",
+          "description": "Validate and release the rewritten README with a reproducible observable result",
+          "evidence_oracle": "All material links and anchors resolve or have a working compatibility anchor. Each changed command is exercised or explicitly qualified. Capabilities appears among the first four H2 headings. Dated results match the tested revision; an independent reader locates the cases, artifacts and limitations."
+        }
+      ],
+      "state": "complete",
+      "evidence": [
+        {
+          "criterion_id": "AC-CR3",
+          "path": "docs/plans/ai-engine-kaizen/evidence/CR3/receipt.md",
+          "tested_revision": "b9005a848a87d530ec260a869f187f6fb3020304",
+          "sha256": "4532704b3a47f4fd224ac4841126718c5a92a34fe37672e8ac3b442af38e72d2",
+          "command": "README metrics, preservation, local Markdown targets, documented schema and route examples, disposable-checkout pytest, and owner-reported independent reader result; see receipt for exact commands and outcomes.",
+          "result": "PASS"
+        }
+      ]
+    }
+  ]
+}

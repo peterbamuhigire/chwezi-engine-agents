@@ -1,0 +1,5 @@
+# AC-C01 evidence contract
+
+The existing 1.0 envelope carries a versioned evidence reference. Both the existing YAML fixture and evals/contracts/ai-examples/handoff.json pass the native schema validator. The independent expectation in expected-import.json binds producer, consumer, case, criterion, input revision, output revision and observed outcome. Missing files, digest drift, wrong revision and unexpected outcomes return an actionable blocked decision. Legacy free text remains readable with its evidence unassessed.
+
+Run python -B evals/contracts/ai_evidence.py evals/contracts/ai-examples/handoff.json evals/contracts/ai-examples/expected-import.json and the coordinator fixture tests. Independent review exposed a false acceptance when the expected result was null and the measurement was absent. The corrected verifier rejects both missing and null measurements; boolean and numeric results are distinguished. The tests include labeled data, code, release and evaluation handoffs. Checks bind local bytes and expectations; they do not certify an external producer.

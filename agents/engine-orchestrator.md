@@ -11,3 +11,5 @@ output_contract: core/contracts/handoff.yaml
 Load `core/instructions/engine-orchestrator.md` and follow it as the source of
 truth. Codex supplies the file-reading and tool boundary; this wrapper does not
 duplicate routing policy.
+
+For versioned AI evidence, reviewer handoffs and interrupted imports or promotions, follow the [AI change handoff](../docs/operations/ai-change-handoff.md).

@@ -1,0 +1,44 @@
+{
+  "tested_revision": "7965083c0dedbfd5c6e52847d1c2db9ddfec3dba",
+  "producer": "chwezi-dev-engine",
+  "scope": "Synthetic local behavior. External provider not assessed.",
+  "confusion": {
+    "routine": [
+      3,
+      0
+    ],
+    "urgent": [
+      1,
+      2
+    ]
+  },
+  "coding": {
+    "baseline": {
+      "legacy_preserved": true,
+      "first_applied": true,
+      "retry_once": false,
+      "distinct_applied": false,
+      "conflict_rejected": false,
+      "failure_atomic": false,
+      "retry_recovers": false
+    },
+    "ticket-level-dedupe": {
+      "legacy_preserved": true,
+      "first_applied": false,
+      "retry_once": false,
+      "distinct_applied": false,
+      "conflict_rejected": false,
+      "failure_atomic": false,
+      "retry_recovers": false
+    },
+    "fixed": {
+      "legacy_preserved": true,
+      "first_applied": true,
+      "retry_once": true,
+      "distinct_applied": true,
+      "conflict_rejected": true,
+      "failure_atomic": true,
+      "retry_recovers": true
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "producer": "public-engineering",
+  "consumer": "reviewer",
+  "case_id": "K3",
+  "criterion": "AC-K3",
+  "input_revision": "legacy-1",
+  "output_revision": "patch-2",
+  "observed": 1,
+  "limitations": "Synthetic repeated import only",
+  "next_action": "Inspect persisted history and accept the reviewed change."
+}

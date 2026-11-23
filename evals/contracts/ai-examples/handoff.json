@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "scope": "Review duplicate event E7",
+  "engines": [
+    {
+      "id": "chwezi-dev-engine",
+      "reason": "Public implementation owner"
+    }
+  ],
+  "inputs": [
+    "E7",
+    "legacy-1"
+  ],
+  "sequence": [
+    "replay",
+    "review"
+  ],
+  "evidence": [
+    {
+      "format": "ai-evidence/1",
+      "path": "import-result.json",
+      "sha256": "1199a0bbc1bb456f0924b09564170d06f6a36c76a0809b5ed43ec38860254a2b"
+    }
+  ],
+  "blockers": [],
+  "next_action": "Inspect the independently checked output revision."
+}

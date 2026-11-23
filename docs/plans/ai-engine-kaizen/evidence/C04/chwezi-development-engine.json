@@ -1,0 +1,9 @@
+{
+  "tested_revision": "ed0f781eaf83e6b90790d62ef09d4bcfdd3d37bf",
+  "producer": "chwezi-development-engine",
+  "scope": "Synthetic local behavior. External provider not assessed.",
+  "checks": [
+    "Predictive experiment and leakage control",
+    "Ticket retry, distinct event, conflict and recovery"
+  ]
+}
