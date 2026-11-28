@@ -63,7 +63,7 @@ Baseline at ab1039c and final candidate at 2fb96e1. Windows host.
 | `powershell.exe -NoProfile -File tests/security/test_mutation_gates.ps1` | NOT_ASSESSED | 0 | Windows PowerShell 5.1. |
 | `powershell.exe -NoProfile -File tests/security/test_path_boundaries.ps1` | NOT_ASSESSED | 0 | Windows PowerShell 5.1. |
 
-Narrow final regression suite exits 0 with 9 tests. Remote CI, provider-backed routing, native host integration and PowerShell Core-specific tests are NOT_ASSESSED.
+An extended final pytest retry completed: 384 passed and 24 subtests passed in 999.94 seconds. Both earlier 480-second attempts remain recorded as timeouts. Narrow final regression suite exits 0 with 9 tests. Remote CI, provider-backed routing, native host integration and PowerShell Core-specific tests are NOT_ASSESSED.
 
 
 ﻿# Mixed-case experiment
@@ -90,3 +90,6 @@ Reviewed README.md, evals/runners/run-contract-evals.py and tests/test_run_contr
 - `python -X utf8 -m pytest -q -p no:cacheprovider tests/test_run_contract_evals.py` exits 0 with 9 tests.
 - `git diff --check ab1039c` exits 0.
 - Model-based routing and claims about how an agent acts remain NOT_ASSESSED. The fixture proves the deterministic case boundary.
+
+
+The final README preservation check at afb448d retained 87 link targets and 60 commands, with zero broken anchors. The workspace extraction check reported 12 roots and zero findings. The Kaizen card structure validator passed.
