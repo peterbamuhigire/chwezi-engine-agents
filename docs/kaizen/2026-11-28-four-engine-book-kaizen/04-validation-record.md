@@ -98,6 +98,8 @@ The final README preservation check at afb448d retained 87 link targets and 60 c
 
 On 28 November 2026 the second wave reproduced F-01 against the lockfile at `2db40b1`. Windows used Node 24.8.0 and npm 11.6.0. The audit covered production and development dependencies.
 
+The October plan proposed `npm install` for the direct dependencies. This run used `npm install --package-lock-only --save-exact --ignore-scripts --no-fund --no-audit @modelcontextprotocol/sdk@1.32.2 vitest@4.1.12` to generate and inspect the lockfile before a clean install.
+
 | Input and check | Exit | Observed result |
 |---|---:|---|
 | Original lockfile, `npm audit --json` | 1 | 13 findings, including six high and one critical. |
