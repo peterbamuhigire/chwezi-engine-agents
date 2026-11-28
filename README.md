@@ -309,7 +309,7 @@ Resolve the engine from [`catalog/engines.yaml`](catalog/engines.yaml), then rea
 
 ## Validation
 
-With route oracles enabled, malformed cases remain failures in the JSON report. Only cases that pass shape validation enter the lexical comparison.
+A bad case still fails the run and appears in the report. The routing check continues with cases that passed validation.
 
 Run every command from the package root. The command table preserves dated historical results. Current coordinator suite results are listed separately below; runner smoke evidence does not establish real implementation, provider quota or power-cut behavior.
 
