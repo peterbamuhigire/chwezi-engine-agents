@@ -93,3 +93,24 @@ Reviewed README.md, evals/runners/run-contract-evals.py and tests/test_run_contr
 
 
 The final README preservation check at afb448d retained 87 link targets and 60 commands, with zero broken anchors. The workspace extraction check reported 12 roots and zero findings. The Kaizen card structure validator passed.
+
+## Second-wave MCP dependency check
+
+On 28 November 2026 the second wave reproduced F-01 against the lockfile at `2db40b1`. Windows used Node 24.8.0 and npm 11.6.0. The audit covered production and development dependencies.
+
+| Input and check | Exit | Observed result |
+|---|---:|---|
+| Original lockfile, `npm audit --json` | 1 | 13 findings, including six high and one critical. |
+| SDK 1.32.2 and Vitest 4.1.12, direct pins only, `npm audit --json` | 1 | Eight findings remained, including the critical transitive finding. |
+| `npm audit fix --package-lock-only --ignore-scripts --no-fund` | 0 | The compatible transitive refresh cleared the remaining findings. |
+| Clean full-repository clone, candidate manifest and lockfile, `npm ci --no-fund` | 0 | Installed 197 packages. |
+| Same installation, `npm audit --json` | 0 | Empty findings object. The JSON metadata counts 197 dependencies. The install summary counted 198 packages including the root. |
+| Same installation, `npm run build` and `npm test` | 0 each | TypeScript built. Six test files passed, with 16 tests passed and two POSIX cases skipped on Windows. |
+
+The independent package review checked all 197 resolved entries for registry origin and SHA-512 integrity fields. The package identity, script commands, supported-Node declaration and runtime/dev dependency roles are unchanged. The Vite test dependency already required Node 20.19 or later within the Node 20 series. The oldest runtime remains untested. The registry lists the SDK release on 23 October and the Vitest release on 15 October 2026, checked on 28 November. [SDK registry record](https://registry.npmjs.org/@modelcontextprotocol/sdk) · [Vitest registry record](https://registry.npmjs.org/vitest)
+
+The installed Debian guest could not mount its disk. A disposable Alpine Linux 3.23.8 x86_64 guest cloned the product commit `f53a1fa` from a Git bundle. With Node 24.22.3 and npm 11.11.0, `npm ci` installed 147 platform-applicable packages. The first separate audit exited 1 on a registry DNS error. The repeat returned zero findings. The TypeScript build passed and all 18 tests across six files passed, including both POSIX shell exit-code cases.
+
+On Windows the Python suite passed 384 tests and 24 subtests. The 77-case evaluation matched the previous run for all case results and every route-oracle field. Extraction checks found zero findings across 12 roots, and Kaizen card validation passed. The local hygiene gate still reports four previously recorded paths in the managed runner.
+
+The finding closes for this lockfile and this audit date. Production reachability, hosted MCP installation and newly reported advisories remain outside this result. Recheck from the directory containing the lockfile after a dependency or advisory change. Revert the manifest and lockfile together if a compatibility regression requires rollback, and reopen F-01 against the restored lockfile. [npm audit documentation](https://docs.npmjs.com/cli/v11/commands/npm-audit/)

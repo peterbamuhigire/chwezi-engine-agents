@@ -8,10 +8,10 @@ Start with the [engine orchestrator](core/instructions/engine-orchestrator.md) t
 
 - **Twelve repositories.** The catalogue ([`catalog/engines.yaml`](catalog/engines.yaml)) lists eleven public domain engines. This package makes twelve.
 - **One skill and four workflows.** `rules-distill` is the skill; the orchestrator, maintainer, validator and capability negotiator are the workflows.
-- **Tests.** The 2026-11-23 disposable Windows checkout recorded 377 passed, 6 skipped and 24 subtests. The 2026-11-16 coordinator and combined-runtime counts remain historical; current checks are in [the CR3 receipt](docs/plans/ai-engine-kaizen/evidence/CR3/receipt.md).
+- **Tests.** On 28 November, 384 Windows tests and 24 subtests passed. The [validation record](docs/kaizen/2026-11-28-four-engine-book-kaizen/04-validation-record.md) includes the separate MCP checks. The [CR3 receipt](docs/plans/ai-engine-kaizen/evidence/CR3/receipt.md) covers the earlier run.
 - **Plan execution.** Private Development owns the canonical JAD runner. This package also has a separate opt-in runner for its own committed plans; it is not part of JAD.
 - **Portfolio checks.** The last recorded drift and hygiene checks are dated 2026-11-16; see [Validation](#validation) and [Open findings](#open-findings) for their scope and later dated history.
-- **Assessment.** The 48.09/100 score is from 31 October 2026. It is historical; F-01 remains open until its separately authorised remediation is verified.
+- **Assessment.** The November [sampled score was 70.5/100](docs/kaizen/2026-11-28-four-engine-book-kaizen/05-final-report.md). See [Open findings](#open-findings) for the separate dependency audit and remaining release checks.
 
 ## Start here
 
@@ -299,7 +299,7 @@ npm run build
 
 - `npm ci --ignore-scripts` exited 0 and `npm run build` exited 0.
 - `npm test` passed 18 of 18 tests in 6 files.
-- `npm audit` reports 13 vulnerabilities in the locked dependencies. That is the open finding F-01 under [Open findings](#open-findings).
+- `npm audit` reported 13 findings in that lockfile. The replacement lockfile returned zero on 28 November. See [Open findings](#open-findings).
 
 ### Manual route
 
@@ -371,7 +371,7 @@ The results below are historical unless their row carries a later date.
 | `node scripts/generate-plugin-manifest.js --check-marketplace --workspace-root "$WS"` | Node.js, workspace | Exit 0: 23 ok, 0 drift |
 | `node --test tests/security/install-engine-ownership.test.js` | Node.js | Exit 0, 1 test passed. No workflow runs it |
 | `bash -n scripts/install.sh scripts/update.sh scripts/uninstall.sh` | bash | Exit 0 (syntax only; see the `update.sh` finding under Install and update) |
-| `cd mcp-server && npm ci && npm run build && npm test` | Node.js, npm, network | Exit 0 at each step, 18 of 18 tests. `npm audit` exits 1 with 13 vulnerabilities (open finding F-01) |
+| `cd mcp-server && npm ci && npm run build && npm test` | Node.js, npm, network | 28 November, Windows, Node 24.8.0. All commands exited 0. Sixteen tests passed and two POSIX cases skipped. `npm audit` returned zero findings. |
 | `claude plugin validate .` | Claude Code | Exit 0 with two warnings (note 7) |
 | `python3 -X utf8 scripts/readme_metrics.py --check README.md` | none beyond Python | Exit 0: the six absolute limits are met by this README |
 | `python3 -X utf8 scripts/check_readme_preservation.py . HEAD HEAD` | git | Exit 0: every `README.md` anchor linked in the repository and every in-page link resolves |
@@ -478,19 +478,16 @@ The package follows the Portfolio Kaizen Standard: measure, change, check and re
 
 Earlier audits, execution logs and plans are indexed in [`docs/README.md`](docs/README.md). What the cycle changed, with the commit and the check behind each change, is under [What the October 2026 kaizen improved](#what-the-october-2026-kaizen-improved).
 
-**Latest published score.** Pass 2 ([final report](docs/kaizen/2026-10-engine-kaizen-pass-2/05-final-report.md)): raw 48.09 out of 100 (529 over eleven dimensions), published `min(raw, 65)` = 48.09. The frozen pass-2 baseline was 44.18.
+**October score.** Pass 2 ([final report](docs/kaizen/2026-10-engine-kaizen-pass-2/05-final-report.md)) reported 48.09 out of 100 across eleven dimensions. The November [final report](docs/kaizen/2026-11-28-four-engine-book-kaizen/05-final-report.md) records its own ten-dimension sample, frozen baseline and follow-up.
 
 - The 29 October scorecard printed a mean of 46.82, but its rows sum to 505, which is 45.91. That cycle has no final score.
-- The 95 target is not met, and the open critical finding F-01 overrides the aggregate.
+- F-01 was open at the October assessment. Security findings are assessed separately from the score.
 - The score is the cycle owner's judgement against named evidence, not an independent audit.
 
 ## Open findings
 
-- **F-01, vulnerable MCP lockfile (critical, escalated).** `npm audit` in `mcp-server/` reports 13 vulnerabilities (6 moderate, 6 high, 1 critical) on 2026-10-31, the same count as on 29 October.
-  - The pass-2 report records the critical entry (`proxy-addr`) as transitive and behind the HTTP transport that the stdio server does not import.
-  - `zod`, also flagged, is used by the SDK at run time. Its exposure was not assessed.
-  - The SDK pin 1.30.0 is behind 1.32.2. The fix is an `npm install` of two minor versions, which needs the maintainer's authority. The exact commands and the acceptance check are in [`06-next-cycle.md`](docs/kaizen/2026-10-engine-kaizen-pass-2/06-next-cycle.md).
-  - The MCP server is optional. Nothing else in the package depends on it.
+- **F-01, MCP lockfile advisories cleared on 28 November.** The old lockfile returned 13 findings, including one critical. Updating the SDK and test runner left eight. Refreshing the affected transitive dependencies brought the result to zero.
+  - Clean installations built on Windows and Alpine Linux. Windows passed 16 tests and skipped two POSIX cases. Linux passed all 18. Re-run `npm audit` after a dependency or advisory change. [Audit and compatibility evidence](docs/kaizen/2026-11-28-four-engine-book-kaizen/04-validation-record.md#second-wave-mcp-dependency-check)
 - **Closed 16 November: portfolio drift and hygiene.** The owner authorised commits and pushes after the hold. All eleven release pins now match clean main commits, and the full drift and hygiene checks report zero findings.
   - The reviewed variants remain recorded in [`catalog/shared-assets.yaml`](catalog/shared-assets.yaml); engine-specific rules and routing checks are retained.
   - [Repair evidence](docs/kaizen/2026-11-16-portfolio-drift.md) records the content fixes, portable paths and preserved local settings. No tolerance or clean-tree safeguard was relaxed; published history was not rewritten.
@@ -510,7 +507,7 @@ Earlier audits, execution logs and plans are indexed in [`docs/README.md`](docs/
 
 The full table, with defaults, is in [`06-next-cycle.md`](docs/kaizen/2026-10-engine-kaizen-pass-2/06-next-cycle.md).
 
-1. Authorise the MCP lockfile refresh for F-01 (default: the critical finding stays open).
+1. The F-01 lockfile refresh requested in October was completed on 28 November. The other decisions below remain separately owned.
 2. Pin policy: keep allowance 0, so the drift check fails after any engine commit on a workstation, or set a standing `--pin-lag-max` (default: 0; skipped in shallow CI clones).
    - The pins were refreshed to the engines' `main` commits in `f1e4565` on 31 October and the check read 0 lag at those commits.
    - It read 11 findings later the same day, once the engines had moved.
@@ -532,7 +529,7 @@ The engines are different. Their source-register gates fail on a date unless the
 
 - The first failing date of each was confirmed on 2026-10-31 by running that engine's validator with a later date in a scratch clone.
 - The exceptions are the design engine (see its row) and the proposal and business-plan engines. They have no such option and are as their READMEs state.
-- Counts assume nothing is re-verified in between.
+- The table records the October snapshot. The engineering and SDLC engines renewed records on 28 November. Use their current source registers to plan those reviews.
 
 | Date | Engine | What happens |
 |---|---|---|
@@ -651,7 +648,7 @@ Each check was added with a control: a case built to fail.
 
 At the pass-2 close the drift check read 37 findings, 16 of them newly visible through the new rules.
 
-Not counted as improvements: F-01 (open), the 17 unregistered shared-asset variants (engine-side, listed above), and anything that needs a CI run or a PowerShell host.
+The October assessment excluded F-01, the 17 unregistered shared-asset variants and checks that still needed CI or PowerShell at that time.
 
 The pass-2 changes also make pre-existing defects visible, so the drift and hygiene checks exit 1 until the engines are reconciled. That is the intended signal.
 

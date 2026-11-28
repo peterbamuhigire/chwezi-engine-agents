@@ -6,6 +6,6 @@ Exit remains 1 and the valid oracle still ranks. All 77 ordinary case results an
 
 Nystrom (2021), *Crafting Interpreters*, §6.3.1. Resume at the next independent input after a syntax error.
 
-Optional MCP dependency advisories and simulated push false refusals require separate impact and compatibility checks. The suite marketplace check is read-only and found a pre-existing count mismatch.
+The second wave cleared the 13 findings in the optional MCP lockfile. The clean builds passed on Windows and Alpine Linux. Windows passed 16 tests and skipped two POSIX cases. Linux passed all 18. This repair closes F-01 for the audited graph and date. It carries no additional rubric points. Simulated push false refusals and the pre-existing suite marketplace count mismatch remain separate findings.
 
 See the [validator ledger](04-validation-record.md) for remaining failures and unassessed surfaces.

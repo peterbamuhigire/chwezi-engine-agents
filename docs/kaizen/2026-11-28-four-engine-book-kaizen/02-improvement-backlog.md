@@ -2,9 +2,9 @@
 
 | Priority | Decision and proof |
 |---|---|
-| P0 | Critical F-01 remains open in optional MCP dependencies (13 advisories, including one critical). The owning release review requires separate remediation and verification. Security and licensing exceptions remain outside the score. |
+| P0 | F-01 opened with 13 MCP dependency findings, including one critical. The second wave cleared this lockfile's findings and exercised the clean Windows build and tests. [Validation record](04-validation-record.md#second-wave-mcp-dependency-check). Security and licensing exceptions remain outside the score. |
 | P1 | `evals/runners/run-contract-evals.py`. One parse error caused the lexical pass to read the rejected file again and abort before writing the report. Filter oracle inputs using the recorded shape verdict. Replay one valid oracle beside one malformed case. |
-| P2 | Optional MCP dependency advisories and simulated push false refusals require separate impact and compatibility checks. The suite marketplace check is read-only and found a pre-existing count mismatch. |
+| P2 | Simulated push false refusals and the suite marketplace count mismatch remain tracked separately. |
 
 Owner: repository maintainer. Counter-metric: Exit remains 1 and the valid oracle still ranks. All 77 ordinary case results and the oracle result object match the baseline. Roll back the owning change and its paired regression together if the ordinary case fails. Retain all failed observations.
 
