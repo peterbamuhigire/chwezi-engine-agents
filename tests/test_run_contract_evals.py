@@ -75,3 +75,25 @@ def test_at_least_thirty_route_oracles_and_twelve_acceptance_cases():
     assert len(oracles) >= 30
     assert len(acceptance) == 12
     assert all(case.get("last_run") == "NOT_ASSESSED" for case in acceptance)
+
+
+def test_malformed_case_preserves_other_results(tmp_path, monkeypatch):
+    import json
+    import shutil
+    import sys
+
+    valid = next(CASES.glob("*.yaml"))
+    shutil.copy(valid, tmp_path / valid.name)
+    (tmp_path / "broken.yaml").write_text("task: [", encoding="utf-8")
+    output = tmp_path / "result.json"
+    seen = []
+    def record(paths, workspace):
+        seen.extend(path.name for path in paths)
+        return {"status": "NOT_ASSESSED", "reason": "isolated fixture"}
+
+    monkeypatch.setattr(MODULE, "route_oracles", record)
+    monkeypatch.setattr(sys, "argv", ["runner", "--route-oracles", "--cases", str(tmp_path),
+                                      "--min-cases", "2", "--out", str(output)])
+    assert MODULE.main() == 1
+    assert seen == [valid.name]
+    assert json.loads(output.read_text())["summary"] == {"total": 2, "passed": 1, "failed": 1}

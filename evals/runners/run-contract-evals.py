@@ -207,7 +207,8 @@ def main() -> int:
     oracle_failed = False
     oracle_not_assessed = False
     if args.route_oracles:
-        oracles = route_oracles(case_paths, args.workspace_root)
+        eligible = [path for path, report in zip(case_paths, reports) if report["status"] == "PASS"]
+        oracles = route_oracles(eligible, args.workspace_root)
         result["route_oracles"] = oracles
         if oracles["status"] == "NOT_ASSESSED":
             oracle_not_assessed = True

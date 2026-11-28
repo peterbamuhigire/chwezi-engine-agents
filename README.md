@@ -309,6 +309,8 @@ Resolve the engine from [`catalog/engines.yaml`](catalog/engines.yaml), then rea
 
 ## Validation
 
+With route oracles enabled, malformed cases remain failures in the JSON report. Only cases that pass shape validation enter the lexical comparison.
+
 Run every command from the package root. The command table preserves dated historical results. Current coordinator suite results are listed separately below; runner smoke evidence does not establish real implementation, provider quota or power-cut behavior.
 
 The rows that read the engines were re-run after the engines merged their README work, so they read each engine's `main` of that day. The npm rows need network access and are from the earlier run the same day.
